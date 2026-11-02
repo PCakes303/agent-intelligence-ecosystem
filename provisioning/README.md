@@ -2,13 +2,13 @@
 
 ## Current verified state
 
-The connected GitHub account currently has the master repository and the private operations repository. The other 28 public repositories in the approved registry are not yet present.
+The connected GitHub account currently has eight public portfolio repositories (the master, discovery, human guide, integration, and four foundation repositories) plus the separate private operations repository. The remaining 21 public repositories in the approved registry are not yet present.
 
 The GitHub integration available to this session can inspect and write repository contents, branches, commits, issues, and pull requests, but does not expose repository creation or repository-administration operations. The provisioning script below bridges that gap through the GitHub CLI on a machine where the owner is authenticated.
 
 ## Provisioning bundle
 
-- Machine-readable missing-repository list: remote-repositories-to-create.json
+- Machine-readable missing-repository list: remote-repositories-to-create.json (21 verified missing public repositories as of this reconciliation)
 - Public-only local scaffold generator: ../tools/bootstrap_repositories.py
 - Remote creation and initial push: ../tools/provision_public_repositories.sh
 - Shared starter files: ../templates/repository/
