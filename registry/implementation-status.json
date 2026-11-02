@@ -119,15 +119,15 @@
       ]
     },
     "swarm-coordination": {
-      "repository_url": "https://github.com/PCakes303/swarm-coordination",
-      "workflow_run": "https://github.com/PCakes303/swarm-coordination/actions/runs/41417899230",
-      "python_versions": [
-        "3.10",
-        "3.11",
-        "3.12"
-      ],
-      "jobs": "all passed",
-      "tests": 17
+      "workflow_run": "https://github.com/PCakes303/swarm-coordination/actions/runs/41494229515",
+      "conclusion": "success",
+      "head_sha": "ddc5a5ef096c6ac52ce3c96f8f7577b7e44bc5b4",
+      "tests": 21,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
     },
     "swarm-state-mesh": {
       "repository_url": "https://github.com/PCakes303/swarm-state-mesh",
