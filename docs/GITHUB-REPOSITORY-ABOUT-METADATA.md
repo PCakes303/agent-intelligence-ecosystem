@@ -1,15 +1,18 @@
 # GitHub repository About metadata
 
 **Audit date:** 2026-11-02  
-**Scope:** ten existing public portfolio repositories (00–09). The separate profile repository and private operations repository are excluded.
+**Scope:** twelve existing public portfolio repositories (00–11). The separate profile repository and private operations repository are excluded.
 
 GitHub's repository-level **About** fields are separate from README and manifest files. The connected GitHub integration can read repository metadata and edit repository files, but cannot update repository descriptions, homepage URLs, or topics. Apply the values below in each repository's GitHub **About → Edit repository details** panel.
 
 ## Verified current state
 
-- All ten public portfolio repositories exist and use the `main` default branch.
+**Public identity:** MrCakes931 · **GitHub owner:** PCakes303
+
+
+- All twelve public portfolio repositories exist and use the `main` default branch.
 - All ten currently have an empty topics list and no homepage URL.
-- Repositories 00–08 have no About description.
+- Repositories 00–08, 10, and 11 have no About description.
 - Repository 09 has a malformed description: the intended description was followed by a comma-separated topic list, all stored in the description field. Its topics list is empty.
 - All ten repositories have a README and machine-oriented entrypoints appropriate to their current stage. CI has a successful recent run for each repository; this does not imply production readiness.
 
@@ -40,7 +43,7 @@ Descriptions are concise and deliberately avoid implying production maturity.
 
 ## Application order
 
-Apply rows 00–09 to the ten existing public repositories now. Row 10 is a pre-approved metadata recommendation only; `agent-audit-provenance` is staged but its standalone public remote has not yet been created, so do not attempt to configure it until deployment.
+Apply rows 00–11 to the twelve existing public repositories now.
 
 For each existing repository, set:
 1. **Description:** copy the exact description from the table.
