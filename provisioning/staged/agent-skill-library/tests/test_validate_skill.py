@@ -2,6 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from jsonschema import Draft202012Validator
 from tools.validate_skill import SkillValidationError, validate_package
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,12 +53,12 @@ class SkillValidatorTests(unittest.TestCase):
         def change(r, w):
             w["steps"] = [dict(w["steps"][0], id=f"step-{i}") for i in range(51)]
         path = self.make_package(change)
-        with self.assertRaisesRegex(SkillValidationError, "1-50"):
+        with self.assertRaisesRegex(SkillValidationError, "steps"):
             validate_package(path)
 
     def test_unknown_action_rejected(self):
         path = self.make_package(lambda r, w: w["steps"][0].update(action="shell.exec"))
-        with self.assertRaisesRegex(SkillValidationError, "not supported"):
+        with self.assertRaisesRegex(SkillValidationError, "steps.0.action"):
             validate_package(path)
 
     def test_tool_step_requires_adapter_and_capability(self):
@@ -118,13 +119,53 @@ class SkillValidatorTests(unittest.TestCase):
 
     def test_inputs_must_be_object(self):
         path = self.make_package(lambda r, w: w["steps"][0].update(inputs=["not", "object"]))
-        with self.assertRaisesRegex(SkillValidationError, "inputs must be an object"):
+        with self.assertRaisesRegex(SkillValidationError, "steps.0.inputs"):
             validate_package(path)
 
     def test_policy_scopes_must_be_unique(self):
         path = self.make_package(lambda r, w: w["steps"][0]["policy"].update(scopes=["a","a"]))
-        with self.assertRaisesRegex(SkillValidationError, "scopes must be unique"):
+        with self.assertRaisesRegex(SkillValidationError, "steps.0.policy.scopes"):
             validate_package(path)
+
+    def test_unknown_properties_rejected_at_every_contract_level(self):
+        cases = [
+            lambda r, w: r.update(unexpected=True),
+            lambda r, w: w.update(unexpected=True),
+            lambda r, w: w["steps"][0].update(unexpected=True),
+            lambda r, w: w["steps"][0]["policy"].update(unexpected=True),
+        ]
+        for mutate in cases:
+            path = self.make_package(mutate)
+            with self.subTest(mutate=mutate):
+                with self.assertRaises(SkillValidationError):
+                    validate_package(path)
+
+    def test_schema_bounds_reject_oversized_fields(self):
+        cases = [
+            lambda r, w: w["steps"][0].update(adapter_id="a" * 129),
+            lambda r, w: w["steps"][0].update(capability="c" * 257),
+            lambda r, w: w["steps"][0]["policy"].update(action="a" * 257),
+            lambda r, w: w["steps"][0]["policy"].update(resource="r" * 513),
+            lambda r, w: w["steps"][0].update(prompt="p" * 2001),
+            lambda r, w: w.update(description="d" * 2001),
+            lambda r, w: w["steps"][0]["policy"].update(scopes=["s" * 129]),
+            lambda r, w: r.update(permissions=["p" * 129]),
+        ]
+        for mutate in cases:
+            path = self.make_package(mutate)
+            with self.subTest(mutate=mutate):
+                with self.assertRaises(SkillValidationError):
+                    validate_package(path)
+
+    def test_examples_pass_normative_draft_2020_12_schemas(self):
+        resource_schema = json.loads((ROOT / "schemas" / "resource-manifest.schema.json").read_text(encoding="utf-8"))
+        workflow_schema = json.loads((ROOT / "schemas" / "skill-workflow.schema.json").read_text(encoding="utf-8"))
+        Draft202012Validator.check_schema(resource_schema)
+        Draft202012Validator.check_schema(workflow_schema)
+        resource = json.loads((EXAMPLE / "resource.json").read_text(encoding="utf-8"))
+        workflow = json.loads((EXAMPLE / "workflow.json").read_text(encoding="utf-8"))
+        self.assertEqual(list(Draft202012Validator(resource_schema).iter_errors(resource)), [])
+        self.assertEqual(list(Draft202012Validator(workflow_schema).iter_errors(workflow)), [])
 
 if __name__ == "__main__":
     unittest.main()
