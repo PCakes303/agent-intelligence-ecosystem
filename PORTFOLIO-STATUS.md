@@ -211,3 +211,8 @@ The next OSINT dependency, `osint-collection-framework` (canonical portfolio pos
 
 
 The `osint-collection-framework` staging packet has passed 19 tests on Python 3.10–3.12 in [master CI run 41514134921](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921). The master 106-edge dependency graph and public catalog validation also pass. The scaffold remains plan-validation-only; no network collection is implemented.
+
+
+## OSINT evidence integrity — staging
+
+The next OSINT dependency, `osint-evidence-engine` (canonical portfolio position 22/32), is staged as a public non-personal evidence-manifest and hash-chain validator only. Its dependency graph now requires emergency-control and compliance-governance in addition to collection, audit provenance and secure supply chain. The master registry, dependency graph and public catalog are synchronized at 108 edges. It does not collect or persist evidence, sign records, provide trusted timestamps or certify legal chain of custody. Staging CI is pending.

@@ -483,7 +483,9 @@
       "dependencies": [
         "osint-collection",
         "audit-provenance",
-        "secure-supply-chain"
+        "secure-supply-chain",
+        "emergency-control",
+        "compliance-governance"
       ],
       "discovery": {
         "llms_txt": null,

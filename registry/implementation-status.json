@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514352642",
       "conclusion": "success",
-      "head_sha": "780745443decb6316311f59ad1396ae30d82fce4",
+      "head_sha": "644104429b8b6b0e4ef2df1252d5a1b0f4f6a5a7",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -1077,7 +1077,7 @@
       "status": "Not started",
       "priority": "P1",
       "importance": "Preserves evidence provenance, timestamps, transformations and uncertainty.",
-      "next_gate": "Implement immutable evidence record, content hashes and reproducibility fixture."
+      "next_gate": "Build a bounded public non-personal evidence manifest and deterministic integrity chain; require identity, policy, audit, emergency-stop, compliance and supply-chain gates. No durable evidence store or legal chain-of-custody claim."
     },
     {
       "number": "22",
@@ -1455,6 +1455,12 @@
       "path": "provisioning/staged/osint-collection-framework",
       "file_count": 21,
       "status": "Prepared in master staging; public remote not yet created. Collection-plan validator only, restricted to non-personal public metadata; requires source registry, identity, policy, audit, emergency-stop, compliance and supply-chain gate evidence. No network or collection capability."
+    },
+    {
+      "repository": "osint-evidence-engine",
+      "path": "provisioning/staged/osint-evidence-engine",
+      "file_count": 23,
+      "status": "Prepared in master staging; public remote not yet created. Public non-personal evidence manifests, SHA-256 digest verification and deterministic hash-linked event chain only. No collection, persistence, signatures, trusted timestamping, legal holds or legal chain-of-custody certification."
     }
   ],
   "master_audit": {

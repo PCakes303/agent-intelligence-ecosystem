@@ -427,6 +427,14 @@
     [
       "osint-collection",
       "secure-supply-chain"
+    ],
+    [
+      "osint-evidence",
+      "emergency-control"
+    ],
+    [
+      "osint-evidence",
+      "compliance-governance"
     ]
   ],
   "excluded": [
