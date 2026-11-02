@@ -184,8 +184,8 @@
       "layer": "foundation-security",
       "role": "Release integrity, SBOMs, provenance, dependency and vulnerability management.",
       "repository_url": "https://github.com/PCakes303/agent-secure-supply-chain",
-      "existence": "not-created",
-      "implementation_status": "Master-repo starter contract only; standalone repo absent",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; contract, validator, tests and CI starter added",
       "priority": "P0",
       "dependencies": [
         "foundation",
@@ -193,9 +193,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
