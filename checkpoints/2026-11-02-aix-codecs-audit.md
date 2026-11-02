@@ -30,6 +30,10 @@
 
 The first master registry maturity update exposed a catalog drift: `registry/public-agent-catalog.json` retained the previous AIX Codecs status. Master regression run 41491355197 correctly failed `test_catalog_matches_public_registry`. The catalog entry was synchronized in commit `ac982e59efe5076af81b5c29d11f83993405d2df`; master validation run [41491483004](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41491483004) then passed registry validation, resource-manifest validation, policy smoke test, all 47 regression tests and entry-level build.
 
+## Post-audit README back-check — 2026-11-02
+
+A second live-file inspection found that the earlier commit titled as removing the obsolete 12 / 29 portfolio-position line had not actually removed it from the current README. The line has now been removed and explicit pending-license disclosure added in commit 1f16c60df3089239245b82cbae6374b04f1a9b29. The live README was re-fetched and confirmed to contain neither the obsolete portfolio-position line nor a missing license-status disclosure. [CI run 41503562843](https://github.com/PCakes303/aix-codecs/actions/runs/41503562843) completed successfully; the eight-test Python 3.10–3.12 matrix remains green.
+
 ## Findings and remaining exceptions
 
 1. **Conformance coverage incomplete:** eight tests do not yet demonstrate the full RFC 8785 edge-case set promised by the contract. Add shared vectors for Unicode/surrogates, numeric serialization edge cases, negative zero, exponent formatting, arrays and nested values.
