@@ -27,7 +27,7 @@ This is a non-exhaustive applicability checklist, not a statement that every law
 - CFAA, ECPA/SCA, copyright, licensing, export controls, sanctions, contracts, platform and source terms as relevant.
 - Other state, federal, tribal and foreign laws based on actual operations and affected persons.
 
-Colorado's Attorney General has ongoing AI/ADMT and chatbot implementation work. Re-check enacted text, regulations, effective dates, amendments, injunctions, thresholds and exemptions before deployments. Breach notification deadlines vary by facts and legal regime; incident counsel must determine triggering events and deadlines rather than relying on a generic timer.
+Colorado's Attorney General has ongoing AI/ADMT and chatbot implementation work. Re-check enacted text, regulations, effective dates, amendments, injunctions, thresholds and exemptions before deployments. The Attorney General's current guidance describes resident breach notice within 30 days after determination, AG notice within 30 days for breaches reasonably believed to affect 500 or more Colorado residents, and consumer-reporting-agency notice when more than 1,000 residents are affected. Exceptions and triggering facts matter; incident counsel must determine the applicable duties rather than relying on a generic timer.
 
 ## Operating cycle
 Inventory system/data/use case; screen jurisdictions and obligations; map each applicable obligation to an owned control; implement at the enforcement boundary; test positive, negative, abuse and failure cases; review evidence before release; monitor legal and operational changes; reassess quarterly and after material changes or incidents.
