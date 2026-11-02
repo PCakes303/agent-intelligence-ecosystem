@@ -1,11 +1,65 @@
 {
-  "capabilities_version": "1.0.0",
-  "component": "audit-provenance",
+  "capabilities_version": "1.1.0",
+  "repository": "agent-audit-provenance",
+  "repository_id": "audit-provenance",
+  "maturity": "scaffolding",
   "capabilities": [
-    {"id": "audit-event-validation", "status": "implemented-prototype", "description": "Validate required event fields and supported event types."},
-    {"id": "hash-chain-append", "status": "implemented-prototype", "description": "Append canonical JSON events linked with SHA-256 digests."},
-    {"id": "hash-chain-verification", "status": "implemented-prototype", "description": "Verify event digests and previous-hash continuity."},
-    {"id": "producer-authentication", "status": "not-implemented", "description": "Authenticate event producers and bind events to trusted identities."},
-    {"id": "digital-signatures", "status": "not-implemented", "description": "Sign event records or externally anchored checkpoints."}
+    {
+      "id": "audit.event-schema",
+      "name": "Structured audit event schema",
+      "status": "scaffolded",
+      "description": "A versioned JSON Schema defines audit event identity, actor, action, target, outcome, timestamps, and evidence references.",
+      "evidence": [
+        "schemas/audit-event.schema.json",
+        "examples/event.json"
+      ],
+      "limitations": [
+        "Schema validation does not authenticate the event issuer or prove the event occurred."
+      ]
+    },
+    {
+      "id": "audit.hash-chain",
+      "name": "SHA-256 hash-chained JSONL records",
+      "status": "scaffolded",
+      "description": "A local append and verification tool links audit records with SHA-256 digests and detects modification or reordering within the checked log.",
+      "evidence": [
+        "tools/audit_log.py",
+        "tests/test_audit_log.py"
+      ],
+      "limitations": [
+        "A hash chain is not a digital signature, trusted timestamp, immutable storage guarantee, or authenticated ingestion service."
+      ]
+    },
+    {
+      "id": "audit.local-cli",
+      "name": "Local audit append and verify CLI",
+      "status": "scaffolded",
+      "description": "A command-line tool appends structured records and verifies the integrity of an existing JSONL chain.",
+      "evidence": [
+        "tools/audit_log.py",
+        "tests/test_audit_log.py"
+      ],
+      "limitations": [
+        "No remote collector, access-control service, or retention manager is included."
+      ]
+    },
+    {
+      "id": "audit.signed-checkpoints",
+      "name": "Signed audit checkpoints",
+      "status": "planned",
+      "description": "Publish verifiable signed checkpoints anchored to independently managed trust roots.",
+      "evidence": [],
+      "limitations": [
+        "Cryptographic signatures and checkpoint verification are not implemented."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Authenticated event ingestion",
+    "Digital signatures or trusted timestamping",
+    "Tamper-proof or WORM storage",
+    "Retention and legal-hold management",
+    "Production SIEM integration",
+    "Identity-provider integration"
   ]
 }
