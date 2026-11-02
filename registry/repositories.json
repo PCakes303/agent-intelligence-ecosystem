@@ -205,8 +205,8 @@
       "name": "agent-capability-registry",
       "visibility": "public",
       "layer": "swarm",
-      "status": "planned",
-      "role": "Catalog and validation of agent capabilities.",
+      "status": "scaffolding",
+      "role": "Experimental catalog and validation of declared agent capabilities with policy-filtered candidate matching; advisory only, not authentication or authorization.",
       "dependencies": [
         "resource-manifest",
         "schema-registry",
