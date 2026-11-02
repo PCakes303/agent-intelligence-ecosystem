@@ -357,10 +357,10 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Initial reference implementation staged in master (29 files); standalone remote not created; CI pending",
       "priority": "P2",
       "importance": "Connects sources, evidence, entities and relationships for analysis.",
-      "next_gate": "Define provenance-aware graph model and query/lineage prototype."
+      "next_gate": "Create public remote, publish staged files, verify all files and green Python 3.10–3.12 CI; then integrate verified evidence and entity-resolution contracts."
     },
     {
       "number": "24",
