@@ -68,7 +68,7 @@ Path and Git blob-SHA comparisons were performed against live `main` trees for 1
 | agent-ai-discovery | 23 | 0 | No retained staging packet |
 | agent-secure-supply-chain | 21 | 0 | No retained staging packet |
 
-Four drifted packets (Audit Provenance, AIX Core, AIX Codecs and Knowledge Graph) were refreshed. Six repositories now have exact path/blob-SHA parity; two have exact product-file parity with a staging-only administrative file. Five repositories need retained staging packets created or their evidence model formally changed. Do not claim portfolio-wide staging parity.
+Four drifted packets (Audit Provenance, AIX Core, AIX Codecs and Knowledge Graph) were refreshed. Six repositories now have exact path/blob-SHA parity; two have exact product-file parity with a staging-only administrative file. For the five repositories without content mirrors, a retained remote tree/hash manifest now records the pinned main commit and every path/blob SHA in `provisioning/staging-manifests/2026-11-02-missing-source-packets.json`. These are integrity manifests only: they do not contain source contents and do not replace full staging packets. Do not claim portfolio-wide staging parity.
 
 ## Licensing policy — approved and applied
 
@@ -100,7 +100,7 @@ The connected GitHub actions available in this session do not expose repository 
 ## Remaining portfolio-wide gates
 
 1. Confirm the master CI run triggered by this final audit-document update completes successfully; all 24 repositories were green on their current heads immediately before this documentation update.
-2. Create/refresh retained staging packets for the five repositories listed above; verify path/blob-SHA parity after synchronization.
+2. Rebuild full content staging packets for the five repositories listed above from the pinned commits in the retained tree/hash manifest; verify path/blob-SHA parity after synchronization. The manifest improves auditability but is not a source mirror.
 3. Apply the prepared descriptions, common master homepage and repository-specific topics from [registry/github-repository-metadata.json](../registry/github-repository-metadata.json) through an authorized GitHub repository-settings workflow, then re-read the live settings. The manifest is prepared but About metadata has not been applied.
 4. Complete a file-by-file provenance and third-party notice audit; the approved repository-level mixed-license policy is now applied, but it does not clear uncertain or externally authored files.
 5. Verify private vulnerability reporting/security advisories, branch rulesets/protection, Actions token permissions, secret scanning, push protection and dependency alerts. These settings were not verified through the available integration.
