@@ -26,6 +26,21 @@
 - `686b2ea6af38f947fa0d30b252b67358baa146a0`: clarified that no dedicated private reporting address is published and an approved private route must be configured if GitHub private reporting is unavailable.
 - Created [issue #1](https://github.com/PCakes303/agent-tool-adapters/issues/1) for identifier/descriptor limits, malformed direct invocation handling, private reporting, metadata and staging evidence.
 
+## Post-audit direct-input and resource-boundary hardening — 2026-11-02
+
+A deeper review confirmed the original findings and additional gaps: adapter/capability identifiers and sets were unbounded; malformed objects passed directly to invoke() could raise before returning a structured denial; policy decision IDs were unbounded; and payload traversal had no total-item budget. The descriptor schema also disagreed with the actual descriptors() output (it required a version field that the runtime does not emit) and was not validated in CI.
+
+Corrections committed:
+- 52453cbb59198b4586962492c3ab3a3d6e904237: added bounded identifier formats, 128-capability per-adapter cap, 10,000-adapter registry cap, payload item budget and hard payload-byte/depth ceilings; malformed direct invocation, invalid principals, missing callbacks and invalid decision IDs now fail closed.
+- 542bb7e18dd15b00fe6b194e12dd41e9dd2f198d: corrected payload-item accounting so container exit markers are not counted as JSON values.
+- a3580c7d0479ecde979ad58eeb6b6091ac456165 and 3e4f3cdc691abd8eab64f74870abe473df1b55bf: added tests for malformed direct invocation, missing policy, decision-ID bounds, adapter/capability bounds, payload-item bounds and configuration limits.
+- f652db7117dc37bf6f1a0ffed0440875d581dcad: aligned descriptor schema with actual runtime descriptor fields and bounded identifier/capability arrays.
+- e57ecd42ce2e8f88ece2a80afd5b17559e8369d2 and 90d380c46c033d7dd7452cec982d57f3dbe146a5: added pinned jsonschema development dependency and CI installation so descriptor schema is exercised by tests.
+- a2250831c00fe1a59e0f8b314f0e1b9db6034a59, f5f084f6054bb8d18ce1c0cea90634ade9fd8400, 7c58e0e42983d76904ffa0d8fe64525a6aeef909 and 519cfa36249f28e66ba020d0e71e4f7dffbc2917: updated contract, security, capability metadata and README test count.
+- Final CI after schema/requirements integration was still running at checkpoint update; verify the completed 27-test Python 3.10–3.12 matrix before claiming it passed.
+
+The repository remains BLOCKED: no authentication, production policy service, sandbox, timeout/cancellation, durable audit or third-party adapters are implemented.
+
 ## Findings and remaining exceptions
 
 1. **Unbounded registry metadata:** adapter IDs, capability identifiers, principal IDs and policy decision IDs have no explicit maximum length. Registration also permits arbitrarily large capability sets and descriptor catalogs. Add identifier and collection-count limits.
