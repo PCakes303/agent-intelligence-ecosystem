@@ -26,9 +26,11 @@ Capability and compatibility metadata are aligned to the ecosystem v1.1.0 contra
 ## Verification plan
 
 - Historical deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/29235a9477dafdf23ced98389c952a31fc22df3d
+- Latest canonical-manifest deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/805ca788ffc254dd82f5a66087072571acb7fb39
 - Expanded regression suite: 21 tests, including pre-parse byte/depth bounds, path/egress count and length bounds, and schema/runtime security-boundary checks.
-- Final remediation CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41507530278 — success on Python 3.10, 3.11 and 3.12.
-- Master staging packet refreshed with the latest validator, schema, tests, CI, requirements and security/contract docs; exact path/blob-SHA parity verified: 15 remote product files, 15 staged product files, zero missing, extra or differing blobs.
+- Final parser/schema remediation CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41507530278 — success on Python 3.10, 3.11 and 3.12.
+- Canonical manifest migration CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41520148752 — success.
+- Master staging packet refreshed with the latest validator, schema, tests, CI, requirements, security/contract docs and canonical repository manifest. The remote manifest now conforms to the master repository-manifest schema; the staged copy is identical. Exact path/blob-SHA parity verified: 15 remote product files, 15 staged product files, zero missing, extra or differing blobs. This STAGING-STATUS.md remains a master-side record and is intentionally not deployed.
 - Master registry, dependency graph, status and public catalog reconciled; Master regression and capability/compatibility metadata verification passed in run https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41438185138 (47 tests). Final deployment checkpoint: checkpoints/2026-11-02-agent-sandbox-security-deployment.md.
 
 ## Governance
