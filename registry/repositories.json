@@ -5,8 +5,8 @@
   "github_owner": "PCakes303",
   "public_identity": "MrCakes931",
   "counts": {
-    "total": 30,
-    "public": 29,
+    "total": 32,
+    "public": 31,
     "private": 1
   },
   "status_policy": "planned unless implementation is independently verified",
@@ -354,6 +354,39 @@
       "status": "planned",
       "role": "Controlled execution, isolation, resource boundaries, and secure extension execution.",
       "dependencies": [
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "secure-supply-chain",
+        "emergency-control",
+        "compliance-governance"
+      ]
+    },
+    {
+      "id": "emergency-control",
+      "name": "agent-emergency-control",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "status": "planned",
+      "role": "Independent emergency-stop authority, authenticated stop state, revocation, quarantine, distributed stop propagation, and controlled resumption.",
+      "dependencies": [
+        "foundation",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "secure-supply-chain"
+      ]
+    },
+    {
+      "id": "compliance-governance",
+      "name": "agent-compliance-governance",
+      "visibility": "public",
+      "layer": "governance",
+      "status": "planned",
+      "role": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring; not legal advice or certification.",
+      "dependencies": [
+        "master",
+        "foundation",
         "identity-trust",
         "policy-engine",
         "audit-provenance",
