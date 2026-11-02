@@ -27,7 +27,8 @@
     "endpoint": {
       "type": "string",
       "format": "uri",
-      "maxLength": 512
+      "maxLength": 512,
+      "pattern": "^https://[^/@?#]+(?::[0-9]+)?(?:/[^#]*)?$"
     },
     "trust_state": {
       "enum": [
