@@ -1,0 +1,28 @@
+{
+  "schema_version":"1.0.0",
+  "resource_id":"urn:mrcakes931:agent:example-source-reviewer",
+  "resource_type":"agent",
+  "display_name":"Example Source Reviewer",
+  "description":"Demonstration resource manifest for contract tests; not a deployed service.",
+  "owner":{"principal_id":"did:example:maintainer","organization":"MrCakes931"},
+  "version":"0.1.0",
+  "lifecycle":{"state":"planned"},
+  "capabilities":[
+    {
+      "id":"source.provenance.review",
+      "version":"0.1.0",
+      "description":"Review provenance metadata in a supplied, authorized public source.",
+      "required_scopes":["source:read","evidence:write"]
+    }
+  ],
+  "interfaces":[{"kind":"aix","uri":"https://example.org/contracts/aix","version":"0.1.0"}],
+  "security":{
+    "trust_domain":"example.org",
+    "authentication":["spiffe","oidc"],
+    "required_scopes":["source:read","evidence:write"],
+    "data_classification":"public"
+  },
+  "provenance":{"created_at":"2026-11-01T20:00:00Z","source":"portfolio-contract-fixture"},
+  "documentation_uri":"https://example.org/docs/source-reviewer",
+  "tags":["example","contract-fixture"]
+}
