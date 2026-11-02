@@ -430,7 +430,7 @@
       "role": "Catalog of public sources, datasets, and APIs with usage constraints.",
       "repository_url": "https://github.com/PCakes303/osint-source-registry",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Staging prepared; 23-file scaffold committed to master; public remote not yet created",
       "priority": "P2",
       "dependencies": [
         "resource-manifest",
