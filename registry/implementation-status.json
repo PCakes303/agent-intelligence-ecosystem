@@ -541,10 +541,16 @@
       "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed"
     },
     {
-      "repository": "swarm-runtime",
-      "path": "provisioning/staged/swarm-runtime",
-      "file_count": 18,
-      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
+      "repository": "intelligence-knowledge-graph",
+      "path": "provisioning/staged/intelligence-knowledge-graph",
+      "file_count": 29,
+      "status": "deployed; remote and retained staging packet match exactly; capability/compatibility metadata v1.1.0; Python 3.10–3.12 CI passed"
+    },
+    {
+      "repository": "osint-source-registry",
+      "path": "provisioning/staged/osint-source-registry",
+      "file_count": 23,
+      "status": "deployed; remote tree verified; Python 3.10–3.12 CI passed"
     },
     {
       "repository": "swarm-coordination",
@@ -553,16 +559,16 @@
       "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
     },
     {
-      "repository": "swarm-state-mesh",
-      "path": "provisioning/staged/swarm-state-mesh",
+      "repository": "swarm-runtime",
+      "path": "provisioning/staged/swarm-runtime",
       "file_count": 18,
       "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
     },
     {
-      "repository": "osint-source-registry",
-      "path": "provisioning/staged/osint-source-registry",
-      "file_count": 23,
-      "status": "deployed; remote tree verified; Python 3.10–3.12 CI passed"
+      "repository": "swarm-state-mesh",
+      "path": "provisioning/staged/swarm-state-mesh",
+      "file_count": 18,
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
     }
   ]
 }
