@@ -1,6 +1,6 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-**Status:** Active staged implementation — 12 of 29 public repositories created; 17 public repositories remain to be provisioned.  
+**Status:** Active staged implementation — 13 of 29 public repositories created; 16 public repositories remain to be provisioned.  
 **Portfolio:** 30 repositories (29 public, 1 private)  
 **Owner:** PCakes303 (public project identity: MrCakes931)
 
@@ -8,12 +8,12 @@ This repository is the canonical public control plane for the ecosystem. It owns
 
 ## Current maturity
 
-The portfolio and architecture are approved. Twelve of the 29 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
+The portfolio and architecture are approved. Thirteen of the 29 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
 
 ## Start here
 - [Repository 10 — Agent Audit & Provenance](https://github.com/PCakes303/agent-audit-provenance)
 - [Repository 11 — AIX Core](https://github.com/PCakes303/aix-core)
-- [Repository 12 — AIX Codecs staging bundle](provisioning/staged/aix-codecs/STAGING-STATUS.md)
+- [Repository 12 — AIX Codecs](https://github.com/PCakes303/aix-codecs)
 
 - [LLM-readable project index](llms.txt)
 - [Public agent catalog — 29 repositories](registry/public-agent-catalog.json)
@@ -22,8 +22,6 @@ The portfolio and architecture are approved. Twelve of the 29 public repositorie
 - [30-repository portfolio status and work tracker](PORTFOLIO-STATUS.md)
 - [GitHub repository About descriptions and topics](docs/GITHUB-REPOSITORY-ABOUT-METADATA.md)
 - [Repository 09 — policy engine](https://github.com/PCakes303/agent-policy-engine)
-- [Repository 11 — AIX Core](https://github.com/PCakes303/aix-core)
-
 - [Architecture](docs/ARCHITECTURE.md)
 - [Repository registry](registry/repositories.json)
 - [Dependency graph](registry/dependencies.json)
