@@ -73,14 +73,24 @@ The master starter-build metadata validator has passed against all 20 existing p
 
 ## 6. Remote and staging integrity
 
-The retained master staging packets and standalone public repositories were compared by Git blob SHA:
+All 12 retained master staging packets were compared to their standalone public repositories by Git blob SHA and relative file path:
 
 | Repository | Staged files | Remote files | Hash differences |
 |---|---:|---:|---:|
+| agent-audit-provenance | 20 | 20 | 0 |
+| agent-capability-registry | 18 | 18 | 0 |
+| agent-discovery-network | 17 | 17 | 0 |
+| agent-policy-engine | 24 | 24 | 0 |
+| agent-transport-gateway | 15 | 15 | 0 |
+| aix-codecs | 15 | 15 | 0 |
+| aix-core | 21 | 21 | 0 |
+| swarm-runtime | 18 | 18 | 0 |
+| swarm-coordination | 18 | 18 | 0 |
+| swarm-state-mesh | 18 | 18 | 0 |
 | osint-source-registry | 23 | 23 | 0 |
 | intelligence-knowledge-graph | 29 | 29 | 0 |
 
-Both trees have identical file paths and blob hashes. No extra remote files or missing staged files were found.
+All 12 staged and remote trees have identical file paths and blob hashes. No missing files, content mismatches or unexpected extra files were found.
 
 ## 7. Verification evidence
 
