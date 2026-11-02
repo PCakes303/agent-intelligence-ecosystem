@@ -4,7 +4,7 @@
 **Repository:** [PCakes303/osint-source-registry](https://github.com/PCakes303/osint-source-registry)  
 **Portfolio position:** 19  
 **Branch:** `main`  
-**Status:** scaffolding deployed; verification pending
+**Status:** scaffolding deployed; CI verified green
 
 ## Deployment
 
@@ -32,7 +32,7 @@
 - [x] GitHub Actions run #1 completed successfully.
 - [x] Unit test suite passed on Python 3.10, 3.11, and 3.12.
 - [x] CI synthetic-source validation CLI passed.
-- [ ] Master portfolio status updated (completed in this checkpoint).
+- [x] Master portfolio status reconciled.
 
 GitHub Actions run #1 (`41425236178`) completed successfully on commit `ec30f80c63f69edbba53530a2eb6efef8a3a2f25`. All three matrix jobs (Python 3.10, 3.11, and 3.12) passed dependency installation, the complete unittest suite, and synthetic approved-source validation.
 
@@ -40,4 +40,4 @@ GitHub Actions run #1 (`41425236178`) completed successfully on commit `ec30f80c
 
 This repository is a source metadata catalog, not a collector. It does not crawl, scrape, download, enrich, query external APIs, authenticate reviewers, sign approvals, or provide durable/distributed storage. Source approval is a local review assertion, not legal advice or proof of lawful access. Any future collection system must independently enforce current terms, authorization, privacy, jurisdiction, rate limits, and retention controls and emit provenance through the Audit & Provenance contract.
 
-**Next milestone:** obtain a visible green CI matrix and independently verify tests before adding authenticated review or integrating with downstream collection systems.
+**Next milestone:** add authenticated review and Audit & Provenance integration before any collector work.
