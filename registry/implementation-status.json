@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513281755",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
       "conclusion": "success",
-      "head_sha": "b073170eb0a6eea6ec06773aff2c6ae7ec40775f",
+      "head_sha": "780745443decb6316311f59ad1396ae30d82fce4",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -284,6 +284,20 @@
       "legal_records": 6,
       "proposed_controls": 11,
       "evidence_records": 0,
+      "scope": "master staging validation only; remote repository not created"
+    },
+    "osint-collection-staging": {
+      "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/osint-collection-framework",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
+      "conclusion": "success",
+      "head_sha": "780745443decb6316311f59ad1396ae30d82fce4",
+      "tests": 19,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "execution_enabled": false,
       "scope": "master staging validation only; remote repository not created"
     }
   },

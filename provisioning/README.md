@@ -88,4 +88,4 @@ The initial 28-product-file scaffold is staged at [agent-compliance-governance](
 
 ## Next OSINT build — osint-collection-framework (portfolio position 21/32)
 
-A plan-validation-only scaffold is staged at [osint-collection-framework](staged/osint-collection-framework/). It requires source approval, identity, policy, audit, emergency-stop, compliance and supply-chain gates. The initial profile permits only bounded public non-personal metadata and does not include any network or collection client. Public remote creation and repository CI remain pending.
+A plan-validation-only scaffold is staged at [osint-collection-framework](staged/osint-collection-framework/). It requires source approval, identity, policy, audit, emergency-stop, compliance and supply-chain gates. The initial profile permits only bounded public non-personal metadata and does not include any network or collection client. Master staging CI [run 41514134921](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921) passed 19 tests on Python 3.10–3.12. Public remote creation and repository-local CI remain pending.
