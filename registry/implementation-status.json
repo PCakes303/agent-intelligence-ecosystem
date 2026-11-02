@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 20,
+    "public_existing": 21,
     "private_existing": 1,
-    "public_not_created": 9,
+    "public_not_created": 8,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 20,
-    "public_repositories_missing": 9
+    "public_repositories_present": 21,
+    "public_repositories_missing": 8
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -82,7 +82,8 @@
       ],
       "jobs": "all passed",
       "tests": 15
-    }
+    },
+    "osint-source-registry": "https://github.com/PCakes303/osint-source-registry/actions/runs/41425236178"
   },
   "repositories": [
     {
@@ -319,11 +320,11 @@
       "name": "osint-source-registry",
       "layer": "intelligence",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Staging prepared; 23-file scaffold committed to master; public remote not yet created",
+      "existence": "exists",
+      "status": "Scaffolded; 23 files published; remote main tree verified; Python 3.10, 3.11 and 3.12 GitHub Actions CI passed (run 41425236178). Source metadata catalog only; no collection client.",
       "priority": "P2",
       "importance": "Records lawful source access, licensing, limits and reliability metadata.",
-      "next_gate": "Create the public remote, deploy the exact staged packet, verify all Python 3.10–3.12 CI jobs, and then add authenticated review and Audit & Provenance integration before any collector work."
+      "next_gate": "Add authenticated review, signed approval records and Audit & Provenance integration; preserve source-term, licensing, privacy, purpose, rate-limit and retention checks before any collector integration."
     },
     {
       "number": "20",
@@ -368,7 +369,7 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "exists",
-      "status": "Experimental; 29 files published; 15 unit tests and synthetic graph validation passed on Python 3.10, 3.11 and 3.12; dependency-order loading fix verified.",
+      "status": "Experimental; 29 files published; 15 unit tests and synthetic graph validation passed on Python 3.10, 3.11 and 3.12; dependency-order loading fix verified (run 41426963318).",
       "priority": "P2",
       "importance": "Connects sources, evidence, entities and relationships for analysis.",
       "next_gate": "Verify upstream osint-evidence and entity-resolution contracts, then implement reviewed adapters and cross-repository provenance/conformance fixtures. License remains pending portfolio review."
@@ -475,7 +476,7 @@
     "repository": "osint-source-registry",
     "path": "provisioning/staged/osint-source-registry",
     "file_count": 23,
-    "status": "23-file source metadata catalog scaffold committed to master staging; public remote not yet created; JSON artifacts parse, both synthetic examples validate against the source schema, and local Python smoke checks pass; repository-local unittest suite and Python 3.10–3.12 CI remain pending remote deployment."
+    "status": "Deployed to PCakes303/osint-source-registry; 23-file remote tree verified; Python 3.10–3.12 CI passed (run 41425236178). Staging packet retained as the master-side reference."
   },
   "prepared_staging_history": [
     {
@@ -537,6 +538,12 @@
       "path": "provisioning/staged/swarm-state-mesh",
       "file_count": 18,
       "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
+    },
+    {
+      "repository": "osint-source-registry",
+      "path": "provisioning/staged/osint-source-registry",
+      "file_count": 23,
+      "status": "deployed; remote tree verified; Python 3.10–3.12 CI passed"
     }
   ]
 }
