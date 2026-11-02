@@ -19,9 +19,17 @@ No OS isolation backend, container/namespace enforcement, filesystem/network enf
 
 Declared contracts only: identity-trust, policy-engine, audit-provenance, secure-supply-chain, emergency-control, and compliance-governance. No runtime integration is claimed.
 
-## Capability metadata\n\nCapability and compatibility metadata are aligned to the ecosystem v1.1.0 contract. All upstream links remain declared/contract-only; no tested runtime integration is claimed.\n\n## Verification plan
+## Capability metadata
 
-- Product deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/29235a9477dafdf23ced98389c952a31fc22df3d\n- Component CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41437856656\n- Python 3.10, 3.11 and 3.12 all passed; 14 tests per version.\n- Exact staging/product Git blob parity: 14 product files, zero missing, differing or extra files.\n- Master registry, dependency graph, status and public catalog reconciled; master regression and metadata verification is being rerun after the final remote metadata update.
+Capability and compatibility metadata are aligned to the ecosystem v1.1.0 contract. All upstream links remain declared/contract-only; no tested runtime integration is claimed.
+
+## Verification plan
+
+- Product deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/29235a9477dafdf23ced98389c952a31fc22df3d
+- Component CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41437856656
+- Python 3.10, 3.11 and 3.12 all passed; 14 tests per version.
+- Exact staging/product Git blob parity: 14 product files, zero missing, differing or extra files.
+- Master registry, dependency graph, status and public catalog reconciled; master regression and metadata verification is being rerun after the final remote metadata update.
 
 ## Governance
 
