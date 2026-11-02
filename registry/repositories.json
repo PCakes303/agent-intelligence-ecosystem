@@ -259,8 +259,8 @@
       "name": "osint-source-registry",
       "visibility": "public",
       "layer": "intelligence",
-      "status": "planned",
-      "role": "Catalog of public sources, datasets, and APIs with usage constraints.",
+      "status": "scaffolding",
+      "role": "Review-gated catalog of public information sources, datasets, APIs and publication repositories, with licensing, permitted-purpose, access-limit, retention and approval metadata; no collection client.",
       "dependencies": [
         "resource-manifest",
         "schema-registry",
@@ -311,8 +311,8 @@
       "name": "intelligence-knowledge-graph",
       "visibility": "public",
       "layer": "intelligence",
-      "status": "planned",
-      "role": "Structured graph connecting sources, evidence, entities, and relationships.",
+      "status": "experimental",
+      "role": "Provenance-aware graph reference model linking source records, preserved evidence, entities and evidence-backed relationships with explicit uncertainty and bounded queries.",
       "dependencies": [
         "osint-evidence",
         "entity-resolution"
