@@ -20,8 +20,8 @@ This plan defines deliverables and acceptance gates. It does not imply that futu
 - [x] Add default-deny policy schemas, reference evaluator, CLI, and precedence tests.
 - [ ] Add schema-registry compatibility runner and schema publication index.
 - [ ] Add identity issuance/rotation/revocation state machine and authenticated integration demo.
-- [ ] Add SBOM/provenance/signature release workflow.
-- [ ] Transfer prototypes into their owning standalone repositories after provisioning.
+- [x] Add initial supply-chain artifact record schema, illustrative fixture, validator, tests, SBOM policy, provenance/attestation guidance, and release-verification procedure in the master repository.\n- [x] Add audit-provenance event schema, fixture, standard-library validator, negative tests, and Starter → Developer → Production contract.\n- [x] Publish policy-engine contract and starter learning path; retain default-deny reference evaluator and regression tests.\n- [x] Add reusable Starter build, Makefile, tests, and pinned read-only CI workflow to the public repository scaffold template.\n- [ ] Add SBOM generation, cryptographic provenance/signature verification, and release workflow.
+- [ ] Transfer policy, audit, and supply-chain contracts into their owning standalone repositories after provisioning.
 No repository advances beyond research/scaffolding solely on prose.
 
 ## Batch 3 — AIX and transport prototypes (08–10)
