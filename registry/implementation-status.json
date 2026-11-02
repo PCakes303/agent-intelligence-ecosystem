@@ -36,7 +36,7 @@
     "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41408761297",
     "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293",
     "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41410840515",
-    "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413168542"
+    "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413329389"
   },
   "repositories": [
     {
@@ -226,10 +226,10 @@
       "layer": "swarm",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 18 files deployed; initial Python 3.10–3.12 CI passed; same-agent multi-capability matching fix is awaiting CI.",
+      "status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12, including same-agent multi-capability matching regression coverage.",
       "priority": "P1",
       "importance": "Matches tasks to agents with declared, validated capabilities.",
-      "next_gate": "Verify the latest CI run, then add schema-registry/resource-manifest/policy-engine integration fixtures and cross-repository conformance tests."
+      "next_gate": "Add schema-registry, resource-manifest and policy-engine integration fixtures and cross-repository conformance tests."
     },
     {
       "number": "16",
