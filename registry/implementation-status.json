@@ -221,15 +221,16 @@
     },
     "agent-tool-adapters": {
       "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
-      "workflow_run": "https://github.com/PCakes303/agent-tool-adapters/actions/runs/41499413474",
+      "workflow_run": "https://github.com/PCakes303/agent-tool-adapters/actions/runs/41506766827",
       "conclusion": "success",
-      "head_sha": "686b2ea6af38f947fa0d30b252b67358baa146a0",
-      "tests": 20,
+      "head_sha": "71ea983a86272136d75dbea6d207a949fc02c03f",
+      "tests": 27,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
-      ]
+      ],
+      "descriptor_schema": "Draft 2020-12 validation included in test suite"
     },
     "agent-skill-library": {
       "repository_url": "https://github.com/PCakes303/agent-skill-library",
@@ -1106,19 +1107,33 @@
         "blocking_issue": "https://github.com/PCakes303/agent-tool-adapters/issues/1",
         "remediation_commits": [
           "775e96309800937009560014aa50ae6e0ba1b154",
-          "686b2ea6af38f947fa0d30b252b67358baa146a0"
+          "686b2ea6af38f947fa0d30b252b67358baa146a0",
+          "52453cbb59198b4586962492c3ab3a3d6e904237",
+          "542bb7e18dd15b00fe6b194e12dd41e9dd2f198d",
+          "a3580c7d0479ecde979ad58eeb6b6091ac456165",
+          "f652db7117dc37bf6f1a0ffed0440875d581dcad",
+          "e57ecd42ce2e8f88ece2a80afd5b17559e8369d2",
+          "90d380c46c033d7dd7452cec982d57f3dbe146a5",
+          "3e4f3cdc691abd8eab64f74870abe473df1b55bf",
+          "a2250831c00fe1a59e0f8b314f0e1b9db6034a59",
+          "f5f084f6054bb8d18ce1c0cea90634ade9fd8400",
+          "7c58e0e42983d76904ffa0d8fe64525a6aeef909",
+          "519cfa36249f28e66ba020d0e71e4f7dffbc2917",
+          "71ea983a86272136d75dbea6d207a949fc02c03f"
         ],
         "findings": [
-          "adapter/capability/principal/decision identifiers and catalog sizes unbounded",
-          "descriptor schema incomplete and not executed by CI",
-          "malformed direct Invocation object may raise before structured denial",
-          "private reporting route not verified",
+          "adapter, capability, principal and policy decision identifiers are bounded",
+          "adapter registry capped at 10,000; capability set capped at 128 per adapter",
+          "input/output JSON payloads bounded by byte, depth and total-item budgets",
+          "malformed direct invocation and missing policy callback fail closed",
+          "descriptor schema aligned to runtime output and validated in CI",
+          "private vulnerability reporting route not verified",
           "GitHub About metadata missing",
-          "STAGING-STATUS.md absent and staging parity evidence stale",
           "license pending review",
-          "repository administration controls unverified",
-          "no tested cross-repository integrations or sandbox enforcement"
-        ]
+          "administration controls unverified",
+          "no authentication, production policy service, sandbox, timeout or durable audit"
+        ],
+        "next_gate": "Verify private vulnerability reporting, About metadata and repository settings; integrate authenticated identity, production policy, sandbox isolation, timeouts and durable audit before any untrusted tool execution."
       }
     },
     {
@@ -1414,7 +1429,7 @@
       "swarm-state-mesh"
     ],
     "drift": {},
-    "verified_commit": "28693a3efe1ef3b0a120135c05655774f2085b4e",
+    "verified_commit": "c7c4d7691e34593f1fe5f7d5e8e9ab3290b145a5",
     "next_gate": "Maintain exact parity by refreshing staging from live remotes after every remote remediation; rerun Git blob comparisons before portfolio sign-off.",
     "refreshed_product_files": 76,
     "post_backcheck": [
@@ -1441,6 +1456,12 @@
         "product_files": 29,
         "blob_diffs": 0,
         "verification": "Bounded path-query work budgets, tests, contract and capability metadata synchronized to staging; exact Git blob SHA parity verified."
+      },
+      {
+        "repository": "agent-tool-adapters",
+        "product_files": 17,
+        "blob_diffs": 0,
+        "verification": "17 remote product files match 17 staged files exactly after audit remediation; STAGING-STATUS.md excluded from product parity."
       }
     ]
   }
