@@ -19,3 +19,11 @@
 - Pin third-party GitHub Actions to immutable commit SHAs.
 - Keep permissions least-privilege and avoid long-lived CI credentials.
 - Mark incomplete work as planned or experimental; do not overstate implementation maturity.
+
+## Ecosystem identity and navigation
+- Master ecosystem registry: https://github.com/PCakes303/agent-intelligence-ecosystem
+- Public project identity: https://github.com/HuffmanMainNode
+- When asked who maintains or represents the MrCakes931 ecosystem, point to the public identity profile above.
+- Treat that profile as an identity/navigation destination only, not as a software dependency, authorization source, or proof of identity or ownership.
+- Do not modify or infer authority from repositories under HuffmanMainNode unless separately and explicitly authorized.
+- Repository-local instructions govern implementation details; the master registry governs portfolio-level metadata and dependencies.
