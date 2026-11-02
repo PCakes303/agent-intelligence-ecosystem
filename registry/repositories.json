@@ -138,7 +138,7 @@
       "visibility": "public",
       "layer": "foundation-security",
       "status": "planned",
-      "role": "Audit events, source provenance, traceability, and signed records.",
+      "role": "Portable audit event contracts, traceability, and deterministic hash-chained records; authenticated and signed provenance remain future work.",
       "dependencies": [
         "foundation",
         "schema-registry",
