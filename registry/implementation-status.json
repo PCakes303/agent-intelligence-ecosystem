@@ -457,6 +457,18 @@
       "next_gate": "Build executable conformance suite and negative security fixtures."
     },
     {
+      "number": "27",
+      "id": "emergency-control",
+      "name": "agent-emergency-control",
+      "layer": "foundation-security",
+      "visibility": "public",
+      "existence": "not-created",
+      "status": "Planned; approved as a new P0 portfolio repository",
+      "priority": "P0",
+      "importance": "Independent emergency-stop authority and distributed stop enforcement.",
+      "next_gate": "Publish stop-state machine, threat model, monotonic epoch protocol, revocation/quarantine interfaces, local enforcement contracts, controlled resume, and conformance tests."
+    },
+    {
       "number": "28",
       "id": "federation-network",
       "name": "agent-federation-network",
@@ -467,6 +479,18 @@
       "priority": "P2",
       "importance": "Allows independently operated networks to interoperate without shared root trust.",
       "next_gate": "Prototype two-domain federation with explicit trust, authorization and revocation."
+    },
+    {
+      "number": "28",
+      "id": "compliance-governance",
+      "name": "agent-compliance-governance",
+      "layer": "governance",
+      "visibility": "public",
+      "existence": "not-created",
+      "status": "Planned; approved as a new P0 portfolio repository",
+      "priority": "P0",
+      "importance": "Maintained legal applicability and compliance management system with mapped controls and evidence.",
+      "next_gate": "Build source-linked federal/Colorado/local obligations register, applicability workflow, control catalogue, privacy and AI governance, evidence and exception management; obtain qualified legal review."
     },
     {
       "number": "29",
