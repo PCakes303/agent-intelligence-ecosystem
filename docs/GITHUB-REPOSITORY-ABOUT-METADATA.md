@@ -7,10 +7,10 @@ GitHub About metadata is separate from each repository's README and manifest. Th
 
 ## Verified current state
 
-- 24 of 31 planned public portfolio repositories exist; 7 public repositories remain to be created. Two additional public repositories are approved but not yet created.
+- 24 of 31 planned public portfolio repositories exist; 7 public repositories remain to be created. The seven missing repositories are recorded in the canonical provisioning inventory.
 - All 24 existing public portfolio repositories use the `main` default branch and have a README.
 - All 24 have an empty GitHub topics list and no homepage URL.
-- Nine have a description; fourteen descriptions are empty.
+- Nine have a description; fifteen descriptions are empty (verified from live GitHub metadata).
 - `agent-policy-engine` has a malformed description because a comma-separated topic list was appended to the description field. Replace the whole field with the clean description below.
 - The private operations repository and the separate `PCakes303/PCakes303` profile repository are excluded.
 - A repository description or topic does not imply implementation maturity, security certification, or production readiness.
@@ -55,7 +55,7 @@ Use each topic as a separate GitHub topic. Do not paste the topic list into the 
 
 ## Application checklist
 
-For each of the 23 repositories:
+For each of the 24 existing public portfolio repositories:
 
 1. Open the repository page and select **About → Edit repository details**.
 2. Set the exact description from the table.
@@ -76,5 +76,5 @@ For `agent-policy-engine`, replace the malformed description completely; do not 
 
 ## Audit boundary
 
-This metadata file is the canonical set of recommended GitHub About values. It is not evidence that those values have been applied. The GitHub connector available in this workflow supports repository reads and file commits, but not writes to repository description, homepage or topics settings; those settings must be applied in GitHub's repository UI.
+This metadata file is the canonical proposed set of GitHub About values for the 24 existing public repositories. The table also includes preliminary proposed values for the two approved P0 repositories that are not yet created; the other five planned repositories need their metadata added when their design descriptions are finalized. It is not evidence that those values have been applied. The GitHub connector available in this workflow supports repository reads and file commits, but not writes to repository description, homepage or topics settings; those settings must be applied in GitHub's repository UI.
 
