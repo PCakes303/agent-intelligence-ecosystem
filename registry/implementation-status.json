@@ -275,7 +275,14 @@
       "status": "Scaffolded; artifact record contract, validator, tests, agent entrypoints and starter CI added",
       "priority": "P0",
       "importance": "Prevents unverified artifacts and releases entering trusted execution.",
-      "next_gate": "Implement real SBOM generation, provenance binding, cryptographic signature verification against explicit trust policy, and release evidence."
+      "next_gate": "Implement real SBOM generation, provenance binding, cryptographic signature verification against explicit trust policy, and release evidence.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "22f90c9290e2f85393ca451af649bc4f9a14ac1b",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-secure-supply-chain-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-secure-supply-chain/issues/1"
+      }
     },
     {
       "number": "09",
