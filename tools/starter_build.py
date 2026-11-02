@@ -17,9 +17,10 @@ commands = [
     (root, [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"]),
     (root / "provisioning/staged/agent-policy-engine", [sys.executable, "tools/starter_build.py"]),
     (root / "provisioning/staged/agent-audit-provenance", [sys.executable, "tools/starter_build.py"]),
+    (root / "provisioning/staged/aix-core", [sys.executable, "tools/starter_build.py"]),
 ]
 for cwd, command in commands:
     result = subprocess.run(command, cwd=cwd)
     if result.returncode:
         raise SystemExit(result.returncode)
-print("Starter build passed: master contracts, registry, policy prototype, regression suite, staged policy-engine component, and staged audit-provenance component.")
+print("Starter build passed: master contracts, registry, policy prototype, regression suite, staged policy-engine component, and staged audit-provenance and AIX Core components.")
