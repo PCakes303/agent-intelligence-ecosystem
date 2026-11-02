@@ -74,7 +74,17 @@
         "Python 3.12"
       ]
     },
-    "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41427827799",
+    "agent-transport-gateway": {
+      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41491823732",
+      "conclusion": "success",
+      "head_sha": "d647bd08779a2526f641df25d97a3e046ca69618",
+      "tests": 18,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
+    },
     "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147",
     "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413613566",
     "swarm-runtime": {
@@ -459,7 +469,36 @@
       "status": "Scaffolded; 14 files published; [CI passed](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293) on Python 3.10, 3.11 and 3.12",
       "priority": "P0",
       "importance": "Carries messages across MCP/A2A/HTTP transports with security controls.",
-      "next_gate": "Implement authenticated HTTP adapter, identity and policy integration, shared replay protection, and adversarial/property-based tests. Current process-local guard is experimental and does not authenticate senders."
+      "next_gate": "Implement trusted authentication, authenticated policy integration, shared atomic replay protection, pinned AIX schema/codec integration and protocol adapters; verify private reporting, About metadata, settings, licensing and staging parity.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "1b2e5873f05364fc0c8f2c124bc76c640eeb3096",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-transport-gateway-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-transport-gateway/issues/1",
+        "remediation_commits": [
+          "d6ba36e33e56a13a1744f26842c4164fbf42f229",
+          "88b0b3b5bab2661d52044a624f69dbf003599da2",
+          "eb0386832beb3e900a1bd9d2eafc9f9c0233a5dd",
+          "2452ecc50a9da260ee6f275bcba3f4faf71879db",
+          "a22240dbca0437d5e5a4dbebdf48c25e5eabcd28",
+          "ed1104d993d20759cd68642f93c2607ba870ded9",
+          "0d8bca7452fd5cc2e5f18fb8637edbb5defae487",
+          "d647bd08779a2526f641df25d97a3e046ca69618"
+        ],
+        "findings": [
+          "no trusted principal authentication",
+          "authorization callback not connected to policy service or protected-resource enforcement",
+          "replay cache is bounded but process-local only",
+          "no pinned AIX schema/codec integration",
+          "no HTTP/MCP/A2A adapters",
+          "rate limiting, quotas and connection budgets absent",
+          "private vulnerability reporting route not verified",
+          "GitHub About homepage/topics missing",
+          "license pending review",
+          "staging parity and repository administration controls unverified"
+        ]
+      }
     },
     {
       "number": "14",
