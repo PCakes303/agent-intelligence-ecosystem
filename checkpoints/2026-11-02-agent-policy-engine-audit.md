@@ -4,7 +4,7 @@
 **Audited implementation commit:** `39ead9528a149b1511cfb69b1c996d5e77c6ff64`  
 **Baseline CI:** [Run 41400923896](https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896) — success  
 **Remediation commits:** `6a78a880bd66762d8e32177b8723b0ff2a2a2d9f`, `bdd569b3d2af701d0b0f0cb1a0647bd04875b996`  
-**Remediation CI:** [Run 41490159810](https://github.com/PCakes303/agent-policy-engine/actions/runs/41490159810) — in progress at checkpoint creation  
+**Remediation CI:** [Run 41490159810](https://github.com/PCakes303/agent-policy-engine/actions/runs/41490159810) — success (starter build, nine unit tests and CLI example passed)  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental local policy decision evaluator; not a production authorization enforcement boundary.
 
