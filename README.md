@@ -8,7 +8,7 @@ This repository is the canonical public control plane for the ecosystem. It owns
 
 ## Current maturity
 
-The portfolio and architecture are approved. Repository implementation is **planned** until independently verified. A repository appearing in the registry is not evidence that it exists, is implemented, or is conformant.
+The portfolio and architecture are approved. Ten of the 29 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
 
 ## Start here
 
