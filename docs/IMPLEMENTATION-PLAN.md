@@ -10,7 +10,7 @@ This plan defines deliverables and acceptance gates. It does not imply that futu
 - [x] Pin CI actions to immutable commit SHAs.
 - [x] Add public-only scaffold generator and explicit-confirmation GitHub CLI provisioner.
 - [x] Add machine-readable list of 28 missing public repositories.
-- Acceptance verified: CI validates schema, registry/graph consistency, unique IDs/names, counts, private boundary, acyclic dependencies, manifest template, resource manifest example, policy smoke test, and regression tests. Latest verified run before the current workflow update passed 25 tests; a new run is pending for the latest additions.
+- Acceptance verified: CI validates schema, registry/graph consistency, unique IDs/names, counts, private boundary, acyclic dependencies, manifest template, resource manifest example, policy evaluator smoke test, and regression tests. Latest verified run: success, 25 tests passed, including AIX, policy, identity, audit-chain, scaffold-generation, and registry regressions.
 
 ## Batch 2 — Foundation repository specifications (01–07)
 - [x] Add machine-readable initial requirements for all seven foundation/security repositories.
