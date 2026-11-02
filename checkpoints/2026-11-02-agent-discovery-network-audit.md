@@ -41,7 +41,7 @@ A deeper boundary review found that math.isfinite() and float() can raise Overfl
 - 122fe2f1d64c7b15a4ed0d138022debc2a9f85ce: applied safe finite-number conversion to registry clock and lifetime configuration.
 - 6f9af7001d390094809c9816a59bfff8aed9271f and aacbb1d1dca1c952a61592e26a94e4a324081e7c: added five regression tests for overflowing integer timestamps, clocks and lifetime configuration.
 - 60fcd55b09b802709e7c337056477e956b3b1d12: added explicit pending-license disclosure to README.
-- CI for the expanded tests and README update was in progress at checkpoint update; verify the completed matrix before claiming it passed.
+- [Run 41504383220](https://github.com/PCakes303/agent-discovery-network/actions/runs/41504383220) completed successfully on Python 3.10, 3.11 and 3.12 after the five new overflow regression tests; the expanded suite contains 29 tests per matrix job. [Run 41504477081](https://github.com/PCakes303/agent-discovery-network/actions/runs/41504477081) also passed for the final staging-status documentation update.
 
 This additional hardening preserves explicit non-production status and does not implement cryptographic verification or distributed discovery.
 
