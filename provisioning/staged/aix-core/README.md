@@ -1,7 +1,7 @@
 # AIX Core
 
 **Repository:** `PCakes303/aix-core`  
-**Portfolio position:** 11 / 29 public repositories  
+**Portfolio position:** 11 / 31 public repositories  
 **Maturity:** experimental specification scaffold  
 **License:** pending review
 
@@ -34,6 +34,8 @@ python tools/validate_message.py examples/task-request.json
 python -m unittest discover -s tests -v
 python tools/starter_build.py
 ```
+
+The CLI parser caps each envelope at 1 MiB and JSON nesting at 32 levels. The schema bounds message arrays, references, identifiers, extension maps, and nested metadata. These are structural checks only; they do not authenticate or authorize messages.
 
 ## Security boundary
 
