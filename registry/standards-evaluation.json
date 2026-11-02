@@ -1,0 +1,15 @@
+{
+  "version":"1.0.0",
+  "policy":"Candidate technologies are evaluation inputs, not automatic adoption decisions.",
+  "evaluations":[
+    {"name":"Model Context Protocol","area":"tool-resource-prompt integration","current_position":"integrate","rationale":"Use for tool/resource/prompt interfaces where it fits; do not duplicate it in AIX.","evidence_required":["adapter prototype","authorization review","conformance fixtures"]},
+    {"name":"Agent2Agent (A2A)","area":"agent-to-agent task exchange","current_position":"integrate-and-map","rationale":"Map AIX semantics to A2A where semantics overlap; identify only demonstrated gaps.","evidence_required":["mapping table","round-trip fixtures","semantic-loss report"]},
+    {"name":"JSON Schema 2020-12","area":"machine-readable contracts","current_position":"initial candidate","rationale":"Use for initial JSON contract validation and fixtures.","evidence_required":["schema tests","compatibility tests"]},
+    {"name":"OpenAPI","area":"HTTP API contracts","current_position":"use-when-applicable","rationale":"Prefer for conventional HTTP APIs rather than inventing API descriptions.","evidence_required":["API conformance tests"]},
+    {"name":"SPIFFE/SPIRE","area":"workload identity","current_position":"evaluate","rationale":"Candidate for workload identity and trust-domain federation.","evidence_required":["threat model","deployment prototype","rotation and revocation tests"]},
+    {"name":"Open Policy Agent","area":"policy as code","current_position":"evaluate","rationale":"Candidate policy decision point; keep policy enforcement points explicit.","evidence_required":["policy test corpus","latency and failure behavior"]},
+    {"name":"Sigstore and SLSA","area":"artifact signing and provenance","current_position":"evaluate","rationale":"Candidate for verifiable release provenance and artifact integrity.","evidence_required":["signed artifact prototype","verification workflow"]},
+    {"name":"OpenTelemetry","area":"tracing and observability","current_position":"evaluate","rationale":"Prefer standard telemetry propagation and semantic conventions.","evidence_required":["trace propagation demo","privacy review"]},
+    {"name":"CBOR and Protocol Buffers","area":"binary encoding","current_position":"defer","rationale":"Do not add binary codecs until JSON prototype measurements demonstrate need.","evidence_required":["benchmark","compatibility and canonicalization decision"]}
+  ]
+}
