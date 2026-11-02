@@ -1,14 +1,14 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-> A 30-repository, security-first ecosystem for agent interoperability, discovery, trust, hybrid swarms, intelligence workflows, and conformance. AIX is an extension layer over established standards, not a replacement for them.
+> A 32-repository, security-first ecosystem for agent interoperability, discovery, trust, hybrid swarms, intelligence workflows, and conformance. AIX is an extension layer over established standards, not a replacement for them.
 
 This repository is the public ecosystem control plane. It owns the authoritative repository registry, dependency graph, architecture decisions, governance, and portfolio status. Individual repositories own their implementations.
 
 ## Start here
 - [Master README](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/README.md): purpose, architecture, build and current portfolio maturity.
 - [AI agent instructions](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/AGENTS.md): safe contribution and verification rules.
-- [30-repository status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md): existence, maturity, priority, importance and next gates.
-- [Public agent catalog](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/public-agent-catalog.json): machine-readable index of all 29 public repositories, including existence and discovery entry points.
+- [32-repository status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md): existence, maturity, priority, importance and next gates.
+- [Public agent catalog](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/public-agent-catalog.json): machine-readable index of all 31 public repositories, including existence and discovery entry points.
 - [Canonical repository registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json): machine-readable inventory and dependency declarations.
 - [Implementation status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/implementation-status.json): evidence-based maturity and verification status.
 - [Dependency graph](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/dependencies.json): cross-repository relationships.
