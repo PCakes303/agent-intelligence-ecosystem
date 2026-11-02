@@ -1403,7 +1403,8 @@
       "swarm-state-mesh"
     ],
     "drift": {},
-    "verified_commit": "25725d385550d5eab4181725098c1ef76cdb8524",
-    "next_gate": "Maintain parity by refreshing staging from live remotes after every remote remediation; rerun Git blob comparisons before final sign-off."
+    "verified_commit": "fa4cfd4c5452fc0a72e5023d788b164cad758829",
+    "next_gate": "Maintain exact parity by refreshing staging from live remotes after every remote remediation; rerun Git blob comparisons before portfolio sign-off.",
+    "refreshed_product_files": 76
   }
 }
