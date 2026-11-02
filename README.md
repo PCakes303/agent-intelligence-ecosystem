@@ -1,6 +1,6 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-**Status:** Active staged implementation — 22 of 29 public repositories created; 7 public repositories remain to be provisioned.  
+**Status:** Active staged implementation — 23 of 29 public repositories created; 6 public repositories remain to be provisioned.  
 **Portfolio:** 30 repositories (29 public, 1 private)  
 **Owner:** PCakes303 (public project identity: MrCakes931)
 
@@ -8,7 +8,7 @@ This repository is the canonical public control plane for the ecosystem. It owns
 
 ## Current maturity
 
-The portfolio and architecture are approved. Twenty-one of the 29 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
+The portfolio and architecture are approved. Twenty-three of the 29 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
 
 ## Start here
 - [Repository 10 — Agent Audit & Provenance](https://github.com/PCakes303/agent-audit-provenance)
@@ -17,6 +17,7 @@ The portfolio and architecture are approved. Twenty-one of the 29 public reposit
 - [Repository 13 — Agent Transport Gateway](https://github.com/PCakes303/agent-transport-gateway)
 - [Repository 19 — OSINT Source Registry](https://github.com/PCakes303/osint-source-registry)
 - [Repository 20 — Intelligence Knowledge Graph](https://github.com/PCakes303/intelligence-knowledge-graph)
+- [Repository 25 — Agent Skill Library](https://github.com/PCakes303/agent-skill-library)
 
 - [LLM-readable project index](llms.txt)
 - [Public agent catalog — 29 repositories](registry/public-agent-catalog.json)

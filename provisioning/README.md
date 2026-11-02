@@ -2,13 +2,13 @@
 
 ## Current verified state
 
-The latest portfolio reconciliation verified 22 existing public portfolio repositories, 7 public repositories still to be created, and the separate existing private operations repository. The private repository is excluded from all public scaffold generation, catalogs, and synchronization. The separate profile repository is not part of the portfolio.
+The latest portfolio reconciliation verified 23 existing public portfolio repositories, 6 public repositories still to be created, and the separate existing private operations repository. The private repository is excluded from all public scaffold generation, catalogs, and synchronization. The separate profile repository is not part of the portfolio.
 
 The GitHub integration available to this session can inspect and write repository contents, branches, commits, issues, and pull requests, but does not expose repository creation or repository-administration operations. It also does not expose GitHub Projects v2 mutations or repository metadata administration. GitHub's current Projects v2 API is GraphQL-based and requires the project scope; the connected integration does not provide that action. A repository-resident portfolio tracker and a master-repository issue are therefore used as the current work wireframe until that capability is available. The provisioning script below bridges that gap through the GitHub CLI on a machine where the owner is authenticated.
 
 ## Provisioning bundle
 
-- Machine-readable missing-repository list: remote-repositories-to-create.json (7 verified missing public repositories as of the 2026-11-02 reconciliation)
+- Machine-readable missing-repository list: remote-repositories-to-create.json (6 verified missing public repositories as of the 2026-11-02 reconciliation)
 - 30-repository status wireframe: ../PORTFOLIO-STATUS.md and ../registry/implementation-status.json
 - Public-only local scaffold generator: ../tools/bootstrap_repositories.py
 - Remote creation and initial push: ../tools/provision_public_repositories.sh
@@ -64,3 +64,8 @@ The [AIX Core staging bundle](staged/aix-core/STAGING-STATUS.md) is prepared. Cr
 ## Repository 24 prepared bundle
 
 The [agent-tool-adapters staging bundle](staged/agent-tool-adapters/STAGING-STATUS.md) was deployed to [PCakes303/agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters). Its 16 product files have exact Git blob parity with staging; all 13 unit tests pass on Python 3.10, 3.11 and 3.12. The sandbox-security prerequisite remains planned and is not implemented; all four declared dependencies remain contract-only, not tested runtime integrations.
+
+
+## Repository 25 deployment
+
+The [agent-skill-library staging bundle](staged/agent-skill-library/STAGING-STATUS.md) was deployed to [PCakes303/agent-skill-library](https://github.com/PCakes303/agent-skill-library). Its 17 product files match the retained staging packet by Git blob SHA. CI passed on Python 3.10, 3.11 and 3.12 with 18 unit tests. It is an experimental declarative format and validator, not a workflow executor or security boundary.

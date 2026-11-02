@@ -19,7 +19,7 @@ This repository is the public ecosystem control plane. It owns the authoritative
 
 ## Existing public portfolio repositories
 
-There are currently 22 existing public portfolio repositories. Existence does not imply production maturity.
+There are currently 23 existing public portfolio repositories. Existence does not imply production maturity.
 
 ### Control plane and ecosystem-facing
 - [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem): canonical registry, governance, architecture and dependency control plane.
@@ -54,10 +54,11 @@ There are currently 22 existing public portfolio repositories. Existence does no
 
 ### Adoption and tooling
 - [agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters): experimental Python adapter registry with explicit capabilities, policy-gated invocation and bounded JSON payloads; no bundled third-party adapters or sandbox runtime.
+- [agent-skill-library](https://github.com/PCakes303/agent-skill-library): experimental declarative skill package and workflow schema with strict local validation; no workflow execution, publisher trust or policy enforcement.
 
 ## Planned public repositories
 
-Seven approved public portfolio repositories remain to be created:
+Six approved public portfolio repositories remain to be created:
 - [osint-collection-framework](https://github.com/PCakes303/osint-collection-framework): authorized, policy-checked collection with reproducible logs.
 - [osint-evidence-engine](https://github.com/PCakes303/osint-evidence-engine): immutable evidence records, hashes, provenance and transformation history.
 - [osint-entity-resolution](https://github.com/PCakes303/osint-entity-resolution): ambiguity-aware entity correlation with calibrated confidence and human review.
