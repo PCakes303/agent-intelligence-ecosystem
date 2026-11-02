@@ -199,10 +199,10 @@
       "layer": "protocols",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Not started; initial scaffold prepared in master staging",
       "priority": "P0",
       "importance": "Carries messages across MCP/A2A/HTTP transports with security controls.",
-      "next_gate": "Implement one secure transport adapter, authz checks, replay prevention and latency tests."
+      "next_gate": "Create the public standalone remote, deploy provisioning/staged/agent-transport-gateway, and run the CI matrix; then implement authenticated HTTP adapter, policy integration, and shared replay protection."
     },
     {
       "number": "14",
