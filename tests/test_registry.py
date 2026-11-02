@@ -18,6 +18,12 @@ class RegistryValidationTests(unittest.TestCase):
     def test_committed_registry_is_valid(self):
         self.assertEqual(validate_registry(self.registry, self.schema, self.graph), [])
 
+    def test_repository_manifest_template_matches_schema(self):
+        manifest_schema = load_json(ROOT / "schemas/repository-manifest.schema.json")
+        manifest = load_json(ROOT / "templates/repository/manifest.json")
+        errors = list(__import__("jsonschema").Draft202012Validator(manifest_schema).iter_errors(manifest))
+        self.assertEqual(errors, [])
+
     def test_rejects_unknown_dependency(self):
         registry = json.loads(json.dumps(self.registry))
         registry["repositories"][0]["dependencies"] = ["does-not-exist"]
