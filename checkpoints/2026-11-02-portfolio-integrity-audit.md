@@ -121,4 +121,4 @@ The GitHub Releases endpoint was checked for each of the 21 existing public port
 4. Build the remaining OSINT collection, evidence and entity-resolution components before claiming Knowledge Graph upstream conformance.
 5. Preserve the private/public boundary and verify every future staging packet against its remote by tree/blob hash and CI evidence.
 
-This checkpoint records verified state as of 2026-11-02. It does not claim that the 8 missing public repositories, production services, cross-repository integrations, package releases, GitHub About settings or pending license decisions are complete.
+This audit verifies the GitHub remote main branches and all 12 retained master staging packets; it cannot inspect a separate local clone or workstation for uncommitted files. This checkpoint records verified state as of 2026-11-02. It does not claim that the 8 missing public repositories, production services, cross-repository integrations, package releases, GitHub About settings or pending license decisions are complete.
