@@ -363,6 +363,58 @@
     [
       "foundation",
       "master"
+    ],
+    [
+      "emergency-control",
+      "foundation"
+    ],
+    [
+      "emergency-control",
+      "identity-trust"
+    ],
+    [
+      "emergency-control",
+      "policy-engine"
+    ],
+    [
+      "emergency-control",
+      "audit-provenance"
+    ],
+    [
+      "emergency-control",
+      "secure-supply-chain"
+    ],
+    [
+      "compliance-governance",
+      "master"
+    ],
+    [
+      "compliance-governance",
+      "foundation"
+    ],
+    [
+      "compliance-governance",
+      "identity-trust"
+    ],
+    [
+      "compliance-governance",
+      "policy-engine"
+    ],
+    [
+      "compliance-governance",
+      "audit-provenance"
+    ],
+    [
+      "compliance-governance",
+      "secure-supply-chain"
+    ],
+    [
+      "sandbox-security",
+      "emergency-control"
+    ],
+    [
+      "sandbox-security",
+      "compliance-governance"
     ]
   ],
   "excluded": [
