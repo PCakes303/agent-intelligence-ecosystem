@@ -314,6 +314,72 @@
       "people_matching": false,
       "auto_merge": false,
       "scope": "master staging validation only; remote repository not created"
+    },
+    "osint-collection-framework": {
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
+      "conclusion": "success",
+      "tests": 19,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "scope": "staging-only; no remote repository created"
+    },
+    "osint-evidence-engine": {
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
+      "conclusion": "success",
+      "tests": 21,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "scope": "staging-only; no remote repository created"
+    },
+    "osint-entity-resolution": {
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489",
+      "conclusion": "success",
+      "tests": 16,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "scope": "staging-only; no remote repository created"
+    },
+    "emergency-control": {
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
+      "conclusion": "success",
+      "tests": 21,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "scope": "staging-only; no remote repository created"
+    },
+    "compliance-governance": {
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
+      "conclusion": "success",
+      "tests": 10,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "scope": "staging-only; no remote repository created"
+    },
+    "conformance-lab": {
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41516739073",
+      "conclusion": "success",
+      "tests": 18,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "scope": "staging-only; no remote repository created"
     }
   },
   "repositories": [
@@ -1077,10 +1143,10 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Staged in master; plan validator only; 19 tests pass on Python 3.10-3.12; no network collection.",
       "priority": "P2",
       "importance": "Authorized, reproducible collection of public information.",
-      "next_gate": "Build and validate a bounded non-personal public collection plan; require source-registry approval, identity, policy, audit, emergency-stop, compliance and supply-chain gates. No network collector until separate review."
+      "next_gate": "Validate policy/identity/STOP/compliance integration before considering any network collector."
     },
     {
       "number": "21",
@@ -1089,10 +1155,10 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Staged in master; public non-personal evidence manifest and hash-chain validator only; 21 tests pass on Python 3.10-3.12.",
       "priority": "P1",
       "importance": "Preserves evidence provenance, timestamps, transformations and uncertainty.",
-      "next_gate": "Build a bounded public non-personal evidence manifest and deterministic integrity chain; require identity, policy, audit, emergency-stop, compliance and supply-chain gates. No durable evidence store or legal chain-of-custody claim."
+      "next_gate": "No evidence store, signed timestamps, or legal chain-of-custody claim; verify provenance and retention design before deployment."
     },
     {
       "number": "22",
@@ -1101,10 +1167,10 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Staged in master; public-entity candidate matcher only; 16 tests pass on Python 3.10-3.12; review-required outputs.",
       "priority": "P2",
       "importance": "Correlates entities while exposing ambiguity and confidence rather than asserting identity.",
-      "next_gate": "Build a public non-personal candidate matcher with deterministic normalization, conflict handling, evidence references and human-review-only outputs; require identity, policy, audit, emergency-stop, compliance and supply-chain gates. No people matching or graph writes."
+      "next_gate": "No people matching, personal profiling, automatic merge, or graph writes; maintain human review and evidence traceability."
     },
     {
       "number": "23",
@@ -1279,10 +1345,10 @@
       "layer": "foundation-security",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Planned; approved as a new P0 portfolio repository",
+      "status": "Staged in master; 21 tests pass on Python 3.10-3.12; STOP/RESUME command contract and pure fail-closed reducer only.",
       "priority": "P0",
       "importance": "Independent emergency-stop authority and distributed stop enforcement.",
-      "next_gate": "Publish stop-state machine, threat model, monotonic epoch protocol, revocation/quarantine interfaces, local enforcement contracts, controlled resume, and conformance tests."
+      "next_gate": "No deployed kill switch, cryptographic verification, durable state, propagation, revocation, or runtime enforcement."
     },
     {
       "number": "28",
@@ -1291,10 +1357,10 @@
       "layer": "governance",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Planned; approved as a new P0 portfolio repository",
+      "status": "Staged in master; 10 tests pass on Python 3.10-3.12; source-linked Colorado obligations and control catalogue scaffold.",
       "priority": "P0",
       "importance": "Maintained legal applicability and compliance management system with mapped controls and evidence.",
-      "next_gate": "Build source-linked federal/Colorado/local obligations register, applicability workflow, control catalogue, privacy and AI governance, evidence and exception management; obtain qualified legal review."
+      "next_gate": "No legal applicability determination, implemented control evidence, legal advice, or compliance certification; qualified counsel review required."
     },
     {
       "number": "29",
@@ -1303,10 +1369,10 @@
       "layer": "adoption",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Staged in master; local metadata/fixture validator and deterministic conformance report builder; staging matrix passed on Python 3.10-3.12.",
       "priority": "P1",
       "importance": "Proves protocol, security and compatibility behavior across implementations.",
-      "next_gate": "Validate local metadata and synthetic AIX fixtures; require identity, policy, audit, emergency-stop, compliance and supply-chain gates. Do not claim live interoperability or certification from local tests."
+      "next_gate": "Local fixtures do not establish live interoperability or certification; signed test evidence and isolated integration harness remain future gates."
     },
     {
       "number": "30",
@@ -1315,10 +1381,10 @@
       "layer": "adoption",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Staged in master; local peer declaration validator and contract tests; public remote not created",
+      "status": "Staged in master; bounded local peer declaration validator and contract tests; public remote not created.",
       "priority": "P2",
       "importance": "Allows independently operated networks to interoperate without shared root trust.",
-      "next_gate": "Verify Python 3.10-3.12 staging matrix, then deploy only after all prerequisite repositories and trust/STOP integration gates are reviewed."
+      "next_gate": "No peer authentication, signature verification, network transport, credential exchange, remote authorization, revocation distribution or emergency STOP propagation."
     },
     {
       "number": "31",
@@ -1586,10 +1652,78 @@
       "portfolio_id": "federation-network",
       "path": "provisioning/staged/agent-federation-network",
       "product_files": 16,
-      "commit": "569a66d2d2f5c1e301a6800d968ef427a87dfde7",
       "state": "staged; remote not created",
-      "scope": "local peer declaration validation only",
-      "safety": "active declarations return REVIEW_REQUIRED; pending/revoked/STOP/expired states block; no authentication, signature verification, network transport, revocation distribution, STOP propagation or remote authorization"
+      "scope": "local peer declaration validation only; active declarations remain REVIEW_REQUIRED",
+      "verified_ci": {
+        "workflow_run": "pending final master CI",
+        "conclusion": "pending",
+        "tests": 12,
+        "python_versions": [
+          "3.10",
+          "3.11",
+          "3.12"
+        ]
+      }
+    },
+    {
+      "repository": "osint-collection-framework",
+      "portfolio_id": "osint-collection",
+      "state": "staged; remote not created",
+      "scope": "non-network plan validator only",
+      "verified_ci": {
+        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
+        "tests": 19
+      }
+    },
+    {
+      "repository": "osint-evidence-engine",
+      "portfolio_id": "osint-evidence",
+      "state": "staged; remote not created",
+      "scope": "public non-personal evidence manifest and hash-chain validator only",
+      "verified_ci": {
+        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
+        "tests": 21
+      }
+    },
+    {
+      "repository": "osint-entity-resolution",
+      "portfolio_id": "entity-resolution",
+      "state": "staged; remote not created",
+      "scope": "public-entity candidate matcher; human review required",
+      "verified_ci": {
+        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489",
+        "tests": 16
+      }
+    },
+    {
+      "repository": "agent-emergency-control",
+      "portfolio_id": "emergency-control",
+      "state": "staged; remote not created",
+      "scope": "STOP/RESUME contract and pure reducer; not an operational kill switch",
+      "verified_ci": {
+        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
+        "tests": 21
+      }
+    },
+    {
+      "repository": "agent-compliance-governance",
+      "portfolio_id": "compliance-governance",
+      "state": "staged; remote not created",
+      "scope": "source-linked obligation/control catalogue scaffold; not legal advice or certification",
+      "verified_ci": {
+        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
+        "tests": 10
+      }
+    },
+    {
+      "repository": "agent-conformance-lab",
+      "portfolio_id": "conformance-lab",
+      "state": "staged; remote not created",
+      "scope": "local metadata/fixture validation and deterministic report builder; no live interoperability",
+      "verified_ci": {
+        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41516739073",
+        "tests": 18
+      }
     }
   ]
 }
