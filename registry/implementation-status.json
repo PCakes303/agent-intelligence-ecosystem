@@ -228,7 +228,27 @@
       "status": "Scaffolded; identity contracts and CI pass; lifecycle/authenticated demo missing",
       "priority": "P0",
       "importance": "Trust root for agent identity, delegation and authorization boundaries.",
-      "next_gate": "Implement issuance, rotation, revocation state machine and authenticated two-node demo."
+      "next_gate": "Configure and verify private vulnerability reporting; align principal validator with Draft 2020-12 schema and add boundary/negative tests; retain pending license status until approved.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "6d53a2af501eb05bb929d5f3da07cf1dd316e6b1",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-identity-trust-audit.md",
+        "remediation_commits": [
+          "e816ee8c2aae2deb91903c016f54dce0cfac508d",
+          "9ccbadf98e660a20444f2f39eaff6785b031f6b5",
+          "c37299b015a18c84ae13892bd3c96bc6fc6c0db8"
+        ],
+        "blocking_issue": "https://github.com/PCakes303/agent-identity-trust/issues/1",
+        "findings": [
+          "private vulnerability reporting route not verified",
+          "principal validator does not enforce all JSON Schema constraints",
+          "license pending review",
+          "GitHub About metadata incomplete",
+          "identity issuance/authentication/authorization/delegation/revocation runtime services not implemented",
+          "cross-repository compatibility not tested"
+        ]
+      }
     },
     {
       "number": "08",
