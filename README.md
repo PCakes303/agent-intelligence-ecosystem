@@ -99,7 +99,7 @@ See [Capability and compatibility metadata contract](docs/CAPABILITY-COMPATIBILI
 
 ## License status
 
-The master repository's code, documentation, schemas, examples, and other materials do not yet have an approved license decision. No root `LICENSE` file or GitHub license declaration is present. Reuse and redistribution rights must not be assumed; per-repository and per-artifact licensing remains pending review.
+This repository applies a scoped mixed-license policy: original source code and machine-readable contracts are licensed under Apache-2.0; original human-readable documentation is licensed under CC BY 4.0. Third-party material retains upstream terms. Datasets, evidence, fixtures, sample payloads, media, and material with uncertain provenance are not blanket-licensed and require separate review. See [LICENSE.md](LICENSE.md).
 
 ## Repository quality and maintenance standard
 
