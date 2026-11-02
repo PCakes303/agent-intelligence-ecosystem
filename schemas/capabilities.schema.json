@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/capabilities.schema.json",
+  "title": "Ecosystem Repository Capabilities",
+  "type": "object",
+  "required": [
+    "capabilities_version",
+    "repository",
+    "repository_id",
+    "maturity",
+    "capabilities",
+    "explicit_non_capabilities"
+  ],
+  "properties": {
+    "capabilities_version": {
+      "const": "1.1.0"
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "repository_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "maturity": {
+      "enum": [
+        "planned",
+        "research",
+        "scaffolding",
+        "experimental",
+        "alpha",
+        "beta",
+        "stable",
+        "maintenance",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "status",
+          "description",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 3
+          },
+          "name": {
+            "type": "string",
+            "minLength": 3
+          },
+          "status": {
+            "enum": [
+              "planned",
+              "scaffolded",
+              "implemented",
+              "tested",
+              "released"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 10
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 3
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "explicit_non_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
