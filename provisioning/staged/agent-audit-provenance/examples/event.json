@@ -1,0 +1,10 @@
+{
+  "event_id": "evt-example-0001",
+  "timestamp": "2026-01-01T00:00:00Z",
+  "event_type": "policy.decision",
+  "actor": {"id": "agent:example", "type": "agent"},
+  "action": "read",
+  "resource": "dataset:synthetic-demo",
+  "outcome": "success",
+  "details": {"decision_id": "decision-example-0001", "policy_version": "0.1.0"}
+}
