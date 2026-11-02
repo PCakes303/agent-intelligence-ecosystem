@@ -29,7 +29,7 @@ All 19 existing public portfolio repositories were verified to:
 - use `main` as the default branch;
 - have a current commit resolvable at `main`.
 
-The current remote HEADs and latest successful CI evidence were checked for all 19 public repositories. For 17 repositories, the latest successful workflow run corresponds to the current `main` HEAD. For `agent-ai-discovery` and `mrcakes931-ecosystem`, the latest successful CI run predates the current HEAD; commit comparison shows the later commits changed README/metadata files only, and their workflow path filters do not run on those paths. Their most recent code-test runs remain successful, but the later metadata-only commits were not separately tested by CI.
+The current remote HEADs and latest successful CI evidence were checked for all 19 public repositories. For 17 repositories, the latest successful workflow run corresponds to the current `main` HEAD. For `agent-ai-discovery` and `mrcakes931-ecosystem`, the latest successful CI run predates the current HEAD; commit comparison shows the later commits changed README/metadata files in the discovery repository and the Makefile plus metadata files in the guide repository; those paths are outside the respective workflow path filters. Their most recent code-test runs remain successful, but the later metadata-only commits were not separately tested by CI.
 
 ## Staging-to-remote integrity
 
