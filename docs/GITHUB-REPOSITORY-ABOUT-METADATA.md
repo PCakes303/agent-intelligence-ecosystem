@@ -1,7 +1,7 @@
 # GitHub repository About metadata
 
 **Audit date:** 2026-11-02  
-**Scope:** twelve existing public portfolio repositories (00–11). The separate profile repository and private operations repository are excluded.
+**Scope:** thirteen existing public portfolio repositories (00–12). The separate profile repository and private operations repository are excluded.
 
 GitHub's repository-level **About** fields are separate from README and manifest files. The connected GitHub integration can read repository metadata and edit repository files, but cannot update repository descriptions, homepage URLs, or topics. Apply the values below in each repository's GitHub **About → Edit repository details** panel.
 
@@ -11,12 +11,12 @@ GitHub's repository-level **About** fields are separate from README and manifest
 
 
 - All twelve public portfolio repositories exist and use the `main` default branch.
-- All ten currently have an empty topics list and no homepage URL.
-- Repositories 00–08, 10, and 11 have no About description.
+- All thirteen currently have an empty topics list and no homepage URL.
+- Repositories 00–08, 10, and 11 have no About description. Repository 12 already has the description `RFC 8785 canonical JSON serialization and strict decoding for AIX messages`.
 - Repository 09 has a malformed description: the intended description was followed by a comma-separated topic list, all stored in the description field. Its topics list is empty.
-- All ten repositories have a README and machine-oriented entrypoints appropriate to their current stage. CI has a successful recent run for each repository; this does not imply production readiness.
+- All thirteen repositories have a README and machine-oriented entrypoints appropriate to their current stage. CI has a successful recent run for each repository; this does not imply production readiness.
 
-Use this homepage for all ten repositories:
+Use this homepage for all thirteen repositories:
 
 `https://github.com/PCakes303/agent-intelligence-ecosystem`
 
@@ -37,13 +37,14 @@ Descriptions are concise and deliberately avoid implying production maturity.
 | 08 | [agent-secure-supply-chain](https://github.com/PCakes303/agent-secure-supply-chain) | Artifact integrity, SBOM references, source provenance, and signature-verification contracts for secure agent software supply chains. | supply-chain-security, sbom, provenance, artifact-integrity, software-security, ai-agents |
 | 09 | [agent-policy-engine](https://github.com/PCakes303/agent-policy-engine) | Experimental deterministic default-deny policy decision evaluator for agent principals, actions, resources, and scopes. | ai-agents, policy-engine, authorization, access-control, least-privilege, security |
 
-| 10 | [agent-audit-provenance](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/agent-audit-provenance) | Experimental audit-event contracts and SHA-256 hash-chained JSONL tooling for traceability and integrity checks. | ai-agents, audit-logging, provenance, event-integrity, sha256, security |
+| 10 | [agent-audit-provenance](https://github.com/PCakes303/agent-audit-provenance) | Experimental audit-event contracts and SHA-256 hash-chained JSONL tooling for traceability and integrity checks. | ai-agents, audit-logging, provenance, event-integrity, sha256, security |
 
-| 11 | [aix-core](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/aix-core) | Experimental semantic interoperability specification for agent intent, tasks, capabilities, context, and provenance; an extension layer over existing standards. | ai-agents, interoperability, agent-protocol, task-orchestration, mcp, a2a |
+| 11 | [aix-core](https://github.com/PCakes303/aix-core) | Experimental semantic interoperability specification for agent intent, tasks, capabilities, context, and provenance; an extension layer over existing standards. | ai-agents, interoperability, agent-protocol, task-orchestration, mcp, a2a |
+| 12 | [aix-codecs](https://github.com/PCakes303/aix-codecs) | RFC 8785 canonical JSON serialization and strict decoding for AIX messages. | ai-agents, json-canonicalization, rfc8785, serialization, interoperability, aix |
 
 ## Application order
 
-Apply rows 00–11 to the twelve existing public repositories now.
+Apply rows 00–12 to the thirteen existing public repositories now.
 
 For each existing repository, set:
 1. **Description:** copy the exact description from the table.
@@ -64,6 +65,9 @@ For Repository 09, replace the entire malformed description rather than appendin
 - **07 identity trust:** principal contract and validator exist; no deployed identity provider or credential issuer.
 - **08 secure supply chain:** artifact-record contract and validator exist; no SBOM generation, artifact download, signature verification, or publisher authentication.
 - **09 policy engine:** deterministic default-deny decision evaluator, schemas, CLI, examples, tests, and CI exist; no principal authentication, policy signing/distribution, or enforcement at protected resources.
+- **10 audit provenance:** hash-chained JSONL and verification tooling exist; hash chaining does not authenticate event producers.
+- **11 AIX Core:** experimental envelope, lifecycle and schema validator exist; no authenticated sender or production interoperability is implied.
+- **12 AIX Codecs:** RFC 8785 canonical JSON and strict decoder scaffold; CI passes across Python 3.10–3.12. Cross-language conformance, schema-bound AIX message validation, fuzzing and payload/depth limits remain outstanding.
 
 A successful starter CI run verifies the declared starter checks only. It does not establish production security, standards certification, or runtime interoperability.
 
