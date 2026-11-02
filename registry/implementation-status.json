@@ -409,9 +409,11 @@
       "agent-foundation-spec",
       "agent-resource-manifest",
       "agent-schema-registry",
-      "agent-identity-trust"
+      "agent-identity-trust",
+      "agent-secure-supply-chain",
+      "agent-policy-engine"
     ],
-    "result": "No root-level pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, or equivalent distribution manifest was found in the seven existing public project repositories reviewed. Their manifest.json files are ecosystem metadata, not package build metadata.",
+    "result": "No root-level pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, or equivalent distribution manifest was found in the nine existing public component repositories reviewed (repositories 01–09). Their manifest.json files are ecosystem metadata, not package build metadata. The master control-plane repository is reviewed separately.",
     "decision": "Do not publish empty or premature packages. Add package metadata, reproducible build, license validation, dependency lock/SBOM, artifact signing and install-from-artifact tests only when a repository contains a reusable library or executable intended for distribution."
   }
 }
