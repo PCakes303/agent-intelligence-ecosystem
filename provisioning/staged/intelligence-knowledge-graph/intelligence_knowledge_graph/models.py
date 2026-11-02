@@ -47,7 +47,7 @@ class Node:
         meta = raw.get("metadata", {})
         if not isinstance(meta, dict) or len(meta) > 50:
             raise ValueError("metadata must be an object with at most 50 keys")
-        data = {k: v for k, v in raw.items() if k not in common}
+        data = {k: v for k, v in raw.items() if k not in {"id", "type", "label", "recorded_at"}}
         if kind == "source":
             url = raw["canonical_url"]
             if not isinstance(url, str) or not url.startswith("https://") or len(url) > 2048:
