@@ -25,6 +25,7 @@ class AdapterRegistry:
             raise ValueError("max_payload_bytes must be a positive integer")
         self._max_payload_bytes = max_payload_bytes
         self._adapters: dict[str, ToolAdapter] = {}
+        self._capabilities: dict[str, frozenset[str]] = {}
 
     def register(self, adapter: ToolAdapter) -> None:
         adapter_id = getattr(adapter, "adapter_id", None)
@@ -40,10 +41,16 @@ class AdapterRegistry:
             raise AdapterProtocolError("adapter must provide callable invoke(input_data)")
         if adapter_id in self._adapters:
             raise AdapterError(f"adapter already registered: {adapter_id}")
+        normalized = frozenset(capabilities)
+        collisions = {cap for cap in normalized
+                      if any(cap in existing for existing in self._capabilities.values())}
+        if collisions:
+            raise AdapterError("capability already registered: " + ", ".join(sorted(collisions)))
         self._adapters[adapter_id] = adapter
+        self._capabilities[adapter_id] = normalized
 
     def descriptors(self) -> list[dict[str, Any]]:
-        return [{"adapter_id": key, "capabilities": sorted(value.capabilities)}
+        return [{"adapter_id": key, "capabilities": sorted(self._capabilities[key])}
                 for key, value in sorted(self._adapters.items())]
 
     def invoke(self, invocation: Invocation) -> InvocationResult:
@@ -52,22 +59,21 @@ class AdapterRegistry:
         if not isinstance(invocation.capability, str) or not invocation.capability.strip():
             return self._denied("unknown", "", "invalid_capability")
         matches = [(key, adapter) for key, adapter in self._adapters.items()
-                   if invocation.capability in adapter.capabilities]
+                   if invocation.capability in self._capabilities[key]]
         if len(matches) != 1:
             return self._denied(matches[0][0] if matches else "unknown",
                                 invocation.capability, "capability_not_registered")
         adapter_id, adapter = matches[0]
         try:
+            self._check_payload(invocation.input_data)
+        except (TypeError, ValueError, OverflowError):
+            return self._denied(adapter_id, invocation.capability, "invalid_or_oversized_input")
+        try:
             decision = invocation.policy(invocation)
         except Exception:
             return self._denied(adapter_id, invocation.capability, "policy_error")
-        if decision is None or not getattr(decision, "allowed", False):
+        if decision is None or getattr(decision, "allowed", False) is not True:
             return self._denied(adapter_id, invocation.capability, "policy_denied",
-                                getattr(decision, "decision_id", None))
-        try:
-            self._check_payload(invocation.input_data)
-        except (TypeError, ValueError, OverflowError):
-            return self._denied(adapter_id, invocation.capability, "invalid_or_oversized_input",
                                 getattr(decision, "decision_id", None))
         try:
             output = adapter.invoke(invocation.input_data)
