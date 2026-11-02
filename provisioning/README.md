@@ -2,7 +2,7 @@
 
 ## Current verified state
 
-The connected GitHub account currently has ten public portfolio repositories (the master, discovery, human guide, integration, four original foundation repositories, and secure supply-chain repository) plus the separate private operations repository. The remaining 19 public repositories in the approved registry are not yet present.
+The latest portfolio reconciliation verified 21 existing public portfolio repositories, 8 public repositories still to be created, and the separate existing private operations repository. The private repository is excluded from all public scaffold generation, catalogs, and synchronization. The separate profile repository is not part of the portfolio.
 
 The GitHub integration available to this session can inspect and write repository contents, branches, commits, issues, and pull requests, but does not expose repository creation or repository-administration operations. It also does not expose GitHub Projects v2 mutations or repository metadata administration. GitHub's current Projects v2 API is GraphQL-based and requires the project scope; the connected integration does not provide that action. A repository-resident portfolio tracker and a master-repository issue are therefore used as the current work wireframe until that capability is available. The provisioning script below bridges that gap through the GitHub CLI on a machine where the owner is authenticated.
 
@@ -60,3 +60,7 @@ The reusable public template now includes a no-third-party-dependency starter bu
 ## Repository 11 prepared bundle
 
 The [AIX Core staging bundle](staged/aix-core/STAGING-STATUS.md) is prepared. Create an empty public repository named `aix-core` under `PCakes303`, then send its URL so the staged files can be deployed and CI verified. Do not mark it as created until GitHub confirms the remote exists.
+
+## Repository 24 prepared bundle
+
+The [agent-tool-adapters staging bundle](staged/agent-tool-adapters/STAGING-STATUS.md) is prepared in the master repository. It contains an experimental, dependency-free Python adapter registry, explicit capability declarations, a fail-closed policy callback seam, bounded JSON payload validation, a descriptor schema, tests, threat model, and Python 3.10–3.12 CI workflow. The sandbox-security prerequisite remains planned and is not implemented. All declared integrations remain untested. Create an empty public repository named `agent-tool-adapters` under `PCakes303`, then provide its URL for remote verification and deployment.
