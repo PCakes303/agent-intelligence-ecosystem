@@ -177,8 +177,8 @@
       "name": "agent-transport-gateway",
       "visibility": "public",
       "layer": "protocols",
-      "status": "planned",
-      "role": "Secure transport and integration with existing agent protocols.",
+      "status": "scaffolding",
+      "role": "Experimental transport-neutral request guard and integration boundary for AIX over HTTP, MCP and A2A; not a production gateway.",
       "dependencies": [
         "aix-core",
         "aix-codecs",
