@@ -246,16 +246,16 @@
     },
     "agent-sandbox-security": {
       "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
-      "workflow_run": "https://github.com/PCakes303/agent-sandbox-security/actions/runs/41499814802",
+      "workflow_run": "https://github.com/PCakes303/agent-sandbox-security/actions/runs/41507530278",
       "conclusion": "success",
-      "head_sha": "c98a6883ea08fbcbdf5cd5a6ed445a05970a6af0",
-      "tests": 14,
+      "head_sha": "614c1f61570acfae296ea35c1af90977e62ea6de",
+      "tests": 21,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
-      "staging_parity": "14 product files; exact Git blob SHA match"
+      "schema_validation": "Draft 2020-12 boundary tests included"
     }
   },
   "repositories": [
@@ -1185,18 +1185,33 @@
         "checkpoint": "checkpoints/2026-11-02-agent-sandbox-security-audit.md",
         "blocking_issue": "https://github.com/PCakes303/agent-sandbox-security/issues/1",
         "remediation_commits": [
-          "c98a6883ea08fbcbdf5cd5a6ed445a05970a6af0"
+          "c98a6883ea08fbcbdf5cd5a6ed445a05970a6af0",
+          "e0aad6b37457e52331666b2ef334b0ba29fa6fbf",
+          "d635ab1c9a5f19f3aad75c22a9cf1d20bbe227da",
+          "9eda8a9073f251ffcad8d5cac34cc16a8e20712",
+          "4a3a65785c193702ebfcc031f0db0d666461d9c8",
+          "1ea85fb4b606ed29c2578abf3cabbce890aa147c",
+          "0f5179a659f5af4479131a0c295bc79da4ffdeb9",
+          "1ba84a96c3a1d71aa40dc448d8dbe1351f6a27ab",
+          "23b069a7a1fc5c62449dcf0f1260692f8aac18f1",
+          "fa0b92c7822f60103b6f3a0c6fa556fc800de666",
+          "95088f755fa11e082c4e4d6ebd33dcf7859071cf",
+          "820d4b202d3539354d0960c6a5238132b0c4fb66",
+          "614c1f61570acfae296ea35c1af90977e62ea6de"
         ],
         "findings": [
-          "unbounded raw policy JSON size and nesting depth; RecursionError may escape",
-          "filesystem and egress collection/string limits incomplete",
-          "Draft 2020-12 schema weaker than runtime validator and not run in CI",
+          "policy JSON parser enforces 1 MiB byte ceiling and 32-level nesting before parse",
+          "filesystem and egress arrays capped at 64; path/egress string lengths bounded",
+          "Draft 2020-12 schema aligned with runtime for numeric limits, traversal, read-only root and non-execution; CI schema tests",
+          "21 tests pass on Python 3.10–3.12",
           "private vulnerability reporting route not verified",
           "GitHub About metadata missing",
-          "license pending review",
           "repository administration controls unverified",
-          "dependencies remain declared-only; no OS isolation or workload execution"
-        ]
+          "license pending review",
+          "no OS isolation backend or workload execution; privileged execution prohibited",
+          "identity, policy, revocation, artifact verification, emergency-stop and compliance integrations absent"
+        ],
+        "next_gate": "Verify private reporting, About metadata and administration settings; implement a separately reviewed OS isolation backend and independent identity, policy, artifact, revocation, emergency-stop, audit and compliance enforcement before any privileged execution."
       }
     },
     {
@@ -1429,7 +1444,7 @@
       "swarm-state-mesh"
     ],
     "drift": {},
-    "verified_commit": "c7c4d7691e34593f1fe5f7d5e8e9ab3290b145a5",
+    "verified_commit": "2e23045d09319f65c2a110f808531ba5e1298f1f",
     "next_gate": "Maintain exact parity by refreshing staging from live remotes after every remote remediation; rerun Git blob comparisons before portfolio sign-off.",
     "refreshed_product_files": 76,
     "post_backcheck": [
@@ -1462,6 +1477,12 @@
         "product_files": 17,
         "blob_diffs": 0,
         "verification": "17 remote product files match 17 staged files exactly after audit remediation; STAGING-STATUS.md excluded from product parity."
+      },
+      {
+        "repository": "agent-sandbox-security",
+        "product_files": 15,
+        "blob_diffs": 0,
+        "verification": "15 remote product files match 15 staged files exactly; STAGING-STATUS.md excluded from product parity."
       }
     ]
   }
