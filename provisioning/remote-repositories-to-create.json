@@ -16,6 +16,7 @@
     "agent-resource-manifest",
     "agent-schema-registry",
     "agent-secure-supply-chain",
+    "agent-tool-adapters",
     "agent-transport-gateway",
     "aix-codecs",
     "aix-core",
@@ -26,7 +27,7 @@
     "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 8,
+  "missing_public_repository_count": 7,
   "repositories": [
     {
       "name": "osint-collection-framework",
@@ -71,22 +72,6 @@
       "dependencies": [
         "osint-evidence",
         "schema-registry"
-      ]
-    },
-    {
-      "name": "agent-tool-adapters",
-      "description": "Consistent agent interfaces to existing open-source tools.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "tool-adapters",
-      "dependencies": [
-        "aix-core",
-        "transport-gateway",
-        "policy-engine",
-        "sandbox-security"
       ]
     },
     {
