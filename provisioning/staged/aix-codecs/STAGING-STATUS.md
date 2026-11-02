@@ -1,17 +1,11 @@
-# Staging status
+# Repository 12 deployment status
 
-Repository 12 (`aix-codecs`) prepared as a standalone build packet in the master control plane.
+**Repository:** https://github.com/PCakes303/aix-codecs  
+**Deployment:** 14 files published to the `main` branch.  
+**CI:** Passed on Python 3.10, 3.11 and 3.12: https://github.com/PCakes303/aix-codecs/actions/runs/41408761297
 
-- RFC 8785 canonical JSON contract: drafted.
-- Strict UTF-8 JSON decoder: drafted.
-- Duplicate-key and non-standard-number rejection: drafted.
-- Positive and negative unit tests: included.
-- Pinned development dependency: included.
-- GitHub Actions workflow: included.
-- Cross-language conformance, fuzzing, schema-bound message validation, payload/depth limits, release signing, and production readiness: not implemented.
-- License: pending portfolio mixed-license review.
+The scaffold provides a Python reference implementation for RFC 8785 canonical JSON encoding and strict UTF-8 JSON decoding, with unit tests and CI. Capability metadata is version 1.1.0; compatibility metadata keeps AIX Core and Schema Registry dependencies declared, not tested.
 
-This directory is the source bundle for the standalone repository. It has not yet been copied to a separate GitHub remote.
+## Maturity and limitations
 
-
-**Deployment update (2026-11-02):** The prepared packet has been deployed to the standalone public repository [PCakes303/aix-codecs](https://github.com/PCakes303/aix-codecs). The staging directory is retained as the master control plane's provisioning archive. The standalone repository contains 14 files and its GitHub Actions matrix passed on Python 3.10, 3.11 and 3.12. No release has been published.
+This remains a scaffold, not a released or production-ready package. Cross-language conformance vectors, schema-bound AIX message tests, fuzz/property coverage, payload/depth limits, and package metadata remain outstanding. License selection remains pending review. No GitHub Release has been published.
