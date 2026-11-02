@@ -538,8 +538,8 @@
       "layer": "adoption",
       "role": "Consistent agent interfaces to existing open-source tools.",
       "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
-      "existence": "not-created",
-      "implementation_status": "Prepared in master staging: experimental adapter registry, policy-gated invocation reference library, schema, threat model, tests and CI; not deployed",
+      "existence": "exists",
+      "implementation_status": "Experimental; 16 files deployed; 13 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging parity verified",
       "priority": "P1",
       "dependencies": [
         "aix-core",
@@ -548,9 +548,9 @@
         "sandbox-security"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-tool-adapters/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-tool-adapters/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-tool-adapters/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
