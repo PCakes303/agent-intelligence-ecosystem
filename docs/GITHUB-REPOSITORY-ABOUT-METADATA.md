@@ -1,8 +1,25 @@
 # GitHub repository About metadata
 
-The README and manifest do not populate GitHub's repository-level **About** description, website, or topics. The GitHub connector used for this work can read repository metadata and commit files, but it does not expose the repository-settings update operation. Use the descriptions and topics below in each repository's GitHub **Settings / General → About** area.
+**Audit date:** 2026-11-02  
+**Scope:** ten existing public portfolio repositories (00–09). The separate profile repository and private operations repository are excluded.
 
-Descriptions are intentionally concise and distinguish each component's role. They do not imply production maturity.
+GitHub's repository-level **About** fields are separate from README and manifest files. The connected GitHub integration can read repository metadata and edit repository files, but cannot update repository descriptions, homepage URLs, or topics. Apply the values below in each repository's GitHub **About → Edit repository details** panel.
+
+## Verified current state
+
+- All ten public portfolio repositories exist and use the `main` default branch.
+- All ten currently have an empty topics list and no homepage URL.
+- Repositories 00–08 have no About description.
+- Repository 09 has a malformed description: the intended description was followed by a comma-separated topic list, all stored in the description field. Its topics list is empty.
+- All ten repositories have a README and machine-oriented entrypoints appropriate to their current stage. CI has a successful recent run for each repository; this does not imply production readiness.
+
+Use this homepage for all ten repositories:
+
+`https://github.com/PCakes303/agent-intelligence-ecosystem`
+
+## Recommended About values
+
+Descriptions are concise and deliberately avoid implying production maturity.
 
 | # | Repository | Description | Suggested topics |
 |---:|---|---|---|
@@ -15,17 +32,30 @@ Descriptions are intentionally concise and distinguish each component's role. Th
 | 06 | [agent-schema-registry](https://github.com/PCakes303/agent-schema-registry) | Versioned JSON Schema catalog and governance conventions for machine-readable contracts across agent systems. | json-schema, schema-registry, ai-agents, validation, interoperability |
 | 07 | [agent-identity-trust](https://github.com/PCakes303/agent-identity-trust) | Identity and trust contracts for agent principals, authentication context, authorization, delegation, and revocation. | ai-agents, identity, trust, authorization, security, delegation |
 | 08 | [agent-secure-supply-chain](https://github.com/PCakes303/agent-secure-supply-chain) | Artifact integrity, SBOM references, source provenance, and signature-verification contracts for secure agent software supply chains. | supply-chain-security, sbom, provenance, artifact-integrity, software-security, ai-agents |
-| 09 | [agent-policy-engine](https://github.com/PCakes303/agent-policy-engine) | Default-deny authorization policies and deterministic decision evaluation for agent identities, actions, resources, and scopes. | ai-agents, policy-engine, authorization, access-control, least-privilege, security |
+| 09 | [agent-policy-engine](https://github.com/PCakes303/agent-policy-engine) | Experimental deterministic default-deny policy decision evaluator for agent principals, actions, resources, and scopes. | ai-agents, policy-engine, authorization, access-control, least-privilege, security |
 
-## Repo 08 and 09 readiness
+## Application order
 
-**08 — agent-secure-supply-chain:** repository files and starter CI exist; latest recorded starter CI passed. Its About description and topics remain unset. Its validator is being tightened with malformed-host and credential-bearing URL rejection tests. It remains scaffolding, not a signature verifier or SBOM generator.
+For each repository, set:
+1. **Description:** copy the exact description from the table.
+2. **Website:** use the common master-repository URL above.
+3. **Topics:** add the comma-separated topics from the table as individual GitHub topics.
 
-**09 — agent-policy-engine:** not yet created on GitHub. A repository-specific starter is being prepared under `provisioning/staged/agent-policy-engine/`. Create the public GitHub repository with this exact name, empty (no README/license/gitignore initialization), then the staged files can be copied into it and CI run. The GitHub About description above is ready to paste.
+For Repository 09, replace the entire malformed description rather than appending to it. Do not paste topics into the description field.
 
-## Homepage field
+## Maturity and accuracy notes
 
-For component repositories, use the master registry as the homepage:
-https://github.com/PCakes303/agent-intelligence-ecosystem
+- **00 master:** control plane and validation are operational; it is not evidence that all 29 public components are implemented.
+- **01 discovery:** local document validation and index generation exist; CI passes. External publisher authentication, complete JSON Schema validation, and consumer interoperability are not implemented.
+- **02 human guide:** documentation/onboarding scaffold; it is not a running agent service.
+- **03 integration:** contracts, examples, validator, tests, and CI exist; production adapters and cross-repository conformance are future work.
+- **04 foundation:** requirements and contract scaffold with CI; normative requirement-to-implementation verification remains partial.
+- **05 resource manifest:** schema, example, validator, tests, and CI exist; not a package manager or execution runtime.
+- **06 schema registry:** structural catalog checks exist; the checker is not a complete JSON Schema semantic validator or compatibility engine.
+- **07 identity trust:** principal contract and validator exist; no deployed identity provider or credential issuer.
+- **08 secure supply chain:** artifact-record contract and validator exist; no SBOM generation, artifact download, signature verification, or publisher authentication.
+- **09 policy engine:** deterministic default-deny decision evaluator, schemas, CLI, examples, tests, and CI exist; no principal authentication, policy signing/distribution, or enforcement at protected resources.
+
+A successful starter CI run verifies the declared starter checks only. It does not establish production security, standards certification, or runtime interoperability.
 
 The private operations repository is intentionally excluded. The separate profile repository is not part of the 30-repository portfolio.
