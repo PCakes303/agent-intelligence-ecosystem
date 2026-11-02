@@ -1315,10 +1315,10 @@
       "layer": "adoption",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Staged in master; local peer declaration validator and contract tests; public remote not created",
       "priority": "P2",
       "importance": "Allows independently operated networks to interoperate without shared root trust.",
-      "next_gate": "Prototype two-domain federation with explicit trust, authorization and revocation."
+      "next_gate": "Verify Python 3.10-3.12 staging matrix, then deploy only after all prerequisite repositories and trust/STOP integration gates are reviewed."
     },
     {
       "number": "31",
@@ -1579,5 +1579,17 @@
         "verification": "15 remote product files match 15 staged files exactly; STAGING-STATUS.md excluded from product parity."
       }
     ]
-  }
+  },
+  "staged_not_created": [
+    {
+      "repository": "agent-federation-network",
+      "portfolio_id": "federation-network",
+      "path": "provisioning/staged/agent-federation-network",
+      "product_files": 16,
+      "commit": "569a66d2d2f5c1e301a6800d968ef427a87dfde7",
+      "state": "staged; remote not created",
+      "scope": "local peer declaration validation only",
+      "safety": "active declarations return REVIEW_REQUIRED; pending/revoked/STOP/expired states block; no authentication, signature verification, network transport, revocation distribution, STOP propagation or remote authorization"
+    }
+  ]
 }
