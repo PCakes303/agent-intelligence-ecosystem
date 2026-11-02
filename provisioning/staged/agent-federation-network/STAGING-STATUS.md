@@ -1,6 +1,6 @@
 # Staging Status
 
-- Portfolio position: 31/32.
+- Portfolio registry number: 30/32.
 - Canonical ID: federation-network.
 - Visibility: public.
 - State: staged in master; public remote not created.
