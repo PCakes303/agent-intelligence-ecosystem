@@ -671,7 +671,8 @@
         "llms_txt": null,
         "agents_md": null,
         "readme": null
-      }
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability; planned entries are not implementations."
     },
     {
       "id": "compliance-governance",
@@ -695,7 +696,8 @@
         "llms_txt": null,
         "agents_md": null,
         "readme": null
-      }
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability; planned entries are not implementations."
     }
   ]
 }
