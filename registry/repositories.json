@@ -454,5 +454,16 @@
       "dependencies": [],
       "public_export": false
     }
-  ]
+  ],
+  "licensing_policy": {
+    "version": "2026-11-02",
+    "status": "approved-and-applied-to-existing-public-repositories",
+    "source_code_and_machine_readable_artifacts": "Apache-2.0",
+    "human_readable_documentation": "CC-BY-4.0",
+    "third_party_material": "retains-upstream-license-and-notices",
+    "data_fixtures_datasets_evidence_media": "provenance-review-required; no-blanket-license",
+    "uncertain_provenance": "not-licensed-until-cleared",
+    "policy_file": "LICENSE.md",
+    "scope_note": "Applies only to original material for which the relevant contributors have licensing rights. File-specific notices and upstream terms take precedence. Private operations repository is excluded pending separate internal licensing review."
+  }
 }
