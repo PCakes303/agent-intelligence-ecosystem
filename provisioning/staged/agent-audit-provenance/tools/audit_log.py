@@ -11,6 +11,7 @@ from pathlib import Path
 HEX64 = re.compile(r"^[a-f0-9]{64}$")
 OUTCOMES = {"success", "failure", "denied", "unknown"}
 REQUIRED = {"event_id", "timestamp", "event_type", "actor", "action", "resource", "outcome", "details"}
+ALLOWED = REQUIRED | {"previous_hash", "event_hash"}
 
 class AuditError(ValueError):
     pass
@@ -26,12 +27,17 @@ def validate_event(event, require_hash=False):
     if not isinstance(event, dict):
         raise AuditError("event must be a JSON object")
     missing = REQUIRED - event.keys()
+    unknown = event.keys() - ALLOWED
+    if unknown:
+        raise AuditError("unknown fields: " + ", ".join(sorted(unknown)))
     if missing:
         raise AuditError("missing required fields: " + ", ".join(sorted(missing)))
     if not all(isinstance(event[k], str) and event[k].strip() for k in ("event_id", "timestamp", "event_type", "action", "resource")):
         raise AuditError("event identifiers, timestamp, type, action, and resource must be non-empty strings")
     try:
-        datetime.fromisoformat(event["timestamp"].replace("Z", "+00:00"))
+        parsed_timestamp = datetime.fromisoformat(event["timestamp"].replace("Z", "+00:00"))
+        if parsed_timestamp.tzinfo is None:
+            raise ValueError("timezone offset required")
     except ValueError as exc:
         raise AuditError("timestamp must be RFC 3339 / ISO-8601") from exc
     actor = event["actor"]
