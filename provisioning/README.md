@@ -4,11 +4,12 @@
 
 The connected GitHub account currently has eight public portfolio repositories (the master, discovery, human guide, integration, and four foundation repositories) plus the separate private operations repository. The remaining 21 public repositories in the approved registry are not yet present.
 
-The GitHub integration available to this session can inspect and write repository contents, branches, commits, issues, and pull requests, but does not expose repository creation or repository-administration operations. The provisioning script below bridges that gap through the GitHub CLI on a machine where the owner is authenticated.
+The GitHub integration available to this session can inspect and write repository contents, branches, commits, issues, and pull requests, but does not expose repository creation or repository-administration operations. It also does not expose GitHub Projects v2 mutations or repository metadata administration. GitHub's current Projects v2 API is GraphQL-based and requires the project scope; the connected integration does not provide that action. A repository-resident portfolio tracker and a master-repository issue are therefore used as the current work wireframe until that capability is available. The provisioning script below bridges that gap through the GitHub CLI on a machine where the owner is authenticated.
 
 ## Provisioning bundle
 
 - Machine-readable missing-repository list: remote-repositories-to-create.json (21 verified missing public repositories as of this reconciliation)
+- 30-repository status wireframe: ../PORTFOLIO-STATUS.md and ../registry/implementation-status.json
 - Public-only local scaffold generator: ../tools/bootstrap_repositories.py
 - Remote creation and initial push: ../tools/provision_public_repositories.sh
 - Shared starter files: ../templates/repository/
