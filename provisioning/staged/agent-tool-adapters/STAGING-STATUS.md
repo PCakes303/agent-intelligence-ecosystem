@@ -8,11 +8,11 @@ This staging packet was deployed. The target contains 16 product files; the stag
 
 ## Included implementation
 
-Experimental dependency-free Python library with explicit adapter registration, exact and uniquely owned capability declarations, snapshotted capability sets, fail-closed policy decisions, JSON-compatible input/output validation, configurable serialized byte ceilings, generic adapter error containment, deterministic descriptors, JSON Schema, threat model, and Python 3.10–3.12 CI.
+Experimental dependency-free Python library with explicit adapter registration, exact and uniquely owned capability declarations, snapshotted capability sets, fail-closed policy decisions, strict JSON data-model input/output validation, configurable serialized byte ceilings and maximum nesting depth, generic adapter error containment, deterministic descriptors, JSON Schema, threat model, and Python 3.10–3.12 CI.
 
 ## Validation result
 
-All 13 unit tests passed on Python 3.10, 3.11 and 3.12. See the deployment workflow link above.
+All 20 unit tests passed on Python 3.10, 3.11 and 3.12. See the deployment workflow link above.
 
 ## Boundaries
 
