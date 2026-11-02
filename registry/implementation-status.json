@@ -48,9 +48,24 @@
         "3.12"
       ]
     },
-    "agent-foundation-spec": "https://github.com/PCakes303/agent-foundation-spec/actions/runs/41407412766",
-    "agent-resource-manifest": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41407417568",
-    "agent-schema-registry": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41407422248",
+    "agent-foundation-spec": {
+      "workflow_run": "https://github.com/PCakes303/agent-foundation-spec/actions/runs/41488883329",
+      "conclusion": "success",
+      "head_sha": "805b3c580c43c29d11b2d595f308c53a49e551e4",
+      "tests": 4
+    },
+    "agent-resource-manifest": {
+      "workflow_run": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41489184208",
+      "conclusion": "success",
+      "head_sha": "83edfac71c47d63f0c5d3a9735135308c8b72e15",
+      "tests": 5
+    },
+    "agent-schema-registry": {
+      "workflow_run": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41407422248",
+      "conclusion": "success",
+      "head_sha": "07ac22d952682c40dbe4b70d4209744e81f274d0",
+      "tests": 3
+    },
     "agent-identity-trust": {
       "workflow_run": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41489911336",
       "conclusion": "success",
@@ -344,7 +359,24 @@
       "status": "Scaffolded; requirements/contracts and CI pass; normative verification partial",
       "priority": "P0",
       "importance": "Defines shared invariants every downstream component relies on.",
-      "next_gate": "Trace each normative requirement to a testable acceptance check."
+      "next_gate": "Remove unrelated SECURITY.md reference, verify private reporting, add requirement-to-acceptance traceability and schema/consumer conformance tests.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "805b3c580c43c29d11b2d595f308c53a49e551e4",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-foundation-spec-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-foundation-spec/issues/1",
+        "findings": [
+          "SECURITY.md still points to unrelated profile and no private reporting route is verified",
+          "license pending review",
+          "GitHub About metadata missing",
+          "requirement-to-acceptance traceability incomplete",
+          "validator is basic and does not enforce schema/version compatibility",
+          "compatibility not tested",
+          "repository administration controls unverified"
+        ],
+        "next_gate": "Remove unrelated SECURITY.md reference, verify private reporting, add requirement-to-acceptance traceability and schema/consumer conformance tests."
+      }
     },
     {
       "number": "05",
@@ -356,7 +388,27 @@
       "status": "Scaffolded; schema, examples, validator and CI pass",
       "priority": "P0",
       "importance": "Describes tools, skills, models, services, dependencies and requested permissions.",
-      "next_gate": "Add compatibility/version policy and integration fixtures."
+      "next_gate": "Remove unrelated SECURITY.md reference, verify private reporting, run full Draft 2020-12 schema validation in CI and add negative boundary tests.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "83edfac71c47d63f0c5d3a9735135308c8b72e15",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-resource-manifest-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-resource-manifest/issues/1",
+        "remediation_commits": [
+          "9bb1630b18dd74cafecf896b6f081e4544f37855",
+          "83edfac71c47d63f0c5d3a9735135308c8b72e15"
+        ],
+        "findings": [
+          "SECURITY.md points to unrelated profile and private reporting route not verified",
+          "handwritten validator does not enforce full Draft 2020-12 schema and CI does not execute schema",
+          "license pending review",
+          "GitHub About metadata missing",
+          "compatibility dependencies declared only",
+          "repository administration controls unverified"
+        ],
+        "next_gate": "Remove unrelated SECURITY.md reference, verify private reporting, run full Draft 2020-12 schema validation in CI and add negative boundary tests."
+      }
     },
     {
       "number": "06",
@@ -368,7 +420,23 @@
       "status": "Scaffolded; schema catalog and CI pass; compatibility runner missing",
       "priority": "P0",
       "importance": "Versioned contracts underpin all inter-repository exchange.",
-      "next_gate": "Implement schema publication index and backward/forward compatibility runner."
+      "next_gate": "Remove unrelated account references, configure private reporting, disclose pending license, add schema fixtures and semantic validation where required; retain compatibility analysis as planned.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "07ac22d952682c40dbe4b70d4209744e81f274d0",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-schema-registry-audit.md",
+        "findings": [
+          "AGENTS.md and SECURITY.md point to unrelated profile; private reporting route unverified",
+          "README lacks explicit pending-license disclosure",
+          "GitHub About metadata missing",
+          "checker is structural only, not semantic JSON Schema validation",
+          "schema examples/conformance partial",
+          "compatibility not tested",
+          "repository administration controls unverified"
+        ],
+        "next_gate": "Remove unrelated account references, configure private reporting, disclose pending license, add schema fixtures and semantic validation where required; retain compatibility analysis as planned."
+      }
     },
     {
       "number": "07",
