@@ -33,3 +33,9 @@ The 13 unit tests are authored but have not been executed in a local runtime or 
 ## Next gate
 
 Create an **empty public** repository named `agent-tool-adapters` under `PCakes303`, with no README, license, or gitignore initialization. Then verify remote existence, visibility, default branch, and push permission; deploy the staged packet; run and inspect the Python 3.10–3.12 CI matrix; compare remote files and Git blob SHAs against the staging packet; reconcile the public catalog and portfolio status; and record a deployment checkpoint.
+
+## Master regression check
+
+The first master CI run after recording the staging status exposed one control-plane regression: the public catalog's `implementation_status` string had not been synchronized with the authoritative implementation-status record. The other 46 master regression tests passed; registry validation, dependency graph validation, resource manifest validation, and policy smoke test passed. The catalog record was corrected in commit `4a2a0c25384ffe566aa98cb39a9c350bb3a2477c`. Follow-up master CI run `41430543660` was queued at checkpoint update time; do not claim it passed until its final conclusion is confirmed.
+
+This was a master catalog consistency issue, not a failure in the staged adapter library. The adapter library's own 13 tests remain unexecuted until local validation or deployment CI is available.
