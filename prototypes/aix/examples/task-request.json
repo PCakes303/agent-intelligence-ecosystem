@@ -1,0 +1,30 @@
+{
+  "aix_version": "0.1.0",
+  "message_id": "msg-2026-000001",
+  "created_at": "2026-11-01T20:00:00Z",
+  "sender": {"principal_id":"agent://research-coordinator","trust_domain":"example.org"},
+  "recipient": {"principal_id":"agent://source-reviewer","trust_domain":"example.org"},
+  "message_type": "task.request",
+  "task": {
+    "task_id": "task-000042",
+    "intent": "source.review",
+    "objective": "Assess the supplied public source for provenance completeness and permitted reuse.",
+    "state": "proposed",
+    "idempotency_key": "task-000042-attempt-1",
+    "input_refs": [{"uri":"https://example.org/public-report","media_type":"text/html"}],
+    "constraints": {"collection_mode":"authorized-public","max_runtime_seconds":60}
+  },
+  "capability_requirements": ["source.provenance.review"],
+  "context_refs": [],
+  "evidence_refs": [],
+  "security": {
+    "authentication_context": "spiffe://example.org/agent/research-coordinator",
+    "requested_scopes": ["source:read","evidence:write"],
+    "policy_ref": "policy://example.org/osint/public-source-review"
+  },
+  "provenance": {
+    "trace_id": "trace-000042",
+    "source_protocol": "aix-experimental",
+    "source_version": "0.1.0"
+  }
+}
