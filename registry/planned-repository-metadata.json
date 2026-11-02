@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "owner": "PCakes303",
+  "portfolio": "MrCakes931 Agent Intelligence Ecosystem",
+  "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+  "last_reviewed": "2026-11-02",
+  "application_status": "prepared-for-human-authorized-repository-creation",
+  "repositories": [
+    {
+      "name": "osint-collection-framework",
+      "description": "Policy-gated collection planning and adapter contracts for authorized public-information sources; no unrestricted collection.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "public-information",
+        "collection-planning",
+        "privacy",
+        "policy-enforcement",
+        "auditability",
+        "ai-agents"
+      ]
+    },
+    {
+      "name": "osint-evidence-engine",
+      "description": "Provenance-aware evidence records, integrity hashes and reproducibility controls for authorized public-information workflows.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "digital-evidence",
+        "provenance",
+        "integrity",
+        "hashing",
+        "reproducibility",
+        "privacy"
+      ]
+    },
+    {
+      "name": "osint-entity-resolution",
+      "description": "Review-first public-entity correlation with uncertainty reporting and provenance-aware candidate matching.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "entity-resolution",
+        "data-quality",
+        "uncertainty",
+        "provenance",
+        "human-review",
+        "ai-agents"
+      ]
+    },
+    {
+      "name": "agent-emergency-control",
+      "description": "Fail-closed emergency STOP/RESUME contracts, revocation and quarantine controls for AI-agent systems; reference implementation, not a production kill switch.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "emergency-stop",
+        "safety",
+        "revocation",
+        "quarantine",
+        "governance",
+        "security"
+      ]
+    },
+    {
+      "name": "agent-compliance-governance",
+      "description": "Source-linked legal obligations, governance controls and evidence registers for AI-agent systems; not legal advice or certification.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-governance",
+        "compliance",
+        "privacy",
+        "risk-management",
+        "audit-evidence",
+        "colorado",
+        "ai-agents"
+      ]
+    },
+    {
+      "name": "agent-conformance-lab",
+      "description": "Deterministic protocol, schema and security conformance tests for the AI Agent Intelligence Ecosystem.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "conformance-testing",
+        "interoperability",
+        "protocols",
+        "json-schema",
+        "security-testing",
+        "ai-agents"
+      ]
+    },
+    {
+      "name": "agent-federation-network",
+      "description": "Trust-aware federation contracts for independently operated AI-agent networks; peer declarations remain review-gated.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "agent-federation",
+        "distributed-systems",
+        "trust",
+        "identity",
+        "security",
+        "governance",
+        "ai-agents"
+      ]
+    }
+  ]
+}
