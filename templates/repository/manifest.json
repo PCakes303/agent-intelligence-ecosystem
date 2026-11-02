@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/repository-manifest.schema.json",
+  "manifest_version": "1.0.0",
+  "id": "replace-with-registry-id",
+  "name": "replace-with-repository-name",
+  "visibility": "public",
+  "maturity": "planned",
+  "summary": "Replace with a concise, testable statement of this repository's purpose.",
+  "license": {"expression": null, "status": "pending-review", "notes": "Select a license after legal and dependency review."},
+  "interfaces": [],
+  "dependencies": [],
+  "security": {
+    "threat_model": "docs/THREAT_MODEL.md",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": []
+}
