@@ -7,7 +7,7 @@ python -m pip install -r requirements-dev.txt
 python tools/starter_build.py
 ```
 
-The starter build validates the public repository registry and dependency graph, validates foundation requirements, supply-chain records, audit-event structure, and a default-deny policy example, then runs the repository test suite. It does not provision repositories, publish releases, access the private operations repository, or claim that planned components are implemented.
+The starter build validates the public repository registry and dependency graph, validates foundation requirements, supply-chain records, audit-event structure, an AIX message, and a default-deny policy example, then runs the repository test suite. It does not provision repositories, publish releases, access the private operations repository, or claim that planned components are implemented.
 
 **Next tiers**
 - Developer: update one contract and add traceable unit/contract tests.
