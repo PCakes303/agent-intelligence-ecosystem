@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "manifest_version": "1.0.0",
+  "id": "discovery-network",
+  "name": "agent-discovery-network",
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Experimental trust-filtered discovery index for agents, resources, services and capabilities with strict expiry handling.",
+  "license": {"expression": null, "status": "pending-review", "notes": "Repository-specific license decision remains pending review."},
+  "interfaces": [
+    {"name": "discovery-record-v1", "version": "1.0.0", "kind": "schema", "stability": "experimental"},
+    {"name": "in-memory-discovery-index", "version": "0.1.0", "kind": "library", "stability": "experimental"}
+  ],
+  "dependencies": [
+    {"id": "resource-manifest", "constraint": "resource identity and metadata contract; version TBD", "kind": "contract"},
+    {"id": "capability-registry", "constraint": "capability vocabulary and validation contract; planned dependency", "kind": "contract"},
+    {"id": "identity-trust", "constraint": "issuer identity, signature verification and trust evaluation; version TBD", "kind": "contract"},
+    {"id": "transport-gateway", "constraint": "authenticated publish/query transport boundary; version TBD", "kind": "optional"}
+  ],
+  "security": {
+    "threat_model": "docs/THREAT-MODEL.md",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {"claim": "Malformed, expired, unverified and untrusted records are excluded from discovery results.", "kind": "test", "location": "tests/test_registry.py"}
+  ],
+  "$id": "https://github.com/PCakes303/agent-discovery-network/blob/main/manifest.json"
+}
