@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/principal-identity.schema.json",
+  "title":"Principal Identity Descriptor",
+  "description":"Non-secret identity metadata. This contract never stores credentials or private keys.",
+  "type":"object",
+  "required":["identity_version","principal_id","principal_type","trust_domain","issuer","status","authentication_methods","issued_at"],
+  "properties":{
+    "identity_version":{"const":"1.0.0"},
+    "principal_id":{"type":"string","minLength":1},
+    "principal_type":{"enum":["agent","user","service","workload","organization"]},
+    "trust_domain":{"type":"string","minLength":1},
+    "issuer":{"type":"string","minLength":1},
+    "status":{"enum":["active","suspended","revoked","expired"]},
+    "authentication_methods":{"type":"array","items":{"enum":["spiffe","oidc","mtls","signed-message","oauth2"]},"uniqueItems":true},
+    "issued_at":{"type":"string","format":"date-time"},
+    "expires_at":{"type":"string","format":"date-time"},
+    "revocation_ref":{"type":"string","format":"uri"},
+    "credential_refs":{"type":"array","description":"References to credentials in an external secrets or identity system; never credential values.","items":{"type":"string","format":"uri"}},
+    "attributes":{"type":"object","additionalProperties":{"type":["string","number","boolean"]}}
+  },
+  "additionalProperties":false
+}
