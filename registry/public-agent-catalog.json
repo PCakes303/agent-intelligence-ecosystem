@@ -204,10 +204,10 @@
       "name": "agent-policy-engine",
       "visibility": "public",
       "layer": "foundation-security",
-      "role": "Authorization, least privilege, capability permissions, and policy enforcement.",
+      "role": "Deterministic, default-deny policy decision evaluation for agent identities, actions, resources, and scopes; experimental evaluator, not a production enforcement boundary.",
       "repository_url": "https://github.com/PCakes303/agent-policy-engine",
       "existence": "exists",
-      "implementation_status": "Scaffolded; deterministic default-deny evaluator, JSON Schemas, CLI, examples, tests and CI workflow published; production enforcement not implemented",
+      "implementation_status": "Scaffolded; deterministic default-deny evaluator, schemas, CLI, examples, tests and CI workflow published; production enforcement not implemented",
       "priority": "P0",
       "dependencies": [
         "foundation"
