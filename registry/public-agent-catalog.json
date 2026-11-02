@@ -291,10 +291,10 @@
       "name": "agent-transport-gateway",
       "visibility": "public",
       "layer": "protocols",
-      "role": "Secure transport and integration with existing agent protocols.",
+      "role": "Experimental transport-neutral request guard and integration boundary for AIX over HTTP, MCP and A2A; not a production gateway.",
       "repository_url": "https://github.com/PCakes303/agent-transport-gateway",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 14 files published; CI workflow present, first run pending",
+      "implementation_status": "Scaffolded; 14 files published; [CI passed](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293) on Python 3.10, 3.11 and 3.12",
       "priority": "P0",
       "dependencies": [
         "aix-core",
