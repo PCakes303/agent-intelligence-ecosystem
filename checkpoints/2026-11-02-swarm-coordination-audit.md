@@ -4,7 +4,7 @@
 **Audited baseline:** `d7020cf3279bb2f9de7d0c4701eae742ed6c9c3f`  
 **Baseline CI:** [Run 41417899230](https://github.com/PCakes303/swarm-coordination/actions/runs/41417899230) — success  
 **Remediation commits:** `ced33b9c6cbd043a51dd623130595d03d6063ad3`, `e4c8846158c3c656bece1ff1642d5b2724e3583e`, `4cac3063e9086b87e3b621ca3efc09ee696370fb`, `f9de6340da184b6670661a6b5c16127a55cd55c4`, `b03666d8c3e577e833191354d8493fe169a53afa`, `2c836ac904f3828b64f9307f4f0aafd112d428c9`, `6a0cfbfe92277a7504dbd15723a4c40e94a0e72d`, `11e6bb8006de08db4bbaae8984fd436033868ec8`, `56d1e1ede24e23e595d89be3cca64db1b9966d48`, `aebaaa44cb8a3c880ae35e7a7e2ea10fdd4d4e06`, `a186b234836a132238585563f736c3f30c54c1dd`, `90cfb741fc5e6ab99addfc274d6f31ba516d90cf`, `ddc5a5ef096c6ac52ce3c96f8f7577b7e44bc5b4`  
-**Final remediation CI:** [Run 41494229515](https://github.com/PCakes303/swarm-coordination/actions/runs/41494229515) — queued at checkpoint creation; earlier code/test workflows are being verified  
+**Final remediation CI:** [Run 41494229515](https://github.com/PCakes303/swarm-coordination/actions/runs/41494229515) — success on Python 3.10, 3.11 and 3.12; 21 tests per matrix job  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental single-process in-memory task coordinator; not authenticated transport, distributed orchestration or exactly-once execution.
 
