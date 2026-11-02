@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "manifest_version": "1.0.0",
+  "id": "capability-registry",
+  "name": "agent-capability-registry",
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Experimental catalog, validation and policy-filtered matching for declared agent capabilities.",
+  "license": {"expression": null, "status": "pending-review", "notes": "Repository-specific license decision remains pending review."},
+  "interfaces": [{"name": "capability-declaration-v1", "version": "1.0.0", "kind": "schema", "stability": "experimental"}],
+  "dependencies": [
+    {"id": "resource-manifest", "constraint": "resource metadata contract; version TBD", "kind": "contract"},
+    {"id": "schema-registry", "constraint": "schema governance contract; version TBD", "kind": "contract"},
+    {"id": "policy-engine", "constraint": "default-deny decision contract; version TBD", "kind": "contract"}
+  ],
+  "security": {"threat_model": "docs/THREAT-MODEL.md", "secrets_in_repository": false, "data_classification": "public", "security_contact": null},
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [{"claim": "Policy callback denial paths are covered by tests.", "kind": "test", "location": "tests/test_registry.py"}],
+  "$id": "https://github.com/PCakes303/agent-capability-registry/blob/main/manifest.json"
+}
