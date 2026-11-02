@@ -1,19 +1,19 @@
 {
   "portfolio": "MrCakes931 Agent Intelligence Ecosystem",
   "owner": "PCakes303",
-  "public_identity": "https://github.com/HuffmanMainNode",
+  "public_identity": "MrCakes931",
   "master_repository": "https://github.com/PCakes303/agent-intelligence-ecosystem",
   "as_of": "2026-11-02",
   "total_repositories": 30,
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 10,
+    "public_existing": 12,
     "private_existing": 1,
-    "public_not_created": 19,
+    "public_not_created": 17,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 10,
-    "public_repositories_missing": 19
+    "public_repositories_present": 12,
+    "public_repositories_missing": 17
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -411,9 +411,11 @@
       "agent-schema-registry",
       "agent-identity-trust",
       "agent-secure-supply-chain",
-      "agent-policy-engine"
+      "agent-policy-engine",
+      "agent-audit-provenance",
+      "aix-core"
     ],
-    "result": "No root-level pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, or equivalent distribution manifest was found in the nine existing public component repositories reviewed (repositories 01–09). Their manifest.json files are ecosystem metadata, not package build metadata. The master control-plane repository is reviewed separately.",
+    "result": "No root-level pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, or equivalent distribution manifest was found in the eleven existing public component repositories reviewed (repositories 01–11). Their manifest.json files are ecosystem metadata, not package build metadata. The master control-plane repository is reviewed separately.",
     "decision": "Do not publish empty or premature packages. Add package metadata, reproducible build, license validation, dependency lock/SBOM, artifact signing and install-from-artifact tests only when a repository contains a reusable library or executable intended for distribution."
   }
 }
