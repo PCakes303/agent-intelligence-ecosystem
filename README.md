@@ -78,3 +78,8 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for substantial changes, 
 - [Secure supply-chain starter contract](specifications/secure-supply-chain/README.md), [artifact schema](schemas/supply-chain-artifact.schema.json), and [validator](tools/validate_supply_chain.py)
 - [Repository scaffold generator](tools/bootstrap_repositories.py)
 - [Remote provisioning instructions](provisioning/README.md)
+
+
+## Metadata governance
+
+See [Capability and compatibility metadata contract](docs/CAPABILITY-COMPATIBILITY-METADATA.md).
