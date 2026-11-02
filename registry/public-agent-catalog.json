@@ -678,8 +678,8 @@
       "layer": "foundation-security",
       "role": "Independent emergency-stop authority, authenticated stop state, revocation, quarantine, distributed stop propagation, and controlled resumption.",
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
-      "existence": "not-created",
-      "implementation_status": "Staged in master; 21 tests pass on Python 3.10-3.12; STOP/RESUME command contract and pure fail-closed reducer only.",
+      "existence": "exists",
+      "implementation_status": "Deployed; 23 product files; exact 23/23 staging/remote Git blob parity; repository-local CI passed on Python 3.10, 3.11 and 3.12; STOP/RESUME contract and pure fail-closed reducer only, not a live kill switch.",
       "priority": "P0",
       "dependencies": [
         "foundation",
@@ -689,9 +689,9 @@
         "secure-supply-chain"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-emergency-control/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-emergency-control/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-emergency-control#readme"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability; planned entries are not implementations."
     },
