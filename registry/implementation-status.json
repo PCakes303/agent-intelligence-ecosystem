@@ -96,7 +96,17 @@
         "Python 3.12"
       ]
     },
-    "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413613566",
+    "agent-capability-registry": {
+      "workflow_run": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41493172965",
+      "conclusion": "success",
+      "head_sha": "85d8a70783c6ea6673c2a8a8907db01e93ec9345",
+      "tests": 11,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
+    },
     "swarm-runtime": {
       "repository_url": "https://github.com/PCakes303/swarm-runtime",
       "workflow_run": "https://github.com/PCakes303/swarm-runtime/actions/runs/41415420565",
@@ -562,7 +572,38 @@
       "status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12, including same-agent multi-capability matching regression coverage.",
       "priority": "P1",
       "importance": "Matches tasks to agents with declared, validated capabilities.",
-      "next_gate": "Add schema-registry, resource-manifest and policy-engine integration fixtures and cross-repository conformance tests."
+      "next_gate": "Execute canonical schema validation in CI; integrate authenticated identity and production policy decisions; add signed capability attestations and pinned cross-repository fixtures; verify private reporting, metadata, settings, licensing and staging parity.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "0220f7ecc89589b9ccd256a705188d7ff27d1371",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-capability-registry-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-capability-registry/issues/1",
+        "remediation_commits": [
+          "c6128b2741695529cf034764a1d5c97af0838b25",
+          "0f8f3e6ecce38f8e40fff37107ab002810689075",
+          "4f238bfa89963008e01700ed78430fc2eeb56361",
+          "4e9dffd1cfcf5dcbacbd3a7ae6773dfff7cfcf0f",
+          "4486f5ac465de3f2746eaea45b41cc679c2ece0e",
+          "1c052989e0bcdfe50389e7b6b4a8e3679fac366f",
+          "6fc7c9a89503fc7f843a53bddc616ef4360a11aa",
+          "fc49cc3b4f20c9ac6d2b02a78f48bcf69200e9de",
+          "c7dec4d551b0578e2b9f4500d0fc81062e928562",
+          "85d8a70783c6ea6673c2a8a8907db01e93ec9345"
+        ],
+        "findings": [
+          "no authenticated agent identity integration",
+          "no production policy service or protected-resource enforcement",
+          "no signed capability attestations or publisher key lifecycle",
+          "canonical JSON Schema is not executed in CI for model parity",
+          "Resource Manifest, Schema Registry and Policy Engine dependencies are declared not tested",
+          "no distributed/network service",
+          "private reporting route not verified",
+          "GitHub About homepage/topics missing",
+          "license pending review",
+          "staging parity and repository administration controls unverified"
+        ]
+      }
     },
     {
       "number": "16",
