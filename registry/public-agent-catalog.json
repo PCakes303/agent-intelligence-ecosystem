@@ -539,7 +539,7 @@
       "role": "Consistent agent interfaces to existing open-source tools.",
       "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Prepared in master staging: experimental adapter registry, policy-gated invocation reference library, schema, threat model, tests and CI; not deployed",
       "priority": "P1",
       "dependencies": [
         "aix-core",
