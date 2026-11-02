@@ -4,7 +4,7 @@
 **Audited implementation commit:** `9edce84c0f00db0fbe2d8ddfa302510329e66503`  
 **Baseline CI:** [Run 41427817571](https://github.com/PCakes303/aix-codecs/actions/runs/41427817571) — success  
 **Remediation commits:** `ab013bfcc2f7f7184f9331618841b2ca09a3be7b`, `fe48c296b26fb67fbb5b0dfb6bd5e820d96e6bf5`, `220226f97698de1e60fb210d3b766c0d22e05cc5`  
-**Latest remediation CI:** [Run 41491180433](https://github.com/PCakes303/aix-codecs/actions/runs/41491180433) — in progress at checkpoint creation  
+**Latest remediation CI:** [Run 41491180433](https://github.com/PCakes303/aix-codecs/actions/runs/41491180433) — success (eight unit tests on Python 3.10, 3.11 and 3.12)  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental Python RFC 8785 canonical JSON encoder and strict JSON decoder; no cross-language conformance or production ingress boundary.
 
@@ -25,6 +25,10 @@
 - `fe48c296b26fb67fbb5b0dfb6bd5e820d96e6bf5`: clarified the absence of a published private reporting address and documented caller-side trust/resource limits in SECURITY.md.
 - `220226f97698de1e60fb210d3b766c0d22e05cc5`: reconciled staging status, distinguished historical deployment evidence from current parity, and recorded metadata/private-reporting follow-ups.
 - Created [issue #1](https://github.com/PCakes303/aix-codecs/issues/1) for expanded RFC vectors, bounded ingress integration, private reporting, metadata and staging verification.
+
+## Master catalog reconciliation
+
+The first master registry maturity update exposed a catalog drift: `registry/public-agent-catalog.json` retained the previous AIX Codecs status. Master regression run 41491355197 correctly failed `test_catalog_matches_public_registry`. The catalog entry was synchronized in commit `ac982e59efe5076af81b5c29d11f83993405d2df`; master validation run [41491483004](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41491483004) then passed registry validation, resource-manifest validation, policy smoke test, all 47 regression tests and entry-level build.
 
 ## Findings and remaining exceptions
 
