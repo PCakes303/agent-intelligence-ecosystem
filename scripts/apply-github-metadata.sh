@@ -49,7 +49,7 @@ while IFS= read -r row; do
   repo="PCakes303/$name"
   description="$(jq -r '.description' <<<"$row")"
   homepage="$(jq -r '.homepage' <<<"$row")"
-  topics="$(jq -r '.topics | join(", ")' <<<"$row")"
+  topics="$(jq -c '.topics' <<<"$row")"
 
   is_admin="$(gh api "repos/$repo" --jq '.permissions.admin // false')"
   [[ "$is_admin" == "true" ]] || {
@@ -57,19 +57,25 @@ while IFS= read -r row; do
     exit 1
   }
 
-  payload="$(jq -c '{description, homepage, topics}' <<<"$row")"
+  payload="$(jq -c '{description, homepage}' <<<"$row")"
+  topics_payload="$(jq -c '{names: .topics}' <<<"$row")"
 
   if [[ "$MODE" == "dry-run" ]]; then
     printf 'WOULD UPDATE %-34s description=%s\n' "$repo" "$description"
-    printf '  homepage=%s\n  topics=%s\n' "$homepage" "$topics"
+    printf '  homepage=%s\n  topics=%s\n' "$homepage" "$(jq -r '.topics | join(", ")' <<<"$row")"
     continue
   fi
 
   echo "Updating $repo"
   gh api --method PATCH "repos/$repo" --input - <<<"$payload" >/dev/null
+  gh api --method PUT "repos/$repo/topics" --input - <<<"$topics_payload" >/dev/null
 
-  actual="$(gh api "repos/$repo" --jq '{description, homepage, topics} | .topics |= sort' | jq -S -c .)"
-  expected="$(jq -S -c '{description, homepage, topics} | .topics |= sort' <<<"$row")"
+  actual_repo="$(gh api "repos/$repo" --jq '{description, homepage}' | jq -S -c .)"
+  expected_repo="$(jq -S -c '{description, homepage}' <<<"$row")"
+  actual_topics="$(gh api "repos/$repo/topics" --jq '{names: (.names | sort)}' | jq -S -c .)"
+  expected_topics="$(jq -S -c '{names: (.topics | sort)}' <<<"$row")"
+  actual="$actual_repo / $actual_topics"
+  expected="$expected_repo / $expected_topics"
   [[ "$actual" == "$expected" ]] || {
     echo "Read-back mismatch after updating $repo" >&2
     echo "Expected: $expected" >&2
