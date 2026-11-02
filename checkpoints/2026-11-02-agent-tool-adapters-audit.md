@@ -4,7 +4,7 @@
 **Audited implementation commit:** `0419e80fabe1a3c1d5597043c86a49eba113e46d`  
 **Baseline CI:** [Run 41432479875](https://github.com/PCakes303/agent-tool-adapters/actions/runs/41432479875) — success; 20 tests on Python 3.10, 3.11 and 3.12  
 **Remediation commits:** `775e96309800937009560014aa50ae6e0ba1b154`, `686b2ea6af38f947fa0d30b252b67358baa146a0`  
-**Latest remediation CI:** [Run 41499413474](https://github.com/PCakes303/agent-tool-adapters/actions/runs/41499413474) — in progress at checkpoint creation  
+**Latest remediation CI:** [Run 41506766827](https://github.com/PCakes303/agent-tool-adapters/actions/runs/41506766827) — success on Python 3.10, 3.11 and 3.12; 27 tests per matrix job  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental synchronous in-process adapter registry with injected policy callback and bounded JSON payload checks; not a sandbox or production authorization boundary.
 
@@ -40,6 +40,12 @@ Corrections committed:
 - Final CI after schema/requirements integration was still running at checkpoint update; verify the completed 27-test Python 3.10–3.12 matrix before claiming it passed.
 
 The repository remains BLOCKED: no authentication, production policy service, sandbox, timeout/cancellation, durable audit or third-party adapters are implemented.
+
+## Post-audit direct-input and resource-boundary hardening — final verification
+
+The descriptor schema now matches the actual runtime descriptor output and is executed by the CI test suite. The expanded 27-test suite passed on Python 3.10, 3.11 and 3.12 in [run 41506766827](https://github.com/PCakes303/agent-tool-adapters/actions/runs/41506766827). Early intermediate commits failed while the test dependency/workflow setup was incomplete; after pinning jsonschema in requirements-dev.txt and installing it in CI, the final run passed.
+
+The master staging packet was refreshed with the current registry implementation, tests, descriptor schema, workflow, README, contract, security policy, capabilities and requirements-dev.txt. Exact path/blob-SHA parity was rechecked: 17 remote product files, 17 staged product files, zero differences, zero missing or extra paths (the master-only STAGING-STATUS.md is excluded from product parity).
 
 ## Findings and remaining exceptions
 
