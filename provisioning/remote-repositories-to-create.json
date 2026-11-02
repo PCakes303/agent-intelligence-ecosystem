@@ -18,7 +18,7 @@
   "repositories": [
     {
       "name": "agent-policy-engine",
-      "description": "Authorization, least privilege, capability permissions, and policy enforcement.",
+      "description": "Default-deny authorization policies and deterministic decision evaluation for agent identities, actions, resources, and scopes.",
       "visibility": "public",
       "default_branch": "main",
       "initialize_with_readme": false,
@@ -27,6 +27,15 @@
       "registry_id": "policy-engine",
       "dependencies": [
         "foundation"
+      ],
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "policy-engine",
+        "authorization",
+        "access-control",
+        "least-privilege",
+        "security"
       ]
     },
     {
