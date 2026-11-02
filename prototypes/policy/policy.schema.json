@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/prototypes/policy/policy.schema.json",
+  "title":"Experimental Default-Deny Policy",
+  "type":"object",
+  "required":["policy_version","policy_id","default_effect","rules"],
+  "properties":{
+    "policy_version":{"const":"1.0.0"},
+    "policy_id":{"type":"string","minLength":1},
+    "default_effect":{"const":"deny"},
+    "rules":{"type":"array","items":{"type":"object","required":["id","effect","principals","actions","resources","required_scopes"],"properties":{"id":{"type":"string","minLength":1},"effect":{"enum":["allow","deny"]},"principals":{"type":"array","items":{"type":"string"},"minItems":1},"actions":{"type":"array","items":{"type":"string"},"minItems":1},"resources":{"type":"array","items":{"type":"string"},"minItems":1},"required_scopes":{"type":"array","items":{"type":"string"},"uniqueItems":true}},"additionalProperties":false}},
+    "description":{"type":"string"}
+  },
+  "additionalProperties":false
+}
