@@ -14,30 +14,8 @@
     "agent-ecosystem-private",
     "agent-secure-supply-chain"
   ],
-  "missing_public_repository_count": 20,
+  "missing_public_repository_count": 19,
   "repositories": [
-    {
-      "name": "agent-policy-engine",
-      "description": "Default-deny authorization policies and deterministic decision evaluation for agent identities, actions, resources, and scopes.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "policy-engine",
-      "dependencies": [
-        "foundation"
-      ],
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "policy-engine",
-        "authorization",
-        "access-control",
-        "least-privilege",
-        "security"
-      ]
-    },
     {
       "name": "agent-audit-provenance",
       "description": "Audit events, source provenance, traceability, and signed records.",
