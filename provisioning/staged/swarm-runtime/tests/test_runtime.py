@@ -47,6 +47,14 @@ class RuntimeTests(unittest.TestCase):
         finally:
             runtime.shutdown()
 
+    def test_unhealthy_adapter_denies_admission(self):
+        runtime = WorkerRuntime(adapter=FakeAdapter(healthy=False), policy_check=lambda p, s: True)
+        try:
+            with self.assertRaises(RuntimeError):
+                runtime.submit("principal.one", spec())
+        finally:
+            runtime.shutdown()
+
     def test_policy_false_denies(self):
         runtime = WorkerRuntime(adapter=FakeAdapter(), policy_check=lambda p, s: False)
         try:
