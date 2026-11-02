@@ -1,0 +1,57 @@
+# MrCakes931 Agent Intelligence Ecosystem
+
+> A 30-repository, security-first ecosystem for agent interoperability, discovery, trust, hybrid swarms, intelligence workflows, and conformance. AIX is designed as an extension layer over existing standards, not a replacement for them.
+
+This is the public ecosystem control plane. It contains the authoritative repository registry, dependency graph, architecture decisions, governance, and portfolio status. Individual repositories own their implementations.
+
+## Start here
+- [Master README](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/README.md): purpose, architecture, build.
+- [AI agent instructions](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/AGENTS.md): safe contribution and verification rules.
+- [30-repository status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md): existence, maturity, priority, importance, next gates.
+- [Canonical repository registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json): machine-readable inventory.
+- [Dependency graph](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/dependencies.json): cross-repository relationships.
+- [AI discoverability contract](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/AI-DISCOVERABILITY.md): llms.txt, agent instructions, metadata, MCP, A2A, security.
+- [Roadmap](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/ROADMAP.md)
+- [Security policy](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/SECURITY.md)
+
+## Existing public repositories
+- [agent-ai-discovery](https://github.com/PCakes303/agent-ai-discovery): machine-readable discovery metadata and capability indexes.
+- [mrcakes931-ecosystem](https://github.com/PCakes303/mrcakes931-ecosystem): human onboarding and ecosystem navigation.
+- [agent-ecosystem-integration](https://github.com/PCakes303/agent-ecosystem-integration): protocol integration profiles and adapter contracts.
+- [agent-foundation-spec](https://github.com/PCakes303/agent-foundation-spec): normative foundation requirements and invariants.
+- [agent-resource-manifest](https://github.com/PCakes303/agent-resource-manifest): portable agent resource manifests and validation.
+- [agent-schema-registry](https://github.com/PCakes303/agent-schema-registry): versioned machine-readable schemas.
+- [agent-identity-trust](https://github.com/PCakes303/agent-identity-trust): identity, delegation, and trust contracts.
+
+## Planned public repositories
+The following are approved portfolio entries but are not yet created. Their presence in this list is a roadmap statement, not a claim of implementation:
+- Foundation and security: agent-secure-supply-chain, agent-policy-engine, agent-audit-provenance.
+- AIX and transport: aix-core, aix-codecs, agent-transport-gateway, agent-discovery-network, agent-capability-registry.
+- Hybrid swarm: swarm-runtime, swarm-coordination, swarm-state-mesh.
+- OSINT and intelligence: osint-source-registry, osint-collection-framework, osint-evidence-engine, osint-entity-resolution, intelligence-knowledge-graph.
+- Adoption and conformance: agent-tool-adapters, agent-skill-library, agent-sandbox-security, agent-conformance-lab, agent-federation-network.
+
+## Architecture and status
+- Portfolio: 30 repositories total; 29 public and 1 private.
+- Latest portfolio audit recorded 8 existing public repositories, 21 public repositories not yet created, and 1 existing private operations repository.
+- Public discovery excludes private operational content.
+- Maturity is repository-specific. Consult the status tracker and repository-local evidence before claiming a feature is implemented.
+- AIX approach: extension/interoperability layer over existing standards.
+- Swarm approach: hybrid centralized, federated, and peer-to-peer architecture.
+- Licensing: mixed, selected per repository and artifact.
+
+## Agent integration
+- Read each repository's `AGENTS.md` before proposing code changes.
+- Use the canonical JSON registry and schemas rather than scraping prose where possible.
+- MCP tools, when published, will be read-only by default and limited to public, validated resources.
+- A2A Agent Cards will be published only for deployed agent services with a real endpoint and verified capabilities. A repository metadata file is not itself a live A2A service.
+- Discovery metadata never grants trust, authorization, execution permission, or access to private repositories.
+
+## Build and validate
+```bash
+python -m pip install -r requirements-dev.txt
+python tools/starter_build.py
+```
+
+## Identity and ownership
+GitHub owner: [PCakes303](https://github.com/PCakes303). Public-facing identity/profile destination: [HuffmanMainNode](https://github.com/HuffmanMainNode). The latter is separate and is not a software dependency or source of authority.
