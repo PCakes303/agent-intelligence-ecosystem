@@ -352,7 +352,7 @@
       "visibility": "public",
       "layer": "adoption",
       "status": "planned",
-      "role": "Controlled execution, isolation, resource boundaries, and secure extension execution.",
+      "role": "Experimental sandbox admission policy contract and fail-closed reference validator; no OS isolation or workload execution.",
       "dependencies": [
         "identity-trust",
         "policy-engine",
