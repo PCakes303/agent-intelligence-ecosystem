@@ -172,10 +172,10 @@
       "layer": "protocols",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI",
+      "status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI passed",
       "priority": "P0",
       "importance": "Canonical task/intent semantics shared by agents and transports.",
-      "next_gate": "Verify successful final CI; develop concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders."
+      "next_gate": "Develop concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders."
     },
     {
       "number": "12",
