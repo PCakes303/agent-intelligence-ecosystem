@@ -2,7 +2,7 @@
 
 ## Current verified state
 
-The connected GitHub account currently has nine public portfolio repositories (the master, discovery, human guide, integration, and four foundation repositories) plus the separate private operations repository. The remaining 20 public repositories in the approved registry are not yet present.
+The connected GitHub account currently has nine public portfolio repositories (the master, discovery, human guide, integration, four original foundation repositories, and secure supply-chain repository) plus the separate private operations repository. The remaining 20 public repositories in the approved registry are not yet present.
 
 The GitHub integration available to this session can inspect and write repository contents, branches, commits, issues, and pull requests, but does not expose repository creation or repository-administration operations. It also does not expose GitHub Projects v2 mutations or repository metadata administration. GitHub's current Projects v2 API is GraphQL-based and requires the project scope; the connected integration does not provide that action. A repository-resident portfolio tracker and a master-repository issue are therefore used as the current work wireframe until that capability is available. The provisioning script below bridges that gap through the GitHub CLI on a machine where the owner is authenticated.
 
@@ -13,6 +13,8 @@ The GitHub integration available to this session can inspect and write repositor
 - Public-only local scaffold generator: ../tools/bootstrap_repositories.py
 - Remote creation and initial push: ../tools/provision_public_repositories.sh
 - Shared starter files: ../templates/repository/
+- Repository 09 prepared source: staged/agent-policy-engine/ (not a remote repository yet)
+- GitHub About descriptions and topics: ../docs/GITHUB-REPOSITORY-ABOUT-METADATA.md
 - Canonical registry: ../registry/repositories.json
 
 ## Requirements
@@ -39,7 +41,7 @@ bash tools/provision_public_repositories.sh --confirm
 
 The script checks the authenticated GitHub login, refuses to guess a Git email, creates public repositories only, skips repositories that already exist, and pushes an initial main branch. It does not create or modify the private repository. It does not configure branch protection, secrets, environments, or GitHub App permissions.
 
-## After provisioning
+## Repository 09 prepared bundle\n\nThe dedicated [agent-policy-engine staging bundle](staged/agent-policy-engine/STAGING-STATUS.md) is prepared. Create an empty public repository named `agent-policy-engine` under `PCakes303`, then copy the staged directory contents to its root. Do not mark it as created in the master registry until GitHub confirms the remote repository exists and its CI passes.\n\n## After provisioning
 
 Re-run registry reconciliation and verify all repository visibility and default branches. Then configure branch protection, rulesets, security features, and least-privilege automation through GitHub settings. These administration settings cannot be verified or applied through the current connected integration.
 
