@@ -323,8 +323,8 @@
       "name": "agent-tool-adapters",
       "visibility": "public",
       "layer": "adoption",
-      "status": "planned",
-      "role": "Consistent agent interfaces to existing open-source tools.",
+      "status": "experimental",
+      "role": "Experimental, dependency-free Python reference contract for explicit tool adapter registration, capability declarations, policy-gated invocation, and bounded JSON payloads; no bundled third-party adapters or sandbox runtime.",
       "dependencies": [
         "aix-core",
         "transport-gateway",
