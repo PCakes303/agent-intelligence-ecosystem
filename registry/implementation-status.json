@@ -119,16 +119,15 @@
       ]
     },
     "agent-transport-gateway": {
-      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41504097531",
+      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41503961456",
       "conclusion": "success",
-      "head_sha": "068825ae30994d30ceb4f4b9c9d4a7b91675fef6",
+      "head_sha": "51f721ff00d3dad27238760ca73fe84051183c74",
       "tests": 21,
-      "python_versions": [
-        "3.10",
-        "3.11",
-        "3.12"
-      ],
-      "staging_parity": "14 product files; exact Git blob SHA match"
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
     },
     "agent-discovery-network": {
       "workflow_run": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41504383220",
@@ -706,6 +705,10 @@
           "a0f92357c8b8503f52be75eb4e89bbecaa46d1c7",
           "51f721ff00d3dad27238760ca73fe84051183c74",
           "282992ca615ae2633cf2c4a14069accdbefdf6bc",
+          "068825ae30994d30ceb4f4b9c9d4a7b91675fef6",
+          "a0f92357c8b8503f52be75eb4e89bbecaa46d1c7",
+          "51f721ff00d3dad27238760ca73fe84051183c74",
+          "282992ca615ae2633cf2c4a14069accdbefdf6bc",
           "068825ae30994d30ceb4f4b9c9d4a7b91675fef6"
         ],
         "findings": [
@@ -722,7 +725,10 @@
           "numeric conversion overflow now rejected with stable fail-closed outcomes; three regression tests added",
           "README now discloses pending license status",
           "latest staging-status documentation update CI pending",
-          "adversarial numeric-overflow regression added for oversized integer timestamps, clocks and timing configuration; latest 21-test matrix passes"
+          "adversarial numeric-overflow regression added for oversized integer timestamps, clocks and timing configuration; latest 21-test matrix passes",
+          "numeric conversion overflow is rejected with stable fail-closed outcomes",
+          "three regression tests added for oversized integer timestamp, clock and timing configuration",
+          "README explicitly discloses pending license status"
         ],
         "next_gate": "Implement authenticated identity binding, policy service integration, shared replay store, schema/codec validation and protocol adapters; verify private reporting, About metadata, repository settings and staging parity."
       }
