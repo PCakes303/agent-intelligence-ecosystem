@@ -227,7 +227,7 @@
       "role": "Portable audit event contracts, traceability, and deterministic hash-chained records; authenticated and signed provenance remain future work.",
       "repository_url": "https://github.com/PCakes303/agent-audit-provenance",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 20 files published with schema, validator/tooling, examples, tests, documentation and CI; production integrations remain future work",
+      "implementation_status": "Scaffolded; 20 files published; SHA-256 hash-chained JSONL audit log, append/verify CLI, schema, examples, tests, docs and CI",
       "priority": "P0",
       "dependencies": [
         "foundation",
@@ -249,7 +249,7 @@
       "role": "Experimental semantic interoperability specification for intent, tasks, responses, capabilities, context, status, errors, and provenance; extension layer over established protocols and transports.",
       "repository_url": "https://github.com/PCakes303/aix-core",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 21 files published with schema, validator/tooling, examples, tests, documentation and CI; production integrations remain future work",
+      "implementation_status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI",
       "priority": "P0",
       "dependencies": [
         "foundation",
