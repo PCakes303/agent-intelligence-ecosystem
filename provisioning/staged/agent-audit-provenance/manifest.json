@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "manifest_version": "1.0.0",
+  "id": "audit-provenance",
+  "name": "agent-audit-provenance",
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Portable audit event contract and experimental append-only JSONL hash-chain verifier for integrity-linked event history.",
+  "license": {"expression": null, "status": "pending-review"},
+  "interfaces": [
+    {"name": "audit-event", "version": "1.0.0", "kind": "schema", "stability": "experimental"},
+    {"name": "hash-chained-jsonl", "version": "0.1.0", "kind": "format", "stability": "experimental"},
+    {"name": "audit-log-cli", "version": "0.1.0", "kind": "cli", "stability": "experimental"}
+  ],
+  "dependencies": [
+    {"id": "foundation", "constraint": "contract dependency; version TBD", "kind": "contract"},
+    {"id": "schema-registry", "constraint": "schema publication dependency; version TBD", "kind": "contract"}
+  ],
+  "security": {
+    "threat_model": "docs/THREAT_MODEL.md",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [{"claim": "Append and verify a deterministic hash chain of synthetic audit events.", "kind": "test", "location": "tests/test_audit_log.py"}],
+  "$id": "https://github.com/PCakes303/agent-audit-provenance/blob/main/manifest.json"
+}
