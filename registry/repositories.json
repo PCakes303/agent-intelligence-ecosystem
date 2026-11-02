@@ -150,8 +150,8 @@
       "name": "aix-core",
       "visibility": "public",
       "layer": "protocols",
-      "status": "planned",
-      "role": "AIX semantic interoperability specification for intent, tasks, responses, capabilities, context, status, and errors.",
+      "status": "scaffolding",
+      "role": "Experimental semantic interoperability specification for intent, tasks, responses, capabilities, context, status, errors, and provenance; extension layer over established protocols and transports.",
       "dependencies": [
         "foundation",
         "schema-registry",
