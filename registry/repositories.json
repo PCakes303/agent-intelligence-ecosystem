@@ -25,7 +25,7 @@
       "name": "agent-ai-discovery",
       "visibility": "public",
       "layer": "ecosystem-facing",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "AI-native discovery metadata, machine-readable entrypoints, published capability indexes, and opt-in agent integration.",
       "dependencies": [
         "master",
@@ -39,7 +39,7 @@
       "name": "mrcakes931-ecosystem",
       "visibility": "public",
       "layer": "ecosystem-facing",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Human-facing ecosystem guide, navigation, onboarding, and project relationships.",
       "dependencies": [
         "master"
