@@ -3,114 +3,18 @@
   "public_identity": "MrCakes931",
   "generated_from": "registry/repositories.json",
   "checked_existing_repository_names": [
-    "PCakes303",
     "agent-intelligence-ecosystem",
+    "agent-ai-discovery",
+    "mrcakes931-ecosystem",
+    "agent-ecosystem-integration",
+    "agent-foundation-spec",
+    "agent-resource-manifest",
+    "agent-schema-registry",
+    "agent-identity-trust",
     "agent-ecosystem-private"
   ],
-  "missing_public_repository_count": 28,
+  "missing_public_repository_count": 21,
   "repositories": [
-    {
-      "name": "agent-ai-discovery",
-      "description": "AI-native discovery metadata, machine-readable entrypoints, published capability indexes, and opt-in agent integration.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "discovery",
-      "dependencies": [
-        "master",
-        "resource-manifest",
-        "schema-registry",
-        "identity-trust"
-      ]
-    },
-    {
-      "name": "mrcakes931-ecosystem",
-      "description": "Human-facing ecosystem guide, navigation, onboarding, and project relationships.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "human-guide",
-      "dependencies": [
-        "master"
-      ]
-    },
-    {
-      "name": "agent-ecosystem-integration",
-      "description": "Cross-repository integration contracts, event orchestration, compatibility validation, and synchronization automation.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "integration",
-      "dependencies": [
-        "master",
-        "foundation",
-        "resource-manifest",
-        "schema-registry",
-        "identity-trust",
-        "secure-supply-chain"
-      ]
-    },
-    {
-      "name": "agent-foundation-spec",
-      "description": "Architecture, engineering principles, terminology, lifecycle, and compatibility requirements.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "foundation",
-      "dependencies": [
-        "master"
-      ]
-    },
-    {
-      "name": "agent-resource-manifest",
-      "description": "Machine-readable identities and descriptions for agents, tools, services, repositories, and datasets.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "resource-manifest",
-      "dependencies": [
-        "foundation",
-        "schema-registry",
-        "identity-trust"
-      ]
-    },
-    {
-      "name": "agent-schema-registry",
-      "description": "Reusable schemas, validation, versioning, and compatibility rules.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "schema-registry",
-      "dependencies": [
-        "foundation"
-      ]
-    },
-    {
-      "name": "agent-identity-trust",
-      "description": "Identity, authentication, credentials, trust, and revocation.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "identity-trust",
-      "dependencies": [
-        "foundation",
-        "policy-engine"
-      ]
-    },
     {
       "name": "agent-secure-supply-chain",
       "description": "Release integrity, SBOMs, provenance, dependency and vulnerability management.",
