@@ -14,26 +14,11 @@
     "agent-ecosystem-private",
     "agent-secure-supply-chain",
     "aix-codecs",
-    "agent-transport-gateway"
+    "agent-transport-gateway",
+    "agent-discovery-network"
   ],
-  "missing_public_repository_count": 15,
+  "missing_public_repository_count": 14,
   "repositories": [
-    {
-      "name": "agent-discovery-network",
-      "description": "Discovery of agents, resources, services, and capabilities.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "discovery-network",
-      "dependencies": [
-        "resource-manifest",
-        "capability-registry",
-        "identity-trust",
-        "transport-gateway"
-      ]
-    },
     {
       "name": "agent-capability-registry",
       "description": "Catalog and validation of agent capabilities.",
