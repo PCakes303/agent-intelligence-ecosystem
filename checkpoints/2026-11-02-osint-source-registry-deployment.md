@@ -29,12 +29,12 @@
 - [x] Remote repository exists and is public.
 - [x] All 23 expected files are present on `main`.
 - [x] Deployment commit and tree are visible from GitHub.
-- [ ] GitHub Actions run observed and green.
-- [ ] Unit test suite confirmed passing on Python 3.10, 3.11, and 3.12.
-- [ ] Schema/CLI smoke tests independently rerun after deployment.
+- [x] GitHub Actions run #1 completed successfully.
+- [x] Unit test suite passed on Python 3.10, 3.11, and 3.12.
+- [x] CI synthetic-source validation CLI passed.
 - [ ] Master portfolio status updated (completed in this checkpoint).
 
-GitHub Actions returned zero workflow runs when checked immediately after publication. Do not represent CI or tests as passing until a run is visible and successful. The workflow is configured for pushes to `main`, pull requests, and manual dispatch, but the available integration does not expose a workflow-dispatch action.
+GitHub Actions run #1 (`41425236178`) completed successfully on commit `ec30f80c63f69edbba53530a2eb6efef8a3a2f25`. All three matrix jobs (Python 3.10, 3.11, and 3.12) passed dependency installation, the complete unittest suite, and synthetic approved-source validation.
 
 ## Boundaries and remaining work
 
