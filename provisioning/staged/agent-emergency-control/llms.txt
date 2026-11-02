@@ -1,0 +1,14 @@
+# Agent Emergency Control
+
+- Purpose: emergency-stop command contract and fail-closed reference state reducer.
+- Maturity: scaffolded; no deployed service or enforcement adapter.
+- Start: README.md
+- Contract: docs/COMMAND-CONTRACT.md
+- Threat model: docs/THREAT-MODEL.md
+- Integration gates: docs/INTEGRATION-GATES.md
+- Schema: schemas/emergency-command.schema.json
+- Validator: emergency_control/commands.py
+- Reducer: emergency_control/reducer.py
+- Tests: tests/
+- Security boundary: no cryptographic verification, persistence, revocation, propagation, quarantine or process enforcement is implemented.
+- License: pending portfolio review.

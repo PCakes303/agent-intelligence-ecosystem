@@ -1,0 +1,45 @@
+{
+  "capabilities_version": "1.0.0",
+  "repository": "agent-emergency-control",
+  "repository_id": "emergency-control",
+  "maturity": "scaffolded",
+  "capabilities": [
+    {
+      "id": "emergency.command.validate",
+      "name": "Strict emergency command validation",
+      "status": "tested",
+      "description": "Validates bounded command envelopes, scope, epoch, action, expiry and resume approval structure.",
+      "evidence": [
+        "emergency_control/commands.py",
+        "schemas/emergency-command.schema.json",
+        "tests/test_commands.py"
+      ],
+      "limitations": [
+        "Does not verify cryptographic signatures or identity claims."
+      ]
+    },
+    {
+      "id": "emergency.state.reduce",
+      "name": "Deterministic stop/resume state reducer",
+      "status": "tested",
+      "description": "Evaluates monotonic per-scope STOP and controlled RESUME transitions against explicitly supplied verification evidence.",
+      "evidence": [
+        "emergency_control/reducer.py",
+        "tests/test_reducer.py"
+      ],
+      "limitations": [
+        "Pure reference logic only; no durable state, propagation, revocation or enforcement."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Cryptographic signature verification or key management",
+    "Identity issuance or revocation",
+    "Durable authoritative state or distributed consensus",
+    "Distributed stop propagation or agent acknowledgement",
+    "Process quarantine, termination or runtime enforcement",
+    "OS/container/network isolation",
+    "Production kill-switch service",
+    "Legal compliance certification"
+  ]
+}

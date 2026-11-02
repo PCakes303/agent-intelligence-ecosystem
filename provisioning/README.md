@@ -61,16 +61,21 @@ The reusable public template now includes a no-third-party-dependency starter bu
 
 The [AIX Core staging bundle](staged/aix-core/STAGING-STATUS.md) has been deployed to the existing public remote. The empty-remote creation instructions above are superseded. Latest remediation CI: [run 41490856354](https://github.com/PCakes303/aix-core/actions/runs/41490856354) passed. Refresh staging-to-remote blob-SHA parity before final portfolio sign-off.
 
-## Repository 24 prepared bundle
+## Deployment sequence 24 — agent-tool-adapters (portfolio position 25/32)
 
 The [agent-tool-adapters staging bundle](staged/agent-tool-adapters/STAGING-STATUS.md) was deployed to [PCakes303/agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters). Its 16 product files have exact Git blob parity with staging; all 20 unit tests pass on Python 3.10, 3.11 and 3.12. The sandbox-security repository now exists as an experimental admission-policy contract and validator, but provides no OS isolation or workload execution. All declared dependencies remain contract-only, not tested runtime integrations.
 
 
-## Repository 25 deployment
+## Deployment sequence 25 — agent-skill-library (portfolio position 26/32)
 
 The [agent-skill-library staging bundle](staged/agent-skill-library/STAGING-STATUS.md) was deployed to [PCakes303/agent-skill-library](https://github.com/PCakes303/agent-skill-library). Its 17 product files match the retained staging packet by Git blob SHA. CI passed on Python 3.10, 3.11 and 3.12 with 18 unit tests. It is an experimental declarative format and validator, not a workflow executor or security boundary.
 
 
-## Repository 26 — Sandbox Security
+## Deployment sequence 26 — agent-sandbox-security (portfolio position 27/32)
 
 The agent-sandbox-security bundle is deployed with 14 product files and exact staging/product Git blob parity. It provides an experimental policy contract and fail-closed validator only; no OS isolation or workload execution is implemented. Its declared prerequisites include identity, policy, audit, supply-chain, emergency-control and compliance-governance. See the retained staging status file for scope and verification evidence.
+
+
+## Deployment sequence 27 — agent-emergency-control (portfolio position 28/32)
+
+The initial 23-product-file scaffold is staged at [agent-emergency-control](staged/agent-emergency-control/). It includes the command schema, strict bounded parser, fail-closed STOP/RESUME reducer, two-person resume contract, threat model, integration gates and synthetic tests. The master workflow validates this packet across Python 3.10–3.12. The public remote is not yet created; no deployed kill-switch or enforcement capability is claimed.

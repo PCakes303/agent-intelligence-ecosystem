@@ -1,0 +1,18 @@
+{
+  "manifest_version": "1.0.0",
+  "id": "emergency-control",
+  "name": "agent-emergency-control",
+  "version": "0.1.0",
+  "maturity": "scaffolded",
+  "role": "Independent emergency-stop command contract and fail-closed reference state reducer; no deployed authority, propagation or enforcement service.",
+  "dependencies": [
+    "foundation",
+    "identity-trust",
+    "policy-engine",
+    "audit-provenance",
+    "secure-supply-chain"
+  ],
+  "entrypoint": "emergency_control/reducer.py",
+  "license_status": "pending-portfolio-review",
+  "execution_authority": false
+}

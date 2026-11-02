@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41505178230",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41507997230",
       "conclusion": "success",
-      "head_sha": "4ef03784cb07bceab03c43e1990820e031d2071b",
+      "head_sha": "56a99ae430e3d00da38e444c390541f8aaa0107a",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -1394,6 +1394,12 @@
       "path": "provisioning/staged/agent-skill-library",
       "file_count": 17,
       "status": "Deployed; 17 product files; exact staging/remote Git blob parity reverified on 2026-11-02."
+    },
+    {
+      "repository": "agent-emergency-control",
+      "path": "provisioning/staged/agent-emergency-control",
+      "file_count": 23,
+      "status": "Prepared in master staging; public remote not yet created. Includes strict bounded command schema/parser, STOP/RESUME reducer, two-person resume contract, synthetic tests and Python 3.10–3.12 staging CI. No cryptographic verification, persistence, propagation or runtime enforcement."
     }
   ],
   "master_audit": {
