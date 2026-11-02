@@ -314,7 +314,7 @@
       "name": "agent-discovery-network",
       "visibility": "public",
       "layer": "swarm",
-      "role": "Trust-filtered discovery index for candidate agents, resources, services and capability advertisements; discovery does not authenticate or authorize.",
+      "role": "Experimental trust-filtered discovery index for candidate agents, resources, services and capability advertisements; not authentication or authorization.",
       "repository_url": "https://github.com/PCakes303/agent-discovery-network",
       "existence": "exists",
       "implementation_status": "Scaffolded; 17 files published; GitHub Actions CI passed on Python 3.10, 3.11 and 3.12",
