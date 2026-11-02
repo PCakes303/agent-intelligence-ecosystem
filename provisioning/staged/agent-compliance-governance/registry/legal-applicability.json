@@ -150,7 +150,7 @@
           "source_type": "official_agency"
         }
       ],
-      "applicability_summary": "The Colorado Department of Law reports that proposed draft rules implementing SB26-189 and HB26-1263 were filed on August 11, 2026, and that the public comment period ran from August 11 through October 26, 2026, subject to extension if the formal hearing continued. This record tracks proposed rulemaking only and does not represent final adopted rules.",
+      "applicability_summary": "The Colorado Department of Law reports that proposed draft rules implementing SB26-189 and HB26-1263 were filed on August 11, 2026; an interim draft was released October 6; a regulatory analysis was released October 21; and a formal rulemaking hearing was held October 26, 2026. As of the November 2, 2026 source review, the agency page states that it is drafting the final rules after considering comments. This record tracks rulemaking only and does not represent final adopted rules.",
       "triggers": [
         "Colorado ADMT or conversational AI service operation",
         "Final rulemaking, hearing notices, adopted rules or agency guidance are published"
@@ -160,7 +160,7 @@
         "Reconcile final rules against the statutory control catalogue"
       ],
       "uncertainties": [
-        "Final adoption and current hearing status not confirmed in this initial register",
+        "Final rules had not been posted on the agency rulemaking page as of the November 2, 2026 review; recheck the agency and Secretary of State records",
         "Do not treat draft language as binding law"
       ],
       "legal_review_status": "needs_counsel",
