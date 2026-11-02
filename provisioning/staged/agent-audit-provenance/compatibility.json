@@ -1,0 +1,11 @@
+{
+  "compatibility_version": "1.0.0",
+  "component": "audit-provenance",
+  "status": "experimental",
+  "event_schema": "schemas/audit-event.schema.json",
+  "format": "UTF-8 JSON Lines; one event object per line",
+  "canonicalization": "UTF-8 JSON with sorted keys, separators(',', ':'), ensure_ascii=false",
+  "digest": "SHA-256 lowercase hexadecimal",
+  "chain_rule": "first previous_hash is null; each subsequent previous_hash equals the prior event_hash",
+  "breaking_change_policy": "Introduce a new schema or log format major version for incompatible changes."
+}
