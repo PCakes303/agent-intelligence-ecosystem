@@ -854,7 +854,29 @@
       "status": "Experimental; 16 files deployed; 20 unit tests pass on Python 3.10, 3.11 and 3.12; exact remote/staging Git blob parity verified",
       "priority": "P1",
       "importance": "Connects existing tools to agents through consistent, permissioned interfaces.",
-      "next_gate": "Build a concrete reviewed adapter with authenticated principal context, real policy-engine enforcement, transport integration and verified sandbox isolation; add adversarial and cross-repository conformance tests before claiming runtime interoperability."
+      "next_gate": "Bound registry metadata and descriptor catalogs; enforce descriptor schema in CI; validate direct invocation shape or document trusted-host precondition; verify private reporting, About metadata, administration settings and staging parity.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "0419e80fabe1a3c1d5597043c86a49eba113e46d",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-tool-adapters-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-tool-adapters/issues/1",
+        "remediation_commits": [
+          "775e96309800937009560014aa50ae6e0ba1b154",
+          "686b2ea6af38f947fa0d30b252b67358baa146a0"
+        ],
+        "findings": [
+          "adapter/capability/principal/decision identifiers and catalog sizes unbounded",
+          "descriptor schema incomplete and not executed by CI",
+          "malformed direct Invocation object may raise before structured denial",
+          "private reporting route not verified",
+          "GitHub About metadata missing",
+          "STAGING-STATUS.md absent and staging parity evidence stale",
+          "license pending review",
+          "repository administration controls unverified",
+          "no tested cross-repository integrations or sandbox enforcement"
+        ]
+      }
     },
     {
       "number": "25",
