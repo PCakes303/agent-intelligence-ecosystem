@@ -43,3 +43,7 @@ The script checks the authenticated GitHub login, refuses to guess a Git email, 
 Re-run registry reconciliation and verify all repository visibility and default branches. Then configure branch protection, rulesets, security features, and least-privilege automation through GitHub settings. These administration settings cannot be verified or applied through the current connected integration.
 
 Do not bulk-create private repositories from public scaffold output. The private operations repository already exists and remains a separate trust boundary.
+
+## Entry-level builds in generated repositories
+
+The reusable public template now includes a no-third-party-dependency starter build, a small test suite, a Makefile, an entry-level build guide, and a read-only GitHub Actions workflow pinned to immutable action SHAs. Every generated public repository begins with this Starter tier; its domain-specific Developer and Production tiers are added as implementation work proceeds. The scaffold generator still excludes the private repository.
