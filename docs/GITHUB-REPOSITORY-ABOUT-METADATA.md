@@ -1,74 +1,73 @@
 # GitHub repository About metadata
 
 **Audit date:** 2026-11-02  
-**Scope:** thirteen existing public portfolio repositories (00–12). The separate profile repository and private operations repository are excluded.
+**Scope:** all 21 existing public portfolio repositories (master plus 20 component repositories). The separate profile repository and private operations repository are excluded.
 
-GitHub's repository-level **About** fields are separate from README and manifest files. The connected GitHub integration can read repository metadata and edit repository files, but cannot update repository descriptions, homepage URLs, or topics. Apply the values below in each repository's GitHub **About → Edit repository details** panel.
+GitHub About metadata is separate from each repository's README and manifest. The connected GitHub integration can inspect repository metadata and update repository files, but it does not expose a repository-settings write operation for descriptions, homepage URLs, or topics. The table below is the approved, individualized metadata set to apply in each repository's **About → Edit repository details** panel.
 
 ## Verified current state
 
-**Public identity:** MrCakes931 · **GitHub owner:** PCakes303
+- 21 of 29 planned public portfolio repositories exist; 8 public repositories remain to be created.
+- All 21 existing public portfolio repositories use the `main` default branch and have a README.
+- All 21 have an empty GitHub topics list and no homepage URL.
+- Nine have a description; twelve descriptions are empty.
+- `agent-policy-engine` has a malformed description because a comma-separated topic list was appended to the description field. Replace the whole field with the clean description below.
+- The private operations repository and the separate `PCakes303/PCakes303` profile repository are excluded.
+- A repository description or topic does not imply implementation maturity, security certification, or production readiness.
 
-
-- All thirteen public portfolio repositories exist and use the `main` default branch.
-- All thirteen currently have an empty topics list and no homepage URL.
-- Repositories 00–08, 10, and 11 have no About description. Repository 12 already has the description `RFC 8785 canonical JSON serialization and strict decoding for AIX messages`.
-- Repository 09 has a malformed description: the intended description was followed by a comma-separated topic list, all stored in the description field. Its topics list is empty.
-- All thirteen repositories have a README and machine-oriented entrypoints appropriate to their current stage. CI has a successful recent run for each repository; this does not imply production readiness.
-
-Use this homepage for all thirteen repositories:
+**Common homepage for all 21 public portfolio repositories:**
 
 `https://github.com/PCakes303/agent-intelligence-ecosystem`
 
-## Recommended About values
+## Approved descriptions and topics
 
-Descriptions are concise and deliberately avoid implying production maturity.
+Use each topic as a separate GitHub topic. Do not paste the topic list into the description field.
 
-| # | Repository | Description | Suggested topics |
+| Portfolio # | Repository | Individualized description | Suggested topics |
 |---:|---|---|---|
-| 00 | [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem) | Master registry, architecture, governance, dependency graph, and validation control plane for the MrCakes931 agent ecosystem. | agentic-ai, multi-agent-systems, ecosystem, governance, architecture, json-schema |
-| 01 | [agent-ai-discovery](https://github.com/PCakes303/agent-ai-discovery) | AI-native discovery metadata, machine-readable capability indexes, and agent integration entry points for the MrCakes931 ecosystem. | ai-agents, agent-discovery, llms-txt, agentic-ai, metadata, interoperability |
-| 02 | [mrcakes931-ecosystem](https://github.com/PCakes303/mrcakes931-ecosystem) | Human-facing guide to the MrCakes931 Agent Intelligence Ecosystem, its architecture, repositories, and onboarding path. | ai-agents, documentation, ecosystem, multi-agent-systems, onboarding |
-| 03 | [agent-ecosystem-integration](https://github.com/PCakes303/agent-ecosystem-integration) | Integration profiles, adapter contracts, and conformance guidance for interoperating components in the MrCakes931 agent ecosystem. | ai-agents, interoperability, integration, conformance, agentic-ai |
-| 04 | [agent-foundation-spec](https://github.com/PCakes303/agent-foundation-spec) | Normative foundation requirements and shared security, lifecycle, reliability, and compatibility contracts for AI agent systems. | ai-agents, specifications, security, reliability, standards, agentic-ai |
-| 05 | [agent-resource-manifest](https://github.com/PCakes303/agent-resource-manifest) | Machine-readable manifests for agent tools, skills, models, datasets, services, dependencies, and requested permissions. | ai-agents, manifests, json-schema, tools, skills, metadata |
-| 06 | [agent-schema-registry](https://github.com/PCakes303/agent-schema-registry) | Versioned JSON Schema catalog and governance conventions for machine-readable contracts across agent systems. | json-schema, schema-registry, ai-agents, validation, interoperability |
-| 07 | [agent-identity-trust](https://github.com/PCakes303/agent-identity-trust) | Identity and trust contracts for agent principals, authentication context, authorization, delegation, and revocation. | ai-agents, identity, trust, authorization, security, delegation |
-| 08 | [agent-secure-supply-chain](https://github.com/PCakes303/agent-secure-supply-chain) | Artifact integrity, SBOM references, source provenance, and signature-verification contracts for secure agent software supply chains. | supply-chain-security, sbom, provenance, artifact-integrity, software-security, ai-agents |
-| 09 | [agent-policy-engine](https://github.com/PCakes303/agent-policy-engine) | Experimental deterministic default-deny policy decision evaluator for agent principals, actions, resources, and scopes. | ai-agents, policy-engine, authorization, access-control, least-privilege, security |
+| 00 | [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem) | Canonical registry, architecture decisions, dependency graph, governance and validation control plane for the MrCakes931 Agent Intelligence Ecosystem. | agentic-ai, multi-agent-systems, ecosystem-architecture, governance, dependency-management, json-schema |
+| 01 | [agent-ai-discovery](https://github.com/PCakes303/agent-ai-discovery) | Machine-readable discovery documents and deterministic capability indexes that help agents and people locate authoritative ecosystem resources. | ai-agent-discovery, llms-txt, capability-index, machine-readable-metadata, agentic-ai, resource-discovery |
+| 02 | [mrcakes931-ecosystem](https://github.com/PCakes303/mrcakes931-ecosystem) | Human onboarding guide to the MrCakes931 ecosystem, explaining its hybrid architecture, repository roles, security principles and contributor paths. | mrcakes931, ai-agent-ecosystem, architecture-guide, developer-onboarding, multi-agent-systems |
+| 03 | [agent-ecosystem-integration](https://github.com/PCakes303/agent-ecosystem-integration) | Adapter contracts and integration profiles for connecting ecosystem components and external agent protocols without losing security or message semantics. | agent-integration, protocol-adapters, interoperability, mcp, a2a, conformance |
+| 04 | [agent-foundation-spec](https://github.com/PCakes303/agent-foundation-spec) | Technology-neutral normative requirements for agent identity, trust boundaries, lifecycle, reliability, compatibility and secure system design. | agent-specification, security-requirements, trust-boundaries, reliability-engineering, interoperability, normative-contracts |
+| 05 | [agent-resource-manifest](https://github.com/PCakes303/agent-resource-manifest) | JSON Schema contracts for declaring agent tools, skills, models, datasets and services with dependencies, integrity metadata and requested permissions. | resource-manifest, json-schema, agent-tools, agent-skills, permission-declaration, metadata-contract |
+| 06 | [agent-schema-registry](https://github.com/PCakes303/agent-schema-registry) | Versioned JSON Schema catalog and compatibility governance for the machine-readable contracts exchanged across agent components. | schema-registry, json-schema-2020-12, schema-versioning, contract-validation, compatibility, agent-interoperability |
+| 07 | [agent-identity-trust](https://github.com/PCakes303/agent-identity-trust) | Principal identity and trust contracts covering authentication context, scoped delegation, authorization boundaries, key lifecycle and revocation. | agent-identity, workload-identity, authentication-context, authorization, delegation, trust-management |
+| 08 | [agent-secure-supply-chain](https://github.com/PCakes303/agent-secure-supply-chain) | Artifact-record and provenance contracts for SBOM references, source commits, digests and signature-verification evidence in agent software supply chains. | software-supply-chain, sbom, artifact-provenance, signature-verification, software-integrity, secure-builds |
+| 09 | [agent-policy-engine](https://github.com/PCakes303/agent-policy-engine) | Experimental deterministic default-deny policy decision evaluator for agent principals, actions, resources and scopes, with explainable rule outcomes. | policy-decision-point, default-deny, least-privilege, agent-authorization, access-control, policy-evaluation |
+| 10 | [agent-audit-provenance](https://github.com/PCakes303/agent-audit-provenance) | Portable audit-event schema and SHA-256 hash-chained JSONL reference tooling for traceability and tamper-evident event-history checks. | audit-events, hash-chain, sha256, event-provenance, forensic-readiness, audit-logging |
+| 11 | [aix-core](https://github.com/PCakes303/aix-core) | Experimental Agent Interoperability eXchange semantic extension defining task, intent, capability, context, lifecycle and provenance envelopes over existing standards. | aix, agent-interoperability, semantic-envelope, mcp-extension, a2a-integration, task-lifecycle |
+| 12 | [aix-codecs](https://github.com/PCakes303/aix-codecs) | RFC 8785 canonical JSON encoding and strict decoding reference implementation for deterministic AIX message serialization. | aix, rfc8785, json-canonicalization, canonical-json, deterministic-serialization, message-codec |
+| 13 | [agent-transport-gateway](https://github.com/PCakes303/agent-transport-gateway) | Experimental transport-neutral request guard and integration boundary for carrying AIX messages over HTTP, MCP and A2A with bounded replay and policy checks. | agent-transport, http-gateway, mcp, a2a, replay-protection, request-validation |
+| 14 | [agent-discovery-network](https://github.com/PCakes303/agent-discovery-network) | Experimental trust-filtered index for expiring agent, resource and service advertisements with injected signature-verification and trust-policy gates. | agent-discovery, service-discovery, capability-advertisement, trust-filtering, distributed-agents, discovery-index |
+| 15 | [agent-capability-registry](https://github.com/PCakes303/agent-capability-registry) | Bounded local catalog that validates declared agent capabilities and matches task requirements through an advisory, policy-filtered lookup. | capability-registry, agent-capabilities, task-matching, capability-discovery, policy-filtering, agent-orchestration |
+| 16 | [swarm-runtime](https://github.com/PCakes303/swarm-runtime) | Experimental bounded worker supervisor for task admission, lifecycle tracking, adapter health and policy/audit hooks; it does not provide sandbox isolation. | swarm-runtime, worker-supervisor, task-execution, admission-control, lifecycle-management, hybrid-swarm |
+| 17 | [swarm-coordination](https://github.com/PCakes303/swarm-coordination) | Experimental task delegation coordinator with capability-based candidate selection, idempotency, acknowledgement binding, bounded retries and lease recovery. | swarm-coordination, task-delegation, idempotency, lease-recovery, agent-orchestration, distributed-workflows |
+| 18 | [swarm-state-mesh](https://github.com/PCakes303/swarm-state-mesh) | Experimental versioned task-event and state reference with optimistic revisions, event-ID idempotency, deterministic snapshots and opaque context references. | swarm-state, event-log, optimistic-concurrency, idempotency, distributed-systems, context-references |
+| 19 | [osint-source-registry](https://github.com/PCakes303/osint-source-registry) | Review-gated catalog of public information sources, datasets and APIs with licensing, permitted-purpose, access-limit, retention and approval metadata. | osint, source-catalog, data-governance, licensing, source-provenance, compliance-controls |
+| 23 | [intelligence-knowledge-graph](https://github.com/PCakes303/intelligence-knowledge-graph) | Experimental provenance-aware graph model connecting source records, preserved evidence and entities through evidence-backed relationships with explicit uncertainty. | intelligence-knowledge-graph, osint, evidence-provenance, graph-model, uncertainty, relationship-analysis |
 
-| 10 | [agent-audit-provenance](https://github.com/PCakes303/agent-audit-provenance) | Experimental audit-event contracts and SHA-256 hash-chained JSONL tooling for traceability and integrity checks. | ai-agents, audit-logging, provenance, event-integrity, sha256, security |
+## Application checklist
 
-| 11 | [aix-core](https://github.com/PCakes303/aix-core) | Experimental semantic interoperability specification for agent intent, tasks, capabilities, context, and provenance; an extension layer over existing standards. | ai-agents, interoperability, agent-protocol, task-orchestration, mcp, a2a |
-| 12 | [aix-codecs](https://github.com/PCakes303/aix-codecs) | RFC 8785 canonical JSON serialization and strict decoding for AIX messages. | ai-agents, json-canonicalization, rfc8785, serialization, interoperability, aix |
+For each of the 21 repositories:
 
-## Application order
+1. Open the repository page and select **About → Edit repository details**.
+2. Set the exact description from the table.
+3. Set the common master-repository homepage URL.
+4. Add the listed topics individually.
+5. Save, then re-read the repository metadata to confirm the description, homepage and topics.
 
-Apply rows 00–12 to the thirteen existing public repositories now.
+For `agent-policy-engine`, replace the malformed description completely; do not append or retain the comma-separated topics in that field.
 
-For each existing repository, set:
-1. **Description:** copy the exact description from the table.
-2. **Website:** use the common master-repository URL above.
-3. **Topics:** add the comma-separated topics from the table as individual GitHub topics.
+## Maturity and licensing guardrails
 
-For Repository 09, replace the entire malformed description rather than appending to it. Do not paste topics into the description field.
+- Descriptions intentionally use **experimental** or **reference** where appropriate and do not imply production certification.
+- Discovery and capability matching are advisory; neither authenticates an agent nor grants permission.
+- The Swarm Runtime is not a sandbox. The Transport Gateway is not yet a production network gateway.
+- The OSINT Source Registry catalogs metadata only; it does not collect or crawl source content.
+- The Knowledge Graph does not collect evidence, resolve real-world identities, or assert truth.
+- Repository-specific license selection remains pending portfolio review. Do not add license files or claim a license until the mixed-license decision is approved.
 
-## Maturity and accuracy notes
+## Audit boundary
 
-- **00 master:** control plane and validation are operational; it is not evidence that all 29 public components are implemented.
-- **01 discovery:** local document validation and index generation exist; CI passes. External publisher authentication, complete JSON Schema validation, and consumer interoperability are not implemented.
-- **02 human guide:** documentation/onboarding scaffold; it is not a running agent service.
-- **03 integration:** contracts, examples, validator, tests, and CI exist; production adapters and cross-repository conformance are future work.
-- **04 foundation:** requirements and contract scaffold with CI; normative requirement-to-implementation verification remains partial.
-- **05 resource manifest:** schema, example, validator, tests, and CI exist; not a package manager or execution runtime.
-- **06 schema registry:** structural catalog checks exist; the checker is not a complete JSON Schema semantic validator or compatibility engine.
-- **07 identity trust:** principal contract and validator exist; no deployed identity provider or credential issuer.
-- **08 secure supply chain:** artifact-record contract and validator exist; no SBOM generation, artifact download, signature verification, or publisher authentication.
-- **09 policy engine:** deterministic default-deny decision evaluator, schemas, CLI, examples, tests, and CI exist; no principal authentication, policy signing/distribution, or enforcement at protected resources.
-- **10 audit provenance:** hash-chained JSONL and verification tooling exist; hash chaining does not authenticate event producers.
-- **11 AIX Core:** experimental envelope, lifecycle and schema validator exist; no authenticated sender or production interoperability is implied.
-- **12 AIX Codecs:** RFC 8785 canonical JSON and strict decoder scaffold; CI passes across Python 3.10–3.12. Cross-language conformance, schema-bound AIX message validation, fuzzing and payload/depth limits remain outstanding.
-
-A successful starter CI run verifies the declared starter checks only. It does not establish production security, standards certification, or runtime interoperability.
-
-The private operations repository is intentionally excluded. The separate profile repository is not part of the 30-repository portfolio.
+This metadata file is the canonical set of recommended GitHub About values. It is not evidence that those values have been applied. The GitHub connector available in this workflow supports repository reads and file commits, but not writes to repository description, homepage or topics settings; those settings must be applied in GitHub's repository UI.
