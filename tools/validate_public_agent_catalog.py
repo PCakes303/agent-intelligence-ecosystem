@@ -43,7 +43,7 @@ def validate(catalog=None, registry=None, status=None, schema=None):
         recorded = status_by_name.get(name)
         if recorded and (item["existence"] != recorded.get("existence") or item["implementation_status"] != recorded.get("status")):
             errors.append(f"{name}: existence or maturity drift from implementation status")
-        if "private" in name.lower() or "agent-ecosystem-private" in item["repository_url"]:
+        if "private" in name.lower() or "agent-ecosystem-private" in (item.get("repository_url") or ""):
             errors.append(f"{name}: private repository reference in public catalog")
     if catalog["repository_count"] != registry["counts"]["public"]:
         errors.append("catalog count does not match public registry count")
