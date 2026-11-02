@@ -1,0 +1,12 @@
+# Agent Discovery Network
+
+Experimental trust-filtered discovery index for agents, resources and services.
+
+- Project: https://github.com/PCakes303/agent-intelligence-ecosystem
+- Contract: docs/DISCOVERY-CONTRACT.md
+- Threat model: docs/THREAT-MODEL.md
+- Record validation: discovery_network/records.py
+- Registry: discovery_network/registry.py
+- Tests: tests/
+
+Discovery is not authentication, authorization, endpoint health verification or capability certification. Signature and trust callbacks are integration seams; no cryptographic or distributed implementation is included.
