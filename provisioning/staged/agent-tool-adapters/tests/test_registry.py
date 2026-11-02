@@ -1,5 +1,5 @@
 import unittest
-from agent_tool_adapters import AdapterRegistry, Invocation, PolicyDecision
+from agent_tool_adapters import AdapterError, AdapterRegistry, Invocation, PolicyDecision
 
 class Echo:
     adapter_id = "test.echo"
@@ -38,7 +38,7 @@ class RegistryTests(unittest.TestCase):
                          "capability_not_registered")
 
     def test_duplicate_adapter_id_rejected(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(AdapterError):
             self.registry.register(Echo())
 
     def test_oversized_input_rejected(self):
@@ -77,6 +77,27 @@ class RegistryTests(unittest.TestCase):
         result = registry.invoke(Invocation("p", "test.broken", {}, self.allow))
         self.assertEqual(result.error_code, "adapter_error")
         self.assertNotIn("private detail", result.error_message)
+
+    def test_duplicate_capability_rejected(self):
+        class Other:
+            adapter_id = "test.other"
+            capabilities = frozenset({"test.echo"})
+            def invoke(self, input_data):
+                return input_data
+        with self.assertRaises(AdapterError):
+            self.registry.register(Other())
+
+    def test_registered_capabilities_are_snapshotted(self):
+        class Mutable:
+            adapter_id = "test.mutable"
+            capabilities = {"test.mutable"}
+            def invoke(self, input_data):
+                return input_data
+        registry = AdapterRegistry()
+        adapter = Mutable()
+        registry.register(adapter)
+        adapter.capabilities.add("test.injected")
+        self.assertEqual(registry.descriptors()[0]["capabilities"], ["test.mutable"])
 
     def test_descriptor_output_is_deterministic(self):
         self.assertEqual(self.registry.descriptors(),
