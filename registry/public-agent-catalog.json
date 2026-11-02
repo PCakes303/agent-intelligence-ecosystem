@@ -340,7 +340,7 @@
       "role": "Experimental catalog and validation of declared agent capabilities with policy-filtered candidate matching; advisory only, not authentication or authorization.",
       "repository_url": "https://github.com/PCakes303/agent-capability-registry",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 18 files deployed; initial Python 3.10–3.12 CI passed; follow-up matching fix awaiting CI.",
+      "implementation_status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12, including same-agent multi-capability matching regression coverage.",
       "priority": "P1",
       "dependencies": [
         "resource-manifest",
