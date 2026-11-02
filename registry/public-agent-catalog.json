@@ -593,7 +593,7 @@
       "name": "agent-conformance-lab",
       "visibility": "public",
       "layer": "adoption",
-      "role": "Protocol validation, compatibility and security tests, and swarm benchmarks.",
+      "role": "Protocol contract validation, compatibility and security tests, with future isolated swarm benchmarking.",
       "repository_url": "https://github.com/PCakes303/agent-conformance-lab",
       "existence": "not-created",
       "implementation_status": "Not started",
