@@ -119,10 +119,10 @@
       ]
     },
     "agent-transport-gateway": {
-      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41491823732",
+      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41503961456",
       "conclusion": "success",
-      "head_sha": "d647bd08779a2526f641df25d97a3e046ca69618",
-      "tests": 18,
+      "head_sha": "51f721ff00d3dad27238760ca73fe84051183c74",
+      "tests": 21,
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -697,7 +697,11 @@
           "a22240dbca0437d5e5a4dbebdf48c25e5eabcd28",
           "ed1104d993d20759cd68642f93c2607ba870ded9",
           "0d8bca7452fd5cc2e5f18fb8637edbb5defae487",
-          "d647bd08779a2526f641df25d97a3e046ca69618"
+          "d647bd08779a2526f641df25d97a3e046ca69618",
+          "a0f92357c8b8503f52be75eb4e89bbecaa46d1c7",
+          "51f721ff00d3dad27238760ca73fe84051183c74",
+          "282992ca615ae2633cf2c4a14069accdbefdf6bc",
+          "068825ae30994d30ceb4f4b9c9d4a7b91675fef6"
         ],
         "findings": [
           "no trusted principal authentication",
@@ -709,8 +713,12 @@
           "private vulnerability reporting route not verified",
           "GitHub About homepage/topics missing",
           "license pending review",
-          "staging parity and repository administration controls unverified"
-        ]
+          "staging parity and repository administration controls unverified",
+          "numeric conversion overflow now rejected with stable fail-closed outcomes; three regression tests added",
+          "README now discloses pending license status",
+          "latest staging-status documentation update CI pending"
+        ],
+        "next_gate": "Implement authenticated identity binding, policy service integration, shared replay store, schema/codec validation and protocol adapters; verify private reporting, About metadata, repository settings and staging parity."
       }
     },
     {
