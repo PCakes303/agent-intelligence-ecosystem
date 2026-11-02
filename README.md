@@ -13,6 +13,7 @@ The portfolio and architecture are approved. Twelve of the 29 public repositorie
 ## Start here
 - [Repository 10 — Agent Audit & Provenance](https://github.com/PCakes303/agent-audit-provenance)
 - [Repository 11 — AIX Core](https://github.com/PCakes303/aix-core)
+- [Repository 12 — AIX Codecs staging bundle](provisioning/staged/aix-codecs/STAGING-STATUS.md)
 
 - [LLM-readable project index](llms.txt)
 - [Public agent catalog — 29 repositories](registry/public-agent-catalog.json)
