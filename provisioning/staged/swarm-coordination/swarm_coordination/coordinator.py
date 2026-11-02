@@ -194,9 +194,12 @@ class Coordinator:
             record.lease_expires_at = timestamp + self.lease_seconds
             return record.snapshot()
 
-    def start(self, task_id: str, dispatch_ref: str, agent_id: str) -> TaskSnapshot:
+    def start(self, task_id: str, dispatch_ref: str, agent_id: str, *, now: float | None = None) -> TaskSnapshot:
+        timestamp = time.time() if now is None else float(now)
         with self._lock:
             record = self._active(task_id, dispatch_ref, agent_id, TaskState.ACKNOWLEDGED)
+            if record.lease_expires_at is not None and timestamp >= record.lease_expires_at:
+                raise CoordinationError("acknowledgement lease has expired")
             self._emit("task.started", record, agent_id=agent_id, dispatch_ref=dispatch_ref)
             record.state = TaskState.RUNNING
             return record.snapshot()
