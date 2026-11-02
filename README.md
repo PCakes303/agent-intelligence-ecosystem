@@ -67,5 +67,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for substantial changes, 
 - [AIX experimental envelope](prototypes/aix/aix-message.schema.json)
 - [Default-deny policy prototype](prototypes/policy/README.md)
 - [Audit event schema](schemas/audit-event.schema.json) and [hash-chain utility](tools/audit_chain.py)
+- [Secure supply-chain starter contract](specifications/secure-supply-chain/README.md), [artifact schema](schemas/supply-chain-artifact.schema.json), and [validator](tools/validate_supply_chain.py)
 - [Repository scaffold generator](tools/bootstrap_repositories.py)
 - [Remote provisioning instructions](provisioning/README.md)
