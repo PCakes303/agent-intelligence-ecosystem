@@ -464,7 +464,7 @@
     "repository": "osint-source-registry",
     "path": "provisioning/staged/osint-source-registry",
     "file_count": 23,
-    "status": "23-file source metadata catalog scaffold committed to master staging; public remote not yet created; JSON artifacts parsed successfully; repository-local Python CI remains pending remote deployment."
+    "status": "23-file source metadata catalog scaffold committed to master staging; public remote not yet created; JSON artifacts parse, both synthetic examples validate against the source schema, and local Python smoke checks pass; repository-local unittest suite and Python 3.10–3.12 CI remain pending remote deployment."
   },
   "prepared_staging_history": [
     {
