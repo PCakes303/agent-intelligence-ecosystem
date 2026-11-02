@@ -8,9 +8,9 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 9,
+    "public_existing": 10,
     "private_existing": 1,
-    "public_not_created": 20,
+    "public_not_created": 19,
     "profile_repository_excluded": "PCakes303/PCakes303",
     "public_repositories_present": 10,
     "public_repositories_missing": 19
@@ -21,7 +21,7 @@
     "operational": "Control-plane tooling and CI currently run; not a claim that all ecosystem components are production-ready."
   },
   "verified_ci": {
-    "master": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41395414353",
+    "master": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41401860473",
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
     "mrcakes931-ecosystem": "https://github.com/PCakes303/mrcakes931-ecosystem/actions/runs/41393904496",
     "agent-ecosystem-integration": "https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41393949532",
@@ -29,7 +29,8 @@
     "agent-resource-manifest": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41393940798",
     "agent-schema-registry": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41393937230",
     "agent-identity-trust": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41393944708",
-    "agent-secure-supply-chain": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41398832132"
+    "agent-secure-supply-chain": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41398832132",
+    "agent-policy-engine": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896"
   },
   "repositories": [
     {
@@ -150,7 +151,7 @@
       "status": "Scaffolded; deterministic default-deny evaluator, schemas, CLI, examples, tests and CI workflow published; production enforcement not implemented",
       "priority": "P0",
       "importance": "Central enforcement of least privilege and explicit authorization.",
-      "next_gate": "Verify the final CI run; then implement policy bundle versioning, authentication-context integration, enforcement adapters, and deny-path security tests."
+      "next_gate": "Add policy bundle versioning, authentication-context integration, enforcement adapters, and deny-path security tests; latest starter CI passed."
     },
     {
       "number": "10",
