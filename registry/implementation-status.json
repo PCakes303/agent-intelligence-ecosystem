@@ -63,7 +63,17 @@
       "head_sha": "4988d08c2fc9556d64ab90527e5cb0631aeec14d",
       "tests": 8
     },
-    "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41427817571",
+    "aix-codecs": {
+      "workflow_run": "https://github.com/PCakes303/aix-codecs/actions/runs/41491180433",
+      "conclusion": "success",
+      "head_sha": "220226f97698de1e60fb210d3b766c0d22e05cc5",
+      "tests": 8,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
+    },
     "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41427827799",
     "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147",
     "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413613566",
@@ -383,7 +393,7 @@
       "layer": "protocols",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 14 files published; GitHub Actions CI passed (Python 3.10, 3.11, 3.12 matrix)",
+      "status": "Scaffolded experimental Python RFC 8785 codec; eight unit tests; no cross-language conformance or production ingress guarantees.",
       "priority": "P0",
       "importance": "Deterministic serialization is required for interoperable AIX messages.",
       "next_gate": "Expand RFC 8785 vectors and fuzz/property tests; ensure transport-facing integrations enforce payload/depth budgets before decoding; verify private reporting, metadata, repository settings and staging parity.",
