@@ -36,7 +36,17 @@
     "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41408761297",
     "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293",
     "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41410840515",
-    "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413329389"
+    "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413329389",
+    "swarm-runtime": {
+      "repository_url": "https://github.com/PCakes303/swarm-runtime",
+      "workflow_run": "https://github.com/PCakes303/swarm-runtime/actions/runs/41415157127",
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "jobs": "all passed"
+    }
   },
   "repositories": [
     {
@@ -237,11 +247,11 @@
       "name": "swarm-runtime",
       "layer": "swarm",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started",
+      "existence": "exists",
+      "status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12 (run 41415157127). Worker supervisor, bounded admission and adapter contract are experimental; no sandbox isolation is implemented.",
       "priority": "P0",
       "importance": "Execution substrate for distributed agents and nodes.",
-      "next_gate": "Build minimal isolated worker runtime with lifecycle, limits and health reporting."
+      "next_gate": "Integrate a reviewed Sandbox Security adapter with enforced OS resource/network/filesystem isolation; bind production Identity & Trust, Policy Engine and Audit & Provenance contracts; add cross-repository conformance, adversarial and property-based tests. Current adapter boundary is not a security sandbox."
     },
     {
       "number": "17",
@@ -429,7 +439,7 @@
     "repository": "swarm-runtime",
     "path": "provisioning/staged/swarm-runtime",
     "file_count": 18,
-    "status": "18-file worker supervisor packet committed to master staging; master CI passed (run 41414485181); public remote not yet created"
+    "status": "deployed to public repository; CI passed on Python 3.10, 3.11 and 3.12"
   },
   "prepared_staging_history": [
     {
