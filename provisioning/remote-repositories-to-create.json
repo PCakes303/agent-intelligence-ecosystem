@@ -15,25 +15,11 @@
     "agent-secure-supply-chain",
     "aix-codecs",
     "agent-transport-gateway",
-    "agent-discovery-network"
+    "agent-discovery-network",
+    "agent-capability-registry"
   ],
-  "missing_public_repository_count": 14,
+  "missing_public_repository_count": 13,
   "repositories": [
-    {
-      "name": "agent-capability-registry",
-      "description": "Catalog and validation of agent capabilities.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "capability-registry",
-      "dependencies": [
-        "resource-manifest",
-        "schema-registry",
-        "policy-engine"
-      ]
-    },
     {
       "name": "swarm-runtime",
       "description": "Execution infrastructure for distributed agents and nodes.",
