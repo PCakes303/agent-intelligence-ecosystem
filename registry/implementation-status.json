@@ -131,10 +131,10 @@
       "staging_parity": "14 product files; exact Git blob SHA match"
     },
     "agent-discovery-network": {
-      "workflow_run": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41492390494",
+      "workflow_run": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41504383220",
       "conclusion": "success",
-      "head_sha": "7f9b3bb17f8405f7e105565a8a78e3760a72f21a",
-      "tests": 24,
+      "head_sha": "aacbb1d1dca1c952a61592e26a94e4a324081e7c",
+      "tests": 29,
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -754,7 +754,13 @@
           "dcb1f02d76b9130d88c77e68d2a7f8236a691992",
           "04a0f4480b5b7ff33739a425b74dc760f1e0997c",
           "992e012db49baefb0a9268d7d0b9fb0939fdcd83",
-          "7f9b3bb17f8405f7e105565a8a78e3760a72f21a"
+          "7f9b3bb17f8405f7e105565a8a78e3760a72f21a",
+          "199fed0d26ddbf06762508618c9370116946d2d3",
+          "122fe2f1d64c7b15a4ed0d138022debc2a9f85ce",
+          "6f9af7001d390094809c9816a59bfff8aed9271f",
+          "aacbb1d1dca1c952a61592e26a94e4a324081e7c",
+          "60fcd55b09b802709e7c337056477e956b3b1d12",
+          "bae71125e3c79a7f2baad2fd34da9352cad2b874"
         ],
         "findings": [
           "no cryptographic signature verification or key lifecycle",
@@ -765,7 +771,10 @@
           "private reporting route not verified",
           "GitHub About homepage/topics missing",
           "license pending review",
-          "staging parity and repository administration controls unverified"
+          "staging parity and repository administration controls unverified",
+          "numeric overflow in record/registry timestamps and lifetime config is now rejected safely",
+          "five regression tests added for overflow boundaries",
+          "README explicitly discloses pending license status"
         ]
       }
     },
