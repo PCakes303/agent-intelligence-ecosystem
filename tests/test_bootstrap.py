@@ -18,6 +18,17 @@ class BootstrapTests(unittest.TestCase):
             self.assertNotIn("agent-ecosystem-private", names)
             self.assertNotIn("agent-intelligence-ecosystem", names)
             self.assertTrue((output / "agent-foundation-spec/manifest.json").exists())
+            for name in names:
+                target = output / name
+                self.assertTrue((target / "tools/starter_build.py").is_file(), name)
+                self.assertTrue((target / "docs/ENTRY-LEVEL-BUILD.md").is_file(), name)
+                self.assertTrue((target / ".github/workflows/validate.yml").is_file(), name)
+                agents = (target / "AGENTS.md").read_text()
+                self.assertIn("https://github.com/PCakes303/agent-intelligence-ecosystem", agents)
+                self.assertIn("https://github.com/HuffmanMainNode", agents)
+            import subprocess, sys
+            result = subprocess.run([sys.executable, str(output / names[0] / "tools/starter_build.py")], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
             from jsonschema import Draft202012Validator
             schema = json.loads((Path(__file__).resolve().parents[1] / "schemas/repository-manifest.schema.json").read_text())
             validator = Draft202012Validator(schema, format_checker=Draft202012Validator.FORMAT_CHECKER)
