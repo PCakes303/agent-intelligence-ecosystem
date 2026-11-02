@@ -246,10 +246,10 @@
       "name": "aix-core",
       "visibility": "public",
       "layer": "protocols",
-      "role": "AIX semantic interoperability specification for intent, tasks, responses, capabilities, context, status, and errors.",
+      "role": "Experimental semantic interoperability specification for intent, tasks, responses, capabilities, context, status, errors, and provenance; extension layer over established protocols and transports.",
       "repository_url": "https://github.com/PCakes303/aix-core",
       "existence": "not-created",
-      "implementation_status": "Experimental contract and lifecycle validator in master; standalone repo absent",
+      "implementation_status": "Experimental AIX semantic envelope, task lifecycle, mapping guidance, schema validator, fixtures, tests and CI staged in master; standalone remote not yet created",
       "priority": "P0",
       "dependencies": [
         "foundation",
