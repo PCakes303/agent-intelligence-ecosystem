@@ -114,6 +114,54 @@
     "$schema": {
       "type": "string",
       "default": "../schemas/repository-registry.schema.json"
+    },
+    "licensing_policy": {
+      "type": "object",
+      "required": [
+        "version",
+        "status",
+        "source_code_and_machine_readable_artifacts",
+        "human_readable_documentation",
+        "third_party_material",
+        "data_fixtures_datasets_evidence_media",
+        "uncertain_provenance",
+        "policy_file",
+        "scope_note"
+      ],
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "approved-and-applied-to-existing-public-repositories",
+            "proposed",
+            "pending"
+          ]
+        },
+        "source_code_and_machine_readable_artifacts": {
+          "const": "Apache-2.0"
+        },
+        "human_readable_documentation": {
+          "const": "CC-BY-4.0"
+        },
+        "third_party_material": {
+          "type": "string"
+        },
+        "data_fixtures_datasets_evidence_media": {
+          "type": "string"
+        },
+        "uncertain_provenance": {
+          "type": "string"
+        },
+        "policy_file": {
+          "const": "LICENSE.md"
+        },
+        "scope_note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false
