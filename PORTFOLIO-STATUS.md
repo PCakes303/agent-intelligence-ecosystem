@@ -80,15 +80,18 @@ Priority is dependency- and risk-based, not a statement that lower-priority work
 
 Latest checked workflow runs for the original eight public portfolio repositories and the new repository 08 have passed their starter/contract checks:
 
-- [Master registry validation](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41395414353)
+- [Master registry validation](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41407607816)
 - [AI discovery](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047)
 - [Human guide](https://github.com/PCakes303/mrcakes931-ecosystem/actions/runs/41393904496)
-- [Integration](https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41393949532)
-- [Foundation specification](https://github.com/PCakes303/agent-foundation-spec/actions/runs/41393932967)
-- [Resource manifest](https://github.com/PCakes303/agent-resource-manifest/actions/runs/41393940798)
-- [Schema registry](https://github.com/PCakes303/agent-schema-registry/actions/runs/41393937230)
-- [Identity trust](https://github.com/PCakes303/agent-identity-trust/actions/runs/41393944708)
-- [Secure supply chain](https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41398832132)
+- [Integration](https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41407408815)
+- [Foundation specification](https://github.com/PCakes303/agent-foundation-spec/actions/runs/41407412766)
+- [Resource manifest](https://github.com/PCakes303/agent-resource-manifest/actions/runs/41407417568)
+- [Schema registry](https://github.com/PCakes303/agent-schema-registry/actions/runs/41407422248)
+- [Identity trust](https://github.com/PCakes303/agent-identity-trust/actions/runs/41407425998)
+- [Secure supply chain](https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41399364550)
+- [Policy engine](https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896)
+- [Audit provenance](https://github.com/PCakes303/agent-audit-provenance/actions/runs/41406387372)
+- [AIX Core](https://github.com/PCakes303/aix-core/actions/runs/41406412416)
 
 These runs verify the current starter/contract checks only. They are not production certifications, vulnerability clearance, or evidence that missing repositories exist.
 
