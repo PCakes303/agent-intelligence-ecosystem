@@ -108,14 +108,15 @@
       ]
     },
     "swarm-runtime": {
-      "repository_url": "https://github.com/PCakes303/swarm-runtime",
-      "workflow_run": "https://github.com/PCakes303/swarm-runtime/actions/runs/41415420565",
-      "python_versions": [
-        "3.10",
-        "3.11",
-        "3.12"
-      ],
-      "jobs": "all passed"
+      "workflow_run": "https://github.com/PCakes303/swarm-runtime/actions/runs/41493623240",
+      "conclusion": "success",
+      "head_sha": "9306d8719466816828dd30d9a714984b2672c4f9",
+      "tests": 19,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
     },
     "swarm-coordination": {
       "repository_url": "https://github.com/PCakes303/swarm-coordination",
@@ -615,7 +616,37 @@
       "status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12 (run 41415157127). Worker supervisor, bounded admission and adapter contract are experimental; no sandbox isolation is implemented.",
       "priority": "P0",
       "importance": "Execution substrate for distributed agents and nodes.",
-      "next_gate": "Integrate a reviewed Sandbox Security adapter with enforced OS resource/network/filesystem isolation; bind production Identity & Trust, Policy Engine and Audit & Provenance contracts; add cross-repository conformance, adversarial and property-based tests. Current adapter boundary is not a security sandbox."
+      "next_gate": "Implement independently reviewed OS-level sandbox adapter, authenticated identity and policy enforcement, durable authenticated audit, enforceable timeout/cancellation and distributed scheduling semantics; verify private reporting, metadata, settings, licensing and staging parity.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "91a999f9faa3e97b955bef083d92f8ca78eb2b22",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-swarm-runtime-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/swarm-runtime/issues/1",
+        "remediation_commits": [
+          "4856b4a5abcca002efc82713e305bf41c7afe00c",
+          "6d7d3015d1ddee7392bf56e624b93645a64f6e48",
+          "7d1d10ce711e40a8379d3c14a58dcdbeb29caab4",
+          "f48ffb0d06cdbe2aa42131f342e957341e34b6d5",
+          "fc1be988e50b1666bea33b87042e519e280ca9ff",
+          "c32dd50d4e8202f18be4494f01b4e69dd2b1fd2f",
+          "b2085f8404f39f1d48c7d9975e266d59b1ba8213",
+          "9e8be84b463a223374c6c8dbdeee167986cf5513",
+          "9306d8719466816828dd30d9a714984b2672c4f9"
+        ],
+        "findings": [
+          "no reviewed OS-level sandbox backend or resource enforcement",
+          "no authenticated principal integration",
+          "policy callback not production policy service or protected-resource enforcement",
+          "audit callback not authenticated durable provenance",
+          "no distributed scheduling or recovery",
+          "wall-time budget not enforceable by supervisor",
+          "private reporting route not verified",
+          "GitHub About homepage/topics missing",
+          "license pending review",
+          "staging parity and repository administration controls unverified"
+        ]
+      }
     },
     {
       "number": "17",
