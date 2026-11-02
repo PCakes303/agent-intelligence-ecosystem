@@ -17,26 +17,11 @@
     "agent-transport-gateway",
     "agent-discovery-network",
     "agent-capability-registry",
-    "swarm-runtime"
+    "swarm-runtime",
+    "swarm-coordination"
   ],
-  "missing_public_repository_count": 12,
+  "missing_public_repository_count": 11,
   "repositories": [
-    {
-      "name": "swarm-coordination",
-      "description": "Task assignment, delegation, acknowledgement, synchronization, and recovery.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "swarm-coordination",
-      "dependencies": [
-        "swarm-runtime",
-        "aix-core",
-        "discovery-network",
-        "capability-registry"
-      ]
-    },
     {
       "name": "swarm-state-mesh",
       "description": "Distributed task state, context references, synchronization, and shared knowledge.",
