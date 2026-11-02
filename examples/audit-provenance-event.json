@@ -1,0 +1,13 @@
+{
+  "event_id": "evt-example-0001",
+  "event_type": "authorization",
+  "occurred_at": "2026-11-01T12:00:00Z",
+  "actor": {"principal_id": "agent:example", "issuer": "https://issuer.example.invalid"},
+  "action": "resource.read",
+  "target": "resource:example:catalog",
+  "outcome": "denied",
+  "correlation_id": "corr-example-0001",
+  "policy_version": "policy-1.0.0",
+  "evidence_refs": [],
+  "data_classification": "public"
+}
