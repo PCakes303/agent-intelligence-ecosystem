@@ -7,7 +7,7 @@
 - Remote repository: not yet created; the connected GitHub integration cannot create repositories.
 - Staging state: initial scaffold prepared in the master repository; matrix validated.
 - Maturity: scaffolded legal/control/evidence metadata validator.
-- License: pending portfolio review; no LICENSE file included.
+- License: scoped mixed-license policy included in staged LICENSE.md; file-level provenance clearance remains required.
 - Dependencies: master, foundation, identity-trust, policy-engine, audit-provenance, secure-supply-chain (declared only).
 - Legal baseline: Colorado Privacy Act, SB26-189, HB26-1263, proposed ADMT/Chatbot rules, xAI v. Weiser litigation monitor and NIST AI RMF 1.0 voluntary guidance; all entity-specific applicability remains for counsel.
 - Implemented in this staging packet: strict bounded JSON loader; Draft 2020-12 schemas; legal register, control catalogue and empty evidence index; validators; synthetic tests; Python 3.10–3.12 CI.
