@@ -79,6 +79,13 @@ class CoordinatorTests(unittest.TestCase):
         with self.assertRaises(CoordinationError):
             coordinator.acknowledge("task.one", "task.one:attempt:999", "agent.alpha", now=101)
 
+    def test_expired_acknowledgement_cannot_start(self):
+        coordinator = make_coordinator()
+        submitted = coordinator.submit(request(), now=100)
+        coordinator.acknowledge("task.one", submitted.dispatch_ref, "agent.alpha", now=101)
+        with self.assertRaises(CoordinationError):
+            coordinator.start("task.one", submitted.dispatch_ref, "agent.alpha", now=162)
+
     def test_lease_recovery_reassigns_to_next_agent(self):
         coordinator = make_coordinator()
         submitted = coordinator.submit(request(), now=100)
