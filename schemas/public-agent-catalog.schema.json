@@ -107,15 +107,24 @@
             ],
             "properties": {
               "llms_txt": {
-                "type": "string",
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "format": "uri"
               },
               "agents_md": {
-                "type": "string",
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "format": "uri"
               },
               "readme": {
-                "type": "string",
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "format": "uri"
               }
             }
