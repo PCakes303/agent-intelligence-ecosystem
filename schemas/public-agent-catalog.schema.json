@@ -79,7 +79,7 @@
             "type": "string"
           },
           "repository_url": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "uri"
           },
           "existence": {
