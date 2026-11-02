@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 12,
+    "public_existing": 13,
     "private_existing": 1,
-    "public_not_created": 17,
+    "public_not_created": 16,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 12,
-    "public_repositories_missing": 17
+    "public_repositories_present": 13,
+    "public_repositories_missing": 16
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -32,7 +32,8 @@
     "agent-secure-supply-chain": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41399364550",
     "agent-policy-engine": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896",
     "agent-audit-provenance": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41406387372",
-    "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41406412416"
+    "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41406412416",
+    "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41408287551"
   },
   "repositories": [
     {
@@ -185,11 +186,11 @@
       "name": "aix-codecs",
       "layer": "protocols",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started",
+      "existence": "exists",
+      "status": "Scaffolded; 14 files published; GitHub Actions CI passed (Python 3.10, 3.11, 3.12 matrix)",
       "priority": "P0",
       "importance": "Deterministic serialization is required for interoperable AIX messages.",
-      "next_gate": "Create the public aix-codecs remote and deploy provisioning/staged/aix-codecs; then add cross-language vectors, schema-bound AIX message tests, and fuzz/property coverage."
+      "next_gate": "Add cross-language RFC 8785 vectors, schema-bound AIX message tests, fuzz/property coverage, payload/depth limits, and package metadata. No release published."
     },
     {
       "number": "13",
@@ -423,6 +424,6 @@
   "prepared_staging": {
     "repository": "aix-codecs",
     "path": "provisioning/staged/aix-codecs",
-    "status": "prepared in master; standalone remote not yet created"
+    "status": "deployed to standalone public remote; staging bundle retained as source-of-truth provisioning archive"
   }
 }
