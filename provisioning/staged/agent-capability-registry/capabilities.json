@@ -1,0 +1,12 @@
+{
+  "capabilities_version": "1.1.0",
+  "repository": "agent-capability-registry",
+  "repository_id": "capability-registry",
+  "maturity": "scaffolding",
+  "capabilities": [
+    {"id": "capability-declaration-validation", "name": "Capability declaration validation", "status": "scaffolded", "description": "Validates bounded capability declarations.", "evidence": ["tests/test_models.py"]},
+    {"id": "local-capability-index", "name": "Local capability index", "status": "scaffolded", "description": "Indexes declarations in a bounded process-local registry.", "evidence": ["tests/test_registry.py"]},
+    {"id": "policy-filtered-matching", "name": "Policy-filtered candidate matching", "status": "scaffolded", "description": "Matches requested capability identifiers and filters candidates through a fail-closed callback.", "evidence": ["tests/test_registry.py"]}
+  ],
+  "explicit_non_capabilities": ["cryptographic capability attestation", "agent authentication or identity issuance", "production authorization or policy enforcement", "distributed registry or network discovery API", "agent execution, scheduling or health verification", "capability quality or reputation certification"]
+}
