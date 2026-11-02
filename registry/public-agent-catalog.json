@@ -559,10 +559,10 @@
       "name": "agent-skill-library",
       "visibility": "public",
       "layer": "adoption",
-      "role": "Reusable workflows and machine-discoverable skills.",
+      "role": "Experimental declarative skill package contract, versioned workflow schema, and dependency-free validator for machine-discoverable reusable workflows; no execution or publisher trust service.",
       "repository_url": "https://github.com/PCakes303/agent-skill-library",
       "existence": "exists",
-      "implementation_status": "Experimental; 17 files deployed; 18 unit tests pass on Python 3.10/3.11/3.12; exact staging parity verified. Declarative workflow format only; no execution or publisher trust service.",
+      "implementation_status": "Experimental; 17 files deployed; 18 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified.",
       "priority": "P2",
       "dependencies": [
         "resource-manifest",
