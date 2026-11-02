@@ -450,10 +450,10 @@
     "decision": "Do not publish empty or premature packages. Add package metadata, reproducible build, license validation, dependency lock/SBOM, artifact signing and install-from-artifact tests only when a repository contains a reusable library or executable intended for distribution."
   },
   "prepared_staging": {
-    "repository": "swarm-coordination",
-    "path": "provisioning/staged/swarm-coordination",
+    "repository": "swarm-state-mesh",
+    "path": "provisioning/staged/swarm-state-mesh",
     "file_count": 18,
-    "status": "Deployment complete; public repository CI passed on Python 3.10, 3.11 and 3.12 (17 tests); master validation passed."
+    "status": "18-file experimental state/event store packet committed to master staging; public remote not yet created"
   },
   "prepared_staging_history": [
     {
