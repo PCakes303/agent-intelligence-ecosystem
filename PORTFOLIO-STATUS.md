@@ -232,3 +232,10 @@ The `osint-entity-resolution` staging packet passed 16 tests on Python 3.10–3.
 ## Conformance lab — staging
 
 The `agent-conformance-lab` (canonical portfolio position 30/32) is staged as a local metadata/fixture validator and deterministic conformance report builder. Its dependency graph now includes identity, policy, audit, emergency-control and compliance-governance gates (121 edges total). Missing integration evidence remains BLOCKED; local fixture tests do not establish live interoperability or certification. Staging CI is pending.
+
+
+## Federation network — staging
+
+The final uncreated public component, `agent-federation-network` (portfolio position 31/32), now has a 16-product-file staging packet under `provisioning/staged/agent-federation-network/`. The scaffold validates bounded local peer declarations, explicit scope, timezone-aware expiry, trust-state and STOP fields, and a SHA-256 trust-anchor reference. Active declarations return `REVIEW_REQUIRED`, never trusted; pending, revoked, expired or STOPped declarations are blocked. It performs no peer authentication, signature verification, credential exchange, network transport, remote authorization, revocation distribution or emergency STOP propagation.
+
+The master registry and public catalog now declare identity, discovery, swarm coordination, policy, audit provenance, secure supply chain, emergency control and compliance governance as federation dependencies. The public remote remains uncreated. Python 3.10–3.12 staging CI is pending; no production federation claim is made.
