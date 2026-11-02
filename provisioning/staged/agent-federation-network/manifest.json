@@ -2,74 +2,20 @@
   "manifest_version": "1.0.0",
   "id": "federation-network",
   "name": "agent-federation-network",
-  "visibility": "public",
-  "maturity": "research",
-  "summary": "Local contract scaffold for safe federation between independently administered agent networks.",
-  "license": {
-    "expression": null,
-    "status": "pending-review",
-    "notes": "Portfolio licensing decision pending."
-  },
-  "interfaces": [
-    {
-      "name": "peer-declaration-validator",
-      "version": "0.1.0",
-      "kind": "library",
-      "stability": "experimental"
-    },
-    {
-      "name": "federation-peer-schema",
-      "version": "0.1.0",
-      "kind": "schema",
-      "stability": "experimental"
-    }
-  ],
+  "version": "0.1.0",
+  "maturity": "scaffolded",
+  "role": "Local peer declaration contract validation for independent network federation; no peer authentication, network transport or remote authorization.",
   "dependencies": [
-    {
-      "id": "identity-trust",
-      "constraint": "declared; runtime integration unverified",
-      "kind": "contract"
-    },
-    {
-      "id": "agent-discovery-network",
-      "constraint": "declared; runtime integration unverified",
-      "kind": "contract"
-    },
-    {
-      "id": "swarm-coordination",
-      "constraint": "declared; runtime integration unverified",
-      "kind": "contract"
-    },
-    {
-      "id": "agent-policy-engine",
-      "constraint": "declared; runtime integration unverified",
-      "kind": "contract"
-    },
-    {
-      "id": "agent-audit-provenance",
-      "constraint": "declared; runtime integration unverified",
-      "kind": "contract"
-    },
-    {
-      "id": "agent-secure-supply-chain",
-      "constraint": "declared; runtime integration unverified",
-      "kind": "contract"
-    },
-    {
-      "id": "agent-emergency-control",
-      "constraint": "required safety dependency; not deployed",
-      "kind": "contract"
-    },
-    {
-      "id": "agent-compliance-governance",
-      "constraint": "required governance dependency; not deployed",
-      "kind": "contract"
-    }
+    "identity-trust",
+    "discovery-network",
+    "swarm-coordination",
+    "policy-engine",
+    "audit-provenance",
+    "secure-supply-chain",
+    "emergency-control",
+    "compliance-governance"
   ],
-  "security": {
-    "threat_model": "docs/THREAT-MODEL.md",
-    "secrets_in_repository": false,
-    "data_classification": "public",
-    "security_contact": null
-  }
+  "entrypoint": "federation_network/trust.py",
+  "license_status": "pending-portfolio-review",
+  "execution_authority": false
 }
