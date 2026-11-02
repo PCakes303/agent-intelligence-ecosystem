@@ -1,12 +1,16 @@
 {
-  "$schema": "../../schemas/repository-manifest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "manifest_version": "1.0.0",
   "id": "replace-with-registry-id",
   "name": "replace-with-repository-name",
   "visibility": "public",
   "maturity": "planned",
   "summary": "Replace with a concise, testable statement of this repository's purpose.",
-  "license": {"expression": null, "status": "pending-review", "notes": "Select a license after legal and dependency review."},
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "Select a license after legal and dependency review."
+  },
   "interfaces": [],
   "dependencies": [],
   "security": {
@@ -17,5 +21,6 @@
   },
   "default_branch": "main",
   "compatibility": [],
-  "evidence": []
+  "evidence": [],
+  "$id": "https://github.com/PCakes303/replace-repository-name/blob/main/manifest.json"
 }
