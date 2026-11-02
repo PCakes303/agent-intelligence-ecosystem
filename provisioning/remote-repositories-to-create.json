@@ -1,0 +1,439 @@
+{
+  "owner": "PCakes303",
+  "public_identity": "MrCakes931",
+  "generated_from": "registry/repositories.json",
+  "checked_existing_repository_names": [
+    "PCakes303",
+    "agent-intelligence-ecosystem",
+    "agent-ecosystem-private"
+  ],
+  "missing_public_repository_count": 28,
+  "repositories": [
+    {
+      "name": "agent-ai-discovery",
+      "description": "AI-native discovery metadata, machine-readable entrypoints, published capability indexes, and opt-in agent integration.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "discovery",
+      "dependencies": [
+        "master",
+        "resource-manifest",
+        "schema-registry",
+        "identity-trust"
+      ]
+    },
+    {
+      "name": "mrcakes931-ecosystem",
+      "description": "Human-facing ecosystem guide, navigation, onboarding, and project relationships.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "human-guide",
+      "dependencies": [
+        "master"
+      ]
+    },
+    {
+      "name": "agent-ecosystem-integration",
+      "description": "Cross-repository integration contracts, event orchestration, compatibility validation, and synchronization automation.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "integration",
+      "dependencies": [
+        "master",
+        "foundation",
+        "resource-manifest",
+        "schema-registry",
+        "identity-trust",
+        "secure-supply-chain"
+      ]
+    },
+    {
+      "name": "agent-foundation-spec",
+      "description": "Architecture, engineering principles, terminology, lifecycle, and compatibility requirements.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "foundation",
+      "dependencies": [
+        "master"
+      ]
+    },
+    {
+      "name": "agent-resource-manifest",
+      "description": "Machine-readable identities and descriptions for agents, tools, services, repositories, and datasets.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "resource-manifest",
+      "dependencies": [
+        "foundation",
+        "schema-registry",
+        "identity-trust"
+      ]
+    },
+    {
+      "name": "agent-schema-registry",
+      "description": "Reusable schemas, validation, versioning, and compatibility rules.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "schema-registry",
+      "dependencies": [
+        "foundation"
+      ]
+    },
+    {
+      "name": "agent-identity-trust",
+      "description": "Identity, authentication, credentials, trust, and revocation.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "identity-trust",
+      "dependencies": [
+        "foundation",
+        "policy-engine"
+      ]
+    },
+    {
+      "name": "agent-secure-supply-chain",
+      "description": "Release integrity, SBOMs, provenance, dependency and vulnerability management.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "secure-supply-chain",
+      "dependencies": [
+        "foundation",
+        "identity-trust",
+        "audit-provenance"
+      ]
+    },
+    {
+      "name": "agent-policy-engine",
+      "description": "Authorization, least privilege, capability permissions, and policy enforcement.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "policy-engine",
+      "dependencies": [
+        "foundation"
+      ]
+    },
+    {
+      "name": "agent-audit-provenance",
+      "description": "Audit events, source provenance, traceability, and signed records.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "audit-provenance",
+      "dependencies": [
+        "foundation",
+        "schema-registry",
+        "identity-trust"
+      ]
+    },
+    {
+      "name": "aix-core",
+      "description": "AIX semantic interoperability specification for intent, tasks, responses, capabilities, context, status, and errors.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "aix-core",
+      "dependencies": [
+        "foundation",
+        "schema-registry",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance"
+      ]
+    },
+    {
+      "name": "aix-codecs",
+      "description": "Serialization, validation, and machine encodings for AIX.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "aix-codecs",
+      "dependencies": [
+        "aix-core",
+        "schema-registry"
+      ]
+    },
+    {
+      "name": "agent-transport-gateway",
+      "description": "Secure transport and integration with existing agent protocols.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "transport-gateway",
+      "dependencies": [
+        "aix-core",
+        "aix-codecs",
+        "identity-trust",
+        "policy-engine"
+      ]
+    },
+    {
+      "name": "agent-discovery-network",
+      "description": "Discovery of agents, resources, services, and capabilities.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "discovery-network",
+      "dependencies": [
+        "resource-manifest",
+        "capability-registry",
+        "identity-trust",
+        "transport-gateway"
+      ]
+    },
+    {
+      "name": "agent-capability-registry",
+      "description": "Catalog and validation of agent capabilities.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "capability-registry",
+      "dependencies": [
+        "resource-manifest",
+        "schema-registry",
+        "policy-engine"
+      ]
+    },
+    {
+      "name": "swarm-runtime",
+      "description": "Execution infrastructure for distributed agents and nodes.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "swarm-runtime",
+      "dependencies": [
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "sandbox-security"
+      ]
+    },
+    {
+      "name": "swarm-coordination",
+      "description": "Task assignment, delegation, acknowledgement, synchronization, and recovery.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "swarm-coordination",
+      "dependencies": [
+        "swarm-runtime",
+        "aix-core",
+        "discovery-network",
+        "capability-registry"
+      ]
+    },
+    {
+      "name": "swarm-state-mesh",
+      "description": "Distributed task state, context references, synchronization, and shared knowledge.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "swarm-state-mesh",
+      "dependencies": [
+        "swarm-runtime",
+        "swarm-coordination",
+        "audit-provenance"
+      ]
+    },
+    {
+      "name": "osint-source-registry",
+      "description": "Catalog of public sources, datasets, and APIs with usage constraints.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "osint-source-registry",
+      "dependencies": [
+        "resource-manifest",
+        "schema-registry",
+        "audit-provenance"
+      ]
+    },
+    {
+      "name": "osint-collection-framework",
+      "description": "Authorized public-information collection through tools and adapters.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "osint-collection",
+      "dependencies": [
+        "osint-source-registry",
+        "policy-engine",
+        "identity-trust",
+        "audit-provenance"
+      ]
+    },
+    {
+      "name": "osint-evidence-engine",
+      "description": "Evidence preservation, provenance, hashes, timestamps, and reproducibility.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "osint-evidence",
+      "dependencies": [
+        "osint-collection",
+        "audit-provenance",
+        "secure-supply-chain"
+      ]
+    },
+    {
+      "name": "osint-entity-resolution",
+      "description": "Entity correlation, relationship modeling, and uncertainty reporting.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "entity-resolution",
+      "dependencies": [
+        "osint-evidence",
+        "schema-registry"
+      ]
+    },
+    {
+      "name": "intelligence-knowledge-graph",
+      "description": "Structured graph connecting sources, evidence, entities, and relationships.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "knowledge-graph",
+      "dependencies": [
+        "osint-evidence",
+        "entity-resolution"
+      ]
+    },
+    {
+      "name": "agent-tool-adapters",
+      "description": "Consistent agent interfaces to existing open-source tools.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "tool-adapters",
+      "dependencies": [
+        "aix-core",
+        "transport-gateway",
+        "policy-engine",
+        "sandbox-security"
+      ]
+    },
+    {
+      "name": "agent-skill-library",
+      "description": "Reusable workflows and machine-discoverable skills.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "skill-library",
+      "dependencies": [
+        "resource-manifest",
+        "schema-registry",
+        "policy-engine",
+        "tool-adapters"
+      ]
+    },
+    {
+      "name": "agent-sandbox-security",
+      "description": "Controlled execution, isolation, resource boundaries, and secure extension execution.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "sandbox-security",
+      "dependencies": [
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "secure-supply-chain"
+      ]
+    },
+    {
+      "name": "agent-conformance-lab",
+      "description": "Protocol validation, compatibility and security tests, and swarm benchmarks.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "conformance-lab",
+      "dependencies": [
+        "aix-core",
+        "aix-codecs",
+        "transport-gateway",
+        "swarm-runtime",
+        "secure-supply-chain"
+      ]
+    },
+    {
+      "name": "agent-federation-network",
+      "description": "Federation between independently operated agent networks.",
+      "visibility": "public",
+      "default_branch": "main",
+      "initialize_with_readme": false,
+      "initialize_with_license": false,
+      "initialize_with_gitignore": false,
+      "registry_id": "federation-network",
+      "dependencies": [
+        "identity-trust",
+        "discovery-network",
+        "swarm-coordination",
+        "policy-engine",
+        "audit-provenance"
+      ]
+    }
+  ]
+}
