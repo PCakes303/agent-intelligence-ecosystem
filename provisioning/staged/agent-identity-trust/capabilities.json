@@ -1,0 +1,48 @@
+{
+  "capabilities_version": "1.1.0",
+  "repository": "agent-identity-trust",
+  "repository_id": "identity-trust",
+  "maturity": "scaffolding",
+  "capabilities": [
+    {
+      "id": "identity.principal",
+      "name": "Principal identity data contract",
+      "status": "scaffolded",
+      "description": "Principal schema, example, and local validator are present.",
+      "evidence": [
+        "schemas/principal.schema.json",
+        "examples/principal.json",
+        "tools/validate_principal.py",
+        "tests/"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "identity.delegation",
+      "name": "Constrained delegation model",
+      "status": "planned",
+      "description": "Delegation is described as a design target but no complete delegation implementation is present.",
+      "evidence": [],
+      "limitations": [
+        "Not implemented; no interoperability or runtime claim."
+      ]
+    },
+    {
+      "id": "identity.revocation",
+      "name": "Credential and trust revocation lifecycle",
+      "status": "planned",
+      "description": "The repository does not operate an identity provider or credential revocation service.",
+      "evidence": [],
+      "limitations": [
+        "Not implemented; no interoperability or runtime claim."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Operating an identity provider",
+    "Issuing credentials",
+    "Certifying authentication or authorization for external systems"
+  ]
+}

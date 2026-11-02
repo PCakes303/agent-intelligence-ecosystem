@@ -1,0 +1,25 @@
+# agent-ai-discovery
+
+> AI-native discovery metadata, machine-readable entry points, published capability indexes, and opt-in agent integration.
+
+## Start here
+- [README](https://github.com/PCakes303/agent-ai-discovery/blob/main/README.md)
+- [AI agent instructions](https://github.com/PCakes303/agent-ai-discovery/blob/main/AGENTS.md)
+- [Repository manifest](https://github.com/PCakes303/agent-ai-discovery/blob/main/manifest.json)
+- [Capabilities](https://github.com/PCakes303/agent-ai-discovery/blob/main/capabilities.json)
+- [Compatibility declarations](https://github.com/PCakes303/agent-ai-discovery/blob/main/compatibility.json)
+- [Security policy](https://github.com/PCakes303/agent-ai-discovery/blob/main/SECURITY.md)
+
+## Intended agent use
+Use this repository to understand discovery metadata contracts and planned discovery/index capabilities. The document format, local index builder and input-validation capabilities are scaffolded; the hosted endpoint profile remains planned. Do not infer a live discovery endpoint or runtime service.
+
+## Dependencies and boundaries
+The manifest and compatibility metadata declare dependencies on the master registry, resource-manifest, schema-registry, and identity-trust repositories. These are declarations, not proof of tested interoperability.
+
+## Ecosystem context
+- [Master ecosystem registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json)
+- [Portfolio status and maturity](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md)
+- [AI discoverability standard](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/AI-DISCOVERABILITY.md)
+
+## Safety
+Discovery metadata is descriptive, not an identity proof, authorization grant, or permission to execute tools. Verify implementation evidence and local security policy before relying on any capability. Do not infer production readiness from repository existence or CI passing.

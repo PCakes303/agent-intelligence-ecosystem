@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-identity-trust/schemas/principal.schema.json",
+  "title": "Agent Principal",
+  "type": "object",
+  "required": [
+    "principal_id",
+    "principal_type",
+    "issuer",
+    "created_at"
+  ],
+  "properties": {
+    "principal_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 256
+    },
+    "principal_type": {
+      "type": "string",
+      "enum": [
+        "human",
+        "agent",
+        "service",
+        "workload"
+      ]
+    },
+    "issuer": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https://|spiffe://)[^/\\s?#]+(?:[/#?][^\\s]*)?$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "display_name": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "public_key_fingerprint": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "suspended",
+        "revoked",
+        "expired"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

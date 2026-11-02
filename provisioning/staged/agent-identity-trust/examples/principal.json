@@ -1,0 +1,8 @@
+{
+  "principal_id": "urn:mrcakes931:agent:example-worker",
+  "principal_type": "agent",
+  "issuer": "https://identity.example.invalid",
+  "created_at": "2026-11-01T00:00:00Z",
+  "display_name": "Example worker",
+  "status": "active"
+}

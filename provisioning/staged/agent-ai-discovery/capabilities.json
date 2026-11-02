@@ -1,0 +1,63 @@
+{
+  "capabilities_version": "1.1.0",
+  "repository": "agent-ai-discovery",
+  "repository_id": "discovery",
+  "maturity": "scaffolding",
+  "capabilities": [
+    {
+      "id": "discovery.document-format",
+      "name": "Versioned discovery document format",
+      "status": "tested",
+      "description": "JSON Schema and example define the discovery document contract.",
+      "evidence": [
+        "schemas/discovery-document.schema.json",
+        "examples/discovery.json"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "discovery.index-builder",
+      "name": "Deterministic index builder from discovery documents",
+      "status": "tested",
+      "description": "Local validator and index builder support a deterministic generated index.",
+      "evidence": [
+        "tools/discovery_index.py",
+        "tests/test_discovery_index.py"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "discovery.input-validation",
+      "name": "Validation for malformed and duplicate entries",
+      "status": "tested",
+      "description": "Enforces strict bounded JSON parsing, duplicate-key and non-finite-number rejection, Draft 2020-12 schema constraints, HTTPS-only URIs, timezone-aware timestamps, resource count/field bounds and unique IDs.",
+      "evidence": [
+        "tools/discovery_index.py",
+        "tests/test_discovery_index.py"
+      ],
+      "limitations": [
+        "Local validation/index construction only; no hosted endpoint, publisher authentication, authorization or runtime integration."
+      ]
+    },
+    {
+      "id": "discovery.endpoint-profile",
+      "name": "Opt-in hosted discovery endpoint profile",
+      "status": "planned",
+      "description": "Hosted publisher authentication and endpoint interoperability are future work.",
+      "evidence": [],
+      "limitations": [
+        "Not implemented; no interoperability or runtime claim."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Authentication or authorization decisions",
+    "Credential issuance or trust establishment",
+    "Runtime agent execution",
+    "Copying authoritative schemas or manifests into a competing registry"
+  ]
+}

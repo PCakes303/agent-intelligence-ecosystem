@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-ai-discovery/blob/main/manifest.json",
+  "manifest_version": "1.0.0",
+  "id": "discovery",
+  "name": "agent-ai-discovery",
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Experimental discovery document contract and bounded local index builder; no hosted endpoint or publisher authentication.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "Mixed ecosystem licensing is approved; this repository's exact license is pending review. Do not assume or add a license until selected."
+  },
+  "interfaces": [
+    {
+      "name": "discovery-contract",
+      "version": "0.1.0",
+      "kind": "document",
+      "stability": "draft"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "master",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "resource-manifest",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "schema-registry",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "identity-trust",
+      "constraint": "*",
+      "kind": "contract"
+    }
+  ],
+  "security": {
+    "threat_model": "See SECURITY.md. Public repository; treat all external inputs, contributors, manifests, events, and referenced artifacts as untrusted until independently validated.",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-ai-discovery",
+  "default_branch": "main",
+  "compatibility": [
+    {
+      "with": "resource-manifest",
+      "range": "*",
+      "tested": false
+    },
+    {
+      "with": "schema-registry",
+      "range": "*",
+      "tested": false
+    },
+    {
+      "with": "identity-trust",
+      "range": "*",
+      "tested": false
+    }
+  ],
+  "evidence": [
+    {
+      "claim": "Strict bounded JSON parsing, schema-backed document validation and deterministic index generation are covered by regression tests.",
+      "kind": "test",
+      "location": "tests/test_discovery_index.py"
+    },
+    {
+      "claim": "CI validates discovery documents on Python 3.10, 3.11 and 3.12 using the normative Draft 2020-12 schema.",
+      "kind": "test",
+      "location": ".github/workflows/validate.yml"
+    }
+  ]
+}

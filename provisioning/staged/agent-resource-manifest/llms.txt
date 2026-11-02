@@ -1,0 +1,25 @@
+# agent-resource-manifest
+
+> Portable manifests for agent tools, skills, models, datasets, services, dependencies, and requested permissions.
+
+## Start here
+- [README](https://github.com/PCakes303/agent-resource-manifest/blob/main/README.md)
+- [AI agent instructions](https://github.com/PCakes303/agent-resource-manifest/blob/main/AGENTS.md)
+- [Repository manifest](https://github.com/PCakes303/agent-resource-manifest/blob/main/manifest.json)
+- [Capabilities](https://github.com/PCakes303/agent-resource-manifest/blob/main/capabilities.json)
+- [Compatibility declarations](https://github.com/PCakes303/agent-resource-manifest/blob/main/compatibility.json)
+- [Security policy](https://github.com/PCakes303/agent-resource-manifest/blob/main/SECURITY.md)
+
+## Intended agent use
+Use the resource manifest format and its schemas/examples as the machine-readable declaration surface. Validate untrusted manifests before use.
+
+## Dependencies and boundaries
+Requires foundation-spec and schema-registry according to compatibility metadata. A manifest declaration does not authorize execution or grant permissions.
+
+## Ecosystem context
+- [Master ecosystem registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json)
+- [Portfolio status and maturity](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md)
+- [AI discoverability standard](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/AI-DISCOVERABILITY.md)
+
+## Safety
+Discovery metadata is descriptive, not an identity proof, authorization grant, or permission to execute tools. Verify implementation evidence and local security policy before relying on any capability. Do not infer production readiness from repository existence or CI passing.

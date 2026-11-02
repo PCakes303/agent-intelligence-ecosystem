@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-identity-trust/blob/main/manifest.json",
+  "manifest_version": "1.0.0",
+  "id": "identity-trust",
+  "name": "agent-identity-trust",
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Principal identity data contracts, authentication context, authorization, delegation, revocation, and trust boundaries.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "License selection is pending repository-specific review. No license is asserted until an approved LICENSE file is committed."
+  },
+  "interfaces": [
+    {
+      "name": "identity-contracts",
+      "version": "0.1.0",
+      "kind": "document",
+      "stability": "draft"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "foundation",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "policy-engine",
+      "constraint": "*",
+      "kind": "contract"
+    }
+  ],
+  "security": {
+    "threat_model": "See SECURITY.md. Treat external inputs, manifests, events, and referenced artifacts as untrusted until independently validated.",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-identity-trust",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Repository scaffold and starter CI are present; domain maturity remains partial.",
+      "kind": "specification",
+      "location": "README.md, tests/, and CI workflow; see repository Actions for run evidence."
+    }
+  ]
+}
