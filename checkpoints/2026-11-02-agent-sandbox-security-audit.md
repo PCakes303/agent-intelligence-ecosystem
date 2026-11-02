@@ -27,6 +27,22 @@
 - Recomputed Git blob parity after synchronization: **14 staged product files vs 14 remote files; zero missing, extra or differing blobs**. `STAGING-STATUS.md` is intentionally master-side deployment evidence, not a product file.
 - Created [issue #1](https://github.com/PCakes303/agent-sandbox-security/issues/1) for bounded hostile-input parsing, schema parity, private reporting and metadata/settings verification.
 
+## Post-audit parser, collection and schema hardening — 2026-11-02
+
+The earlier blocking parser and collection findings are now remediated in the reference validator:
+
+- e0aad6b37457e52331666b2ef334b0ba29fa6fbf: enforce a 1 MiB UTF-8 input ceiling and 32-level JSON nesting bound before json.loads; normalize malformed/deep parser failures into PolicyError; cap filesystem path arrays and egress allowlists at 64 entries; cap path strings at 1,024 and egress strings at 255 characters; reject whitespace/NUL egress values.
+- d635ab1c9a5f19f3aad75c22a9cf1d20bbe227da: correct escape handling in the pre-parse JSON depth scanner.
+- 9eda8a9073f251ffcad8d5cac34cc16a8e20712 and 820d4b202d3539354d0960c6a5238132b0c4fb66: add parser, size, depth, path/egress collection and schema parity tests.
+- 4a3a65785c193702ebfcc031f0db0d666461d9c8 and 23b069a7a1fc5c62449dcf0f1260692f8aac18f1: align the Draft 2020-12 schema with runtime numeric bounds, path traversal/NUL rules, read-only root and execution-disabled invariants.
+- 0f5179a659f5af4479131a0c295bc79da4ffdeb9: align profile ID validation with schema.
+- 1ea85fb4b606ed29c2578abf3cabbce890aa147c and 1ba84a96c3a1d71aa40dc448d8dbe1351f6a27ab: add pinned jsonschema development dependency and execute schema tests in CI.
+- 614c1f61570acfae296ea35c1af90977e62ea6de: correct the escaped-string regression fixture after the first run revealed it used a profile ID invalid under the new identifier contract.
+- [CI run 41507530278](https://github.com/PCakes303/agent-sandbox-security/actions/runs/41507530278) passed all 21 tests on Python 3.10, 3.11 and 3.12.
+- Master staging packet refreshed and exact product parity verified: 15 remote files, 15 staged files, zero missing, extra or differing Git blob hashes.
+
+**Disposition remains BLOCKED.** These changes harden only the policy parser/validator. No OS sandbox, resource enforcement, workload execution, authenticated identity, production policy, artifact-verification service, emergency-stop runtime or compliance integration exists. Privileged execution remains prohibited.
+
 ## Findings and remaining exceptions
 
 1. **Blocking parser resource limits:** `load_policy(raw)` accepts unbounded input and calls `json.loads` before enforcing byte-size or nesting-depth limits. Deeply nested input may raise `RecursionError`, which is not normalized to `PolicyError`. Add a strict byte ceiling before parse, depth limit, and controlled parser-error handling.
