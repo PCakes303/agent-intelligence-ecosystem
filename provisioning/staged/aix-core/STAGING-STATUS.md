@@ -12,3 +12,6 @@ Repository 11 starter bundle prepared in the master control plane.
 - License: pending review.
 
 Create and verify the standalone public remote before deployment. This staging directory is not itself the standalone repository.
+
+
+**Deployment note (2026-11-02):** The standalone public repository now exists at https://github.com/PCakes303/aix-core. This staging bundle is retained as historical provisioning material; the standalone repository is authoritative for current implementation.
