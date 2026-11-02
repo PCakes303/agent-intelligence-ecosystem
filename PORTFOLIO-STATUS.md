@@ -1,7 +1,7 @@
 # 30-Repository Portfolio Status and Work Tracker
 
 **As of:** 2026-11-02  
-**Owner:** [PCakes303](https://github.com/PCakes303) · **Public identity:** [HuffmanMainNode](https://github.com/HuffmanMainNode)  
+**Owner:** [PCakes303](https://github.com/PCakes303) · **Public identity:** MrCakes931  
 **Master control plane:** [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem)
 
 ## Portfolio tally
