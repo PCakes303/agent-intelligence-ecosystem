@@ -1,0 +1,23 @@
+{
+  "record_version": "1.0",
+  "artifact": {
+    "name": "example-agent-adapter",
+    "version": "0.1.0",
+    "digest": {
+      "algorithm": "sha256",
+      "value": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "source": {
+    "repository": "https://github.com/example/example-agent-adapter",
+    "commit": "0123456789abcdef0123456789abcdef01234567"
+  },
+  "sbom": {
+    "format": "CycloneDX",
+    "uri": "https://example.invalid/sbom/example-agent-adapter.cdx.json"
+  },
+  "verification": {
+    "signature_present": false,
+    "signature_verified": false
+  }
+}
