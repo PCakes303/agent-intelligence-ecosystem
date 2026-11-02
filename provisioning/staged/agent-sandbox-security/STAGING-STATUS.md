@@ -29,7 +29,7 @@ Capability and compatibility metadata are aligned to the ecosystem v1.1.0 contra
 - Component CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41437856656
 - Python 3.10, 3.11 and 3.12 all passed; 14 tests per version.
 - Exact staging/product Git blob parity: 14 product files, zero missing, differing or extra files.
-- Master registry, dependency graph, status and public catalog reconciled; master regression and metadata verification is being rerun after the final remote metadata update.
+- Master registry, dependency graph, status and public catalog reconciled; Master regression and capability/compatibility metadata verification passed in run https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41438185138 (47 tests). Final deployment checkpoint: checkpoints/2026-11-02-agent-sandbox-security-deployment.md.
 
 ## Governance
 
