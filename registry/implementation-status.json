@@ -442,7 +442,7 @@
     "repository": "swarm-coordination",
     "path": "provisioning/staged/swarm-coordination",
     "file_count": 18,
-    "status": "18-file experimental task coordination packet committed to master staging; public remote not yet created"
+    "status": "18-file experimental task coordination packet committed to master staging; master CI passed (run 41416825323); public remote not yet created"
   },
   "prepared_staging_history": [
     {
