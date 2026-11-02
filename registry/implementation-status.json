@@ -22,17 +22,15 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515922877",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41529252837",
       "conclusion": "success",
-      "head_sha": "130a711391e7f77b73e5631c3af9ae0b3b87bb23",
-      "tests": 47
+      "head_sha": "5e2780cc7952b490fbcdff65a385812ce04ba044"
     },
     "agent-ai-discovery": {
       "repository_url": "https://github.com/PCakes303/agent-ai-discovery",
-      "workflow_run": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41501758046",
+      "workflow_run": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41529209413",
       "conclusion": "success",
-      "head_sha": "b60dd657ff7a0cac1ded9133830f10a4ccc71fec",
-      "tests": 5,
+      "head_sha": "07fde99033631c32844c25b0022876774ceee526",
       "python_versions": [
         "3.10",
         "3.11",
@@ -51,67 +49,57 @@
     },
     "agent-ecosystem-integration": {
       "repository_url": "https://github.com/PCakes303/agent-ecosystem-integration",
-      "workflow_run": "https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41500776688",
+      "workflow_run": "https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41523125592",
       "conclusion": "success",
-      "head_sha": "824e9b02e0629a64c6838a1468b201f7f4d7e6cc",
-      "tests": 5,
+      "head_sha": "fb4dd82dd85f35a823cf9c6391b285b71061fed7",
       "python_versions": [
         "3.12"
       ]
     },
     "agent-foundation-spec": {
-      "workflow_run": "https://github.com/PCakes303/agent-foundation-spec/actions/runs/41488883329",
+      "workflow_run": "https://github.com/PCakes303/agent-foundation-spec/actions/runs/41519480910",
       "conclusion": "success",
-      "head_sha": "805b3c580c43c29d11b2d595f308c53a49e551e4",
-      "tests": 4
+      "head_sha": "a8cde45f0fef006256b2ddef7e3d1b6c3c2bfd2d"
     },
     "agent-resource-manifest": {
-      "workflow_run": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41489184208",
+      "workflow_run": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41520973479",
       "conclusion": "success",
-      "head_sha": "83edfac71c47d63f0c5d3a9735135308c8b72e15",
-      "tests": 5
+      "head_sha": "fec6735f895230ef41560243524aee1372f6a745"
     },
     "agent-schema-registry": {
-      "workflow_run": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41407422248",
+      "workflow_run": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41519506810",
       "conclusion": "success",
-      "head_sha": "07ac22d952682c40dbe4b70d4209744e81f274d0",
-      "tests": 3
+      "head_sha": "841a23b2175469cd8c9b0880d5dc538c0be8b47b"
     },
     "agent-identity-trust": {
-      "workflow_run": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41489911336",
+      "workflow_run": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41519973586",
       "conclusion": "success",
-      "head_sha": "c37299b015a18c84ae13892bd3c96bc6fc6c0db8",
-      "tests": 5
+      "head_sha": "d7013224b33f063485aa90598a91590571a7ccd4"
     },
     "agent-secure-supply-chain": {
-      "workflow_run": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41490619448",
+      "workflow_run": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41527246937",
       "conclusion": "success",
-      "head_sha": "04d063de9b36692bf12ce9215075165bc9eb4152",
-      "tests": 11
+      "head_sha": "872edacfd95ea397b25e7615ce7710c6a3877d38"
     },
     "agent-policy-engine": {
-      "workflow_run": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41490159810",
+      "workflow_run": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41519563082",
       "conclusion": "success",
-      "head_sha": "bdd569b3d2af701d0b0f0cb1a0647bd04875b996",
-      "tests": 9
+      "head_sha": "7aa8a2ef50a9a49778381ea7e024b56f4b66c1ec"
     },
     "agent-audit-provenance": {
-      "workflow_run": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41490403369",
+      "workflow_run": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41527926342",
       "conclusion": "success",
-      "head_sha": "fef35ad1c2b864d9b323bdbe2d30638e81f2321b",
-      "tests": 10
+      "head_sha": "03de6139e63dcd1ef502fdb25994bb605ceda00b"
     },
     "aix-core": {
-      "workflow_run": "https://github.com/PCakes303/aix-core/actions/runs/41490856354",
+      "workflow_run": "https://github.com/PCakes303/aix-core/actions/runs/41527951684",
       "conclusion": "success",
-      "head_sha": "4988d08c2fc9556d64ab90527e5cb0631aeec14d",
-      "tests": 8
+      "head_sha": "6d9827e702cf81782e470d940c76743bf2268823"
     },
     "aix-codecs": {
-      "workflow_run": "https://github.com/PCakes303/aix-codecs/actions/runs/41503562843",
+      "workflow_run": "https://github.com/PCakes303/aix-codecs/actions/runs/41527972112",
       "conclusion": "success",
-      "head_sha": "1f16c60df3089239245b82cbae6374b04f1a9b29",
-      "tests": 8,
+      "head_sha": "980029e9ce2bdb23596aa109aca16431296e2898",
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -119,10 +107,9 @@
       ]
     },
     "agent-transport-gateway": {
-      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41503961456",
+      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41504097531",
       "conclusion": "success",
-      "head_sha": "51f721ff00d3dad27238760ca73fe84051183c74",
-      "tests": 21,
+      "head_sha": "068825ae30994d30ceb4f4b9c9d4a7b91675fef6",
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -130,10 +117,9 @@
       ]
     },
     "agent-discovery-network": {
-      "workflow_run": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41504383220",
+      "workflow_run": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41504477081",
       "conclusion": "success",
-      "head_sha": "aacbb1d1dca1c952a61592e26a94e4a324081e7c",
-      "tests": 29,
+      "head_sha": "bae71125e3c79a7f2baad2fd34da9352cad2b874",
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -141,10 +127,9 @@
       ]
     },
     "agent-capability-registry": {
-      "workflow_run": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41493172965",
+      "workflow_run": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41521704679",
       "conclusion": "success",
-      "head_sha": "85d8a70783c6ea6673c2a8a8907db01e93ec9345",
-      "tests": 11,
+      "head_sha": "88c12beb19d13c523567e096d3ba18966f6664da",
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -163,10 +148,9 @@
       ]
     },
     "swarm-coordination": {
-      "workflow_run": "https://github.com/PCakes303/swarm-coordination/actions/runs/41505217154",
+      "workflow_run": "https://github.com/PCakes303/swarm-coordination/actions/runs/41505272429",
       "conclusion": "success",
-      "head_sha": "651056f6cb96bb2c1a02055f933e263657393022",
-      "tests": 22,
+      "head_sha": "17dd4825ad0627d4d72cd867ab3976e489701e45",
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -174,10 +158,9 @@
       ]
     },
     "swarm-state-mesh": {
-      "workflow_run": "https://github.com/PCakes303/swarm-state-mesh/actions/runs/41494936185",
+      "workflow_run": "https://github.com/PCakes303/swarm-state-mesh/actions/runs/41521862454",
       "conclusion": "success",
-      "head_sha": "f43c0800d0bf1a9153bb2c57db59dd7f5d3e2dcc",
-      "tests": 19,
+      "head_sha": "eeebba576d484a6eb2770b3b205bc64e7fa6a878",
       "matrix": [
         "Python 3.10",
         "Python 3.11",
@@ -186,14 +169,16 @@
     },
     "knowledge-graph": {
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
-      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41426963318",
+      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41527995233",
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
       "jobs": "all passed",
-      "tests": 15
+      "tests": 15,
+      "conclusion": "success",
+      "head_sha": "542d72385b8a8e198e7924516c9539f0cec1110f"
     },
     "osint-source-registry": {
       "workflow_run": "https://github.com/PCakes303/osint-source-registry/actions/runs/41495728166",
@@ -209,10 +194,9 @@
     },
     "intelligence-knowledge-graph": {
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
-      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41505793639",
+      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41527995233",
       "conclusion": "success",
-      "head_sha": "67678de1716e2a414a87696194718f319abf605c",
-      "tests": 38,
+      "head_sha": "542d72385b8a8e198e7924516c9539f0cec1110f",
       "python_versions": [
         "3.10",
         "3.11",
@@ -234,10 +218,9 @@
     },
     "agent-skill-library": {
       "repository_url": "https://github.com/PCakes303/agent-skill-library",
-      "workflow_run": "https://github.com/PCakes303/agent-skill-library/actions/runs/41499629077",
+      "workflow_run": "https://github.com/PCakes303/agent-skill-library/actions/runs/41521270824",
       "conclusion": "success",
-      "head_sha": "418b0a7eec1798697a41c62c2a543fc0a340ebed",
-      "tests": 18,
+      "head_sha": "dbedb386c22065d1785d1de03c2a3d0ac8a36efa",
       "python_versions": [
         "3.10",
         "3.11",
@@ -246,10 +229,9 @@
     },
     "agent-sandbox-security": {
       "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
-      "workflow_run": "https://github.com/PCakes303/agent-sandbox-security/actions/runs/41507530278",
+      "workflow_run": "https://github.com/PCakes303/agent-sandbox-security/actions/runs/41520148752",
       "conclusion": "success",
-      "head_sha": "614c1f61570acfae296ea35c1af90977e62ea6de",
-      "tests": 21,
+      "head_sha": "805ca788ffc254dd82f5a66087072571acb7fb39",
       "python_versions": [
         "3.10",
         "3.11",
@@ -1565,7 +1547,7 @@
     "as_of": "2026-11-02",
     "audited_commit": "4ef03784cb07bceab03c43e1990820e031d2071b",
     "disposition": "PASS WITH EXCEPTIONS",
-    "checkpoint": "checkpoints/2026-11-02-master-control-plane-audit.md",
+    "checkpoint": "docs/PORTFOLIO-AUDIT-CHECKPOINT-2026-11-02.md",
     "verified": {
       "repository_entries": 32,
       "public_repositories": 31,
@@ -1581,7 +1563,19 @@
       "GitHub About description, homepage and topics not applied",
       "branch protection, rulesets, Actions permissions, secret scanning, push protection and dependency alerts remain unverified",
       "cross-repository conformance and production readiness are not established; all 23 existing public component audits remain BLOCKED on their documented gates"
-    ]
+    ],
+    "open_pull_requests": 0,
+    "open_issues": 25,
+    "current_main_ci": "success",
+    "staging_parity_audited_repositories": 13,
+    "exact_parity_repositories": 6,
+    "product_parity_with_staging_only_admin_file": 2,
+    "missing_retained_staging_packets": 5,
+    "metadata_descriptions_present": 9,
+    "metadata_descriptions_missing": 15,
+    "metadata_homepages_missing": 24,
+    "metadata_topics_empty": 24,
+    "license_declarations_present": 0
   },
   "staging_reconciliation": {
     "as_of": "2026-11-02",
