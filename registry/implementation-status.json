@@ -29,7 +29,16 @@
     },
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
     "mrcakes931-ecosystem": "https://github.com/PCakes303/mrcakes931-ecosystem/actions/runs/41393904496",
-    "agent-ecosystem-integration": "https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41407408815",
+    "agent-ecosystem-integration": {
+      "repository_url": "https://github.com/PCakes303/agent-ecosystem-integration",
+      "workflow_run": "https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41500776688",
+      "conclusion": "success",
+      "head_sha": "824e9b02e0629a64c6838a1468b201f7f4d7e6cc",
+      "tests": 5,
+      "python_versions": [
+        "3.12"
+      ]
+    },
     "agent-foundation-spec": "https://github.com/PCakes303/agent-foundation-spec/actions/runs/41407412766",
     "agent-resource-manifest": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41407417568",
     "agent-schema-registry": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41407422248",
