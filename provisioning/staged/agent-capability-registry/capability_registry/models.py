@@ -3,7 +3,7 @@ from dataclasses import dataclass, field
 import re
 
 _ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$")
-_VERSION = re.compile(r"^[0-9]+\\.[0-9]+\\.[0-9]+$")
+_VERSION = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
 
 
 class ValidationError(ValueError):
