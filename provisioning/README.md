@@ -41,7 +41,11 @@ bash tools/provision_public_repositories.sh --confirm
 
 The script checks the authenticated GitHub login, refuses to guess a Git email, creates public repositories only, skips repositories that already exist, and pushes an initial main branch. It does not create or modify the private repository. It does not configure branch protection, secrets, environments, or GitHub App permissions.
 
-## Repository 09 prepared bundle\n\nThe dedicated [agent-policy-engine staging bundle](staged/agent-policy-engine/STAGING-STATUS.md) is prepared. Create an empty public repository named `agent-policy-engine` under `PCakes303`, then copy the staged directory contents to its root. Do not mark it as created in the master registry until GitHub confirms the remote repository exists and its CI passes.\n\n## After provisioning
+## Repository 10 prepared bundle
+
+The [agent-audit-provenance staging bundle](staged/agent-audit-provenance/STAGING-STATUS.md) is prepared. Create an empty public repository named `agent-audit-provenance` under `PCakes303`, then send its URL so the staged files can be deployed and CI verified. Do not mark it as created until GitHub confirms the remote exists.
+
+## After provisioning
 
 Re-run registry reconciliation and verify all repository visibility and default branches. Then configure branch protection, rulesets, security features, and least-privilege automation through GitHub settings. These administration settings cannot be verified or applied through the current connected integration.
 
