@@ -77,7 +77,13 @@
       "registry_id": "entity-resolution",
       "dependencies": [
         "osint-evidence",
-        "schema-registry"
+        "schema-registry",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "emergency-control",
+        "compliance-governance",
+        "secure-supply-chain"
       ]
     },
     {

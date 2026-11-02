@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515074675",
       "conclusion": "success",
-      "head_sha": "a60a5908153e3c80756150835a8c9c61dddbfcb3",
+      "head_sha": "a1841478520ec7a0f2d6ddbce92a332a690efcba",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -1089,7 +1089,7 @@
       "status": "Not started",
       "priority": "P2",
       "importance": "Correlates entities while exposing ambiguity and confidence rather than asserting identity.",
-      "next_gate": "Build precision/recall test set, calibrated confidence and human-review gates."
+      "next_gate": "Build a public non-personal candidate matcher with deterministic normalization, conflict handling, evidence references and human-review-only outputs; require identity, policy, audit, emergency-stop, compliance and supply-chain gates. No people matching or graph writes."
     },
     {
       "number": "23",
@@ -1461,6 +1461,12 @@
       "path": "provisioning/staged/osint-evidence-engine",
       "file_count": 23,
       "status": "Prepared in master staging; public remote not yet created. 21 tests passed on Python 3.10–3.12. Public non-personal evidence manifests, SHA-256 digest verification and deterministic hash-linked event chain only. No collection, persistence, signatures, trusted timestamping, legal holds or legal chain-of-custody certification."
+    },
+    {
+      "repository": "osint-entity-resolution",
+      "path": "provisioning/staged/osint-entity-resolution",
+      "file_count": 22,
+      "status": "Prepared in master staging; public remote not yet created. Public non-personal candidate matcher only; no people matching, auto-merge, identity assertion, network lookup or graph writes. Requires evidence, schema, identity, policy, audit, emergency, compliance and supply-chain contracts."
     }
   ],
   "master_audit": {

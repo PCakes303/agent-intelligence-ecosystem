@@ -94,3 +94,8 @@ A plan-validation-only scaffold is staged at [osint-collection-framework](staged
 ## Next OSINT build — osint-evidence-engine (portfolio position 22/32)
 
 A public non-personal evidence-manifest and deterministic hash-chain validator is staged at [osint-evidence-engine](staged/osint-evidence-engine/). It requires collection, audit, supply-chain, emergency-stop and compliance contracts. It does not collect or persist evidence, sign records, provide trusted timestamps or certify legal chain of custody. Master staging CI [run 41514862252](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252) passed 21 tests on Python 3.10–3.12. Public remote creation and repository-local CI remain pending.
+
+
+## Next OSINT build — osint-entity-resolution (portfolio position 23/32)
+
+A public non-personal candidate matcher is staged at [osint-entity-resolution](staged/osint-entity-resolution/). It produces review-required candidates only, retains evidence references and uncertainty, and excludes person matching, personal profiling and automatic merges. The public remote and staging CI remain pending.

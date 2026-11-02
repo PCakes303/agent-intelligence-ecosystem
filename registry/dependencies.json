@@ -435,6 +435,30 @@
     [
       "osint-evidence",
       "compliance-governance"
+    ],
+    [
+      "entity-resolution",
+      "identity-trust"
+    ],
+    [
+      "entity-resolution",
+      "policy-engine"
+    ],
+    [
+      "entity-resolution",
+      "audit-provenance"
+    ],
+    [
+      "entity-resolution",
+      "emergency-control"
+    ],
+    [
+      "entity-resolution",
+      "compliance-governance"
+    ],
+    [
+      "entity-resolution",
+      "secure-supply-chain"
     ]
   ],
   "excluded": [
