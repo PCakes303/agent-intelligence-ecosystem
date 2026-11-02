@@ -21,7 +21,7 @@ Declared contracts only: identity-trust, policy-engine, audit-provenance, secure
 
 ## Verification plan
 
-- Product deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/5a05e03ae529a52fbb5986edaee5798a85aaa76b\n- Component CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41436514479\n- Python 3.10, 3.11 and 3.12 all passed; 13 tests per version.\n- Exact staging/product Git blob parity: 14 product files, zero missing, differing or extra files.\n- Master registry, dependency graph, status and public catalog reconciled; master regression CI passed in run 41436978148.
+- Product deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/29235a9477dafdf23ced98389c952a31fc22df3d\n- Component CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41437856656\n- Python 3.10, 3.11 and 3.12 all passed; 14 tests per version.\n- Exact staging/product Git blob parity: 14 product files, zero missing, differing or extra files.\n- Master registry, dependency graph, status and public catalog reconciled; master regression and metadata verification is being rerun after the final remote metadata update.
 
 ## Governance
 
