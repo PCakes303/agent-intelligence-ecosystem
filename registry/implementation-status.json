@@ -11,7 +11,9 @@
     "public_existing": 9,
     "private_existing": 1,
     "public_not_created": 20,
-    "profile_repository_excluded": "PCakes303/PCakes303"
+    "profile_repository_excluded": "PCakes303/PCakes303",
+    "public_repositories_present": 10,
+    "public_repositories_missing": 19
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -144,11 +146,11 @@
       "name": "agent-policy-engine",
       "layer": "foundation-security",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Master-repo contract and experimental default-deny evaluator only",
+      "existence": "exists",
+      "status": "Scaffolded; deterministic default-deny evaluator, schemas, CLI, examples, tests and CI workflow published; production enforcement not implemented",
       "priority": "P0",
       "importance": "Central enforcement of least privilege and explicit authorization.",
-      "next_gate": "Provision repo; implement policy bundle/versioning, enforcement adapters and deny-path tests."
+      "next_gate": "Verify the final CI run; then implement policy bundle versioning, authentication-context integration, enforcement adapters, and deny-path security tests."
     },
     {
       "number": "10",
