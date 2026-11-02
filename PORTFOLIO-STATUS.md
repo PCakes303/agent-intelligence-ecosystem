@@ -64,7 +64,7 @@ The account repository search found the nine public portfolio repositories and t
 
 ## Package and release readiness
 
-A repository starter build is not the same thing as a distributable software package. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of the seven existing public project repositories found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
+A repository starter build is not the same thing as a distributable software package. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of the eight existing public component repositories (including the newly scaffolded secure supply-chain repository) found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
 
 **Decision:** do not publish empty or premature packages. Add packaging only where a reusable library or executable is actually intended for distribution. At that point require a reproducible build, explicit license, locked dependencies, SBOM, signed provenance, and install-from-built-artifact tests. The current starter scripts and contract validators are source-level tools, not published SDKs.
 
@@ -78,7 +78,7 @@ Priority is dependency- and risk-based, not a statement that lower-priority work
 
 ## Verified CI evidence
 
-Latest checked workflow runs for the original eight public portfolio repositories were successful. Repository 08 is newly provisioned; its first CI runs are being corrected and must pass before being recorded as verified:
+Latest checked workflow runs for the original eight public portfolio repositories and the new repository 08 have passed their starter/contract checks:
 
 - [Master registry validation](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41395414353)
 - [AI discovery](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047)
@@ -88,6 +88,7 @@ Latest checked workflow runs for the original eight public portfolio repositorie
 - [Resource manifest](https://github.com/PCakes303/agent-resource-manifest/actions/runs/41393940798)
 - [Schema registry](https://github.com/PCakes303/agent-schema-registry/actions/runs/41393937230)
 - [Identity trust](https://github.com/PCakes303/agent-identity-trust/actions/runs/41393944708)
+- [Secure supply chain](https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41398832132)
 
 These runs verify the current starter/contract checks only. They are not production certifications, vulnerability clearance, or evidence that missing repositories exist.
 
