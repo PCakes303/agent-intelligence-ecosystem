@@ -1,0 +1,20 @@
+# Common local and generated files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+coverage/
+.coverage
+.DS_Store
+Thumbs.db
