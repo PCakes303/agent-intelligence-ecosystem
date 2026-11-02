@@ -295,13 +295,28 @@
       "status": "Scaffolded; artifact record contract, validator, tests, agent entrypoints and starter CI added",
       "priority": "P0",
       "importance": "Prevents unverified artifacts and releases entering trusted execution.",
-      "next_gate": "Implement real SBOM generation, provenance binding, cryptographic signature verification against explicit trust policy, and release evidence.",
+      "next_gate": "Reject URL userinfo consistently; catch malformed URL parser exceptions; enforce schema parity and resource bounds; verify private reporting, About metadata, settings and staging parity.",
       "audit": {
         "as_of": "2026-11-02",
         "audited_commit": "22f90c9290e2f85393ca451af649bc4f9a14ac1b",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-agent-secure-supply-chain-audit.md",
-        "blocking_issue": "https://github.com/PCakes303/agent-secure-supply-chain/issues/1"
+        "blocking_issue": "https://github.com/PCakes303/agent-secure-supply-chain/issues/1",
+        "remediation_commits": [
+          "6dd8bc1f1b41b262a841d2b2faeca1e8651d051f",
+          "04d063de9b36692bf12ce9215075165bc9eb4152"
+        ],
+        "findings": [
+          "SBOM URL validator permits embedded credentials",
+          "malformed URL parser errors may escape as exceptions",
+          "schema validator parity and resource bounds incomplete",
+          "private vulnerability reporting route not verified",
+          "GitHub About metadata incomplete",
+          "license pending review",
+          "staging parity not refreshed",
+          "repository administration controls unverified",
+          "no artifact retrieval, SBOM generation, signature verification or publisher authentication"
+        ]
       }
     },
     {
@@ -377,13 +392,27 @@
       "status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI passed",
       "priority": "P0",
       "importance": "Canonical task/intent semantics shared by agents and transports.",
-      "next_gate": "Develop concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders.",
+      "next_gate": "Add bounded lengths, array/property limits, extension rules and receiver-side size/depth enforcement; verify private reporting, About metadata, settings and staging parity.",
       "audit": {
         "as_of": "2026-11-02",
         "audited_commit": "11dc24b14382d2f019e6a6a3ad00d325018a8604",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-aix-core-audit.md",
-        "blocking_issue": "https://github.com/PCakes303/aix-core/issues/1"
+        "blocking_issue": "https://github.com/PCakes303/aix-core/issues/1",
+        "remediation_commits": [
+          "dae1464c6b4f05d7d3477b0c87a32f0e72c3f5d5",
+          "7a322fdca794750159d6fd97c49f96bf0af52938",
+          "4988d08c2fc9556d64ab90527e5cb0631aeec14d"
+        ],
+        "findings": [
+          "message arrays and nested payloads lack comprehensive bounds",
+          "private vulnerability reporting route not verified",
+          "GitHub About metadata incomplete",
+          "license pending review",
+          "staging parity not refreshed",
+          "repository administration controls unverified",
+          "no runtime authentication, authorization, replay protection or protocol mapping"
+        ]
       }
     },
     {
