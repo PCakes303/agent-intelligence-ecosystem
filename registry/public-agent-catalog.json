@@ -317,7 +317,7 @@
       "role": "Discovery of agents, resources, services, and capabilities.",
       "repository_url": "https://github.com/PCakes303/agent-discovery-network",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Staging packet prepared in master; standalone public remote not yet created",
       "priority": "P1",
       "dependencies": [
         "resource-manifest",
