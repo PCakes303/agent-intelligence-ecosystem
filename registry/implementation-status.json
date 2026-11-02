@@ -33,7 +33,12 @@
     "agent-foundation-spec": "https://github.com/PCakes303/agent-foundation-spec/actions/runs/41407412766",
     "agent-resource-manifest": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41407417568",
     "agent-schema-registry": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41407422248",
-    "agent-identity-trust": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41407425998",
+    "agent-identity-trust": {
+      "workflow_run": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41489911336",
+      "conclusion": "success",
+      "head_sha": "c37299b015a18c84ae13892bd3c96bc6fc6c0db8",
+      "tests": 5
+    },
     "agent-secure-supply-chain": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41399364550",
     "agent-policy-engine": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896",
     "agent-audit-provenance": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41421033960",
