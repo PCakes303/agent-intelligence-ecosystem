@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 19,
+    "public_existing": 20,
     "private_existing": 1,
-    "public_not_created": 10,
+    "public_not_created": 9,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 19,
-    "public_repositories_missing": 10
+    "public_repositories_present": 20,
+    "public_repositories_missing": 9
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -64,6 +64,17 @@
     "swarm-state-mesh": {
       "repository_url": "https://github.com/PCakes303/swarm-state-mesh",
       "workflow_run": "https://github.com/PCakes303/swarm-state-mesh/actions/runs/41420117940",
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "jobs": "all passed",
+      "tests": 15
+    },
+    "knowledge-graph": {
+      "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
+      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41426963318",
       "python_versions": [
         "3.10",
         "3.11",
@@ -356,11 +367,11 @@
       "name": "intelligence-knowledge-graph",
       "layer": "intelligence",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Initial reference implementation staged in master (29 files); standalone remote not created; CI pending",
+      "existence": "exists",
+      "status": "Experimental; 29 files published; 15 unit tests and synthetic graph validation passed on Python 3.10, 3.11 and 3.12; dependency-order loading fix verified.",
       "priority": "P2",
       "importance": "Connects sources, evidence, entities and relationships for analysis.",
-      "next_gate": "Create public remote, publish staged files, verify all files and green Python 3.10–3.12 CI; then integrate verified evidence and entity-resolution contracts."
+      "next_gate": "Verify upstream osint-evidence and entity-resolution contracts, then implement reviewed adapters and cross-repository provenance/conformance fixtures. License remains pending portfolio review."
     },
     {
       "number": "24",
