@@ -273,7 +273,7 @@
       "role": "Serialization, validation, and machine encodings for AIX.",
       "repository_url": "https://github.com/PCakes303/aix-codecs",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 14 files published; GitHub Actions CI passed (Python 3.10, 3.11, 3.12 matrix)",
+      "implementation_status": "Scaffolded experimental Python RFC 8785 codec; eight unit tests; no cross-language conformance or production ingress guarantees.",
       "priority": "P0",
       "dependencies": [
         "aix-core",
