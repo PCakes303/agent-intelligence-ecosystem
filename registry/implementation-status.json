@@ -85,7 +85,17 @@
         "Python 3.12"
       ]
     },
-    "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147",
+    "agent-discovery-network": {
+      "workflow_run": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41492390494",
+      "conclusion": "success",
+      "head_sha": "7f9b3bb17f8405f7e105565a8a78e3760a72f21a",
+      "tests": 24,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
+    },
     "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413613566",
     "swarm-runtime": {
       "repository_url": "https://github.com/PCakes303/swarm-runtime",
