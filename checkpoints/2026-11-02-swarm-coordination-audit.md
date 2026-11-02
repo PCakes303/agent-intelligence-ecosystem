@@ -30,6 +30,16 @@
 - `ddc5a5ef096c6ac52ce3c96f8f7577b7e44bc5b4`: reconciled deployment and audit status.
 - Created [issue #1](https://github.com/PCakes303/swarm-coordination/issues/1) for authenticated dispatch, durable idempotency, fencing and distributed recovery.
 
+## Post-audit adversarial timestamp back-check — 2026-11-02
+
+A deeper review found that Coordinator._timestamp used math.isfinite() and float() directly on caller-supplied integer timestamps. Extremely large Python integers can raise OverflowError and bypass the documented ValidationError outcome.
+
+- aa57f964877ad02a75e1f1b4cabef4772d5fb1c9: added safe finite-number conversion for lifecycle timestamps.
+- 651056f6cb96bb2c1a02055f933e263657393022: added a regression test for an overflowing integer lifecycle timestamp.
+- The expanded workflow result is pending verification; the previous 21-test CI run remains valid only for the earlier commit.
+
+This is a robustness correction, not a change to the single-process trust or delivery guarantees.
+
 ## Findings and remaining exceptions
 
 1. **No authenticated requester/agent identity:** IDs and dispatch references are strings, not cryptographic authentication. No authenticated transport or message verification exists.
