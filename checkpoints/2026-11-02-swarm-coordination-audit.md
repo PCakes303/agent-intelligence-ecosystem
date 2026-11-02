@@ -36,7 +36,7 @@ A deeper review found that Coordinator._timestamp used math.isfinite() and float
 
 - aa57f964877ad02a75e1f1b4cabef4772d5fb1c9: added safe finite-number conversion for lifecycle timestamps.
 - 651056f6cb96bb2c1a02055f933e263657393022: added a regression test for an overflowing integer lifecycle timestamp.
-- The expanded workflow result is pending verification; the previous 21-test CI run remains valid only for the earlier commit.
+- [Run 41505217154](https://github.com/PCakes303/swarm-coordination/actions/runs/41505217154) passed on Python 3.10, 3.11 and 3.12 with the expanded 22-test suite. [Run 41505272429](https://github.com/PCakes303/swarm-coordination/actions/runs/41505272429) passed for the final staging-status documentation update.
 
 This is a robustness correction, not a change to the single-process trust or delivery guarantees.
 
