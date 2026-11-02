@@ -1,0 +1,14 @@
+# Agent Compliance Governance
+
+- Purpose: legal applicability monitoring, compliance control catalogue and evidence-index validation.
+- Maturity: scaffolded; no legal advice, compliance determination or certification.
+- Start: README.md
+- Legal register: registry/legal-applicability.json
+- Controls: registry/control-catalog.json
+- Evidence index: registry/evidence-index.json
+- Schemas: schemas/
+- Validator: compliance_governance/registry.py
+- CLI: python -m compliance_governance.validate_registry
+- Tests: tests/
+- Key boundary: proposed control is not an implemented control; source-linked legal record is not an applicability determination.
+- License: pending portfolio review.

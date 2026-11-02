@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mrcakes931.dev/compliance/legal-register/1.0.0",
+  "title": "Legal Applicability Register",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "register_version",
+    "records"
+  ],
+  "properties": {
+    "register_version": {
+      "const": "1.0"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "jurisdiction",
+          "title",
+          "instrument_type",
+          "status",
+          "effective_date",
+          "last_verified",
+          "next_review",
+          "sources",
+          "applicability_summary",
+          "triggers",
+          "obligations",
+          "uncertainties",
+          "legal_review_status",
+          "assigned_reviewer"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{2,63}$"
+          },
+          "jurisdiction": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 128
+          },
+          "title": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 256
+          },
+          "instrument_type": {
+            "enum": [
+              "statute",
+              "regulation",
+              "court_order",
+              "guidance"
+            ]
+          },
+          "status": {
+            "enum": [
+              "effective",
+              "enacted_not_yet_effective",
+              "proposed",
+              "active_litigation_monitor",
+              "voluntary_guidance",
+              "unassessed"
+            ]
+          },
+          "effective_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "last_verified": {
+            "type": "string",
+            "format": "date"
+          },
+          "next_review": {
+            "type": "string",
+            "format": "date"
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "url",
+                "authority",
+                "source_type"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "maxLength": 2048
+                },
+                "authority": {
+                  "type": "string",
+                  "minLength": 2,
+                  "maxLength": 256
+                },
+                "source_type": {
+                  "enum": [
+                    "official_legislature",
+                    "official_agency",
+                    "court_docket",
+                    "standards_body"
+                  ]
+                }
+              }
+            }
+          },
+          "applicability_summary": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 2000
+          },
+          "triggers": {
+            "type": "array",
+            "maxItems": 16,
+            "items": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 512
+            }
+          },
+          "obligations": {
+            "type": "array",
+            "maxItems": 24,
+            "items": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 512
+            }
+          },
+          "uncertainties": {
+            "type": "array",
+            "maxItems": 24,
+            "items": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 512
+            }
+          },
+          "legal_review_status": {
+            "enum": [
+              "unassessed",
+              "needs_counsel",
+              "counsel_reviewed"
+            ]
+          },
+          "assigned_reviewer": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 128
+          }
+        }
+      }
+    }
+  }
+}

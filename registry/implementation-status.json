@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41512328515",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41512590541",
       "conclusion": "success",
-      "head_sha": "dfc6342cf6dd91a6b5e32a305e30351d52805946",
+      "head_sha": "69d78f7dcc9da6425442e96915fea712908c9863",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -1413,6 +1413,12 @@
       "path": "provisioning/staged/agent-emergency-control",
       "file_count": 23,
       "status": "Prepared in master staging; public remote not yet created. Includes strict bounded command schema/parser, STOP/RESUME reducer, two-person resume contract, synthetic tests and Python 3.10–3.12 staging CI. No cryptographic verification, persistence, propagation or runtime enforcement."
+    },
+    {
+      "repository": "agent-compliance-governance",
+      "path": "provisioning/staged/agent-compliance-governance",
+      "file_count": 28,
+      "status": "Prepared in master staging; public remote not yet created. Includes Colorado legal-monitor register, proposed governance controls, empty evidence index, strict JSON/schema validators and Python 3.10–3.12 staging CI. No legal advice, applicability determination or compliance certification."
     }
   ],
   "master_audit": {

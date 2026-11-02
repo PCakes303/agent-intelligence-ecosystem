@@ -1,0 +1,59 @@
+{
+  "capabilities_version": "1.0.0",
+  "repository": "agent-compliance-governance",
+  "repository_id": "compliance-governance",
+  "maturity": "scaffolded",
+  "capabilities": [
+    {
+      "id": "compliance.registry.validate",
+      "name": "Legal register structural validation",
+      "status": "tested",
+      "description": "Validates source-linked legal and regulatory monitoring records, dates, status taxonomy and review metadata.",
+      "evidence": [
+        "compliance_governance/registry.py",
+        "schemas/legal-register.schema.json",
+        "tests/test_registry.py"
+      ],
+      "limitations": [
+        "Does not determine whether any law applies or interpret legal effect."
+      ]
+    },
+    {
+      "id": "compliance.controls.validate",
+      "name": "Compliance control catalogue validation",
+      "status": "tested",
+      "description": "Validates control definitions and references to legal register records.",
+      "evidence": [
+        "compliance_governance/registry.py",
+        "schemas/control-catalog.schema.json",
+        "tests/test_registry.py"
+      ],
+      "limitations": [
+        "Catalogue entries are proposed and not implemented controls."
+      ]
+    },
+    {
+      "id": "compliance.evidence.index.validate",
+      "name": "Evidence index validation",
+      "status": "tested",
+      "description": "Validates evidence metadata, digest format, access class and control references.",
+      "evidence": [
+        "compliance_governance/registry.py",
+        "schemas/evidence-index.schema.json",
+        "tests/test_registry.py"
+      ],
+      "limitations": [
+        "No evidence is stored or verified; an empty index is intentional."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Legal advice or legal applicability determinations",
+    "Compliance certification or audit opinion",
+    "Automated regulatory interpretation",
+    "Evidence vault or immutable storage",
+    "Privacy rights request service",
+    "Regulatory change monitoring service",
+    "Security, privacy or AI risk controls enforcement"
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "register_version": "1.0",
+  "records": [
+    {
+      "id": "colorado-privacy-act",
+      "jurisdiction": "Colorado, United States",
+      "title": "Colorado Privacy Act (C.R.S. §§ 6-1-1301 et seq.)",
+      "instrument_type": "statute",
+      "status": "effective",
+      "effective_date": "2023-07-01",
+      "last_verified": "2026-11-02",
+      "next_review": "2026-12-02",
+      "sources": [
+        {
+          "url": "https://coag.gov/resources/colorado-privacy-act/",
+          "authority": "Colorado Attorney General",
+          "source_type": "official_agency"
+        },
+        {
+          "url": "https://coag.gov/colorado-privacy-act-rulemaking/",
+          "authority": "Colorado Department of Law",
+          "source_type": "official_agency"
+        }
+      ],
+      "applicability_summary": "The CPA may apply to controllers and processors conducting business in Colorado or targeting Colorado residents when statutory processing thresholds and other conditions are met. The Attorney General describes thresholds based on processing personal data of at least 100,000 Colorado consumers, or at least 25,000 consumers where revenue or discounts are derived from sale of personal data. Entity-specific exemptions and data exclusions require legal review.",
+      "triggers": [
+        "Colorado business activity or products/services targeted to Colorado residents",
+        "Personal data processing meeting statutory consumer thresholds",
+        "Processing sensitive data, targeted advertising, sale or profiling activities"
+      ],
+      "obligations": [
+        "Transparent privacy notices and purpose disclosures",
+        "Data minimization and reasonable security practices",
+        "Consumer access, correction, deletion and portability rights",
+        "Universal opt-out handling where required",
+        "Data protection assessments for specified high-risk processing",
+        "Affirmative consent before processing sensitive data where required"
+      ],
+      "uncertainties": [
+        "Confirm current threshold calculations, statutory exemptions and controller/processor roles with counsel",
+        "Confirm final status of amendments to 4 CCR 904-3 and all amendments to Part 13",
+        "Determine whether any processing is employment, commercial-context or otherwise excluded"
+      ],
+      "legal_review_status": "needs_counsel",
+      "assigned_reviewer": null
+    },
+    {
+      "id": "colorado-admt-sb26-189",
+      "jurisdiction": "Colorado, United States",
+      "title": "SB26-189 Automated Decision-Making Technology",
+      "instrument_type": "statute",
+      "status": "enacted_not_yet_effective",
+      "effective_date": "2027-01-01",
+      "last_verified": "2026-11-02",
+      "next_review": "2026-11-16",
+      "sources": [
+        {
+          "url": "https://leg.colorado.gov/bills/SB26-189",
+          "authority": "Colorado General Assembly",
+          "source_type": "official_legislature"
+        },
+        {
+          "url": "https://coag.gov/ai/",
+          "authority": "Colorado Attorney General / Department of Law",
+          "source_type": "official_agency"
+        }
+      ],
+      "applicability_summary": "Enacted legislation that repeals and reenacts Colorado's prior AI consequential-decision provisions with requirements for developers and deployers of automated decision-making technology that materially influences consequential decisions. Applicability depends on covered technology, consequential decision domains, entity role and statutory definitions. The stated effective date is January 1, 2027.",
+      "triggers": [
+        "Developing or deploying ADMT that materially influences consequential decisions",
+        "Covered decisions involving education, employment, housing, financial/lending services, insurance, health care or essential government services/public benefits",
+        "Providing or receiving covered ADMT technical documentation"
+      ],
+      "obligations": [
+        "Developer technical documentation on intended uses, training-data categories, known limitations and appropriate use/human review",
+        "Notice of material ADMT updates or modifications to deployers",
+        "At least three-year retention of records necessary to demonstrate compliance",
+        "Deployer consumer notices and post-adverse-outcome explanations within statutory timeframes",
+        "Consumer requests for relevant personal data, correction and meaningful human review/reconsideration"
+      ],
+      "uncertainties": [
+        "Confirm final rule adoption and exact operative text before the January 1, 2027 effective date",
+        "A federal court order in xAI v. Weiser contains a temporary enforcement stay referring to SB24-205 and replacement/amending legislation; counsel must assess its scope and current status",
+        "Confirm statutory definitions, exclusions, thresholds and developer/deployer allocation for the actual use case"
+      ],
+      "legal_review_status": "needs_counsel",
+      "assigned_reviewer": null
+    },
+    {
+      "id": "colorado-chatbot-hb26-1263",
+      "jurisdiction": "Colorado, United States",
+      "title": "HB26-1263 Conversational AI Service Operator Requirements (Chatbot Safety Act)",
+      "instrument_type": "statute",
+      "status": "enacted_not_yet_effective",
+      "effective_date": "2027-01-01",
+      "last_verified": "2026-11-02",
+      "next_review": "2026-11-16",
+      "sources": [
+        {
+          "url": "https://leg.colorado.gov/bills/HB26-1263",
+          "authority": "Colorado General Assembly",
+          "source_type": "official_legislature"
+        },
+        {
+          "url": "https://coag.gov/ai/",
+          "authority": "Colorado Attorney General / Department of Law",
+          "source_type": "official_agency"
+        }
+      ],
+      "applicability_summary": "Enacted requirements for operators of conversational AI services accessible to the general public that primarily simulate human conversation and interaction. The Colorado Attorney General describes the law as taking effect January 1, 2027. Applicability depends on the service, operator role, user population and statutory definitions.",
+      "triggers": [
+        "Making a conversational AI service publicly available or offering it to consumers",
+        "Users or account holders may be minors",
+        "Service includes adaptive textual, visual or aural conversation"
+      ],
+      "obligations": [
+        "Disclose to users that they are interacting with AI",
+        "Use commercially reasonable or generally accepted methods to estimate user age as required",
+        "Implement specified safeguards and account/privacy tools for minors",
+        "Implement protocols for prompts involving suicidal ideation or self-harm",
+        "Submit annual reports to the Attorney General as required",
+        "Do not represent outputs as equivalent to services of licensed or certified professionals"
+      ],
+      "uncertainties": [
+        "Confirm exact effective-date provisions and any referendum or litigation developments",
+        "Confirm final rulemaking and annual-report details",
+        "Determine whether the service meets the statutory definition and whether exemptions apply"
+      ],
+      "legal_review_status": "needs_counsel",
+      "assigned_reviewer": null
+    },
+    {
+      "id": "colorado-admt-chatbot-rules-2026",
+      "jurisdiction": "Colorado, United States",
+      "title": "Proposed 2026 ADMT and Chatbot Safety Rules",
+      "instrument_type": "regulation",
+      "status": "proposed",
+      "effective_date": null,
+      "last_verified": "2026-11-02",
+      "next_review": "2026-11-09",
+      "sources": [
+        {
+          "url": "https://coag.gov/ai/",
+          "authority": "Colorado Department of Law",
+          "source_type": "official_agency"
+        },
+        {
+          "url": "https://coag.gov/ai/automated-decision-making-technology-act-and-chatbot-safety-act-form/",
+          "authority": "Colorado Department of Law",
+          "source_type": "official_agency"
+        }
+      ],
+      "applicability_summary": "The Colorado Department of Law reports that proposed draft rules implementing SB26-189 and HB26-1263 were filed on August 11, 2026, and that the public comment period ran from August 11 through October 26, 2026, subject to extension if the formal hearing continued. This record tracks proposed rulemaking only and does not represent final adopted rules.",
+      "triggers": [
+        "Colorado ADMT or conversational AI service operation",
+        "Final rulemaking, hearing notices, adopted rules or agency guidance are published"
+      ],
+      "obligations": [
+        "Monitor formal rulemaking, hearing outcomes and adopted rule text",
+        "Reconcile final rules against the statutory control catalogue"
+      ],
+      "uncertainties": [
+        "Final adoption and current hearing status not confirmed in this initial register",
+        "Do not treat draft language as binding law"
+      ],
+      "legal_review_status": "needs_counsel",
+      "assigned_reviewer": null
+    },
+    {
+      "id": "colorado-ai-litigation-stay",
+      "jurisdiction": "United States District Court, District of Colorado",
+      "title": "xAI LLC v. Weiser, No. 1:26-cv-01515 — temporary enforcement stay monitor",
+      "instrument_type": "court_order",
+      "status": "active_litigation_monitor",
+      "effective_date": "2026-04-27",
+      "last_verified": "2026-11-02",
+      "next_review": "2026-11-09",
+      "sources": [
+        {
+          "url": "https://clearinghouse.net/case/48129/",
+          "authority": "Civil Rights Litigation Clearinghouse / RECAP docket materials",
+          "source_type": "court_docket"
+        },
+        {
+          "url": "https://dockets.justia.com/docket/colorado/codce/1:2026cv01515/253513",
+          "authority": "U.S. District Court for the District of Colorado docket mirror",
+          "source_type": "court_docket"
+        }
+      ],
+      "applicability_summary": "An April 27, 2026 minute order temporarily restrained the Colorado Attorney General from initiating enforcement, including investigations, for alleged violations of SB24-205 or legislation replacing or amending it enacted during the 2026 legislative session, for the period specified in the order relative to a future ruling on a preliminary-injunction motion. This record is a litigation monitor, not a conclusion that any entity or law is exempt or unenforceable.",
+      "triggers": [
+        "New docket entries, preliminary-injunction motion or ruling",
+        "Final ADMT/chatbot rulemaking or later legislation",
+        "Any planned reliance on the stay for a compliance decision"
+      ],
+      "obligations": [
+        "Recheck the official PACER docket and obtain counsel's interpretation before relying on the order",
+        "Track the order's exact temporal and statutory scope and any subsequent modification or termination"
+      ],
+      "uncertainties": [
+        "The order's scope regarding SB26-189 and HB26-1263 requires legal interpretation",
+        "Available docket mirror last showed a later procedural entry dated October 2, 2026; PACER must be checked for subsequent activity",
+        "Do not infer that the stay suspends statutory effective dates or private obligations"
+      ],
+      "legal_review_status": "needs_counsel",
+      "assigned_reviewer": null
+    },
+    {
+      "id": "nist-ai-rmf-1-0",
+      "jurisdiction": "United States, voluntary standards and guidance",
+      "title": "NIST AI Risk Management Framework 1.0",
+      "instrument_type": "guidance",
+      "status": "voluntary_guidance",
+      "effective_date": null,
+      "last_verified": "2026-11-02",
+      "next_review": "2027-02-02",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+          "authority": "National Institute of Standards and Technology",
+          "source_type": "standards_body"
+        },
+        {
+          "url": "https://airc.nist.gov/airmf-resources/airmf/",
+          "authority": "NIST AI Resource Center",
+          "source_type": "standards_body"
+        }
+      ],
+      "applicability_summary": "NIST AI RMF 1.0 is voluntary, rights-preserving, non-sector-specific guidance intended to help organizations manage AI risks. It is not itself a generally binding law. It may become relevant through contracts, procurement terms, policies or incorporation into applicable requirements.",
+      "triggers": [
+        "Organization voluntarily adopts the framework",
+        "Contract, procurement or policy requires alignment",
+        "A law or regulator references a framework or equivalent standard"
+      ],
+      "obligations": [
+        "Use Govern, Map, Measure and Manage concepts where adopted",
+        "Track NIST's stated revision work and future framework updates"
+      ],
+      "uncertainties": [
+        "Confirm whether a contract, procurement term or applicable law makes any specific framework requirement binding"
+      ],
+      "legal_review_status": "unassessed",
+      "assigned_reviewer": null
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "manifest_version": "1.0.0",
+  "id": "compliance-governance",
+  "name": "agent-compliance-governance",
+  "version": "0.1.0",
+  "maturity": "scaffolded",
+  "role": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management and regulatory change monitoring; not legal advice or certification.",
+  "dependencies": [
+    "master",
+    "foundation",
+    "identity-trust",
+    "policy-engine",
+    "audit-provenance",
+    "secure-supply-chain"
+  ],
+  "entrypoint": "compliance_governance/validate_registry.py",
+  "license_status": "pending-portfolio-review",
+  "compliance_certification": false
+}

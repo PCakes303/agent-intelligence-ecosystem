@@ -1,0 +1,211 @@
+{
+  "catalog_version": "1.0",
+  "controls": [
+    {
+      "id": "GOV-001",
+      "title": "AI system inventory",
+      "family": "governance",
+      "objective": "Maintain a current inventory of AI systems, models, agents, tools, owners, purposes, data categories, users, jurisdictions and lifecycle state.",
+      "applicability": "universal-governance",
+      "implementation_status": "proposed",
+      "owner_role": "Governance owner (unassigned)",
+      "linked_legal_records": [
+        "colorado-admt-sb26-189",
+        "colorado-chatbot-hb26-1263",
+        "nist-ai-rmf-1-0"
+      ],
+      "evidence_expectations": [
+        "Approved system inventory",
+        "Named system owner and business purpose",
+        "Jurisdiction and data-flow record"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "GOV-002",
+      "title": "Legal applicability assessment",
+      "family": "governance",
+      "objective": "Assess each system and processing activity against relevant laws using documented entity, role, user, data, purpose, threshold and geography facts, with counsel review.",
+      "applicability": "conditional-by-law",
+      "implementation_status": "proposed",
+      "owner_role": "Legal counsel and compliance owner (unassigned)",
+      "linked_legal_records": [
+        "colorado-privacy-act",
+        "colorado-admt-sb26-189",
+        "colorado-chatbot-hb26-1263",
+        "colorado-ai-litigation-stay"
+      ],
+      "evidence_expectations": [
+        "Signed applicability assessment",
+        "Counsel review record",
+        "Source links and review date"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "GOV-003",
+      "title": "Regulatory change monitoring",
+      "family": "monitoring",
+      "objective": "Monitor authoritative legislative, regulatory and court sources; record changes, effective dates, uncertainty and assigned review actions.",
+      "applicability": "universal-governance",
+      "implementation_status": "proposed",
+      "owner_role": "Compliance monitoring owner (unassigned)",
+      "linked_legal_records": [
+        "colorado-admt-chatbot-rules-2026",
+        "colorado-ai-litigation-stay"
+      ],
+      "evidence_expectations": [
+        "Source-monitoring log",
+        "Change impact assessment",
+        "Assigned remediation tickets"
+      ],
+      "review_interval_days": 30
+    },
+    {
+      "id": "PRIV-001",
+      "title": "Personal data inventory and purpose limitation",
+      "family": "privacy",
+      "objective": "Document personal-data categories, sources, purposes, recipients, retention, controller/processor roles and lawful processing conditions.",
+      "applicability": "conditional-by-law",
+      "implementation_status": "proposed",
+      "owner_role": "Privacy owner (unassigned)",
+      "linked_legal_records": [
+        "colorado-privacy-act"
+      ],
+      "evidence_expectations": [
+        "Data inventory and flow map",
+        "Purpose and retention register",
+        "Processor agreements"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "PRIV-002",
+      "title": "Consumer rights request workflow",
+      "family": "privacy",
+      "objective": "Provide a governed intake, identity-check, routing, response, appeal and deletion/correction workflow for applicable privacy rights.",
+      "applicability": "conditional-by-law",
+      "implementation_status": "proposed",
+      "owner_role": "Privacy operations owner (unassigned)",
+      "linked_legal_records": [
+        "colorado-privacy-act"
+      ],
+      "evidence_expectations": [
+        "Request handling procedure",
+        "Synthetic request test results",
+        "Response and appeal metrics"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "PRIV-003",
+      "title": "Sensitive-data and high-risk processing assessment",
+      "family": "privacy",
+      "objective": "Identify sensitive data and high-risk processing, document necessity and proportionality, obtain required consent and complete applicable impact assessments.",
+      "applicability": "conditional-by-law",
+      "implementation_status": "proposed",
+      "owner_role": "Privacy and risk owners (unassigned)",
+      "linked_legal_records": [
+        "colorado-privacy-act"
+      ],
+      "evidence_expectations": [
+        "Data protection assessment",
+        "Consent and preference records",
+        "Sensitive-data inventory"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "AI-001",
+      "title": "AI risk classification and human oversight",
+      "family": "ai-risk",
+      "objective": "Classify system risk and impact, define human review authority, escalation, override, monitoring and safe suspension criteria.",
+      "applicability": "conditional-by-use-case",
+      "implementation_status": "proposed",
+      "owner_role": "AI system owner and safety reviewer (unassigned)",
+      "linked_legal_records": [
+        "colorado-admt-sb26-189",
+        "nist-ai-rmf-1-0"
+      ],
+      "evidence_expectations": [
+        "Risk assessment",
+        "Human oversight procedure",
+        "Evaluation and monitoring results"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "AI-002",
+      "title": "AI transparency and user notice",
+      "family": "transparency",
+      "objective": "Provide clear, accessible disclosures about AI interaction and consequential automated decision support where required by the use case and law.",
+      "applicability": "conditional-by-law",
+      "implementation_status": "proposed",
+      "owner_role": "Product and legal owners (unassigned)",
+      "linked_legal_records": [
+        "colorado-admt-sb26-189",
+        "colorado-chatbot-hb26-1263"
+      ],
+      "evidence_expectations": [
+        "Approved notice text",
+        "UI disclosure tests",
+        "User-facing notice version history"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "AI-003",
+      "title": "Developer/deployer documentation and retention",
+      "family": "evidence",
+      "objective": "Preserve intended-use, data-category, limitations, human-review and material-change documentation; apply statutory retention periods only after applicability review.",
+      "applicability": "conditional-by-law",
+      "implementation_status": "proposed",
+      "owner_role": "AI product owner and records owner (unassigned)",
+      "linked_legal_records": [
+        "colorado-admt-sb26-189"
+      ],
+      "evidence_expectations": [
+        "Technical documentation pack",
+        "Change notifications",
+        "Approved retention schedule"
+      ],
+      "review_interval_days": 90
+    },
+    {
+      "id": "CHAT-001",
+      "title": "Conversational AI user and minor safeguards",
+      "family": "security",
+      "objective": "For covered public conversational AI services, design age estimation, AI disclosure, minor protections, privacy controls and self-harm response protocols as legally required.",
+      "applicability": "conditional-by-use-case",
+      "implementation_status": "proposed",
+      "owner_role": "Product safety and legal owners (unassigned)",
+      "linked_legal_records": [
+        "colorado-chatbot-hb26-1263"
+      ],
+      "evidence_expectations": [
+        "Age-estimation design review",
+        "Minor-safety test results",
+        "Self-harm response protocol and annual report evidence"
+      ],
+      "review_interval_days": 60
+    },
+    {
+      "id": "EVID-001",
+      "title": "Evidence integrity and provenance",
+      "family": "evidence",
+      "objective": "Record source, collection time, integrity digest, access classification, retention and reviewer for each compliance artifact.",
+      "applicability": "universal-governance",
+      "implementation_status": "proposed",
+      "owner_role": "Evidence custodian (unassigned)",
+      "linked_legal_records": [
+        "nist-ai-rmf-1-0"
+      ],
+      "evidence_expectations": [
+        "Evidence index entries",
+        "Digest verification logs",
+        "Access and retention audit"
+      ],
+      "review_interval_days": 90
+    }
+  ]
+}
