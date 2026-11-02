@@ -218,7 +218,7 @@
       "name": "swarm-runtime",
       "visibility": "public",
       "layer": "swarm",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Execution infrastructure for distributed agents and nodes.",
       "dependencies": [
         "identity-trust",
