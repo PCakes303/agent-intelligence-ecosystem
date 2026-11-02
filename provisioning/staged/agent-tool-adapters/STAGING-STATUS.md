@@ -4,7 +4,7 @@ Prepared in the master repository because the public target `PCakes303/agent-too
 
 ## Included
 
-Experimental dependency-free Python library with explicit adapter registration, exact capability matching, injected fail-closed policy decisions, JSON-compatible payload validation, configurable serialized byte ceilings, generic adapter error containment, descriptor output, JSON Schema, threat model, contribution/security instructions, and Python 3.10–3.12 CI.
+Experimental dependency-free Python library with explicit adapter registration, exact capability matching, injected fail-closed policy decisions, JSON-compatible payload validation, configurable serialized byte ceilings, generic adapter error containment, descriptor output, JSON Schema, threat model, contribution/security instructions, and 13 unit tests are included. Python 3.10–3.12 CI is configured but has not run because the target repository does not yet exist.
 
 ## Boundaries
 
