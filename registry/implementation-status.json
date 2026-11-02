@@ -386,7 +386,29 @@
       "status": "Scaffolded; 14 files published; GitHub Actions CI passed (Python 3.10, 3.11, 3.12 matrix)",
       "priority": "P0",
       "importance": "Deterministic serialization is required for interoperable AIX messages.",
-      "next_gate": "Add cross-language RFC 8785 vectors, schema-bound AIX message tests, fuzz/property coverage, payload/depth limits, and package metadata. No release published."
+      "next_gate": "Expand RFC 8785 vectors and fuzz/property tests; ensure transport-facing integrations enforce payload/depth budgets before decoding; verify private reporting, metadata, repository settings and staging parity.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "9edce84c0f00db0fbe2d8ddfa302510329e66503",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-aix-codecs-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/aix-codecs/issues/1",
+        "remediation_commits": [
+          "ab013bfcc2f7f7184f9331618841b2ca09a3be7b",
+          "fe48c296b26fb67fbb5b0dfb6bd5e820d96e6bf5",
+          "220226f97698de1e60fb210d3b766c0d22e05cc5"
+        ],
+        "findings": [
+          "RFC 8785 edge-case and fuzz/property test coverage incomplete",
+          "no independent cross-language implementation or shared conformance evidence",
+          "payload-size/depth limits remain caller responsibility",
+          "private vulnerability reporting route unverified",
+          "GitHub About homepage/topics missing",
+          "license pending review",
+          "staging parity not refreshed",
+          "repository administration controls unverified"
+        ]
+      }
     },
     {
       "number": "13",
