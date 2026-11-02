@@ -13,7 +13,8 @@ The GitHub integration available to this session can inspect and write repositor
 - Public-only local scaffold generator: ../tools/bootstrap_repositories.py
 - Remote creation and initial push: ../tools/provision_public_repositories.sh
 - Shared starter files: ../templates/repository/
-- Repository 09 deployed: `agent-policy-engine` (public remote exists; starter CI passes)\n- Repository 10 prepared source: `staged/agent-audit-provenance/` (remote not yet created)
+- Repository 09 deployed: `agent-policy-engine` (public remote exists; starter CI passes)
+- Repository 10 prepared source: `staged/agent-audit-provenance/` (remote not yet created)
 - Repository 11 prepared source: `staged/aix-core/` (remote not yet created)
 - GitHub About descriptions and topics: ../docs/GITHUB-REPOSITORY-ABOUT-METADATA.md
 - Canonical registry: ../registry/repositories.json
