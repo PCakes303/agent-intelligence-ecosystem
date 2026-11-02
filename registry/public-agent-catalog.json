@@ -429,8 +429,8 @@
       "layer": "intelligence",
       "role": "Catalog of public sources, datasets, and APIs with usage constraints.",
       "repository_url": "https://github.com/PCakes303/osint-source-registry",
-      "existence": "not-created",
-      "implementation_status": "Staging prepared; 23-file scaffold committed to master; public remote not yet created",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; 23 files published; Python 3.10–3.12 CI passed (run 41425236178); source metadata catalog only, no collection client.",
       "priority": "P2",
       "dependencies": [
         "resource-manifest",
@@ -438,9 +438,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/osint-source-registry/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-source-registry/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-source-registry/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -517,17 +517,17 @@
       "layer": "intelligence",
       "role": "Structured graph connecting sources, evidence, entities, and relationships.",
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
-      "existence": "not-created",
-      "implementation_status": "Not started",
+      "existence": "exists",
+      "implementation_status": "Experimental; 29 files published; 15 tests and synthetic graph validation passed on Python 3.10–3.12 (run 41426963318); upstream adapters not yet implemented.",
       "priority": "P2",
       "dependencies": [
         "osint-evidence",
         "entity-resolution"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
