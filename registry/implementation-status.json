@@ -22,7 +22,7 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41428803112",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41434406452",
       "conclusion": "success"
     },
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
@@ -109,7 +109,7 @@
     },
     "agent-skill-library": {
       "repository_url": "https://github.com/PCakes303/agent-skill-library",
-      "workflow_run": "https://github.com/PCakes303/agent-skill-library/actions/runs/41433767735",
+      "workflow_run": "https://github.com/PCakes303/agent-skill-library/actions/runs/41433846023",
       "python_versions": [
         "3.10",
         "3.11",
@@ -520,7 +520,7 @@
     "repository": "agent-skill-library",
     "path": "provisioning/staged/agent-skill-library",
     "file_count": 17,
-    "status": "Deployed to PCakes303/agent-skill-library; 17 product files; exact product/staging blob parity verified; Python 3.10–3.12 CI passed (run 41433767735, 18 tests). Staging packet retained as the master-side reference copy."
+    "status": "Deployed to PCakes303/agent-skill-library; 17 product files; exact product/staging blob parity verified; latest Python 3.10–3.12 CI passed (run 41433846023, 18 tests). Staging packet retained as the master-side reference copy."
   },
   "prepared_staging_history": [
     {
@@ -599,7 +599,7 @@
       "repository": "agent-skill-library",
       "path": "provisioning/staged/agent-skill-library",
       "file_count": 17,
-      "status": "deployed; exact 17-file product/staging blob parity verified; Python 3.10–3.12 CI passed (18 tests)"
+      "status": "deployed; exact 17-file product/staging blob parity verified; latest Python 3.10–3.12 CI passed (run 41433846023, 18 tests)"
     }
   ]
 }

@@ -10,7 +10,7 @@
 ## Deployment evidence
 
 - Product commit: https://github.com/PCakes303/agent-skill-library/commit/d9c91cbfba7449bbb14064c92dd01f2b4d555038
-- Initial implementation CI: https://github.com/PCakes303/agent-skill-library/actions/runs/41433767735
+- Latest product CI: https://github.com/PCakes303/agent-skill-library/actions/runs/41433846023
 - CI matrix: Python 3.10, 3.11, 3.12; all jobs passed.
 - Regression tests: 18 per Python version.
 - Staging/product parity: all 17 product-file Git blob SHAs match.

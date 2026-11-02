@@ -63,7 +63,7 @@ The [AIX Core staging bundle](staged/aix-core/STAGING-STATUS.md) is prepared. Cr
 
 ## Repository 24 prepared bundle
 
-The [agent-tool-adapters staging bundle](staged/agent-tool-adapters/STAGING-STATUS.md) was deployed to [PCakes303/agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters). Its 16 product files have exact Git blob parity with staging; all 13 unit tests pass on Python 3.10, 3.11 and 3.12. The sandbox-security prerequisite remains planned and is not implemented; all four declared dependencies remain contract-only, not tested runtime integrations.
+The [agent-tool-adapters staging bundle](staged/agent-tool-adapters/STAGING-STATUS.md) was deployed to [PCakes303/agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters). Its 16 product files have exact Git blob parity with staging; all 20 unit tests pass on Python 3.10, 3.11 and 3.12. The sandbox-security prerequisite remains planned and is not implemented; all four declared dependencies remain contract-only, not tested runtime integrations.
 
 
 ## Repository 25 deployment
