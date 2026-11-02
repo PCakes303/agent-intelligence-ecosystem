@@ -452,7 +452,7 @@
       "role": "Authorized public-information collection through tools and adapters.",
       "repository_url": "https://github.com/PCakes303/osint-collection-framework",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Staged in master; plan validator only; 19 tests pass on Python 3.10-3.12; no network collection.",
       "priority": "P2",
       "dependencies": [
         "osint-source-registry",
@@ -478,7 +478,7 @@
       "role": "Evidence preservation, provenance, hashes, timestamps, and reproducibility.",
       "repository_url": "https://github.com/PCakes303/osint-evidence-engine",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Staged in master; public non-personal evidence manifest and hash-chain validator only; 21 tests pass on Python 3.10-3.12.",
       "priority": "P1",
       "dependencies": [
         "osint-collection",
@@ -502,7 +502,7 @@
       "role": "Entity correlation, relationship modeling, and uncertainty reporting.",
       "repository_url": "https://github.com/PCakes303/osint-entity-resolution",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Staged in master; public-entity candidate matcher only; 16 tests pass on Python 3.10-3.12; review-required outputs.",
       "priority": "P2",
       "dependencies": [
         "osint-evidence",
@@ -596,7 +596,7 @@
       "role": "Protocol contract validation, compatibility and security tests, with future isolated swarm benchmarking.",
       "repository_url": "https://github.com/PCakes303/agent-conformance-lab",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Staged in master; local metadata/fixture validator and deterministic conformance report builder; staging matrix passed on Python 3.10-3.12.",
       "priority": "P1",
       "dependencies": [
         "aix-core",
@@ -627,7 +627,7 @@
       "role": "Federation between independently operated agent networks.",
       "repository_url": "https://github.com/PCakes303/agent-federation-network",
       "existence": "not-created",
-      "implementation_status": "Staged; local peer declaration validation only; no authentication, signature verification, network transport, STOP propagation or remote authorization.",
+      "implementation_status": "Staged in master; bounded local peer declaration validator and contract tests; public remote not created.",
       "priority": "P2",
       "dependencies": [
         "identity-trust",
@@ -679,7 +679,7 @@
       "role": "Independent emergency-stop authority, authenticated stop state, revocation, quarantine, distributed stop propagation, and controlled resumption.",
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
       "existence": "not-created",
-      "implementation_status": "Planned; approved as a new P0 portfolio repository",
+      "implementation_status": "Staged in master; 21 tests pass on Python 3.10-3.12; STOP/RESUME command contract and pure fail-closed reducer only.",
       "priority": "P0",
       "dependencies": [
         "foundation",
@@ -703,7 +703,7 @@
       "role": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring; not legal advice or certification.",
       "repository_url": "https://github.com/PCakes303/agent-compliance-governance",
       "existence": "not-created",
-      "implementation_status": "Planned; approved as a new P0 portfolio repository",
+      "implementation_status": "Staged in master; 10 tests pass on Python 3.10-3.12; source-linked Colorado obligations and control catalogue scaffold.",
       "priority": "P0",
       "dependencies": [
         "master",
