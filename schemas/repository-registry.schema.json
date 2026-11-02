@@ -33,10 +33,10 @@
       ],
       "properties": {
         "total": {
-          "const": 30
+          "const": 32
         },
         "public": {
-          "const": 29
+          "const": 31
         },
         "private": {
           "const": 1
@@ -49,8 +49,8 @@
     },
     "repositories": {
       "type": "array",
-      "minItems": 30,
-      "maxItems": 30,
+      "minItems": 32,
+      "maxItems": 32,
       "items": {
         "type": "object",
         "required": [
