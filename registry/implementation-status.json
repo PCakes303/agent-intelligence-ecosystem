@@ -39,7 +39,12 @@
       "head_sha": "c37299b015a18c84ae13892bd3c96bc6fc6c0db8",
       "tests": 5
     },
-    "agent-secure-supply-chain": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41399364550",
+    "agent-secure-supply-chain": {
+      "workflow_run": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41490619448",
+      "conclusion": "success",
+      "head_sha": "04d063de9b36692bf12ce9215075165bc9eb4152",
+      "tests": 11
+    },
     "agent-policy-engine": {
       "workflow_run": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41490159810",
       "conclusion": "success",
