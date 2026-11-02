@@ -1,0 +1,47 @@
+name: Foundation contract validation
+
+on:
+  push:
+    paths:
+      - "contracts/foundation/**"
+      - "schemas/foundation-requirement.schema.json"
+      - "tools/validate_foundation_requirements.py"
+      - "tests/test_foundation_requirements.py"
+      - ".github/workflows/foundation-contracts.yml"
+      - "requirements-dev.txt"
+  pull_request:
+    paths:
+      - "contracts/foundation/**"
+      - "schemas/foundation-requirement.schema.json"
+      - "tools/validate_foundation_requirements.py"
+      - "tests/test_foundation_requirements.py"
+      - ".github/workflows/foundation-contracts.yml"
+      - "requirements-dev.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: Install validation dependency
+        run: python -m pip install -r requirements-dev.txt
+      - name: Validate requirement graph
+        run: python tools/validate_foundation_requirements.py
+      - name: Validate JSON Schema
+        run: >-
+          python -c "import json,jsonschema,pathlib;
+          schema=json.loads(pathlib.Path('schemas/foundation-requirement.schema.json').read_text());
+          data=json.loads(pathlib.Path('contracts/foundation/requirements.json').read_text());
+          jsonschema.Draft202012Validator(schema).validate(data);
+          print('OK: foundation requirements conform to JSON Schema')"
+      - name: Run foundation validator tests
+        run: python -m unittest discover -s tests -p "test_foundation_requirements.py" -v
