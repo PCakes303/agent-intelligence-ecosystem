@@ -30,7 +30,8 @@ def render(output: Path, force: bool = False) -> list[str]:
             shutil.rmtree(target)
         shutil.copytree(template, target)
         manifest = {
-            "$schema": "../../schemas/repository-manifest.schema.json",
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": f"https://github.com/PCakes303/{repo['name']}/blob/main/manifest.json",
             "manifest_version": "1.0.0",
             "id": repo["id"],
             "name": repo["name"],
