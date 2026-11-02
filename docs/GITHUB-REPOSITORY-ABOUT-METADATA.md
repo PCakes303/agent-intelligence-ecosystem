@@ -1,21 +1,21 @@
 # GitHub repository About metadata
 
 **Audit date:** 2026-11-02  
-**Scope:** all 21 existing public portfolio repositories (master plus 20 component repositories). The separate profile repository and private operations repository are excluded.
+**Scope:** all 22 existing public portfolio repositories (master plus 21 component repositories). The separate profile repository and private operations repository are excluded.
 
 GitHub About metadata is separate from each repository's README and manifest. The connected GitHub integration can inspect repository metadata and update repository files, but it does not expose a repository-settings write operation for descriptions, homepage URLs, or topics. The table below is the approved, individualized metadata set to apply in each repository's **About → Edit repository details** panel.
 
 ## Verified current state
 
-- 21 of 29 planned public portfolio repositories exist; 8 public repositories remain to be created.
-- All 21 existing public portfolio repositories use the `main` default branch and have a README.
-- All 21 have an empty GitHub topics list and no homepage URL.
-- Nine have a description; twelve descriptions are empty.
+- 22 of 29 planned public portfolio repositories exist; 7 public repositories remain to be created.
+- All 22 existing public portfolio repositories use the `main` default branch and have a README.
+- All 22 have an empty GitHub topics list and no homepage URL.
+- Nine have a description; thirteen descriptions are empty.
 - `agent-policy-engine` has a malformed description because a comma-separated topic list was appended to the description field. Replace the whole field with the clean description below.
 - The private operations repository and the separate `PCakes303/PCakes303` profile repository are excluded.
 - A repository description or topic does not imply implementation maturity, security certification, or production readiness.
 
-**Common homepage for all 21 public portfolio repositories:**
+**Common homepage for all 22 public portfolio repositories:**
 
 `https://github.com/PCakes303/agent-intelligence-ecosystem`
 
@@ -46,10 +46,11 @@ Use each topic as a separate GitHub topic. Do not paste the topic list into the 
 | 18 | [swarm-state-mesh](https://github.com/PCakes303/swarm-state-mesh) | Experimental versioned task-event and state reference with optimistic revisions, event-ID idempotency, deterministic snapshots and opaque context references. | swarm-state, event-log, optimistic-concurrency, idempotency, distributed-systems, context-references |
 | 19 | [osint-source-registry](https://github.com/PCakes303/osint-source-registry) | Review-gated catalog of public information sources, datasets and APIs with licensing, permitted-purpose, access-limit, retention and approval metadata. | osint, source-catalog, data-governance, licensing, source-provenance, compliance-controls |
 | 23 | [intelligence-knowledge-graph](https://github.com/PCakes303/intelligence-knowledge-graph) | Experimental provenance-aware graph model connecting source records, preserved evidence and entities through evidence-backed relationships with explicit uncertainty. | intelligence-knowledge-graph, osint, evidence-provenance, graph-model, uncertainty, relationship-analysis |
+| 24 | [agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters) | Experimental dependency-free Python reference contract for explicit tool adapter registration, capability declarations, policy-gated invocation and bounded JSON payloads; no bundled third-party adapters or sandbox runtime. | agent-tool-adapters, tool-adapters, agentic-ai, capability-security, policy-gating, python, json-validation, plugin-architecture |
 
 ## Application checklist
 
-For each of the 21 repositories:
+For each of the 22 repositories:
 
 1. Open the repository page and select **About → Edit repository details**.
 2. Set the exact description from the table.
