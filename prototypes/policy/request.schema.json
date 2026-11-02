@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/prototypes/policy/request.schema.json",
+  "title":"Policy Decision Request",
+  "type":"object",
+  "required":["principal_id","action","resource","scopes"],
+  "properties":{
+    "principal_id":{"type":"string","minLength":1},
+    "action":{"type":"string","minLength":1},
+    "resource":{"type":"string","minLength":1},
+    "scopes":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "context":{"type":"object","additionalProperties":{"type":["string","number","boolean","null"]}}
+  },
+  "additionalProperties":false
+}
