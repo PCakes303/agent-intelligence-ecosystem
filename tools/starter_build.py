@@ -6,6 +6,7 @@ import sys
 root=Path(__file__).resolve().parents[1]
 commands=[
  [sys.executable,"tools/validate_registry.py"],
+ [sys.executable,"tools/validate_public_agent_catalog.py"],
  [sys.executable,"tools/validate_foundation_requirements.py"],
  [sys.executable,"tools/validate_supply_chain.py"],
  [sys.executable,"tools/validate_audit_event.py"],
