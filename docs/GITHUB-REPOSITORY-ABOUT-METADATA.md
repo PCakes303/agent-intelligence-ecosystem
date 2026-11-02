@@ -37,9 +37,9 @@ Descriptions are concise and deliberately avoid implying production maturity.
 | 08 | [agent-secure-supply-chain](https://github.com/PCakes303/agent-secure-supply-chain) | Artifact integrity, SBOM references, source provenance, and signature-verification contracts for secure agent software supply chains. | supply-chain-security, sbom, provenance, artifact-integrity, software-security, ai-agents |
 | 09 | [agent-policy-engine](https://github.com/PCakes303/agent-policy-engine) | Experimental deterministic default-deny policy decision evaluator for agent principals, actions, resources, and scopes. | ai-agents, policy-engine, authorization, access-control, least-privilege, security |
 
-| 10 | [agent-audit-provenance — staged, remote not yet created](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/agent-audit-provenance) | Experimental audit-event contracts and SHA-256 hash-chained JSONL tooling for traceability and integrity checks. | ai-agents, audit-logging, provenance, event-integrity, sha256, security |
+| 10 | [agent-audit-provenance](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/agent-audit-provenance) | Experimental audit-event contracts and SHA-256 hash-chained JSONL tooling for traceability and integrity checks. | ai-agents, audit-logging, provenance, event-integrity, sha256, security |
 
-| 11 | [aix-core — staged, remote not yet created](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/aix-core) | Experimental semantic interoperability specification for agent intent, tasks, capabilities, context, and provenance; an extension layer over existing standards. | ai-agents, interoperability, agent-protocol, task-orchestration, mcp, a2a |
+| 11 | [aix-core](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/aix-core) | Experimental semantic interoperability specification for agent intent, tasks, capabilities, context, and provenance; an extension layer over existing standards. | ai-agents, interoperability, agent-protocol, task-orchestration, mcp, a2a |
 
 ## Application order
 
