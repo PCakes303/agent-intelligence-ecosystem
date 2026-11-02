@@ -11,9 +11,9 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 16 |
+| Public repositories currently present | 17 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 13 |
+| Public repositories not yet created | 12 |
 | Separate profile repository excluded from portfolio | 1 |
 
 The account repository audit verified seventeen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 12 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
