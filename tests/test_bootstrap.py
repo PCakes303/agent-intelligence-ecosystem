@@ -18,6 +18,12 @@ class BootstrapTests(unittest.TestCase):
             self.assertNotIn("agent-ecosystem-private", names)
             self.assertNotIn("agent-intelligence-ecosystem", names)
             self.assertTrue((output / "agent-foundation-spec/manifest.json").exists())
+            from jsonschema import Draft202012Validator
+            schema = json.loads((Path(__file__).resolve().parents[1] / "schemas/repository-manifest.schema.json").read_text())
+            validator = Draft202012Validator(schema, format_checker=Draft202012Validator.FORMAT_CHECKER)
+            for name in names:
+                manifest = json.loads((output / name / "manifest.json").read_text())
+                self.assertEqual(list(validator.iter_errors(manifest)), [], name)
 
     def test_refuses_to_overwrite_without_force(self):
         with tempfile.TemporaryDirectory() as temp:
