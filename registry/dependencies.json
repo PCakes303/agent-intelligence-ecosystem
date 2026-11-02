@@ -5,148 +5,144 @@
   "dependency_semantics": "Dependencies express a declared contract or capability prerequisite, not a requirement to vendor or copy source code.",
   "edges": [
     [
-      "discovery",
-      "master"
+      "aix-codecs",
+      "aix-core"
     ],
     [
-      "discovery",
-      "resource-manifest"
-    ],
-    [
-      "discovery",
+      "aix-codecs",
       "schema-registry"
     ],
     [
-      "discovery",
-      "identity-trust"
+      "aix-core",
+      "audit-provenance"
     ],
     [
-      "human-guide",
-      "master"
-    ],
-    [
-      "integration",
-      "master"
-    ],
-    [
-      "integration",
+      "aix-core",
       "foundation"
     ],
     [
-      "integration",
-      "resource-manifest"
-    ],
-    [
-      "integration",
-      "schema-registry"
-    ],
-    [
-      "integration",
+      "aix-core",
       "identity-trust"
     ],
     [
-      "integration",
+      "aix-core",
+      "policy-engine"
+    ],
+    [
+      "aix-core",
+      "schema-registry"
+    ],
+    [
+      "audit-provenance",
+      "foundation"
+    ],
+    [
+      "audit-provenance",
+      "identity-trust"
+    ],
+    [
+      "audit-provenance",
+      "schema-registry"
+    ],
+    [
+      "capability-registry",
+      "policy-engine"
+    ],
+    [
+      "capability-registry",
+      "resource-manifest"
+    ],
+    [
+      "capability-registry",
+      "schema-registry"
+    ],
+    [
+      "compliance-governance",
+      "audit-provenance"
+    ],
+    [
+      "compliance-governance",
+      "foundation"
+    ],
+    [
+      "compliance-governance",
+      "identity-trust"
+    ],
+    [
+      "compliance-governance",
+      "master"
+    ],
+    [
+      "compliance-governance",
+      "policy-engine"
+    ],
+    [
+      "compliance-governance",
       "secure-supply-chain"
     ],
     [
-      "resource-manifest",
-      "foundation"
-    ],
-    [
-      "resource-manifest",
-      "schema-registry"
-    ],
-    [
-      "resource-manifest",
-      "identity-trust"
-    ],
-    [
-      "schema-registry",
-      "foundation"
-    ],
-    [
-      "identity-trust",
-      "foundation"
-    ],
-    [
-      "identity-trust",
-      "policy-engine"
-    ],
-    [
-      "secure-supply-chain",
-      "foundation"
-    ],
-    [
-      "secure-supply-chain",
-      "identity-trust"
-    ],
-    [
-      "secure-supply-chain",
-      "audit-provenance"
-    ],
-    [
-      "policy-engine",
-      "foundation"
-    ],
-    [
-      "audit-provenance",
-      "foundation"
-    ],
-    [
-      "audit-provenance",
-      "schema-registry"
-    ],
-    [
-      "audit-provenance",
-      "identity-trust"
-    ],
-    [
-      "aix-core",
-      "foundation"
-    ],
-    [
-      "aix-core",
-      "schema-registry"
-    ],
-    [
-      "aix-core",
-      "identity-trust"
-    ],
-    [
-      "aix-core",
-      "policy-engine"
-    ],
-    [
-      "aix-core",
-      "audit-provenance"
-    ],
-    [
-      "aix-codecs",
-      "aix-core"
-    ],
-    [
-      "aix-codecs",
-      "schema-registry"
-    ],
-    [
-      "transport-gateway",
-      "aix-core"
-    ],
-    [
-      "transport-gateway",
+      "conformance-lab",
       "aix-codecs"
     ],
     [
-      "transport-gateway",
+      "conformance-lab",
+      "aix-core"
+    ],
+    [
+      "conformance-lab",
+      "audit-provenance"
+    ],
+    [
+      "conformance-lab",
+      "compliance-governance"
+    ],
+    [
+      "conformance-lab",
+      "emergency-control"
+    ],
+    [
+      "conformance-lab",
+      "foundation"
+    ],
+    [
+      "conformance-lab",
       "identity-trust"
     ],
     [
-      "transport-gateway",
+      "conformance-lab",
       "policy-engine"
     ],
     [
-      "discovery-network",
+      "conformance-lab",
+      "schema-registry"
+    ],
+    [
+      "conformance-lab",
+      "secure-supply-chain"
+    ],
+    [
+      "conformance-lab",
+      "swarm-runtime"
+    ],
+    [
+      "conformance-lab",
+      "transport-gateway"
+    ],
+    [
+      "discovery",
+      "identity-trust"
+    ],
+    [
+      "discovery",
+      "master"
+    ],
+    [
+      "discovery",
       "resource-manifest"
+    ],
+    [
+      "discovery",
+      "schema-registry"
     ],
     [
       "discovery-network",
@@ -155,78 +151,162 @@
     [
       "discovery-network",
       "identity-trust"
+    ],
+    [
+      "discovery-network",
+      "resource-manifest"
     ],
     [
       "discovery-network",
       "transport-gateway"
     ],
     [
-      "capability-registry",
-      "resource-manifest"
+      "emergency-control",
+      "audit-provenance"
     ],
     [
-      "capability-registry",
-      "schema-registry"
+      "emergency-control",
+      "foundation"
     ],
     [
-      "capability-registry",
-      "policy-engine"
-    ],
-    [
-      "swarm-runtime",
+      "emergency-control",
       "identity-trust"
     ],
     [
-      "swarm-runtime",
+      "emergency-control",
       "policy-engine"
     ],
     [
-      "swarm-runtime",
+      "emergency-control",
+      "secure-supply-chain"
+    ],
+    [
+      "entity-resolution",
       "audit-provenance"
     ],
     [
-      "swarm-runtime",
-      "sandbox-security"
+      "entity-resolution",
+      "compliance-governance"
     ],
     [
-      "swarm-coordination",
-      "swarm-runtime"
+      "entity-resolution",
+      "emergency-control"
     ],
     [
-      "swarm-coordination",
-      "aix-core"
+      "entity-resolution",
+      "identity-trust"
     ],
     [
-      "swarm-coordination",
-      "discovery-network"
+      "entity-resolution",
+      "osint-evidence"
     ],
     [
-      "swarm-coordination",
-      "capability-registry"
+      "entity-resolution",
+      "policy-engine"
     ],
     [
-      "swarm-state-mesh",
-      "swarm-runtime"
-    ],
-    [
-      "swarm-state-mesh",
-      "swarm-coordination"
-    ],
-    [
-      "swarm-state-mesh",
-      "audit-provenance"
-    ],
-    [
-      "osint-source-registry",
-      "resource-manifest"
-    ],
-    [
-      "osint-source-registry",
+      "entity-resolution",
       "schema-registry"
     ],
     [
-      "osint-source-registry",
+      "entity-resolution",
+      "secure-supply-chain"
+    ],
+    [
+      "federation-network",
       "audit-provenance"
+    ],
+    [
+      "federation-network",
+      "compliance-governance"
+    ],
+    [
+      "federation-network",
+      "discovery-network"
+    ],
+    [
+      "federation-network",
+      "emergency-control"
+    ],
+    [
+      "federation-network",
+      "identity-trust"
+    ],
+    [
+      "federation-network",
+      "policy-engine"
+    ],
+    [
+      "federation-network",
+      "secure-supply-chain"
+    ],
+    [
+      "federation-network",
+      "swarm-coordination"
+    ],
+    [
+      "foundation",
+      "master"
+    ],
+    [
+      "human-guide",
+      "master"
+    ],
+    [
+      "identity-trust",
+      "foundation"
+    ],
+    [
+      "identity-trust",
+      "policy-engine"
+    ],
+    [
+      "integration",
+      "foundation"
+    ],
+    [
+      "integration",
+      "identity-trust"
+    ],
+    [
+      "integration",
+      "master"
+    ],
+    [
+      "integration",
+      "resource-manifest"
+    ],
+    [
+      "integration",
+      "schema-registry"
+    ],
+    [
+      "integration",
+      "secure-supply-chain"
+    ],
+    [
+      "knowledge-graph",
+      "entity-resolution"
+    ],
+    [
+      "knowledge-graph",
+      "osint-evidence"
+    ],
+    [
+      "osint-collection",
+      "audit-provenance"
+    ],
+    [
+      "osint-collection",
+      "compliance-governance"
+    ],
+    [
+      "osint-collection",
+      "emergency-control"
+    ],
+    [
+      "osint-collection",
+      "identity-trust"
     ],
     [
       "osint-collection",
@@ -238,11 +318,19 @@
     ],
     [
       "osint-collection",
-      "identity-trust"
+      "secure-supply-chain"
     ],
     [
-      "osint-collection",
+      "osint-evidence",
       "audit-provenance"
+    ],
+    [
+      "osint-evidence",
+      "compliance-governance"
+    ],
+    [
+      "osint-evidence",
+      "emergency-control"
     ],
     [
       "osint-evidence",
@@ -250,43 +338,79 @@
     ],
     [
       "osint-evidence",
-      "audit-provenance"
-    ],
-    [
-      "osint-evidence",
       "secure-supply-chain"
     ],
     [
-      "entity-resolution",
-      "osint-evidence"
+      "osint-source-registry",
+      "audit-provenance"
     ],
     [
-      "entity-resolution",
+      "osint-source-registry",
+      "resource-manifest"
+    ],
+    [
+      "osint-source-registry",
       "schema-registry"
     ],
     [
-      "knowledge-graph",
-      "osint-evidence"
+      "policy-engine",
+      "foundation"
     ],
     [
-      "knowledge-graph",
-      "entity-resolution"
+      "resource-manifest",
+      "foundation"
     ],
     [
-      "tool-adapters",
-      "aix-core"
+      "resource-manifest",
+      "identity-trust"
     ],
     [
-      "tool-adapters",
-      "transport-gateway"
+      "resource-manifest",
+      "schema-registry"
     ],
     [
-      "tool-adapters",
+      "sandbox-security",
+      "audit-provenance"
+    ],
+    [
+      "sandbox-security",
+      "compliance-governance"
+    ],
+    [
+      "sandbox-security",
+      "emergency-control"
+    ],
+    [
+      "sandbox-security",
+      "identity-trust"
+    ],
+    [
+      "sandbox-security",
       "policy-engine"
     ],
     [
-      "tool-adapters",
-      "sandbox-security"
+      "sandbox-security",
+      "secure-supply-chain"
+    ],
+    [
+      "schema-registry",
+      "foundation"
+    ],
+    [
+      "secure-supply-chain",
+      "audit-provenance"
+    ],
+    [
+      "secure-supply-chain",
+      "foundation"
+    ],
+    [
+      "secure-supply-chain",
+      "identity-trust"
+    ],
+    [
+      "skill-library",
+      "policy-engine"
     ],
     [
       "skill-library",
@@ -298,195 +422,83 @@
     ],
     [
       "skill-library",
-      "policy-engine"
-    ],
-    [
-      "skill-library",
       "tool-adapters"
     ],
     [
-      "sandbox-security",
-      "identity-trust"
-    ],
-    [
-      "sandbox-security",
-      "policy-engine"
-    ],
-    [
-      "sandbox-security",
-      "audit-provenance"
-    ],
-    [
-      "sandbox-security",
-      "secure-supply-chain"
-    ],
-    [
-      "conformance-lab",
+      "swarm-coordination",
       "aix-core"
     ],
     [
-      "conformance-lab",
-      "aix-codecs"
+      "swarm-coordination",
+      "capability-registry"
     ],
     [
-      "conformance-lab",
-      "transport-gateway"
-    ],
-    [
-      "conformance-lab",
-      "swarm-runtime"
-    ],
-    [
-      "conformance-lab",
-      "secure-supply-chain"
-    ],
-    [
-      "federation-network",
-      "identity-trust"
-    ],
-    [
-      "federation-network",
+      "swarm-coordination",
       "discovery-network"
     ],
     [
-      "federation-network",
+      "swarm-coordination",
+      "swarm-runtime"
+    ],
+    [
+      "swarm-runtime",
+      "audit-provenance"
+    ],
+    [
+      "swarm-runtime",
+      "identity-trust"
+    ],
+    [
+      "swarm-runtime",
+      "policy-engine"
+    ],
+    [
+      "swarm-runtime",
+      "sandbox-security"
+    ],
+    [
+      "swarm-state-mesh",
+      "audit-provenance"
+    ],
+    [
+      "swarm-state-mesh",
       "swarm-coordination"
     ],
     [
-      "federation-network",
+      "swarm-state-mesh",
+      "swarm-runtime"
+    ],
+    [
+      "tool-adapters",
+      "aix-core"
+    ],
+    [
+      "tool-adapters",
       "policy-engine"
     ],
     [
-      "federation-network",
-      "audit-provenance"
+      "tool-adapters",
+      "sandbox-security"
     ],
     [
-      "foundation",
-      "master"
+      "tool-adapters",
+      "transport-gateway"
     ],
     [
-      "emergency-control",
-      "foundation"
+      "transport-gateway",
+      "aix-codecs"
     ],
     [
-      "emergency-control",
+      "transport-gateway",
+      "aix-core"
+    ],
+    [
+      "transport-gateway",
       "identity-trust"
     ],
     [
-      "emergency-control",
+      "transport-gateway",
       "policy-engine"
-    ],
-    [
-      "emergency-control",
-      "audit-provenance"
-    ],
-    [
-      "emergency-control",
-      "secure-supply-chain"
-    ],
-    [
-      "compliance-governance",
-      "master"
-    ],
-    [
-      "compliance-governance",
-      "foundation"
-    ],
-    [
-      "compliance-governance",
-      "identity-trust"
-    ],
-    [
-      "compliance-governance",
-      "policy-engine"
-    ],
-    [
-      "compliance-governance",
-      "audit-provenance"
-    ],
-    [
-      "compliance-governance",
-      "secure-supply-chain"
-    ],
-    [
-      "sandbox-security",
-      "emergency-control"
-    ],
-    [
-      "sandbox-security",
-      "compliance-governance"
-    ],
-    [
-      "osint-collection",
-      "emergency-control"
-    ],
-    [
-      "osint-collection",
-      "compliance-governance"
-    ],
-    [
-      "osint-collection",
-      "secure-supply-chain"
-    ],
-    [
-      "osint-evidence",
-      "emergency-control"
-    ],
-    [
-      "osint-evidence",
-      "compliance-governance"
-    ],
-    [
-      "entity-resolution",
-      "identity-trust"
-    ],
-    [
-      "entity-resolution",
-      "policy-engine"
-    ],
-    [
-      "entity-resolution",
-      "audit-provenance"
-    ],
-    [
-      "entity-resolution",
-      "emergency-control"
-    ],
-    [
-      "entity-resolution",
-      "compliance-governance"
-    ],
-    [
-      "entity-resolution",
-      "secure-supply-chain"
-    ],
-    [
-      "conformance-lab",
-      "foundation"
-    ],
-    [
-      "conformance-lab",
-      "schema-registry"
-    ],
-    [
-      "conformance-lab",
-      "identity-trust"
-    ],
-    [
-      "conformance-lab",
-      "policy-engine"
-    ],
-    [
-      "conformance-lab",
-      "audit-provenance"
-    ],
-    [
-      "conformance-lab",
-      "emergency-control"
-    ],
-    [
-      "conformance-lab",
-      "compliance-governance"
     ]
   ],
   "excluded": [
