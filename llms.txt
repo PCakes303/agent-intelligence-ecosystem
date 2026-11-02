@@ -19,7 +19,7 @@ This repository is the public ecosystem control plane. It owns the authoritative
 
 ## Existing public portfolio repositories
 
-There are currently 21 existing public portfolio repositories. Existence does not imply production maturity.
+There are currently 22 existing public portfolio repositories. Existence does not imply production maturity.
 
 ### Control plane and ecosystem-facing
 - [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem): canonical registry, governance, architecture and dependency control plane.
@@ -52,13 +52,15 @@ There are currently 21 existing public portfolio repositories. Existence does no
 - [osint-source-registry](https://github.com/PCakes303/osint-source-registry): review-gated source metadata catalog; no collection or crawling client.
 - [intelligence-knowledge-graph](https://github.com/PCakes303/intelligence-knowledge-graph): experimental provenance-aware graph model for source, evidence, entity and relationship records.
 
+### Adoption and tooling
+- [agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters): experimental Python adapter registry with explicit capabilities, policy-gated invocation and bounded JSON payloads; no bundled third-party adapters or sandbox runtime.
+
 ## Planned public repositories
 
-Eight approved public portfolio repositories remain to be created:
+Seven approved public portfolio repositories remain to be created:
 - [osint-collection-framework](https://github.com/PCakes303/osint-collection-framework): authorized, policy-checked collection with reproducible logs.
 - [osint-evidence-engine](https://github.com/PCakes303/osint-evidence-engine): immutable evidence records, hashes, provenance and transformation history.
 - [osint-entity-resolution](https://github.com/PCakes303/osint-entity-resolution): ambiguity-aware entity correlation with calibrated confidence and human review.
-- [agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters): permissioned adapters for existing tools.
 - [agent-skill-library](https://github.com/PCakes303/agent-skill-library): versioned, discoverable and policy-bound reusable workflows.
 - [agent-sandbox-security](https://github.com/PCakes303/agent-sandbox-security): enforced isolation and resource boundaries for untrusted workloads.
 - [agent-conformance-lab](https://github.com/PCakes303/agent-conformance-lab): executable protocol, compatibility and security conformance tests.
@@ -68,7 +70,7 @@ These links are roadmap identifiers, not claims that the repositories already ex
 
 ## Architecture and status
 - Portfolio: 30 repositories total; 29 public and 1 private.
-- Latest account audit: 21 existing public portfolio repositories, 8 public repositories not yet created, and 1 existing private operations repository.
+- Latest account audit: 22 existing public portfolio repositories, 7 public repositories not yet created, and 1 existing private operations repository.
 - The separate `PCakes303/PCakes303` profile repository is excluded from the 30-repository portfolio.
 - Public discovery excludes private operational content.
 - Maturity is repository-specific. Consult the status tracker and repository-local tests/CI before claiming a feature is implemented.
