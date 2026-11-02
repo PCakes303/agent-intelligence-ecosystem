@@ -294,7 +294,7 @@
       "role": "Secure transport and integration with existing agent protocols.",
       "repository_url": "https://github.com/PCakes303/agent-transport-gateway",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Not started; initial scaffold prepared in master staging",
       "priority": "P0",
       "dependencies": [
         "aix-core",
