@@ -22,7 +22,7 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41428554295",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41428803112",
       "conclusion": "success"
     },
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
@@ -86,7 +86,7 @@
     "osint-source-registry": "https://github.com/PCakes303/osint-source-registry/actions/runs/41428118849",
     "intelligence-knowledge-graph": {
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
-      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428337519",
+      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428614407",
       "python_versions": [
         "3.10",
         "3.11",
