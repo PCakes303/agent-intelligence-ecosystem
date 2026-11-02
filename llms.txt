@@ -14,7 +14,7 @@ This repository is the public ecosystem control plane. It owns the authoritative
 - [Dependency graph](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/dependencies.json): cross-repository relationships.
 - [AI discoverability contract](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/AI-DISCOVERABILITY.md): llms.txt, agent instructions, metadata, MCP, A2A and security.
 - [GitHub About metadata](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/GITHUB-REPOSITORY-ABOUT-METADATA.md): individualized descriptions and topic sets for existing public repositories.
-- [Roadmap](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/ROADMAP.md)
+- [Safety and emergency-stop ADR](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/adr/0004-safety-emergency-stop-compliance.md): mandatory safety, distributed emergency stop, and compliance-by-design release gates.\n- [Colorado/federal compliance charter](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/COMPLIANCE-MANAGEMENT-SYSTEM.md): source-linked applicability and control governance.\n- [Repository 26 — Sandbox Security](https://github.com/PCakes303/agent-sandbox-security): experimental admission contract; no OS isolation or workload execution.\n- [Roadmap](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/ROADMAP.md)
 - [Security policy](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/SECURITY.md)
 
 ## Existing public portfolio repositories
