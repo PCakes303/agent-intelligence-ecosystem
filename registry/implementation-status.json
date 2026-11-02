@@ -172,10 +172,10 @@
       "layer": "protocols",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Experimental contract and lifecycle validator in master; standalone repo absent",
+      "status": "Experimental AIX semantic envelope, task lifecycle, mapping guidance, schema validator, fixtures, tests and CI staged in master; standalone remote not yet created",
       "priority": "P0",
       "importance": "Canonical task/intent semantics shared by agents and transports.",
-      "next_gate": "Provision repo; freeze envelope semantics and add protocol conformance fixtures."
+      "next_gate": "Create public remote, deploy staged bundle and verify standalone CI; then develop concrete MCP/A2A mapping profiles and interoperability conformance tests."
     },
     {
       "number": "12",
