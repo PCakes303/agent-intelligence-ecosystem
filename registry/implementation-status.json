@@ -21,7 +21,7 @@
     "operational": "Control-plane tooling and CI currently run; not a claim that all ecosystem components are production-ready."
   },
   "verified_ci": {
-    "master": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41401860473",
+    "master": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41406760951",
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
     "mrcakes931-ecosystem": "https://github.com/PCakes303/mrcakes931-ecosystem/actions/runs/41393904496",
     "agent-ecosystem-integration": "https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41393949532",
@@ -30,7 +30,9 @@
     "agent-schema-registry": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41393937230",
     "agent-identity-trust": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41393944708",
     "agent-secure-supply-chain": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41398832132",
-    "agent-policy-engine": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896"
+    "agent-policy-engine": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896",
+    "agent-audit-provenance": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41406387372",
+    "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41406412416"
   },
   "repositories": [
     {
