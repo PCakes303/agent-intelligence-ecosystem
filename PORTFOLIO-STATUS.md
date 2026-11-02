@@ -11,18 +11,18 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 9 |
+| Public repositories currently present | 10 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 20 |
+| Public repositories not yet created | 19 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The account repository search found the nine public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 20 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The account repository search found the ten public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 19 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
 ## Status rules
 
 - **Operational control plane** means the master registry, validation tooling, starter build and CI are running. It does not mean all 30 projects are implemented.
 - **Scaffolded** means a repository exists with starter build/CI and some project-specific contracts or documentation. It does not mean the domain implementation is complete.
-- **Not created** means the approved repository is absent from the connected account repository search.
+- **Not created** means the approved repository is absent from the connected account repository search. **Scaffolded** means the remote repository now contains its starter contracts, code, tests and CI; production maturity is still assessed separately.
 - The private repository's contents were not inspected in this public portfolio audit.
 
 ## Repository-by-repository wireframe
@@ -40,7 +40,7 @@ The account repository search found the nine public portfolio repositories and t
 | 06 | [`agent-schema-registry`](https://github.com/PCakes303/agent-schema-registry) | foundation-security | **Scaffolded; starter build + CI verified** — Scaffolded; schema catalog and CI pass; compatibility runner missing | P0 | Versioned contracts underpin all inter-repository exchange. **Next:** Implement schema publication index and backward/forward compatibility runner. |
 | 07 | [`agent-identity-trust`](https://github.com/PCakes303/agent-identity-trust) | foundation-security | **Scaffolded; starter build + CI verified** — Scaffolded; identity contracts and CI pass; lifecycle/authenticated demo missing | P0 | Trust root for agent identity, delegation and authorization boundaries. **Next:** Implement issuance, rotation, revocation state machine and authenticated two-node demo. |
 | 08 | [`agent-secure-supply-chain`](https://github.com/PCakes303/agent-secure-supply-chain) | foundation-security | **Scaffolded; initial contract, validator, tests and CI workflow added** | P0 | Prevents unverified artifacts and releases entering trusted execution. **Next:** Implement SBOM generation, provenance binding, and cryptographic signature verification against an explicit trust policy. |
-| 09 | [`agent-policy-engine`](https://github.com/PCakes303/agent-policy-engine) | foundation-security | **Not created; source scaffold prepared in master** — schemas, evaluator, CLI, tests, docs, metadata and CI staged under `provisioning/staged/agent-policy-engine/` | P0 | Central enforcement of least privilege and explicit authorization. **Next:** Create empty public repo, copy staged bundle, run CI, then reconcile catalog. |
+| 09 | [`agent-policy-engine`](https://github.com/PCakes303/agent-policy-engine) | foundation-security | **Scaffolded; 24 files published; CI verification pending** — deterministic default-deny evaluator, JSON Schemas, CLI, examples, tests, docs and workflow | P0 | Central decision logic for least privilege and explicit authorization. **Next:** Verify final CI; implement policy bundle versioning, authentication-context integration and enforcement adapters. |
 | 10 | [`agent-audit-provenance`](https://github.com/PCakes303/agent-audit-provenance) | foundation-security | **Not created; not started** — Master-repo event contract, validator and hash-chain utility only | P0 | Accountability, traceability and forensic evidence across all components. **Next:** Provision repo; implement authenticated event pipeline, retention and integrity checkpoints. |
 | 11 | [`aix-core`](https://github.com/PCakes303/aix-core) | protocols | **Not created; not started** — Experimental contract and lifecycle validator in master; standalone repo absent | P0 | Canonical task/intent semantics shared by agents and transports. **Next:** Provision repo; freeze envelope semantics and add protocol conformance fixtures. |
 | 12 | [`aix-codecs`](https://github.com/PCakes303/aix-codecs) | protocols | **Not created; not started** — Not started | P0 | Deterministic serialization is required for interoperable AIX messages. **Next:** Build canonical JSON encoder/decoder, round-trip and canonicalization tests. |
