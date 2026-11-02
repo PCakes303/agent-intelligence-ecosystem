@@ -113,7 +113,7 @@
       "name": "agent-secure-supply-chain",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Release integrity, SBOMs, provenance, dependency and vulnerability management.",
       "dependencies": [
         "foundation",
