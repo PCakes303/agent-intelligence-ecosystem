@@ -14,6 +14,6 @@
     "secure-supply-chain"
   ],
   "entrypoint": "compliance_governance/validate_registry.py",
-  "license_status": "pending-portfolio-review",
+  "license_status": "scoped-mixed-license-declared; provenance-review-pending",
   "compliance_certification": false
 }
