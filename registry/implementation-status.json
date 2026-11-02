@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 14,
+    "public_existing": 15,
     "private_existing": 1,
-    "public_not_created": 15,
+    "public_not_created": 14,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 14,
-    "public_repositories_missing": 15
+    "public_repositories_present": 15,
+    "public_repositories_missing": 14
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -34,7 +34,8 @@
     "agent-audit-provenance": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41406387372",
     "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41406412416",
     "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41408761297",
-    "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293"
+    "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293",
+    "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41410840515"
   },
   "repositories": [
     {
@@ -211,11 +212,11 @@
       "name": "agent-discovery-network",
       "layer": "swarm",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Staging packet prepared in master; standalone public remote not yet created",
+      "existence": "exists",
+      "status": "Scaffolded; 17 files published; GitHub Actions CI passed on Python 3.10, 3.11 and 3.12",
       "priority": "P1",
-      "importance": "Lets nodes locate trusted agents and services without hard-coded peers.",
-      "next_gate": "Create PCakes303/agent-discovery-network, deploy the staged 17-file bundle and verify CI; then integrate canonical schemas, cryptographic signature verification and authenticated transport."
+      "importance": "Trust-filtered discovery of candidate agents, resources and services with bounded record expiry.",
+      "next_gate": "Bind records to canonical Resource Manifest and Capability Registry schemas; implement reviewed cryptographic signature verification and identity/key lifecycle; add authenticated publish/query API, distributed storage and adversarial tests. Discovery is not authentication or authorization."
     },
     {
       "number": "15",
