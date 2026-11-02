@@ -22,8 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41434406452",
-      "conclusion": "success"
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41436978148",
+      "conclusion": "success",
+      "tests": 47
     },
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
     "mrcakes931-ecosystem": "https://github.com/PCakes303/mrcakes931-ecosystem/actions/runs/41393904496",
@@ -117,6 +118,18 @@
       ],
       "jobs": "all passed",
       "tests": 18
+    },
+    "agent-sandbox-security": {
+      "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
+      "workflow_run": "https://github.com/PCakes303/agent-sandbox-security/actions/runs/41436514479",
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "jobs": "all passed",
+      "tests": 13,
+      "staging_parity": "14 product files; exact Git blob SHA match"
     }
   },
   "repositories": [
@@ -439,7 +452,7 @@
       "layer": "adoption",
       "visibility": "public",
       "existence": "exists",
-      "status": "Experimental; policy contract and fail-closed validator staged; no OS sandbox or workload execution; 13 unit tests pending remote CI",
+      "status": "Experimental; 14 files deployed; 13 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified; no OS isolation or workload execution.",
       "priority": "P0",
       "importance": "Execution isolation and security boundary for tools, skills and workloads.",
       "next_gate": "Implement and independently review an OS isolation backend; integrate emergency-stop authority, identity, policy, revocation, artifact verification, audit and compliance controls; adversarially test resource, filesystem, network and tenant isolation."
