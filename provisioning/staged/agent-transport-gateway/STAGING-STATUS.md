@@ -1,9 +1,13 @@
-# Repository 13 staging status
+# Repository 13 deployment status
 
-`agent-transport-gateway` has a prepared initial scaffold in the master control plane.
+**Repository:** https://github.com/PCakes303/agent-transport-gateway  
+**Deployment:** 14 files published to the `main` branch.  
+**CI:** Passed on Python 3.10, 3.11 and 3.12: https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293
 
-Included: architecture and transport contract, threat model, security and contributor guidance, repository manifest, capabilities and compatibility metadata, llms.txt, request guard implementation, unit tests and Python 3.10–3.12 CI workflow.
+The scaffold provides a transport-neutral request guard for body-size limits, timestamp freshness, process-local nonce replay detection, and fail-closed authorization callback integration.
 
-Not included: network listeners, HTTP/MCP/A2A adapters, caller authentication, credential issuance, cryptographic signature verification, production policy service, distributed replay store, TLS termination, rate limiting or production certification.
+## Maturity and limitations
 
-**Next action:** create the public standalone remote `PCakes303/agent-transport-gateway`, deploy this bundle, and run the CI matrix. The scaffold must not be described as a production secure gateway.
+This is an experimental guard, not a production gateway. It does not authenticate principals, verify cryptographic signatures, provide network listeners or HTTP/MCP/A2A adapters, supply a production authorization service, or provide durable/distributed replay storage. The principal must be established by a trusted upstream component.
+
+License selection remains pending portfolio review. The standalone public repository is authoritative for current implementation.
