@@ -138,7 +138,7 @@
       "visibility": "public",
       "layer": "foundation-security",
       "status": "scaffolding",
-      "role": "Portable audit event contracts, traceability, and deterministic hash-chained records; authenticated and signed provenance remain future work.",
+      "role": "Portable audit event contracts, traceability, deterministic hash-chained records, and shared v1.1.0 capability metadata; authenticated and signed provenance remain future work.",
       "dependencies": [
         "foundation",
         "schema-registry",
@@ -151,7 +151,7 @@
       "visibility": "public",
       "layer": "protocols",
       "status": "scaffolding",
-      "role": "Experimental semantic interoperability specification for intent, tasks, responses, capabilities, context, status, errors, and provenance; extension layer over established protocols and transports.",
+      "role": "Experimental semantic interoperability specification for intent, tasks, responses, capabilities, context, status, errors, and provenance; extension layer over established protocols and transports with shared v1.1.0 capability metadata.",
       "dependencies": [
         "foundation",
         "schema-registry",
