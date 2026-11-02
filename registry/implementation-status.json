@@ -22,7 +22,7 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41423496928",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41428554295",
       "conclusion": "success"
     },
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
@@ -36,9 +36,9 @@
     "agent-policy-engine": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896",
     "agent-audit-provenance": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41421033960",
     "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41421093275",
-    "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41421076262",
-    "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41421064670",
-    "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41421051787",
+    "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41427817571",
+    "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41427827799",
+    "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147",
     "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413613566",
     "swarm-runtime": {
       "repository_url": "https://github.com/PCakes303/swarm-runtime",
@@ -83,7 +83,18 @@
       "jobs": "all passed",
       "tests": 15
     },
-    "osint-source-registry": "https://github.com/PCakes303/osint-source-registry/actions/runs/41425236178"
+    "osint-source-registry": "https://github.com/PCakes303/osint-source-registry/actions/runs/41428118849",
+    "intelligence-knowledge-graph": {
+      "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
+      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428337519",
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "jobs": "all passed",
+      "tests": 15
+    }
   },
   "repositories": [
     {
@@ -321,7 +332,7 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 23 files published; remote main tree verified; Python 3.10, 3.11 and 3.12 GitHub Actions CI passed (run 41425236178). Source metadata catalog only; no collection client.",
+      "status": "Scaffolded; 23 files published; remote tree verified; Python 3.10, 3.11 and 3.12 GitHub Actions CI passed (run 41428118849). Source metadata catalog only; no collection client.",
       "priority": "P2",
       "importance": "Records lawful source access, licensing, limits and reliability metadata.",
       "next_gate": "Add authenticated review, signed approval records and Audit & Provenance integration; preserve source-term, licensing, privacy, purpose, rate-limit and retention checks before any collector integration."
@@ -369,7 +380,7 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "exists",
-      "status": "Experimental; 29 files published; 15 unit tests and synthetic graph validation passed on Python 3.10, 3.11 and 3.12; dependency-order loading fix verified (run 41426963318).",
+      "status": "Experimental; 29 files published; 15 unit tests and synthetic graph validation passed on Python 3.10, 3.11 and 3.12; capability/compatibility metadata normalized to v1.1.0 and validated by master starter build (run 41428337519).",
       "priority": "P2",
       "importance": "Connects sources, evidence, entities and relationships for analysis.",
       "next_gate": "Verify upstream osint-evidence and entity-resolution contracts, then implement reviewed adapters and cross-repository provenance/conformance fixtures. License remains pending portfolio review."
@@ -484,7 +495,7 @@
     "repository": "osint-source-registry",
     "path": "provisioning/staged/osint-source-registry",
     "file_count": 23,
-    "status": "Deployed to PCakes303/osint-source-registry; 23-file remote tree verified; Python 3.10–3.12 CI passed (run 41425236178). Staging packet retained as the master-side reference."
+    "status": "Deployed to PCakes303/osint-source-registry; 23-file remote tree verified; Python 3.10–3.12 CI passed (run 41428118849). Staging packet retained as the master-side reference copy."
   },
   "prepared_staging_history": [
     {
