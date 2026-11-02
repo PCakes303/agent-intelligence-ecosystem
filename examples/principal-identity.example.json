@@ -1,0 +1,12 @@
+{
+  "identity_version":"1.0.0",
+  "principal_id":"spiffe://example.org/agent/source-reviewer",
+  "principal_type":"agent",
+  "trust_domain":"example.org",
+  "issuer":"spiffe://example.org",
+  "status":"active",
+  "authentication_methods":["spiffe","mtls"],
+  "issued_at":"2026-11-01T20:00:00Z",
+  "expires_at":"2026-11-02T20:00:00Z",
+  "credential_refs":["secrets-manager://identity/example/source-reviewer"]
+}
