@@ -84,6 +84,21 @@ class CollectionPlannerTests(unittest.TestCase):
         with self.assertRaisesRegex(PlanError, "request schema"):
             validate_collection_plan(self.source, self.request, ALLOW, now=self.now)
 
+    def test_target_reference_uses_non_personal_namespace(self):
+        self.request["target_ref"] = "person:somebody"
+        with self.assertRaisesRegex(PlanError, "non-personal namespace"):
+            validate_collection_plan(self.source, self.request, ALLOW, now=self.now)
+
+    def test_malformed_source_type_fails_closed(self):
+        self.source["source_type"] = []
+        with self.assertRaisesRegex(PlanError, "source type"):
+            validate_collection_plan(self.source, self.request, ALLOW, now=self.now)
+
+    def test_unknown_source_fields_are_rejected(self):
+        self.source["fetch_url"] = "https://example.org/private"
+        with self.assertRaisesRegex(PlanError, "unknown fields"):
+            validate_collection_plan(self.source, self.request, ALLOW, now=self.now)
+
     def test_request_expiry_and_future_skew_are_enforced(self):
         self.request["expires_at"] = (self.now+timedelta(minutes=6)).isoformat()
         with self.assertRaisesRegex(PlanError, "five-minute"):
