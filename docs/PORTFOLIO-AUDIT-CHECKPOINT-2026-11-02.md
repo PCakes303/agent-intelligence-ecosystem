@@ -73,25 +73,39 @@ Path and Git blob-SHA comparisons were performed against live `main` trees for 1
 
 Four drifted packets (Audit Provenance, AIX Core, AIX Codecs and Knowledge Graph) were refreshed. Six repositories now have exact path/blob-SHA parity; two have exact product-file parity with a staging-only administrative file. Five repositories need retained staging packets created or their evidence model formally changed. Do not claim portfolio-wide staging parity.
 
-## GitHub About metadata and licensing
+## Licensing policy — approved and applied
 
-A live API recheck of all 24 public portfolio repositories found:
+The portfolio owner approved this mixed-license split on 2026-11-02. A scoped `LICENSE.md` containing the policy and complete Apache-2.0 and CC BY 4.0 texts was committed to all 24 existing public portfolio repositories, including the master control plane and the public human-facing guide.
+
+- Original source code, tests, build/CI scripts, software interfaces and machine-readable schemas/specifications/configuration: **Apache-2.0**.
+- Original human-readable documentation, README files, guides, tutorials, explanatory diagrams and prose: **CC BY 4.0**.
+- Third-party code/content: retains its upstream license, attribution and NOTICE requirements.
+- Datasets, evidence, fixtures, sample payloads, logos, images, media and generated artifacts: no blanket license; provenance and redistribution rights require item-specific review.
+- Uncertain-provenance material: not licensed until cleared.
+- The private operations repository is excluded pending a separate internal licensing review.
+
+The policy is scoped to material whose contributors have the rights to grant the relevant license. File-specific notices and upstream terms take precedence. This repository-level policy does not itself prove the provenance or ownership of every existing file. A follow-up file-by-file provenance/notice audit remains required before representing the entire contents of every repository as fully cleared.
+
+The two canonical license texts are included in each repository's `LICENSE.md`; their canonical sources are [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
+
+## GitHub About metadata
+
+A live GitHub API recheck of all 24 public portfolio repositories found:
 
 - 9 repositories have a description; 15 have no description.
 - All 24 have an empty homepage field.
 - All 24 have an empty topics list.
-- No GitHub license declaration was returned for any of the 24.
 
 Descriptions currently exist on: `swarm-coordination`, `agent-policy-engine`, `swarm-state-mesh`, `agent-transport-gateway`, `aix-codecs`, `agent-capability-registry`, `osint-source-registry`, `agent-discovery-network`, and `swarm-runtime`. The policy-engine description has topic keywords incorrectly appended to descriptive prose.
 
-The connected GitHub actions available in this session do not expose repository About metadata mutation. Metadata must be applied through an authorized GitHub settings workflow and re-read afterward. No license file or license declaration should be added until the repository/artifact-specific mixed-license decisions are explicitly approved.
+The connected GitHub actions available in this session do not expose repository About metadata mutation. Metadata must be applied through an authorized GitHub settings workflow and re-read afterward.
 
 ## Remaining portfolio-wide gates
 
 1. Finish the four queued current-head CI runs and the latest master CI run.
 2. Create/refresh retained staging packets for the five repositories listed above; verify path/blob-SHA parity after synchronization.
 3. Apply accurate repository descriptions, the common master homepage and repository-specific topics; re-read the live settings.
-4. Make explicit code, documentation, schema/specification, example/data and dependency-license decisions per repository.
+4. Complete a file-by-file provenance and third-party notice audit; the approved repository-level mixed-license policy is now applied, but it does not clear uncertain or externally authored files.
 5. Verify private vulnerability reporting/security advisories, branch rulesets/protection, Actions token permissions, secret scanning, push protection and dependency alerts. These settings were not verified through the available integration.
 6. Continue component issue remediation. Local schema/unit-test success does not close architectural gates such as authenticated identity, durable/shared state, cryptographic trust, distributed replay protection, actual OS sandbox isolation, cross-repository runtime integration or production emergency-stop enforcement.
 7. Preserve truthful maturity labels: experimental reference implementations and contract scaffolds are not production services or interoperability certification.
