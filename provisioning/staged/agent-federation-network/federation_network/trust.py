@@ -36,26 +36,31 @@ def validate_peer_record(record: Mapping[str, Any], *, now: datetime | None = No
     endpoint = record["endpoint"]
     if not isinstance(endpoint, str) or len(endpoint) > 512:
         raise PeerRecordError("endpoint must be a bounded HTTPS URL")
-    parsed = urlsplit(endpoint)
-    if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password or parsed.fragment:
-        raise PeerRecordError("endpoint must be HTTPS without userinfo or fragment")
+    try:
+        parsed = urlsplit(endpoint)
+        hostname = parsed.hostname
+        port = parsed.port
+    except ValueError as exc:
+        raise PeerRecordError("endpoint URL is malformed") from exc
+    if parsed.scheme != "https" or not hostname or any(ch.isspace() for ch in hostname) or parsed.username or parsed.password or parsed.fragment or (port is not None and not 1 <= port <= 65535):
+        raise PeerRecordError("endpoint must be HTTPS without userinfo or fragment and with a valid host/port")
     if not isinstance(record["scope"], list) or not record["scope"] or len(record["scope"]) > 32:
         raise PeerRecordError("scope must contain 1 to 32 entries")
     if any(not isinstance(item, str) or not _ID.fullmatch(item) for item in record["scope"]):
         raise PeerRecordError("scope entries must be bounded identifiers")
     if len(set(record["scope"])) != len(record["scope"]):
         raise PeerRecordError("scope entries must be unique")
-    if record["trust_state"] not in {"pending", "active", "revoked"}:
+    if not isinstance(record["trust_state"], str) or record["trust_state"] not in {"pending", "active", "revoked"}:
         raise PeerRecordError("trust_state is invalid")
-    if record["stop_state"] not in {"clear", "stopped"}:
+    if not isinstance(record["stop_state"], str) or record["stop_state"] not in {"clear", "stopped"}:
         raise PeerRecordError("stop_state is invalid")
     if not isinstance(record["trust_anchor_sha256"], str) or not _DIGEST.fullmatch(record["trust_anchor_sha256"]):
         raise PeerRecordError("trust anchor digest must be lowercase SHA-256 hex")
     if not isinstance(record["approval_ref"], str) or not record["approval_ref"] or len(record["approval_ref"]) > 256:
         raise PeerRecordError("approval_ref must be a bounded non-empty reference")
     expires = _timestamp(record["expires_at"])
-    current = now or datetime.now(timezone.utc)
-    if current.tzinfo is None or current.utcoffset() is None:
+    current = now if now is not None else datetime.now(timezone.utc)
+    if not isinstance(current, datetime) or current.tzinfo is None or current.utcoffset() is None:
         raise PeerRecordError("now must be timezone-aware")
     if expires <= current:
         raise PeerRecordError("peer trust declaration is expired")
