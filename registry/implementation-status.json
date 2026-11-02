@@ -270,7 +270,34 @@
       "status": "Scaffolded; entry-level build and CI pass; domain capability partial",
       "priority": "P1",
       "importance": "Public machine-readable discovery entrypoint and capability index.",
-      "next_gate": "Define discovery metadata contract and validate publishing/index generation."
+      "next_gate": "Harden strict parsing and bounded field validation, align runtime/schema URI and timestamp rules, verify private reporting/About/settings, and keep hosted endpoint/publisher authentication planned.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "f9aefb7edce2ae49cbaabea71c28d37c0b489814",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-ai-discovery-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-ai-discovery/issues/1",
+        "remediation_commits": [
+          "39873ac1b30e75df3216f81556010170be2a21d8",
+          "bd9c5a4b85ac7091a972b91b2959676c4231f6d0",
+          "155c4a0c44519f7280aec50b7885c61da0ce49bb",
+          "f326dba4b5673008dc22b60181ec9267b74d9b69",
+          "07420b7da2cf11f6faa924abc6a26db7edaf7141",
+          "b60dd657ff7a0cac1ded9133830f10a4ccc71fec"
+        ],
+        "findings": [
+          "strict JSON duplicate-key/nonstandard-number handling and document/depth/resource/field bounds absent",
+          "publisher and resource field type validation incomplete",
+          "URI credentials/fragments and timezone-naive timestamps accepted",
+          "schema/runtime parity not tested",
+          "private reporting route not verified",
+          "GitHub About metadata missing",
+          "license pending review",
+          "no staging packet",
+          "repository administration controls unverified",
+          "no hosted discovery endpoint or publisher authentication"
+        ]
+      }
     },
     {
       "number": "02",
