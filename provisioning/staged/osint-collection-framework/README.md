@@ -25,3 +25,7 @@ See docs/COLLECTION-CONTRACT.md, docs/PRIVACY-AND-LAWFULNESS.md and docs/INTEGRA
 ## Licensing
 
 License selection is pending portfolio review. No license is asserted.
+
+## Licensing
+
+This repository applies the ecosystem's scoped mixed-license policy: original source code and machine-readable contracts are licensed under Apache-2.0; original human-readable documentation is licensed under CC BY 4.0. Third-party material retains upstream terms. Datasets, evidence, fixtures, sample payloads, media, and material with uncertain provenance are not blanket-licensed and require separate review. See [LICENSE.md](LICENSE.md).
