@@ -1,6 +1,6 @@
 # 30-Repository Portfolio Status and Work Tracker
 
-**As of:** 2026-11-01  
+**As of:** 2026-11-02  
 **Owner:** [PCakes303](https://github.com/PCakes303) · **Public identity:** [HuffmanMainNode](https://github.com/HuffmanMainNode)  
 **Master control plane:** [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem)
 
@@ -11,18 +11,18 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 8 |
+| Public repositories currently present | 9 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 21 |
+| Public repositories not yet created | 20 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The account repository search found the eight public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 21 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The account repository search found the nine public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 20 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
 ## Status rules
 
 - **Operational control plane** means the master registry, validation tooling, starter build and CI are running. It does not mean all 30 projects are implemented.
 - **Scaffolded** means a repository exists with starter build/CI and some project-specific contracts or documentation. It does not mean the domain implementation is complete.
-- **Not created** means the approved repository is absent from the connected account repository search.
+- **Scaffolded** means the approved repository is absent from the connected account repository search.
 - The private repository's contents were not inspected in this public portfolio audit.
 
 ## Repository-by-repository wireframe
