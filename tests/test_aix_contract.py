@@ -23,10 +23,9 @@ class AixContractTests(unittest.TestCase):
         message["chain_of_thought"] = "private reasoning must not be serialized"
         self.assertTrue(list(self.validator.iter_errors(message)))
 
-    def test_rejects_missing_idempotency_key_for_supplied_task(self):
+    def test_rejects_missing_task_objective(self):
         message = json.loads(json.dumps(self.example))
         del message["task"]["idempotency_key"]
-        # Idempotency is optional at this experimental stage; ensure malformed task still fails on missing objective.
         del message["task"]["objective"]
         self.assertTrue(list(self.validator.iter_errors(message)))
 
