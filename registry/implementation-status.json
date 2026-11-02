@@ -446,18 +446,6 @@
     },
     {
       "number": "27",
-      "id": "conformance-lab",
-      "name": "agent-conformance-lab",
-      "layer": "adoption",
-      "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started",
-      "priority": "P1",
-      "importance": "Proves protocol, security and compatibility behavior across implementations.",
-      "next_gate": "Build executable conformance suite and negative security fixtures."
-    },
-    {
-      "number": "27",
       "id": "emergency-control",
       "name": "agent-emergency-control",
       "layer": "foundation-security",
@@ -467,18 +455,6 @@
       "priority": "P0",
       "importance": "Independent emergency-stop authority and distributed stop enforcement.",
       "next_gate": "Publish stop-state machine, threat model, monotonic epoch protocol, revocation/quarantine interfaces, local enforcement contracts, controlled resume, and conformance tests."
-    },
-    {
-      "number": "28",
-      "id": "federation-network",
-      "name": "agent-federation-network",
-      "layer": "adoption",
-      "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started",
-      "priority": "P2",
-      "importance": "Allows independently operated networks to interoperate without shared root trust.",
-      "next_gate": "Prototype two-domain federation with explicit trust, authorization and revocation."
     },
     {
       "number": "28",
@@ -494,6 +470,30 @@
     },
     {
       "number": "29",
+      "id": "conformance-lab",
+      "name": "agent-conformance-lab",
+      "layer": "adoption",
+      "visibility": "public",
+      "existence": "not-created",
+      "status": "Not started",
+      "priority": "P1",
+      "importance": "Proves protocol, security and compatibility behavior across implementations.",
+      "next_gate": "Build executable conformance suite and negative security fixtures."
+    },
+    {
+      "number": "30",
+      "id": "federation-network",
+      "name": "agent-federation-network",
+      "layer": "adoption",
+      "visibility": "public",
+      "existence": "not-created",
+      "status": "Not started",
+      "priority": "P2",
+      "importance": "Allows independently operated networks to interoperate without shared root trust.",
+      "next_gate": "Prototype two-domain federation with explicit trust, authorization and revocation."
+    },
+    {
+      "number": "31",
       "id": "private-operations",
       "name": "agent-ecosystem-private",
       "layer": "restricted-operations",
