@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/compatibility.schema.json",
+  "title": "Ecosystem Repository Compatibility",
+  "type": "object",
+  "required": [
+    "compatibility_version",
+    "repository",
+    "policy",
+    "dependencies",
+    "tested_combinations",
+    "breaking_change_policy"
+  ],
+  "properties": {
+    "compatibility_version": {
+      "const": "1.1.0"
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "policy": {
+      "type": "string",
+      "minLength": 20
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "repository_id",
+          "version_range",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "repository_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "version_range": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "declared",
+              "tested",
+              "unsupported"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tested_combinations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "repositories",
+          "result",
+          "evidence"
+        ],
+        "properties": {
+          "repositories": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "result": {
+            "enum": [
+              "passed",
+              "failed"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 3
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "breaking_change_policy": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "additionalProperties": false
+}
