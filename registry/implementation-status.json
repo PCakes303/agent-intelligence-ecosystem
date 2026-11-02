@@ -1414,8 +1414,34 @@
       "swarm-state-mesh"
     ],
     "drift": {},
-    "verified_commit": "fa4cfd4c5452fc0a72e5023d788b164cad758829",
+    "verified_commit": "28693a3efe1ef3b0a120135c05655774f2085b4e",
     "next_gate": "Maintain exact parity by refreshing staging from live remotes after every remote remediation; rerun Git blob comparisons before portfolio sign-off.",
-    "refreshed_product_files": 76
+    "refreshed_product_files": 76,
+    "post_backcheck": [
+      {
+        "repository": "agent-transport-gateway",
+        "product_files": 14,
+        "blob_diffs": 0,
+        "verification": "Remote overflow-safe timestamp implementation and tests synchronized to staging; exact Git blob SHA parity verified."
+      },
+      {
+        "repository": "agent-discovery-network",
+        "product_files": 22,
+        "blob_diffs": 0,
+        "verification": "Remote numeric-overflow validation and tests synchronized to staging; exact Git blob SHA parity verified."
+      },
+      {
+        "repository": "swarm-coordination",
+        "product_files": 17,
+        "blob_diffs": 0,
+        "verification": "Overflow-safe lifecycle timestamp implementation and regression test synchronized to staging; exact Git blob SHA parity verified."
+      },
+      {
+        "repository": "intelligence-knowledge-graph",
+        "product_files": 29,
+        "blob_diffs": 0,
+        "verification": "Bounded path-query work budgets, tests, contract and capability metadata synchronized to staging; exact Git blob SHA parity verified."
+      }
+    ]
   }
 }
