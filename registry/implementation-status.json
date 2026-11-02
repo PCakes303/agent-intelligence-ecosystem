@@ -888,7 +888,26 @@
       "status": "Experimental; 17 files deployed; 18 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified.",
       "priority": "P2",
       "importance": "Makes reusable workflows discoverable, versioned and policy-bound.",
-      "next_gate": "Add signed publisher identity and artifact verification, pinned schema-registry publication, real policy-engine decision integration, adapter resolution, and cross-repository conformance tests. Do not execute workflows before sandbox isolation and runtime enforcement exist."
+      "next_gate": "Enforce workflow and Resource Manifest schemas in CI, add negative boundary tests, verify private reporting and About metadata, refresh staging parity, and retain declarative-only/non-executable status.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "d9c91cbfba7449bbb14064c92dd01f2b4d555038",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-skill-library-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-skill-library/issues/1",
+        "remediation_commits": [
+          "418b0a7eec1798697a41c62c2a543fc0a340ebed"
+        ],
+        "findings": [
+          "workflow validator does not enforce all Draft 2020-12 schema constraints or reject all unknown properties",
+          "private vulnerability reporting route not verified",
+          "GitHub About metadata missing",
+          "STAGING-STATUS.md absent and current parity evidence needs refresh",
+          "license pending review",
+          "repository administration controls unverified",
+          "no workflow execution, publisher authentication, signature verification, policy enforcement or sandbox"
+        ]
+      }
     },
     {
       "number": "26",
