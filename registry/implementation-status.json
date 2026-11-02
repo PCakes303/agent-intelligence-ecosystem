@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514352642",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
       "conclusion": "success",
-      "head_sha": "644104429b8b6b0e4ef2df1252d5a1b0f4f6a5a7",
+      "head_sha": "a60a5908153e3c80756150835a8c9c61dddbfcb3",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -259,9 +259,9 @@
     },
     "emergency-control-staging": {
       "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/agent-emergency-control",
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
       "conclusion": "success",
-      "head_sha": "5ba7d674727a828c9440d9599f711bf730a2d471",
+      "head_sha": "a60a5908153e3c80756150835a8c9c61dddbfcb3",
       "tests": 21,
       "python_versions": [
         "3.10",
@@ -272,9 +272,9 @@
     },
     "compliance-governance-staging": {
       "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/agent-compliance-governance",
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
       "conclusion": "success",
-      "head_sha": "5ba7d674727a828c9440d9599f711bf730a2d471",
+      "head_sha": "a60a5908153e3c80756150835a8c9c61dddbfcb3",
       "tests": 10,
       "python_versions": [
         "3.10",
@@ -288,9 +288,9 @@
     },
     "osint-collection-staging": {
       "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/osint-collection-framework",
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
       "conclusion": "success",
-      "head_sha": "780745443decb6316311f59ad1396ae30d82fce4",
+      "head_sha": "a60a5908153e3c80756150835a8c9c61dddbfcb3",
       "tests": 19,
       "python_versions": [
         "3.10",
@@ -1460,7 +1460,7 @@
       "repository": "osint-evidence-engine",
       "path": "provisioning/staged/osint-evidence-engine",
       "file_count": 23,
-      "status": "Prepared in master staging; public remote not yet created. Public non-personal evidence manifests, SHA-256 digest verification and deterministic hash-linked event chain only. No collection, persistence, signatures, trusted timestamping, legal holds or legal chain-of-custody certification."
+      "status": "Prepared in master staging; public remote not yet created. 21 tests passed on Python 3.10–3.12. Public non-personal evidence manifests, SHA-256 digest verification and deterministic hash-linked event chain only. No collection, persistence, signatures, trusted timestamping, legal holds or legal chain-of-custody certification."
     }
   ],
   "master_audit": {
