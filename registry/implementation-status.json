@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 21,
+    "public_existing": 22,
     "private_existing": 1,
-    "public_not_created": 8,
+    "public_not_created": 7,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 21,
-    "public_repositories_missing": 8
+    "public_repositories_present": 22,
+    "public_repositories_missing": 7
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -94,6 +94,17 @@
       ],
       "jobs": "all passed",
       "tests": 15
+    },
+    "agent-tool-adapters": {
+      "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
+      "workflow_run": "https://github.com/PCakes303/agent-tool-adapters/actions/runs/41431367932",
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "jobs": "all passed",
+      "tests": 13
     }
   },
   "repositories": [
@@ -391,11 +402,11 @@
       "name": "agent-tool-adapters",
       "layer": "adoption",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Prepared in master staging: experimental adapter registry, policy-gated invocation reference library, schema, threat model, tests and CI; not deployed",
+      "existence": "exists",
+      "status": "Experimental; 16 files deployed; 13 unit tests pass on Python 3.10, 3.11 and 3.12; remote/staging Git blob parity exact",
       "priority": "P1",
       "importance": "Connects existing tools to agents through consistent, permissioned interfaces.",
-      "next_gate": "Create the public remote; run the Python 3.10–3.12 matrix; verify exact remote/staging parity; then build real adapter and sandbox integrations with cross-repository evidence."
+      "next_gate": "Build a concrete adapter against an approved tool with explicit capability grants; integrate authenticated identity, policy-engine enforcement, transport and a verified sandbox only after those contracts are implemented and tested."
     },
     {
       "number": "25",
