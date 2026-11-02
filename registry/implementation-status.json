@@ -26,7 +26,8 @@
     "agent-foundation-spec": "https://github.com/PCakes303/agent-foundation-spec/actions/runs/41393932967",
     "agent-resource-manifest": "https://github.com/PCakes303/agent-resource-manifest/actions/runs/41393940798",
     "agent-schema-registry": "https://github.com/PCakes303/agent-schema-registry/actions/runs/41393937230",
-    "agent-identity-trust": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41393944708"
+    "agent-identity-trust": "https://github.com/PCakes303/agent-identity-trust/actions/runs/41393944708",
+    "agent-secure-supply-chain": "https://github.com/PCakes303/agent-secure-supply-chain/actions/runs/41398832132"
   },
   "repositories": [
     {
