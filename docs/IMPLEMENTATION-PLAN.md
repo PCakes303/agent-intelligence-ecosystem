@@ -2,16 +2,27 @@
 
 This plan defines deliverables and acceptance gates. It does not imply that future work is already implemented.
 
-## Batch 1 — Master control plane (current)
+## Batch 1 — Master control plane (implemented)
 - [x] Publish 30-entry registry and dependency graph.
 - [x] Publish architecture, governance, security, roadmap, and synchronization design.
-- [ ] Make registry validation executable and regression-tested.
-- [ ] Add manifest schema and reusable repository starter template.
-- [ ] Pin CI actions to immutable commit SHAs.
-- Acceptance: CI validates schema, exact registry/graph consistency, unique IDs/names, counts, private boundary, and acyclic dependencies; negative tests prove failures are caught.
+- [x] Add executable registry validation and regression tests.
+- [x] Add repository manifest schema and reusable repository starter template.
+- [x] Pin CI actions to immutable commit SHAs.
+- [x] Add public-only scaffold generator and explicit-confirmation GitHub CLI provisioner.
+- [x] Add machine-readable list of 28 missing public repositories.
+- Acceptance verified: CI validates schema, registry/graph consistency, unique IDs/names, counts, private boundary, acyclic dependencies, manifest template, resource manifest example, policy smoke test, and regression tests. Latest verified run before the current workflow update passed 25 tests; a new run is pending for the latest additions.
 
 ## Batch 2 — Foundation repository specifications (01–07)
-For each repository, produce requirements, threat model, normative schemas/contracts, executable reference tests, and a minimal working demonstration. No repository advances beyond research/scaffolding solely on prose.
+- [x] Add machine-readable initial requirements for all seven foundation/security repositories.
+- [x] Add resource manifest schema, example, CLI validator, and negative tests.
+- [x] Add principal identity schema and example.
+- [x] Add audit event schema, example, hash-chain utility, and tamper tests.
+- [x] Add default-deny policy schemas, reference evaluator, CLI, and precedence tests.
+- [ ] Add schema-registry compatibility runner and schema publication index.
+- [ ] Add identity issuance/rotation/revocation state machine and authenticated integration demo.
+- [ ] Add SBOM/provenance/signature release workflow.
+- [ ] Transfer prototypes into their owning standalone repositories after provisioning.
+No repository advances beyond research/scaffolding solely on prose.
 
 ## Batch 3 — AIX and transport prototypes (08–10)
 Implement JSON schemas, reference encoder/decoder, MCP/A2A mapping fixtures, validation tests, and authorization-negative cases. Measure translation fidelity and latency.
