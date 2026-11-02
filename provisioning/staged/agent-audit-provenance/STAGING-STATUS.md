@@ -11,3 +11,6 @@ Repository 10 starter bundle prepared in the master control plane.
 - License: pending portfolio review.
 
 This staging directory is not itself the standalone repository. Copy its contents into the public remote only after that remote is created and verified.
+
+
+**Deployment note (2026-11-02):** The standalone public repository now exists at https://github.com/PCakes303/agent-audit-provenance. This staging bundle is retained as historical provisioning material; the standalone repository is authoritative for current implementation.
