@@ -78,7 +78,7 @@ def validate_source_record(
         3 <= len(record["source_id"]) <= 100
     ):
         errors.append("source_id must contain 3 to 100 characters")
-    elif not record["source_id"][0].islower() or any(
+    elif record["source_id"][0] not in "abcdefghijklmnopqrstuvwxyz0123456789" or any(
         ch not in "abcdefghijklmnopqrstuvwxyz0123456789._-" for ch in record["source_id"]
     ):
         errors.append("source_id must use lowercase letters, digits, dot, underscore or hyphen")
@@ -88,19 +88,19 @@ def validate_source_record(
         if not isinstance(value, str) or not (2 <= len(value) <= maximum):
             errors.append(f"{field} must contain 2 to {maximum} characters")
 
-    if record["source_type"] not in SOURCE_TYPES:
+    if not isinstance(record["source_type"], str) or record["source_type"] not in SOURCE_TYPES:
         errors.append("source_type is not supported")
     if not _valid_https_url(record["canonical_url"]):
         errors.append("canonical_url must be an HTTPS URL without embedded credentials")
-    if record["access_method"] not in ACCESS_METHODS:
+    if not isinstance(record["access_method"], str) or record["access_method"] not in ACCESS_METHODS:
         errors.append("access_method is not supported")
-    if record["access_auth"] not in ACCESS_AUTH:
+    if not isinstance(record["access_auth"], str) or record["access_auth"] not in ACCESS_AUTH:
         errors.append("access_auth is not supported")
-    if record["data_sensitivity"] not in SENSITIVITY:
+    if not isinstance(record["data_sensitivity"], str) or record["data_sensitivity"] not in SENSITIVITY:
         errors.append("data_sensitivity is not supported")
-    if record["robots_policy"] not in ROBOTS_POLICIES:
+    if not isinstance(record["robots_policy"], str) or record["robots_policy"] not in ROBOTS_POLICIES:
         errors.append("robots_policy is not supported")
-    if record["review_status"] not in REVIEW_STATES:
+    if not isinstance(record["review_status"], str) or record["review_status"] not in REVIEW_STATES:
         errors.append("review_status is not supported")
 
     for field in ("collection_constraints", "permitted_purposes", "prohibited_purposes"):
