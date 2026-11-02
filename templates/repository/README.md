@@ -14,7 +14,21 @@ This repository is a planned component until working behavior and verification e
 
 ## Quick start
 
-Not yet available. Add reproducible setup and usage instructions when a working implementation exists.
+Requires Python 3.10+ and no third-party dependencies for the starter checks.
+
+\`\`\`bash
+python tools/starter_build.py
+python -m unittest discover -s tests -v
+\`\`\`
+
+See [Entry-level build guide](docs/ENTRY-LEVEL-BUILD.md) for the Starter → Developer → Production progression.
+
+## Ecosystem
+
+- Master registry: https://github.com/PCakes303/agent-intelligence-ecosystem
+- Public project identity: https://github.com/HuffmanMainNode
+
+The identity link is a profile destination, not a software dependency or proof of authority.
 
 ## Interfaces and dependencies
 
