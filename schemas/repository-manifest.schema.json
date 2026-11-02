@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/repository-manifest.schema.json",
+  "title": "MrCakes931 Repository Manifest",
+  "type": "object",
+  "required": ["manifest_version", "id", "name", "visibility", "maturity", "summary", "license", "interfaces", "dependencies", "security"],
+  "properties": {
+    "manifest_version": {"type":"string","const":"1.0.0"},
+    "id": {"type":"string","pattern":"^[a-z0-9-]+$"},
+    "name": {"type":"string","pattern":"^[a-z0-9-]+$"},
+    "visibility": {"enum":["public","private"]},
+    "maturity": {"enum":["planned","research","scaffolding","experimental","alpha","beta","stable","maintenance","deprecated","archived"]},
+    "summary": {"type":"string","minLength":20},
+    "license": {
+      "type":"object",
+      "required":["expression","status"],
+      "properties":{
+        "expression":{"type":["string","null"]},
+        "status":{"enum":["selected","pending-review","not-applicable"]},
+        "notes":{"type":"string"}
+      },
+      "additionalProperties":false
+    },
+    "interfaces":{"type":"array","items":{"type":"object","required":["name","version","kind"],"properties":{"name":{"type":"string"},"version":{"type":"string"},"kind":{"enum":["api","schema","protocol","cli","library","event","document"]},"stability":{"enum":["draft","experimental","stable","deprecated"]}},"additionalProperties":false}},
+    "dependencies":{"type":"array","items":{"type":"object","required":["id","constraint","kind"],"properties":{"id":{"type":"string","pattern":"^[a-z0-9-]+$"},"constraint":{"type":"string"},"kind":{"enum":["runtime","development","test","optional","contract"]}},"additionalProperties":false}},
+    "security":{"type":"object","required":["threat_model","secrets_in_repository"],"properties":{"threat_model":{"type":"string"},"secrets_in_repository":{"const":false},"data_classification":{"enum":["public","internal","confidential","restricted"]},"security_contact":{"type":["string","null"]}},"additionalProperties":false},
+    "repository_url":{"type":"string","format":"uri"},
+    "default_branch":{"type":"string"},
+    "release":{"type":"object","properties":{"version":{"type":"string"},"tag":{"type":"string"},"commit":{"type":"string","pattern":"^[0-9a-f]{40}$"}},"additionalProperties":false},
+    "compatibility":{"type":"array","items":{"type":"object","required":["with","range"],"properties":{"with":{"type":"string"},"range":{"type":"string"},"tested":{"type":"boolean"}},"additionalProperties":false}},
+    "evidence":{"type":"array","items":{"type":"object","required":["claim","kind","location"],"properties":{"claim":{"type":"string"},"kind":{"enum":["test","benchmark","review","attestation","specification"]},"location":{"type":"string"}},"additionalProperties":false}}
+  },
+  "additionalProperties":false
+}
