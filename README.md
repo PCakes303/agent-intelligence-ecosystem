@@ -46,6 +46,17 @@ See the registry for authoritative names, visibility, scope, status, and depende
 
 GitHub owner remains `PCakes303` until formally changed. Public-facing project identity is `MrCakes931`. The separate profile repository `PCakes303/PCakes303` is not the ecosystem master and is not managed by this portfolio registry.
 
+## Entry-level build
+
+Install the pinned development dependency and run the first reproducible build:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python tools/starter_build.py
+```
+
+See [Entry-level build guide](docs/ENTRY-LEVEL-BUILD.md) for Starter → Developer → Production progression.
+
 ## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for substantial changes, and use pull requests for reviewed modifications. Do not publish secrets, private research, personal data, or embargoed vulnerability details.
