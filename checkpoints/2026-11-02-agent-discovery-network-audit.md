@@ -4,7 +4,7 @@
 **Audited baseline:** `ca1bcada2c99a22cd2fe7d22a71a48bf35c598d3`  
 **Baseline CI:** [Run 41427835147](https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147) — success  
 **Remediation commits:** `67f086ebdbae3234f8f58eb0e187072ac49b38ed`, `a856267584a7f052bd0b7d7d7b7c648566e77074`, `c8ed5acf7a270acab109c8433aef0f1d5bbf58a5`, `f387584b6baecdcf34f50e14c2d50a49b97e49c8`, `e99138c852c5a7365cb7cb7755f1c1b342a48249`, `141e8b94a70110e8a9a0449794f1c61aac7b6565`, `dcb1f02d76b9130d88c77e68d2a7f8236a691992`, `04a0f4480b5b7ff33739a425b74dc760f1e0997c`, `992e012db49baefb0a9268d7d0b9fb0939fdcd83`, `7f9b3bb17f8405f7e105565a8a78e3760a72f21a`  
-**Latest remediation CI:** [Run 41492390494](https://github.com/PCakes303/agent-discovery-network/actions/runs/41492390494) — success on Python 3.10, 3.11 and 3.12; 24 tests passed in each matrix job  
+**Latest remediation CI:** [Run 41492390494](https://github.com/PCakes303/agent-discovery-network/actions/runs/41492390494) — success on Python 3.10, 3.11 and 3.12; 24 tests passed in each matrix job. Subsequent adversarial regression CI is tracked in the post-audit section.  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental bounded in-memory discovery index with injected verifier and trust callbacks; not a cryptographic or distributed discovery network.
 
@@ -32,6 +32,18 @@
 - `992e012db49baefb0a9268d7d0b9fb0939fdcd83`: aligned capability metadata with bounded behavior and limitations.
 - `7f9b3bb17f8405f7e105565a8a78e3760a72f21a`: reconciled deployment/audit status.
 - Created [issue #1](https://github.com/PCakes303/agent-discovery-network/issues/1) for schema binding, cryptographic issuer trust and distributed discovery gates.
+
+## Post-audit adversarial back-check — 2026-11-02
+
+A deeper boundary review found that math.isfinite() and float() can raise OverflowError for extremely large Python integers. Record timestamps, validation clocks, lifetime configuration and registry clocks accepted integer inputs, so these values could escape the documented validation/fail-closed outcomes.
+
+- 199fed0d26ddbf06762508618c9370116946d2d3: added safe finite-number conversion for discovery record timestamps, validation clock and lifetime values.
+- 122fe2f1d64c7b15a4ed0d138022debc2a9f85ce: applied safe finite-number conversion to registry clock and lifetime configuration.
+- 6f9af7001d390094809c9816a59bfff8aed9271f and aacbb1d1dca1c952a61592e26a94e4a324081e7c: added five regression tests for overflowing integer timestamps, clocks and lifetime configuration.
+- 60fcd55b09b802709e7c337056477e956b3b1d12: added explicit pending-license disclosure to README.
+- CI for the expanded tests and README update was in progress at checkpoint update; verify the completed matrix before claiming it passed.
+
+This additional hardening preserves explicit non-production status and does not implement cryptographic verification or distributed discovery.
 
 ## Findings and remaining exceptions
 
