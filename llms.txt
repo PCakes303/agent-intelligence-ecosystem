@@ -24,22 +24,25 @@ This is the public ecosystem control plane. It contains the authoritative reposi
 - [agent-schema-registry](https://github.com/PCakes303/agent-schema-registry): versioned machine-readable schemas.
 - [agent-identity-trust](https://github.com/PCakes303/agent-identity-trust): identity, delegation, and trust contracts.
 - [agent-secure-supply-chain](https://github.com/PCakes303/agent-secure-supply-chain): artifact records, SBOM references, provenance metadata, and signature-state validation (scaffolded).
+- [agent-policy-engine](https://github.com/PCakes303/agent-policy-engine): deterministic default-deny policy decision evaluator (experimental; not a production enforcement boundary).
+- [agent-audit-provenance](https://github.com/PCakes303/agent-audit-provenance): audit event schema, SHA-256 hash-chained JSONL log, append/verify CLI and tests.
+- [aix-core](https://github.com/PCakes303/aix-core): experimental semantic interoperability envelope and schema, extending established protocols rather than replacing them.
 
 ## Planned public repositories
-The following are approved portfolio entries but are not yet created. Their presence in this list is a roadmap statement, not a claim of implementation:
-- Foundation and security: agent-policy-engine, agent-audit-provenance, aix-core.
-- AIX and transport: aix-core, aix-codecs, agent-transport-gateway, agent-discovery-network, agent-capability-registry.
+The following approved portfolio repositories are not yet created. Their presence in this list is a roadmap statement, not a claim of implementation:
+- AIX and transport: aix-codecs, agent-transport-gateway, agent-discovery-network, agent-capability-registry.
 - Hybrid swarm: swarm-runtime, swarm-coordination, swarm-state-mesh.
 - OSINT and intelligence: osint-source-registry, osint-collection-framework, osint-evidence-engine, osint-entity-resolution, intelligence-knowledge-graph.
 - Adoption and conformance: agent-tool-adapters, agent-skill-library, agent-sandbox-security, agent-conformance-lab, agent-federation-network.
 
-## Current staged component bundles
-- [Repository 10 — audit provenance](provisioning/staged/agent-audit-provenance/STAGING-STATUS.md): event schema, SHA-256 JSONL chain, CLI, tests and CI staged; standalone remote pending.
-- [Repository 11 — AIX Core](provisioning/staged/aix-core/STAGING-STATUS.md): experimental semantic envelope, lifecycle, mapping guide, validator, fixtures, tests and CI staged; standalone remote pending.
+## Recently deployed component bundles
+- [Repository 10 — agent-audit-provenance](https://github.com/PCakes303/agent-audit-provenance): 20-file scaffold published; final CI passed.
+- [Repository 11 — aix-core](https://github.com/PCakes303/aix-core): 21-file scaffold published; final CI verification pending.
+- Original staged copies remain available under `provisioning/staged/` for reproducibility.
 
 ## Architecture and status
 - Portfolio: 30 repositories total; 29 public and 1 private.
-- Latest portfolio audit recorded 10 existing public repositories, 19 public repositories not yet created, and 1 existing private operations repository.
+- Latest portfolio audit verified 12 existing public repositories, 17 public repositories not yet created, and 1 existing private operations repository.
 - Public discovery excludes private operational content.
 - Maturity is repository-specific. Consult the status tracker and repository-local evidence before claiming a feature is implemented.
 - AIX approach: extension/interoperability layer over existing standards.
