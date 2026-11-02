@@ -97,6 +97,10 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for substantial changes, 
 See [Capability and compatibility metadata contract](docs/CAPABILITY-COMPATIBILITY-METADATA.md).
 
 
+## License status
+
+The master repository's code, documentation, schemas, examples, and other materials do not yet have an approved license decision. No root `LICENSE` file or GitHub license declaration is present. Reuse and redistribution rights must not be assumed; per-repository and per-artifact licensing remains pending review.
+
 ## Repository quality and maintenance standard
 
 The mandatory public-portfolio baseline is defined in [Universal Repository Standard](docs/UNIVERSAL-REPOSITORY-STANDARD.md). Use the [Repository Cleanliness Checklist](docs/REPOSITORY-CLEANLINESS-CHECKLIST.md) for each repository audit. The [GitHub About Metadata guide](docs/GITHUB-REPOSITORY-ABOUT-METADATA.md) is a proposed settings manifest; live GitHub settings must be verified after application. See [Portfolio Status](PORTFOLIO-STATUS.md) and the dated [portfolio-wide audit checkpoint](checkpoints/2026-11-02-portfolio-wide-audit-remediation.md) for current gaps and evidence.
