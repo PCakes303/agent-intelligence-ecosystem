@@ -1,0 +1,18 @@
+# Agent Audit & Provenance
+
+A public component of the MrCakes931 Agent Intelligence Ecosystem.
+
+## Purpose
+Portable audit-event records, deterministic SHA-256 hash chaining, and integrity verification.
+
+## Entry points
+- README.md: overview, setup, limitations
+- manifest.json: machine-readable component manifest
+- capabilities.json: declared capabilities
+- compatibility.json: compatibility policy
+- schemas/audit-event.schema.json: event contract
+- tools/audit_log.py: append and verify CLI
+- docs/THREAT_MODEL.md: security boundaries
+
+## Safety
+The prototype does not authenticate event producers, prove event truth, provide non-repudiation, or implement signed records. Never treat a hash chain as a signature.
