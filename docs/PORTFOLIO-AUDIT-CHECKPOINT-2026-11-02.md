@@ -40,16 +40,13 @@ The AIX Codecs, Audit Provenance and Secure Supply Chain failures observed durin
 
 ### Current-head CI final verification
 
-The four deployment-status metadata commits subsequently completed successfully:
+The license-policy commits were pushed to all 24 existing public portfolio repositories. Their latest CI runs were checked against each current `main` head. The master registry schema initially rejected the newly added `licensing_policy` field; the schema was corrected, and the subsequent master validation passed.
 
-- Audit Provenance: head `03de6139e63dcd1ef502fdb25994bb605ceda00b`, [run 41527926342](https://github.com/PCakes303/agent-audit-provenance/actions/runs/41527926342) — success.
-- AIX Core: head `6d9827e702cf81782e470d940c76743bf2268823`, [run 41527951684](https://github.com/PCakes303/aix-core/actions/runs/41527951684) — success.
-- AIX Codecs: head `980029e9ce2bdb23596aa109aca16431296e2898`, [run 41527972112](https://github.com/PCakes303/aix-codecs/actions/runs/41527972112) — success.
-- Knowledge Graph: head `542d72385b8a8e198e7924516c9539f0cec1110f`, [run 41527995233](https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41527995233) — success.
-- Agent AI Discovery: latest head `07fde99033631c32844c25b0022876774ceee526`, [run 41529209413](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41529209413) — success.
-- Master control plane: latest head `5e2780cc7959ecb50ba84fccbe56cbf882639c83`, [run 41529252837](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41529252837) — success.
+**Final pre-checkpoint comparison: 24/24 existing public portfolio repositories have a latest completed successful workflow run matching the current `main` commit.** This includes the master control plane and the human-facing guide. The two documentation-only repositories (AI Discovery and the public guide) now include `LICENSE.md` in their workflow path filters, so their licensing documentation changes are covered by CI.
 
-A final current-branch comparison found that **all 24 existing public portfolio repositories have a latest completed workflow run whose head SHA matches the current `main` commit and whose conclusion is success**. This verifies the current CI state, not production readiness or cross-repository runtime conformance.
+The latest verified master workflow before this checkpoint-document update is [run 41531535046](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41531535046) on head `66d9d60a17b06435ddb7243f6bb087af42d7d625` — success. The master audit-document commit itself will trigger a further workflow run and must be checked before final sign-off.
+
+This verifies repository CI and schema validation, not production readiness, licensing provenance of every file, or cross-repository runtime conformance.
 
 ## Staging-to-remote parity
 
@@ -102,9 +99,9 @@ The connected GitHub actions available in this session do not expose repository 
 
 ## Remaining portfolio-wide gates
 
-1. Finish the four queued current-head CI runs and the latest master CI run.
+1. Confirm the master CI run triggered by this final audit-document update completes successfully; all 24 repositories were green on their current heads immediately before this documentation update.
 2. Create/refresh retained staging packets for the five repositories listed above; verify path/blob-SHA parity after synchronization.
-3. Apply accurate repository descriptions, the common master homepage and repository-specific topics; re-read the live settings.
+3. Apply the prepared descriptions, common master homepage and repository-specific topics from [registry/github-repository-metadata.json](../registry/github-repository-metadata.json) through an authorized GitHub repository-settings workflow, then re-read the live settings. The manifest is prepared but About metadata has not been applied.
 4. Complete a file-by-file provenance and third-party notice audit; the approved repository-level mixed-license policy is now applied, but it does not clear uncertain or externally authored files.
 5. Verify private vulnerability reporting/security advisories, branch rulesets/protection, Actions token permissions, secret scanning, push protection and dependency alerts. These settings were not verified through the available integration.
 6. Continue component issue remediation. Local schema/unit-test success does not close architectural gates such as authenticated identity, durable/shared state, cryptographic trust, distributed replay protection, actual OS sandbox isolation, cross-repository runtime integration or production emergency-stop enforcement.
@@ -112,4 +109,4 @@ The connected GitHub actions available in this session do not expose repository 
 
 ## Decision
 
-**Do not begin the next repository yet.** The code/test remediation is materially improved, open PR queue is clear, and several staging packets are now exact. Portfolio completion remains blocked by current-head CI, five staging evidence gaps, metadata, licensing, GitHub security settings and component architecture issues. Keep the existing issues open until each remaining gate has verifiable evidence and an explicit disposition.
+**Do not begin the next repository yet.** The code/test remediation is materially improved, open PR queue is clear, and several staging packets are now exact. The repository-level mixed-license policy is now applied. Portfolio completion remains blocked by the five staging evidence gaps, file-level provenance review, unapplied About metadata, unverified GitHub security settings and component architecture issues. Keep the existing issues open until each remaining gate has verifiable evidence and an explicit disposition.
