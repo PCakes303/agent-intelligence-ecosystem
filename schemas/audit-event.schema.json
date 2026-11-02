@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/audit-event.schema.json",
+  "title":"Agent Audit and Provenance Event",
+  "type":"object",
+  "required":["event_id","occurred_at","event_kind","actor","action","target","outcome","trace_id","data_classification"],
+  "properties":{
+    "event_id":{"type":"string","minLength":1},
+    "occurred_at":{"type":"string","format":"date-time"},
+    "event_kind":{"enum":["observation","interpretation","decision","operation","system"]},
+    "actor":{"type":"string","minLength":1},
+    "action":{"type":"string","minLength":1},
+    "target":{"type":"string","minLength":1},
+    "outcome":{"enum":["success","failure","denied","unknown"]},
+    "trace_id":{"type":"string","minLength":1},
+    "policy_decision_ref":{"type":"string"},
+    "data_classification":{"enum":["public","internal","confidential","restricted"]},
+    "evidence_refs":{"type":"array","items":{"type":"string","format":"uri"},"uniqueItems":true},
+    "previous_hash":{"type":["string","null"],"pattern":"^[a-f0-9]{64}$"},
+    "event_hash":{"type":"string","pattern":"^[a-f0-9]{64}$"}
+  },
+  "additionalProperties":false
+}
