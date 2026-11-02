@@ -33,8 +33,7 @@ def _paths(values, name):
     if len(set(values)) != len(values):
         raise PolicyError(f"{name} contains duplicates")
     for item in values:
-        p = PurePosixPath(item)
-        if ".." in p.parts:
+        if ".." in PurePosixPath(item).parts:
             raise PolicyError(f"{name} contains traversal path")
 
 def validate_policy(p: dict) -> dict:
@@ -53,8 +52,6 @@ def validate_policy(p: dict) -> dict:
         raise PolicyError("filesystem must use read-only root and explicit paths")
     _paths(fs["read_paths"], "read_paths")
     _paths(fs["write_paths"], "write_paths")
-    if not set(fs["write_paths"]).issubset(set(fs["read_paths"]) | set(fs["write_paths"])):
-        raise PolicyError("invalid filesystem paths")
     net = p["network"]
     if not isinstance(net, dict) or set(net) != {"default_deny","egress_allowlist"} or net["default_deny"] is not True:
         raise PolicyError("network must default deny")
