@@ -193,9 +193,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -213,9 +213,9 @@
         "foundation"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-policy-engine/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-policy-engine/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-policy-engine/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -235,9 +235,9 @@
         "identity-trust"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-audit-provenance/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-audit-provenance/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-audit-provenance/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -259,9 +259,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/aix-core/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/aix-core/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/aix-core/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -280,9 +280,9 @@
         "schema-registry"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/aix-codecs/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/aix-codecs/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/aix-codecs/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -303,9 +303,9 @@
         "policy-engine"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-transport-gateway/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-transport-gateway/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-transport-gateway/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -326,9 +326,9 @@
         "transport-gateway"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-discovery-network/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-discovery-network/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-discovery-network/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -348,9 +348,9 @@
         "policy-engine"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-capability-registry/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-capability-registry/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-capability-registry/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -371,9 +371,9 @@
         "sandbox-security"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/swarm-runtime/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/swarm-runtime/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/swarm-runtime/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -394,9 +394,9 @@
         "capability-registry"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/swarm-coordination/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/swarm-coordination/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/swarm-coordination/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -416,9 +416,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/swarm-state-mesh/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/swarm-state-mesh/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/swarm-state-mesh/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -438,9 +438,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/osint-source-registry/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/osint-source-registry/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/osint-source-registry/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -461,9 +461,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/osint-collection-framework/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/osint-collection-framework/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/osint-collection-framework/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -483,9 +483,9 @@
         "secure-supply-chain"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/osint-evidence-engine/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/osint-evidence-engine/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/osint-evidence-engine/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -504,9 +504,9 @@
         "schema-registry"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/osint-entity-resolution/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/osint-entity-resolution/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/osint-entity-resolution/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -525,9 +525,9 @@
         "entity-resolution"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -548,9 +548,9 @@
         "sandbox-security"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-tool-adapters/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-tool-adapters/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-tool-adapters/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -571,9 +571,9 @@
         "tool-adapters"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-skill-library/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-skill-library/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-skill-library/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -594,9 +594,9 @@
         "secure-supply-chain"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-sandbox-security/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-sandbox-security/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-sandbox-security/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -618,9 +618,9 @@
         "secure-supply-chain"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-conformance-lab/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-conformance-lab/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-conformance-lab/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
@@ -642,9 +642,9 @@
         "audit-provenance"
       ],
       "discovery": {
-        "llms_txt": "https://github.com/PCakes303/agent-federation-network/blob/main/llms.txt",
-        "agents_md": "https://github.com/PCakes303/agent-federation-network/blob/main/AGENTS.md",
-        "readme": "https://github.com/PCakes303/agent-federation-network/blob/main/README.md"
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     }
