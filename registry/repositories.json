@@ -232,7 +232,7 @@
       "name": "swarm-coordination",
       "visibility": "public",
       "layer": "swarm",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Task assignment, delegation, acknowledgement, synchronization, and recovery.",
       "dependencies": [
         "swarm-runtime",
