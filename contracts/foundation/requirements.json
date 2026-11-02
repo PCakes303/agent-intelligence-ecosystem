@@ -1,0 +1,191 @@
+{
+  "contract_id": "mrcakes931.foundation-security",
+  "contract_version": "1.0.0",
+  "status": "proposed",
+  "normative_language": [
+    "MUST",
+    "MUST NOT",
+    "SHOULD",
+    "MAY"
+  ],
+  "requirements": [
+    {
+      "id": "FND-001",
+      "title": "Principal identification",
+      "domain": "identity",
+      "priority": "critical",
+      "statement": "Every protected operation MUST be attributable to an authenticated principal or explicitly identified anonymous context.",
+      "verification": [
+        "contract-test",
+        "security-review"
+      ],
+      "owner": "agent-identity-trust",
+      "depends_on": []
+    },
+    {
+      "id": "FND-002",
+      "title": "Explicit trust domains",
+      "domain": "identity",
+      "priority": "high",
+      "statement": "Implementations MUST document trust domains and MUST NOT infer trust from network location, repository ownership, discovery, or prior interaction alone.",
+      "verification": [
+        "documentation-review",
+        "security-test"
+      ],
+      "owner": "agent-identity-trust",
+      "depends_on": [
+        "FND-001"
+      ]
+    },
+    {
+      "id": "FND-003",
+      "title": "Default-deny authorization",
+      "domain": "authorization",
+      "priority": "critical",
+      "statement": "Protected operations MUST be denied when no applicable allow decision exists or when the policy decision cannot be obtained and verified.",
+      "verification": [
+        "unit-test",
+        "integration-test"
+      ],
+      "owner": "agent-policy-engine",
+      "depends_on": [
+        "FND-001"
+      ]
+    },
+    {
+      "id": "FND-004",
+      "title": "Least-privilege capability scope",
+      "domain": "authorization",
+      "priority": "critical",
+      "statement": "Granted capabilities MUST be scoped by action and resource and SHOULD be bounded by time, audience, and delegation depth.",
+      "verification": [
+        "schema-test",
+        "security-test"
+      ],
+      "owner": "agent-policy-engine",
+      "depends_on": [
+        "FND-003"
+      ]
+    },
+    {
+      "id": "FND-005",
+      "title": "Credential lifecycle",
+      "domain": "identity",
+      "priority": "high",
+      "statement": "Credential-bearing implementations MUST define issuance, expiry, rotation, revocation, and compromise response.",
+      "verification": [
+        "documentation-review",
+        "integration-test"
+      ],
+      "owner": "agent-identity-trust",
+      "depends_on": [
+        "FND-001"
+      ]
+    },
+    {
+      "id": "FND-006",
+      "title": "Schema validation",
+      "domain": "data-integrity",
+      "priority": "high",
+      "statement": "Untrusted structured input MUST be validated against a declared, versioned schema before it influences privileged behavior.",
+      "verification": [
+        "unit-test",
+        "fuzz-test"
+      ],
+      "owner": "agent-schema-registry",
+      "depends_on": []
+    },
+    {
+      "id": "FND-007",
+      "title": "Manifest is not authorization",
+      "domain": "resource-description",
+      "priority": "critical",
+      "statement": "Resource manifests MUST describe resources and MUST NOT be interpreted as grants of permission or proof of trust.",
+      "verification": [
+        "contract-test",
+        "documentation-review"
+      ],
+      "owner": "agent-resource-manifest",
+      "depends_on": [
+        "FND-003",
+        "FND-006"
+      ]
+    },
+    {
+      "id": "FND-008",
+      "title": "Security audit events",
+      "domain": "audit",
+      "priority": "high",
+      "statement": "Implementations MUST emit structured audit events for authentication, authorization decisions, privilege changes, security configuration changes, and protected actions.",
+      "verification": [
+        "integration-test",
+        "schema-test"
+      ],
+      "owner": "agent-audit-provenance",
+      "depends_on": [
+        "FND-001",
+        "FND-006"
+      ]
+    },
+    {
+      "id": "FND-009",
+      "title": "Audit integrity limits",
+      "domain": "audit",
+      "priority": "high",
+      "statement": "Audit integrity mechanisms MUST document their trust anchor and MUST NOT claim that hashing alone proves event truth, completeness, or independent witnessing.",
+      "verification": [
+        "documentation-review",
+        "tamper-test"
+      ],
+      "owner": "agent-audit-provenance",
+      "depends_on": [
+        "FND-008"
+      ]
+    },
+    {
+      "id": "FND-010",
+      "title": "Release provenance",
+      "domain": "supply-chain",
+      "priority": "critical",
+      "statement": "Released software artifacts SHOULD be accompanied by an SBOM and verifiable build provenance, and MUST document signature verification expectations.",
+      "verification": [
+        "release-test",
+        "provenance-verification"
+      ],
+      "owner": "agent-secure-supply-chain",
+      "depends_on": [
+        "FND-005",
+        "FND-008"
+      ]
+    },
+    {
+      "id": "FND-011",
+      "title": "No secret material in source",
+      "domain": "supply-chain",
+      "priority": "critical",
+      "statement": "Repositories MUST NOT contain live credentials, private keys, access tokens, or production secret values; use a dedicated secrets manager and short-lived identity where supported.",
+      "verification": [
+        "secret-scan",
+        "repository-review"
+      ],
+      "owner": "agent-secure-supply-chain",
+      "depends_on": []
+    },
+    {
+      "id": "FND-012",
+      "title": "Security failure behavior",
+      "domain": "resilience",
+      "priority": "critical",
+      "statement": "When required identity, authorization, revocation, or integrity checks fail, protected operations MUST fail closed and MUST NOT silently downgrade security.",
+      "verification": [
+        "failure-injection",
+        "integration-test"
+      ],
+      "owner": "agent-foundation-spec",
+      "depends_on": [
+        "FND-003",
+        "FND-005"
+      ]
+    }
+  ]
+}
