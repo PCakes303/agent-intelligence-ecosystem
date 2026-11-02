@@ -4,7 +4,7 @@
 **Audited baseline:** `dc686ed5939119fa827077e0760ca84b0edae3da`  
 **Baseline CI:** [Run 41420117940](https://github.com/PCakes303/swarm-state-mesh/actions/runs/41420117940) — success  
 **Remediation commits:** `e046a01221baa475fc5e1a8e34e6b86911a2f191`, `db74a45ec4b7638e4a72d4256bcd8a4f03b06f09`, `bb74a14624f38aac05aeb5d73d0528ebb72c49e3`, `cf5683aa78d33e0bc3275ff2d969d8182e312a97`, `d83e5c1ad1d0aa3005f085e6e9a97363e999224c`, `dec1de20bfe86a43f1adf4292ffe439b4f044df7`, `fddd68622f0ca353e4c66c8eb0abf8451c2e72fc`, `a74ddb69f09a61e7754f1b51f66d6a8b2e7e2bb9`, `e23f23e8cbd4c45b027a88a408ac2913fca657da`, `73dd842ceb1182fbee89d2323ff609f8a0c9fe4f`, `f43c0800d0bf1a9153bb2c57db59dd7f5d3e2dcc`  
-**Latest remediation CI:** [Run 41494936185](https://github.com/PCakes303/swarm-state-mesh/actions/runs/41494936185) — all three Python test steps reported success; workflow finalization was still in progress at checkpoint creation  
+**Latest remediation CI:** [Run 41494936185](https://github.com/PCakes303/swarm-state-mesh/actions/runs/41494936185) — success on Python 3.10, 3.11 and 3.12; 19 tests per matrix job  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental bounded single-process in-memory event store; not a distributed state mesh or trusted database.
 
