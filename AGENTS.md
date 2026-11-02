@@ -5,7 +5,7 @@ This file is the repository-level instruction entry point for AI coding agents a
 ## First reads
 1. `llms.txt` for the concise project map.
 2. `README.md` for the control-plane role and build instructions.
-3. `registry/repositories.json` for the canonical 30-repository inventory.
+3. `registry/repositories.json` for the canonical 32-repository inventory (31 public and 1 private).
 4. `registry/dependencies.json` for dependency relationships.
 5. `PORTFOLIO-STATUS.md` for verified existence, maturity, priorities, and next gates.
 6. `docs/AI-DISCOVERABILITY.md` for the agent-discovery contract and security boundaries.
@@ -13,8 +13,7 @@ This file is the repository-level instruction entry point for AI coding agents a
 ## Authority and scope
 - This repository is the public ecosystem control plane. It owns the canonical portfolio registry, dependency graph, shared governance, and ecosystem-wide status.
 - Each component repository owns its own implementation. Do not represent a planned repository as existing or implemented.
-- The separate public profile at https://github.com/HuffmanMainNode is a profile destination only. It is not a dependency, authorization source, or cryptographic proof of ownership.
-- Never modify the HuffmanMainNode account or its repositories.
+- Do not modify, access, or integrate with unrelated accounts or repositories outside the explicitly authorized PCakes303 ecosystem scope.
 - Never access, reproduce, summarize, or disclose private repository contents in public outputs. The private operations repository is outside the public discovery catalog.
 
 ## Required agent behavior
