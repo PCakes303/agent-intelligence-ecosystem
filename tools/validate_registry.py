@@ -106,6 +106,12 @@ def main() -> int:
         schema = load_json(root / "schemas/repository-registry.schema.json")
         graph = load_json(root / "registry/dependencies.json")
         errors = validate_registry(registry, schema, graph)
+        manifest_schema = load_json(root / "schemas/repository-manifest.schema.json")
+        manifest_template = load_json(root / "templates/repository/manifest.json")
+        errors.extend(
+            f"manifest template: {e.message} at {list(e.absolute_path)}"
+            for e in Draft202012Validator(manifest_schema).iter_errors(manifest_template)
+        )
     except ValueError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
@@ -113,7 +119,7 @@ def main() -> int:
         for error in errors:
             print(f"ERROR: {error}", file=sys.stderr)
         return 1
-    print(f"OK: {len(registry['repositories'])} repositories; {len(graph['edges'])} dependency edges; private nodes excluded.")
+    print(f"OK: {len(registry['repositories'])} repositories; {len(graph['edges'])} dependency edges; manifest template valid; private nodes excluded.")
     return 0
 
 
