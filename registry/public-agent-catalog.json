@@ -314,10 +314,10 @@
       "name": "agent-discovery-network",
       "visibility": "public",
       "layer": "swarm",
-      "role": "Discovery of agents, resources, services, and capabilities.",
+      "role": "Trust-filtered discovery index for candidate agents, resources, services and capability advertisements; discovery does not authenticate or authorize.",
       "repository_url": "https://github.com/PCakes303/agent-discovery-network",
-      "existence": "not-created",
-      "implementation_status": "Staging packet prepared in master; standalone public remote not yet created",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; 17 files published; GitHub Actions CI passed on Python 3.10, 3.11 and 3.12",
       "priority": "P1",
       "dependencies": [
         "resource-manifest",
@@ -326,9 +326,9 @@
         "transport-gateway"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-discovery-network/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-discovery-network/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-discovery-network/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
