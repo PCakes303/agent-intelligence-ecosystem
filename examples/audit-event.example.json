@@ -1,0 +1,12 @@
+{
+  "event_id":"evt-000001",
+  "occurred_at":"2026-11-01T20:05:00Z",
+  "event_kind":"observation",
+  "actor":"spiffe://example.org/agent/source-reviewer",
+  "action":"source.read",
+  "target":"https://example.org/public-report",
+  "outcome":"success",
+  "trace_id":"trace-000042",
+  "data_classification":"public",
+  "evidence_refs":["https://example.org/public-report"]
+}
