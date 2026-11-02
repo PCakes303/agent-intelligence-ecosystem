@@ -11,12 +11,12 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 15 |
+| Public repositories currently present | 16 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 14 |
+| Public repositories not yet created | 13 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The account repository audit verified fifteen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 14 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The account repository audit verified sixteen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 13 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
 ## Status rules
 
@@ -64,7 +64,7 @@ The account repository audit verified fifteen public portfolio repositories and 
 
 ## Package and release readiness
 
-**Release check (2026-11-02):** No GitHub Releases are currently published for the 15 public portfolio repositories. AIX Codecs is scaffolded and CI-verified, not released.
+**Release check (2026-11-02):** No GitHub Releases are currently published for the 16 public portfolio repositories. AIX Codecs is scaffolded and CI-verified, not released.
 
 A repository starter build is not the same thing as a distributable software package. AIX Codecs now has its initial scaffold and a successful CI run, but does not yet contain package build metadata or a published release. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of the twelve existing public component repositories (including the newly scaffolded secure supply-chain, audit provenance, AIX Core and AIX Codecs repositories) found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
 
