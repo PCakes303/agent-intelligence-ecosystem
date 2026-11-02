@@ -43,7 +43,7 @@ def _parse_time(value: Any) -> datetime | None:
 
 
 def _valid_https_url(value: Any) -> bool:
-    if not isinstance(value, str) or not value or any(ch.isspace() for ch in value):
+    if not isinstance(value, str) or not value or len(value) > 2048 or any(ch.isspace() for ch in value):
         return False
     try:
         parts = urlsplit(value)
