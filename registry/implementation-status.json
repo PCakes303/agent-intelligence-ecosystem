@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41495975295",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41505178230",
       "conclusion": "success",
-      "head_sha": "858e0992d2e1f9602dbd2da300ecf8707946d06b",
+      "head_sha": "4ef03784cb07bceab03c43e1990820e031d2071b",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -1357,7 +1357,7 @@
   ],
   "master_audit": {
     "as_of": "2026-11-02",
-    "audited_commit": "a35fb4aaa66486764b5aeb6dd81e79935d76cd43",
+    "audited_commit": "4ef03784cb07bceab03c43e1990820e031d2071b",
     "disposition": "PASS WITH EXCEPTIONS",
     "checkpoint": "checkpoints/2026-11-02-master-control-plane-audit.md",
     "verified": {
@@ -1366,15 +1366,15 @@
       "private_repositories": 1,
       "dependency_edges": 103,
       "public_catalog_entries": 31,
-      "latest_ci_run": 41491483004
+      "latest_ci_run": 41505178230,
+      "staging_packets_exact": 15,
+      "component_audits": 23
     },
     "open_exceptions": [
       "master license decision pending",
       "GitHub About description, homepage and topics not applied",
-      "branch protection and security settings not fully verified",
-      "workflow pull_request path filters omit governance and documentation paths",
-      "provisioning README contains obsolete remote-creation instructions for existing repositories",
-      "cross-repository conformance and staging parity refresh remain outstanding"
+      "branch protection, rulesets, Actions permissions, secret scanning, push protection and dependency alerts remain unverified",
+      "cross-repository conformance and production readiness are not established; all 23 existing public component audits remain BLOCKED on their documented gates"
     ]
   },
   "staging_reconciliation": {

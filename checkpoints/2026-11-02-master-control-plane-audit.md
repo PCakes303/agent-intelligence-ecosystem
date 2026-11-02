@@ -2,7 +2,7 @@
 
 **Repository:** [PCakes303/agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem)  
 **Audited commit:** `a35fb4aaa66486764b5aeb6dd81e79935d76cd43`  
-**Latest verified master CI:** [Run 41488437700](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41488437700)  
+**Latest verified master CI at follow-up:** [Run 41505178230](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41505178230) — success on the 47-test master regression suite and entry-level build  
 **CI head commit:** `a35fb4aaa66486764b5aeb6dd81e79935d76cd43`  
 **Disposition:** **PASS WITH EXCEPTIONS**  
 **Scope:** Public master control plane only. The private operations repository was not accessed.
@@ -37,13 +37,22 @@ The README now explicitly states that the master repository's code, documentatio
 1. **License decision pending:** no root license declaration or license file. Obtain and record the explicit per-repository/per-artifact decision before adding any license.
 2. **GitHub About metadata incomplete:** live repository metadata returned no description, no homepage URL and no topics. The metadata guide is a proposal, not proof of application.
 3. **Repository administration not fully verified:** the rulesets endpoint returned an empty list; branch-protection read returned 403. Actions permissions, secret-scanning and dependency-alert settings were not readable through the available integration. Do not infer that these controls are enabled or disabled.
-4. **Workflow path-filter gap:** push validation includes docs, checkpoints, README and portfolio status, but does not include every root governance/agent file. Pull-request path filters omit docs, checkpoints, README, portfolio status and root governance files. Update and test these filters through an authorized workflow edit.
-5. **Provisioning guide contains stale instructions:** sections for repositories 10 and 11 still instruct the operator to create empty remotes even though `agent-audit-provenance` and `aix-core` already exist. The Repository 24 text also calls sandbox-security a planned prerequisite, although it now exists as an experimental policy-contract validator. Correct these historical instructions without deleting deployment evidence.
+4. **Workflow path filters:** corrected on 2026-11-02 to include docs, checkpoints, README, portfolio status, root governance files, manifests and metadata on both push and pull-request events. The successful master CI run 41501950586 verified the workflow edit.
+5. **Provisioning guide:** corrected on 2026-11-02. Repository 10 and 11 empty-remote instructions are now historical deployment records, and Repository 24 correctly states that sandbox-security exists as an experimental admission-policy validator with no OS isolation.
 6. **Cross-repository conformance:** this audit verifies the master registry and master CI only. It does not certify runtime integration, production security, OS sandbox isolation, emergency-stop enforcement, legal compliance or production readiness.
-7. **Staging parity:** refresh the retained staging-to-remote blob-SHA comparisons before portfolio-wide sign-off.
+7. **Staging parity:** all 15 retained staging packets were refreshed and rechecked; 15/15 product path sets and Git blob hashes match exactly. 76 product files were refreshed. Administrative `STAGING-STATUS.md` files are excluded from product parity.
 
 ## 5. Final disposition
 
 **PASS WITH EXCEPTIONS.** The master control-plane registry, public catalog, dependency graph, validators, regression suite and entry-level build pass the current master CI gate. The exceptions above remain open. In particular, do not treat this disposition as production readiness or security certification.
 
 Next: close the documentation/workflow and metadata gaps, record licensing decisions, verify repository administration settings, refresh staging parity, and continue the individual component audits in dependency order.
+
+
+## Follow-up reconciliation — 2026-11-02
+
+- The master registry and public catalog remain 32 entries / 31 public / 1 private, with 103 dependency edges.
+- Individual audit checkpoints and registry dispositions now cover all 23 existing public component repositories; all remain BLOCKED pending their explicit acceptance gates. The master itself remains PASS WITH EXCEPTIONS.
+- All 15 retained staging packets have exact remote product-file Git blob parity after 76 product-file refreshes.
+- Master CI run 41505178230 passed the 47-test regression suite and starter build.
+- The workflow path-filter and provisioning README exceptions listed above have been corrected. Remaining master exceptions are license decision, About metadata, repository administration verification and the fact that component-level security/conformance gates remain open.
