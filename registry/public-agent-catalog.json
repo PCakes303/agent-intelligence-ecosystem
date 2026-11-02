@@ -654,7 +654,7 @@
       "role": "Experimental sandbox admission policy contract and fail-closed reference validator; no OS isolation or workload execution.",
       "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
       "existence": "exists",
-      "implementation_status": "Experimental; 15 product files plus CI workflow (16 tracked files); 21 regression test methods; latest CI passed on Python 3.10, 3.11 and 3.12; exact staging/product Git blob parity reverified; policy admission validator only; no OS isolation or workload execution.",
+      "implementation_status": "Experimental; 15 product files plus CI workflow (16 tracked files); 21 regression test methods; latest CI passed on Python 3.10, 3.11 and 3.12; staging/product Git blob parity reverified exact; policy admission validator only; no OS isolation or workload execution.",
       "priority": "P0",
       "dependencies": [
         "identity-trust",
