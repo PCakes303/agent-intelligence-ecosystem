@@ -16,6 +16,7 @@
     "agent-resource-manifest",
     "agent-schema-registry",
     "agent-secure-supply-chain",
+    "agent-skill-library",
     "agent-tool-adapters",
     "agent-transport-gateway",
     "aix-codecs",
@@ -27,7 +28,7 @@
     "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 7,
+  "missing_public_repository_count": 6,
   "repositories": [
     {
       "name": "osint-collection-framework",
@@ -72,22 +73,6 @@
       "dependencies": [
         "osint-evidence",
         "schema-registry"
-      ]
-    },
-    {
-      "name": "agent-skill-library",
-      "description": "Reusable workflows and machine-discoverable skills.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "skill-library",
-      "dependencies": [
-        "resource-manifest",
-        "schema-registry",
-        "policy-engine",
-        "tool-adapters"
       ]
     },
     {

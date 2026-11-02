@@ -337,8 +337,8 @@
       "name": "agent-skill-library",
       "visibility": "public",
       "layer": "adoption",
-      "status": "planned",
-      "role": "Reusable workflows and machine-discoverable skills.",
+      "status": "experimental",
+      "role": "Experimental declarative skill package contract, versioned workflow schema, and dependency-free validator for machine-discoverable reusable workflows; no execution or publisher trust service.",
       "dependencies": [
         "resource-manifest",
         "schema-registry",
