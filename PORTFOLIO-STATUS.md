@@ -1,4 +1,4 @@
-# 30-Repository Portfolio Status and Work Tracker
+# 32-Repository Portfolio Status and Work Tracker
 
 **As of:** 2026-11-02  
 **Owner:** [PCakes303](https://github.com/PCakes303) · **Public identity:** MrCakes931  
@@ -8,17 +8,17 @@
 
 | Measure | Verified count |
 |---|---:|
-| Total planned repositories | 30 |
-| Public repositories | 29 |
+| Total planned repositories | 32 |
+| Public repositories | 31 |
 | Private repositories | 1 |
-| Public repositories currently present | 22 |
+| Public repositories currently present | 24 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 8 |
+| Public repositories not yet created | 7 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The account repository audit verified twenty-one public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 8 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The account repository audit verified twenty-one public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. The 8 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
-## Status rules
+## Approved portfolio expansion\n\nThe portfolio now contains 32 repositories: 31 public and 1 private. Repository 26, agent-sandbox-security, is deployed as an experimental policy-contract validator only; it does not execute workloads or enforce OS isolation. Two new P0 repositories are approved: agent-emergency-control and agent-compliance-governance. Emergency-stop enforcement and deployment-specific legal applicability are release gates across the ecosystem.\n\n## Status rules
 
 - **Operational control plane** means the master registry, validation tooling, starter build and CI are running. It does not mean all 30 projects are implemented.
 - **Scaffolded** means a repository exists with starter build/CI and some project-specific contracts or documentation. It does not mean the domain implementation is complete.
@@ -64,7 +64,7 @@ The account repository audit verified twenty-one public portfolio repositories a
 
 ## Package and release readiness
 
-**Release check (2026-11-02):** No GitHub Releases are currently published for the 23 existing public portfolio repositories; the Releases endpoint was checked for each, including the newly deployed agent-tool-adapters and agent-skill-library repositories. AIX Codecs is scaffolded and CI-verified, not released.
+**Release check (2026-11-02):** No GitHub Releases are currently published for the 24 existing public portfolio repositories; the Releases endpoint was checked for each, including the newly deployed agent-tool-adapters and agent-skill-library repositories. AIX Codecs is scaffolded and CI-verified, not released.
 
 A repository starter build is not the same thing as a distributable software package. AIX Codecs now has its initial scaffold and a successful CI run, but does not yet contain package build metadata or a published release. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of all 22 existing public component repositories found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, `build.gradle`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
 
@@ -130,7 +130,7 @@ The machine-readable companion is [`registry/implementation-status.json`](regist
 **Repository 24 deployment update (2026-11-02):** `agent-tool-adapters` is now public and deployed (16 files). All 20 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging parity is verified. Portfolio inventory is now 22 existing public repositories and 7 public repositories remaining to create. This component remains experimental and does not provide sandbox isolation or authentication.
 
 
-**Repository 25 deployment update (2026-11-02):** `agent-skill-library` is public and deployed with 17 product files. Its declarative workflow validator passes 18 unit tests on Python 3.10, 3.11 and 3.12; exact staging/product blob parity is verified. The component is experimental and does not execute skills or provide publisher authentication, policy enforcement or sandbox isolation. Portfolio inventory is now 23 existing public repositories and 6 public repositories remaining to create.
+**Repository 25 deployment update (2026-11-02):** `agent-skill-library` is public and deployed with 17 product files. Its declarative workflow validator passes 18 unit tests on Python 3.10, 3.11 and 3.12; exact staging/product blob parity is verified. The component is experimental and does not execute skills or provide publisher authentication, policy enforcement or sandbox isolation. Portfolio inventory is now 23 existing public repositories and 7 public repositories remaining to create.
 
 
 **Master verification (2026-11-02):** [Portfolio registry/catalog reconciliation CI passed](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41434406452), including all 47 master regression tests and the registry/catalog consistency checks. The first run exposed a role/maturity mismatch in the new public catalog entry; the canonical catalog record was corrected and the successful run verified the fix.
