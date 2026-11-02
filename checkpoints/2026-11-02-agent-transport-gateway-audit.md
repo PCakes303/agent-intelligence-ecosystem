@@ -3,7 +3,7 @@
 **Repository:** [PCakes303/agent-transport-gateway](https://github.com/PCakes303/agent-transport-gateway)  
 **Audited baseline:** `1b2e5873f05364fc0c8f2c124bc76c640eeb3096`  
 **Remediation commits:** `d6ba36e33e56a13a1744f26842c4164fbf42f229`, `88b0b3b5bab2661d52044a624f69dbf003599da2`, `eb0386832beb3e900a1bd9d2eafc9f9c0233a5dd`, `2452ecc50a9da260ee6f275bcba3f4faf71879db`, `a22240dbca0437d5e5a4dbebdf48c25e5eabcd28`, `ed1104d993d20759cd68642f93c2607ba870ded9`, `0d8bca7452fd5cc2e5f18fb8637edbb5defae487`, `d647bd08779a2526f641df25d97a3e046ca69618`  
-**Final remediation CI:** [Run 41491823732](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41491823732) — success on Python 3.10, 3.11 and 3.12; 18 tests per matrix job  
+**Final remediation CI:** [Run 41491823732](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41491823732) — success on Python 3.10, 3.11 and 3.12; 18 tests per matrix job. Subsequent adversarial regression CI is tracked separately below.  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental, bounded single-process request guard; not a network gateway or production security boundary.
 
@@ -29,6 +29,17 @@
 - `0d8bca7452fd5cc2e5f18fb8637edbb5defae487`: clarified strict authorization result and bounded replay contract.
 - `d647bd08779a2526f641df25d97a3e046ca69618`: reconciled deployment and audit status.
 - Created [issue #1](https://github.com/PCakes303/agent-transport-gateway/issues/1) for authentication, shared replay, protocol adapters, integration and governance gates.
+
+## Post-audit adversarial back-check — 2026-11-02
+
+A deeper boundary review found that math.isfinite() and float() can raise OverflowError for extremely large Python integers. The request guard accepted integer timestamps and timing configuration values, so these inputs could escape the intended stable-denial/validation behavior instead of failing closed.
+
+- a0f92357c8b8503f52be75eb4e89bbecaa46d1c7: introduced safe finite-number conversion that rejects booleans, non-numeric values, overflow and non-finite values for timestamps, clocks and timing configuration.
+- 51f721ff00d3dad27238760ca73fe84051183c74: added three regression tests for oversized integer timestamps, clocks and timing configuration.
+- 282992ca615ae2633cf2c4a14069accdbefdf6bc: added explicit pending-license disclosure to README.
+- CI for the new tests and README update was queued/in progress at this checkpoint update; final conclusion must be verified before claiming the latest head passed.
+
+The request guard now rejects huge integer timestamp/clock/config values with stable outcomes rather than leaking numeric-conversion exceptions. This does not change the existing non-production limitations or clear the BLOCKED disposition.
 
 ## Findings and remaining exceptions
 
