@@ -63,3 +63,9 @@ The first CI attempt at the 18-test expansion revealed that Python's JSON encode
 The final suite contains **20 tests** and passes on Python 3.10, 3.11 and 3.12 in workflow [41432479875](https://github.com/PCakes303/agent-tool-adapters/actions/runs/41432479875). The master staging packet was updated from the deployed remote files; all 16 product-file Git blob SHAs match exactly after these updates.
 
 Capability metadata now marks only the three locally tested behaviors as `tested` with test-file evidence. All four upstream dependencies remain `declared`; in particular, Sandbox Security remains planned and not implemented. The master public catalog, implementation status and provisioning inventory are reconciled to 22 existing public repositories and 7 remaining.
+
+## Master control-plane validation
+
+After the catalog role/layer and implementation-status fields were aligned to the canonical registry, the master control-plane workflow [41432579084](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41432579084) passed. Registry/dependency validation, resource-manifest validation, default-deny policy smoke test, all 47 master regression tests, and the entry-level build passed. This run validated commit `4421a6b5012feecab205bc1c9f5dcfd1d3623b7f`; later changes to portfolio prose and this checkpoint were documentation-only.
+
+The master build also validates the public capability/compatibility metadata against the component's live public files. The three locally tested adapter behaviors are marked `tested` with unit-test evidence. The four upstream relationships remain `declared`, not `tested`.
