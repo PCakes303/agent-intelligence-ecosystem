@@ -4,7 +4,7 @@
 **Audited implementation commit:** `44a8b23ac6d8f641597a12a0184f900422861c8f`  
 **Baseline CI:** [Run 41421033960](https://github.com/PCakes303/agent-audit-provenance/actions/runs/41421033960) — success  
 **Remediation commits:** `46075af6ee412d35c07bc28cc060d486deacd407`, `fef35ad1c2b864d9b323bdbe2d30638e81f2321b`  
-**Remediation CI:** [Run 41490403369](https://github.com/PCakes303/agent-audit-provenance/actions/runs/41490403369) — in progress at checkpoint creation  
+**Remediation CI:** [Run 41490403369](https://github.com/PCakes303/agent-audit-provenance/actions/runs/41490403369) — success (starter build, ten unit tests and append/verify CLI smoke test passed)  
 **Disposition:** **BLOCKED**  
 **Maturity:** Experimental local JSONL hash-chain append/verification prototype; not a trusted audit service or immutable ledger.
 
