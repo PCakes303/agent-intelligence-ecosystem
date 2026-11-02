@@ -50,8 +50,8 @@
       "name": "agent-ecosystem-integration",
       "visibility": "public",
       "layer": "ecosystem-facing",
-      "status": "planned",
-      "role": "Cross-repository integration contracts, event orchestration, compatibility validation, and synchronization automation.",
+      "status": "scaffolding",
+      "role": "Cross-repository integration profiles, adapter safety contracts, interoperability guidance, and conformance validation.",
       "dependencies": [
         "master",
         "foundation",
@@ -66,8 +66,8 @@
       "name": "agent-foundation-spec",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
-      "role": "Architecture, engineering principles, terminology, lifecycle, and compatibility requirements.",
+      "status": "scaffolding",
+      "role": "Normative foundation requirements, security and reliability invariants, lifecycle, and compatibility contracts.",
       "dependencies": [
         "master"
       ]
@@ -77,8 +77,8 @@
       "name": "agent-resource-manifest",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
-      "role": "Machine-readable identities and descriptions for agents, tools, services, repositories, and datasets.",
+      "status": "scaffolding",
+      "role": "Portable manifests for agent tools, skills, models, datasets, services, dependencies, and requested permissions.",
       "dependencies": [
         "foundation",
         "schema-registry",
@@ -90,8 +90,8 @@
       "name": "agent-schema-registry",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
-      "role": "Reusable schemas, validation, versioning, and compatibility rules.",
+      "status": "scaffolding",
+      "role": "Versioned JSON Schemas, schema catalog governance, validation conventions, and compatibility rules.",
       "dependencies": [
         "foundation"
       ]
@@ -101,8 +101,8 @@
       "name": "agent-identity-trust",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
-      "role": "Identity, authentication, credentials, trust, and revocation.",
+      "status": "scaffolding",
+      "role": "Principal identity data contracts, authentication context, authorization, delegation, revocation, and trust boundaries.",
       "dependencies": [
         "foundation",
         "policy-engine"
