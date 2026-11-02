@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 17,
+    "public_existing": 18,
     "private_existing": 1,
-    "public_not_created": 12,
+    "public_not_created": 11,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 17,
-    "public_repositories_missing": 12
+    "public_repositories_present": 18,
+    "public_repositories_missing": 11
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -49,6 +49,17 @@
         "3.12"
       ],
       "jobs": "all passed"
+    },
+    "swarm-coordination": {
+      "repository_url": "https://github.com/PCakes303/swarm-coordination",
+      "workflow_run": "https://github.com/PCakes303/swarm-coordination/actions/runs/41417719239",
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "jobs": "all passed",
+      "tests": 17
     }
   },
   "repositories": [
@@ -262,11 +273,11 @@
       "name": "swarm-coordination",
       "layer": "swarm",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started",
+      "existence": "exists",
+      "status": "Scaffolded; 18 files deployed; Python 3.10, 3.11 and 3.12 CI passed; 17 unit tests pass.",
       "priority": "P1",
       "importance": "Coordinates delegation, acknowledgement, retry and recovery.",
-      "next_gate": "Build two-agent task delegation vertical slice with idempotency and bounded retries."
+      "next_gate": "Cross-repository AIX task envelope, discovery and capability adapter fixtures; authenticated dispatch integration; durable shared state and multi-node fencing/recovery tests."
     },
     {
       "number": "18",
