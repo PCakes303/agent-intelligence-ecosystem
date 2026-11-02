@@ -49,6 +49,10 @@ Use each topic as a separate GitHub topic. Do not paste the topic list into the 
 | 24 | [agent-tool-adapters](https://github.com/PCakes303/agent-tool-adapters) | Experimental dependency-free Python reference contract for explicit tool adapter registration, capability declarations, policy-gated invocation and bounded JSON payloads; no bundled third-party adapters or sandbox runtime. | agent-tool-adapters, tool-adapters, agentic-ai, capability-security, policy-gating, python, json-validation, plugin-architecture |
 | 25 | [agent-skill-library](https://github.com/PCakes303/agent-skill-library) | Experimental declarative skill package format, versioned workflow schema and local validator for reusable agent workflows; no execution engine, publisher trust service or policy enforcement. | agent-skills, workflow-automation, agentic-ai, json-schema, declarative-workflows, capability-security, python |
 
+| 26 | [agent-sandbox-security](https://github.com/PCakes303/agent-sandbox-security) | Experimental sandbox admission policy contract and fail-closed validator; no OS isolation or workload execution. | sandbox-security, agent-security, isolation-contract, policy-validation, least-privilege, emergency-stop |
+| 27 | [agent-emergency-control](https://github.com/PCakes303/agent-emergency-control) | Independent emergency-stop authority, revocation, quarantine, distributed stop propagation, and controlled resumption. | emergency-stop, kill-switch, agent-safety, revocation, incident-response, distributed-systems |
+| 28 | [agent-compliance-governance](https://github.com/PCakes303/agent-compliance-governance) | Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring. | compliance-management, colorado, privacy-governance, ai-governance, risk-management, audit-evidence |
+
 ## Application checklist
 
 For each of the 23 repositories:
@@ -74,6 +78,3 @@ For `agent-policy-engine`, replace the malformed description completely; do not 
 
 This metadata file is the canonical set of recommended GitHub About values. It is not evidence that those values have been applied. The GitHub connector available in this workflow supports repository reads and file commits, but not writes to repository description, homepage or topics settings; those settings must be applied in GitHub's repository UI.
 
-| 26 | [agent-sandbox-security](https://github.com/PCakes303/agent-sandbox-security) | Experimental sandbox admission policy contract and fail-closed validator; no OS isolation or workload execution. | sandbox-security, agent-security, isolation-contract, policy-validation, least-privilege, emergency-stop |
-| 27 | [agent-emergency-control](https://github.com/PCakes303/agent-emergency-control) | Independent emergency-stop authority, revocation, quarantine, distributed stop propagation, and controlled resumption. | emergency-stop, kill-switch, agent-safety, revocation, incident-response, distributed-systems |
-| 28 | [agent-compliance-governance](https://github.com/PCakes303/agent-compliance-governance) | Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring. | compliance-management, colorado, privacy-governance, ai-governance, risk-management, audit-evidence |
