@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def render(output: Path, force: bool = False) -> list[str]:
     registry = json.loads((ROOT / "registry/repositories.json").read_text(encoding="utf-8"))
     template = ROOT / "templates/repository"
+    output.mkdir(parents=True, exist_ok=True)
     created: list[str] = []
     for repo in registry["repositories"]:
         if repo["visibility"] != "public" or repo["id"] == "master":
