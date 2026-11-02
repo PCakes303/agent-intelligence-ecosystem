@@ -49,3 +49,12 @@ GitHub owner remains `PCakes303` until formally changed. Public-facing project i
 ## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for substantial changes, and use pull requests for reviewed modifications. Do not publish secrets, private research, personal data, or embargoed vulnerability details.
+
+## Working prototypes and tooling
+
+- [Resource manifest schema](schemas/agent-resource.schema.json) and [validator](tools/validate_agent_resource.py)
+- [AIX experimental envelope](prototypes/aix/aix-message.schema.json)
+- [Default-deny policy prototype](prototypes/policy/README.md)
+- [Audit event schema](schemas/audit-event.schema.json) and [hash-chain utility](tools/audit_chain.py)
+- [Repository scaffold generator](tools/bootstrap_repositories.py)
+- [Remote provisioning instructions](provisioning/README.md)
