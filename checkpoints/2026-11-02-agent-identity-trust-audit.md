@@ -4,7 +4,7 @@
 **Baseline audited commit:** `6d53a2af501eb05bb929d5f3da07cf1dd316e6b1`  
 **Baseline CI:** [Run 41407425998](https://github.com/PCakes303/agent-identity-trust/actions/runs/41407425998) — success  
 **Remediation commits:** `e816ee8c2aae2deb91903c016f54dce0cfac508d`, `9ccbadf98e660a20444f2f39eaff6785b031f6b5`, `c37299b015a18c84ae13892bd3c96bc6fc6c0db8`  
-**Latest CI after remediation:** [Run 41489911336](https://github.com/PCakes303/agent-identity-trust/actions/runs/41489911336) — in progress at checkpoint creation  
+**Latest CI after remediation:** [Run 41489911336](https://github.com/PCakes303/agent-identity-trust/actions/runs/41489911336) — success (validator, unit tests and starter build completed)  
 **Disposition:** **BLOCKED**  
 **Maturity:** Scaffolded principal identity data contract and local validator; not an identity provider or authentication/authorization service.
 
