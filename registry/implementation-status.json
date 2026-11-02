@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 15,
+    "public_existing": 16,
     "private_existing": 1,
-    "public_not_created": 14,
+    "public_not_created": 13,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 15,
-    "public_repositories_missing": 14
+    "public_repositories_present": 16,
+    "public_repositories_missing": 13
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -35,7 +35,8 @@
     "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41406412416",
     "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41408761297",
     "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293",
-    "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41410840515"
+    "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41410840515",
+    "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413168542"
   },
   "repositories": [
     {
@@ -224,11 +225,11 @@
       "name": "agent-capability-registry",
       "layer": "swarm",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started",
+      "existence": "exists",
+      "status": "Scaffolded; 18 files deployed; initial Python 3.10–3.12 CI passed; same-agent multi-capability matching fix is awaiting CI.",
       "priority": "P1",
       "importance": "Matches tasks to agents with declared, validated capabilities.",
-      "next_gate": "Implement capability schema, query and policy-filtered matching."
+      "next_gate": "Verify the latest CI run, then add schema-registry/resource-manifest/policy-engine integration fixtures and cross-repository conformance tests."
     },
     {
       "number": "16",
