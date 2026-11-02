@@ -1,5 +1,8 @@
 import unittest
 from datetime import datetime, timezone
+from pathlib import Path
+import json
+from jsonschema import Draft202012Validator, FormatChecker
 from federation_network.trust import PeerRecordError, validate_peer_record
 
 NOW = datetime(2026, 11, 2, 12, 0, tzinfo=timezone.utc)
@@ -48,6 +51,18 @@ class PeerTrustTests(unittest.TestCase):
     def test_expired_now_clock_must_be_aware(self):
         with self.assertRaisesRegex(PeerRecordError, "timezone-aware"):
             validate_peer_record(record(), now=datetime(2026,11,2,12,0))
+
+    def test_state_types_are_rejected_without_type_error(self):
+        for field in ("trust_state", "stop_state"):
+            with self.subTest(field=field), self.assertRaises(PeerRecordError):
+                validate_peer_record(record(**{field: []}), now=NOW)
+
+    def test_schema_accepts_valid_record_and_rejects_http(self):
+        schema_path=Path(__file__).resolve().parents[1] / "schemas" / "federation-peer.schema.json"
+        schema=json.loads(schema_path.read_text(encoding="utf-8"))
+        validator=Draft202012Validator(schema, format_checker=FormatChecker())
+        self.assertEqual(list(validator.iter_errors(record())), [])
+        self.assertTrue(list(validator.iter_errors(record(endpoint="http://west.example.net"))))
 
 if __name__ == "__main__":
     unittest.main()
