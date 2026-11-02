@@ -6,10 +6,10 @@ Experimental single-process state/event reference scaffold. The public repositor
 
 - Public repository: https://github.com/PCakes303/swarm-state-mesh
 - Latest code commit: https://github.com/PCakes303/swarm-state-mesh/commit/7e754210d9e5207c725a90024984add9c49042af
-- Product files: 19, including pinned requirements-dev.txt.
+- Product files: 19, including this STAGING-STATUS.md and pinned requirements-dev.txt.
 - Repository CI: passed on Python 3.10, 3.11 and 3.12; 23 unit/schema-parity tests.
 - Workflow: https://github.com/PCakes303/swarm-state-mesh/actions/runs/41520622660
-- Exact staging/product parity: 19 staged files and 19 remote product files; zero missing, extra or differing Git blob SHAs. This staging status file is master-side only and excluded from product parity.
+- Exact staging/product parity: 19 staged files and 19 remote product files; zero missing, extra or differing Git blob SHAs. This STAGING-STATUS.md is included in product parity.
 
 ## Schema and validation
 
