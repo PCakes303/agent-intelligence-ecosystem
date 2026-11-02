@@ -1,9 +1,9 @@
-# Repository 24 — Agent Tool Adapters staging checkpoint
+# Repository 24 — Agent Tool Adapters pre-deployment staging checkpoint (superseded)
 
 **Date:** 2026-11-02  
 **Portfolio position:** 24 of 30  
 **Target:** `PCakes303/agent-tool-adapters`  
-**Target state:** Not created; deployment intentionally blocked pending owner provisioning.  
+**Target state at this historical checkpoint:** Not created; deployment was blocked pending owner provisioning. This checkpoint was superseded by the successful deployment checkpoint.  
 **Master staging commit:** `b19fa62f05069a09160ad0ae38d38ada4a1d5fd5`
 
 ## Prepared packet
@@ -43,3 +43,7 @@ This was a master catalog consistency issue, not a failure in the staged adapter
 ### Follow-up master CI result
 
 The catalog synchronization correction was verified by master workflow run [41430543660](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41430543660): **success**. Registry/dependency validation, resource-manifest validation, default-deny policy smoke test, all 47 master regression tests, and the entry-level build passed. This run tested commit `4a2a0c25384ffe566aa98cb39a9c350bb3a2477c`; the later checkpoint-only documentation commit does not change code or registry content. This is master control-plane validation, not execution of the 13 staged adapter unit tests.
+
+## Superseded by deployment
+
+The owner created the public repository. Deployment was completed in commit `b3a92d0f7c8f0ed9477b4982f6dbf2e9d611aea9`. All 16 product files have exact remote/staging Git blob parity. GitHub Actions run [41431367932](https://github.com/PCakes303/agent-tool-adapters/actions/runs/41431367932) passed all 13 tests on Python 3.10, 3.11 and 3.12. The current authoritative record is [the deployment checkpoint](2026-11-02-agent-tool-adapters-deployment.md).
