@@ -1,0 +1,11 @@
+{
+  "capabilities_version": "1.0.0",
+  "component": "audit-provenance",
+  "capabilities": [
+    {"id": "audit-event-validation", "status": "implemented-prototype", "description": "Validate required event fields and supported event types."},
+    {"id": "hash-chain-append", "status": "implemented-prototype", "description": "Append canonical JSON events linked with SHA-256 digests."},
+    {"id": "hash-chain-verification", "status": "implemented-prototype", "description": "Verify event digests and previous-hash continuity."},
+    {"id": "producer-authentication", "status": "not-implemented", "description": "Authenticate event producers and bind events to trusted identities."},
+    {"id": "digital-signatures", "status": "not-implemented", "description": "Sign event records or externally anchored checkpoints."}
+  ]
+}
