@@ -35,6 +35,11 @@ def validate(catalog=None, registry=None, status=None, schema=None):
             errors.append(f"{name}: role or layer drift from authoritative registry")
         if item["visibility"] != "public":
             errors.append(f"{name}: non-public item leaked into public catalog")
+        links = item["discovery"].values()
+        if item["existence"] == "exists" and any(not link for link in links):
+            errors.append(f"{name}: existing repository is missing an agent entry-point URL")
+        if item["existence"] != "exists" and any(link for link in links):
+            errors.append(f"{name}: uncreated repository must not advertise live entry-point URLs")
         recorded = status_by_name.get(name)
         if recorded and (item["existence"] != recorded.get("existence") or item["implementation_status"] != recorded.get("status")):
             errors.append(f"{name}: existence or maturity drift from implementation status")
