@@ -1,4 +1,5 @@
 import json
+import threading
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,6 +19,51 @@ class SourceRegistryTests(unittest.TestCase):
         self.registry = SourceRegistry(max_records=3)
         self.approved = load_record("approved-synthetic-source.json")
         self.pending = load_record("pending-synthetic-source.json")
+
+
+    def test_capacity_has_hard_upper_bound(self):
+        with self.assertRaises(ValueError):
+            SourceRegistry(max_records=100001)
+
+    def test_non_datetime_query_clock_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "datetime"):
+            self.registry.approved_sources(now="2026-11-02T00:00:00Z")
+
+    def test_concurrent_add_respects_capacity(self):
+        registry = SourceRegistry(max_records=1)
+        second_data = self.approved.to_dict()
+        second_data["source_id"] = "example.second"
+        second = SourceRecord.from_dict(second_data)
+        barrier = threading.Barrier(2)
+        outcomes = []
+        def add(record):
+            barrier.wait()
+            try:
+                registry.add(record)
+                outcomes.append("added")
+            except ValueError:
+                outcomes.append("rejected")
+        threads = [
+            threading.Thread(target=add, args=(self.approved,)),
+            threading.Thread(target=add, args=(second,)),
+        ]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join()
+        self.assertCountEqual(outcomes, ["added", "rejected"])
+        self.assertEqual(len(registry), 1)
+
+
+    def test_registry_snapshots_mutable_source_record_lists(self):
+        values = dict(self.approved.__dict__)
+        values["permitted_purposes"] = list(self.approved.permitted_purposes)
+        mutable_record = SourceRecord(**values)
+        self.registry.add(mutable_record)
+        values["permitted_purposes"].append("unreviewed-purpose")
+        stored = self.registry.get(self.approved.source_id)
+        self.assertEqual(stored.permitted_purposes, self.approved.permitted_purposes)
+        self.assertNotIn("unreviewed-purpose", stored.permitted_purposes)
 
     def test_approved_sources_are_returned_in_deterministic_order(self):
         second = self.approved.to_dict()

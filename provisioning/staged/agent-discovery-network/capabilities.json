@@ -8,17 +8,30 @@
       "id": "discovery.record-validation",
       "name": "Discovery record validation and expiry",
       "status": "scaffolded",
-      "description": "Validates required record fields, endpoint URI, timestamps and bounded expiry; expired records are never returned.",
-      "evidence": ["discovery_network/records.py", "tests/test_records.py"],
-      "limitations": ["The record contract is local and not yet bound to the canonical Resource Manifest or Capability Registry schemas."]
+      "description": "Validates bounded record identifiers, endpoint URI syntax, finite timestamps, bounded capability collections and expiry.",
+      "evidence": [
+        "discovery_network/records.py",
+        "tests/test_records.py"
+      ],
+      "limitations": [
+        "The record contract is local and not yet bound to the canonical Resource Manifest or Capability Registry schemas.",
+        "Bounds are local structural controls; network adapters still need body-size, rate, quota and abuse limits."
+      ]
     },
     {
       "id": "discovery.trust-filtered-index",
       "name": "Trust-filtered in-memory discovery index",
       "status": "scaffolded",
-      "description": "Indexes records and requires injected signature-verification and issuer-trust callbacks before returning candidates.",
-      "evidence": ["discovery_network/registry.py", "tests/test_registry.py"],
-      "limitations": ["Callbacks are integration seams, not cryptographic or production identity implementations.", "Storage is in-memory and process-local."]
+      "description": "Indexes bounded records and requires injected signature-verification and issuer-trust callbacks that must return explicit boolean True before records are accepted or returned.",
+      "evidence": [
+        "discovery_network/registry.py",
+        "tests/test_registry.py"
+      ],
+      "limitations": [
+        "Callbacks are integration seams, not cryptographic or production identity implementations.",
+        "Storage is in-memory and process-local.",
+        "No network rate limiting, distributed consistency, gossip, federation or Sybil resistance is implemented."
+      ]
     },
     {
       "id": "discovery.network-federation",
@@ -26,7 +39,9 @@
       "status": "planned",
       "description": "Future authenticated publication, replication, gossip and multi-domain discovery.",
       "evidence": [],
-      "limitations": ["No network API, gossip protocol, federation or distributed consistency is implemented."]
+      "limitations": [
+        "No network API, gossip protocol, federation or distributed consistency is implemented."
+      ]
     }
   ],
   "explicit_non_capabilities": [

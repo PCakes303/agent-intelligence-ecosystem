@@ -1,5 +1,6 @@
 """Capability declaration models and strict validation."""
 from dataclasses import dataclass, field
+from collections.abc import Mapping
 import re
 
 _ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$")
@@ -16,7 +17,7 @@ class Capability:
     agent_id: str
     description: str
     version: str
-    attributes: dict[str, str] = field(default_factory=dict)
+    attributes: Mapping[str, str] = field(default_factory=dict)
 
     def validate(self):
         if not isinstance(self.capability_id, str) or not _ID.fullmatch(self.capability_id):
@@ -27,7 +28,7 @@ class Capability:
             raise ValidationError("description must contain 1..1024 characters")
         if not isinstance(self.version, str) or not _VERSION.fullmatch(self.version):
             raise ValidationError("version must be numeric major.minor.patch")
-        if not isinstance(self.attributes, dict) or len(self.attributes) > 32:
+        if not isinstance(self.attributes, Mapping) or len(self.attributes) > 32:
             raise ValidationError("attributes must be a dictionary of at most 32 entries")
         for key, value in self.attributes.items():
             if not isinstance(key, str) or not _ID.fullmatch(key):

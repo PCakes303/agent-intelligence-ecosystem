@@ -2,7 +2,7 @@
 
 ## Reporting
 
-Do not publish exploitable vulnerabilities in public issues. Use GitHub's private vulnerability reporting feature if enabled for this repository.
+Do not publish exploitable vulnerabilities in public issues. Use GitHub private vulnerability reporting or a private security advisory if enabled for this repository. A dedicated private reporting address is not published here; if private reporting is unavailable, the owner must configure a private reporting channel before production use. Do not send exploit details, credentials, tokens, or sensitive event data through public channels.
 
 ## Scope and limitations
 

@@ -2,7 +2,7 @@
 
 Experimental catalog and matching layer for declared agent capabilities.
 
-Use `Capability`, `Requirement`, and `CapabilityRegistry` from the `capability_registry` package. The registry is process-local and bounded. Matching is advisory; it does not authenticate agents, grant permissions, execute work, or prove that a declaration is true.
+Use `Capability`, `Requirement`, and `CapabilityRegistry` from the `capability_registry` package. The registry is process-local and bounded; it snapshots and freezes registered attribute mappings and caps each match request at 128 requirements by default. Matching is advisory; it does not authenticate agents, grant permissions, execute work, or prove that a declaration is true.
 
 Quick start:
 

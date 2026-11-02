@@ -1,5 +1,6 @@
 """Bounded local capability index and fail-closed candidate matching."""
 import threading
+from types import MappingProxyType
 
 from .models import Capability, Requirement
 
@@ -7,30 +8,59 @@ from .models import Capability, Requirement
 class CapabilityRegistry:
     """Single-process prototype; policy callback must use a trusted policy service."""
 
-    def __init__(self, decision_callback=None, max_entries=10000):
+    def __init__(self, decision_callback=None, max_entries=10000, max_requirements=128):
         if not isinstance(max_entries, int) or isinstance(max_entries, bool) or max_entries < 1:
             raise ValueError("max_entries must be a positive integer")
+        if not isinstance(max_requirements, int) or isinstance(max_requirements, bool) or max_requirements < 1:
+            raise ValueError("max_requirements must be a positive integer")
         self.decision_callback = decision_callback
         self.max_entries = max_entries
+        self.max_requirements = max_requirements
         self._items = {}
         self._lock = threading.RLock()
 
     def register(self, item: Capability):
+        if not isinstance(item, Capability):
+            raise TypeError("item must be a Capability")
         item.validate()
-        key = (item.agent_id, item.capability_id)
+        # Snapshot and freeze caller-owned attributes so post-registration mutation
+        # cannot change a validated declaration or what policy callbacks observe.
+        stored = Capability(
+            capability_id=item.capability_id,
+            agent_id=item.agent_id,
+            description=item.description,
+            version=item.version,
+            attributes=MappingProxyType(dict(item.attributes)),
+        )
+        stored.validate()
+        key = (stored.agent_id, stored.capability_id)
         with self._lock:
             if key in self._items:
                 raise ValueError("duplicate declaration")
             if len(self._items) >= self.max_entries:
                 raise OverflowError("capacity reached")
-            self._items[key] = item
+            self._items[key] = stored
 
     def match(self, requirements):
-        requested = list(requirements)
+        requested = []
+        try:
+            iterator = iter(requirements)
+        except TypeError as exc:
+            raise TypeError("requirements must be iterable") from exc
+        for req in iterator:
+            if len(requested) >= self.max_requirements:
+                raise ValueError("too many requirements")
+            if not isinstance(req, Requirement):
+                raise TypeError("each requirement must be a Requirement")
+            req.validate()
+            # Snapshot requirement attributes to keep a stable matching input.
+            requested.append(Requirement(
+                capability_id=req.capability_id,
+                attributes=MappingProxyType(dict(req.attributes)),
+            ))
         if not requested:
             raise ValueError("requirements cannot be empty")
-        for req in requested:
-            req.validate()
+
         with self._lock:
             candidates = list(self._items.values())
 

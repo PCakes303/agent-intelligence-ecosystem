@@ -1,6 +1,5 @@
 # Agent Discovery Network
 
-**Portfolio position:** Repository 14 / 29 public  
 **Layer:** Swarm  
 **Maturity:** experimental trust-filtered discovery index deployed to the standalone public repository; Python 3.10–3.12 CI passing  
 **Dependencies:** Agent Resource Manifest, Agent Capability Registry, Agent Identity & Trust, Agent Transport Gateway

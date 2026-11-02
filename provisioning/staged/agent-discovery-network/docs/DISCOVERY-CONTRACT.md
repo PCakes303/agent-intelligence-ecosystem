@@ -22,7 +22,7 @@ The initial dataclass is a local experimental contract. It is not yet bound to t
 
 ## Publish requirements
 
-A publisher must validate record structure and lifetime, verify the signature using an approved cryptographic profile, and evaluate issuer trust. The scaffold represents signature and trust checks as injected callbacks; it does not implement cryptography or identity lifecycle.
+A publisher must validate record structure and lifetime, verify the signature using an approved cryptographic profile, and evaluate issuer trust. The scaffold represents signature and trust checks as injected callbacks; only explicit boolean `True` accepts a record. It does not implement cryptography or identity lifecycle.
 
 ## Query requirements
 
@@ -34,7 +34,7 @@ A trusted issuer may still publish false or stale claims. A valid signature prov
 
 ## Expiry
 
-The initial maximum record lifetime is configurable and defaults to 24 hours. Records are rejected when expired, issued in the future, or longer-lived than the configured maximum. Production deployments must define clock-skew tolerance, renewal behavior, revocation and retention semantics.
+The initial maximum record lifetime is configurable and defaults to 24 hours. Record identifier, subject, issuer, endpoint, provenance and signature strings have fixed upper bounds; capability collections and individual capability identifiers are bounded. Registry capacity is bounded and capacity exhaustion rejects publication. Records are rejected when expired, issued in the future, or longer-lived than the configured maximum. Production deployments must define clock-skew tolerance, renewal behavior, revocation and retention semantics.
 
 ## Storage and federation
 

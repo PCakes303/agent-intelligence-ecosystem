@@ -24,6 +24,50 @@ class DiscoveryRegistryTests(unittest.TestCase):
         values.update(changes)
         return DiscoveryRecord(**values)
 
+
+    def test_truthy_non_boolean_verifier_result_is_rejected(self):
+        registry = DiscoveryRegistry(
+            verifier=lambda record: "true",
+            trust_evaluator=lambda issuer: True,
+            clock=lambda: self.now[0],
+        )
+        with self.assertRaises(PermissionError):
+            registry.publish(self.record())
+
+    def test_truthy_non_boolean_trust_result_is_rejected(self):
+        registry = DiscoveryRegistry(
+            verifier=lambda record: True,
+            trust_evaluator=lambda issuer: "trusted",
+            clock=lambda: self.now[0],
+        )
+        with self.assertRaises(PermissionError):
+            registry.publish(self.record())
+
+    def test_nonfinite_clock_fails_closed(self):
+        registry = DiscoveryRegistry(
+            verifier=lambda record: True,
+            trust_evaluator=lambda issuer: True,
+            clock=lambda: float("nan"),
+        )
+        with self.assertRaises(RuntimeError):
+            registry.publish(self.record())
+
+    def test_nonfinite_lifetime_config_is_rejected(self):
+        with self.assertRaises(ValueError):
+            DiscoveryRegistry(
+                verifier=lambda record: True,
+                trust_evaluator=lambda issuer: True,
+                max_lifetime_seconds=float("inf"),
+            )
+
+    def test_noninteger_capacity_config_is_rejected(self):
+        with self.assertRaises(ValueError):
+            DiscoveryRegistry(
+                verifier=lambda record: True,
+                trust_evaluator=lambda issuer: True,
+                max_records=1.5,
+            )
+
     def test_publish_and_query(self):
         self.registry.publish(self.record())
         self.assertEqual(len(self.registry.query(kind="agent", capability="chat")), 1)

@@ -14,6 +14,23 @@ class DiscoveryRecordTests(unittest.TestCase):
         values.update(changes)
         return DiscoveryRecord(**values)
 
+
+    def test_rejects_malformed_endpoint(self):
+        with self.assertRaises(RecordValidationError):
+            self.record(endpoint="https://[::1").validate(now=150, max_lifetime_seconds=200)
+
+    def test_rejects_oversized_record_identifier(self):
+        with self.assertRaises(RecordValidationError):
+            self.record(record_id="r" * 129).validate(now=150, max_lifetime_seconds=200)
+
+    def test_rejects_boolean_timestamp(self):
+        with self.assertRaises(RecordValidationError):
+            self.record(issued_at=True).validate(now=150, max_lifetime_seconds=200)
+
+    def test_rejects_excessive_capability_collection(self):
+        with self.assertRaises(RecordValidationError):
+            self.record(capabilities=tuple(f"cap-{i}" for i in range(129))).validate(now=150, max_lifetime_seconds=200)
+
     def test_valid_record(self):
         self.record().validate(now=150.0, max_lifetime_seconds=200.0)
 
