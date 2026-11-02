@@ -137,7 +137,7 @@
       "name": "agent-audit-provenance",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Portable audit event contracts, traceability, and deterministic hash-chained records; authenticated and signed provenance remain future work.",
       "dependencies": [
         "foundation",
@@ -150,7 +150,7 @@
       "name": "aix-core",
       "visibility": "public",
       "layer": "protocols",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Experimental semantic interoperability specification for intent, tasks, responses, capabilities, context, status, errors, and provenance; extension layer over established protocols and transports.",
       "dependencies": [
         "foundation",
