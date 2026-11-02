@@ -7,7 +7,7 @@
 - Remote repository: not yet created; the connected GitHub integration cannot create repositories.
 - Staging state: initial scaffold prepared in the master repository.
 - Maturity: local metadata/fixture validator and deterministic report builder only.
-- License: pending portfolio review; no LICENSE file included.
+- License: scoped mixed-license policy included in staged LICENSE.md; file-level provenance clearance remains required.
 - Dependencies: foundation spec, schema registry, AIX core/codecs, transport gateway, swarm runtime, identity trust, policy engine, audit provenance, secure supply chain, emergency control and compliance governance (declared only).
 - Implemented in this staging packet: local manifest/capability/compatibility consistency checks; synthetic AIX envelope schema; conformance report builder with PASS/FAIL/BLOCKED semantics; report digest; synthetic tests; Python 3.10–3.12 CI.
 - Not implemented: arbitrary code execution, live interoperability, production swarm benchmarking, security certification or compliance certification.
