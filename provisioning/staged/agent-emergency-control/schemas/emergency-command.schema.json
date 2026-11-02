@@ -4,65 +4,166 @@
   "title": "Emergency Control Command",
   "type": "object",
   "additionalProperties": false,
-  "required": ["command_version", "command_id", "epoch", "action", "scope", "issued_at", "expires_at", "actor", "reason", "approvals"],
+  "required": [
+    "command_version",
+    "command_id",
+    "epoch",
+    "action",
+    "scope",
+    "issued_at",
+    "expires_at",
+    "actor",
+    "reason",
+    "approvals"
+  ],
   "properties": {
-    "command_version": {"const": "1.0"},
-    "command_id": {"type": "string", "format": "uuid"},
-    "epoch": {"type": "integer", "minimum": 1, "maximum": 9223372036854775807},
-    "action": {"enum": ["STOP", "RESUME"]},
+    "command_version": {
+      "const": "1.0"
+    },
+    "command_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "epoch": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9223372036854776000
+    },
+    "action": {
+      "enum": [
+        "STOP",
+        "RESUME"
+      ]
+    },
     "scope": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["kind", "id"],
+      "required": [
+        "kind",
+        "id"
+      ],
       "properties": {
-        "kind": {"enum": ["global", "organization", "agent", "workload"]},
-        "id": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z0-9][A-Za-z0-9._:*:-]{0,127}$"}
+        "kind": {
+          "enum": [
+            "global",
+            "organization",
+            "agent",
+            "workload"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:*:-]{0,127}$"
+        }
       }
     },
-    "issued_at": {"type": "string", "format": "date-time", "maxLength": 40},
-    "expires_at": {"type": "string", "format": "date-time", "maxLength": 40},
+    "issued_at": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 40
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 40
+    },
     "actor": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["principal_id", "key_id", "signature"],
+      "required": [
+        "principal_id",
+        "key_id",
+        "signature"
+      ],
       "properties": {
-        "principal_id": {"type": "string", "minLength": 1, "maxLength": 128},
-        "key_id": {"type": "string", "minLength": 1, "maxLength": 128},
-        "signature": {"type": "string", "minLength": 32, "maxLength": 2048}
+        "principal_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "key_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "signature": {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 2048
+        }
       }
     },
-    "reason": {"type": "string", "minLength": 8, "maxLength": 2048},
+    "reason": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 2048
+    },
     "approvals": {
       "type": "array",
       "maxItems": 2,
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["principal_id", "key_id", "signature"],
+        "required": [
+          "principal_id",
+          "key_id",
+          "signature"
+        ],
         "properties": {
-          "principal_id": {"type": "string", "minLength": 1, "maxLength": 128},
-          "key_id": {"type": "string", "minLength": 1, "maxLength": 128},
-          "signature": {"type": "string", "minLength": 32, "maxLength": 2048}
+          "principal_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "key_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "signature": {
+            "type": "string",
+            "minLength": 32,
+            "maxLength": 2048
+          }
         }
       }
     }
   },
   "allOf": [
     {
-      "if": {"properties": {"scope": {"properties": {"kind": {"const": "global"}}}}},
-      "then": {"properties": {"scope": {"properties": {"id": {"const": "*"}}}}}
+      "if": {
+        "properties": {
+          "action": {
+            "const": "STOP"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "approvals": {
+            "maxItems": 0
+          }
+        }
+      }
     },
     {
-      "if": {"properties": {"scope": {"properties": {"kind": {"enum": ["organization", "agent", "workload"]}}}}},
-      "then": {"properties": {"scope": {"properties": {"id": {"not": {"const": "*"}}}}}
-    },
-    {
-      "if": {"properties": {"action": {"const": "STOP"}}},
-      "then": {"properties": {"approvals": {"maxItems": 0}}}
-    },
-    {
-      "if": {"properties": {"action": {"const": "RESUME"}}},
-      "then": {"properties": {"approvals": {"minItems": 2, "maxItems": 2}}}
+      "if": {
+        "properties": {
+          "action": {
+            "const": "RESUME"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "approvals": {
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      }
     }
   ]
 }
