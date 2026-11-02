@@ -12,40 +12,12 @@
     "agent-schema-registry",
     "agent-identity-trust",
     "agent-ecosystem-private",
-    "agent-secure-supply-chain"
+    "agent-secure-supply-chain",
+    "aix-codecs",
+    "agent-transport-gateway"
   ],
-  "missing_public_repository_count": 17,
+  "missing_public_repository_count": 15,
   "repositories": [
-    {
-      "name": "aix-codecs",
-      "description": "Serialization, validation, and machine encodings for AIX.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "aix-codecs",
-      "dependencies": [
-        "aix-core",
-        "schema-registry"
-      ]
-    },
-    {
-      "name": "agent-transport-gateway",
-      "description": "Secure transport and integration with existing agent protocols.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "transport-gateway",
-      "dependencies": [
-        "aix-core",
-        "aix-codecs",
-        "identity-trust",
-        "policy-engine"
-      ]
-    },
     {
       "name": "agent-discovery-network",
       "description": "Discovery of agents, resources, services, and capabilities.",
