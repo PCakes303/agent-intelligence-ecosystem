@@ -627,14 +627,17 @@
       "role": "Federation between independently operated agent networks.",
       "repository_url": "https://github.com/PCakes303/agent-federation-network",
       "existence": "not-created",
-      "implementation_status": "Not started",
+      "implementation_status": "Staged; local peer declaration validation only; no authentication, signature verification, network transport, STOP propagation or remote authorization.",
       "priority": "P2",
       "dependencies": [
         "identity-trust",
         "discovery-network",
         "swarm-coordination",
         "policy-engine",
-        "audit-provenance"
+        "audit-provenance",
+        "secure-supply-chain",
+        "emergency-control",
+        "compliance-governance"
       ],
       "discovery": {
         "llms_txt": null,
