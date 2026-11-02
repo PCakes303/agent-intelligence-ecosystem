@@ -12,6 +12,8 @@ The portfolio and architecture are approved. Repository implementation is **plan
 
 ## Start here
 
+- [30-repository portfolio status and work tracker](PORTFOLIO-STATUS.md)
+
 - [Architecture](docs/ARCHITECTURE.md)
 - [Repository registry](registry/repositories.json)
 - [Dependency graph](registry/dependencies.json)
