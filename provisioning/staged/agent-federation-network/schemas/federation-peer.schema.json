@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-federation-network/blob/main/schemas/federation-peer.schema.json",
+  "title": "Federation Peer Declaration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "peer_id",
+    "network_id",
+    "endpoint",
+    "trust_state",
+    "scope",
+    "expires_at",
+    "trust_anchor_sha256",
+    "approval_ref",
+    "stop_state"
+  ],
+  "properties": {
+    "peer_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}$"
+    },
+    "network_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}$"
+    },
+    "endpoint": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 512
+    },
+    "trust_state": {
+      "enum": [
+        "pending",
+        "active",
+        "revoked"
+      ]
+    },
+    "scope": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]{1,62}$"
+      }
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 64
+    },
+    "trust_anchor_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "approval_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "stop_state": {
+      "enum": [
+        "clear",
+        "stopped"
+      ]
+    }
+  }
+}

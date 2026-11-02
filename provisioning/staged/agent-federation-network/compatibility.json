@@ -1,0 +1,55 @@
+{
+  "compatibility_version": "1.0.0",
+  "repository": "agent-federation-network",
+  "dependencies": [
+    {
+      "repository_id": "identity-trust",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    },
+    {
+      "repository_id": "discovery-network",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    },
+    {
+      "repository_id": "swarm-coordination",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    },
+    {
+      "repository_id": "policy-engine",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    },
+    {
+      "repository_id": "audit-provenance",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    },
+    {
+      "repository_id": "secure-supply-chain",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    },
+    {
+      "repository_id": "emergency-control",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    },
+    {
+      "repository_id": "compliance-governance",
+      "status": "declared",
+      "tested_versions": [],
+      "evidence": []
+    }
+  ],
+  "tested_combinations": []
+}

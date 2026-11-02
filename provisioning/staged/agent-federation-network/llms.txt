@@ -1,0 +1,9 @@
+# Agent Federation Network
+
+Purpose: define local contracts for independently administered agent-network federation.
+
+Current scaffold: bounded local peer declaration validation only.
+
+Not implemented: peer authentication, signature verification, remote authorization, credential exchange, network transport, STOP propagation, revocation distribution, remote execution, production interoperability, or certification.
+
+Safety: default deny; explicit scope; short-lived trust; local revocation; emergency STOP blocks use; no implicit trust transitivity. Metadata is not authority.

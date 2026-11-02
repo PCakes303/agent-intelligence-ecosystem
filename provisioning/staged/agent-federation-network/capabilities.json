@@ -1,0 +1,27 @@
+{
+  "metadata_version": "1.0.0",
+  "repository_id": "federation-network",
+  "maturity": "research",
+  "capabilities": [
+    {
+      "id": "federation.peer-declaration-validation",
+      "status": "experimental",
+      "evidence": [
+        "tests/test_trust.py"
+      ],
+      "description": "Validate local peer declaration shape, bounded scope, trust-state fields, expiry and stop-state semantics."
+    }
+  ],
+  "explicit_non_capabilities": [
+    "peer authentication",
+    "cryptographic signature verification",
+    "credential exchange",
+    "network transport",
+    "remote authorization enforcement",
+    "distributed revocation",
+    "emergency STOP propagation",
+    "remote workload execution",
+    "production federation",
+    "compliance certification"
+  ]
+}
