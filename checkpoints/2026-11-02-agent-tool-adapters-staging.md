@@ -39,3 +39,7 @@ Create an **empty public** repository named `agent-tool-adapters` under `PCakes3
 The first master CI run after recording the staging status exposed one control-plane regression: the public catalog's `implementation_status` string had not been synchronized with the authoritative implementation-status record. The other 46 master regression tests passed; registry validation, dependency graph validation, resource manifest validation, and policy smoke test passed. The catalog record was corrected in commit `4a2a0c25384ffe566aa98cb39a9c350bb3a2477c`. Follow-up master CI run `41430543660` was queued at checkpoint update time; do not claim it passed until its final conclusion is confirmed.
 
 This was a master catalog consistency issue, not a failure in the staged adapter library. The adapter library's own 13 tests remain unexecuted until local validation or deployment CI is available.
+
+### Follow-up master CI result
+
+The catalog synchronization correction was verified by master workflow run [41430543660](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41430543660): **success**. Registry/dependency validation, resource-manifest validation, default-deny policy smoke test, all 47 master regression tests, and the entry-level build passed. This run tested commit `4a2a0c25384ffe566aa98cb39a9c350bb3a2477c`; the later checkpoint-only documentation commit does not change code or registry content. This is master control-plane validation, not execution of the 13 staged adapter unit tests.
