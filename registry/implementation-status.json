@@ -97,14 +97,15 @@
     },
     "agent-tool-adapters": {
       "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
-      "workflow_run": "https://github.com/PCakes303/agent-tool-adapters/actions/runs/41431367932",
+      "workflow_run": "https://github.com/PCakes303/agent-tool-adapters/actions/runs/41431870349",
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
       "jobs": "all passed",
-      "tests": 13
+      "tests": 13,
+      "metadata_validation": "capability and compatibility metadata accepted by the component validation workflow"
     }
   },
   "repositories": [
