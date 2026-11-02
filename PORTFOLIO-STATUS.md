@@ -150,7 +150,7 @@ A fresh live review of the connected GitHub account confirms the portfolio remai
 - All 23 public component repositories have README, AGENTS.md, CONTRIBUTING.md, SECURITY.md, llms.txt, manifest.json, capabilities.json, compatibility.json, tests, docs and a GitHub Actions workflow. File presence does not certify content accuracy.
 - No root LICENSE file was found in any of the 23 component repositories, and no GitHub license declaration was returned for the 24 public portfolio repositories. Mixed licensing remains a policy decision; per-repository/per-artifact choices require review and must not be guessed.
 - Live About metadata reads: 9/24 descriptions present, 15/24 blank; all 24 have no homepage URL and empty topics. agent-policy-engine has topic keywords appended to its description. The metadata guide is not proof that GitHub settings have been applied.
-- Twelve retained staging packets have prior exact remote/staging path and blob-hash parity records; refresh these after latest changes before final sign-off.
+- Fifteen retained staging packets were compared against live remote product trees on 2026-11-02. Two are currently exact (agent-sandbox-security and intelligence-knowledge-graph); thirteen have matching path sets but one or more Git blob mismatches and require refresh before sign-off. Master-side STAGING-STATUS.md records are excluded from product-file parity.
 - Branch protection, rulesets and related repository administration controls remain unverified because the connected integration cannot read the relevant administration endpoints.
 - The portfolio remains predominantly specifications, schemas, validators and experimental reference implementations. No placeholder package or release should be created.
 - Emergency-stop enforcement, identity/revocation, runtime policy enforcement, verified artifact provenance, actual OS sandbox isolation, audit integration and compliance evidence remain release gates for privileged workload execution.
@@ -170,4 +170,18 @@ The owner approved a universal cleanup and quality gate for all 31 public reposi
 
 The standard distinguishes common required materials from role-specific conditional artifacts. It explicitly prohibits guessed licenses, empty package placeholders, unsupported maturity/security claims and destructive removal of historical checkpoints. Each repository must receive PASS, PASS WITH EXCEPTIONS, BLOCKED or NOT REVIEWED with evidence before portfolio sign-off. The same gate applies to the seven remaining repositories at creation.
 
-The master registry-validation workflow now also runs on changes to docs, checkpoints, README and PORTFOLIO-STATUS so that project documentation and status changes are validated with the same master regression suite. Latest successful master workflow before this trigger change: [run 41438488148](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41438488148). A new run is required to verify this trigger change and the new documentation commit.
+The master registry-validation workflow path filters were expanded on 2026-11-02 to include root governance files, docs, checkpoints, README, metadata and portfolio status on both pushes and pull requests. The resulting workflow is being verified against the current master commit.
+
+
+## Component audit register — 2026-11-02
+
+The individual component audit pass now covers all **23 existing public component repositories**, in addition to the separate master control-plane audit. Each component has a dated checkpoint in `checkpoints/` and an audit disposition in `registry/implementation-status.json`.
+
+- **23 component audits: BLOCKED** pending the specific security-reporting, schema/validator, resource-bound, metadata, licensing, administration, or integration evidence listed in each checkpoint. A BLOCKED audit disposition is a release gate, not a claim that every component is unusable.
+- **Master control plane: PASS WITH EXCEPTIONS.** Registry, dependency graph, public catalog, regression suite and starter build pass; master-level licensing, GitHub About metadata and repository administration remain open.
+- **Portfolio inventory:** 32 total repositories (31 public, 1 private), 24 existing public, 7 public not yet created. The private operations repository remains uninspected and excluded from public synchronization.
+- **Staging back-check:** 15 retained staging packets compared against remote Git blob hashes. Two exact (sandbox-security, knowledge-graph); 13 require refresh. No product paths were missing or extra; the differences are content/blob drift. See `registry/implementation-status.json` → `staging_reconciliation`.
+- **Guide reconciliation:** the human-facing guide now states 32 total, and its public repository map matches all 31 canonical public registry names exactly while excluding the private entry.
+- **Audit limitations:** green CI confirms only each repository's declared workflow and test scope. It does not certify production readiness, legal compliance, cross-repository interoperability, identity/authentication, privileged execution, or OS-level sandbox isolation.
+
+The seven remaining public repositories are still not created. The approved P0 additions `agent-emergency-control` and `agent-compliance-governance` remain mandatory foundations before any privileged workload execution or portfolio-wide release.
