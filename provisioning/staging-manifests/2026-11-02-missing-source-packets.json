@@ -7,9 +7,9 @@
     {
       "repository": "PCakes303/agent-resource-manifest",
       "branch": "main",
-      "source_commit": "bfb22aeec631a0d38ae77ffb4af391ded51c218a",
+      "source_commit": "bfb22aeec631a0d38ae77ffb4af391ded51c218",
       "file_count": 21,
-      "parity": "mismatch",
+      "parity": "exact-path-and-blob-sha",
       "files": [
         {
           "path": ".github/workflows/validate.yml",
@@ -144,7 +144,7 @@
       "branch": "main",
       "source_commit": "ba5396b07f2280a5fcc20e8f61174c2f1bc9a324",
       "file_count": 20,
-      "parity": "mismatch",
+      "parity": "exact-path-and-blob-sha",
       "files": [
         {
           "path": ".github/workflows/validate.yml",
@@ -273,7 +273,7 @@
       "branch": "main",
       "source_commit": "800a6c821226a78b046e8bd1cfb3a07e0675371c",
       "file_count": 21,
-      "parity": "mismatch",
+      "parity": "exact-path-and-blob-sha",
       "files": [
         {
           "path": ".github/workflows/validate.yml",
@@ -408,7 +408,7 @@
       "branch": "main",
       "source_commit": "a707d9636a8de1273a4f03c7deaf077631bca245",
       "file_count": 24,
-      "parity": "mismatch",
+      "parity": "exact-path-and-blob-sha",
       "files": [
         {
           "path": ".github/workflows/validate.yml",
@@ -561,7 +561,7 @@
       "branch": "main",
       "source_commit": "77f464c8ab55d36154019a521e1578f1082c8028",
       "file_count": 22,
-      "parity": "mismatch",
+      "parity": "exact-path-and-blob-sha",
       "files": [
         {
           "path": ".github/workflows/ci.yml",
@@ -700,7 +700,7 @@
   ],
   "limitations": [
     "The source files are mirrored under provisioning/staged/<repository>/ and are exact path/blob-SHA matches for the pinned commits.",
-    "The STAGING-STATUS.md files are master-maintained administrative records and are excluded from the source mirror parity comparison.",
+    "The master-maintained STAGING-STATUS.md files are excluded from source parity comparison.",
     "This verifies source-tree identity, not production readiness or cross-repository runtime conformance."
   ]
 }
