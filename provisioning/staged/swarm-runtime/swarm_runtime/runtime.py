@@ -99,6 +99,8 @@ class WorkerRuntime:
         spec.validate()
         if not isinstance(principal_id, str) or not principal_id.strip() or len(principal_id) > 128:
             raise PermissionError("a trusted principal identifier is required")
+        if not self.health().adapter_healthy:
+            raise RuntimeError("worker adapter is unhealthy; admission denied")
         if self.policy_check is None:
             raise PermissionError("policy unavailable; worker admission denied")
         try:
