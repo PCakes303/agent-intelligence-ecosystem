@@ -7,7 +7,7 @@ Independent emergency-stop command and state-transition contracts for the MrCake
 
 ## Safety boundary
 
-This scaffold validates signed-command envelopes and evaluates deterministic stop/resume transitions. It does not authenticate signatures, issue credentials, persist authoritative state, revoke identities, contact agents, propagate commands, quarantine processes, or enforce a stop at an operating-system/runtime boundary. Those functions require separately reviewed adapters and integration tests. A passing validator is not an operational kill switch.
+This scaffold validates command envelopes and evaluates deterministic stop/resume transitions. It does not authenticate signatures, issue credentials, persist authoritative state, revoke identities, contact agents, propagate commands, quarantine processes, or enforce a stop at an operating-system/runtime boundary. Those functions require separately reviewed adapters and integration tests. A passing validator is not an operational kill switch.
 
 No privileged workload may execute on the strength of this repository alone. Until independent authority, durable state, revocation, propagation, enforcement and recovery paths are implemented and tested, consumers must fail closed.
 
@@ -36,8 +36,6 @@ The master registry declares foundation, identity-trust, policy-engine, audit-pr
 
 ## Licensing
 
-License selection is pending portfolio review. No license is asserted. Public visibility does not grant reuse or redistribution rights.
-
-## Licensing
-
 This repository applies the ecosystem's scoped mixed-license policy: original source code and machine-readable contracts are licensed under Apache-2.0; original human-readable documentation is licensed under CC BY 4.0. Third-party material retains upstream terms. Datasets, evidence, fixtures, sample payloads, media, and material with uncertain provenance are not blanket-licensed and require separate review. See [LICENSE.md](LICENSE.md).
+
+License and third-party provenance still require human review before release.
