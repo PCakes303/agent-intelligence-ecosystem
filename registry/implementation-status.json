@@ -362,7 +362,14 @@
       "status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI passed",
       "priority": "P0",
       "importance": "Canonical task/intent semantics shared by agents and transports.",
-      "next_gate": "Develop concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders."
+      "next_gate": "Develop concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "11dc24b14382d2f019e6a6a3ad00d325018a8604",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-aix-core-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/aix-core/issues/1"
+      }
     },
     {
       "number": "12",
