@@ -11,8 +11,7 @@ on:
       - "prototypes/**"
       - "examples/**"
       - "specifications/**"
-      - "templates/**"
-      - "prototypes/**"
+      - "provisioning/**"
       - "requirements-dev.txt"
       - ".github/workflows/registry-validation.yml"
   pull_request:
@@ -21,6 +20,11 @@ on:
       - "schemas/**"
       - "tools/**"
       - "tests/**"
+      - "templates/**"
+      - "prototypes/**"
+      - "examples/**"
+      - "specifications/**"
+      - "provisioning/**"
       - "requirements-dev.txt"
       - ".github/workflows/registry-validation.yml"
   workflow_dispatch:
@@ -44,5 +48,7 @@ jobs:
         run: python tools/validate_registry.py
       - name: Validate resource manifest example
         run: python tools/validate_agent_resource.py
+      - name: Smoke-test default-deny policy evaluator
+        run: python tools/evaluate_policy.py --policy prototypes/policy/examples/policy.json --request prototypes/policy/examples/allow-request.json
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
