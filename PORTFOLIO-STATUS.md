@@ -227,3 +227,8 @@ The third OSINT component, `osint-entity-resolution` (canonical portfolio positi
 
 
 The `osint-entity-resolution` staging packet passed 16 tests on Python 3.10–3.12 in [master CI run 41515580489](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489). The master 114-edge dependency graph, public catalog, 47-test suite and starter build also passed. Candidate output remains review-required; no people matching or auto-merge is implemented.
+
+
+## Conformance lab — staging
+
+The `agent-conformance-lab` (canonical portfolio position 30/32) is staged as a local metadata/fixture validator and deterministic conformance report builder. Its dependency graph now includes identity, policy, audit, emergency-control and compliance-governance gates (121 edges total). Missing integration evidence remains BLOCKED; local fixture tests do not establish live interoperability or certification. Staging CI is pending.

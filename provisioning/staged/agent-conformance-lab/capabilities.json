@@ -1,0 +1,50 @@
+{
+  "capabilities_version": "1.0.0",
+  "repository": "agent-conformance-lab",
+  "repository_id": "conformance-lab",
+  "maturity": "scaffolded",
+  "capabilities": [
+    {
+      "id": "conformance.metadata.validate",
+      "name": "Repository metadata validation",
+      "status": "tested",
+      "description": "Checks consistency between a repository manifest, capability declarations and compatibility dependencies.",
+      "evidence": [
+        "conformance_lab/metadata.py",
+        "tests/test_metadata.py"
+      ]
+    },
+    {
+      "id": "conformance.fixture.validate",
+      "name": "Protocol fixture validation",
+      "status": "tested",
+      "description": "Validates synthetic protocol envelopes against the local Draft 2020-12 schema.",
+      "evidence": [
+        "conformance_lab/fixtures.py",
+        "schemas/agent-envelope.schema.json",
+        "tests/test_fixtures.py"
+      ]
+    },
+    {
+      "id": "conformance.report.build",
+      "name": "Deterministic conformance report",
+      "status": "tested",
+      "description": "Builds a report that distinguishes PASS, FAIL and BLOCKED and derives a report digest.",
+      "evidence": [
+        "conformance_lab/reports.py",
+        "tests/test_reports.py"
+      ],
+      "limitations": [
+        "Does not authenticate report author or establish live interoperability."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Executing untrusted repository code",
+    "Live cross-repository or network interoperability tests",
+    "Production swarm benchmarking",
+    "Security certification or compliance certification",
+    "Authenticating test results or report authors",
+    "Automatic promotion of declared dependencies to tested status"
+  ]
+}

@@ -100,7 +100,14 @@
         "aix-codecs",
         "transport-gateway",
         "swarm-runtime",
-        "secure-supply-chain"
+        "secure-supply-chain",
+        "foundation",
+        "schema-registry",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "emergency-control",
+        "compliance-governance"
       ]
     },
     {

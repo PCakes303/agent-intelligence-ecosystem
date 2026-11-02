@@ -1,0 +1,25 @@
+{
+  "manifest_version": "1.0.0",
+  "id": "conformance-lab",
+  "name": "agent-conformance-lab",
+  "version": "0.1.0",
+  "maturity": "scaffolded",
+  "role": "Local contract and fixture validation with deterministic conformance reports; no live interoperability or certification.",
+  "dependencies": [
+    "foundation",
+    "schema-registry",
+    "aix-core",
+    "aix-codecs",
+    "transport-gateway",
+    "swarm-runtime",
+    "identity-trust",
+    "policy-engine",
+    "audit-provenance",
+    "secure-supply-chain",
+    "emergency-control",
+    "compliance-governance"
+  ],
+  "entrypoint": "conformance_lab/runner.py",
+  "license_status": "pending-portfolio-review",
+  "execution_authority": false
+}

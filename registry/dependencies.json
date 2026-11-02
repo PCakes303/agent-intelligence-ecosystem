@@ -459,6 +459,34 @@
     [
       "entity-resolution",
       "secure-supply-chain"
+    ],
+    [
+      "conformance-lab",
+      "foundation"
+    ],
+    [
+      "conformance-lab",
+      "schema-registry"
+    ],
+    [
+      "conformance-lab",
+      "identity-trust"
+    ],
+    [
+      "conformance-lab",
+      "policy-engine"
+    ],
+    [
+      "conformance-lab",
+      "audit-provenance"
+    ],
+    [
+      "conformance-lab",
+      "emergency-control"
+    ],
+    [
+      "conformance-lab",
+      "compliance-governance"
     ]
   ],
   "excluded": [

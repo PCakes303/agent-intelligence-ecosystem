@@ -410,13 +410,20 @@
       "visibility": "public",
       "layer": "adoption",
       "status": "planned",
-      "role": "Protocol validation, compatibility and security tests, and swarm benchmarks.",
+      "role": "Protocol contract validation, compatibility and security tests, with future isolated swarm benchmarking.",
       "dependencies": [
         "aix-core",
         "aix-codecs",
         "transport-gateway",
         "swarm-runtime",
-        "secure-supply-chain"
+        "secure-supply-chain",
+        "foundation",
+        "schema-registry",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "emergency-control",
+        "compliance-governance"
       ]
     },
     {

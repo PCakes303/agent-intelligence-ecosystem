@@ -99,3 +99,8 @@ A public non-personal evidence-manifest and deterministic hash-chain validator i
 ## Next OSINT build — osint-entity-resolution (portfolio position 23/32)
 
 A public non-personal candidate matcher is staged at [osint-entity-resolution](staged/osint-entity-resolution/). It produces review-required candidates only, retains evidence references and uncertainty, and excludes person matching, personal profiling and automatic merges. Master staging CI [run 41515580489](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489) passed 16 tests on Python 3.10–3.12. The public remote remains uncreated.
+
+
+## Next build — agent-conformance-lab (portfolio position 30/32)
+
+The local contract/fixture validator and deterministic PASS/FAIL/BLOCKED report builder are staged at [agent-conformance-lab](staged/agent-conformance-lab/). It does not execute arbitrary repository code, connect to live agents, benchmark production swarms or certify security/compliance. The public remote and staging CI remain pending.

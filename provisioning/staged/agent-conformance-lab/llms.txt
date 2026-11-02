@@ -1,0 +1,13 @@
+# Agent Conformance Lab
+
+- Purpose: local contract/fixture validation and deterministic conformance reports.
+- Maturity: scaffolded; no live integration, production benchmarking or certification.
+- Start: README.md
+- Contract: docs/CONFORMANCE-CONTRACT.md
+- Security gates: docs/SECURITY-GATES.md
+- Integration gates: docs/INTEGRATION-GATES.md
+- Schemas: schemas/
+- Library: conformance_lab/
+- Tests: tests/
+- Dependencies: AIX, transport, swarm, identity, policy, audit, supply-chain, emergency-control and compliance-governance (declared only).
+- License: pending portfolio review.
