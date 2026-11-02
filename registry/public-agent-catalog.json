@@ -1,0 +1,652 @@
+{
+  "catalog_version": "1.0.0",
+  "generated_from": "registry/repositories.json + registry/implementation-status.json",
+  "portfolio": "MrCakes931 Agent Intelligence Ecosystem",
+  "owner": "PCakes303",
+  "public_identity": "https://github.com/HuffmanMainNode",
+  "visibility_scope": "public-only",
+  "repository_count": 29,
+  "discovery_notice": "This catalog is descriptive metadata, not authentication, authorization, endorsement, or proof of runtime capability.",
+  "repositories": [
+    {
+      "id": "master",
+      "name": "agent-intelligence-ecosystem",
+      "visibility": "public",
+      "layer": "control-plane",
+      "role": "Canonical public registry, dependency graph, governance, ADRs, and compatibility overview.",
+      "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "existence": "exists",
+      "implementation_status": "Operational control plane; registry, architecture, starter validation and CI",
+      "priority": "P0",
+      "dependencies": [],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "discovery",
+      "name": "agent-ai-discovery",
+      "visibility": "public",
+      "layer": "ecosystem-facing",
+      "role": "AI-native discovery metadata, machine-readable entrypoints, published capability indexes, and opt-in agent integration.",
+      "repository_url": "https://github.com/PCakes303/agent-ai-discovery",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; entry-level build and CI pass; domain capability partial",
+      "priority": "P1",
+      "dependencies": [
+        "master",
+        "resource-manifest",
+        "schema-registry",
+        "identity-trust"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-ai-discovery/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-ai-discovery/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-ai-discovery/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "human-guide",
+      "name": "mrcakes931-ecosystem",
+      "visibility": "public",
+      "layer": "ecosystem-facing",
+      "role": "Human-facing ecosystem guide, navigation, onboarding, and project relationships.",
+      "repository_url": "https://github.com/PCakes303/mrcakes931-ecosystem",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; entry-level build and CI pass; guide content needs alignment",
+      "priority": "P2",
+      "dependencies": [
+        "master"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "integration",
+      "name": "agent-ecosystem-integration",
+      "visibility": "public",
+      "layer": "ecosystem-facing",
+      "role": "Cross-repository integration profiles, adapter safety contracts, interoperability guidance, and conformance validation.",
+      "repository_url": "https://github.com/PCakes303/agent-ecosystem-integration",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; entry-level build and CI pass; integration profiles partial",
+      "priority": "P1",
+      "dependencies": [
+        "master",
+        "foundation",
+        "resource-manifest",
+        "schema-registry",
+        "identity-trust",
+        "secure-supply-chain"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-ecosystem-integration/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-ecosystem-integration/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-ecosystem-integration/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "foundation",
+      "name": "agent-foundation-spec",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Normative foundation requirements, security and reliability invariants, lifecycle, and compatibility contracts.",
+      "repository_url": "https://github.com/PCakes303/agent-foundation-spec",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; requirements/contracts and CI pass; normative verification partial",
+      "priority": "P0",
+      "dependencies": [
+        "master"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-foundation-spec/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-foundation-spec/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-foundation-spec/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "resource-manifest",
+      "name": "agent-resource-manifest",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Portable manifests for agent tools, skills, models, datasets, services, dependencies, and requested permissions.",
+      "repository_url": "https://github.com/PCakes303/agent-resource-manifest",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; schema, examples, validator and CI pass",
+      "priority": "P0",
+      "dependencies": [
+        "foundation",
+        "schema-registry",
+        "identity-trust"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-resource-manifest/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-resource-manifest/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-resource-manifest/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "schema-registry",
+      "name": "agent-schema-registry",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Versioned JSON Schemas, schema catalog governance, validation conventions, and compatibility rules.",
+      "repository_url": "https://github.com/PCakes303/agent-schema-registry",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; schema catalog and CI pass; compatibility runner missing",
+      "priority": "P0",
+      "dependencies": [
+        "foundation"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-schema-registry/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-schema-registry/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-schema-registry/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "identity-trust",
+      "name": "agent-identity-trust",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Principal identity data contracts, authentication context, authorization, delegation, revocation, and trust boundaries.",
+      "repository_url": "https://github.com/PCakes303/agent-identity-trust",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; identity contracts and CI pass; lifecycle/authenticated demo missing",
+      "priority": "P0",
+      "dependencies": [
+        "foundation",
+        "policy-engine"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-identity-trust/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-identity-trust/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-identity-trust/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "secure-supply-chain",
+      "name": "agent-secure-supply-chain",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Release integrity, SBOMs, provenance, dependency and vulnerability management.",
+      "repository_url": "https://github.com/PCakes303/agent-secure-supply-chain",
+      "existence": "not-created",
+      "implementation_status": "Master-repo starter contract only; standalone repo absent",
+      "priority": "P0",
+      "dependencies": [
+        "foundation",
+        "identity-trust",
+        "audit-provenance"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-secure-supply-chain/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "policy-engine",
+      "name": "agent-policy-engine",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Authorization, least privilege, capability permissions, and policy enforcement.",
+      "repository_url": "https://github.com/PCakes303/agent-policy-engine",
+      "existence": "not-created",
+      "implementation_status": "Master-repo contract and experimental default-deny evaluator only",
+      "priority": "P0",
+      "dependencies": [
+        "foundation"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-policy-engine/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-policy-engine/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-policy-engine/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "audit-provenance",
+      "name": "agent-audit-provenance",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Audit events, source provenance, traceability, and signed records.",
+      "repository_url": "https://github.com/PCakes303/agent-audit-provenance",
+      "existence": "not-created",
+      "implementation_status": "Master-repo event contract, validator and hash-chain utility only",
+      "priority": "P0",
+      "dependencies": [
+        "foundation",
+        "schema-registry",
+        "identity-trust"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-audit-provenance/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-audit-provenance/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-audit-provenance/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "aix-core",
+      "name": "aix-core",
+      "visibility": "public",
+      "layer": "protocols",
+      "role": "AIX semantic interoperability specification for intent, tasks, responses, capabilities, context, status, and errors.",
+      "repository_url": "https://github.com/PCakes303/aix-core",
+      "existence": "not-created",
+      "implementation_status": "Experimental contract and lifecycle validator in master; standalone repo absent",
+      "priority": "P0",
+      "dependencies": [
+        "foundation",
+        "schema-registry",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/aix-core/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/aix-core/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/aix-core/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "aix-codecs",
+      "name": "aix-codecs",
+      "visibility": "public",
+      "layer": "protocols",
+      "role": "Serialization, validation, and machine encodings for AIX.",
+      "repository_url": "https://github.com/PCakes303/aix-codecs",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P0",
+      "dependencies": [
+        "aix-core",
+        "schema-registry"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/aix-codecs/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/aix-codecs/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/aix-codecs/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "transport-gateway",
+      "name": "agent-transport-gateway",
+      "visibility": "public",
+      "layer": "protocols",
+      "role": "Secure transport and integration with existing agent protocols.",
+      "repository_url": "https://github.com/PCakes303/agent-transport-gateway",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P0",
+      "dependencies": [
+        "aix-core",
+        "aix-codecs",
+        "identity-trust",
+        "policy-engine"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-transport-gateway/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-transport-gateway/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-transport-gateway/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "discovery-network",
+      "name": "agent-discovery-network",
+      "visibility": "public",
+      "layer": "swarm",
+      "role": "Discovery of agents, resources, services, and capabilities.",
+      "repository_url": "https://github.com/PCakes303/agent-discovery-network",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P1",
+      "dependencies": [
+        "resource-manifest",
+        "capability-registry",
+        "identity-trust",
+        "transport-gateway"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-discovery-network/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-discovery-network/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-discovery-network/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "capability-registry",
+      "name": "agent-capability-registry",
+      "visibility": "public",
+      "layer": "swarm",
+      "role": "Catalog and validation of agent capabilities.",
+      "repository_url": "https://github.com/PCakes303/agent-capability-registry",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P1",
+      "dependencies": [
+        "resource-manifest",
+        "schema-registry",
+        "policy-engine"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-capability-registry/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-capability-registry/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-capability-registry/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "swarm-runtime",
+      "name": "swarm-runtime",
+      "visibility": "public",
+      "layer": "swarm",
+      "role": "Execution infrastructure for distributed agents and nodes.",
+      "repository_url": "https://github.com/PCakes303/swarm-runtime",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P0",
+      "dependencies": [
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "sandbox-security"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/swarm-runtime/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/swarm-runtime/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/swarm-runtime/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "swarm-coordination",
+      "name": "swarm-coordination",
+      "visibility": "public",
+      "layer": "swarm",
+      "role": "Task assignment, delegation, acknowledgement, synchronization, and recovery.",
+      "repository_url": "https://github.com/PCakes303/swarm-coordination",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P1",
+      "dependencies": [
+        "swarm-runtime",
+        "aix-core",
+        "discovery-network",
+        "capability-registry"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/swarm-coordination/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/swarm-coordination/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/swarm-coordination/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "swarm-state-mesh",
+      "name": "swarm-state-mesh",
+      "visibility": "public",
+      "layer": "swarm",
+      "role": "Distributed task state, context references, synchronization, and shared knowledge.",
+      "repository_url": "https://github.com/PCakes303/swarm-state-mesh",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P1",
+      "dependencies": [
+        "swarm-runtime",
+        "swarm-coordination",
+        "audit-provenance"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/swarm-state-mesh/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/swarm-state-mesh/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/swarm-state-mesh/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "osint-source-registry",
+      "name": "osint-source-registry",
+      "visibility": "public",
+      "layer": "intelligence",
+      "role": "Catalog of public sources, datasets, and APIs with usage constraints.",
+      "repository_url": "https://github.com/PCakes303/osint-source-registry",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P2",
+      "dependencies": [
+        "resource-manifest",
+        "schema-registry",
+        "audit-provenance"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/osint-source-registry/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-source-registry/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-source-registry/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "osint-collection",
+      "name": "osint-collection-framework",
+      "visibility": "public",
+      "layer": "intelligence",
+      "role": "Authorized public-information collection through tools and adapters.",
+      "repository_url": "https://github.com/PCakes303/osint-collection-framework",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P2",
+      "dependencies": [
+        "osint-source-registry",
+        "policy-engine",
+        "identity-trust",
+        "audit-provenance"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/osint-collection-framework/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-collection-framework/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-collection-framework/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "osint-evidence",
+      "name": "osint-evidence-engine",
+      "visibility": "public",
+      "layer": "intelligence",
+      "role": "Evidence preservation, provenance, hashes, timestamps, and reproducibility.",
+      "repository_url": "https://github.com/PCakes303/osint-evidence-engine",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P1",
+      "dependencies": [
+        "osint-collection",
+        "audit-provenance",
+        "secure-supply-chain"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/osint-evidence-engine/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-evidence-engine/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-evidence-engine/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "entity-resolution",
+      "name": "osint-entity-resolution",
+      "visibility": "public",
+      "layer": "intelligence",
+      "role": "Entity correlation, relationship modeling, and uncertainty reporting.",
+      "repository_url": "https://github.com/PCakes303/osint-entity-resolution",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P2",
+      "dependencies": [
+        "osint-evidence",
+        "schema-registry"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/osint-entity-resolution/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-entity-resolution/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-entity-resolution/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "knowledge-graph",
+      "name": "intelligence-knowledge-graph",
+      "visibility": "public",
+      "layer": "intelligence",
+      "role": "Structured graph connecting sources, evidence, entities, and relationships.",
+      "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P2",
+      "dependencies": [
+        "osint-evidence",
+        "entity-resolution"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/intelligence-knowledge-graph/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "tool-adapters",
+      "name": "agent-tool-adapters",
+      "visibility": "public",
+      "layer": "adoption",
+      "role": "Consistent agent interfaces to existing open-source tools.",
+      "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P1",
+      "dependencies": [
+        "aix-core",
+        "transport-gateway",
+        "policy-engine",
+        "sandbox-security"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-tool-adapters/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-tool-adapters/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-tool-adapters/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "skill-library",
+      "name": "agent-skill-library",
+      "visibility": "public",
+      "layer": "adoption",
+      "role": "Reusable workflows and machine-discoverable skills.",
+      "repository_url": "https://github.com/PCakes303/agent-skill-library",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P2",
+      "dependencies": [
+        "resource-manifest",
+        "schema-registry",
+        "policy-engine",
+        "tool-adapters"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-skill-library/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-skill-library/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-skill-library/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "sandbox-security",
+      "name": "agent-sandbox-security",
+      "visibility": "public",
+      "layer": "adoption",
+      "role": "Controlled execution, isolation, resource boundaries, and secure extension execution.",
+      "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P0",
+      "dependencies": [
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "secure-supply-chain"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-sandbox-security/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-sandbox-security/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-sandbox-security/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "conformance-lab",
+      "name": "agent-conformance-lab",
+      "visibility": "public",
+      "layer": "adoption",
+      "role": "Protocol validation, compatibility and security tests, and swarm benchmarks.",
+      "repository_url": "https://github.com/PCakes303/agent-conformance-lab",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P1",
+      "dependencies": [
+        "aix-core",
+        "aix-codecs",
+        "transport-gateway",
+        "swarm-runtime",
+        "secure-supply-chain"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-conformance-lab/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-conformance-lab/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-conformance-lab/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "federation-network",
+      "name": "agent-federation-network",
+      "visibility": "public",
+      "layer": "adoption",
+      "role": "Federation between independently operated agent networks.",
+      "repository_url": "https://github.com/PCakes303/agent-federation-network",
+      "existence": "not-created",
+      "implementation_status": "Not started",
+      "priority": "P2",
+      "dependencies": [
+        "identity-trust",
+        "discovery-network",
+        "swarm-coordination",
+        "policy-engine",
+        "audit-provenance"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-federation-network/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-federation-network/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-federation-network/blob/main/README.md"
+      },
+      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    }
+  ]
+}
