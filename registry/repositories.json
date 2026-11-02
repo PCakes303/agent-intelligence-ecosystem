@@ -165,7 +165,7 @@
       "name": "aix-codecs",
       "visibility": "public",
       "layer": "protocols",
-      "status": "planned",
+      "status": "scaffolded",
       "role": "Serialization, validation, and machine encodings for AIX.",
       "dependencies": [
         "aix-core",
