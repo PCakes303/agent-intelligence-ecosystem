@@ -293,8 +293,8 @@
       "layer": "protocols",
       "role": "Secure transport and integration with existing agent protocols.",
       "repository_url": "https://github.com/PCakes303/agent-transport-gateway",
-      "existence": "not-created",
-      "implementation_status": "Not started; initial scaffold prepared in master staging",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; 14 files published; CI workflow present, first run pending",
       "priority": "P0",
       "dependencies": [
         "aix-core",
@@ -303,9 +303,9 @@
         "policy-engine"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-transport-gateway/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-transport-gateway/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-transport-gateway/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
