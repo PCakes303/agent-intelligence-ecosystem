@@ -118,6 +118,23 @@ class DiscoveryRegistryTests(unittest.TestCase):
         self.assertEqual(len(self.registry.query(kind="service")), 1)
         self.assertEqual(len(self.registry.query(capability="search")), 1)
 
+    def test_overflowing_integer_clock_fails_closed(self):
+        registry = DiscoveryRegistry(
+            verifier=lambda record: True,
+            trust_evaluator=lambda issuer: True,
+            clock=lambda: 10**10000,
+        )
+        with self.assertRaises(RuntimeError):
+            registry.publish(self.record())
+
+    def test_overflowing_integer_lifetime_config_is_rejected(self):
+        with self.assertRaises(ValueError):
+            DiscoveryRegistry(
+                verifier=lambda record: True,
+                trust_evaluator=lambda issuer: True,
+                max_lifetime_seconds=10**10000,
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

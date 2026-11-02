@@ -7,7 +7,7 @@ import math
 import threading
 import time
 
-from .records import DiscoveryRecord, RecordValidationError
+from .records import DiscoveryRecord, RecordValidationError, _finite_float
 
 Verifier = Callable[[DiscoveryRecord], bool]
 TrustEvaluator = Callable[[str], bool]
@@ -25,14 +25,15 @@ class DiscoveryRegistry:
         max_lifetime_seconds: float = 86_400.0,
         max_records: int = 10_000,
     ) -> None:
-        if isinstance(max_lifetime_seconds, bool) or not isinstance(max_lifetime_seconds, (int, float)) or not math.isfinite(max_lifetime_seconds) or max_lifetime_seconds <= 0:
+        lifetime_value = _finite_float(max_lifetime_seconds)
+        if lifetime_value is None or lifetime_value <= 0:
             raise ValueError("max_lifetime_seconds must be a finite positive number")
         if isinstance(max_records, bool) or not isinstance(max_records, int) or max_records <= 0:
             raise ValueError("max_records must be a positive integer")
         self.verifier = verifier
         self.trust_evaluator = trust_evaluator
         self.clock = clock
-        self.max_lifetime_seconds = float(max_lifetime_seconds)
+        self.max_lifetime_seconds = lifetime_value
         self.max_records = max_records
         self._records: dict[str, DiscoveryRecord] = {}
         self._lock = threading.RLock()
@@ -42,9 +43,10 @@ class DiscoveryRegistry:
             now = self.clock()
         except Exception as exc:
             raise RuntimeError("discovery clock unavailable") from exc
-        if isinstance(now, bool) or not isinstance(now, (int, float)) or not math.isfinite(now):
+        now_value = _finite_float(now)
+        if now_value is None:
             raise RuntimeError("discovery clock returned an invalid timestamp")
-        return float(now)
+        return now_value
 
     def publish(self, record: DiscoveryRecord) -> None:
         now = self._now()

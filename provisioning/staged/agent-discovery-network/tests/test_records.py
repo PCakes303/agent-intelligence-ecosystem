@@ -54,6 +54,18 @@ class DiscoveryRecordTests(unittest.TestCase):
         with self.assertRaises(RecordValidationError):
             self.record(signature=" ").validate(now=150, max_lifetime_seconds=200)
 
+    def test_rejects_overflowing_integer_timestamps(self):
+        with self.assertRaises(RecordValidationError):
+            self.record(issued_at=10**10000).validate(now=150, max_lifetime_seconds=200)
+
+    def test_rejects_overflowing_integer_clock(self):
+        with self.assertRaises(RecordValidationError):
+            self.record().validate(now=10**10000, max_lifetime_seconds=200)
+
+    def test_rejects_overflowing_integer_lifetime(self):
+        with self.assertRaises(RecordValidationError):
+            self.record().validate(now=150, max_lifetime_seconds=10**10000)
+
 
 if __name__ == "__main__":
     unittest.main()

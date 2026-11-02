@@ -22,6 +22,17 @@ MAX_PROVENANCE_CHARS = 512
 MAX_SIGNATURE_CHARS = 8_192
 
 
+def _finite_float(value: object) -> float | None:
+    """Convert numeric input safely, rejecting booleans, overflow and non-finite values."""
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    try:
+        converted = float(value)
+    except (OverflowError, ValueError):
+        return None
+    return converted if math.isfinite(converted) else None
+
+
 @dataclass(frozen=True)
 class DiscoveryRecord:
     record_id: str
@@ -72,26 +83,26 @@ class DiscoveryRecord:
         ):
             raise RecordValidationError("endpoint must be a valid HTTPS URL without credentials or fragment")
 
-        if isinstance(now, bool) or not isinstance(now, (int, float)) or not math.isfinite(now):
+        now_value = _finite_float(now)
+        if now_value is None:
             raise RecordValidationError("now must be a finite timestamp")
-        if (
-            isinstance(max_lifetime_seconds, bool)
-            or not isinstance(max_lifetime_seconds, (int, float))
-            or not math.isfinite(max_lifetime_seconds)
-            or max_lifetime_seconds <= 0
-        ):
+        max_lifetime_value = _finite_float(max_lifetime_seconds)
+        if max_lifetime_value is None or max_lifetime_value <= 0:
             raise RecordValidationError("max_lifetime_seconds must be a finite positive number")
 
-        for name, value in (("issued_at", self.issued_at), ("expires_at", self.expires_at)):
-            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
-                raise RecordValidationError(f"{name} must be a finite timestamp")
-        if self.issued_at > now:
+        issued_value = _finite_float(self.issued_at)
+        if issued_value is None:
+            raise RecordValidationError("issued_at must be a finite timestamp")
+        expires_value = _finite_float(self.expires_at)
+        if expires_value is None:
+            raise RecordValidationError("expires_at must be a finite timestamp")
+        if issued_value > now_value:
             raise RecordValidationError("issued_at cannot be in the future")
-        if self.expires_at <= self.issued_at:
+        if expires_value <= issued_value:
             raise RecordValidationError("expires_at must be later than issued_at")
-        if self.expires_at <= now:
+        if expires_value <= now_value:
             raise RecordValidationError("record is expired")
-        if self.expires_at - self.issued_at > max_lifetime_seconds:
+        if expires_value - issued_value > max_lifetime_value:
             raise RecordValidationError("record lifetime exceeds configured maximum")
 
         if not isinstance(self.capabilities, tuple) or len(self.capabilities) > MAX_CAPABILITIES:
