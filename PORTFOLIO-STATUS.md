@@ -11,12 +11,12 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 13 |
+| Public repositories currently present | 14 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 16 |
+| Public repositories not yet created | 15 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The account repository audit verified thirteen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 16 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The account repository audit verified fourteen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 15 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
 ## Status rules
 
@@ -44,7 +44,7 @@ The account repository audit verified thirteen public portfolio repositories and
 | 10 | [`agent-audit-provenance`](https://github.com/PCakes303/agent-audit-provenance) | foundation-security | **Scaffolded; 20 files published; final CI passed** — event schema, SHA-256 JSONL chain, append/verify CLI, regression tests, docs and v1.1.0 capability metadata | P0 | Accountability, traceability and forensic evidence across all components. **Next:** Add authenticated ingestion, signed checkpoints, retention controls and identity integration; hash chaining alone does not authenticate event producers. |
 | 11 | [`aix-core`](https://github.com/PCakes303/aix-core) | protocols | **Scaffolded; 21 files published; final CI passed** — experimental semantic envelope, lifecycle vocabulary, mapping guide, Draft 2020-12 schema, validator, fixtures, tests and v1.1.0 capability metadata | P0 | Canonical task/intent semantics shared by agents and transports. **Next:** Build concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders. |
 | 12 | [`aix-codecs`](https://github.com/PCakes303/aix-codecs) | protocols | **Scaffolded; 14 files published; [CI passed](https://github.com/PCakes303/aix-codecs/actions/runs/41408761297)** — RFC 8785 canonical JSON encode/decode reference implementation, strict parser, unit tests, metadata, security docs and workflow | P0 | Deterministic serialization is required for interoperable AIX messages. **Next:** Add cross-language vectors, schema-bound AIX message tests, fuzz/property coverage, payload/depth limits and package metadata. |
-| 13 | [`agent-transport-gateway`](https://github.com/PCakes303/agent-transport-gateway) | protocols | **Not created; initial scaffold prepared in master** — transport-neutral request guard, contracts, threat model, metadata, tests and CI packet staged | P0 | Carries messages across MCP/A2A/HTTP transports with security controls. **Next:** Create standalone remote and deploy the staged packet; then implement authenticated HTTP adapter, policy integration and shared replay protection. |
+| 13 | [`agent-transport-gateway`](https://github.com/PCakes303/agent-transport-gateway) | protocols | **Scaffolded; 14 files published; CI pending** — transport-neutral request guard, contracts, threat model, metadata, tests and workflow are deployed | P0 | Experimental security boundary for MCP/A2A/HTTP integration. **Next:** Pass the Python 3.10/3.11/3.12 CI matrix; then add authenticated HTTP adapter, identity/policy integration and shared replay protection. |
 | 14 | [`agent-discovery-network`](https://github.com/PCakes303/agent-discovery-network) | swarm | **Not created; not started** — Not started | P1 | Lets nodes locate trusted agents and services without hard-coded peers. **Next:** Implement signed discovery records, expiry and trust-filtered lookup. |
 | 15 | [`agent-capability-registry`](https://github.com/PCakes303/agent-capability-registry) | swarm | **Not created; not started** — Not started | P1 | Matches tasks to agents with declared, validated capabilities. **Next:** Implement capability schema, query and policy-filtered matching. |
 | 16 | [`swarm-runtime`](https://github.com/PCakes303/swarm-runtime) | swarm | **Not created; not started** — Not started | P0 | Execution substrate for distributed agents and nodes. **Next:** Build minimal isolated worker runtime with lifecycle, limits and health reporting. |
