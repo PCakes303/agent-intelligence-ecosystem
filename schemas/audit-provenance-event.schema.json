@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/audit-provenance-event.schema.json",
+  "title": "Audit Provenance Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "occurred_at", "actor", "action", "outcome"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "event_type": {"enum": ["authentication", "authorization", "tool_invocation", "delegation", "data_access", "build", "release", "administrative_change"]},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "actor": {"type": "object", "required": ["principal_id"], "properties": {"principal_id": {"type": "string", "minLength": 1}, "issuer": {"type": "string", "format": "uri"}}, "additionalProperties": false},
+    "action": {"type": "string", "minLength": 1},
+    "target": {"type": ["string", "null"]},
+    "outcome": {"enum": ["success", "denied", "failure", "unknown"]},
+    "correlation_id": {"type": ["string", "null"]},
+    "policy_version": {"type": ["string", "null"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string", "format": "uri"}},
+    "data_classification": {"enum": ["public", "internal", "confidential", "restricted"]}
+  }
+}
