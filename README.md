@@ -11,6 +11,8 @@ This repository is the canonical public control plane for the ecosystem. It owns
 The portfolio and architecture are approved. Ten of the 29 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
 
 ## Start here
+- [Repository 10 — audit provenance staging bundle](provisioning/staged/agent-audit-provenance/STAGING-STATUS.md)
+- [Repository 11 — AIX Core staging bundle](provisioning/staged/aix-core/STAGING-STATUS.md)
 
 - [LLM-readable project index](llms.txt)
 - [Public agent catalog — 29 repositories](registry/public-agent-catalog.json)
