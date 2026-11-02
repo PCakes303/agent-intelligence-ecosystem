@@ -1,0 +1,7 @@
+{
+  "principal_id":"agent://source-reviewer",
+  "action":"source.read",
+  "resource":"public-source:report-42",
+  "scopes":["source:read"],
+  "context":{"environment":"test"}
+}
