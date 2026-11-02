@@ -8,6 +8,7 @@ This is the public ecosystem control plane. It contains the authoritative reposi
 - [Master README](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/README.md): purpose, architecture, build.
 - [AI agent instructions](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/AGENTS.md): safe contribution and verification rules.
 - [30-repository status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md): existence, maturity, priority, importance, next gates.
+- [Public agent catalog (29 public repositories)](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/public-agent-catalog.json). Machine-readable public-only index with repository status and agent entry points.
 - [Canonical repository registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json): machine-readable inventory.
 - [Dependency graph](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/dependencies.json): cross-repository relationships.
 - [AI discoverability contract](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/AI-DISCOVERABILITY.md): llms.txt, agent instructions, metadata, MCP, A2A, security.
