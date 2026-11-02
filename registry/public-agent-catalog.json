@@ -122,7 +122,7 @@
       "role": "Portable manifests for agent tools, skills, models, datasets, services, dependencies, and requested permissions.",
       "repository_url": "https://github.com/PCakes303/agent-resource-manifest",
       "existence": "exists",
-      "implementation_status": "Scaffolded; schema, examples, validator and CI pass",
+      "implementation_status": "Scaffolded; normative Draft 2020-12 schema-backed validator and CI; 10 regression tests pass on Python 3.12; permission, dependency and integrity fields bounded.",
       "priority": "P0",
       "dependencies": [
         "foundation",
@@ -164,7 +164,7 @@
       "role": "Principal identity data contracts, authentication context, authorization, delegation, revocation, and trust boundaries.",
       "repository_url": "https://github.com/PCakes303/agent-identity-trust",
       "existence": "exists",
-      "implementation_status": "Scaffolded; identity contracts and CI pass; lifecycle/authenticated demo missing",
+      "implementation_status": "Scaffolded; principal validator enforces Draft 2020-12 schema; 7 regression tests pass on Python 3.12; identity lifecycle and authenticated demo not implemented.",
       "priority": "P0",
       "dependencies": [
         "foundation",
@@ -340,7 +340,7 @@
       "role": "Experimental catalog and validation of declared agent capabilities with policy-filtered candidate matching; advisory only, not authentication or authorization.",
       "repository_url": "https://github.com/PCakes303/agent-capability-registry",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12, including same-agent multi-capability matching regression coverage.",
+      "implementation_status": "Scaffolded; 20 files deployed; Capability and Requirement Draft 2020-12 schemas enforced in CI; 12 tests pass on Python 3.10, 3.11 and 3.12.",
       "priority": "P1",
       "dependencies": [
         "resource-manifest",
@@ -408,7 +408,7 @@
       "role": "Distributed task state, context references, synchronization, and shared knowledge.",
       "repository_url": "https://github.com/PCakes303/swarm-state-mesh",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 18 files deployed; 15 tests passed; CI passed on Python 3.10, 3.11 and 3.12",
+      "implementation_status": "Scaffolded; 19 files deployed; 23 schema/model tests pass on Python 3.10, 3.11 and 3.12; single-process volatile state store.",
       "priority": "P1",
       "dependencies": [
         "swarm-runtime",
@@ -573,7 +573,7 @@
       "role": "Experimental declarative skill package contract, versioned workflow schema, and dependency-free validator for machine-discoverable reusable workflows; no execution or publisher trust service.",
       "repository_url": "https://github.com/PCakes303/agent-skill-library",
       "existence": "exists",
-      "implementation_status": "Experimental; 17 files deployed; 18 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified.",
+      "implementation_status": "Experimental; 20 product files deployed; 21 tests pass on Python 3.10, 3.11 and 3.12; workflow and pinned Resource Manifest schemas enforced; exact staging/product parity verified.",
       "priority": "P2",
       "dependencies": [
         "resource-manifest",
