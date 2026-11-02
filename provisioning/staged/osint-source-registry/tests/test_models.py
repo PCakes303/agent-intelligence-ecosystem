@@ -37,6 +37,11 @@ class SourceRecordTests(unittest.TestCase):
         record["canonical_url"] = "http://api.example.org/"
         self.assertIn("canonical_url must be an HTTPS URL without embedded credentials", validate_source_record(record))
 
+    def test_oversized_url_is_rejected(self):
+        record = load_example("approved-synthetic-source.json")
+        record["canonical_url"] = "https://example.org/" + ("x" * 2100)
+        self.assertIn("canonical_url must be an HTTPS URL without embedded credentials", validate_source_record(record))
+
     def test_embedded_url_credentials_are_rejected(self):
         record = load_example("approved-synthetic-source.json")
         record["canonical_url"] = "https://user:secret@example.org/"
