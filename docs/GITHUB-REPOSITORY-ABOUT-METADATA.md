@@ -36,7 +36,9 @@ Descriptions are concise and deliberately avoid implying production maturity.
 
 | 10 | [agent-audit-provenance — staged, remote not yet created](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/agent-audit-provenance) | Experimental audit-event contracts and SHA-256 hash-chained JSONL tooling for traceability and integrity checks. | ai-agents, audit-logging, provenance, event-integrity, sha256, security |\n\n## Application order
 
-For each repository, set:
+Apply rows 00–09 to the ten existing public repositories now. Row 10 is a pre-approved metadata recommendation only; `agent-audit-provenance` is staged but its standalone public remote has not yet been created, so do not attempt to configure it until deployment.
+
+For each existing repository, set:
 1. **Description:** copy the exact description from the table.
 2. **Website:** use the common master-repository URL above.
 3. **Topics:** add the comma-separated topics from the table as individual GitHub topics.
