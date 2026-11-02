@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/agent-resource.schema.json",
+  "title":"Agent Resource Manifest",
+  "description":"Public metadata contract for an agent, tool, service, or dataset. Secrets and credential material are forbidden.",
+  "type":"object",
+  "required":["schema_version","resource_id","resource_type","display_name","owner","lifecycle","capabilities","security","provenance"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "resource_id":{"type":"string","format":"uri"},
+    "resource_type":{"enum":["agent","tool","service","dataset"]},
+    "display_name":{"type":"string","minLength":1,"maxLength":160},
+    "description":{"type":"string","maxLength":4000},
+    "owner":{"type":"object","required":["principal_id","organization"],"properties":{"principal_id":{"type":"string"},"organization":{"type":"string"}},"additionalProperties":false},
+    "version":{"type":"string"},
+    "lifecycle":{"type":"object","required":["state"],"properties":{"state":{"enum":["planned","active","suspended","deprecated","retired"]},"since":{"type":"string","format":"date-time"},"sunset_at":{"type":"string","format":"date-time"}},"additionalProperties":false},
+    "capabilities":{"type":"array","items":{"type":"object","required":["id","version","description"],"properties":{"id":{"type":"string","pattern":"^[a-z0-9][a-z0-9._-]*$"},"version":{"type":"string"},"description":{"type":"string"},"input_schema":{"type":"string","format":"uri"},"output_schema":{"type":"string","format":"uri"},"required_scopes":{"type":"array","items":{"type":"string"},"uniqueItems":true}},"additionalProperties":false}},
+    "interfaces":{"type":"array","items":{"type":"object","required":["kind","uri"],"properties":{"kind":{"enum":["mcp","a2a","aix","openapi","grpc","http","cli","library"]},"uri":{"type":"string","format":"uri"},"version":{"type":"string"}},"additionalProperties":false}},
+    "security":{"type":"object","required":["trust_domain","authentication","data_classification"],"properties":{"trust_domain":{"type":"string"},"authentication":{"type":"array","items":{"enum":["spiffe","oidc","mtls","oauth2","signed-message","none"]}},"required_scopes":{"type":"array","items":{"type":"string"},"uniqueItems":true},"data_classification":{"enum":["public","internal","confidential","restricted"]},"policy_uri":{"type":"string","format":"uri"}},"additionalProperties":false},
+    "provenance":{"type":"object","required":["created_at","source"],"properties":{"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"source":{"type":"string"},"revision":{"type":"string","pattern":"^[0-9a-f]{7,40}$"},"signature_ref":{"type":"string","format":"uri"}},"additionalProperties":false},
+    "documentation_uri":{"type":"string","format":"uri"},
+    "tags":{"type":"array","items":{"type":"string"},"uniqueItems":true}
+  },
+  "additionalProperties":false
+}
