@@ -23,7 +23,7 @@ Official sources:
 - https://leg.colorado.gov/bills/SB26-189
 - https://coag.gov/ai/
 
-The Colorado Department of Law filed proposed ADMT and Chatbot Safety rules on August 11, 2026. The public comment period was stated as August 11 through October 26, 2026, subject to extension if the formal hearing continued. This register does not treat proposed rules as final law. Check the agency's latest rulemaking page and adopted text before relying on any interpretation.
+The Colorado Department of Law filed proposed ADMT and Chatbot Safety rules on August 11, 2026, released an interim draft on October 6, 2026, published a regulatory analysis on October 21, 2026, and held the formal rulemaking hearing on October 26, 2026. As of the November 2, 2026 review, the agency page says it is drafting final rules after considering written comments. This register does not treat proposed or interim draft rules as final law. Check the agency and Secretary of State records for final adoption and effective dates before relying on any interpretation.
 
 ### HB26-1263 — Conversational AI Service Operator Requirements
 
