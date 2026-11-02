@@ -11,12 +11,12 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 17 |
+| Public repositories currently present | 18 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 12 |
+| Public repositories not yet created | 11 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The account repository audit verified seventeen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 12 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The account repository audit verified eighteen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 11 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
 ## Status rules
 
@@ -49,7 +49,7 @@ The account repository audit verified seventeen public portfolio repositories an
 | 15 | [`agent-capability-registry`](https://github.com/PCakes303/agent-capability-registry) | swarm | **Scaffolded; 18 files published; [CI passed](https://github.com/PCakes303/agent-capability-registry/actions/runs/41413329389) on Python 3.10/3.11/3.12** — capability contract, strict validator, bounded local index, same-agent multi-capability matching, fail-closed policy callback and tests | P1 | Matches tasks to agents with declared capabilities. **Next:** Add schema-registry/resource-manifest/policy-engine integration fixtures and cross-repository conformance tests. |
 | 16 | [`swarm-runtime`](https://github.com/PCakes303/swarm-runtime) | swarm | **Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12** ([workflow](https://github.com/PCakes303/swarm-runtime/actions/runs/41415157127)) — bounded worker supervisor, admission limits, lifecycle, adapter health and policy/audit hooks; no sandbox isolation | P0 | Execution substrate for distributed agents and nodes. **Next:** reviewed sandbox adapter, production identity/policy/audit integration and cross-repository conformance. |
 | 17 | [`swarm-coordination`](https://github.com/PCakes303/swarm-coordination) | swarm | **Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12 (17 tests)** — task delegation, policy-gated idempotency, acknowledgement binding, bounded retries and lease recovery | P1 | Next: AIX/discovery/capability conformance fixtures, authenticated dispatch, durable shared state and multi-node fencing/recovery. |
-| 18 | [`swarm-state-mesh`](https://github.com/PCakes303/swarm-state-mesh) | swarm | **Not created; not started** — Not started | P1 | Maintains shared task state and reconciliation across unreliable links. **Next:** Define consistency model; implement event/state reconciliation under duplicate and delayed messages. |
+| 18 | [`swarm-state-mesh`](https://github.com/PCakes303/swarm-state-mesh) | swarm | **Not created; 18-file staging packet prepared** — bounded versioned task event/state reference with optimistic revisions, event-ID idempotency, deterministic snapshots and opaque context references; Python 3.10–3.12 CI staged | P1 | Establishes shared state contracts for the hybrid swarm. **Next:** Create remote, deploy staged bundle and verify CI; then define durable storage, authenticated replication, consistency/partition semantics and audit provenance integration. |
 | 19 | [`osint-source-registry`](https://github.com/PCakes303/osint-source-registry) | intelligence | **Not created; not started** — Not started | P2 | Records lawful source access, licensing, limits and reliability metadata. **Next:** Define source record schema with terms, collection constraints and review status. |
 | 20 | [`osint-collection-framework`](https://github.com/PCakes303/osint-collection-framework) | intelligence | **Not created; not started** — Not started | P2 | Authorized, reproducible collection of public information. **Next:** Build synthetic/permitted-source collector with policy checks and collection logs. |
 | 21 | [`osint-evidence-engine`](https://github.com/PCakes303/osint-evidence-engine) | intelligence | **Not created; not started** — Not started | P1 | Preserves evidence provenance, timestamps, transformations and uncertainty. **Next:** Implement immutable evidence record, content hashes and reproducibility fixture. |
