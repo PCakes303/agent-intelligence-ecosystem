@@ -37,7 +37,7 @@ A deeper boundary review found that math.isfinite() and float() can raise Overfl
 - a0f92357c8b8503f52be75eb4e89bbecaa46d1c7: introduced safe finite-number conversion that rejects booleans, non-numeric values, overflow and non-finite values for timestamps, clocks and timing configuration.
 - 51f721ff00d3dad27238760ca73fe84051183c74: added three regression tests for oversized integer timestamps, clocks and timing configuration.
 - 282992ca615ae2633cf2c4a14069accdbefdf6bc: added explicit pending-license disclosure to README.
-- CI for the new tests and README update was queued/in progress at this checkpoint update; final conclusion must be verified before claiming the latest head passed.
+- CI [run 41504097531](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41504097531) passed on the latest head `068825ae30994d30ceb4f4b9c9d4a7b91675fef6`, including the 21-test suite on Python 3.10, 3.11 and 3.12.
 
 The request guard now rejects huge integer timestamp/clock/config values with stable outcomes rather than leaking numeric-conversion exceptions. This does not change the existing non-production limitations or clear the BLOCKED disposition.
 
@@ -52,7 +52,7 @@ The request guard now rejects huge integer timestamp/clock/config values with st
 7. **Private reporting route unverified:** SECURITY.md now states that no dedicated private address is published. Verify GitHub private vulnerability reporting/security advisories or configure an owner-approved private channel.
 8. **GitHub About metadata incomplete:** description exists; homepage and topics are empty. Apply and verify actual About settings.
 9. **License pending:** no root LICENSE file or GitHub license declaration was observed; reuse and redistribution rights must not be assumed.
-10. **Staging parity outstanding:** refresh staging-to-remote path/blob-SHA parity against current `main` before portfolio sign-off.
+10. **Staging parity:** the master staging packet was refreshed from the remote and now matches all 14 product files exactly by Git blob SHA; `STAGING-STATUS.md` is excluded as administrative evidence.
 11. **Administration controls unverified:** branch rulesets/protection, Actions permissions, secret scanning, push protection and dependency alerts were not confirmed through the available integration.
 
 ## Acceptance to clear BLOCKED
