@@ -277,7 +277,26 @@
       "status": "Scaffolded; deterministic default-deny evaluator, schemas, CLI, examples, tests and CI workflow published; production enforcement not implemented",
       "priority": "P0",
       "importance": "Central enforcement of least privilege and explicit authorization.",
-      "next_gate": "Add policy bundle versioning, authentication-context integration, enforcement adapters, and deny-path security tests; latest starter CI passed."
+      "next_gate": "Verify private reporting, correct About metadata, review repository security settings, refresh staging parity; retain experimental/non-production status until identity, policy provenance and protected-resource enforcement are implemented.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "39ead9528a149b1511cfb69b1c996d5e77c6ff64",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-policy-engine-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-policy-engine/issues/1",
+        "remediation_commits": [
+          "6a78a880bd66762d8e32177b8723b0ff2a2a2d9f",
+          "bdd569b3d2af701d0b0f0cb1a0647bd04875b996"
+        ],
+        "findings": [
+          "private vulnerability reporting route not verified",
+          "GitHub About description malformed and topics/homepage missing",
+          "license pending review",
+          "staging parity not refreshed",
+          "repository administration controls unverified",
+          "no authenticated identity binding, signed policy distribution or protected-resource enforcement"
+        ]
+      }
     },
     {
       "number": "10",
