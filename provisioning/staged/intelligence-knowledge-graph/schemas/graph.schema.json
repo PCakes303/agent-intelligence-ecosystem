@@ -13,14 +13,16 @@
   "properties": {
     "graph_id": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "maxLength": 128
     },
     "contract_version": {
       "const": "0.1.0"
     },
     "created_at": {
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "maxLength": 64
     },
     "nodes": {
       "type": "array",
@@ -36,13 +38,15 @@
             "$ref": "#/$defs/entityNode"
           }
         ]
-      }
+      },
+      "maxItems": 10000
     },
     "edges": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/edge"
-      }
+      },
+      "maxItems": 50000
     }
   },
   "$defs": {
@@ -64,7 +68,30 @@
         },
         "metadata": {
           "type": "object",
-          "maxProperties": 50
+          "maxProperties": 50,
+          "propertyNames": {
+            "type": "string",
+            "maxLength": 128
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string",
+                "maxLength": 1024
+              },
+              {
+                "type": "number",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
         }
       }
     },
@@ -99,20 +126,47 @@
             },
             "recorded_at": {
               "type": "string",
-              "format": "date-time"
+              "format": "date-time",
+              "maxLength": 64
             },
             "metadata": {
               "type": "object",
-              "maxProperties": 50
+              "maxProperties": 50,
+              "propertyNames": {
+                "type": "string",
+                "maxLength": 128
+              },
+              "additionalProperties": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 1024
+                  },
+                  {
+                    "type": "number",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
             },
             "source_record_id": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]{1,128}$"
             },
             "canonical_url": {
               "type": "string",
               "format": "uri",
-              "pattern": "^https://"
+              "pattern": "^https://",
+              "maxLength": 2048
             }
           }
         }
@@ -151,15 +205,41 @@
             },
             "recorded_at": {
               "type": "string",
-              "format": "date-time"
+              "format": "date-time",
+              "maxLength": 64
             },
             "metadata": {
               "type": "object",
-              "maxProperties": 50
+              "maxProperties": 50,
+              "propertyNames": {
+                "type": "string",
+                "maxLength": 128
+              },
+              "additionalProperties": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 1024
+                  },
+                  {
+                    "type": "number",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
             },
             "evidence_record_id": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]{1,128}$"
             },
             "sha256": {
               "type": "string",
@@ -167,11 +247,14 @@
             },
             "observed_at": {
               "type": "string",
-              "format": "date-time"
+              "format": "date-time",
+              "maxLength": 64
             },
             "source_node_id": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]{1,128}$"
             }
           }
         }
@@ -209,19 +292,46 @@
             },
             "recorded_at": {
               "type": "string",
-              "format": "date-time"
+              "format": "date-time",
+              "maxLength": 64
             },
             "metadata": {
               "type": "object",
-              "maxProperties": 50
+              "maxProperties": 50,
+              "propertyNames": {
+                "type": "string",
+                "maxLength": 128
+              },
+              "additionalProperties": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 1024
+                  },
+                  {
+                    "type": "number",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
             },
             "entity_record_id": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]{1,128}$"
             },
             "entity_kind": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "maxLength": 128
             },
             "resolution_status": {
               "enum": [
@@ -252,19 +362,23 @@
       "properties": {
         "id": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "maxLength": 128
         },
         "from": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "maxLength": 128
         },
         "to": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "maxLength": 128
         },
         "predicate": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "maxLength": 128
         },
         "evidence_refs": {
           "type": "array",
@@ -272,8 +386,10 @@
           "uniqueItems": true,
           "items": {
             "type": "string",
-            "minLength": 1
-          }
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "maxItems": 100
         },
         "confidence": {
           "type": "number",
@@ -282,15 +398,18 @@
         },
         "uncertainty": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "maxLength": 500
         },
         "observed_at": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "maxLength": 64
         },
         "recorded_at": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "maxLength": 64
         }
       }
     }
