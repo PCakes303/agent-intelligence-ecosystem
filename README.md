@@ -1,6 +1,6 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-**Status:** Active staged implementation — 24 of 31 public repositories created; 7 public repositories remain to be provisioned.  
+**Status:** Active staged implementation — 25 of 31 public repositories created; 6 public repositories remain to be provisioned.  
 **Portfolio:** 32 repositories (31 public, 1 private)  
 **Owner:** PCakes303 (public project identity: MrCakes931)
 
@@ -8,7 +8,7 @@ This repository is the canonical public control plane for the ecosystem. It owns
 
 ## Current maturity
 
-The portfolio and architecture are approved. Twenty-four of the 31 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
+The portfolio and architecture are approved. Twenty-five of the 31 public repositories currently exist. Their starter-level maturity varies: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
 
 ## Start here
 - [Repository 10 — Agent Audit & Provenance](https://github.com/PCakes303/agent-audit-provenance)
@@ -22,6 +22,8 @@ The portfolio and architecture are approved. Twenty-four of the 31 public reposi
 - [Repository 26 deployment checkpoint](checkpoints/2026-11-02-agent-sandbox-security-deployment.md)
 - [Repository 26 finalization and human/security follow-up](checkpoints/2026-11-02-agent-sandbox-security-finalization.md)
 - [Repository 26 open release-gates issue](https://github.com/PCakes303/agent-sandbox-security/issues/2)
+- [Repository 27 — Agent Emergency Control](https://github.com/PCakes303/agent-emergency-control) — 23 product files, exact staging parity, and CI passed on Python 3.10–3.12; contract only, not a live kill switch.
+- [Repository 27 finalization checkpoint](checkpoints/2026-11-02-agent-emergency-control-finalization.md)
 - [Repository 27 provisioning/build issue](https://github.com/PCakes303/agent-intelligence-ecosystem/issues/5)
 
 - [LLM-readable project index](llms.txt)
