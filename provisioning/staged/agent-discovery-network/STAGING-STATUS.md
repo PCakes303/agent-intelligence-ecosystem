@@ -1,9 +1,21 @@
-# Repository 14 staging status
+# Repository 14 deployment status
 
-`agent-discovery-network` has a prepared initial scaffold in the master control plane.
+**Repository:** https://github.com/PCakes303/agent-discovery-network  
+**Deployment:** 17 files published to the `main` branch.  
+**CI:** Passed on Python 3.10, 3.11 and 3.12: https://github.com/PCakes303/agent-discovery-network/actions/runs/41410840515
 
-Included: discovery contract, threat model, security and contributor guidance, repository manifest, capability and compatibility metadata, llms.txt, strict record validation, bounded in-memory registry, trust/verifier callback seams, unit tests and Python 3.10–3.12 CI workflow.
+The scaffold includes discovery records for agents, resources and services; bounded expiry; HTTPS endpoint validation; a trust-filtered in-memory index; fail-closed verifier/trust callback seams; query filtering; tests; and CI.
 
-Not included: cryptographic signature implementation, key lifecycle, production Identity & Trust adapter, capability-schema integration, authenticated network API, endpoint health verification, distributed storage, gossip, federation or Sybil resistance.
+## Maturity and limitations
 
-**Next action:** create the public standalone remote `PCakes303/agent-discovery-network`, deploy this bundle and run the CI matrix. Do not describe the scaffold as a production discovery network.
+This is an experimental scaffold, not a production discovery network. It does not implement cryptographic signature verification, key lifecycle, production Identity & Trust integration, canonical cross-repository schema binding, authenticated network APIs, endpoint health checks, distributed storage, gossip/federation, or Sybil resistance.
+
+Discovery returns candidate metadata only. It does not authenticate callers, authorize actions, certify advertised capabilities, or prove endpoint health.
+
+## Next gates
+
+1. Bind records to canonical Resource Manifest and Capability Registry schemas.
+2. Implement a reviewed signature profile and key rotation/revocation.
+3. Add authenticated publish/query endpoints through the Transport Gateway.
+4. Add distributed storage and stale-node reconciliation.
+5. Add adversarial tests for replay, equivocation, poisoning, Sybil behavior, and trust-policy changes.
