@@ -461,28 +461,71 @@
     "decision": "Do not publish empty or premature packages. Add package metadata, reproducible build, license validation, dependency lock/SBOM, artifact signing and install-from-artifact tests only when a repository contains a reusable library or executable intended for distribution."
   },
   "prepared_staging": {
-    "repository": "swarm-state-mesh",
-    "path": "provisioning/staged/swarm-state-mesh",
-    "file_count": 18,
-    "status": "18-file experimental state/event store packet committed to master staging; public remote not yet created"
+    "repository": "osint-source-registry",
+    "path": "provisioning/staged/osint-source-registry",
+    "file_count": 23,
+    "status": "23-file source metadata catalog scaffold committed to master staging; public remote not yet created; JSON artifacts parsed successfully; repository-local Python CI remains pending remote deployment."
   },
   "prepared_staging_history": [
     {
-      "repository": "aix-codecs",
-      "path": "provisioning/staged/aix-codecs",
-      "status": "deployed to standalone public remote; staging bundle retained as source-of-truth provisioning archive"
+      "repository": "agent-audit-provenance",
+      "path": "provisioning/staged/agent-audit-provenance",
+      "file_count": 20,
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed"
+    },
+    {
+      "repository": "agent-capability-registry",
+      "path": "provisioning/staged/agent-capability-registry",
+      "file_count": 18,
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed"
     },
     {
       "repository": "agent-discovery-network",
       "path": "provisioning/staged/agent-discovery-network",
       "file_count": 17,
-      "status": "committed to master staging; standalone public remote not yet created"
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed"
+    },
+    {
+      "repository": "agent-policy-engine",
+      "path": "provisioning/staged/agent-policy-engine",
+      "file_count": 24,
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed"
+    },
+    {
+      "repository": "agent-transport-gateway",
+      "path": "provisioning/staged/agent-transport-gateway",
+      "file_count": 15,
+      "status": "deployed; remote and retained staging packet match exactly; deployment status file restored; latest repository CI passed"
+    },
+    {
+      "repository": "aix-codecs",
+      "path": "provisioning/staged/aix-codecs",
+      "file_count": 15,
+      "status": "deployed; remote and retained staging packet match exactly; capability/compatibility metadata reconciled; latest repository CI passed"
+    },
+    {
+      "repository": "aix-core",
+      "path": "provisioning/staged/aix-core",
+      "file_count": 21,
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed"
     },
     {
       "repository": "swarm-runtime",
       "path": "provisioning/staged/swarm-runtime",
       "file_count": 18,
-      "status": "deployed to public repository; CI passed on Python 3.10, 3.11 and 3.12"
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
+    },
+    {
+      "repository": "swarm-coordination",
+      "path": "provisioning/staged/swarm-coordination",
+      "file_count": 18,
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
+    },
+    {
+      "repository": "swarm-state-mesh",
+      "path": "provisioning/staged/swarm-state-mesh",
+      "file_count": 18,
+      "status": "deployed; remote and retained staging packet match exactly; latest repository CI passed on Python 3.10–3.12"
     }
   ]
 }
