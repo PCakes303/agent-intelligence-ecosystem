@@ -78,9 +78,9 @@ A repository starter build is not the same thing as a distributable software pac
 
 Priority is dependency- and risk-based, not a statement that lower-priority work is unimportant. OSINT and federation remain essential later phases; they should not be built on unverified identity, policy, audit and evidence foundations.
 
-## Verified CI evidence
+## Initial baseline CI evidence (historical)
 
-Latest checked workflow runs for the original eight public portfolio repositories and the new repository 08 have passed their starter/contract checks:
+The following initial workflow runs passed their starter/contract checks. These links are retained as baseline evidence and are not asserted to be the latest run for every repository:
 
 - [Master registry validation](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41407607816)
 - [AI discovery](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047)
@@ -97,7 +97,15 @@ Latest checked workflow runs for the original eight public portfolio repositorie
 - [AIX Codecs](https://github.com/PCakes303/aix-codecs/actions/runs/41421076262)
 - [Transport Gateway](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41421064670)
 
-These runs verify the current starter/contract checks only. They are not production certifications, vulnerability clearance, or evidence that missing repositories exist.
+These runs verify the starter/contract checks at the recorded commits only. They are not production certifications, vulnerability clearance, or evidence that missing repositories exist. Check each repository's Actions page for the newest run before release or maturity promotion.
+
+Additional verification during the 2026-11-02 portfolio audit:
+- [Master catalog and registry reconciliation](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41429106013) — passed after staging README reconciliation.
+- [OSINT Source Registry](https://github.com/PCakes303/osint-source-registry/actions/runs/41428118849) — 23-file scaffold, Python 3.10/3.11/3.12.
+- [Intelligence Knowledge Graph](https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428337519) — 29-file experimental implementation, 15 tests and synthetic graph validation.
+- [AIX Codecs](https://github.com/PCakes303/aix-codecs/actions/runs/41428321750) — metadata correction CI passed.
+- [Transport Gateway](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41427827799) — Python 3.10/3.11/3.12.
+- [Discovery Network](https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147) — Python 3.10/3.11/3.12.
 
 ## Immediate next batch and acceptance criteria
 
