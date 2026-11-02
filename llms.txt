@@ -16,7 +16,8 @@ This repository is the public ecosystem control plane. It owns the authoritative
 - [GitHub About metadata](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/GITHUB-REPOSITORY-ABOUT-METADATA.md): individualized descriptions and topic sets for existing public repositories.
 - [Safety and emergency-stop ADR](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/adr/0004-safety-emergency-stop-compliance.md): mandatory safety, distributed emergency stop, and compliance-by-design release gates.
 - [Colorado/federal compliance charter](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/COMPLIANCE-MANAGEMENT-SYSTEM.md): source-linked applicability and control governance.
-- [Repository 26 — Sandbox Security](https://github.com/PCakes303/agent-sandbox-security): experimental admission contract; no OS isolation or workload execution.
+- [Repository 26 — Sandbox Security](https://github.com/PCakes303/agent-sandbox-security): experimental policy/admission validator; CI passed on Python 3.10–3.12; no OS isolation or workload execution. [Open release gates](https://github.com/PCakes303/agent-sandbox-security/issues/2).
+- [Repository 27 — Emergency Control](https://github.com/PCakes303/agent-intelligence-ecosystem/tree/main/provisioning/staged/agent-emergency-control): staged STOP/RESUME contract and pure fail-closed reducer; remote repository not yet provisioned. [Provisioning/build gate](https://github.com/PCakes303/agent-intelligence-ecosystem/issues/5).
 - [Roadmap](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/ROADMAP.md)
 - [Security policy](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/SECURITY.md)
 
