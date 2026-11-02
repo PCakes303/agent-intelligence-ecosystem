@@ -1,0 +1,594 @@
+{
+  "schema_version": "1.0.0",
+  "captured_on": "2026-11-02",
+  "purpose": "Retain remote source-tree integrity evidence for repositories without full content mirrors in provisioning/staged.",
+  "snapshot_type": "remote-tree-integrity-manifest-not-source-mirror",
+  "repositories": [
+    {
+      "repository": "PCakes303/agent-resource-manifest",
+      "branch": "main",
+      "source_commit": "b2fd1665c4cdd0bb2ce961273c3d2ee361a7a538",
+      "file_count": 21,
+      "files": [
+        {
+          "path": ".github/workflows/validate.yml",
+          "blob_sha": "32ff79aeeeea95ef1bb3713784e9eb3cc69af6d2",
+          "size_bytes": 800
+        },
+        {
+          "path": "AGENTS.md",
+          "blob_sha": "6d27be68c0df2182ed0507faed0f94a5a3cdd1aa",
+          "size_bytes": 784
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "blob_sha": "2f08ade2b0a82d447bf852a13c337021f840aaf1",
+          "size_bytes": 567
+        },
+        {
+          "path": "LICENSE.md",
+          "blob_sha": "bfba46afc28339e89ff09a78070c77ac7bba6ab1",
+          "size_bytes": 30278
+        },
+        {
+          "path": "Makefile",
+          "blob_sha": "61b8bceb06588a028e3d3f00654b8279852d4447",
+          "size_bytes": 162
+        },
+        {
+          "path": "README.md",
+          "blob_sha": "e76e812fd0114c22364d4e74a21105f713fc4d35",
+          "size_bytes": 2583
+        },
+        {
+          "path": "SECURITY.md",
+          "blob_sha": "9f6df008d03370830ecad65e2899e2aebcee72ff",
+          "size_bytes": 1541
+        },
+        {
+          "path": "capabilities.json",
+          "blob_sha": "10a3b8de5949807c62b19f197f69b54c2b5ccd70",
+          "size_bytes": 1280
+        },
+        {
+          "path": "compatibility.json",
+          "blob_sha": "f310c6bc715b3fbc157f50539f89ed553f2c9703",
+          "size_bytes": 956
+        },
+        {
+          "path": "docs/ENTRY-LEVEL-BUILD.md",
+          "blob_sha": "fe4f634e53f9d5036179c90c97b433b4cae33fff",
+          "size_bytes": 587
+        },
+        {
+          "path": "docs/RESOURCE-MANIFEST.md",
+          "blob_sha": "9d92cb10d8e1a21e4e43fb8586c840f42037c28e",
+          "size_bytes": 713
+        },
+        {
+          "path": "examples/add.py",
+          "blob_sha": "4970c23329b5d432b0eda869ef707317b92958d4",
+          "size_bytes": 174
+        },
+        {
+          "path": "examples/tool-resource.json",
+          "blob_sha": "bed8aa3f1f6bb7fdd9b674cc8c2c40e37b1948b5",
+          "size_bytes": 390
+        },
+        {
+          "path": "llms.txt",
+          "blob_sha": "c673ef6da2929cb209ac40301cbd03412d5a1171",
+          "size_bytes": 1795
+        },
+        {
+          "path": "manifest.json",
+          "blob_sha": "4ba5cd7217a252138477d7880719cb7ea92e1d64",
+          "size_bytes": 1767
+        },
+        {
+          "path": "requirements-dev.txt",
+          "blob_sha": "12aab93705b2b51f99a7f3296ea79360aa2ce8c3",
+          "size_bytes": 19
+        },
+        {
+          "path": "schemas/resource-manifest.schema.json",
+          "blob_sha": "b421a0cc8f4ebce5e0aa842559cea69cf8e570cb",
+          "size_bytes": 1908
+        },
+        {
+          "path": "tests/test_validate_manifest.py",
+          "blob_sha": "892abab70c6665754d62ad3112cbdcf581577c12",
+          "size_bytes": 3323
+        },
+        {
+          "path": "tools/__init__.py",
+          "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size_bytes": 0
+        },
+        {
+          "path": "tools/starter_build.py",
+          "blob_sha": "7d055035c53d7f3baca42fefb428501e5e4c0993",
+          "size_bytes": 553
+        },
+        {
+          "path": "tools/validate_manifest.py",
+          "blob_sha": "936f016e77b1c5c96436359f21bf24a802cccb4e",
+          "size_bytes": 1528
+        }
+      ]
+    },
+    {
+      "repository": "PCakes303/agent-identity-trust",
+      "branch": "main",
+      "source_commit": "b66152dc957728756df4d137bcfce86641baa860",
+      "file_count": 20,
+      "files": [
+        {
+          "path": ".github/workflows/validate.yml",
+          "blob_sha": "8f67b5464bda140bde20811278e798436a4bc026",
+          "size_bytes": 799
+        },
+        {
+          "path": "AGENTS.md",
+          "blob_sha": "6d27be68c0df2182ed0507faed0f94a5a3cdd1aa",
+          "size_bytes": 784
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "blob_sha": "2f08ade2b0a82d447bf852a13c337021f840aaf1",
+          "size_bytes": 567
+        },
+        {
+          "path": "LICENSE.md",
+          "blob_sha": "cb254ec863b838889f11d756fcc639f4e79d9945",
+          "size_bytes": 30335
+        },
+        {
+          "path": "Makefile",
+          "blob_sha": "f41d7945759ee068aeca5c60e9ff10d36db26ebc",
+          "size_bytes": 163
+        },
+        {
+          "path": "README.md",
+          "blob_sha": "39c7032f7d129f92bf4c2cbe24f8e70cf8941020",
+          "size_bytes": 2663
+        },
+        {
+          "path": "SECURITY.md",
+          "blob_sha": "559ea7d385442e011e3a60d3aa5b0de13937b7f5",
+          "size_bytes": 1302
+        },
+        {
+          "path": "capabilities.json",
+          "blob_sha": "fbcffea8e082e0c2d0e80249fd3a96bbd548ada3",
+          "size_bytes": 1539
+        },
+        {
+          "path": "compatibility.json",
+          "blob_sha": "4de6ef0e8da27ba857cdd0584ca0b79048f8f42b",
+          "size_bytes": 822
+        },
+        {
+          "path": "docs/ENTRY-LEVEL-BUILD.md",
+          "blob_sha": "7d45ba00ce3bc8a66dbbe9240269f19e9ba3e122",
+          "size_bytes": 612
+        },
+        {
+          "path": "docs/IDENTITY-TRUST.md",
+          "blob_sha": "c0552ad84e00c6b7fd71a094fa200757fe47aeb0",
+          "size_bytes": 824
+        },
+        {
+          "path": "examples/principal.json",
+          "blob_sha": "7b4cd2600b3a3065f49df26a0201d62858b377d9",
+          "size_bytes": 235
+        },
+        {
+          "path": "llms.txt",
+          "blob_sha": "141f0e5440b0eb79ff75139159f4ea2492d5e408",
+          "size_bytes": 1842
+        },
+        {
+          "path": "manifest.json",
+          "blob_sha": "c7afab7f355e064428afd97ad145eb443121b178",
+          "size_bytes": 1661
+        },
+        {
+          "path": "requirements-dev.txt",
+          "blob_sha": "12aab93705b2b51f99a7f3296ea79360aa2ce8c3",
+          "size_bytes": 19
+        },
+        {
+          "path": "schemas/principal.schema.json",
+          "blob_sha": "679524494cac71bd04421cffb439b01fffc24280",
+          "size_bytes": 1180
+        },
+        {
+          "path": "tests/test_validate_principal.py",
+          "blob_sha": "8a080e6512a95471e38d1d252ab3b6bcfd3192b0",
+          "size_bytes": 2579
+        },
+        {
+          "path": "tools/__init__.py",
+          "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size_bytes": 0
+        },
+        {
+          "path": "tools/starter_build.py",
+          "blob_sha": "119eb668df8afb11544e06a0e180a566e7cf2057",
+          "size_bytes": 612
+        },
+        {
+          "path": "tools/validate_principal.py",
+          "blob_sha": "9f24cd60d7633fd46e6ed98f4430e44e0a8acb06",
+          "size_bytes": 1576
+        }
+      ]
+    },
+    {
+      "repository": "PCakes303/agent-ecosystem-integration",
+      "branch": "main",
+      "source_commit": "2d05697c1ec14f3650047a549443a695f1efa253",
+      "file_count": 21,
+      "files": [
+        {
+          "path": ".github/workflows/validate.yml",
+          "blob_sha": "7782a2b90976cea61336d35a889751ec1818b3ce",
+          "size_bytes": 836
+        },
+        {
+          "path": "AGENTS.md",
+          "blob_sha": "696f41050f9c0818d7663a9e74ecdce8a45f4f34",
+          "size_bytes": 750
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "blob_sha": "2f08ade2b0a82d447bf852a13c337021f840aaf1",
+          "size_bytes": 567
+        },
+        {
+          "path": "LICENSE.md",
+          "blob_sha": "bfba46afc28339e89ff09a78070c77ac7bba6ab1",
+          "size_bytes": 30278
+        },
+        {
+          "path": "Makefile",
+          "blob_sha": "b8a7b5465232ba815c47aec804069c93a74e994f",
+          "size_bytes": 161
+        },
+        {
+          "path": "README.md",
+          "blob_sha": "58a1f8aff896d5341a176729587b6f0cd526ae5f",
+          "size_bytes": 2371
+        },
+        {
+          "path": "SECURITY.md",
+          "blob_sha": "512d7a39a1de218be5faa4013f40c2e6c7375c9d",
+          "size_bytes": 1118
+        },
+        {
+          "path": "capabilities.json",
+          "blob_sha": "305db9fdc0a4a0e3d31ed890adb8909d9de03bcc",
+          "size_bytes": 1187
+        },
+        {
+          "path": "compatibility.json",
+          "blob_sha": "0aeaac160b148eed874caae4ed100e7b385f7327",
+          "size_bytes": 1217
+        },
+        {
+          "path": "docs/ADAPTER-CONTRACT.md",
+          "blob_sha": "579e84a31b5226f5110d9720e74ab280d7f44a6c",
+          "size_bytes": 495
+        },
+        {
+          "path": "docs/ENTRY-LEVEL-BUILD.md",
+          "blob_sha": "6a9dcade0103d93c04e5a2f49b5d5cb6356082bd",
+          "size_bytes": 647
+        },
+        {
+          "path": "docs/INTEGRATION.md",
+          "blob_sha": "bbef2dbe8515f2f82769282556cbb7d06d838e3c",
+          "size_bytes": 859
+        },
+        {
+          "path": "examples/integration-profile.json",
+          "blob_sha": "b8c65af5c53312e1605cfad13bdab1a5ee8d4af2",
+          "size_bytes": 515
+        },
+        {
+          "path": "llms.txt",
+          "blob_sha": "ed0be974cde5240ba513921284c3a659df1ec2ce",
+          "size_bytes": 1867
+        },
+        {
+          "path": "manifest.json",
+          "blob_sha": "09492e762d02a9e73579b25f63adda38d13a7649",
+          "size_bytes": 1970
+        },
+        {
+          "path": "requirements-dev.txt",
+          "blob_sha": "12aab93705b2b51f99a7f3296ea79360aa2ce8c3",
+          "size_bytes": 19
+        },
+        {
+          "path": "schemas/integration-profile.schema.json",
+          "blob_sha": "7efe3e8434be566a381c2c53dc2760c9a4965dbf",
+          "size_bytes": 2443
+        },
+        {
+          "path": "tests/test_validate_profile.py",
+          "blob_sha": "fc1ca424c3154ae923309ece5dcf54f9222d05ba",
+          "size_bytes": 2708
+        },
+        {
+          "path": "tools/__init__.py",
+          "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size_bytes": 0
+        },
+        {
+          "path": "tools/starter_build.py",
+          "blob_sha": "5b12258f33de64914a162241f96942c88936c921",
+          "size_bytes": 565
+        },
+        {
+          "path": "tools/validate_profile.py",
+          "blob_sha": "c9ab095eec0c957032e9622e1d4b87ff258991ec",
+          "size_bytes": 2573
+        }
+      ]
+    },
+    {
+      "repository": "PCakes303/agent-ai-discovery",
+      "branch": "main",
+      "source_commit": "0c8ee4356ad1a7bfcfd9cbdad301dfed0358ed50",
+      "file_count": 24,
+      "files": [
+        {
+          "path": ".github/workflows/validate.yml",
+          "blob_sha": "5cfe163b5683bf4a042b6cdb4d413d2b92510930",
+          "size_bytes": 1669
+        },
+        {
+          "path": "AGENTS.md",
+          "blob_sha": "da4152de19f61ec510bf844f31f90f976e24ee07",
+          "size_bytes": 1612
+        },
+        {
+          "path": "CHANGELOG.md",
+          "blob_sha": "34e73500db38836ed4cd2eec429b071e31c08d2c",
+          "size_bytes": 300
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "blob_sha": "39d7d3185718d1812ec324ba5f925b3f4a58c425",
+          "size_bytes": 591
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "blob_sha": "94bfc0ec89d4ff4524f17ee83a28ada4db09c7a2",
+          "size_bytes": 933
+        },
+        {
+          "path": "LICENSE.md",
+          "blob_sha": "bfba46afc28339e89ff09a78070c77ac7bba6ab1",
+          "size_bytes": 30278
+        },
+        {
+          "path": "Makefile",
+          "blob_sha": "97b5adbb13a6ff91249033fe34d02d157720fa03",
+          "size_bytes": 219
+        },
+        {
+          "path": "README.md",
+          "blob_sha": "6b4974cd3e6087390b1eb0d4d2a80c4f01a9eeab",
+          "size_bytes": 4969
+        },
+        {
+          "path": "ROADMAP.md",
+          "blob_sha": "3596494c37b6c70a0e8636d8a993ac2a19a44fcb",
+          "size_bytes": 1418
+        },
+        {
+          "path": "SECURITY.md",
+          "blob_sha": "6a4822acd523002a18f43e8f9fe914618a0acc7c",
+          "size_bytes": 1168
+        },
+        {
+          "path": "SUPPORT.md",
+          "blob_sha": "2f7ae66902647229f81ce25785dd4ea98d7eaafb",
+          "size_bytes": 504
+        },
+        {
+          "path": "capabilities.json",
+          "blob_sha": "e23cfd2d812b943ab78d941b89ffdf30dee8e084",
+          "size_bytes": 2305
+        },
+        {
+          "path": "compatibility.json",
+          "blob_sha": "6ada0b4f93ac66e1dd24343a9a95b7991235572c",
+          "size_bytes": 1081
+        },
+        {
+          "path": "docs/DISCOVERY-CONTRACT.md",
+          "blob_sha": "99f7c3dd9ac1ee02c9e29bd0443b3021ff16ed5d",
+          "size_bytes": 1433
+        },
+        {
+          "path": "docs/ENTRY-LEVEL-BUILD.md",
+          "blob_sha": "bd210a048293f7e31a1473dac0842c4191f1c3ee",
+          "size_bytes": 694
+        },
+        {
+          "path": "examples/discovery.json",
+          "blob_sha": "f8677c1d2670e6a5c0a107362e941c4ac8813710",
+          "size_bytes": 767
+        },
+        {
+          "path": "llms.txt",
+          "blob_sha": "03d61accefa2559f35f5bd8f69e35635bf00728d",
+          "size_bytes": 1984
+        },
+        {
+          "path": "manifest.json",
+          "blob_sha": "2b96153740594972d69c20884dea2a3dcb6996b6",
+          "size_bytes": 2358
+        },
+        {
+          "path": "requirements-dev.txt",
+          "blob_sha": "12aab93705b2b51f99a7f3296ea79360aa2ce8c3",
+          "size_bytes": 19
+        },
+        {
+          "path": "schemas/discovery-document.schema.json",
+          "blob_sha": "83bdaeccb99f45efcd6b6fc699cee76d767fe057",
+          "size_bytes": 3167
+        },
+        {
+          "path": "tests/test_discovery_index.py",
+          "blob_sha": "2337c83343cdf1cd91d377081263318418fbdb48",
+          "size_bytes": 4657
+        },
+        {
+          "path": "tools/__init__.py",
+          "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "size_bytes": 0
+        },
+        {
+          "path": "tools/discovery_index.py",
+          "blob_sha": "4b5b90b9e35edd8e6beb7135aaebaa93498b82aa",
+          "size_bytes": 6143
+        },
+        {
+          "path": "tools/starter_build.py",
+          "blob_sha": "c9f7df1402145ec6ab24137ccf4895d23947aaa6",
+          "size_bytes": 505
+        }
+      ]
+    },
+    {
+      "repository": "PCakes303/agent-secure-supply-chain",
+      "branch": "main",
+      "source_commit": "f877da13fb083f8839f89a6cb265016401c986e5",
+      "file_count": 22,
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "blob_sha": "6b684df30dc2941ca1ca05538271bab4b8586322",
+          "size_bytes": 865
+        },
+        {
+          "path": "AGENTS.md",
+          "blob_sha": "b4616d50233233fbe398793a4b5316869b780418",
+          "size_bytes": 2033
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "blob_sha": "714ae84ecdc89fe3a8b64d9551b45d3ae2968295",
+          "size_bytes": 495
+        },
+        {
+          "path": "LICENSE.md",
+          "blob_sha": "bfba46afc28339e89ff09a78070c77ac7bba6ab1",
+          "size_bytes": 30278
+        },
+        {
+          "path": "Makefile",
+          "blob_sha": "cfcc423cdf08eeaa8c77bdd143267e63f0e3c546",
+          "size_bytes": 108
+        },
+        {
+          "path": "README.md",
+          "blob_sha": "5fcb5c6a4f1e1a0313a550b160f7a7d0bc9ed9a0",
+          "size_bytes": 2855
+        },
+        {
+          "path": "SECURITY.md",
+          "blob_sha": "aba71061fb79a724a3f69c510942ac28db9d2134",
+          "size_bytes": 1010
+        },
+        {
+          "path": "capabilities.json",
+          "blob_sha": "31a2892ec22211a5cc0c2d903cda3b0981a1c101",
+          "size_bytes": 2232
+        },
+        {
+          "path": "compatibility.json",
+          "blob_sha": "0fe98fbae95d7d6bf16c81a75f9521b597be941f",
+          "size_bytes": 1076
+        },
+        {
+          "path": "docs/CONTRACT.md",
+          "blob_sha": "c11ae6929e9f67558a382680d5ae319d15cfd82d",
+          "size_bytes": 1345
+        },
+        {
+          "path": "docs/REQUIREMENTS.md",
+          "blob_sha": "c29dbd9889517d2c21240ba6f07dfe1f42b0734e",
+          "size_bytes": 959
+        },
+        {
+          "path": "docs/THREAT_MODEL.md",
+          "blob_sha": "e828564730e2a2c2f9b5971a9a0ea6ab2e61740f",
+          "size_bytes": 1792
+        },
+        {
+          "path": "docs/adr/0001-contract-first.md",
+          "blob_sha": "f211153428e1b6472d78d18d156722da9c7a858e",
+          "size_bytes": 553
+        },
+        {
+          "path": "docs/adr/README.md",
+          "blob_sha": "5b98aabd0e79eff78da2e72869561ee876169353",
+          "size_bytes": 193
+        },
+        {
+          "path": "examples/supply-chain-artifact.json",
+          "blob_sha": "d4b1abb1d5f9c35b1bab75bf41fffc910b9a8f2b",
+          "size_bytes": 577
+        },
+        {
+          "path": "llms.txt",
+          "blob_sha": "2c66ca246f2dff275fa5091411834eebfc4eaf2f",
+          "size_bytes": 1517
+        },
+        {
+          "path": "manifest.json",
+          "blob_sha": "4d67ba14a9b9450a958d22af0103921ca178ffb2",
+          "size_bytes": 1809
+        },
+        {
+          "path": "requirements-dev.txt",
+          "blob_sha": "12aab93705b2b51f99a7f3296ea79360aa2ce8c3",
+          "size_bytes": 19
+        },
+        {
+          "path": "schemas/supply-chain-artifact.schema.json",
+          "blob_sha": "98d7ea6c034ad7714ddcd60e67087693602518f0",
+          "size_bytes": 2603
+        },
+        {
+          "path": "tests/test_supply_chain.py",
+          "blob_sha": "2a914e1085c93a80235fe23f3df086e56fa33fd6",
+          "size_bytes": 4290
+        },
+        {
+          "path": "tools/starter_build.py",
+          "blob_sha": "e5d979f2270c802c82c93d9e8a718c2b60724818",
+          "size_bytes": 452
+        },
+        {
+          "path": "tools/validate_supply_chain.py",
+          "blob_sha": "29f33b38186ab35d51478e3938ef3e73dc2862f7",
+          "size_bytes": 4494
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "These manifests pin remote commit IDs and file path/blob hashes only.",
+    "They do not contain source file contents and are not a replacement for full staging packets.",
+    "Do not treat these repositories as locally staged dependencies until their content is mirrored and verified.",
+    "Recreate the full staging source snapshots from the pinned commits before release packaging or integration acceptance."
+  ]
+}
