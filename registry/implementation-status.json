@@ -186,7 +186,7 @@
       "layer": "protocols",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not created; prepared staging bundle in master control plane, not yet deployed to standalone remote",
+      "status": "Not started",
       "priority": "P0",
       "importance": "Deterministic serialization is required for interoperable AIX messages.",
       "next_gate": "Create the public aix-codecs remote and deploy provisioning/staged/aix-codecs; then add cross-language vectors, schema-bound AIX message tests, and fuzz/property coverage."
