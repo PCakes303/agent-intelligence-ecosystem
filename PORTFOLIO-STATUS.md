@@ -186,17 +186,17 @@ The individual component audit pass now covers all **23 existing public componen
 - **Guide reconciliation:** the human-facing guide now states 32 total, and its public repository map matches all 31 canonical public registry names exactly while excluding the private entry.
 - **Audit limitations:** green CI confirms only each repository's declared workflow and test scope. It does not certify production readiness, legal compliance, cross-repository interoperability, identity/authentication, privileged execution, or OS-level sandbox isolation.
 
-The seven remaining public repositories are still not created. The approved P0 additions `agent-emergency-control` and `agent-compliance-governance` remain mandatory foundations before any privileged workload execution or portfolio-wide release.
+Six public repositories remain uncreated after Repository 27 deployment. The approved P0 additions `agent-emergency-control` and `agent-compliance-governance` remain mandatory foundations before any privileged workload execution or portfolio-wide release.
 
 Latest verified master CI after the component-audit and staging reconciliation updates: [run 41505178230](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41505178230) passed the 47-test master regression suite and entry-level build.
 
 
 ## P0 safety architecture — emergency control staging
 
-The next uncreated P0 component, `agent-emergency-control` (canonical portfolio position 28/32), now has a 23-product-file staging packet under `provisioning/staged/agent-emergency-control/`. It defines strict bounded STOP/RESUME command validation, monotonic scoped epochs, two-person resume approval, a pure fail-closed reducer, a threat model and production integration gates. The master workflow now tests the staged packet on Python 3.10, 3.11 and 3.12. This is a scaffold, not a deployed kill switch: cryptographic verification, durable state, revocation, audit, distributed propagation and runtime enforcement remain unimplemented. The public remote has not yet been created.
+The next uncreated P0 component, `agent-emergency-control` (canonical portfolio position 28/32), now has a 23-product-file staging packet under `provisioning/staged/agent-emergency-control/`. It defines strict bounded STOP/RESUME command validation, monotonic scoped epochs, two-person resume approval, a pure fail-closed reducer, a threat model and production integration gates. The master workflow now tests the staged packet on Python 3.10, 3.11 and 3.12. This is a scaffold, not a deployed kill switch: cryptographic verification, durable state, revocation, audit, distributed propagation and runtime enforcement remain unimplemented. The public remote is deployed; 23/23 product files match staging and repository CI passed 21 tests on Python 3.10–3.12 (run 41547448560).
 
 
-The `agent-emergency-control` staging matrix is verified: [master CI run 41512328515](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41512328515) passed 21 tests on Python 3.10, 3.11 and 3.12, alongside the master 47-test suite and starter build. The remote repository remains uncreated, and the component is not an operational kill switch.
+The `agent-emergency-control` staging matrix is verified: [master CI run 41512328515](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41512328515) passed 21 tests on Python 3.10, 3.11 and 3.12, alongside the master 47-test suite and starter build. The remote repository is deployed and passed repository-local CI; the component is still not an operational kill switch.
 
 
 ## P0 compliance governance — staging
