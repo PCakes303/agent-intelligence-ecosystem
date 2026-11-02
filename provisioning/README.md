@@ -78,7 +78,7 @@ The agent-sandbox-security bundle is deployed with 14 product files and exact st
 
 ## Deployment sequence 27 — agent-emergency-control (portfolio position 28/32)
 
-The initial 23-product-file scaffold is staged at [agent-emergency-control](staged/agent-emergency-control/). It includes the command schema, strict bounded parser, fail-closed STOP/RESUME reducer, two-person resume contract, threat model, integration gates and synthetic tests. The master workflow [run 41512328515](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41512328515) passed 21 tests on Python 3.10–3.12. The public remote is not yet created; no deployed kill-switch or enforcement capability is claimed.
+The initial 23-product-file scaffold is staged at [agent-emergency-control](staged/agent-emergency-control/). It includes the command schema, strict bounded parser, fail-closed STOP/RESUME reducer, two-person resume contract, threat model, integration gates and synthetic tests. The master workflow [run 41513079895](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895) passed 21 tests on Python 3.10–3.12. The public remote is not yet created; no deployed kill-switch or enforcement capability is claimed.
 
 
 ## Deployment sequence 28 — agent-compliance-governance (portfolio position 29/32)

@@ -200,3 +200,6 @@ The `agent-emergency-control` staging matrix is verified: [master CI run 4151232
 ## P0 compliance governance — staging
 
 The second P0 component, `agent-compliance-governance` (canonical portfolio position 29/32), now has a 28-product-file staging packet under `provisioning/staged/agent-compliance-governance/`. It includes a source-linked Colorado legal-monitor register (CPA, SB26-189, HB26-1263, proposed rules, litigation monitor and voluntary NIST AI RMF), proposed governance controls, an intentionally empty evidence index, strict schemas and validators. Entity-specific applicability remains unassessed and requires qualified counsel. This is not legal advice or a compliance certification; no control is claimed implemented. The public remote has not yet been created.
+
+
+The two approved P0 governance/safety components are now staged and validated by [master CI run 41513079895](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895): emergency-control passed 21 tests and compliance-governance passed 10 tests on Python 3.10, 3.11 and 3.12. The master 47-test suite and starter build also passed. Both public remotes remain uncreated; neither staging packet represents a deployed production service, legal determination or compliance certification.

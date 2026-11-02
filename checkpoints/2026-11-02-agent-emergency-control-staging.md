@@ -7,7 +7,7 @@
 **Staging path:** \`provisioning/staged/agent-emergency-control/\`  
 **Staging product files:** 23 (administrative STAGING-STATUS.md excluded)  
 **Staging source commit:** \`dfc6342cf6dd91a6b5e32a305e30351d52805946\`  
-**Master workflow:** [run 41512328515](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41512328515) — success  
+**Master workflow:** [run 41513079895](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895) — success; this later run revalidated the 21-test matrix on Python 3.10, 3.11 and 3.12  
 **Matrix:** Python 3.10, 3.11 and 3.12; 21 tests passed in each matrix job; master registry validation, 47-test regression suite and starter build also passed.  
 **Disposition:** STAGED; not yet a remote component audit or production acceptance.
 
