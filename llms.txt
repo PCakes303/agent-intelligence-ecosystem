@@ -22,7 +22,7 @@ This repository is the public ecosystem control plane. It owns the authoritative
 
 ## Existing public portfolio repositories
 
-There are currently 23 existing public portfolio repositories. Existence does not imply production maturity.
+There are currently 24 existing public portfolio repositories. Existence does not imply production maturity.
 
 ### Control plane and ecosystem-facing
 - [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem): canonical registry, governance, architecture and dependency control plane.
@@ -73,9 +73,9 @@ Six approved public portfolio repositories remain to be created:
 These links are roadmap identifiers, not claims that the repositories already exist. The private operations repository is excluded from this public catalog and from all public synchronization.
 
 ## Architecture and status
-- Portfolio: 30 repositories total; 29 public and 1 private.
+- Portfolio: 32 repositories total; 31 public and 1 private.
 - Latest account audit: 22 existing public portfolio repositories, 7 public repositories not yet created, and 1 existing private operations repository.
-- The separate `PCakes303/PCakes303` profile repository is excluded from the 30-repository portfolio.
+- The separate `PCakes303/PCakes303` profile repository is excluded from the 32-repository portfolio.
 - Public discovery excludes private operational content.
 - Maturity is repository-specific. Consult the status tracker and repository-local tests/CI before claiming a feature is implemented.
 - AIX approach: extension/interoperability layer over existing standards.
