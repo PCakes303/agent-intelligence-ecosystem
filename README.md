@@ -17,6 +17,8 @@ The portfolio and architecture are approved. Repository implementation is **plan
 - [AI coding-agent instructions](AGENTS.md)
 - [AI discoverability and MCP/A2A standard](docs/AI-DISCOVERABILITY.md)
 - [30-repository portfolio status and work tracker](PORTFOLIO-STATUS.md)
+- [GitHub repository About descriptions and topics](docs/GITHUB-REPOSITORY-ABOUT-METADATA.md)
+- [Repository 09 prepared staging bundle](provisioning/staged/agent-policy-engine/STAGING-STATUS.md)
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Repository registry](registry/repositories.json)
