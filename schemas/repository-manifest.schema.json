@@ -253,6 +253,10 @@
     },
     "$schema": {
       "type": "string"
+    },
+    "$id": {
+      "type": "string",
+      "format": "uri"
     }
   },
   "additionalProperties": false
