@@ -1,0 +1,24 @@
+{
+  "policy_version":"1.0.0",
+  "policy_id":"example-public-source-review",
+  "default_effect":"deny",
+  "description":"Synthetic demonstration policy; not a production policy.",
+  "rules":[
+    {
+      "id":"allow-reviewed-agent-read",
+      "effect":"allow",
+      "principals":["agent://source-reviewer"],
+      "actions":["source.read"],
+      "resources":["public-source:*"],
+      "required_scopes":["source:read"]
+    },
+    {
+      "id":"deny-restricted-resource",
+      "effect":"deny",
+      "principals":["*"],
+      "actions":["*"],
+      "resources":["restricted:*"],
+      "required_scopes":[]
+    }
+  ]
+}
