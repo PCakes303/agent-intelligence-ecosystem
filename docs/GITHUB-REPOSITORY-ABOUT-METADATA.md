@@ -1,21 +1,21 @@
 # GitHub repository About metadata
 
 **Audit date:** 2026-11-02  
-**Scope:** all 23 existing public portfolio repositories (master plus 22 component repositories). The separate profile repository and private operations repository are excluded.
+**Scope:** all 24 existing public portfolio repositories (master plus 23 component repositories). The separate profile repository and private operations repository are excluded.
 
 GitHub About metadata is separate from each repository's README and manifest. The connected GitHub integration can inspect repository metadata and update repository files, but it does not expose a repository-settings write operation for descriptions, homepage URLs, or topics. The table below is the approved, individualized metadata set to apply in each repository's **About → Edit repository details** panel.
 
 ## Verified current state
 
-- 23 of 29 planned public portfolio repositories exist; 6 public repositories remain to be created.
-- All 23 existing public portfolio repositories use the `main` default branch and have a README.
-- All 23 have an empty GitHub topics list and no homepage URL.
+- 24 of 31 planned public portfolio repositories exist; 7 public repositories remain to be created. Two additional public repositories are approved but not yet created.
+- All 24 existing public portfolio repositories use the `main` default branch and have a README.
+- All 24 have an empty GitHub topics list and no homepage URL.
 - Nine have a description; fourteen descriptions are empty.
 - `agent-policy-engine` has a malformed description because a comma-separated topic list was appended to the description field. Replace the whole field with the clean description below.
 - The private operations repository and the separate `PCakes303/PCakes303` profile repository are excluded.
 - A repository description or topic does not imply implementation maturity, security certification, or production readiness.
 
-**Common homepage for all 23 public portfolio repositories:**
+**Common homepage for all 24 existing public portfolio repositories:**
 
 `https://github.com/PCakes303/agent-intelligence-ecosystem`
 
@@ -73,3 +73,7 @@ For `agent-policy-engine`, replace the malformed description completely; do not 
 ## Audit boundary
 
 This metadata file is the canonical set of recommended GitHub About values. It is not evidence that those values have been applied. The GitHub connector available in this workflow supports repository reads and file commits, but not writes to repository description, homepage or topics settings; those settings must be applied in GitHub's repository UI.
+
+| 26 | [agent-sandbox-security](https://github.com/PCakes303/agent-sandbox-security) | Experimental sandbox admission policy contract and fail-closed validator; no OS isolation or workload execution. | sandbox-security, agent-security, isolation-contract, policy-validation, least-privilege, emergency-stop |
+| 27 | [agent-emergency-control](https://github.com/PCakes303/agent-emergency-control) | Independent emergency-stop authority, revocation, quarantine, distributed stop propagation, and controlled resumption. | emergency-stop, kill-switch, agent-safety, revocation, incident-response, distributed-systems |
+| 28 | [agent-compliance-governance](https://github.com/PCakes303/agent-compliance-governance) | Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring. | compliance-management, colorado, privacy-governance, ai-governance, risk-management, audit-evidence |
