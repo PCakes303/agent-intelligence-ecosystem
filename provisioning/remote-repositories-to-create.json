@@ -18,25 +18,11 @@
     "agent-discovery-network",
     "agent-capability-registry",
     "swarm-runtime",
-    "swarm-coordination"
+    "swarm-coordination",
+    "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 11,
+  "missing_public_repository_count": 10,
   "repositories": [
-    {
-      "name": "swarm-state-mesh",
-      "description": "Distributed task state, context references, synchronization, and shared knowledge.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "swarm-state-mesh",
-      "dependencies": [
-        "swarm-runtime",
-        "swarm-coordination",
-        "audit-provenance"
-      ]
-    },
     {
       "name": "osint-source-registry",
       "description": "Catalog of public sources, datasets, and APIs with usage constraints.",
