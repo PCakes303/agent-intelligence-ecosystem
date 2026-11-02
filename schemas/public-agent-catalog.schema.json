@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/schemas/public-agent-catalog.schema.json",
+  "title": "Public Agent Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "catalog_version",
+    "generated_from",
+    "portfolio",
+    "owner",
+    "public_identity",
+    "visibility_scope",
+    "repository_count",
+    "discovery_notice",
+    "repositories"
+  ],
+  "properties": {
+    "catalog_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "generated_from": {
+      "type": "string"
+    },
+    "portfolio": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "public_identity": {
+      "type": "string",
+      "format": "uri"
+    },
+    "visibility_scope": {
+      "const": "public-only"
+    },
+    "repository_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "discovery_notice": {
+      "type": "string"
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "visibility",
+          "layer",
+          "role",
+          "repository_url",
+          "existence",
+          "implementation_status",
+          "priority",
+          "dependencies",
+          "discovery",
+          "evidence_policy"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "visibility": {
+            "const": "public"
+          },
+          "layer": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "repository_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "existence": {
+            "type": "string"
+          },
+          "implementation_status": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "discovery": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "llms_txt",
+              "agents_md",
+              "readme"
+            ],
+            "properties": {
+              "llms_txt": {
+                "type": "string",
+                "format": "uri"
+              },
+              "agents_md": {
+                "type": "string",
+                "format": "uri"
+              },
+              "readme": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
+          "evidence_policy": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
