@@ -33,7 +33,8 @@
     "agent-policy-engine": "https://github.com/PCakes303/agent-policy-engine/actions/runs/41400923896",
     "agent-audit-provenance": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41406387372",
     "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41406412416",
-    "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41408761297"
+    "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41408761297",
+    "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293"
   },
   "repositories": [
     {
@@ -199,10 +200,10 @@
       "layer": "protocols",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 14 files published; CI workflow present, first run pending",
+      "status": "Scaffolded; 14 files published; [CI passed](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293) on Python 3.10, 3.11 and 3.12",
       "priority": "P0",
       "importance": "Carries messages across MCP/A2A/HTTP transports with security controls.",
-      "next_gate": "Run and pass the Python 3.10/3.11/3.12 CI matrix; then implement authenticated HTTP adapter, identity and policy integration, and shared replay protection. The current process-local guard is experimental and does not authenticate senders."
+      "next_gate": "Implement authenticated HTTP adapter, identity and policy integration, shared replay protection, and adversarial/property-based tests. Current process-local guard is experimental and does not authenticate senders."
     },
     {
       "number": "14",
