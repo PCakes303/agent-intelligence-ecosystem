@@ -18,7 +18,11 @@
 
 The latest reconciliation verified 24 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. The 7 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
-## Approved portfolio expansion\n\nThe portfolio now contains 32 repositories: 31 public and 1 private. Repository 26, agent-sandbox-security, is deployed as an experimental policy-contract validator only; it does not execute workloads or enforce OS isolation. Two new P0 repositories are approved: agent-emergency-control and agent-compliance-governance. Emergency-stop enforcement and deployment-specific legal applicability are release gates across the ecosystem.\n\n## Status rules
+## Approved portfolio expansion
+
+The portfolio now contains 32 repositories: 31 public and 1 private. Repository 26, agent-sandbox-security, is deployed as an experimental policy-contract validator only; it does not execute workloads or enforce OS isolation. Two new P0 repositories are approved: agent-emergency-control and agent-compliance-governance. Emergency-stop enforcement and deployment-specific legal applicability are release gates across the ecosystem.
+
+## Status rules
 
 - **Operational control plane** means the master registry, validation tooling, starter build and CI are running. It does not mean all 32 projects are implemented.
 - **Scaffolded** means a repository exists with starter build/CI and some project-specific contracts or documentation. It does not mean the domain implementation is complete.
