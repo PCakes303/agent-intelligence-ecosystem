@@ -224,10 +224,10 @@
       "name": "agent-audit-provenance",
       "visibility": "public",
       "layer": "foundation-security",
-      "role": "Audit events, source provenance, traceability, and signed records.",
+      "role": "Portable audit event contracts, traceability, and deterministic hash-chained records; authenticated and signed provenance remain future work.",
       "repository_url": "https://github.com/PCakes303/agent-audit-provenance",
       "existence": "not-created",
-      "implementation_status": "Master-repo event contract, validator and hash-chain utility only",
+      "implementation_status": "Starter implementation staged in master; event schema, SHA-256 JSONL chain, append/verify CLI, tests and CI prepared; standalone remote not yet created",
       "priority": "P0",
       "dependencies": [
         "foundation",
