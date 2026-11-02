@@ -57,7 +57,12 @@
       "head_sha": "fef35ad1c2b864d9b323bdbe2d30638e81f2321b",
       "tests": 10
     },
-    "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41421093275",
+    "aix-core": {
+      "workflow_run": "https://github.com/PCakes303/aix-core/actions/runs/41490856354",
+      "conclusion": "success",
+      "head_sha": "4988d08c2fc9556d64ab90527e5cb0631aeec14d",
+      "tests": 8
+    },
     "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41427817571",
     "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41427827799",
     "agent-discovery-network": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147",
