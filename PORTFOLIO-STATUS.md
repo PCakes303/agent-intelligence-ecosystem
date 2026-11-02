@@ -11,12 +11,12 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 12 |
+| Public repositories currently present | 13 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 17 |
+| Public repositories not yet created | 16 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The account repository audit verified twelve public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 17 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The account repository audit verified thirteen public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 30 portfolio repositories. The 16 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
 ## Status rules
 
@@ -43,7 +43,7 @@ The account repository audit verified twelve public portfolio repositories and t
 | 09 | [`agent-policy-engine`](https://github.com/PCakes303/agent-policy-engine) | foundation-security | **Scaffolded; 24 files published; CI passed** — deterministic default-deny evaluator, JSON Schemas, CLI, examples, tests, docs and workflow | P0 | Central decision logic for least privilege and explicit authorization. **Next:** Verify final CI; implement policy bundle versioning, authentication-context integration and enforcement adapters. |
 | 10 | [`agent-audit-provenance`](https://github.com/PCakes303/agent-audit-provenance) | foundation-security | **Scaffolded; 20 files published; final CI passed** — event schema, SHA-256 JSONL chain, append/verify CLI, regression tests, docs and v1.1.0 capability metadata | P0 | Accountability, traceability and forensic evidence across all components. **Next:** Add authenticated ingestion, signed checkpoints, retention controls and identity integration; hash chaining alone does not authenticate event producers. |
 | 11 | [`aix-core`](https://github.com/PCakes303/aix-core) | protocols | **Scaffolded; 21 files published; final CI passed** — experimental semantic envelope, lifecycle vocabulary, mapping guide, Draft 2020-12 schema, validator, fixtures, tests and v1.1.0 capability metadata | P0 | Canonical task/intent semantics shared by agents and transports. **Next:** Build concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders. |
-| 12 | [`aix-codecs`](https://github.com/PCakes303/aix-codecs) | protocols | **Remote not created; staging bundle prepared in master** — RFC 8785 canonical JSON encode/decode scaffold, tests, metadata, security and CI files staged | P0 | Deterministic serialization is required for interoperable AIX messages. **Next:** Create standalone remote, deploy the staged packet, then add cross-language vectors, schema-bound AIX message tests and fuzz/property coverage. |
+| 12 | [`aix-codecs`](https://github.com/PCakes303/aix-codecs) | protocols | **Scaffolded; 14 files published; CI passed** — RFC 8785 canonical JSON encode/decode reference implementation, strict parser, unit tests, metadata, security docs and workflow | P0 | Deterministic serialization is required for interoperable AIX messages. **Next:** Add cross-language vectors, schema-bound AIX message tests, fuzz/property coverage, payload/depth limits and package metadata. |
 | 13 | [`agent-transport-gateway`](https://github.com/PCakes303/agent-transport-gateway) | protocols | **Not created; not started** — Not started | P0 | Carries messages across MCP/A2A/HTTP transports with security controls. **Next:** Implement one secure transport adapter, authz checks, replay prevention and latency tests. |
 | 14 | [`agent-discovery-network`](https://github.com/PCakes303/agent-discovery-network) | swarm | **Not created; not started** — Not started | P1 | Lets nodes locate trusted agents and services without hard-coded peers. **Next:** Implement signed discovery records, expiry and trust-filtered lookup. |
 | 15 | [`agent-capability-registry`](https://github.com/PCakes303/agent-capability-registry) | swarm | **Not created; not started** — Not started | P1 | Matches tasks to agents with declared, validated capabilities. **Next:** Implement capability schema, query and policy-filtered matching. |
@@ -64,7 +64,9 @@ The account repository audit verified twelve public portfolio repositories and t
 
 ## Package and release readiness
 
-A repository starter build is not the same thing as a distributable software package. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of the eight existing public component repositories (including the newly scaffolded secure supply-chain repository) found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
+**Release check (2026-11-02):** No GitHub Releases are currently published for the 13 public portfolio repositories. AIX Codecs is scaffolded and CI-verified, not released.
+
+A repository starter build is not the same thing as a distributable software package. AIX Codecs now has its initial scaffold and a successful CI run, but does not yet contain package build metadata or a published release. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of the twelve existing public component repositories (including the newly scaffolded secure supply-chain, audit provenance, AIX Core and AIX Codecs repositories) found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
 
 **Decision:** do not publish empty or premature packages. Add packaging only where a reusable library or executable is actually intended for distribution. At that point require a reproducible build, explicit license, locked dependencies, SBOM, signed provenance, and install-from-built-artifact tests. The current starter scripts and contract validators are source-level tools, not published SDKs.
 
