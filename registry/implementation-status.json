@@ -416,9 +416,10 @@
       "agent-secure-supply-chain",
       "agent-policy-engine",
       "agent-audit-provenance",
-      "aix-core"
+      "aix-core",
+      "aix-codecs"
     ],
-    "result": "No root-level pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, or equivalent distribution manifest was found in the eleven existing public component repositories reviewed (repositories 01–11). Their manifest.json files are ecosystem metadata, not package build metadata. The master control-plane repository is reviewed separately.",
+    "result": "No root-level pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, or equivalent distribution manifest was found in the twelve existing public component repositories reviewed (repositories 01–12). Their manifest.json files are ecosystem metadata, not package build metadata. The master control-plane repository is reviewed separately.",
     "decision": "Do not publish empty or premature packages. Add package metadata, reproducible build, license validation, dependency lock/SBOM, artifact signing and install-from-artifact tests only when a repository contains a reusable library or executable intended for distribution."
   },
   "prepared_staging": {
