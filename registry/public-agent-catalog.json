@@ -249,7 +249,7 @@
       "role": "Experimental semantic interoperability specification for intent, tasks, responses, capabilities, context, status, errors, and provenance; extension layer over established protocols and transports.",
       "repository_url": "https://github.com/PCakes303/aix-core",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI",
+      "implementation_status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI passed",
       "priority": "P0",
       "dependencies": [
         "foundation",
