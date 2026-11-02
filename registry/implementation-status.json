@@ -46,7 +46,12 @@
       "head_sha": "bdd569b3d2af701d0b0f0cb1a0647bd04875b996",
       "tests": 9
     },
-    "agent-audit-provenance": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41421033960",
+    "agent-audit-provenance": {
+      "workflow_run": "https://github.com/PCakes303/agent-audit-provenance/actions/runs/41490403369",
+      "conclusion": "success",
+      "head_sha": "fef35ad1c2b864d9b323bdbe2d30638e81f2321b",
+      "tests": 10
+    },
     "aix-core": "https://github.com/PCakes303/aix-core/actions/runs/41421093275",
     "aix-codecs": "https://github.com/PCakes303/aix-codecs/actions/runs/41427817571",
     "agent-transport-gateway": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41427827799",
