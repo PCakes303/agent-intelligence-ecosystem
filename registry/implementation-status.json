@@ -429,7 +429,7 @@
     "repository": "swarm-runtime",
     "path": "provisioning/staged/swarm-runtime",
     "file_count": 18,
-    "status": "18-file experimental worker supervisor packet committed to master staging; public remote not yet created"
+    "status": "18-file worker supervisor packet committed to master staging; master CI passed (run 41414485181); public remote not yet created"
   },
   "prepared_staging_history": [
     {
