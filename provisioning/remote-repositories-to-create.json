@@ -3,41 +3,28 @@
   "public_identity": "MrCakes931",
   "generated_from": "registry/repositories.json",
   "checked_existing_repository_names": [
-    "agent-intelligence-ecosystem",
     "agent-ai-discovery",
-    "mrcakes931-ecosystem",
+    "agent-capability-registry",
+    "agent-discovery-network",
     "agent-ecosystem-integration",
+    "agent-ecosystem-private",
     "agent-foundation-spec",
+    "agent-identity-trust",
+    "agent-intelligence-ecosystem",
     "agent-resource-manifest",
     "agent-schema-registry",
-    "agent-identity-trust",
-    "agent-ecosystem-private",
     "agent-secure-supply-chain",
-    "aix-codecs",
     "agent-transport-gateway",
-    "agent-discovery-network",
-    "agent-capability-registry",
-    "swarm-runtime",
+    "aix-codecs",
+    "intelligence-knowledge-graph",
+    "mrcakes931-ecosystem",
+    "osint-source-registry",
     "swarm-coordination",
+    "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 10,
+  "missing_public_repository_count": 8,
   "repositories": [
-    {
-      "name": "osint-source-registry",
-      "description": "Catalog of public sources, datasets, and APIs with usage constraints.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "osint-source-registry",
-      "dependencies": [
-        "resource-manifest",
-        "schema-registry",
-        "audit-provenance"
-      ]
-    },
     {
       "name": "osint-collection-framework",
       "description": "Authorized public-information collection through tools and adapters.",
@@ -81,20 +68,6 @@
       "dependencies": [
         "osint-evidence",
         "schema-registry"
-      ]
-    },
-    {
-      "name": "intelligence-knowledge-graph",
-      "description": "Structured graph connecting sources, evidence, entities, and relationships.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "knowledge-graph",
-      "dependencies": [
-        "osint-evidence",
-        "entity-resolution"
       ]
     },
     {
