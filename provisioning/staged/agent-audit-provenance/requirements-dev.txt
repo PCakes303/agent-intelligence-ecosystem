@@ -1,1 +1,1 @@
-# Standard-library implementation; no third-party runtime dependencies.
+jsonschema==4.25.1
