@@ -1,16 +1,13 @@
-# Staging status
+# Repository 10 deployment status
 
-Repository 10 starter bundle prepared in the master control plane.
+**Repository:** https://github.com/PCakes303/agent-audit-provenance  
+**Deployment:** 20 files published to the `main` branch.  
+**CI:** Passed: https://github.com/PCakes303/agent-audit-provenance/actions/runs/41406387372
 
-- Event schema and contract: drafted.
-- SHA-256 hash-chained JSONL prototype: implemented.
-- Append and verify CLI: implemented.
-- Regression tests: included.
-- CI workflow: included.
-- Production authentication, signatures, external checkpoints, retention controls: not implemented.
-- License: pending portfolio review.
+The scaffold includes the audit event contract, schema, SHA-256 hash-chained JSONL prototype, append/verify tooling, tests, and CI.
 
-This staging directory is not itself the standalone repository. Copy its contents into the public remote only after that remote is created and verified.
+## Maturity and limitations
 
+This remains a scaffold, not a production audit service. Production authentication, cryptographic signatures, external checkpoints, retention controls, and independently operated verification remain unimplemented. License selection remains pending portfolio review.
 
-**Deployment note (2026-11-02):** The standalone public repository now exists at https://github.com/PCakes303/agent-audit-provenance. This staging bundle is retained as historical provisioning material; the standalone repository is authoritative for current implementation.
+The standalone public repository is authoritative for current implementation. The master staging directory is retained as a provisioning and audit reference.
