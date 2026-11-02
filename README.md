@@ -64,7 +64,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for substantial changes, 
 ## Working prototypes and tooling
 
 - [Resource manifest schema](schemas/agent-resource.schema.json) and [validator](tools/validate_agent_resource.py)
-- [AIX experimental envelope](prototypes/aix/aix-message.schema.json)
+- [AIX Core contract](specifications/aix-core/README.md), [task lifecycle](specifications/aix-core/STATE-MACHINE.md), and [experimental envelope validator](tools/validate_aix_message.py)
 - [Default-deny policy prototype](prototypes/policy/README.md) and [policy-engine contract](specifications/policy-engine/README.md)
 - [Audit-provenance contract](specifications/audit-provenance/README.md), [event schema](schemas/audit-provenance-event.schema.json), and [starter validator](tools/validate_audit_event.py)
 - [Foundation starter learning path](docs/FOUNDATION-STARTER-PATH.md)
