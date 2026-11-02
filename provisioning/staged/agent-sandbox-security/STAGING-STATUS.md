@@ -5,11 +5,11 @@
 **Visibility:** public  
 **Branch:** main  
 **Status:** deployed and verified  
-**Product files:** 14 (this status file is staging-only and is not deployed)
+**Product files:** 15 (this status file is staging-only and is not deployed)
 
 ## Scope
 
-Experimental sandbox admission policy contract and fail-closed reference validator. It validates declared resource ceilings, read-only root intent, explicit filesystem paths, default-deny network intent, and required identity/policy/stop/artifact prerequisites. It deliberately never executes workloads.
+Experimental sandbox admission policy contract and fail-closed reference validator. It validates bounded raw JSON input (1 MiB, depth 32), at most 64 filesystem paths and 64 egress entries, path/egress string bounds, declared resource ceilings, read-only root intent, default-deny network intent, and required identity/policy/stop/artifact prerequisites. CI also checks Draft 2020-12 schema agreement for critical security boundaries. It deliberately never executes workloads.
 
 ## Security boundary
 
@@ -25,10 +25,10 @@ Capability and compatibility metadata are aligned to the ecosystem v1.1.0 contra
 
 ## Verification plan
 
-- Product deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/29235a9477dafdf23ced98389c952a31fc22df3d
-- Component CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41437856656
-- Python 3.10, 3.11 and 3.12 all passed; 14 tests per version.
-- Exact staging/product Git blob parity: 14 product files, zero missing, differing or extra files.
+- Historical deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/29235a9477dafdf23ced98389c952a31fc22df3d
+- Expanded regression suite: 21 tests, including pre-parse byte/depth bounds, path/egress count and length bounds, and schema/runtime security-boundary checks.
+- Final remediation CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41507530278 (verify final workflow conclusion before sign-off).
+- Master staging packet refreshed with the latest validator, schema, tests, CI, requirements and security/contract docs; exact product-file parity is pending final comparison.
 - Master registry, dependency graph, status and public catalog reconciled; Master regression and capability/compatibility metadata verification passed in run https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41438185138 (47 tests). Final deployment checkpoint: checkpoints/2026-11-02-agent-sandbox-security-deployment.md.
 
 ## Governance
