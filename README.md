@@ -65,7 +65,9 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), open an issue for substantial changes, 
 
 - [Resource manifest schema](schemas/agent-resource.schema.json) and [validator](tools/validate_agent_resource.py)
 - [AIX experimental envelope](prototypes/aix/aix-message.schema.json)
-- [Default-deny policy prototype](prototypes/policy/README.md)
+- [Default-deny policy prototype](prototypes/policy/README.md) and [policy-engine contract](specifications/policy-engine/README.md)
+- [Audit-provenance contract](specifications/audit-provenance/README.md), [event schema](schemas/audit-provenance-event.schema.json), and [starter validator](tools/validate_audit_event.py)
+- [Foundation starter learning path](docs/FOUNDATION-STARTER-PATH.md)
 - [Audit event schema](schemas/audit-event.schema.json) and [hash-chain utility](tools/audit_chain.py)
 - [Secure supply-chain starter contract](specifications/secure-supply-chain/README.md), [artifact schema](schemas/supply-chain-artifact.schema.json), and [validator](tools/validate_supply_chain.py)
 - [Repository scaffold generator](tools/bootstrap_repositories.py)
