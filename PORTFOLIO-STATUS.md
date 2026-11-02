@@ -27,6 +27,8 @@ The account repository search found the eight public portfolio repositories and 
 
 ## Repository-by-repository wireframe
 
+**Active GitHub issue tracker:** [Issue #1 — Portfolio tracker and implementation backlog](https://github.com/PCakes303/agent-intelligence-ecosystem/issues/1).
+
 | # | Repository | Layer | Existence / implementation status | Priority | Why it matters / next gate |
 |---:|---|---|---|---|---|
 | 00 | [`agent-intelligence-ecosystem`](https://github.com/PCakes303/agent-intelligence-ecosystem) | control-plane | **Operational control plane** — Operational control plane; registry, architecture, starter validation and CI | P0 | Single source of truth for portfolio, dependencies, governance and status. **Next:** Maintain canonical registry; fix status drift; add portfolio reconciliation tests. |
@@ -59,6 +61,12 @@ The account repository search found the eight public portfolio repositories and 
 | 27 | [`agent-conformance-lab`](https://github.com/PCakes303/agent-conformance-lab) | adoption | **Not created; not started** — Not started | P1 | Proves protocol, security and compatibility behavior across implementations. **Next:** Build executable conformance suite and negative security fixtures. |
 | 28 | [`agent-federation-network`](https://github.com/PCakes303/agent-federation-network) | adoption | **Not created; not started** — Not started | P2 | Allows independently operated networks to interoperate without shared root trust. **Next:** Prototype two-domain federation with explicit trust, authorization and revocation. |
 | 29 | [`agent-ecosystem-private`](https://github.com/PCakes303/agent-ecosystem-private) | restricted-operations | **Exists; private status not assessed** — Private repository exists; contents intentionally not inspected in this public audit | P1 | Restricted operational planning and security material; separate from public sync. **Next:** Review privately in a separate authorized session; enforce no-public-export boundary. |
+
+## Package and release readiness
+
+A repository starter build is not the same thing as a distributable software package. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of the seven existing public project repositories found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
+
+**Decision:** do not publish empty or premature packages. Add packaging only where a reusable library or executable is actually intended for distribution. At that point require a reproducible build, explicit license, locked dependencies, SBOM, signed provenance, and install-from-built-artifact tests. The current starter scripts and contract validators are source-level tools, not published SDKs.
 
 ## Work priority
 
