@@ -20,6 +20,9 @@ The portfolio and architecture are approved. Twenty-four of the 31 public reposi
 - [Repository 25 — Agent Skill Library](https://github.com/PCakes303/agent-skill-library)
 - [Repository 26 — Agent Sandbox Security](https://github.com/PCakes303/agent-sandbox-security)
 - [Repository 26 deployment checkpoint](checkpoints/2026-11-02-agent-sandbox-security-deployment.md)
+- [Repository 26 finalization and human/security follow-up](checkpoints/2026-11-02-agent-sandbox-security-finalization.md)
+- [Repository 26 open release-gates issue](https://github.com/PCakes303/agent-sandbox-security/issues/2)
+- [Repository 27 provisioning/build issue](https://github.com/PCakes303/agent-intelligence-ecosystem/issues/5)
 
 - [LLM-readable project index](llms.txt)
 - [Public agent catalog — 31 repositories](registry/public-agent-catalog.json)
