@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Validate public component capability and compatibility metadata."""
-import json, re, sys
+import json, re, sys, time
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -62,7 +62,7 @@ def validate_compatibility(data,expected_repo=None):
     return errors
 
 def fetch_json(url):
-    req=Request(url,headers={"User-Agent":"MrCakes931-metadata-validator/1.0","Accept":"application/json"})
+    req=Request(f"{url}?_={time.time_ns()}",headers={"User-Agent":"MrCakes931-metadata-validator/1.0","Accept":"application/json"})
     with urlopen(req,timeout=20) as response: return json.loads(response.read().decode("utf-8"))
 
 def main():
