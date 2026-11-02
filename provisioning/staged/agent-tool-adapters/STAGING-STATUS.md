@@ -4,7 +4,7 @@
 **Deployment commit:** `b3a92d0f7c8f0ed9477b4982f6dbf2e9d611aea9`  
 **Deployment CI:** [run 41431367932 — success](https://github.com/PCakes303/agent-tool-adapters/actions/runs/41431367932)
 
-This staging packet was deployed. The target product-file set is being refreshed after audit remediation; the staging-only status note is intentionally excluded. A fresh path/blob-SHA comparison is required after the final sync commit.
+This staging packet was deployed. The target contains 17 product files; the staging-only status note is intentionally excluded. All 17 remote product-file Git blob SHAs match the corresponding staged product files exactly after audit remediation.
 
 ## Included implementation
 
@@ -25,4 +25,4 @@ Build a concrete reviewed adapter against an approved tool, with explicit least-
 
 ## Audit remediation — 2026-11-02
 
-Adapter and capability identifiers are limited to 128 characters; capability declarations are limited to 128 per adapter; registry capacity is capped at 10,000. Direct malformed invocation objects, invalid principals, missing callbacks and malformed policy decision IDs fail closed. JSON payloads have byte, depth and total-item limits. Descriptor output is validated against the aligned Draft 2020-12 schema in CI. The current remote test file and development dependency were synchronized into this staging packet; verify exact blob parity before final sign-off.
+Adapter and capability identifiers are limited to 128 characters; capability declarations are limited to 128 per adapter; registry capacity is capped at 10,000. Direct malformed invocation objects, invalid principals, missing callbacks and malformed policy decision IDs fail closed. JSON payloads have byte, depth and total-item limits. Descriptor output is validated against the aligned Draft 2020-12 schema in CI. The current remote test file and development dependency were synchronized into this staging packet; exact path and blob-SHA parity was rechecked after synchronization.
