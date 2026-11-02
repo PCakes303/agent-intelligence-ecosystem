@@ -309,10 +309,10 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Staging prepared; 23-file scaffold committed to master; public remote not yet created",
       "priority": "P2",
       "importance": "Records lawful source access, licensing, limits and reliability metadata.",
-      "next_gate": "Define source record schema with terms, collection constraints and review status."
+      "next_gate": "Create the public remote, deploy the exact staged packet, verify all Python 3.10–3.12 CI jobs, and then add authenticated review and Audit & Provenance integration before any collector work."
     },
     {
       "number": "20",
