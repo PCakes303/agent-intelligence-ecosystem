@@ -209,16 +209,15 @@
     },
     "intelligence-knowledge-graph": {
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
-      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41500563910",
+      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41505793639",
       "conclusion": "success",
-      "head_sha": "7f46b18bc92c49dcb214e0d3db2dd462361449d7",
-      "tests": 15,
+      "head_sha": "67678de1716e2a414a87696194718f319abf605c",
+      "tests": 38,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
-      ],
-      "staging_parity": "29 product files; exact Git blob SHA match"
+      ]
     },
     "agent-tool-adapters": {
       "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
@@ -1067,7 +1066,12 @@
         "blocking_issue": "https://github.com/PCakes303/intelligence-knowledge-graph/issues/1",
         "remediation_commits": [
           "65a1c9977813a0982f935381db0f633ee68919d7",
-          "fde80de438257708b60cdf68fa21585947f22b2b"
+          "fde80de438257708b60cdf68fa21585947f22b2b",
+          "b96da59ffcc36ba05587519b928435ec38276f3e",
+          "67678de1716e2a414a87696194718f319abf605c",
+          "086f5d21944b6bc7eabe6ce2f5f416579f0e4df0",
+          "745f94b4198cd76f0ada793915ba51ecb633e89f",
+          "381e1554bf294684db775d0d74242a3920e9f692"
         ],
         "findings": [
           "path query has no work/queue expansion budget and may explode combinatorially",
@@ -1076,7 +1080,10 @@
           "GitHub About metadata missing",
           "license pending review",
           "repository administration controls unverified",
-          "upstream evidence/entity-resolution integration unavailable"
+          "upstream evidence/entity-resolution integration unavailable",
+          "path-query expansion, queue and edge-scan budgets implemented with hard ceilings",
+          "four adversarial query budget tests added; full suite 38 tests passed across Python 3.10–3.12",
+          "staging parity must be refreshed after remote changes"
         ]
       }
     },
