@@ -71,6 +71,20 @@ class AuditLogTests(unittest.TestCase):
             with self.assertRaisesRegex(AuditError, "must not provide"):
                 append_event(Path(tmp) / "events.jsonl", bad)
 
+    def test_unknown_field_rejected(self):
+        from tools.audit_log import validate_event
+        bad = event()
+        bad["unmodeled"] = True
+        with self.assertRaisesRegex(AuditError, "unknown fields"):
+            validate_event(bad)
+
+    def test_timezone_is_required(self):
+        from tools.audit_log import validate_event
+        bad = event()
+        bad["timestamp"] = "2026-01-01T00:00:00"
+        with self.assertRaisesRegex(AuditError, "timestamp"):
+            validate_event(bad)
+
     def test_blank_line_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "events.jsonl"
