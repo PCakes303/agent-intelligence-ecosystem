@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 13,
+    "public_existing": 14,
     "private_existing": 1,
-    "public_not_created": 16,
+    "public_not_created": 15,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 13,
-    "public_repositories_missing": 16
+    "public_repositories_present": 14,
+    "public_repositories_missing": 15
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -198,11 +198,11 @@
       "name": "agent-transport-gateway",
       "layer": "protocols",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started; initial scaffold prepared in master staging",
+      "existence": "exists",
+      "status": "Scaffolded; 14 files published; CI workflow present, first run pending",
       "priority": "P0",
       "importance": "Carries messages across MCP/A2A/HTTP transports with security controls.",
-      "next_gate": "Create the public standalone remote, deploy provisioning/staged/agent-transport-gateway, and run the CI matrix; then implement authenticated HTTP adapter, policy integration, and shared replay protection."
+      "next_gate": "Run and pass the Python 3.10/3.11/3.12 CI matrix; then implement authenticated HTTP adapter, identity and policy integration, and shared replay protection. The current process-local guard is experimental and does not authenticate senders."
     },
     {
       "number": "14",
