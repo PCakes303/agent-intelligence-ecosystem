@@ -633,7 +633,7 @@
       "role": "Experimental sandbox admission policy contract and fail-closed reference validator; no OS isolation or workload execution.",
       "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
       "existence": "exists",
-      "implementation_status": "Experimental; policy contract and validator staged; no OS sandbox or workload execution",
+      "implementation_status": "Experimental; policy contract and fail-closed validator staged; no OS sandbox or workload execution; 13 unit tests pending remote CI",
       "priority": "P0",
       "dependencies": [
         "identity-trust",
@@ -658,7 +658,7 @@
       "role": "Independent emergency-stop authority, authenticated stop state, revocation, quarantine, distributed stop propagation, and controlled resumption.",
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
       "existence": "not-created",
-      "implementation_status": "Planned; approved portfolio expansion",
+      "implementation_status": "Planned; approved as a new P0 portfolio repository",
       "priority": "P0",
       "dependencies": [
         "foundation",
@@ -666,7 +666,12 @@
         "policy-engine",
         "audit-provenance",
         "secure-supply-chain"
-      ]
+      ],
+      "discovery": {
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
+      }
     },
     {
       "id": "compliance-governance",
@@ -676,7 +681,7 @@
       "role": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring; not legal advice or certification.",
       "repository_url": "https://github.com/PCakes303/agent-compliance-governance",
       "existence": "not-created",
-      "implementation_status": "Planned; approved portfolio expansion",
+      "implementation_status": "Planned; approved as a new P0 portfolio repository",
       "priority": "P0",
       "dependencies": [
         "master",
@@ -685,7 +690,12 @@
         "policy-engine",
         "audit-provenance",
         "secure-supply-chain"
-      ]
+      ],
+      "discovery": {
+        "llms_txt": null,
+        "agents_md": null,
+        "readme": null
+      }
     }
   ]
 }
