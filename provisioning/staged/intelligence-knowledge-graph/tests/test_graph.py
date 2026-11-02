@@ -12,6 +12,61 @@ def graph_fixture():
     return graph
 
 class GraphTests(unittest.TestCase):
+
+    def test_graph_node_and_edge_mappings_are_immutable(self):
+        graph = graph_fixture()
+        with self.assertRaises(TypeError):
+            graph.nodes["other"] = graph.nodes["s"]
+        with self.assertRaises(TypeError):
+            graph.edges["other"] = graph.edges["r"]
+
+    def test_graph_node_capacity_is_enforced(self):
+        graph = KnowledgeGraph("g", T, max_nodes=1)
+        graph.add_node(Node.from_dict({"id":"s","type":"source","label":"Source","recorded_at":T,"source_record_id":"src","canonical_url":"https://example.org"}))
+        entity = Node.from_dict({"id":"e","type":"entity","label":"Entity","recorded_at":T,"entity_record_id":"ent","entity_kind":"organization","resolution_status":"provisional"})
+        with self.assertRaises(ValueError):
+            graph.add_node(entity)
+
+    def test_graph_edge_capacity_is_enforced(self):
+        graph = KnowledgeGraph("g", T, max_edges=1)
+        graph.add_node(Node.from_dict({"id":"s","type":"source","label":"Source","recorded_at":T,"source_record_id":"src","canonical_url":"https://example.org"}))
+        graph.add_node(Node.from_dict({"id":"ev","type":"evidence","label":"Evidence","recorded_at":T,"evidence_record_id":"evr","sha256":"a"*64,"observed_at":T,"source_node_id":"s"}))
+        graph.add_node(Node.from_dict({"id":"e","type":"entity","label":"Entity","recorded_at":T,"entity_record_id":"ent","entity_kind":"organization","resolution_status":"provisional"}))
+        first = Edge.from_dict({"id":"r1","from":"ev","to":"e","predicate":"mentions","evidence_refs":["ev"],"confidence":0.5,"uncertainty":"synthetic","observed_at":T,"recorded_at":T})
+        second = Edge.from_dict({"id":"r2","from":"ev","to":"e","predicate":"supports","evidence_refs":["ev"],"confidence":0.5,"uncertainty":"synthetic","observed_at":T,"recorded_at":T})
+        graph.add_edge(first)
+        with self.assertRaises(ValueError):
+            graph.add_edge(second)
+
+    def test_graph_configuration_is_bounded(self):
+        with self.assertRaises(ValueError):
+            KnowledgeGraph("g", T, max_nodes=100001)
+        with self.assertRaises(ValueError):
+            KnowledgeGraph("g", T, max_edges=500001)
+
+
+    def test_direct_node_input_is_revalidated_and_snapshotted(self):
+        graph = KnowledgeGraph("g", T)
+        mutable_metadata = {"classification": "public"}
+        raw_node = Node("s", "source", "Source", T, {
+            "source_record_id": "src",
+            "canonical_url": "https://example.org",
+            "metadata": mutable_metadata,
+        })
+        stored = graph.add_node(raw_node)
+        mutable_metadata["classification"] = "changed"
+        self.assertEqual(stored.data["metadata"]["classification"], "public")
+        with self.assertRaises(AttributeError):
+            graph.graph_id = "changed"
+
+    def test_direct_edge_input_is_revalidated_and_snapshotted(self):
+        graph = graph_fixture()
+        raw_edge = Edge("r2", "ev", "e", "supports", ["ev"], 0.5, "synthetic", T, T)
+        stored = graph.add_edge(raw_edge)
+        self.assertEqual(stored.evidence_refs, ("ev",))
+        raw_edge.evidence_refs.append("mutated")
+        self.assertEqual(graph.edges["r2"].evidence_refs, ("ev",))
+
     def test_round_trip(self):
         graph = graph_fixture()
         self.assertEqual(KnowledgeGraph.from_dict(graph.to_dict()).to_dict(), graph.to_dict())
