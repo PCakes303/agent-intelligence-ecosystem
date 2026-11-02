@@ -22,7 +22,7 @@ The account repository search found the nine public portfolio repositories and t
 
 - **Operational control plane** means the master registry, validation tooling, starter build and CI are running. It does not mean all 30 projects are implemented.
 - **Scaffolded** means a repository exists with starter build/CI and some project-specific contracts or documentation. It does not mean the domain implementation is complete.
-- **Scaffolded** means the approved repository is absent from the connected account repository search.
+- **Not created** means the approved repository is absent from the connected account repository search.
 - The private repository's contents were not inspected in this public portfolio audit.
 
 ## Repository-by-repository wireframe
@@ -39,7 +39,7 @@ The account repository search found the nine public portfolio repositories and t
 | 05 | [`agent-resource-manifest`](https://github.com/PCakes303/agent-resource-manifest) | foundation-security | **Scaffolded; starter build + CI verified** — Scaffolded; schema, examples, validator and CI pass | P0 | Describes tools, skills, models, services, dependencies and requested permissions. **Next:** Add compatibility/version policy and integration fixtures. |
 | 06 | [`agent-schema-registry`](https://github.com/PCakes303/agent-schema-registry) | foundation-security | **Scaffolded; starter build + CI verified** — Scaffolded; schema catalog and CI pass; compatibility runner missing | P0 | Versioned contracts underpin all inter-repository exchange. **Next:** Implement schema publication index and backward/forward compatibility runner. |
 | 07 | [`agent-identity-trust`](https://github.com/PCakes303/agent-identity-trust) | foundation-security | **Scaffolded; starter build + CI verified** — Scaffolded; identity contracts and CI pass; lifecycle/authenticated demo missing | P0 | Trust root for agent identity, delegation and authorization boundaries. **Next:** Implement issuance, rotation, revocation state machine and authenticated two-node demo. |
-| 08 | [`agent-secure-supply-chain`](https://github.com/PCakes303/agent-secure-supply-chain) | foundation-security | **Not created; not started** — Master-repo starter contract only; standalone repo absent | P0 | Prevents unverified artifacts and releases entering trusted execution. **Next:** Provision repo; implement SBOM generation, provenance/signature verification and release workflow. |
+| 08 | [`agent-secure-supply-chain`](https://github.com/PCakes303/agent-secure-supply-chain) | foundation-security | **Scaffolded; initial contract, validator, tests and CI workflow added** | P0 | Prevents unverified artifacts and releases entering trusted execution. **Next:** Implement SBOM generation, provenance binding, and cryptographic signature verification against an explicit trust policy. |
 | 09 | [`agent-policy-engine`](https://github.com/PCakes303/agent-policy-engine) | foundation-security | **Not created; not started** — Master-repo contract and experimental default-deny evaluator only | P0 | Central enforcement of least privilege and explicit authorization. **Next:** Provision repo; implement policy bundle/versioning, enforcement adapters and deny-path tests. |
 | 10 | [`agent-audit-provenance`](https://github.com/PCakes303/agent-audit-provenance) | foundation-security | **Not created; not started** — Master-repo event contract, validator and hash-chain utility only | P0 | Accountability, traceability and forensic evidence across all components. **Next:** Provision repo; implement authenticated event pipeline, retention and integrity checkpoints. |
 | 11 | [`aix-core`](https://github.com/PCakes303/aix-core) | protocols | **Not created; not started** — Experimental contract and lifecycle validator in master; standalone repo absent | P0 | Canonical task/intent semantics shared by agents and transports. **Next:** Provision repo; freeze envelope semantics and add protocol conformance fixtures. |
@@ -78,7 +78,7 @@ Priority is dependency- and risk-based, not a statement that lower-priority work
 
 ## Verified CI evidence
 
-Latest checked workflow runs for the eight public portfolio repositories were successful:
+Latest checked workflow runs for the original eight public portfolio repositories were successful. Repository 08 is newly provisioned; its first CI runs are being corrected and must pass before being recorded as verified:
 
 - [Master registry validation](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41395414353)
 - [AI discovery](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047)
