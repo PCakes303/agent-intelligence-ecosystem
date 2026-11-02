@@ -15,17 +15,17 @@ Build an interoperable, secure, observable ecosystem for AI agents, distributed 
 - `agent-ecosystem-integration`: integration contracts, orchestration, cross-repository validation, event processing, and synchronization automation.
 
 ### Technical repositories
-The 25 technical repositories are grouped into:
+The 27 technical repositories are grouped into:
 1. Foundation and cybersecurity (01–07).
 2. Protocols and communication (08–10).
 3. Distributed swarm infrastructure (11–15).
 4. OSINT and intelligence infrastructure (16–20).
-5. Adoption and expansion (21–25).
+5. Adoption and expansion (21–26).\n6. Emergency control and compliance governance (27–28), with cross-cutting obligations across every layer.
 
 ### Private operations
 `agent-ecosystem-private` is a separate private trust boundary for restricted internal documentation and sensitive operational planning. It is not a dependency of public builds and is not a source for public synchronization.
 
-## 3. Architectural decisions
+### Safety and governance repositories\n- agent-sandbox-security: constrained execution contracts and isolation enforcement; no privileged execution before verified backend controls.\n- agent-emergency-control: independent emergency-stop authority, monotonic stop state, revocation, quarantine and controlled resumption.\n- agent-compliance-governance: source-linked legal applicability, controls, assessments and evidence; not legal advice or certification.\n\n## 3. Architectural decisions
 
 - **AIX:** an extension/interoperability layer over existing standards, not a replacement for MCP, A2A, HTTP, OpenAPI, or other established protocols.
 - **Swarm topology:** hybrid centralized, federated, and peer-to-peer. Topology is selected per workload and trust boundary.
