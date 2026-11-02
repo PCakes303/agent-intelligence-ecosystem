@@ -1,0 +1,9 @@
+# Agent Capability Registry
+
+Experimental catalog and matching layer for declared agent capabilities.
+
+- README.md: scope and limitations.
+- docs/CAPABILITY-CONTRACT.md: declaration and matching contract.
+- docs/THREAT-MODEL.md: security boundaries.
+- Python API: capability_registry.
+- Matching is advisory; it does not authenticate, authorize or execute agents.
