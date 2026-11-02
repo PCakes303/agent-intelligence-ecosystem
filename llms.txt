@@ -27,7 +27,7 @@ This is the public ecosystem control plane. It contains the authoritative reposi
 
 ## Planned public repositories
 The following are approved portfolio entries but are not yet created. Their presence in this list is a roadmap statement, not a claim of implementation:
-- Foundation and security: agent-policy-engine, agent-audit-provenance.
+- Foundation and security: agent-policy-engine, agent-audit-provenance, aix-core.
 - AIX and transport: aix-core, aix-codecs, agent-transport-gateway, agent-discovery-network, agent-capability-registry.
 - Hybrid swarm: swarm-runtime, swarm-coordination, swarm-state-mesh.
 - OSINT and intelligence: osint-source-registry, osint-collection-framework, osint-evidence-engine, osint-entity-resolution, intelligence-knowledge-graph.
