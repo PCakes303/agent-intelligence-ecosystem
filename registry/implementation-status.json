@@ -165,14 +165,16 @@
     },
     "intelligence-knowledge-graph": {
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
-      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428614407",
+      "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41497020106",
+      "conclusion": "success",
+      "head_sha": "80bd60e153a49092f1630c64be7643175ba7a3db",
+      "tests": 15,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
-      "jobs": "all passed",
-      "tests": 15
+      "staging_parity": "29 product files; exact Git blob SHA match"
     },
     "agent-tool-adapters": {
       "repository_url": "https://github.com/PCakes303/agent-tool-adapters",
@@ -844,7 +846,27 @@
       "status": "Experimental; 29 files published; 15 unit tests and synthetic graph validation passed on Python 3.10, 3.11 and 3.12; capability/compatibility metadata normalized to v1.1.0 and validated by master starter build (run 41428337519).",
       "priority": "P2",
       "importance": "Connects sources, evidence, entities and relationships for analysis.",
-      "next_gate": "Verify upstream osint-evidence and entity-resolution contracts, then implement reviewed adapters and cross-repository provenance/conformance fixtures. License remains pending portfolio review."
+      "next_gate": "Bound path query work, align direct model APIs with Draft 2020-12 schema, verify private reporting and repository settings, and retain declared-only upstream dependencies until reproducible integration tests pass.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "80bd60e153a49092f1630c64be7643175ba7a3db",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-intelligence-knowledge-graph-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/intelligence-knowledge-graph/issues/1",
+        "remediation_commits": [
+          "65a1c9977813a0982f935381db0f633ee68919d7",
+          "fde80de438257708b60cdf68fa21585947f22b2b"
+        ],
+        "findings": [
+          "path query has no work/queue expansion budget and may explode combinatorially",
+          "schema/model constraints differ for direct API use",
+          "private reporting route not verified",
+          "GitHub About metadata missing",
+          "license pending review",
+          "repository administration controls unverified",
+          "upstream evidence/entity-resolution integration unavailable"
+        ]
+      }
     },
     {
       "number": "24",
