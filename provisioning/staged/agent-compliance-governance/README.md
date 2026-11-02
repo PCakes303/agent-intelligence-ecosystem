@@ -3,7 +3,7 @@
 Portfolio ID: compliance-governance  
 Maturity: scaffolded governance register, control catalogue and evidence-index validator.
 
-A machine-readable legal applicability register and AI/privacy governance control catalogue for the MrCakes931 Agent Intelligence Ecosystem.
+A machine-readable legal-monitoring register and AI/privacy governance control catalogue for the MrCakes931 Agent Intelligence Ecosystem.
 
 ## Important boundary
 
@@ -34,8 +34,6 @@ The initial control catalogue is proposed. No organizational controls have been 
 
 ## Licensing
 
-License selection is pending portfolio review. No license is asserted.
-
-## Licensing
-
 This repository applies the ecosystem's scoped mixed-license policy: original source code and machine-readable contracts are licensed under Apache-2.0; original human-readable documentation is licensed under CC BY 4.0. Third-party material retains upstream terms. Datasets, evidence, fixtures, sample payloads, media, and material with uncertain provenance are not blanket-licensed and require separate review. See [LICENSE.md](LICENSE.md).
+
+The license declaration does not replace item-level provenance and third-party rights review before release.
