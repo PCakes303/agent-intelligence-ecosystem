@@ -206,16 +206,16 @@
       "layer": "foundation-security",
       "role": "Authorization, least privilege, capability permissions, and policy enforcement.",
       "repository_url": "https://github.com/PCakes303/agent-policy-engine",
-      "existence": "not-created",
-      "implementation_status": "Master-repo contract and experimental default-deny evaluator only",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; deterministic default-deny evaluator, JSON Schemas, CLI, examples, tests and CI workflow published; production enforcement not implemented",
       "priority": "P0",
       "dependencies": [
         "foundation"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-policy-engine/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-policy-engine/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-policy-engine/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
