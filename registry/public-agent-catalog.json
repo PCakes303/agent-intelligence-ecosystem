@@ -458,7 +458,10 @@
         "osint-source-registry",
         "policy-engine",
         "identity-trust",
-        "audit-provenance"
+        "audit-provenance",
+        "emergency-control",
+        "compliance-governance",
+        "secure-supply-chain"
       ],
       "discovery": {
         "llms_txt": null,

@@ -415,6 +415,18 @@
     [
       "sandbox-security",
       "compliance-governance"
+    ],
+    [
+      "osint-collection",
+      "emergency-control"
+    ],
+    [
+      "osint-collection",
+      "compliance-governance"
+    ],
+    [
+      "osint-collection",
+      "secure-supply-chain"
     ]
   ],
   "excluded": [

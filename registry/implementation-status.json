@@ -22,9 +22,9 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513281755",
       "conclusion": "success",
-      "head_sha": "5ba7d674727a828c9440d9599f711bf730a2d471",
+      "head_sha": "b073170eb0a6eea6ec06773aff2c6ae7ec40775f",
       "tests": 47
     },
     "agent-ai-discovery": {
@@ -1051,7 +1051,7 @@
       "status": "Not started",
       "priority": "P2",
       "importance": "Authorized, reproducible collection of public information.",
-      "next_gate": "Build synthetic/permitted-source collector with policy checks and collection logs."
+      "next_gate": "Build and validate a bounded non-personal public collection plan; require source-registry approval, identity, policy, audit, emergency-stop, compliance and supply-chain gates. No network collector until separate review."
     },
     {
       "number": "21",
@@ -1435,6 +1435,12 @@
       "path": "provisioning/staged/agent-compliance-governance",
       "file_count": 28,
       "status": "Prepared in master staging; public remote not yet created. Includes Colorado legal-monitor register, proposed governance controls, empty evidence index, strict JSON/schema validators and Python 3.10–3.12 staging CI. No legal advice, applicability determination or compliance certification."
+    },
+    {
+      "repository": "osint-collection-framework",
+      "path": "provisioning/staged/osint-collection-framework",
+      "file_count": 21,
+      "status": "Prepared in master staging; public remote not yet created. Collection-plan validator only, restricted to non-personal public metadata; requires source registry, identity, policy, audit, emergency-stop, compliance and supply-chain gate evidence. No network or collection capability."
     }
   ],
   "master_audit": {

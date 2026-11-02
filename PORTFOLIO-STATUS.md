@@ -203,3 +203,8 @@ The second P0 component, `agent-compliance-governance` (canonical portfolio posi
 
 
 The two approved P0 governance/safety components are now staged and validated by [master CI run 41513079895](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895): emergency-control passed 21 tests and compliance-governance passed 10 tests on Python 3.10, 3.11 and 3.12. The master 47-test suite and starter build also passed. Both public remotes remain uncreated; neither staging packet represents a deployed production service, legal determination or compliance certification.
+
+
+## OSINT collection safety gates — staging
+
+The next OSINT dependency, `osint-collection-framework` (canonical portfolio position 21/32), is staged as a plan validator only. Its dependency graph now requires `agent-emergency-control`, `agent-compliance-governance` and `agent-secure-supply-chain` in addition to source registry, identity, policy and audit contracts. The 106-edge master graph and public catalog have been synchronized. The scaffold prohibits private-person targeting, sensitive personal data, credential harvesting, access-control bypass and authenticated collection; it performs no network requests. Staging CI is pending.

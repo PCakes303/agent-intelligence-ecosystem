@@ -84,3 +84,8 @@ The initial 23-product-file scaffold is staged at [agent-emergency-control](stag
 ## Deployment sequence 28 — agent-compliance-governance (portfolio position 29/32)
 
 The initial 28-product-file scaffold is staged at [agent-compliance-governance](staged/agent-compliance-governance/). It contains a source-linked Colorado legal monitor, proposed privacy/AI governance controls, an empty evidence index, strict schema/registry validators and a Python 3.10–3.12 CI matrix. It does not determine legal applicability, provide legal advice, certify compliance or claim controls implemented. The public remote is not yet created.
+
+
+## Next OSINT build — osint-collection-framework (portfolio position 21/32)
+
+A plan-validation-only scaffold is staged at [osint-collection-framework](staged/osint-collection-framework/). It requires source approval, identity, policy, audit, emergency-stop, compliance and supply-chain gates. The initial profile permits only bounded public non-personal metadata and does not include any network or collection client. Public remote creation and repository CI remain pending.
