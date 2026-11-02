@@ -158,3 +158,16 @@ A fresh live review of the connected GitHub account confirms the portfolio remai
 See [the dated portfolio-wide audit checkpoint](checkpoints/2026-11-02-portfolio-wide-audit-remediation.md) and [audit remediation issue #3](https://github.com/PCakes303/agent-intelligence-ecosystem/issues/3). The canonical project issues are #1 (portfolio tracker) and #2 (discoverability/metadata).
 
 Recommended sequence: reconcile registries and staging evidence; complete licensing and About metadata; review repository administration settings; build the P0 emergency-control and compliance-governance repositories; implement central automation and cross-repository conformance; finish OSINT dependencies, conformance lab and federation; then perform the release audit. Preserve historical checkpoints and supersede them explicitly.
+
+
+## Mandatory cleanliness standard adopted — 2026-11-02
+
+The owner approved a universal cleanup and quality gate for all 31 public repositories. The master repository now publishes:
+- [Universal Repository Standard](docs/UNIVERSAL-REPOSITORY-STANDARD.md)
+- [Repository Cleanliness Checklist](docs/REPOSITORY-CLEANLINESS-CHECKLIST.md)
+- [GitHub About Metadata guide](docs/GITHUB-REPOSITORY-ABOUT-METADATA.md)
+- [Portfolio-wide audit checkpoint](checkpoints/2026-11-02-portfolio-wide-audit-remediation.md)
+
+The standard distinguishes common required materials from role-specific conditional artifacts. It explicitly prohibits guessed licenses, empty package placeholders, unsupported maturity/security claims and destructive removal of historical checkpoints. Each repository must receive PASS, PASS WITH EXCEPTIONS, BLOCKED or NOT REVIEWED with evidence before portfolio sign-off. The same gate applies to the seven remaining repositories at creation.
+
+The master registry-validation workflow now also runs on changes to docs, checkpoints, README and PORTFOLIO-STATUS so that project documentation and status changes are validated with the same master regression suite. Latest successful master workflow before this trigger change: [run 41438488148](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41438488148). A new run is required to verify this trigger change and the new documentation commit.
