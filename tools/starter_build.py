@@ -16,9 +16,10 @@ commands = [
     (root, [sys.executable, "tools/evaluate_policy.py", "--policy", "prototypes/policy/examples/policy.json", "--request", "prototypes/policy/examples/allow-request.json"]),
     (root, [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"]),
     (root / "provisioning/staged/agent-policy-engine", [sys.executable, "tools/starter_build.py"]),
+    (root / "provisioning/staged/agent-audit-provenance", [sys.executable, "tools/starter_build.py"]),
 ]
 for cwd, command in commands:
     result = subprocess.run(command, cwd=cwd)
     if result.returncode:
         raise SystemExit(result.returncode)
-print("Starter build passed: master contracts, registry, policy prototype, regression suite, and staged policy-engine component.")
+print("Starter build passed: master contracts, registry, policy prototype, regression suite, staged policy-engine component, and staged audit-provenance component.")
