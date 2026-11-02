@@ -8,12 +8,12 @@
   "public_repositories": 29,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 16,
+    "public_existing": 17,
     "private_existing": 1,
-    "public_not_created": 13,
+    "public_not_created": 12,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 16,
-    "public_repositories_missing": 13
+    "public_repositories_present": 17,
+    "public_repositories_missing": 12
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -21,7 +21,10 @@
     "operational": "Control-plane tooling and CI currently run; not a claim that all ecosystem components are production-ready."
   },
   "verified_ci": {
-    "master": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41413600522",
+    "master": {
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41415407893",
+      "conclusion": "success"
+    },
     "agent-ai-discovery": "https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047",
     "mrcakes931-ecosystem": "https://github.com/PCakes303/mrcakes931-ecosystem/actions/runs/41393904496",
     "agent-ecosystem-integration": "https://github.com/PCakes303/agent-ecosystem-integration/actions/runs/41407408815",
@@ -39,7 +42,7 @@
     "agent-capability-registry": "https://github.com/PCakes303/agent-capability-registry/actions/runs/41413329389",
     "swarm-runtime": {
       "repository_url": "https://github.com/PCakes303/swarm-runtime",
-      "workflow_run": "https://github.com/PCakes303/swarm-runtime/actions/runs/41415157127",
+      "workflow_run": "https://github.com/PCakes303/swarm-runtime/actions/runs/41415420565",
       "python_versions": [
         "3.10",
         "3.11",
