@@ -7,7 +7,7 @@
 - Remote repository: not yet created; the connected GitHub integration cannot create repositories.
 - Staging state: initial scaffold prepared in the master repository; matrix validated.
 - Maturity: scaffolded reference contract and validator.
-- License: pending portfolio review; no LICENSE file included.
+- License: scoped mixed-license policy included in staged LICENSE.md; file-level provenance clearance remains required.
 - Dependencies: foundation, identity-trust, policy-engine, audit-provenance, secure-supply-chain (declared only).
 - Implemented in this staging packet: Draft 2020-12 command schema; strict bounded JSON loader; deterministic per-scope STOP/RESUME reducer; synthetic unit tests; CI workflow.
 - Not implemented: cryptographic verification, identity/revocation service, durable state, audit integration, distributed propagation, quarantine, process termination, runtime enforcement or production kill switch.
