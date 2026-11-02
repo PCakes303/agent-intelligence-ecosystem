@@ -384,8 +384,8 @@
       "layer": "swarm",
       "role": "Task assignment, delegation, acknowledgement, synchronization, and recovery.",
       "repository_url": "https://github.com/PCakes303/swarm-coordination",
-      "existence": "not-created",
-      "implementation_status": "Not started",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; 18 files deployed; Python 3.10, 3.11 and 3.12 CI passed; 17 unit tests pass.",
       "priority": "P1",
       "dependencies": [
         "swarm-runtime",
@@ -394,9 +394,9 @@
         "capability-registry"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/swarm-coordination/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/swarm-coordination/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/swarm-coordination/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
