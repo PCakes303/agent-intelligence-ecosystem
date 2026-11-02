@@ -361,8 +361,8 @@
       "layer": "swarm",
       "role": "Execution infrastructure for distributed agents and nodes.",
       "repository_url": "https://github.com/PCakes303/swarm-runtime",
-      "existence": "not-created",
-      "implementation_status": "Not started",
+      "existence": "exists",
+      "implementation_status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12 (run 41415157127). Worker supervisor, bounded admission and adapter contract are experimental; no sandbox isolation is implemented.",
       "priority": "P0",
       "dependencies": [
         "identity-trust",
@@ -371,9 +371,9 @@
         "sandbox-security"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/swarm-runtime/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/swarm-runtime/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/swarm-runtime/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
