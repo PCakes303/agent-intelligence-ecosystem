@@ -9,6 +9,8 @@ on:
       - "tests/**"
       - "templates/**"
       - "prototypes/**"
+      - "examples/**"
+      - "specifications/**"
       - "templates/**"
       - "prototypes/**"
       - "requirements-dev.txt"
