@@ -159,11 +159,11 @@
       "name": "agent-audit-provenance",
       "layer": "foundation-security",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Starter implementation staged in master; event schema, SHA-256 JSONL chain, append/verify CLI, tests and CI prepared; standalone remote not yet created",
+      "existence": "exists",
+      "status": "Scaffolded; 20 files published; SHA-256 hash-chained JSONL audit log, append/verify CLI, schema, examples, tests, docs and CI",
       "priority": "P0",
       "importance": "Accountability, traceability and forensic evidence across all components.",
-      "next_gate": "Create public remote, deploy staged bundle, verify component and master CI, then implement authenticated ingestion, signed checkpoints, retention and identity integration."
+      "next_gate": "Verify successful final CI; add authenticated ingestion, signed checkpoints, retention controls and identity integration. Hash chaining alone does not authenticate event producers."
     },
     {
       "number": "11",
@@ -171,11 +171,11 @@
       "name": "aix-core",
       "layer": "protocols",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Experimental AIX semantic envelope, task lifecycle, mapping guidance, schema validator, fixtures, tests and CI staged in master; standalone remote not yet created",
+      "existence": "exists",
+      "status": "Scaffolded; 21 files published; experimental AIX semantic envelope, task lifecycle, Draft 2020-12 schema, validator, fixtures, mapping guide, tests and CI",
       "priority": "P0",
       "importance": "Canonical task/intent semantics shared by agents and transports.",
-      "next_gate": "Create public remote, deploy staged bundle and verify standalone CI; then develop concrete MCP/A2A mapping profiles and interoperability conformance tests."
+      "next_gate": "Verify successful final CI; develop concrete MCP/A2A mapping profiles and interoperability conformance tests. Envelope security references do not authenticate or authorize senders."
     },
     {
       "number": "12",
