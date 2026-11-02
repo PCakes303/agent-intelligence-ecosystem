@@ -14,40 +14,8 @@
     "agent-ecosystem-private",
     "agent-secure-supply-chain"
   ],
-  "missing_public_repository_count": 19,
+  "missing_public_repository_count": 17,
   "repositories": [
-    {
-      "name": "agent-audit-provenance",
-      "description": "Audit events, source provenance, traceability, and signed records.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "audit-provenance",
-      "dependencies": [
-        "foundation",
-        "schema-registry",
-        "identity-trust"
-      ]
-    },
-    {
-      "name": "aix-core",
-      "description": "AIX semantic interoperability specification for intent, tasks, responses, capabilities, context, status, and errors.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "aix-core",
-      "dependencies": [
-        "foundation",
-        "schema-registry",
-        "identity-trust",
-        "policy-engine",
-        "audit-provenance"
-      ]
-    },
     {
       "name": "aix-codecs",
       "description": "Serialization, validation, and machine encodings for AIX.",
