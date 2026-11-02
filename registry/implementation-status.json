@@ -4,16 +4,16 @@
   "public_identity": "MrCakes931",
   "master_repository": "https://github.com/PCakes303/agent-intelligence-ecosystem",
   "as_of": "2026-11-02",
-  "total_repositories": 30,
-  "public_repositories": 29,
+  "total_repositories": 32,
+  "public_repositories": 31,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 23,
+    "public_existing": 24,
     "private_existing": 1,
-    "public_not_created": 6,
+    "public_not_created": 7,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 23,
-    "public_repositories_missing": 6
+    "public_repositories_present": 24,
+    "public_repositories_missing": 7
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -438,11 +438,11 @@
       "name": "agent-sandbox-security",
       "layer": "adoption",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Not started",
+      "existence": "exists",
+      "status": "Experimental; policy contract and fail-closed validator staged; no OS sandbox or workload execution; 13 unit tests pending remote CI",
       "priority": "P0",
-      "importance": "Limits damage from untrusted tools, extensions and agent-generated code.",
-      "next_gate": "Build isolated execution prototype with filesystem/network/resource denial tests."
+      "importance": "Execution isolation and security boundary for tools, skills and workloads.",
+      "next_gate": "Implement and independently review an OS isolation backend; integrate emergency-stop authority, identity, policy, revocation, artifact verification, audit and compliance controls; adversarially test resource, filesystem, network and tenant isolation."
     },
     {
       "number": "27",
