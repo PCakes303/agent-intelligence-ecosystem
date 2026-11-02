@@ -126,8 +126,8 @@
       "name": "agent-policy-engine",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
-      "role": "Authorization, least privilege, capability permissions, and policy enforcement.",
+      "status": "scaffolding",
+      "role": "Deterministic, default-deny policy decision evaluation for agent identities, actions, resources, and scopes; experimental evaluator, not a production enforcement boundary.",
       "dependencies": [
         "foundation"
       ]
