@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-audit-provenance/blob/main/schemas/audit-event.schema.json",
+  "title": "Agent Audit Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "timestamp", "event_type", "actor", "action", "resource", "outcome", "details", "previous_hash", "event_hash"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "event_type": {"type": "string", "minLength": 1, "maxLength": 128},
+    "actor": {
+      "type": "object", "additionalProperties": false, "required": ["id", "type"],
+      "properties": {"id": {"type": "string", "minLength": 1}, "type": {"type": "string", "minLength": 1}}
+    },
+    "action": {"type": "string", "minLength": 1, "maxLength": 256},
+    "resource": {"type": "string", "minLength": 1, "maxLength": 1024},
+    "outcome": {"enum": ["success", "failure", "denied", "unknown"]},
+    "details": {"type": "object"},
+    "previous_hash": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "event_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}
