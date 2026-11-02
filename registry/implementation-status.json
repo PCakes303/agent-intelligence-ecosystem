@@ -130,15 +130,15 @@
       ]
     },
     "swarm-state-mesh": {
-      "repository_url": "https://github.com/PCakes303/swarm-state-mesh",
-      "workflow_run": "https://github.com/PCakes303/swarm-state-mesh/actions/runs/41420117940",
-      "python_versions": [
-        "3.10",
-        "3.11",
-        "3.12"
-      ],
-      "jobs": "all passed",
-      "tests": 15
+      "workflow_run": "https://github.com/PCakes303/swarm-state-mesh/actions/runs/41494936185",
+      "conclusion": "success",
+      "head_sha": "f43c0800d0bf1a9153bb2c57db59dd7f5d3e2dcc",
+      "tests": 19,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ]
     },
     "knowledge-graph": {
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
@@ -151,7 +151,18 @@
       "jobs": "all passed",
       "tests": 15
     },
-    "osint-source-registry": "https://github.com/PCakes303/osint-source-registry/actions/runs/41428118849",
+    "osint-source-registry": {
+      "workflow_run": "https://github.com/PCakes303/osint-source-registry/actions/runs/41495728166",
+      "conclusion": "success",
+      "head_sha": "70040b7c76c9b42e1c1108e19bc45c61b112e064",
+      "tests": 29,
+      "matrix": [
+        "Python 3.10",
+        "Python 3.11",
+        "Python 3.12"
+      ],
+      "schema_cli": "approved synthetic source fixture passed"
+    },
     "intelligence-knowledge-graph": {
       "repository_url": "https://github.com/PCakes303/intelligence-knowledge-graph",
       "workflow_run": "https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428614407",
@@ -749,7 +760,41 @@
       "status": "Scaffolded; 23 files published; remote tree verified; Python 3.10, 3.11 and 3.12 GitHub Actions CI passed (run 41428118849). Source metadata catalog only; no collection client.",
       "priority": "P2",
       "importance": "Records lawful source access, licensing, limits and reliability metadata.",
-      "next_gate": "Add authenticated review, signed approval records and Audit & Provenance integration; preserve source-term, licensing, privacy, purpose, rate-limit and retention checks before any collector integration."
+      "next_gate": "Expand full schema/model parity tests; bind approvals to authenticated reviewer and audit evidence; maintain no-network collection boundary until separately reviewed; verify private reporting, About metadata, settings, licensing and staging parity.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "745aab1a853931bac520d5dc0dfaa129bd422ccc",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-osint-source-registry-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/osint-source-registry/issues/1",
+        "remediation_commits": [
+          "a284652c7fe6201cc4f62ccaff88e335ac956be7",
+          "ea0003f64e4b71e11ecc9265e7d6d10dfee8479a",
+          "27c8ae3fa46c3e939e93ac57a43de91db20fcbaf",
+          "701f4cb1db90d2e7f532fefacd43265c4f427052",
+          "9cb2a0c799abba3e42b58d2d9057f6ae14b3134b",
+          "fc702a3ff109f3e2b17812c8ecfe08394f9151d1",
+          "0c3ec5bd4b2635cb6a5eaba27ec0f685566405f6",
+          "03073dd74b89c331502ab9a2b24a3ba1f36820c3",
+          "f1ac18405664f46a26851a54017d4d64a8f22c08",
+          "6c00a082d4ee0c1bbe64ff08f7eb9fa2df1de944",
+          "0414b139c3cf5c1af6ae672c49f887b342b4c6a5",
+          "8fe01f0edde2170eb27aa10cf36a930802f8dd27",
+          "b9781bcbe64b1ac6f78948b46a4943e5a2ce5290",
+          "70040b7c76c9b42e1c1108e19bc45c61b112e064"
+        ],
+        "findings": [
+          "approval metadata unsigned and not bound to authenticated reviewer or audit provenance",
+          "full JSON Schema/model parity suite not executed in CI",
+          "license/terms metadata is not legal determination",
+          "source authenticity and accuracy not verified",
+          "no collection client; future collector requires separate SSRF/privacy/policy design",
+          "private reporting route not verified",
+          "GitHub About homepage/topics missing",
+          "license pending review",
+          "staging parity and repository administration controls unverified"
+        ]
+      }
     },
     {
       "number": "20",
