@@ -13,3 +13,12 @@
 - License: pending portfolio review.
 
 This staging packet is not a standalone repository. Create the public remote, deploy this exact packet, and verify its repository-local CI before marking the repository as existing.
+
+## Pre-deployment validation — 2026-11-02
+
+- All six JSON artifacts parse successfully.
+- The source-record JSON Schema accepts both the approved and pending synthetic fixtures.
+- Local Python smoke checks passed for approved/pending model construction, HTTPS-only URL validation, enum robustness, purpose filtering, and expiry filtering.
+- The full repository-local unittest suite and three-version GitHub Actions matrix are included but have not yet run; they must pass after the standalone remote is created and the packet is deployed.
+- Master control-plane registry validation passed after this packet was staged: https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41423682532
+
