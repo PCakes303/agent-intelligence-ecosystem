@@ -1,11 +1,30 @@
-# Repository 15 deployment status
+# Repository 15 deployment and audit status
 
-Public repository created and verified: https://github.com/PCakes303/agent-capability-registry (default branch `main`). All 20 product files have been deployed and staging parity refreshed. Latest code commit: https://github.com/PCakes303/agent-capability-registry/commit/dd636dafccad84fcd52e6c8c1e9fc199e38052a1. CI passed on Python 3.10, 3.11 and 3.12: https://github.com/PCakes303/agent-capability-registry/actions/runs/41520820882.
+**Repository:** [PCakes303/agent-capability-registry](https://github.com/PCakes303/agent-capability-registry)  
+**Current code commit:** `dd636dafccad84fcd52e6c8c1e9fc199e38052a1`  
+**Current CI:** [Run 41520820882](https://github.com/PCakes303/agent-capability-registry/actions/runs/41520820882) — success on Python 3.10, 3.11 and 3.12  
+**Product files:** 20  
+**Staging source:** `provisioning/staged/agent-capability-registry/` in the master repository.
 
-The implementation includes strict capability declaration validation, a bounded process-local registry, exact-match requirement filters, same-agent coverage for multi-capability requests, deterministic results, and a fail-closed policy callback. Both Capability and Requirement now have normative Draft 2020-12 schemas, and model/schema boundary tests cover identifiers, description, version, attribute keys/counts/values and unknown properties. The development dependency is pinned in requirements-dev.txt.
+## Current deployment record
 
-Matching is advisory; declarations are not attestations, and the callback is not a production authorization service.
+The public remote is authoritative for current implementation. Exact staging-to-remote path/blob-SHA parity is verified: 20 staged product files, 20 remote product files, zero missing, extra or differing blobs. The STAGING-STATUS.md file is included in this parity comparison.
 
-Not included: cryptographic attestation, identity lifecycle integration, production policy adapter, distributed storage, network APIs, health/reputation scoring, execution scheduling, or cross-repository conformance. Dependency states remain `declared`, not `tested`. No GitHub Release is published. License selection remains pending review. Private vulnerability reporting, GitHub About metadata and repository administration settings remain unverified.
+## Remediation completed
 
-Next gates: add schema-registry, resource-manifest and policy-engine integration fixtures; add authenticated reviewer/issuer evidence and signed capability attestations; define package metadata and release criteria.
+Registered capability declarations are copied into immutable attribute mappings. Match requests are bounded to 128 requirements by default. Policy callback results must be explicit boolean `True`; false, non-boolean and exception outcomes deny candidates.
+
+Capability and Requirement now have normative Draft 2020-12 schemas. CI executes schema/model parity tests for identifier lengths, description and version constraints, attribute key/count/value limits and unknown properties. The pinned development validator is declared in requirements-dev.txt.
+
+## Remaining verification
+
+- Bind capability declarations to Resource Manifest and Schema Registry canonical contracts; pin compatible versions and publish reproducible cross-repository fixtures.
+- Connect policy callback to an authenticated policy service; it remains a test/integration seam.
+- Verify GitHub private vulnerability reporting/security advisory configuration; SECURITY.md records that no dedicated private reporting address is published.
+- Apply and verify GitHub About homepage/topics (description exists).
+- Verify branch rulesets/protection, Actions permissions, secret scanning, push protection and dependency alerts.
+- Retain pending license status until an explicit repository/artifact licensing decision is approved.
+
+## Maturity and limitations
+
+This remains an experimental process-local registry. Matching is advisory only; it does not authenticate agents, prove capability claims, grant permissions, execute work, verify health or provide distributed discovery/consistency. No release is published.
