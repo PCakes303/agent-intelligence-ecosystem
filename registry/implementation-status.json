@@ -392,10 +392,10 @@
       "layer": "adoption",
       "visibility": "public",
       "existence": "not-created",
-      "status": "Not started",
+      "status": "Prepared in master staging: experimental adapter registry, policy-gated invocation reference library, schema, threat model, tests and CI; not deployed",
       "priority": "P1",
       "importance": "Connects existing tools to agents through consistent, permissioned interfaces.",
-      "next_gate": "Implement first adapter in a restricted sandbox with explicit capability grants."
+      "next_gate": "Create the public remote; run the Python 3.10–3.12 matrix; verify exact remote/staging parity; then build real adapter and sandbox integrations with cross-repository evidence."
     },
     {
       "number": "25",
