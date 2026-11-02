@@ -438,7 +438,10 @@
         "discovery-network",
         "swarm-coordination",
         "policy-engine",
-        "audit-provenance"
+        "audit-provenance",
+        "secure-supply-chain",
+        "emergency-control",
+        "compliance-governance"
       ]
     },
     {
