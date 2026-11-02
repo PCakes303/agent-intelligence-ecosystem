@@ -34,7 +34,7 @@ class AIXMessageTests(unittest.TestCase):
         bad["task"]["state"] = "done-ish"
         self.assertTrue(list(Draft202012Validator(SCHEMA).iter_errors(bad)))
 
-    def test_missing_idempotency_key_is_permitted_for_non-retry-profile(self):
+    def test_missing_idempotency_key_is_permitted_for_non_retry_profile(self):
         msg = json.loads(json.dumps(VALID))
         msg["task"].pop("idempotency_key")
         self.assertEqual(list(Draft202012Validator(SCHEMA).iter_errors(msg)), [])
