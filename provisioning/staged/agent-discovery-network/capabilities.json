@@ -1,0 +1,40 @@
+{
+  "capabilities_version": "1.1.0",
+  "repository": "agent-discovery-network",
+  "repository_id": "discovery-network",
+  "maturity": "scaffolding",
+  "capabilities": [
+    {
+      "id": "discovery.record-validation",
+      "name": "Discovery record validation and expiry",
+      "status": "scaffolded",
+      "description": "Validates required record fields, endpoint URI, timestamps and bounded expiry; expired records are never returned.",
+      "evidence": ["discovery_network/records.py", "tests/test_records.py"],
+      "limitations": ["The record contract is local and not yet bound to the canonical Resource Manifest or Capability Registry schemas."]
+    },
+    {
+      "id": "discovery.trust-filtered-index",
+      "name": "Trust-filtered in-memory discovery index",
+      "status": "scaffolded",
+      "description": "Indexes records and requires injected signature-verification and issuer-trust callbacks before returning candidates.",
+      "evidence": ["discovery_network/registry.py", "tests/test_registry.py"],
+      "limitations": ["Callbacks are integration seams, not cryptographic or production identity implementations.", "Storage is in-memory and process-local."]
+    },
+    {
+      "id": "discovery.network-federation",
+      "name": "Distributed discovery and federation",
+      "status": "planned",
+      "description": "Future authenticated publication, replication, gossip and multi-domain discovery.",
+      "evidence": [],
+      "limitations": ["No network API, gossip protocol, federation or distributed consistency is implemented."]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Credential issuance or caller authentication",
+    "Cryptographic signature creation or verification implementation",
+    "Authorization to invoke discovered endpoints",
+    "Endpoint health or availability verification",
+    "Capability certification or proof of advertised behavior",
+    "Distributed storage, gossip, federation or Sybil resistance"
+  ]
+}
