@@ -246,7 +246,7 @@
       "name": "swarm-state-mesh",
       "visibility": "public",
       "layer": "swarm",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Distributed task state, context references, synchronization, and shared knowledge.",
       "dependencies": [
         "swarm-runtime",
