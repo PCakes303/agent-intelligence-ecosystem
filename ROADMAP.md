@@ -3,13 +3,14 @@
 ## Phase 0 — Control plane and architecture
 - [x] Approve the 30-repository portfolio and core architectural decisions.
 - [x] Provision the public master and private operations repositories.
-- [ ] Complete registry schema and automated registry validation.
-- [ ] Publish initial ADRs, contribution/security governance, and repository template.
-- [ ] Establish reviewed cross-repository synchronization in the integration repository.
-- [ ] Establish public/private information-flow controls and reconciliation design.
+- [x] Complete registry schema and automated registry validation.
+- [x] Publish initial ADRs, contribution/security governance, and repository template.
+- [ ] Implement reviewed cross-repository synchronization in the integration repository (repository not yet provisioned).
+- [x] Define public/private information-flow controls and reconciliation design.
+- [x] Add a tested public-only scaffold generator and GitHub CLI provisioning script.
 
 ## Phase 1 — Foundation and cybersecurity (repositories 01–07)
-Identity, manifests, schemas, policy, audit/provenance, and secure supply chain. Exit requires working libraries/specifications, threat models, tests, and integration examples.
+Initial master-repository prototypes now include resource-manifest, principal-identity, and audit-event schemas; a resource-manifest validator; a default-deny policy evaluator; an audit hash-chain utility; and executable regression fixtures. The seven standalone repositories are not yet provisioned. Exit requires these contracts and implementations to be transferred into their owning repositories, completed threat models, signed identity lifecycle demonstrations, policy enforcement integration, supply-chain attestations, and cross-repository tests.
 
 ## Phase 2 — Protocols (08–10)
 AIX semantic specification, codecs, and transport gateway. Exit requires interoperability prototypes and measured translation fidelity, latency, validation cost, and authorization correctness.
