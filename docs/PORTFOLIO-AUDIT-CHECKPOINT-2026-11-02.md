@@ -47,7 +47,7 @@ Four repositories received a deployment-status metadata commit after their succe
 - AIX Codecs: head `980029e9ce2bdb23596aa109aca16431296e2898`, [run 41527972112](https://github.com/PCakes303/aix-codecs/actions/runs/41527972112).
 - Knowledge Graph: head `542d72385b8a8e198e7924516c9539f0cec1110f`, [run 41527995233](https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41527995233).
 
-The master repository's staging-sync commits also triggered several queued workflow runs. Latest observed master head: `d804b2d89fb2cc91110f08a32ea46a5feaf4a1a2`, [run 41528004273](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41528004273). Final sign-off requires the latest master run to complete successfully.
+Agent AI Discovery's URI-validation code commit passed its previous workflow, but its latest documentation checkpoint commit is now pending: head `07fde99033631c32844c25b0022876774ceee526`, [run 41529209413](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41529209413). The master repository's staging-sync and audit-document commits also triggered queued workflow runs. Latest observed master head: `71aff416f418e651b96968276017817015acd081`, [run 41528607976](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41528607976). Final sign-off requires both latest runs to complete successfully.
 
 ## Staging-to-remote parity
 
