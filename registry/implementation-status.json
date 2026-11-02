@@ -547,29 +547,31 @@
       "layer": "foundation-security",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; schema, examples, validator and CI pass",
+      "status": "Scaffolded; normative Draft 2020-12 schema-backed validator and CI; 10 regression tests pass on Python 3.12; permission, dependency and integrity fields bounded.",
       "priority": "P0",
       "importance": "Describes tools, skills, models, services, dependencies and requested permissions.",
-      "next_gate": "Remove unrelated SECURITY.md reference, verify private reporting, run full Draft 2020-12 schema validation in CI and add negative boundary tests.",
+      "next_gate": "Verify private reporting, About metadata and repository administration; complete the per-repository license decision; add reproducible integration fixtures with Schema Registry and downstream consumers.",
       "audit": {
         "as_of": "2026-11-02",
-        "audited_commit": "83edfac71c47d63f0c5d3a9735135308c8b72e15",
+        "audited_commit": "fec6735f895230ef41560243524aee1372f6a745",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-agent-resource-manifest-audit.md",
         "blocking_issue": "https://github.com/PCakes303/agent-resource-manifest/issues/1",
         "remediation_commits": [
           "9bb1630b18dd74cafecf896b6f081e4544f37855",
-          "83edfac71c47d63f0c5d3a9735135308c8b72e15"
+          "83edfac71c47d63f0c5d3a9735135308c8b72e15",
+          "fec6735f895230ef41560243524aee1372f6a745"
         ],
         "findings": [
-          "SECURITY.md points to unrelated profile and private reporting route not verified",
-          "handwritten validator does not enforce full Draft 2020-12 schema and CI does not execute schema",
-          "license pending review",
-          "GitHub About metadata missing",
-          "compatibility dependencies declared only",
-          "repository administration controls unverified"
+          "Reference validator now executes the normative Draft 2020-12 Resource Manifest schema.",
+          "CI installs pinned jsonschema, validates the example and runs schema-parity negative tests.",
+          "Permissions and dependencies are capped at 128 entries and 128 characters each; integrity digest is bounded to 128 characters.",
+          "Private vulnerability reporting remains unverified.",
+          "GitHub About metadata remains incomplete.",
+          "License remains pending review; compatibility dependencies remain declared-only.",
+          "Repository administration controls remain unverified."
         ],
-        "next_gate": "Remove unrelated SECURITY.md reference, verify private reporting, run full Draft 2020-12 schema validation in CI and add negative boundary tests."
+        "next_gate": "Verify private reporting, About metadata and repository administration; complete the per-repository license decision; add reproducible integration fixtures with Schema Registry and downstream consumers."
       }
     },
     {
@@ -607,29 +609,31 @@
       "layer": "foundation-security",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; identity contracts and CI pass; lifecycle/authenticated demo missing",
+      "status": "Scaffolded; principal validator enforces Draft 2020-12 schema; 7 regression tests pass on Python 3.12; identity lifecycle and authenticated demo not implemented.",
       "priority": "P0",
       "importance": "Trust root for agent identity, delegation and authorization boundaries.",
-      "next_gate": "Configure and verify private vulnerability reporting; align principal validator with Draft 2020-12 schema and add boundary/negative tests; retain pending license status until approved.",
+      "next_gate": "Verify private reporting, About metadata and repository administration; retain pending license status; implement an authenticated identity lifecycle demo with issuance, key rotation, delegation and revocation before claiming identity services.",
       "audit": {
         "as_of": "2026-11-02",
-        "audited_commit": "6d53a2af501eb05bb929d5f3da07cf1dd316e6b1",
+        "audited_commit": "d7013224b33f063485aa90598a91590571a7ccd4",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-agent-identity-trust-audit.md",
         "remediation_commits": [
           "e816ee8c2aae2deb91903c016f54dce0cfac508d",
           "9ccbadf98e660a20444f2f39eaff6785b031f6b5",
-          "c37299b015a18c84ae13892bd3c96bc6fc6c0db8"
+          "c37299b015a18c84ae13892bd3c96bc6fc6c0db8",
+          "d7013224b33f063485aa90598a91590571a7ccd4"
         ],
         "blocking_issue": "https://github.com/PCakes303/agent-identity-trust/issues/1",
         "findings": [
-          "private vulnerability reporting route not verified",
-          "principal validator does not enforce all JSON Schema constraints",
-          "license pending review",
-          "GitHub About metadata incomplete",
-          "identity issuance/authentication/authorization/delegation/revocation runtime services not implemented",
-          "cross-repository compatibility not tested"
-        ]
+          "Principal validator now enforces the normative Draft 2020-12 schema with format checking, HTTPS/SPIFFE issuer constraints and timezone-aware date-time requirements.",
+          "Seven schema/model boundary tests pass in CI on Python 3.12.",
+          "Private vulnerability reporting remains unverified.",
+          "License remains pending review and GitHub About metadata is incomplete.",
+          "Identity issuance, authentication, authorization, delegation and revocation runtime services are not implemented.",
+          "Cross-repository compatibility remains untested."
+        ],
+        "next_gate": "Verify private reporting, About metadata and repository administration; retain pending license status; implement an authenticated identity lifecycle demo with issuance, key rotation, delegation and revocation before claiming identity services."
       }
     },
     {
@@ -917,13 +921,13 @@
       "layer": "swarm",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 18 files deployed; CI passed on Python 3.10, 3.11 and 3.12, including same-agent multi-capability matching regression coverage.",
+      "status": "Scaffolded; 20 files deployed; Capability and Requirement Draft 2020-12 schemas enforced in CI; 12 tests pass on Python 3.10, 3.11 and 3.12.",
       "priority": "P1",
       "importance": "Matches tasks to agents with declared, validated capabilities.",
-      "next_gate": "Execute canonical schema validation in CI; integrate authenticated identity and production policy decisions; add signed capability attestations and pinned cross-repository fixtures; verify private reporting, metadata, settings, licensing and staging parity.",
+      "next_gate": "Integrate canonical Resource Manifest and Schema Registry fixtures; connect authenticated identity and production policy decisions; add signed capability attestations and key lifecycle; verify private reporting, About metadata, administration settings and licensing.",
       "audit": {
         "as_of": "2026-11-02",
-        "audited_commit": "0220f7ecc89589b9ccd256a705188d7ff27d1371",
+        "audited_commit": "dd636dafccad84fcd52e6c8c1e9fc199e38052a1",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-agent-capability-registry-audit.md",
         "blocking_issue": "https://github.com/PCakes303/agent-capability-registry/issues/1",
@@ -937,20 +941,18 @@
           "6fc7c9a89503fc7f843a53bddc616ef4360a11aa",
           "fc49cc3b4f20c9ac6d2b02a78f48bcf69200e9de",
           "c7dec4d551b0578e2b9f4500d0fc81062e928562",
-          "85d8a70783c6ea6673c2a8a8907db01e93ec9345"
+          "85d8a70783c6ea6673c2a8a8907db01e93ec9345",
+          "dd636dafccad84fcd52e6c8c1e9fc199e38052a1"
         ],
         "findings": [
-          "no authenticated agent identity integration",
-          "no production policy service or protected-resource enforcement",
-          "no signed capability attestations or publisher key lifecycle",
-          "canonical JSON Schema is not executed in CI for model parity",
-          "Resource Manifest, Schema Registry and Policy Engine dependencies are declared not tested",
-          "no distributed/network service",
-          "private reporting route not verified",
-          "GitHub About homepage/topics missing",
-          "license pending review",
-          "staging parity and repository administration controls unverified"
-        ]
+          "Capability and Requirement now have normative Draft 2020-12 schemas with model/schema boundary tests.",
+          "CI passes 12 tests on Python 3.10–3.12; identifier, description, version, attribute key/count/value and unknown-property constraints are covered.",
+          "No authenticated identity integration, production policy service or protected-resource enforcement.",
+          "No signed capability attestations or issuer key lifecycle.",
+          "Resource Manifest and Schema Registry integration fixtures remain untested.",
+          "Private reporting, About metadata, administration settings and license review remain open."
+        ],
+        "next_gate": "Integrate canonical Resource Manifest and Schema Registry fixtures; connect authenticated identity and production policy decisions; add signed capability attestations and key lifecycle; verify private reporting, About metadata, administration settings and licensing."
       }
     },
     {
@@ -1053,13 +1055,13 @@
       "layer": "swarm",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 18 files deployed; 15 tests passed; CI passed on Python 3.10, 3.11 and 3.12",
+      "status": "Scaffolded; 19 files deployed; 23 schema/model tests pass on Python 3.10, 3.11 and 3.12; single-process volatile state store.",
       "priority": "P1",
       "importance": "Maintains shared task state and reconciliation across unreliable links.",
-      "next_gate": "Execute canonical Draft 2020-12 validation in CI; integrate authenticated writers, authorization, durable state and audit provenance; define replication/partition/recovery semantics; verify governance and staging controls.",
+      "next_gate": "Implement authenticated writers, durable storage and audit provenance; define replication, partition and recovery semantics; add cross-process replay protection and adversarial distributed tests; verify governance and licensing.",
       "audit": {
         "as_of": "2026-11-02",
-        "audited_commit": "dc686ed5939119fa827077e0760ca84b0edae3da",
+        "audited_commit": "eeebba576d484a6eb2770b3b205bc64e7fa6a878",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-swarm-state-mesh-audit.md",
         "blocking_issue": "https://github.com/PCakes303/swarm-state-mesh/issues/1",
@@ -1074,20 +1076,19 @@
           "a74ddb69f09a61e7754f1b51f66d6a8b2e7e2bb9",
           "e23f23e8cbd4c45b027a88a408ac2913fca657da",
           "73dd842ceb1182fbee89d2323ff609f8a0c9fe4f",
-          "f43c0800d0bf1a9153bb2c57db59dd7f5d3e2dcc"
+          "f43c0800d0bf1a9153bb2c57db59dd7f5d3e2dcc",
+          "eeebba576d484a6eb2770b3b205bc64e7fa6a878"
         ],
         "findings": [
-          "normative JSON Schema is not executed in CI for model parity",
-          "no authenticated writer identity or authorization",
-          "no durable storage or restart-safe idempotency",
-          "no replication, consensus, peer protocol or partition semantics",
-          "audit sink not authenticated durable provenance",
-          "no retention/compaction/backup/recovery",
-          "private reporting route not verified",
-          "GitHub About homepage/topics missing",
-          "license pending review",
-          "staging parity and repository administration controls unverified"
-        ]
+          "CI now executes Draft 2020-12 StateEvent schema/model parity tests for identifiers, event type, revisions, reference whitespace and bounds.",
+          "Twenty-three tests pass on Python 3.10–3.12 in the passing code-validation run.",
+          "Store remains process-local and in-memory; restart loses state and idempotency.",
+          "No authenticated writer identity or authorization; actor IDs remain metadata.",
+          "No durable replication, consensus, partition semantics or cross-process replay protection.",
+          "Audit sink remains a callback seam, not authenticated durable provenance.",
+          "Private reporting, About metadata, administration settings and license review remain open."
+        ],
+        "next_gate": "Implement authenticated writers, durable storage and audit provenance; define replication, partition and recovery semantics; add cross-process replay protection and adversarial distributed tests; verify governance and licensing."
       }
     },
     {
@@ -1267,28 +1268,29 @@
       "layer": "adoption",
       "visibility": "public",
       "existence": "exists",
-      "status": "Experimental; 17 files deployed; 18 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified.",
+      "status": "Experimental; 20 product files deployed; 21 tests pass on Python 3.10, 3.11 and 3.12; workflow and pinned Resource Manifest schemas enforced; exact staging/product parity verified.",
       "priority": "P2",
       "importance": "Makes reusable workflows discoverable, versioned and policy-bound.",
-      "next_gate": "Enforce workflow and Resource Manifest schemas in CI, add negative boundary tests, verify private reporting and About metadata, refresh staging parity, and retain declarative-only/non-executable status.",
+      "next_gate": "Verify private reporting, About metadata and repository administration; complete license review; retain declarative-only/non-executable status and refresh schema pins when the canonical Resource Manifest changes.",
       "audit": {
         "as_of": "2026-11-02",
-        "audited_commit": "d9c91cbfba7449bbb14064c92dd01f2b4d555038",
+        "audited_commit": "dbedb386c22065d1785d1de03c2a3d0ac8a36efa",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-agent-skill-library-audit.md",
         "blocking_issue": "https://github.com/PCakes303/agent-skill-library/issues/1",
         "remediation_commits": [
-          "418b0a7eec1798697a41c62c2a543fc0a340ebed"
+          "418b0a7eec1798697a41c62c2a543fc0a340ebed",
+          "dbedb386c22065d1785d1de03c2a3d0ac8a36efa"
         ],
         "findings": [
-          "workflow validator does not enforce all Draft 2020-12 schema constraints or reject all unknown properties",
-          "private vulnerability reporting route not verified",
-          "GitHub About metadata missing",
-          "STAGING-STATUS.md absent and current parity evidence needs refresh",
-          "license pending review",
-          "repository administration controls unverified",
-          "no workflow execution, publisher authentication, signature verification, policy enforcement or sandbox"
-        ]
+          "Validator executes the normative Skill Workflow schema and a pinned Resource Manifest schema fixture.",
+          "Unknown properties and schema bounds are enforced at resource, workflow, step and policy levels.",
+          "Twenty-one tests pass on Python 3.10–3.12; 20 product files match staging exactly.",
+          "Resource Manifest schema fixture is pinned to upstream commit fec6735f895230ef41560243524aee1372f6a745; provenance recorded in docs/SCHEMA-PIN.md.",
+          "Private reporting, About metadata and administration settings remain unverified; license pending review.",
+          "No workflow execution, publisher authentication, signature verification, policy enforcement or sandbox isolation."
+        ],
+        "next_gate": "Verify private reporting, About metadata and repository administration; complete license review; retain declarative-only/non-executable status and refresh schema pins when the canonical Resource Manifest changes."
       }
     },
     {
