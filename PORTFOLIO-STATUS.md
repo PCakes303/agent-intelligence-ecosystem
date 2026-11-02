@@ -11,7 +11,7 @@
 | Total planned repositories | 30 |
 | Public repositories | 29 |
 | Private repositories | 1 |
-| Public repositories currently present | 21 |
+| Public repositories currently present | 22 |
 | Private repositories currently present | 1 |
 | Public repositories not yet created | 8 |
 | Separate profile repository excluded from portfolio | 1 |
@@ -64,7 +64,7 @@ The account repository audit verified twenty-one public portfolio repositories a
 
 ## Package and release readiness
 
-**Release check (2026-11-02):** No GitHub Releases are currently published for the 21 existing public portfolio repositories; the Releases endpoint was checked for each. AIX Codecs is scaffolded and CI-verified, not released.
+**Release check (2026-11-02):** No GitHub Releases are currently published for the 22 existing public portfolio repositories; the Releases endpoint was checked for each, including the newly deployed agent-tool-adapters repository. AIX Codecs is scaffolded and CI-verified, not released.
 
 A repository starter build is not the same thing as a distributable software package. AIX Codecs now has its initial scaffold and a successful CI run, but does not yet contain package build metadata or a published release. The master currently pins only the development dependency `jsonschema==4.25.1`; it has no Python package build metadata or verified release artifact. A root-level packaging-manifest review of all twenty existing public component repositories found no `pyproject.toml`, `setup.py`, `setup.cfg`, `package.json`, `Cargo.toml`, `go.mod`, `pom.xml`, `build.gradle`, or equivalent distribution manifest. Their `manifest.json` files describe ecosystem metadata, not installable package builds.
 
