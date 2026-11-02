@@ -2,7 +2,7 @@
 
 **Portfolio position:** Repository 14 / 29 public  
 **Layer:** Swarm  
-**Maturity:** prepared scaffold; standalone remote not yet created  
+**Maturity:** experimental trust-filtered discovery index deployed to the standalone public repository; Python 3.10–3.12 CI passing  
 **Dependencies:** Agent Resource Manifest, Agent Capability Registry, Agent Identity & Trust, Agent Transport Gateway
 
 ## Mission
@@ -43,12 +43,11 @@ python -m unittest discover -s tests -v
 
 ## Next gates
 
-1. Deploy this scaffold and verify the Python CI matrix.
-2. Bind records to the canonical Resource Manifest and Capability Registry schemas.
-3. Integrate authenticated issuer identities and key rotation/revocation from Identity & Trust.
-4. Specify and implement a cryptographic signature profile with test vectors.
-5. Add authenticated publish/query APIs over the Transport Gateway.
-6. Add bounded distributed storage, replication and stale-node reconciliation.
-7. Add adversarial tests for equivocation, replay, poisoning, Sybil behavior and trust-policy changes.
+1. Bind records to the canonical Resource Manifest and Capability Registry schemas.
+2. Integrate authenticated issuer identities and key rotation/revocation from Identity & Trust.
+3. Specify and implement a cryptographic signature profile with test vectors.
+4. Add authenticated publish/query APIs over the Transport Gateway.
+5. Add bounded distributed storage, replication and stale-node reconciliation.
+6. Add adversarial tests for equivocation, replay, poisoning, Sybil behavior and trust-policy changes.
 
 No production discovery network, cryptographic signature verification, distributed consistency or federation is claimed.
