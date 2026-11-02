@@ -1,0 +1,76 @@
+{
+  "specification_version":"1.0.0",
+  "phase":"foundation-security",
+  "repositories":[
+    {
+      "id":"foundation",
+      "name":"agent-foundation-spec",
+      "requirements":[
+        {"id":"AFS-001","statement":"Define normative terms for agent, tool, capability, task, identity, trust domain, evidence, and lifecycle.","verification":"terminology glossary review"},
+        {"id":"AFS-002","statement":"Every normative requirement has a stable ID and explicit verification method.","verification":"specification lint"},
+        {"id":"AFS-003","statement":"Architecture decisions identify alternatives, consequences, and supersession.","verification":"ADR schema validation"}
+      ],
+      "deliverables":["normative glossary","requirements schema","ADR template","lifecycle state model"]
+    },
+    {
+      "id":"resource-manifest",
+      "name":"agent-resource-manifest",
+      "requirements":[
+        {"id":"ARM-001","statement":"Validate agent, tool, service, and dataset manifests against a versioned schema.","verification":"JSON Schema contract tests"},
+        {"id":"ARM-002","statement":"Manifests declare owner, lifecycle, capabilities, trust domain, scopes, and provenance.","verification":"positive and negative fixtures"},
+        {"id":"ARM-003","statement":"Manifest schema rejects credential material and unknown top-level fields.","verification":"secret-field rejection tests"}
+      ],
+      "deliverables":["schemas/agent-resource.schema.json","positive example fixture","negative contract tests","manifest validation CLI"]
+    },
+    {
+      "id":"schema-registry",
+      "name":"agent-schema-registry",
+      "requirements":[
+        {"id":"ASR-001","statement":"Every published schema has a stable identifier and declared version.","verification":"schema linter"},
+        {"id":"ASR-002","statement":"Compatibility checks compare schema revisions and representative payload fixtures.","verification":"compatibility test suite"},
+        {"id":"ASR-003","statement":"Schema publication records provenance and deprecation policy.","verification":"registry metadata tests"}
+      ],
+      "deliverables":["schema index format","schema lint tool","compatibility fixture runner"]
+    },
+    {
+      "id":"identity-trust",
+      "name":"agent-identity-trust",
+      "requirements":[
+        {"id":"AIT-001","statement":"Represent principal identity separately from authorization decisions.","verification":"identity and policy contract tests"},
+        {"id":"AIT-002","statement":"Support credential expiry, rotation, revocation, and trust-domain boundaries.","verification":"lifecycle state-machine tests"},
+        {"id":"AIT-003","statement":"Reject replayed or unauthenticated requests before protected operation execution.","verification":"negative integration tests"}
+      ],
+      "deliverables":["principal identity schema","trust-domain model","credential lifecycle state machine","revocation tests"]
+    },
+    {
+      "id":"secure-supply-chain",
+      "name":"agent-secure-supply-chain",
+      "requirements":[
+        {"id":"ASSC-001","statement":"Generate an SBOM for each releasable software artifact.","verification":"CI artifact inspection"},
+        {"id":"ASSC-002","statement":"Verify release provenance and artifact signatures before promotion.","verification":"signature verification tests"},
+        {"id":"ASSC-003","statement":"Pin CI actions and minimize workflow token permissions.","verification":"workflow policy lint"}
+      ],
+      "deliverables":["SBOM workflow","provenance statement","signature verification job","dependency policy"]
+    },
+    {
+      "id":"policy-engine",
+      "name":"agent-policy-engine",
+      "requirements":[
+        {"id":"APE-001","statement":"Evaluate principal, action, resource, context, and requested scope as separate policy inputs.","verification":"policy decision table"},
+        {"id":"APE-002","statement":"Default-deny when policy is unavailable, malformed, or indeterminate for protected actions.","verification":"failure-mode tests"},
+        {"id":"APE-003","statement":"Record decision identifiers and reasons suitable for audit without exposing secrets.","verification":"audit contract tests"}
+      ],
+      "deliverables":["policy input/output schema","default-deny reference evaluator","policy fixture corpus"]
+    },
+    {
+      "id":"audit-provenance",
+      "name":"agent-audit-provenance",
+      "requirements":[
+        {"id":"AAP-001","statement":"Record actor, action, target, time, correlation ID, and outcome for security-relevant events.","verification":"event schema tests"},
+        {"id":"AAP-002","statement":"Distinguish source observation, transformation, and analyst interpretation.","verification":"provenance fixture tests"},
+        {"id":"AAP-003","statement":"Detect tampering and gaps without treating hashes as proof of factual truth.","verification":"integrity and semantic tests"}
+      ],
+      "deliverables":["audit event schema","provenance chain model","integrity verifier","retention and privacy guidance"]
+    }
+  ]
+}
