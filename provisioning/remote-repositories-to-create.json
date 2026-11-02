@@ -16,26 +16,11 @@
     "aix-codecs",
     "agent-transport-gateway",
     "agent-discovery-network",
-    "agent-capability-registry"
+    "agent-capability-registry",
+    "swarm-runtime"
   ],
-  "missing_public_repository_count": 13,
+  "missing_public_repository_count": 12,
   "repositories": [
-    {
-      "name": "swarm-runtime",
-      "description": "Execution infrastructure for distributed agents and nodes.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "swarm-runtime",
-      "dependencies": [
-        "identity-trust",
-        "policy-engine",
-        "audit-provenance",
-        "sandbox-security"
-      ]
-    },
     {
       "name": "swarm-coordination",
       "description": "Task assignment, delegation, acknowledgement, synchronization, and recovery.",
