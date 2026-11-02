@@ -4,7 +4,7 @@
 **Audited implementation commit:** `f9aefb7edce2ae49cbaabea71c28d37c0b489814`  
 **Baseline CI:** [Run 41393954047](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41393954047) — success; five unit tests and starter build on Python 3.12  
 **Remediation commits:** `39873ac1b30e75df3216f81556010170be2a21d8`, `bd9c5a4b85ac7091a972b91b2959676c4231f6d0`, `155c4a0c44519f7280aec50b7885c61da0ce49bb`, `f326dba4b5673008dc22b60181ec9267b74d9b69`, `07420b7da2cf11f6faa924abc6a26db7edaf7141`, `b60dd657ff7a0cac1ded9133830f10a4ccc71fec`  
-**Latest CI after remediation:** [Run 41501758046](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41501758046) — queued at checkpoint creation  
+**Latest CI after remediation:** [Run 41501758046](https://github.com/PCakes303/agent-ai-discovery/actions/runs/41501758046) — success; five tests and the example index build passed on Python 3.10, 3.11 and 3.12  
 **Disposition:** **BLOCKED**  
 **Maturity:** Scaffolded discovery document format and local deterministic index builder; no hosted endpoint, publisher authentication or authorization service.
 
