@@ -1298,13 +1298,13 @@
       "layer": "adoption",
       "visibility": "public",
       "existence": "exists",
-      "status": "Experimental; 14 files deployed; 14 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified; no OS isolation or workload execution.",
+      "status": "Experimental; 15 product files deployed; 21 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified; canonical manifest aligned; no OS isolation or workload execution.",
       "priority": "P0",
       "importance": "Execution isolation and security boundary for tools, skills and workloads.",
-      "next_gate": "Bound hostile JSON parsing and collection sizes, align schema with validator, verify private reporting and repository settings; retain unconditional non-execution until independently reviewed OS isolation and safety controls are implemented.",
+      "next_gate": "Verify private vulnerability reporting and repository administration settings; apply and verify About metadata; retain unconditional non-execution until independently reviewed OS isolation and identity, policy, artifact, revocation, emergency-stop, audit and compliance enforcement are implemented.",
       "audit": {
         "as_of": "2026-11-02",
-        "audited_commit": "29235a9477dafdf23ced98389c952a31fc22df3d",
+        "audited_commit": "805ca788ffc254dd82f5a66087072571acb7fb39",
         "disposition": "BLOCKED",
         "checkpoint": "checkpoints/2026-11-02-agent-sandbox-security-audit.md",
         "blocking_issue": "https://github.com/PCakes303/agent-sandbox-security/issues/1",
@@ -1321,7 +1321,8 @@
           "fa0b92c7822f60103b6f3a0c6fa556fc800de666",
           "95088f755fa11e082c4e4d6ebd33dcf7859071cf",
           "820d4b202d3539354d0960c6a5238132b0c4fb66",
-          "614c1f61570acfae296ea35c1af90977e62ea6de"
+          "614c1f61570acfae296ea35c1af90977e62ea6de",
+          "805ca788ffc254dd82f5a66087072571acb7fb39"
         ],
         "findings": [
           "policy JSON parser enforces 1 MiB byte ceiling and 32-level nesting before parse",
@@ -1333,9 +1334,11 @@
           "repository administration controls unverified",
           "license pending review",
           "no OS isolation backend or workload execution; privileged execution prohibited",
-          "identity, policy, revocation, artifact verification, emergency-stop and compliance integrations absent"
+          "identity, policy, revocation, artifact verification, emergency-stop and compliance integrations absent",
+          "canonical repository manifest migrated to the master Draft 2020-12 manifest contract and staging copy synchronized",
+          "15 product files exactly match staging paths and Git blob SHAs; staging-only status file intentionally excluded from deployment"
         ],
-        "next_gate": "Verify private reporting, About metadata and administration settings; implement a separately reviewed OS isolation backend and independent identity, policy, artifact, revocation, emergency-stop, audit and compliance enforcement before any privileged execution."
+        "next_gate": "Verify private vulnerability reporting and repository administration settings; apply and verify About metadata; retain unconditional non-execution until independently reviewed OS isolation and identity, policy, artifact, revocation, emergency-stop, audit and compliance enforcement are implemented."
       }
     },
     {
