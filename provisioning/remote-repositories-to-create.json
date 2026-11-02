@@ -11,25 +11,11 @@
     "agent-resource-manifest",
     "agent-schema-registry",
     "agent-identity-trust",
-    "agent-ecosystem-private"
+    "agent-ecosystem-private",
+    "agent-secure-supply-chain"
   ],
-  "missing_public_repository_count": 21,
+  "missing_public_repository_count": 20,
   "repositories": [
-    {
-      "name": "agent-secure-supply-chain",
-      "description": "Release integrity, SBOMs, provenance, dependency and vulnerability management.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "secure-supply-chain",
-      "dependencies": [
-        "foundation",
-        "identity-trust",
-        "audit-provenance"
-      ]
-    },
     {
       "name": "agent-policy-engine",
       "description": "Authorization, least privilege, capability permissions, and policy enforcement.",
