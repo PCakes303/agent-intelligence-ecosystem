@@ -5,7 +5,7 @@
   "owner": "PCakes303",
   "public_identity": "https://github.com/PCakes303",
   "visibility_scope": "public-only",
-  "repository_count": 29,
+  "repository_count": 31,
   "discovery_notice": "This catalog is descriptive metadata, not authentication, authorization, endorsement, or proof of runtime capability.",
   "repositories": [
     {
@@ -578,29 +578,6 @@
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
     {
-      "id": "sandbox-security",
-      "name": "agent-sandbox-security",
-      "visibility": "public",
-      "layer": "adoption",
-      "role": "Controlled execution, isolation, resource boundaries, and secure extension execution.",
-      "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
-      "existence": "not-created",
-      "implementation_status": "Not started",
-      "priority": "P0",
-      "dependencies": [
-        "identity-trust",
-        "policy-engine",
-        "audit-provenance",
-        "secure-supply-chain"
-      ],
-      "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
-      },
-      "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
-    },
-    {
       "id": "conformance-lab",
       "name": "agent-conformance-lab",
       "visibility": "public",
@@ -647,6 +624,68 @@
         "readme": null
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
+    },
+    {
+      "id": "sandbox-security",
+      "name": "agent-sandbox-security",
+      "visibility": "public",
+      "layer": "adoption",
+      "role": "Experimental sandbox admission policy contract and fail-closed reference validator; no OS isolation or workload execution.",
+      "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
+      "existence": "exists",
+      "implementation_status": "Experimental; policy contract and validator staged; no OS sandbox or workload execution",
+      "priority": "P0",
+      "dependencies": [
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "secure-supply-chain",
+        "emergency-control",
+        "compliance-governance"
+      ],
+      "discovery": {
+        "llms_txt": "https://github.com/PCakes303/agent-sandbox-security/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-sandbox-security/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-sandbox-security/blob/main/README.md"
+      },
+      "evidence_policy": "Do not treat a manifest or policy validator as an isolation boundary; verify backend enforcement and CI."
+    },
+    {
+      "id": "emergency-control",
+      "name": "agent-emergency-control",
+      "visibility": "public",
+      "layer": "foundation-security",
+      "role": "Independent emergency-stop authority, authenticated stop state, revocation, quarantine, distributed stop propagation, and controlled resumption.",
+      "repository_url": "https://github.com/PCakes303/agent-emergency-control",
+      "existence": "not-created",
+      "implementation_status": "Planned; approved portfolio expansion",
+      "priority": "P0",
+      "dependencies": [
+        "foundation",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "secure-supply-chain"
+      ]
+    },
+    {
+      "id": "compliance-governance",
+      "name": "agent-compliance-governance",
+      "visibility": "public",
+      "layer": "governance",
+      "role": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring; not legal advice or certification.",
+      "repository_url": "https://github.com/PCakes303/agent-compliance-governance",
+      "existence": "not-created",
+      "implementation_status": "Planned; approved portfolio expansion",
+      "priority": "P0",
+      "dependencies": [
+        "master",
+        "foundation",
+        "identity-trust",
+        "policy-engine",
+        "audit-provenance",
+        "secure-supply-chain"
+      ]
     }
   ]
 }
