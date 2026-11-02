@@ -25,7 +25,11 @@ This plan defines deliverables and acceptance gates. It does not imply that futu
 No repository advances beyond research/scaffolding solely on prose.
 
 ## Batch 3 — AIX and transport prototypes (08–10)
-Implement JSON schemas, reference encoder/decoder, MCP/A2A mapping fixtures, validation tests, and authorization-negative cases. Measure translation fidelity and latency.
+- [x] Add AIX Core experimental envelope contract, task lifecycle semantics, example validation CLI, and regression tests.
+- [ ] Add reference encoder/decoder and deterministic canonical JSON codec.
+- [ ] Add MCP/A2A mapping fixtures and measure semantic translation fidelity.
+- [ ] Add transport adapter, authentication/authorization-negative cases, replay controls, and latency measurements.
+AIX remains an extension layer over established standards, not a replacement protocol.
 
 ## Batch 4 — Swarm vertical slice (11–15)
 Implement a minimal end-to-end task delegation flow across two independently authenticated nodes. Include idempotency, replay rejection, bounded retry, node failure, and state reconciliation tests.
