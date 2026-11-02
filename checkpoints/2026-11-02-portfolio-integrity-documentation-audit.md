@@ -46,11 +46,13 @@ Verified Knowledge Graph workflows:
 - [Compatibility metadata CI](https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428337519)
 - [Full implementation CI](https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41426963318)
 
-The OSINT Source Registry remains a source metadata catalog only, with no collection client. Its 23-file remote tree was verified against the master staging packet; deployment status documentation was synchronized to both locations. [OSINT Source Registry CI](https://github.com/PCakes303/osint-source-registry/actions/runs/41428118849).
+The OSINT Source Registry remains a source metadata catalog only, with no collection client. Its 23-file remote tree was verified against the master staging packet; deployment status documentation was synchronized to both locations.
+
+A full Git blob SHA comparison was then completed for all **12 retained master staging packets** (agent-audit-provenance, agent-capability-registry, agent-discovery-network, agent-policy-engine, agent-transport-gateway, aix-codecs, aix-core, intelligence-knowledge-graph, osint-source-registry, swarm-coordination, swarm-runtime and swarm-state-mesh). Every packet has the same file count as its public remote and every corresponding file has an identical blob SHA; no missing, changed or extra files were found. The three corrected README files were mirrored back into master staging before this comparison. [OSINT Source Registry CI](https://github.com/PCakes303/osint-source-registry/actions/runs/41428118849).
 
 ## CI regression and resolution trail
 
-During reconciliation, master CI caught catalog drift after the OSINT and Knowledge Graph status text changed. The catalog was synchronized again against the authoritative implementation-status file in commit `72e18dbfb75da223dde9c11388e1eea5e3663036`. The master workflow for that exact head is [run 41428803112](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41428803112); its final result must be checked before the checkpoint is considered fully green.
+During reconciliation, master CI caught catalog drift after the OSINT and Knowledge Graph status text changed. The catalog was synchronized again against the authoritative implementation-status file in commit `72e18dbfb75da223dde9c11388e1eea5e3663036`. The catalog synchronization was followed by passing master CI, and the subsequent staging README reconciliation also passed [master run 41429106013](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41429106013).
 
 The earlier failures at runs 41428692390 and 41428753652 were due to stale catalog maturity text, not failed registry schema validation. The subsequent commit corrects that mismatch. The regression suite contains 47 tests; 46 passed during the stale-catalog runs.
 
