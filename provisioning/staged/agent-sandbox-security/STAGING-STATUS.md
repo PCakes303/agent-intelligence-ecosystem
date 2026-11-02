@@ -4,7 +4,7 @@
 **Target:** https://github.com/PCakes303/agent-sandbox-security  
 **Visibility:** public  
 **Branch:** main  
-**Status:** staged for deployment; remote initially empty  
+**Status:** deployed and verified  
 **Product files:** 14 (this status file is staging-only and is not deployed)
 
 ## Scope
@@ -21,7 +21,7 @@ Declared contracts only: identity-trust, policy-engine, audit-provenance, secure
 
 ## Verification plan
 
-Run Python 3.10, 3.11 and 3.12 CI; verify all remote product Git blob SHAs against this staging packet; inspect CI job results and test totals; reconcile the master registry, public catalog, dependency graph, implementation status and provisioning inventory.
+- Product deployment commit: https://github.com/PCakes303/agent-sandbox-security/commit/5a05e03ae529a52fbb5986edaee5798a85aaa76b\n- Component CI: https://github.com/PCakes303/agent-sandbox-security/actions/runs/41436514479\n- Python 3.10, 3.11 and 3.12 all passed; 13 tests per version.\n- Exact staging/product Git blob parity: 14 product files, zero missing, differing or extra files.\n- Master registry, dependency graph, status and public catalog reconciled; master regression CI passed in run 41436978148.
 
 ## Governance
 
