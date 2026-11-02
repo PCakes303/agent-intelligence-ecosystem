@@ -4,6 +4,10 @@ on:
   push:
     paths:
       - "registry/**"
+      - "docs/**"
+      - "checkpoints/**"
+      - "README.md"
+      - "PORTFOLIO-STATUS.md"
       - "schemas/**"
       - "tools/**"
       - "tests/**"
