@@ -37,7 +37,7 @@ The following approved portfolio repositories are not yet created. Their presenc
 
 ## Recently deployed component bundles
 - [Repository 10 — agent-audit-provenance](https://github.com/PCakes303/agent-audit-provenance): 20-file scaffold published; final CI passed.
-- [Repository 11 — aix-core](https://github.com/PCakes303/aix-core): 21-file scaffold published; final CI verification pending.
+- [Repository 11 — aix-core](https://github.com/PCakes303/aix-core): 21-file scaffold published; CI passed.
 - Original staged copies remain available under `provisioning/staged/` for reproducibility.
 
 ## Architecture and status
