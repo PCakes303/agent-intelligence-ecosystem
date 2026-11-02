@@ -13,7 +13,8 @@ The GitHub integration available to this session can inspect and write repositor
 - Public-only local scaffold generator: ../tools/bootstrap_repositories.py
 - Remote creation and initial push: ../tools/provision_public_repositories.sh
 - Shared starter files: ../templates/repository/
-- Repository 09 deployed: `agent-policy-engine` (public remote exists; starter CI passes)\n- Repository 10 prepared source: staged/agent-audit-provenance/ (remote not yet created)
+- Repository 09 deployed: `agent-policy-engine` (public remote exists; starter CI passes)\n- Repository 10 prepared source: `staged/agent-audit-provenance/` (remote not yet created)
+- Repository 11 prepared source: `staged/aix-core/` (remote not yet created)
 - GitHub About descriptions and topics: ../docs/GITHUB-REPOSITORY-ABOUT-METADATA.md
 - Canonical registry: ../registry/repositories.json
 
@@ -54,3 +55,7 @@ Do not bulk-create private repositories from public scaffold output. The private
 ## Entry-level builds in generated repositories
 
 The reusable public template now includes a no-third-party-dependency starter build, a small test suite, a Makefile, an entry-level build guide, and a read-only GitHub Actions workflow pinned to immutable action SHAs. Every generated public repository begins with this Starter tier; its domain-specific Developer and Production tiers are added as implementation work proceeds. The scaffold generator still excludes the private repository.
+
+## Repository 11 prepared bundle
+
+The [AIX Core staging bundle](staged/aix-core/STAGING-STATUS.md) is prepared. Create an empty public repository named `aix-core` under `PCakes303`, then send its URL so the staged files can be deployed and CI verified. Do not mark it as created until GitHub confirms the remote exists.
