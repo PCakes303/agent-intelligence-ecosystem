@@ -200,14 +200,15 @@
     },
     "agent-sandbox-security": {
       "repository_url": "https://github.com/PCakes303/agent-sandbox-security",
-      "workflow_run": "https://github.com/PCakes303/agent-sandbox-security/actions/runs/41437856656",
+      "workflow_run": "https://github.com/PCakes303/agent-sandbox-security/actions/runs/41499814802",
+      "conclusion": "success",
+      "head_sha": "c98a6883ea08fbcbdf5cd5a6ed445a05970a6af0",
+      "tests": 14,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
-      "jobs": "all passed",
-      "tests": 14,
       "staging_parity": "14 product files; exact Git blob SHA match"
     }
   },
@@ -920,7 +921,27 @@
       "status": "Experimental; 14 files deployed; 14 unit tests pass on Python 3.10, 3.11 and 3.12; exact staging/product blob parity verified; no OS isolation or workload execution.",
       "priority": "P0",
       "importance": "Execution isolation and security boundary for tools, skills and workloads.",
-      "next_gate": "Implement and independently review an OS isolation backend; integrate emergency-stop authority, identity, policy, revocation, artifact verification, audit and compliance controls; adversarially test resource, filesystem, network and tenant isolation."
+      "next_gate": "Bound hostile JSON parsing and collection sizes, align schema with validator, verify private reporting and repository settings; retain unconditional non-execution until independently reviewed OS isolation and safety controls are implemented.",
+      "audit": {
+        "as_of": "2026-11-02",
+        "audited_commit": "29235a9477dafdf23ced98389c952a31fc22df3d",
+        "disposition": "BLOCKED",
+        "checkpoint": "checkpoints/2026-11-02-agent-sandbox-security-audit.md",
+        "blocking_issue": "https://github.com/PCakes303/agent-sandbox-security/issues/1",
+        "remediation_commits": [
+          "c98a6883ea08fbcbdf5cd5a6ed445a05970a6af0"
+        ],
+        "findings": [
+          "unbounded raw policy JSON size and nesting depth; RecursionError may escape",
+          "filesystem and egress collection/string limits incomplete",
+          "Draft 2020-12 schema weaker than runtime validator and not run in CI",
+          "private vulnerability reporting route not verified",
+          "GitHub About metadata missing",
+          "license pending review",
+          "repository administration controls unverified",
+          "dependencies remain declared-only; no OS isolation or workload execution"
+        ]
+      }
     },
     {
       "number": "27",
