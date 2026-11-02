@@ -23,6 +23,12 @@ class PublicAgentCatalogTests(unittest.TestCase):
         catalog["repository_count"] += 1
         self.assertTrue(validate(catalog, self.registry, self.status, self.schema))
 
+    def test_uncreated_repositories_do_not_advertise_live_links(self):
+        catalog = copy.deepcopy(self.catalog)
+        planned = next(item for item in catalog["repositories"] if item["existence"] != "exists")
+        planned["discovery"]["llms_txt"] = "https://github.com/PCakes303/not-created/blob/main/llms.txt"
+        self.assertTrue(any("must not advertise" in e for e in validate(catalog, self.registry, self.status, self.schema)))
+
     def test_rejects_stale_dependencies(self):
         catalog = copy.deepcopy(self.catalog)
         catalog["repositories"][0]["dependencies"] = ["invented-dependency"]
