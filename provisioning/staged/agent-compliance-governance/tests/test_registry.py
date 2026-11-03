@@ -32,7 +32,7 @@ class RegistryTests(unittest.TestCase):
         legal, controls, evidence = documents()
         evidence["records"].append({
             "evidence_id":"synthetic-evidence-1","control_ids":["NO-999"],"system_id":"synthetic-system",
-            "artifact_type":"test_result","description":"Synthetic fixture for invalid reference testing",
+            "artifact_type":"test_result","description":"Synthetic fixture for invalid reference testing","record_status":"collected",
             "collected_at":"2026-11-02T12:00:00Z","source_uri":"https://example.invalid/evidence",
             "sha256":"a"*64,"retention_policy":"test-only","access_class":"internal",
             "integrity_status":"pending","reviewer":None
