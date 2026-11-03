@@ -100,11 +100,12 @@ No pull requests were returned by the live `/pulls?state=all` endpoint for any o
 
 ## Failed or corrected CI items
 
-No current latest CI failure was found across the 27 existing public repositories. Historical failures that were corrected:
+No unresolved latest CI failure remains across the 27 existing public repositories. Historical failures and retries corrected during this work review:
 - Repository 26 hostile-input/schema mismatch: resolved in [issue #1](https://github.com/PCakes303/agent-sandbox-security/issues/1).
 - Repository 28 evidence fixture missing its explicit `record_status`: corrected; remote CI passed 10 tests on Python 3.10–3.12.
-- Repository 29 first CI run had an escaped/malformed Python matrix expression: corrected in both remote and master staging; remote CI now passes 18 tests on Python 3.10–3.12.
-- Master CI previously caught Repository 28 metadata/maturity drift; metadata was corrected and the latest master CI passed.
+- Repository 29 first CI run had an escaped/malformed Python matrix expression: corrected in both remote and master staging; remote CI passes 18 tests on Python 3.10–3.12.
+- Repository 27 capability/compatibility metadata was still v1.0.0 with maturity `scaffolded`; this audit aligned remote and staged files to v1.1.0 / `scaffolding`, verified exact blob equality, and confirmed remote CI passed 21 tests at [run 41555279847](https://github.com/PCakes303/agent-emergency-control/actions/runs/41555279847).
+- The first master CI attempts after the Repository 27 registry change correctly exposed the stale metadata and then a catalog/implementation-status mismatch. Both were corrected. The latest master workflow [run 41555450367](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41555450367) passed at `9a0938b12ae733c1dfa6f14118d50c1551f0bf7b`, including the 47-test suite and all seven staged-repository Python 3.10–3.12 matrix packets. Its validate job required one rerun after the remote metadata commits had settled; the rerun passed.
 
 ## Repository metadata and administration review
 
