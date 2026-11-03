@@ -32,6 +32,7 @@ The portfolio and architecture are approved. Twenty-seven of the 31 public repos
 - [Repository 29 — Agent Conformance Lab](https://github.com/PCakes303/agent-conformance-lab) — 27 product files, exact staging parity, and CI passed 18 tests on Python 3.10–3.12; local validation scaffold, not live interoperability or certification.
 - [Repository 29 release-gates issue](https://github.com/PCakes303/agent-conformance-lab/issues/2)
 - [Repository 29 deployment checkpoint](checkpoints/2026-11-02-agent-conformance-lab-deployment.md)
+- [Portfolio-wide work review — PRs, issues, CI, staging parity and release gates](checkpoints/2026-11-02-portfolio-wide-work-review.md)
 
 - [LLM-readable project index](llms.txt)
 - [Public agent catalog — 31 repositories](registry/public-agent-catalog.json)
