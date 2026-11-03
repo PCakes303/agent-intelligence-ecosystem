@@ -8,12 +8,12 @@
   "public_repositories": 31,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 25,
+    "public_existing": 26,
     "private_existing": 1,
-    "public_not_created": 6,
+    "public_not_created": 5,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 25,
-    "public_repositories_missing": 6
+    "public_repositories_present": 26,
+    "public_repositories_missing": 5
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -365,6 +365,20 @@
         "3.12"
       ],
       "scope": "staging-only; no remote repository created"
+    },
+    "agent-compliance-governance": {
+      "repository_url": "https://github.com/PCakes303/agent-compliance-governance",
+      "workflow_run": "https://github.com/PCakes303/agent-compliance-governance/actions/runs/41549807028",
+      "conclusion": "success",
+      "head_sha": "2fc35f0a235fdca656cb6bd726f5a56ad0a5e23f",
+      "tests": "passed",
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "product_files": 29,
+      "staging_parity": "exact"
     }
   },
   "repositories": [
@@ -1360,11 +1374,11 @@
       "name": "agent-compliance-governance",
       "layer": "governance",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Staged in master; 10 tests pass on Python 3.10-3.12; source-linked Colorado obligations and control catalogue scaffold.",
+      "existence": "exists",
+      "status": "Deployed: 29 product files; exact staged Git blob parity; remote CI passed on Python 3.10, 3.11 and 3.12. Governance register and validation scaffold only.",
       "priority": "P0",
       "importance": "Maintained legal applicability and compliance management system with mapped controls and evidence.",
-      "next_gate": "No legal applicability determination, implemented control evidence, legal advice, or compliance certification; qualified counsel review required."
+      "next_gate": "Qualified counsel review, assigned compliance owners, implemented controls and independently reviewable evidence, regulatory monitoring operations, and GitHub governance settings remain open; not legal advice or certification."
     },
     {
       "number": "29",
@@ -1605,8 +1619,8 @@
   "staging_reconciliation": {
     "as_of": "2026-11-02",
     "method": "Compared master staging and live remote Git blob SHA values for product files; excluded master-side STAGING-STATUS.md deployment records.",
-    "retained_packets": 16,
-    "exact_parity_packets": 16,
+    "retained_packets": 17,
+    "exact_parity_packets": 17,
     "packets_with_blob_drift": 0,
     "missing_paths": 0,
     "extra_paths": 0,
@@ -1626,7 +1640,8 @@
       "osint-source-registry",
       "swarm-coordination",
       "swarm-runtime",
-      "swarm-state-mesh"
+      "swarm-state-mesh",
+      "agent-compliance-governance"
     ],
     "drift": {},
     "verified_commit": "2e23045d09319f65c2a110f808531ba5e1298f1f",
@@ -1674,6 +1689,12 @@
         "product_files": 23,
         "blob_diffs": 0,
         "verification": "23 remote product files match 23 staged product files exactly after CI workflow and README corrections; zero missing, differing or extra product files. Master-only STAGING-STATUS.md excluded."
+      },
+      {
+        "repository": "agent-compliance-governance",
+        "product_files": 29,
+        "blob_diffs": 0,
+        "verification": "29 remote product files match 29 staged product files exactly; zero missing, differing or extra product files. Master-only STAGING-STATUS.md excluded."
       }
     ]
   },
@@ -1724,16 +1745,6 @@
       "verified_ci": {
         "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489",
         "tests": 16
-      }
-    },
-    {
-      "repository": "agent-compliance-governance",
-      "portfolio_id": "compliance-governance",
-      "state": "staged; remote not created",
-      "scope": "source-linked obligation/control catalogue scaffold; not legal advice or certification",
-      "verified_ci": {
-        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
-        "tests": 10
       }
     },
     {
