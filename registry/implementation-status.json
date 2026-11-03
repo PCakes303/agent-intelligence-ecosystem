@@ -333,16 +333,16 @@
     },
     "emergency-control": {
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
-      "workflow_run": "https://github.com/PCakes303/agent-emergency-control/actions/runs/41547448560",
+      "workflow_run": "https://github.com/PCakes303/agent-emergency-control/actions/runs/41555279847",
       "conclusion": "success",
-      "head_sha": "7b52a140fc3d329e4ebf2927e08fdcb2c36e0c1a",
+      "head_sha": "bab3fdd68483b949e22f71bf05cea7b91fc3dee3",
       "tests": 21,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
-      "scope": "STOP/RESUME contract and pure fail-closed reducer only; not a live kill switch"
+      "scope": "STOP/RESUME contract and pure fail-closed reducer only; not a live kill switch; capability and compatibility metadata v1.1.0"
     },
     "compliance-governance": {
       "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41513079895",
@@ -1356,17 +1356,17 @@
       "layer": "foundation-security",
       "visibility": "public",
       "existence": "exists",
-      "status": "Deployed; 23 product files; exact 23/23 staging/remote Git blob parity; repository-local CI passed on Python 3.10, 3.11 and 3.12; STOP/RESUME contract and pure fail-closed reducer only, not a live kill switch.",
+      "status": "Deployed; 23 product files; exact 23/23 staging/remote parity; CI passed 21 tests on Python 3.10-3.12 at metadata-aligned HEAD bab3fdd; STOP/RESUME contract and pure fail-closed reducer only, not a live kill switch.",
       "priority": "P0",
       "importance": "Independent emergency-stop authority and distributed stop enforcement.",
       "next_gate": "Human: verify branch protection/ruleset, private vulnerability reporting, About/topics, Actions/security settings and item-level license/third-party provenance. Engineering: implement independently reviewed authenticated authority, cryptographic verification, durable state, revocation, audit, bounded propagation, runtime enforcement and recovery before claiming operational kill-switch capability.",
       "audit": {
         "as_of": "2026-11-02",
-        "audited_commit": "7b52a140fc3d329e4ebf2927e08fdcb2c36e0c1a",
+        "audited_commit": "bab3fdd68483b949e22f71bf05cea7b91fc3dee3",
         "disposition": "PASS_WITH_OPEN_GOVERNANCE_AND_ENGINEERING_GATES",
         "checkpoint": "checkpoints/2026-11-02-agent-emergency-control-finalization.md",
         "blocking_issue": "https://github.com/PCakes303/agent-intelligence-ecosystem/issues/5",
-        "ci_run": "https://github.com/PCakes303/agent-emergency-control/actions/runs/41547448560",
+        "ci_run": "https://github.com/PCakes303/agent-emergency-control/actions/runs/41555279847",
         "staging_parity": {
           "product_files": 23,
           "matching": 23,
@@ -1381,7 +1381,8 @@
           "README safety boundary and scoped mixed-license statement reconciled",
           "no signature authentication, durable authoritative state, revocation, network propagation, quarantine or runtime enforcement",
           "STOP/RESUME contract and pure reducer are not an operational kill switch",
-          "branch protection, private reporting, About metadata, security settings and license/third-party provenance require human review"
+          "branch protection, private reporting, About metadata, security settings and license/third-party provenance require human review",
+          "Capability metadata is version 1.1.0 with maturity scaffolding; compatibility metadata is version 1.1.0; both match master staging exactly."
         ]
       }
     },
