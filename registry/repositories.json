@@ -409,7 +409,7 @@
       "name": "agent-conformance-lab",
       "visibility": "public",
       "layer": "adoption",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Protocol contract validation, compatibility and security tests, with future isolated swarm benchmarking.",
       "dependencies": [
         "aix-core",
