@@ -679,7 +679,7 @@
       "role": "Independent emergency-stop authority, authenticated stop state, revocation, quarantine, distributed stop propagation, and controlled resumption.",
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
       "existence": "exists",
-      "implementation_status": "Deployed; 23 product files; exact 23/23 staging/remote Git blob parity; repository-local CI passed on Python 3.10, 3.11 and 3.12; STOP/RESUME contract and pure fail-closed reducer only, not a live kill switch.",
+      "implementation_status": "Deployed; 23 product files; exact 23/23 staging/remote parity; CI passed 21 tests on Python 3.10-3.12 at metadata-aligned HEAD bab3fdd; STOP/RESUME contract and pure fail-closed reducer only, not a live kill switch.",
       "priority": "P0",
       "dependencies": [
         "foundation",
