@@ -23,12 +23,9 @@
           "system_id",
           "artifact_type",
           "description",
-          "collected_at",
-          "source_uri",
-          "sha256",
+          "record_status",
           "retention_policy",
           "access_class",
-          "integrity_status",
           "reviewer"
         ],
         "properties": {
@@ -108,8 +105,74 @@
               "null"
             ],
             "maxLength": 128
+          },
+          "record_status": {
+            "enum": [
+              "collected",
+              "not_collected",
+              "blocked"
+            ]
+          },
+          "expected_artifact": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 1000
+          },
+          "owner_role": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 256
+          },
+          "blocking_reason": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 1000
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "record_status": {
+                  "const": "collected"
+                }
+              },
+              "required": [
+                "record_status"
+              ]
+            },
+            "then": {
+              "required": [
+                "collected_at",
+                "source_uri",
+                "sha256",
+                "integrity_status"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "record_status": {
+                  "enum": [
+                    "not_collected",
+                    "blocked"
+                  ]
+                }
+              },
+              "required": [
+                "record_status"
+              ]
+            },
+            "then": {
+              "required": [
+                "expected_artifact",
+                "owner_role",
+                "blocking_reason"
+              ]
+            }
+          }
+        ]
       }
     }
   }
