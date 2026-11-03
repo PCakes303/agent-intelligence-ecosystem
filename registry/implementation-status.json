@@ -22,9 +22,18 @@
   },
   "verified_ci": {
     "master": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41532392654",
+      "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41555450367",
       "conclusion": "success",
-      "head_sha": "7fe0790f2ecaf7da2c58837c88c18c1f64b06d07"
+      "head_sha": "9a0938b12ae733c1dfa6f14118d50c1551f0bf7b",
+      "tests": 47,
+      "staging_packets": 7,
+      "staging_python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "scope": "Master registry/catalog validation, 47-test regression suite, starter build and seven retained staging packets across Python 3.10-3.12; final failed validate-job attempt was rerun successfully."
     },
     "agent-ai-discovery": {
       "repository_url": "https://github.com/PCakes303/agent-ai-discovery",
