@@ -100,10 +100,13 @@ def validate_documents(legal: dict, controls: dict, evidence: dict, schema_dir: 
     for record in legal["records"]:
         if date.fromisoformat(record["next_review"]) < date.fromisoformat(record["last_verified"]):
             raise RegistryError(f"legal record {record['id']} has next_review before last_verified")
+    collected_evidence = sum(record.get("record_status", "collected") == "collected" for record in evidence["records"])
+    evidence_gaps = sum(record.get("record_status") in {"not_collected", "blocked"} for record in evidence["records"])
     return {
         "legal_records": len(legal_ids),
         "controls": len(control_ids),
-        "evidence_records": len(evidence_ids),
+        "evidence_records": collected_evidence,
+        "evidence_gap_records": evidence_gaps,
         "status": "valid",
         "legal_applicability_determined": False,
         "compliance_certification": False,
