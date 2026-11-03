@@ -1,4 +1,181 @@
 {
   "index_version": "1.0",
-  "records": []
+  "records": [
+    {
+      "evidence_id": "gap-gov-001",
+      "control_ids": [
+        "GOV-001"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Approved system inventory; Named system owner and business purpose; Jurisdiction and data-flow record",
+      "owner_role": "Governance owner (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-gov-002",
+      "control_ids": [
+        "GOV-002"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Signed applicability assessment; Counsel review record; Source links and review date",
+      "owner_role": "Legal counsel and compliance owner (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-gov-003",
+      "control_ids": [
+        "GOV-003"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Source-monitoring log; Change impact assessment; Assigned remediation tickets",
+      "owner_role": "Compliance monitoring owner (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-priv-001",
+      "control_ids": [
+        "PRIV-001"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Data inventory and flow map; Purpose and retention register; Processor agreements",
+      "owner_role": "Privacy owner (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-priv-002",
+      "control_ids": [
+        "PRIV-002"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Request handling procedure; Synthetic request test results; Response and appeal metrics",
+      "owner_role": "Privacy operations owner (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-priv-003",
+      "control_ids": [
+        "PRIV-003"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Data protection assessment; Consent and preference records; Sensitive-data inventory",
+      "owner_role": "Privacy and risk owners (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-ai-001",
+      "control_ids": [
+        "AI-001"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Risk assessment; Human oversight procedure; Evaluation and monitoring results",
+      "owner_role": "AI system owner and safety reviewer (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-ai-002",
+      "control_ids": [
+        "AI-002"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Approved notice text; UI disclosure tests; User-facing notice version history",
+      "owner_role": "Product and legal owners (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-ai-003",
+      "control_ids": [
+        "AI-003"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Technical documentation pack; Change notifications; Approved retention schedule",
+      "owner_role": "AI product owner and records owner (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-chat-001",
+      "control_ids": [
+        "CHAT-001"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Age-estimation design review; Minor-safety test results; Self-harm response protocol and annual report evidence",
+      "owner_role": "Product safety and legal owners (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    },
+    {
+      "evidence_id": "gap-evid-001",
+      "control_ids": [
+        "EVID-001"
+      ],
+      "system_id": "mrcakes931-ecosystem-governance",
+      "artifact_type": "other",
+      "description": "Evidence has not been collected. This entry tracks the required artifact and release blocker; it is not proof that the control is implemented or operating.",
+      "record_status": "not_collected",
+      "expected_artifact": "Evidence index entries; Digest verification logs; Access and retention audit",
+      "owner_role": "Evidence custodian (unassigned)",
+      "blocking_reason": "Control is proposed and its accountable owner is unassigned; implementation, approved collection workflow, and human review are outstanding.",
+      "retention_policy": "Pending approved retention schedule; do not add personal, confidential, or restricted evidence until access and retention controls are approved.",
+      "access_class": "internal",
+      "reviewer": null
+    }
+  ]
 }
