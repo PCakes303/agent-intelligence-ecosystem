@@ -15,7 +15,7 @@ The initial register includes Colorado sources because the ecosystem owner is ba
 
 - Strict validation of legal instrument and regulatory-monitor records.
 - Control catalogue with explicit proposed/not-implemented status.
-- Evidence index schema with integrity and provenance fields.
+- Populated evidence tracker with one explicit evidence-gap entry per proposed control; collected evidence remains separately counted and requires a real artifact, digest, source, and review.
 - Colorado monitoring records for the Colorado Privacy Act, SB26-189, HB26-1263, related rulemaking and a federal court litigation monitor.
 - NIST AI RMF recorded as voluntary guidance, not binding law.
 - Tests for schema validity, duplicate IDs, invalid statuses, source references, strict JSON parsing and resource limits.
@@ -30,7 +30,7 @@ Python 3.10+:
 
 ## No compliance claim
 
-The initial control catalogue is proposed. No organizational controls have been implemented or evidenced by this repository. The empty evidence index is intentional. Do not mark a control compliant because it exists in the catalogue.
+The initial control catalogue is proposed. No organizational controls have been implemented or evidenced by this repository. The evidence tracker contains 11 explicit not-collected gap records (one per proposed control) and zero collected evidence artifacts. Gap records describe what must be supplied; they are not evidence and must never be treated as proof of implementation, effectiveness, or compliance.
 
 ## Licensing
 
