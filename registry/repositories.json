@@ -393,7 +393,7 @@
       "name": "agent-compliance-governance",
       "visibility": "public",
       "layer": "governance",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring; not legal advice or certification.",
       "dependencies": [
         "master",
