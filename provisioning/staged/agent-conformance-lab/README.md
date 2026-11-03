@@ -9,7 +9,7 @@ Validate repository metadata, protocol fixtures and explicitly declared security
 
 This scaffold validates local manifests, capability/compatibility declarations, JSON fixtures and supplied test results. It does not execute untrusted repositories, launch agents, connect to swarms, perform live network interoperability, benchmark production systems or certify security/compliance.
 
-A local fixture pass is not cross-repository interoperability evidence. A conformance report must distinguish PASS, FAIL and BLOCKED and include limitations and evidence references. Dependencies remain declared until reproducible integration tests run against pinned remote artifacts.
+A local fixture pass is not cross-repository interoperability evidence. A conformance report must distinguish PASS, FAIL and BLOCKED and include limitations and evidence references. Dependencies remain declared until reproducible integration tests run against pinned remote artifacts. Accordingly, dependency evidence arrays and `tested_combinations` are intentionally empty; they must be populated only after real, reproducible integration tests produce reviewable evidence. These empty arrays are explicit non-claims, not unfinished fixture placeholders.
 
 ## Quick start
 
@@ -19,10 +19,6 @@ Python 3.10+:
     python -m unittest discover -s tests -v
 
 See docs/CONFORMANCE-CONTRACT.md, docs/SECURITY-GATES.md and docs/INTEGRATION-GATES.md.
-
-## Licensing
-
-License selection is pending portfolio review. No license is asserted.
 
 ## Licensing
 
