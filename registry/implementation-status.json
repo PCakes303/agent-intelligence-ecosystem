@@ -1636,14 +1636,16 @@
   "staging_reconciliation": {
     "as_of": "2026-11-02",
     "method": "Compared master staging and live remote Git blob SHA values for product files; excluded master-side STAGING-STATUS.md deployment records.",
-    "retained_packets": 17,
-    "exact_parity_packets": 17,
+    "retained_packets": 18,
+    "exact_parity_packets": 18,
     "packets_with_blob_drift": 0,
     "missing_paths": 0,
     "extra_paths": 0,
     "exact": [
       "agent-audit-provenance",
       "agent-capability-registry",
+      "agent-compliance-governance",
+      "agent-conformance-lab",
       "agent-discovery-network",
       "agent-emergency-control",
       "agent-policy-engine",
@@ -1657,12 +1659,11 @@
       "osint-source-registry",
       "swarm-coordination",
       "swarm-runtime",
-      "swarm-state-mesh",
-      "agent-compliance-governance"
+      "swarm-state-mesh"
     ],
     "drift": {},
-    "verified_commit": "2e23045d09319f65c2a110f808531ba5e1298f1f",
-    "next_gate": "Maintain exact parity after every remote remediation; verify human governance settings and complete cross-repository emergency-stop integration gates before release.",
+    "verified_commit": "452cd924801a2500ea64e95b6af0a728873c49b2",
+    "next_gate": "Maintain exact parity after every remote remediation; complete human governance settings, artifact-level provenance review, and cross-repository emergency-stop and conformance integration gates before release.",
     "refreshed_product_files": 76,
     "post_backcheck": [
       {
@@ -1712,6 +1713,12 @@
         "product_files": 29,
         "blob_diffs": 0,
         "verification": "29 remote product files match 29 staged product files exactly after evidence-gap tracker expansion; zero missing, differing or extra product files. Master-only STAGING-STATUS.md excluded. No zero-byte files remain in the remote repository."
+      },
+      {
+        "repository": "agent-conformance-lab",
+        "product_files": 27,
+        "blob_diffs": 0,
+        "verification": "27 remote product files match 27 master-staged product files exactly; zero missing, differing or extra paths; master-only STAGING-STATUS.md excluded. Remote CI passed 18 tests on Python 3.10, 3.11 and 3.12."
       }
     ]
   },
