@@ -595,8 +595,8 @@
       "layer": "adoption",
       "role": "Protocol contract validation, compatibility and security tests, with future isolated swarm benchmarking.",
       "repository_url": "https://github.com/PCakes303/agent-conformance-lab",
-      "existence": "not-created",
-      "implementation_status": "Staged in master; local metadata/fixture validator and deterministic conformance report builder; staging matrix passed on Python 3.10-3.12.",
+      "existence": "exists",
+      "implementation_status": "Deployed; 27 product files; exact staging parity; CI passed 18 tests on Python 3.10-3.12; local metadata/fixture validation and deterministic conformance reports only.",
       "priority": "P1",
       "dependencies": [
         "aix-core",
@@ -613,9 +613,9 @@
         "compliance-governance"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-conformance-lab/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-conformance-lab/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-conformance-lab#readme"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
