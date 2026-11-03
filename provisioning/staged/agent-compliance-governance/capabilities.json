@@ -1,8 +1,8 @@
 {
-  "capabilities_version": "1.0.0",
+  "capabilities_version": "1.1.0",
   "repository": "agent-compliance-governance",
   "repository_id": "compliance-governance",
-  "maturity": "scaffolded",
+  "maturity": "scaffolding",
   "capabilities": [
     {
       "id": "compliance.registry.validate",
@@ -34,16 +34,16 @@
     },
     {
       "id": "compliance.evidence.index.validate",
-      "name": "Evidence index validation",
+      "name": "Evidence index and gap tracker validation",
       "status": "tested",
-      "description": "Validates evidence metadata, digest format, access class and control references.",
+      "description": "Validates evidence metadata, collected-versus-not-collected status, digest format, access class and control references.",
       "evidence": [
         "compliance_governance/registry.py",
         "schemas/evidence-index.schema.json",
         "tests/test_registry.py"
       ],
       "limitations": [
-        "No evidence is stored or verified; an empty index is intentional."
+        "The tracker contains 11 evidence-gap records and zero collected evidence artifacts; gap records are not proof."
       ]
     }
   ],
