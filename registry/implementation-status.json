@@ -8,12 +8,12 @@
   "public_repositories": 31,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 26,
+    "public_existing": 27,
     "private_existing": 1,
-    "public_not_created": 5,
+    "public_not_created": 4,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 26,
-    "public_repositories_missing": 5
+    "public_repositories_present": 27,
+    "public_repositories_missing": 4
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -381,6 +381,21 @@
       "collected_evidence_records": 0,
       "evidence_gap_records": 11,
       "staging_parity": "exact"
+    },
+    "agent-conformance-lab": {
+      "repository_url": "https://github.com/PCakes303/agent-conformance-lab",
+      "workflow_run": "https://github.com/PCakes303/agent-conformance-lab/actions/runs/41554099804",
+      "conclusion": "success",
+      "head_sha": "747ff223aa4aef1549593b7755b72feb2fde0da7",
+      "tests": 18,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "product_files": 27,
+      "staging_parity": "exact",
+      "scope": "local metadata, fixture and deterministic report validation; no live interoperability or certification"
     }
   },
   "repositories": [
@@ -1388,11 +1403,11 @@
       "name": "agent-conformance-lab",
       "layer": "adoption",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Staged in master; local metadata/fixture validator and deterministic conformance report builder; staging matrix passed on Python 3.10-3.12.",
+      "existence": "exists",
+      "status": "Deployed; 27 product files; exact staging parity; CI passed 18 tests on Python 3.10-3.12; local metadata/fixture validation and deterministic conformance reports only.",
       "priority": "P1",
       "importance": "Proves protocol, security and compatibility behavior across implementations.",
-      "next_gate": "Local fixtures do not establish live interoperability or certification; signed test evidence and isolated integration harness remain future gates."
+      "next_gate": "Release-gates issue #2: harden GitHub settings, complete provenance review, and add pinned cross-repository integration fixtures; no live interoperability or certification claim."
     },
     {
       "number": "30",
