@@ -6,14 +6,18 @@
     "agent-ai-discovery",
     "agent-audit-provenance",
     "agent-capability-registry",
+    "agent-compliance-governance",
+    "agent-conformance-lab",
     "agent-discovery-network",
     "agent-ecosystem-integration",
     "agent-ecosystem-private",
+    "agent-emergency-control",
     "agent-foundation-spec",
     "agent-identity-trust",
     "agent-intelligence-ecosystem",
     "agent-policy-engine",
     "agent-resource-manifest",
+    "agent-sandbox-security",
     "agent-schema-registry",
     "agent-secure-supply-chain",
     "agent-skill-library",
@@ -28,7 +32,7 @@
     "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 7,
+  "missing_public_repository_count": 4,
   "repositories": [
     {
       "name": "osint-collection-framework",
@@ -87,30 +91,6 @@
       ]
     },
     {
-      "name": "agent-conformance-lab",
-      "description": "Protocol validation, compatibility and security tests, and swarm benchmarks.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "conformance-lab",
-      "dependencies": [
-        "aix-core",
-        "aix-codecs",
-        "transport-gateway",
-        "swarm-runtime",
-        "secure-supply-chain",
-        "foundation",
-        "schema-registry",
-        "identity-trust",
-        "policy-engine",
-        "audit-provenance",
-        "emergency-control",
-        "compliance-governance"
-      ]
-    },
-    {
       "name": "agent-federation-network",
       "description": "Federation between independently operated agent networks.",
       "visibility": "public",
@@ -125,40 +105,6 @@
         "swarm-coordination",
         "policy-engine",
         "audit-provenance"
-      ]
-    },
-    {
-      "name": "agent-emergency-control",
-      "description": "Independent emergency-stop authority, revocation, quarantine, distributed stop propagation, and controlled resumption.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "emergency-control",
-      "dependencies": [
-        "identity-trust",
-        "policy-engine",
-        "audit-provenance",
-        "secure-supply-chain"
-      ]
-    },
-    {
-      "name": "agent-compliance-governance",
-      "description": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "compliance-governance",
-      "dependencies": [
-        "master",
-        "foundation",
-        "identity-trust",
-        "policy-engine",
-        "audit-provenance",
-        "secure-supply-chain"
       ]
     }
   ]
