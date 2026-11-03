@@ -378,7 +378,7 @@
       "name": "agent-emergency-control",
       "visibility": "public",
       "layer": "foundation-security",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Independent emergency-stop authority, authenticated stop state, revocation, quarantine, distributed stop propagation, and controlled resumption.",
       "dependencies": [
         "foundation",
