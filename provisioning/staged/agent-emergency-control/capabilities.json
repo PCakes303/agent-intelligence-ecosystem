@@ -1,8 +1,8 @@
 {
-  "capabilities_version": "1.0.0",
+  "capabilities_version": "1.1.0",
   "repository": "agent-emergency-control",
   "repository_id": "emergency-control",
-  "maturity": "scaffolded",
+  "maturity": "scaffolding",
   "capabilities": [
     {
       "id": "emergency.command.validate",
