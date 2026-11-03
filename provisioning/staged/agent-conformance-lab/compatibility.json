@@ -1,7 +1,7 @@
 {
-  "compatibility_version": "1.0.0",
+  "compatibility_version": "1.1.0",
   "repository": "agent-conformance-lab",
-  "policy": "Dependencies are declared contract relationships only; this repository currently validates local fixtures and does not establish runtime interoperability.",
+  "policy": "Dependencies are declared contract relationships only; this repository currently validates local fixtures and does not establish runtime interoperability. Empty dependency evidence arrays and an empty tested_combinations list are intentional: no pinned cross-repository integration tests have been executed, so no interoperability evidence is claimed.",
   "dependencies": [
     {
       "repository_id": "foundation",
