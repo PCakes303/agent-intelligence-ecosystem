@@ -12,6 +12,7 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(result["legal_records"], 6)
         self.assertEqual(result["controls"], 11)
         self.assertEqual(result["evidence_records"], 0)
+        self.assertEqual(result["evidence_gap_records"], 11)
         self.assertFalse(result["legal_applicability_determined"])
         self.assertFalse(result["compliance_certification"])
 
@@ -75,10 +76,12 @@ class RegistryTests(unittest.TestCase):
             with self.assertRaisesRegex(RegistryError, "nesting limit"):
                 load_json(path)
 
-    def test_empty_evidence_index_is_valid_and_not_a_compliance_claim(self):
+    def test_evidence_gaps_are_explicit_and_not_collected_proof(self):
         legal, controls, evidence = documents()
         result = validate_documents(legal, controls, evidence, ROOT / "schemas")
         self.assertEqual(result["evidence_records"], 0)
+        self.assertEqual(result["evidence_gap_records"], 11)
+        self.assertTrue(all(item["record_status"] == "not_collected" for item in evidence["records"]))
         self.assertFalse(result["compliance_certification"])
 
 if __name__ == "__main__":
