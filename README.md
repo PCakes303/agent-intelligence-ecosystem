@@ -27,6 +27,7 @@ The portfolio and architecture are approved. Twenty-six of the 31 public reposit
 - [Repository 27 provisioning/build issue](https://github.com/PCakes303/agent-intelligence-ecosystem/issues/5)
 - [Repository 28 — Agent Compliance Governance](https://github.com/PCakes303/agent-compliance-governance) — 29 product files, exact staging parity, and CI passed on Python 3.10–3.12; governance scaffold only, not legal advice or certification.
 - [Repository 28 release-gates issue](https://github.com/PCakes303/agent-compliance-governance/issues/2)
+- [Repository 28 deployment checkpoint](checkpoints/2026-11-02-agent-compliance-governance-deployment.md)
 
 - [LLM-readable project index](llms.txt)
 - [Public agent catalog — 31 repositories](registry/public-agent-catalog.json)
