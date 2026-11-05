@@ -93,6 +93,19 @@ class RegistryValidationTests(unittest.TestCase):
                 errors.append(f"{path.parent}: compatibility references unknown registry IDs")
         self.assertEqual(errors, [])
 
+    def test_readme_license_status_matches_manifest(self):
+        paths = sorted((ROOT / "provisioning" / "staged").glob("*/manifest.json"))
+        errors = []
+        for path in paths:
+            manifest = load_json(path)
+            if manifest.get("license", {}).get("status") == "pending-review":
+                readme = (path.parent / "README.md").read_text(encoding="utf-8")
+                if "pending-review" not in readme:
+                    errors.append(f"{path.parent}: README omits pending license review status")
+                if "applies a scoped mixed-license policy" in readme:
+                    errors.append(f"{path.parent}: README implies file-level licensing is already applied")
+        self.assertEqual(errors, [])
+
     def test_no_public_repositories_remain_uncreated(self):
         status = load_json(ROOT / "registry" / "implementation-status.json")
         self.assertEqual(status["observed"]["public_repositories_missing"], 0)
