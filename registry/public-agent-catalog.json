@@ -451,8 +451,8 @@
       "layer": "intelligence",
       "role": "Authorized public-information collection through tools and adapters.",
       "repository_url": "https://github.com/PCakes303/osint-collection-framework",
-      "existence": "not-created",
-      "implementation_status": "Staged in master; plan validator only; 19 tests pass on Python 3.10-3.12; no network collection.",
+      "existence": "exists",
+      "implementation_status": "Deployed; 23 product files exact-matched to staging by Git blob SHA; repository CI passed on Python 3.10, 3.11 and 3.12. Plan validator only; no network collection.",
       "priority": "P2",
       "dependencies": [
         "osint-source-registry",
@@ -464,9 +464,9 @@
         "secure-supply-chain"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/osint-collection-framework/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-collection-framework/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-collection-framework/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
