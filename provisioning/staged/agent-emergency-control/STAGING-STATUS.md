@@ -1,16 +1,11 @@
-# Staging Status — agent-emergency-control
+# Staging Status
 
-- Portfolio ID: emergency-control
-- Portfolio order: 28 of 32
-- GitHub owner: PCakes303
-- Intended visibility: public
-- Remote repository: not yet created; the connected GitHub integration cannot create repositories.
-- Staging state: initial scaffold prepared in the master repository; matrix validated.
-- Maturity: scaffolded reference contract and validator.
-- License: scoped mixed-license policy included in staged LICENSE.md; file-level provenance clearance remains required.
-- Dependencies: foundation, identity-trust, policy-engine, audit-provenance, secure-supply-chain (declared only).
-- Implemented in this staging packet: Draft 2020-12 command schema; strict bounded JSON loader; deterministic per-scope STOP/RESUME reducer; synthetic unit tests; CI workflow.
-- Not implemented: cryptographic verification, identity/revocation service, durable state, audit integration, distributed propagation, quarantine, process termination, runtime enforcement or production kill switch.
-- Staging CI: master workflow run 41513079895 passed 21 tests on Python 3.10, 3.11 and 3.12.
-- Required before remote deployment: owner creates public repository PCakes303/agent-emergency-control, then the staging product files are pushed and repository CI verified.
-- Required before production: satisfy every gate in docs/INTEGRATION-GATES.md.
+- Portfolio registry number: 26/32.
+- Canonical ID: emergency-control.
+- Visibility: public.
+- State: deployed to PCakes303/agent-emergency-control.
+- Product files: 23; exact path and Git blob SHA parity verified (23/23). This master-only status file is excluded from product parity.
+- Remote CI: passed 21 tests on Python 3.10, 3.11 and 3.12 at [run 41999034334](https://github.com/PCakes303/agent-emergency-control/actions/runs/41999034334).
+- Scope: STOP/RESUME command contract and pure fail-closed state reducer only. This is not a live kill switch and does not authenticate commands, revoke credentials, stop distributed workloads or enforce runtime quarantine.
+- License: manifest remains `pending-review`; contributor authority, file-level provenance and third-party notices require review.
+- Production gate: authenticated independent stop authority, signature verification, durable revocation state, propagation, runtime enforcement, recovery tests and independent security review.
