@@ -3,21 +3,9 @@
   "owner": "PCakes303",
   "portfolio": "MrCakes931 Agent Intelligence Ecosystem",
   "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-  "last_reviewed": "2026-11-02",
+  "last_reviewed": "2026-11-05",
   "application_status": "prepared-not-applied-github-about-api-unavailable",
   "repositories": [
-    {
-      "name": "agent-intelligence-ecosystem",
-      "description": "Canonical registry and governance hub for the MrCakes931 AI Agent Intelligence Ecosystem, including repository manifests, dependencies, standards, audit evidence and release coordination.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "governance",
-        "ecosystem",
-        "open-source"
-      ]
-    },
     {
       "name": "agent-ai-discovery",
       "description": "Machine-readable discovery metadata and capability indexes that help AI agents find and evaluate ecosystem resources; discovery metadata does not establish identity or trust.",
@@ -28,102 +16,6 @@
         "discovery",
         "metadata",
         "open-source"
-      ]
-    },
-    {
-      "name": "mrcakes931-ecosystem",
-      "description": "Human-facing guide to the MrCakes931 AI Agent Intelligence Ecosystem, with project navigation, onboarding, repository relationships and roadmap.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "documentation",
-        "ecosystem",
-        "open-source"
-      ]
-    },
-    {
-      "name": "agent-ecosystem-integration",
-      "description": "Integration profiles, adapter safety contracts and conformance checks for interoperable components across the AI Agent Intelligence Ecosystem.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "interoperability",
-        "conformance",
-        "open-source"
-      ]
-    },
-    {
-      "name": "agent-foundation-spec",
-      "description": "Normative foundation requirements for agent identity, security, reliability, lifecycle and compatibility across the AI Agent Intelligence Ecosystem.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "security",
-        "specification",
-        "governance"
-      ]
-    },
-    {
-      "name": "agent-resource-manifest",
-      "description": "Portable, machine-readable manifests for agent tools, skills, models, datasets, services, dependencies and requested permissions.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "manifest",
-        "json-schema",
-        "security"
-      ]
-    },
-    {
-      "name": "agent-schema-registry",
-      "description": "Versioned JSON Schema catalog and governance conventions for validating interoperable AI agent ecosystem data contracts.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "json-schema",
-        "validation",
-        "interoperability"
-      ]
-    },
-    {
-      "name": "agent-identity-trust",
-      "description": "Identity and trust data contracts for agent principals, authentication context, authorization, delegation, revocation and trust boundaries.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "identity",
-        "security",
-        "trust"
-      ]
-    },
-    {
-      "name": "agent-secure-supply-chain",
-      "description": "Security and integrity contracts for software releases, SBOMs, provenance, dependency review and vulnerability management in agent systems.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "supply-chain-security",
-        "sbom",
-        "security"
-      ]
-    },
-    {
-      "name": "agent-policy-engine",
-      "description": "Experimental deterministic, default-deny policy evaluator for agent identities, actions, resources and scopes; not a production enforcement boundary.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "policy-engine",
-        "security",
-        "python"
       ]
     },
     {
@@ -139,38 +31,38 @@
       ]
     },
     {
-      "name": "aix-core",
-      "description": "Experimental AIX semantic interoperability specification for agent intents, tasks, responses, capabilities, context, status, errors and provenance.",
+      "name": "agent-capability-registry",
+      "description": "Experimental catalog and validator for declared agent capabilities with policy-filtered candidate matching; advisory only, not authentication or authorization.",
       "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
       "topics": [
         "ai-agents",
         "agentic-ai",
-        "interoperability",
-        "protocol",
-        "specification"
+        "capabilities",
+        "multi-agent-systems",
+        "registry"
       ]
     },
     {
-      "name": "aix-codecs",
-      "description": "Serialization, canonicalization and validation codecs for the AIX interoperability specification, including bounded reference implementations and conformance tests.",
+      "name": "agent-compliance-governance",
+      "description": "Machine-readable compliance-control and evidence-gap registers for AI systems; governance scaffold only, not legal advice or certification.",
       "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
       "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "interoperability",
-        "serialization",
-        "python"
+        "ai-governance",
+        "compliance",
+        "risk-management",
+        "audit",
+        "policy"
       ]
     },
     {
-      "name": "agent-transport-gateway",
-      "description": "Experimental transport-neutral request guard and integration boundary for AIX over HTTP, MCP and A2A; not a production gateway.",
+      "name": "agent-conformance-lab",
+      "description": "Local contract, metadata and fixture validation with deterministic reports; no live interoperability or certification.",
       "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
       "topics": [
         "ai-agents",
-        "agentic-ai",
+        "conformance-testing",
         "interoperability",
-        "mcp",
+        "validation",
         "security"
       ]
     },
@@ -187,20 +79,272 @@
       ]
     },
     {
-      "name": "agent-capability-registry",
-      "description": "Experimental catalog and validator for declared agent capabilities with policy-filtered candidate matching; advisory only, not authentication or authorization.",
+      "name": "agent-ecosystem-integration",
+      "description": "Integration profiles, adapter safety contracts and conformance checks for interoperable components across the AI Agent Intelligence Ecosystem.",
       "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
       "topics": [
         "ai-agents",
         "agentic-ai",
-        "capabilities",
-        "multi-agent-systems",
-        "registry"
+        "interoperability",
+        "conformance",
+        "open-source"
       ]
     },
     {
-      "name": "swarm-runtime",
-      "description": "Execution infrastructure contracts and reference components for distributed agent nodes within a hybrid multi-agent swarm architecture.",
+      "name": "agent-emergency-control",
+      "description": "STOP/RESUME contracts and fail-closed state validation for agent systems; not a live kill switch or runtime enforcement service.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "emergency-stop",
+        "safety-engineering",
+        "security"
+      ]
+    },
+    {
+      "name": "agent-federation-network",
+      "description": "Local peer-declaration validation and federation trust contracts; no peer authentication, network transport or live federation.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "federation",
+        "distributed-systems",
+        "trust",
+        "security"
+      ]
+    },
+    {
+      "name": "agent-foundation-spec",
+      "description": "Normative foundation requirements for agent identity, security, reliability, lifecycle and compatibility across the AI Agent Intelligence Ecosystem.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "security",
+        "specification",
+        "governance"
+      ]
+    },
+    {
+      "name": "agent-identity-trust",
+      "description": "Identity and trust data contracts for agent principals, authentication context, authorization, delegation, revocation and trust boundaries.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "identity",
+        "security",
+        "trust"
+      ]
+    },
+    {
+      "name": "agent-intelligence-ecosystem",
+      "description": "Canonical registry and governance hub for the MrCakes931 AI Agent Intelligence Ecosystem, including repository manifests, dependencies, standards, audit evidence and release coordination.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "governance",
+        "ecosystem",
+        "open-source"
+      ]
+    },
+    {
+      "name": "agent-policy-engine",
+      "description": "Experimental deterministic, default-deny policy evaluator for agent identities, actions, resources and scopes; not a production enforcement boundary.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "policy-engine",
+        "security",
+        "python"
+      ]
+    },
+    {
+      "name": "agent-resource-manifest",
+      "description": "Portable, machine-readable manifests for agent tools, skills, models, datasets, services, dependencies and requested permissions.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "manifest",
+        "json-schema",
+        "security"
+      ]
+    },
+    {
+      "name": "agent-sandbox-security",
+      "description": "Experimental sandbox-admission policy contract and fail-closed reference validator; provides no OS-level isolation or workload execution.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "sandbox",
+        "security",
+        "python"
+      ]
+    },
+    {
+      "name": "agent-schema-registry",
+      "description": "Versioned JSON Schema catalog and governance conventions for validating interoperable AI agent ecosystem data contracts.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "json-schema",
+        "validation",
+        "interoperability"
+      ]
+    },
+    {
+      "name": "agent-secure-supply-chain",
+      "description": "Security and integrity contracts for software releases, SBOMs, provenance, dependency review and vulnerability management in agent systems.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "supply-chain-security",
+        "sbom",
+        "security"
+      ]
+    },
+    {
+      "name": "agent-skill-library",
+      "description": "Experimental declarative skill-package contract and validator for machine-discoverable reusable workflows; no workflow execution or publisher-trust service.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "skills",
+        "workflow",
+        "python"
+      ]
+    },
+    {
+      "name": "agent-tool-adapters",
+      "description": "Experimental Python reference contract for explicit tool-adapter registration, capability declarations, policy-gated invocation and bounded JSON payloads.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "tooling",
+        "python",
+        "security"
+      ]
+    },
+    {
+      "name": "agent-transport-gateway",
+      "description": "Experimental transport-neutral request guard and integration boundary for AIX over HTTP, MCP and A2A; not a production gateway.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "interoperability",
+        "mcp",
+        "security"
+      ]
+    },
+    {
+      "name": "aix-codecs",
+      "description": "Serialization, canonicalization and validation codecs for the AIX interoperability specification, including bounded reference implementations and conformance tests.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "interoperability",
+        "serialization",
+        "python"
+      ]
+    },
+    {
+      "name": "aix-core",
+      "description": "Experimental AIX semantic interoperability specification for agent intents, tasks, responses, capabilities, context, status, errors and provenance.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "interoperability",
+        "protocol",
+        "specification"
+      ]
+    },
+    {
+      "name": "intelligence-knowledge-graph",
+      "description": "Provenance-aware graph reference model linking sources, preserved evidence, entities and evidence-backed relationships with explicit uncertainty and bounded queries.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "knowledge-graph",
+        "data-provenance",
+        "evidence",
+        "python"
+      ]
+    },
+    {
+      "name": "mrcakes931-ecosystem",
+      "description": "Human-facing guide to the MrCakes931 AI Agent Intelligence Ecosystem, with project navigation, onboarding, repository relationships and roadmap.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "ai-agents",
+        "agentic-ai",
+        "documentation",
+        "ecosystem",
+        "open-source"
+      ]
+    },
+    {
+      "name": "osint-collection-framework",
+      "description": "Plan validator and policy contracts for authorized public-information collection; no network collection is performed.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "public-information",
+        "policy-validation",
+        "data-governance",
+        "python"
+      ]
+    },
+    {
+      "name": "osint-entity-resolution",
+      "description": "Review-required candidate matching for public organizations, software, datasets, publications and registries; no people matching or auto-merge.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "entity-resolution",
+        "data-quality",
+        "public-data",
+        "python"
+      ]
+    },
+    {
+      "name": "osint-evidence-engine",
+      "description": "Local evidence-manifest and hash-chain validation for non-personal public-source records; no evidence collection or custody certification.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "digital-evidence",
+        "provenance",
+        "hash-chain",
+        "python"
+      ]
+    },
+    {
+      "name": "osint-source-registry",
+      "description": "Review-gated catalog of public information sources and datasets with licensing, permitted-purpose, access-limit, retention and approval metadata; no collection client.",
+      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+      "topics": [
+        "osint",
+        "data-governance",
+        "source-registry",
+        "provenance",
+        "open-source"
+      ]
+    },
+    {
+      "name": "swarm-coordination",
+      "description": "Coordination contracts for task assignment, delegation, acknowledgement, synchronization and recovery across distributed agents.",
       "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
       "topics": [
         "ai-agents",
@@ -211,8 +355,8 @@
       ]
     },
     {
-      "name": "swarm-coordination",
-      "description": "Coordination contracts for task assignment, delegation, acknowledgement, synchronization and recovery across distributed agents.",
+      "name": "swarm-runtime",
+      "description": "Execution infrastructure contracts and reference components for distributed agent nodes within a hybrid multi-agent swarm architecture.",
       "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
       "topics": [
         "ai-agents",
@@ -232,66 +376,6 @@
         "multi-agent-systems",
         "distributed-systems",
         "state-management"
-      ]
-    },
-    {
-      "name": "osint-source-registry",
-      "description": "Review-gated catalog of public information sources and datasets with licensing, permitted-purpose, access-limit, retention and approval metadata; no collection client.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "osint",
-        "data-governance",
-        "source-registry",
-        "provenance",
-        "open-source"
-      ]
-    },
-    {
-      "name": "intelligence-knowledge-graph",
-      "description": "Provenance-aware graph reference model linking sources, preserved evidence, entities and evidence-backed relationships with explicit uncertainty and bounded queries.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "osint",
-        "knowledge-graph",
-        "data-provenance",
-        "evidence",
-        "python"
-      ]
-    },
-    {
-      "name": "agent-tool-adapters",
-      "description": "Experimental Python reference contract for explicit tool-adapter registration, capability declarations, policy-gated invocation and bounded JSON payloads.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "tooling",
-        "python",
-        "security"
-      ]
-    },
-    {
-      "name": "agent-skill-library",
-      "description": "Experimental declarative skill-package contract and validator for machine-discoverable reusable workflows; no workflow execution or publisher-trust service.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "skills",
-        "workflow",
-        "python"
-      ]
-    },
-    {
-      "name": "agent-sandbox-security",
-      "description": "Experimental sandbox-admission policy contract and fail-closed reference validator; provides no OS-level isolation or workload execution.",
-      "homepage": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "topics": [
-        "ai-agents",
-        "agentic-ai",
-        "sandbox",
-        "security",
-        "python"
       ]
     }
   ]
