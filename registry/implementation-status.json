@@ -1877,5 +1877,32 @@
       "schemas_role_dependent": true,
       "note": "File-presence audit only; content quality, CI freshness, live branch protections, security settings and release readiness are separate checks."
     }
-  }
+  },
+  "live_github_metadata_audit": {
+    "as_of": "2026-11-05",
+    "public_repositories_checked": 31,
+    "descriptions_present": 15,
+    "descriptions_blank": 16,
+    "homepage_urls_present": 0,
+    "topics_present": 0,
+    "malformed_descriptions": [
+      "agent-policy-engine"
+    ],
+    "metadata_manifest": "docs/GITHUB-REPOSITORY-ABOUT-METADATA.md",
+    "owner_actions_required": [
+      "Apply the approved individualized About description to each public repository.",
+      "Replace the malformed agent-policy-engine description; do not include topic keywords in the description.",
+      "Set https://github.com/PCakes303/agent-intelligence-ecosystem as homepage on all 31 public repositories.",
+      "Apply individualized topics to all 31 public repositories.",
+      "Re-read and verify the saved metadata."
+    ],
+    "write_capability": "The connected GitHub integration used for this audit does not expose repository settings writes for description, homepage, or topics."
+  },
+  "owner_security_tasks": [
+    "Verify branch protection/rulesets and required CI checks on all public repositories.",
+    "Verify Actions token permissions and third-party action pinning.",
+    "Verify vulnerability reporting, secret scanning, push protection, and dependency security alerts.",
+    "Complete per-file contributor authority, provenance, third-party notice, and redistribution-rights review.",
+    "Assign accountable security, compliance, privacy, legal, and evidence owners."
+  ]
 }
