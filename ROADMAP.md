@@ -1,30 +1,131 @@
 # Roadmap
 
-## Phase 0 — Control plane and architecture
-- [x] Approve the 30-repository portfolio and core architectural decisions.
-- [x] Provision the public master and private operations repositories.
-- [x] Complete registry schema and automated registry validation.
-- [x] Publish initial ADRs, contribution/security governance, and repository template.
-- [ ] Implement reviewed cross-repository synchronization in the integration repository (repository not yet provisioned).
-- [x] Define public/private information-flow controls and reconciliation design.
-- [x] Add a tested public-only scaffold generator and GitHub CLI provisioning script.
+**Status date:** 2026-11-05  
+**Portfolio:** 32 repositories total — 31 public (master control plane + 30 component repositories), 1 private operations repository.
 
-## Phase 1 — Foundation and cybersecurity (repositories 01–07)
-Initial master-repository prototypes now include resource-manifest, principal-identity, and audit-event schemas; a resource-manifest validator; a default-deny policy evaluator; an audit hash-chain utility; and executable regression fixtures. The seven standalone repositories are not yet provisioned. Exit requires these contracts and implementations to be transferred into their owning repositories, completed threat models, signed identity lifecycle demonstrations, policy enforcement integration, supply-chain attestations, and cross-repository tests.
+This roadmap distinguishes repository provisioning from implementation, integration, and production readiness. A repository's existence, README, manifest, tests, or green CI does not by itself mean its service is operational or production-ready.
 
-## Phase 2 — Protocols (08–10)
-AIX semantic specification, codecs, and transport gateway. Exit requires interoperability prototypes and measured translation fidelity, latency, validation cost, and authorization correctness.
+## Phase 0 — Portfolio and control plane
 
-## Phase 3 — Swarm infrastructure (11–15)
-Discovery, capabilities, runtime, coordination, and state mesh. Exit requires failure-injection tests, idempotent task semantics, bounded retries, and documented consistency guarantees.
+**Provisioning: complete.**
 
-## Phase 4 — OSINT and intelligence (16–20)
-Source registry, authorized collection, evidence, entity resolution, and knowledge graph. Exit requires source-use controls, provenance, uncertainty reporting, and evaluation datasets with appropriate rights.
+- [x] Provision the master control-plane repository and all 30 public component repositories.
+- [x] Provision the separate private operations repository.
+- [x] Publish the canonical 32-entry repository registry and public-only catalog.
+- [x] Maintain dependency graph, manifest schema, architecture decisions, governance, and repository standards.
+- [x] Create a master staging snapshot for each of the 30 public component repositories.
+- [x] Verify live-to-staged manifest blob parity for all 30 components.
+- [x] Verify the three recently added snapshots by exact recursive path/blob comparison.
+- [x] Validate repository inventory, IDs, dependency references, capability/compatibility metadata, and README license-status consistency in master CI.
+- [x] Pass the latest master CI run: 22 jobs, 53 tests, seven component staging matrices across Python 3.10–3.12.
+- [ ] Complete human-owned GitHub account settings, branch rules, security features, and repository About metadata verification.
+- [ ] Complete file-level licensing, contributor-authority, provenance, and third-party notice review.
 
-## Phase 5 — Adoption and expansion (21–25)
-Tool adapters, skills, sandboxing, conformance lab, and federation. Exit requires security tests, reproducible conformance suites, and independently operated federation demonstrations.
+## Phase 1 — Foundation and cybersecurity
 
-## Continuous cross-cutting work
-The AI-native discovery and human-facing guide repositories evolve alongside the technical phases. The integration repository provides contract validation and change-impact automation. The private repository holds restricted internal material under separate access controls.
+**Provisioning: complete; implementation and assurance: partial.**
 
-A phase is not complete merely because documentation or repository scaffolding exists. Each milestone report must state what was researched, designed, implemented, tested, published, verified, known limitations, risks, affected dependencies, and next milestone.
+Repositories: `agent-foundation-spec`, `agent-resource-manifest`, `agent-schema-registry`, `agent-identity-trust`, `agent-secure-supply-chain`, `agent-policy-engine`, and `agent-audit-provenance`.
+
+Existing work includes normative drafts, JSON Schemas, validators, fixtures, tests, and starter tooling at varying levels of maturity.
+
+Exit gates:
+- [ ] Trace normative requirements to executable acceptance tests.
+- [ ] Demonstrate authenticated identity issuance, rotation, delegation, and revocation.
+- [ ] Integrate policy decisions with authenticated principal and resource context; demonstrate enforcement at a real boundary.
+- [ ] Generate and verify SBOMs, provenance attestations, signatures, and dependency-policy results.
+- [ ] Add authenticated audit ingestion, signed checkpoints, retention controls, and identity integration.
+- [ ] Run cross-repository contract tests against pinned versions and negative security cases.
+
+## Phase 2 — Protocols and communication
+
+**Provisioning: complete; interoperability: experimental / partial.**
+
+Repositories: `aix-core`, `aix-codecs`, and `agent-transport-gateway`.
+
+AIX remains an extension/interoperability layer over established standards, not a replacement for MCP, A2A, HTTP, OpenAPI, or JSON Schema.
+
+Exit gates:
+- [ ] Publish explicit, versioned MCP and A2A mapping profiles.
+- [ ] Add cross-language canonicalization and codec vectors.
+- [ ] Demonstrate authenticated transport, authorization, replay resistance, and bounded payload handling.
+- [ ] Measure semantic translation fidelity, latency, validation cost, and failure behavior.
+- [ ] Run independent interoperability tests with external implementations.
+
+## Phase 3 — Discovery and swarm infrastructure
+
+**Provisioning: complete; distributed runtime: partial / not production-ready.**
+
+Repositories: `agent-discovery-network`, `agent-capability-registry`, `swarm-runtime`, `swarm-coordination`, and `swarm-state-mesh`.
+
+The approved topology is hybrid: centralized, federated, and peer-to-peer, selected according to workload and trust boundaries.
+
+Exit gates:
+- [ ] Demonstrate authenticated discovery and capability publication.
+- [ ] Specify and test idempotency, bounded retries, leases, timeouts, backpressure, and partition recovery.
+- [ ] Establish consistency and conflict-resolution semantics per state type.
+- [ ] Add failure-injection, replay, duplicate-delivery, node-churn, and malicious-peer tests.
+- [ ] Prove authorization and emergency-stop enforcement across nodes before enabling privileged workloads.
+
+## Phase 4 — OSINT and intelligence
+
+**Provisioning: complete; operational collection and intelligence pipeline: gated.**
+
+Repositories: `osint-source-registry`, `osint-collection-framework`, `osint-evidence-engine`, `osint-entity-resolution`, and `intelligence-knowledge-graph`.
+
+Current validators and contracts do not constitute a live collection pipeline. Collection remains disabled until authorization, source-use, privacy, safety, evidence, and emergency-control gates are independently demonstrated.
+
+Exit gates:
+- [ ] Validate source permissions, terms, rate limits, access controls, and collection authorization.
+- [ ] Implement authenticated collection provenance and controlled evidence storage.
+- [ ] Add integrity-protected evidence records, trusted timestamps, retention and access controls.
+- [ ] Validate entity-resolution accuracy, uncertainty, bias, and human-review requirements; retain the approved non-personal scope unless separately reviewed.
+- [ ] Add graph write authorization, provenance links, and correction/deletion workflows.
+- [ ] Complete qualified privacy and legal review for each deployment and data category.
+
+## Phase 5 — Adoption, integration, and conformance
+
+**Provisioning: complete; end-to-end integration: partial / not production-ready.**
+
+Repositories: `agent-tool-adapters`, `agent-skill-library`, `agent-sandbox-security`, `agent-conformance-lab`, `agent-federation-network`, `agent-ai-discovery`, `mrcakes931-ecosystem`, and `agent-ecosystem-integration`.
+
+Existing components are at different levels: discovery and guide material, adapters and skills, local sandbox policy contracts, local conformance validators, peer declaration validation, and integration scaffolding. They do not yet constitute a production integrated runtime.
+
+Exit gates:
+- [ ] Implement real OS-level sandbox isolation and verify filesystem, process, network, resource, and escape boundaries.
+- [ ] Implement authenticated peer identity, cryptographic signature validation, authorization, revocation, replay resistance, and secure transport.
+- [ ] Implement reviewed cross-repository synchronization: authenticated event intake, immutable-SHA manifest validation, allowlisted registry-update PRs, scheduled reconciliation, and operational alerts.
+- [ ] Build pinned integration fixtures across foundation, AIX, swarm, safety, OSINT, and federation components.
+- [ ] Run independent end-to-end conformance suites and publish reproducible evidence; do not call local validators certification.
+- [ ] Demonstrate at least two independently operated federation peers before claiming federation capability.
+
+## Phase 6 — Emergency control and compliance governance
+
+**Provisioning: complete; enforcement and legal applicability: not yet demonstrated.**
+
+Repositories: `agent-emergency-control` and `agent-compliance-governance`. These are cross-cutting requirements, not optional add-ons.
+
+Exit gates:
+- [ ] Authenticate emergency-stop authority and cryptographically verify commands.
+- [ ] Demonstrate monotonic STOP behavior, durable state, revocation, independent administration, and controlled RESUME.
+- [ ] Demonstrate stop propagation and enforcement at every relevant runtime, adapter, sandbox, swarm, collection, and federation boundary.
+- [ ] Collect control evidence with accountable owners, timestamps, review status, and retention.
+- [ ] Have qualified counsel determine applicable Colorado, federal, and other deployment-specific legal obligations; do not infer compliance from a control catalog.
+- [ ] Keep privileged/untrusted execution and OSINT collection disabled until applicable gates are met.
+
+## Cross-cutting release engineering
+
+The portfolio is currently a collection of specifications, schemas, validators, examples, and starter tools at varying maturity. It is **not** a set of 30 installable SDK or service packages.
+
+- [x] Audit all 30 public component roots for standard package-build metadata; no `pyproject.toml`, `package.json`, `Cargo.toml`, `go.mod`, or equivalent package manifest was found.
+- [ ] Do not add empty or arbitrary package metadata solely for uniformity.
+- [ ] When a component has a reusable library or executable with a stable public API, select its language and packaging model, then add reproducible builds, dependency locks, SBOM, artifact signing, and install-from-artifact tests.
+- [ ] Define release ownership, semantic versioning, compatibility windows, deprecation policy, and artifact retention.
+- [ ] Pin third-party CI actions, minimize workflow token permissions, and verify branch protections and required checks.
+- [ ] Complete item-level licensing and provenance review before publishing distributable artifacts.
+
+## Completion criteria
+
+The portfolio is considered **provisioned** when all 32 repositories exist and the public registry accurately describes them. It is considered **coordinated** when manifests, dependency references, staging snapshots, catalogs, and CI remain synchronized. It is considered **integrated** only when pinned cross-repository tests pass against real implementations. It is considered **production-ready** only after security, operational, legal, privacy, resilience, and independent verification gates are evidenced.
+
+A phase is not complete merely because documentation or repository scaffolding exists. Every milestone report must state implementation scope, tests, evidence, limitations, risks, affected dependencies, and next gate.
