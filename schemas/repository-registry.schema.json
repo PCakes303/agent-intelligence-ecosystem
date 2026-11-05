@@ -136,7 +136,8 @@
           "enum": [
             "approved-and-applied-to-existing-public-repositories",
             "proposed",
-            "pending"
+            "pending",
+            "policy-approved; per-file-rights-and-provenance-review-pending"
           ]
         },
         "source_code_and_machine_readable_artifacts": {
