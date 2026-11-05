@@ -24,8 +24,13 @@ class PublicAgentCatalogTests(unittest.TestCase):
         self.assertTrue(validate(catalog, self.registry, self.status, self.schema))
 
     def test_uncreated_repositories_do_not_advertise_live_links(self):
+        # All planned public repositories may eventually be created. Keep this
+        # negative test deterministic by converting a copy of an existing
+        # catalog entry into a synthetic planned entry.
         catalog = copy.deepcopy(self.catalog)
-        planned = next(item for item in catalog["repositories"] if item["existence"] != "exists")
+        planned = catalog["repositories"][0]
+        planned["existence"] = "planned"
+        planned["discovery"] = {"llms_txt": None, "agents_md": None, "readme": None}
         planned["discovery"]["llms_txt"] = "https://github.com/PCakes303/not-created/blob/main/llms.txt"
         self.assertTrue(any("must not advertise" in e for e in validate(catalog, self.registry, self.status, self.schema)))
 
