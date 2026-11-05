@@ -75,6 +75,24 @@ The master registry and staging inventory have been reconciled against the 31 pu
 - The public registry, public catalog, and GitHub About metadata manifest each enumerate the same 31 public repositories. The dependency registry contains 124 declared edges and every dependency ID resolves to a repository ID in the canonical registry.
 - The stale `staged_not_created` federation entry was removed. The implementation-status inventory now records 31 public repositories present, 1 private repository present, and 0 public repositories missing.
 - The mixed-license policy remains approved as a policy direction, but the master registry no longer claims that file-level licensing is applied or cleared. The status now explicitly records that contributor authority, provenance and third-party notice review remains pending. Individual repository manifest license states remain `pending-review`.
-- Regression tests were added for complete staging-directory inventory, manifest dependency parity with the canonical repository registry, and zero uncreated public repositories. The resulting master CI run is pending at the time of this checkpoint update.
+- Regression tests now enforce complete staging-directory inventory, manifest ID/dependency parity with the canonical repository registry, capability/compatibility metadata alignment, README license-status consistency, and zero uncreated public repositories. Master CI passed all 53 regression tests and all 22 jobs (validation plus seven three-version staging matrices) at [run 42005173316](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42005173316).
 
 The new snapshots are synchronized copies of live default branches, not separate implementation changes. Their master staging status files record the source commit SHA and snapshot scope.
+
+
+## README and staging-status reconciliation — 2026-11-05
+
+All 30 public component READMEs now explicitly state that their manifest license status remains `pending-review`; none implies that file-level licensing has already been cleared. The 30 live README blobs match their master staging copies exactly (30/30). The canonical policy remains approved as a policy direction only; contributor authority, file-level provenance and third-party notice review are still owner tasks.
+
+The master-only staging status records for emergency control, compliance governance, conformance lab and federation network were refreshed to reflect actual public deployment, current successful remote CI, exact product-file counts and implementation boundaries. The stale 'not yet created' status text was removed from the three deployed components. `agent-federation-network` is confirmed at 17 product files with 12 tests passing on each Python 3.10–3.12 matrix job.
+
+The transport gateway manifest ID and capabilities repository ID were both aligned to the canonical registry ID `transport-gateway`; live and staged blobs match, and its remote CI passed 21 tests across Python 3.10–3.12.
+
+## Remaining material and engineering gaps
+
+- `agent-schema-registry` has a structural schema-catalog checker but no compatibility-analysis runner; semantic compatibility analysis remains planned, not implemented.
+- `mrcakes931-ecosystem` remains a human-facing guide whose content needs a further alignment pass against the actual 30 component maturity and current architecture.
+- `agent-ecosystem-integration` still has partial integration profiles; reproducible cross-repository adapter and conformance fixtures are not yet available.
+- `agent-foundation-spec` still needs requirement-to-acceptance traceability and consumer conformance evidence.
+- None of the 30 component repositories currently has package-distribution metadata or a reproducible package build backend. This is an intentional deferral; do not publish empty packages.
+- Production runtime gates remain open: OS isolation, authenticated emergency STOP and revocation, cryptographic identity lifecycle, runtime policy enforcement, durable authenticated audit, distributed state and cross-repository integration evidence.
