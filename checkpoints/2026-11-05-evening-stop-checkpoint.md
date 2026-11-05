@@ -3,7 +3,7 @@
 **Date:** 2026-11-05  
 **Owner:** PCakes303 · Public identity: MrCakes931  
 **Scope:** Private research workspace, public implementation, and master ecosystem coordination  
-**Disposition:** Provisioned and synchronized; public implementation CI passed; master control-plane CI remains pending
+**Disposition:** Provisioned and synchronized; public implementation has a completed green matrix and a newer schema-alignment rerun in progress; master control-plane CI remains pending
 
 ## Repository state
 
@@ -18,7 +18,7 @@ Private research remains outside public discovery and public staging. The public
 ## License decision
 
 - Owner approved Apache License 2.0 for the public implementation.
-- `LICENSE` committed; manifest declares `Apache-2.0` / `approved-and-applied`; README links to the license.
+- `LICENSE` committed; manifest declares `Apache-2.0` / `selected` (the canonical status enum in the master manifest schema); README links to the license.
 - Private research workspace remains private and unlicensed.
 - File-level provenance, contributor authority, and third-party notice review remain outstanding. Repository-level license does not clear uncertain third-party content.
 
@@ -38,7 +38,7 @@ Private research remains outside public discovery and public staging. The public
 - Public implementation HEAD: `7d90adcd790cd3ddddc997da7672721ffe56b9c0`.
 - Master HEAD at last synchronization: `969674310b5a3219c8f22252c61a52ebc3841ba1`.
 - Private research HEAD: `e37af2d63e6ae5b724dbf9b24d481c2efa44608a`.
-- Latest public CI run: [42019832697](https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42019832697) — **success**, all three jobs passed (Python 3.10, 3.11, 3.12; 17 tests per job).
+- Completed public CI run [42019832697](https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42019832697) — **success**, all three jobs passed (Python 3.10, 3.11, 3.12; 17 tests per job). Latest schema-alignment rerun [42020286190](https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42020286190) — in progress at checkpoint.
 - Latest master CI run: [42019858751](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42019858751) — queued at checkpoint.
 - Previous public run failed because the metadata test expected the pre-license value. The failure was isolated: 16 passed, 1 failed. The assertion was corrected at HEAD `7d90adcd790cd3ddddc997da7672721ffe56b9c0`; rerun is pending.
 
