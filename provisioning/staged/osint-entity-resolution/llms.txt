@@ -1,7 +1,8 @@
 # OSINT Entity Resolution
 
 - Purpose: bounded candidate matching among public organizations, software projects, datasets, publications and public registries.
-- Maturity: scaffolded candidate matcher; no people matching or auto-merge.
+- Version: 1.1.0
+- Maturity: scaffolding; no people matching, identity assertion, auto-merge or graph writes.
 - Start: README.md
 - Contract: docs/RESOLUTION-CONTRACT.md
 - Threat model: docs/THREAT-MODEL.md
@@ -10,4 +11,4 @@
 - Library: osint_entity_resolution/
 - Tests: tests/
 - Dependencies: osint-evidence, schema-registry, identity-trust, policy-engine, audit-provenance, emergency-control, compliance-governance, secure-supply-chain (declared only).
-- License: pending portfolio review.
+- License: scoped mixed policy; see LICENSE.md. Third-party and data/fixture material requires separate provenance review.
