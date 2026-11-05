@@ -23,7 +23,7 @@ This repository is the public ecosystem control plane. It owns the authoritative
 
 ## Existing public portfolio repositories
 
-The original ecosystem portfolio is coordinated with a separate research expansion; the public inventory now includes 32 repositories. Existence does not imply production maturity. Existence does not imply production maturity.
+The original ecosystem portfolio is coordinated with a separate research expansion; the public inventory now includes 32 repositories. Existence does not imply production maturity.
 
 ### Control plane and ecosystem-facing
 - [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem): canonical registry, governance, architecture and dependency control plane.
@@ -61,15 +61,18 @@ The original ecosystem portfolio is coordinated with a separate research expansi
 - [agent-skill-library](https://github.com/PCakes303/agent-skill-library): experimental declarative skill package and workflow schema with strict local validation; no workflow execution, publisher trust or policy enforcement.
 - [agent-conformance-lab](https://github.com/PCakes303/agent-conformance-lab): local metadata and fixture validation plus deterministic conformance report builder; CI passes 18 tests on Python 3.10–3.12; no live interoperability or certification.
 
-## Planned public repositories
+## Additional public repositories now provisioned
 
-Four approved public portfolio repositories remain to be created:
-- [osint-collection-framework](https://github.com/PCakes303/osint-collection-framework): authorized, policy-checked collection with reproducible logs.
-- [osint-evidence-engine](https://github.com/PCakes303/osint-evidence-engine): immutable evidence records, hashes, provenance and transformation history.
-- [osint-entity-resolution](https://github.com/PCakes303/osint-entity-resolution): ambiguity-aware entity correlation with calibrated confidence and human review.
-- [agent-federation-network](https://github.com/PCakes303/agent-federation-network): trust-aware federation between independently operated agent networks.
+The following repositories now exist. Their maturity remains limited to the implementation status stated here:
+- [agent-sandbox-security](https://github.com/PCakes303/agent-sandbox-security): admission policy validator only; no OS isolation or workload execution.
+- [agent-emergency-control](https://github.com/PCakes303/agent-emergency-control): STOP/RESUME contract and fail-closed reducer; no live distributed kill switch.
+- [agent-compliance-governance](https://github.com/PCakes303/agent-compliance-governance): compliance register and validator scaffold; not legal advice or certification.
+- [osint-collection-framework](https://github.com/PCakes303/osint-collection-framework): collection-plan validator only; no network collection.
+- [osint-evidence-engine](https://github.com/PCakes303/osint-evidence-engine): non-personal evidence manifest and hash-chain validator; no trusted timestamp or legal chain-of-custody claim.
+- [osint-entity-resolution](https://github.com/PCakes303/osint-entity-resolution): bounded public non-personal candidate matching with uncertainty and human review.
+- [agent-federation-network](https://github.com/PCakes303/agent-federation-network): local peer-declaration validator; no live peer authentication or network federation.
 
-These links are roadmap identifiers, not claims that the repositories already exist. The private operations repository is excluded from this public catalog and from all public synchronization.
+All 32 public repositories are provisioned. Private repositories and their contents remain excluded from this public catalog and from public synchronization.
 
 ## Architecture and status
 - Portfolio: 34 repositories total; 32 public and 2 private (including the research expansion).
