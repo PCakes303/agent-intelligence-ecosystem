@@ -177,6 +177,15 @@
             "string",
             "null"
           ]
+        },
+        "network_access": {
+          "const": false
+        },
+        "collection": {
+          "const": false
+        },
+        "automated_inference": {
+          "const": false
         }
       },
       "additionalProperties": false
@@ -275,6 +284,42 @@
       },
       "uniqueItems": true,
       "description": "Repository-relative implementation entrypoint paths. Empty when no stable entrypoint is declared."
+    },
+    "execution_authority": {
+      "const": false,
+      "description": "Explicitly states that the repository does not grant runtime execution authority."
+    },
+    "compliance_certification": {
+      "const": false,
+      "description": "Explicitly states that repository metadata is not a compliance certification."
+    },
+    "layer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Portfolio architecture layer, aligned with the master repository registry."
+    },
+    "runtime": {
+      "type": "object",
+      "required": [
+        "language",
+        "minimum_version",
+        "third_party_dependencies"
+      ],
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "minimum_version": {
+          "type": "string"
+        },
+        "third_party_dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false
