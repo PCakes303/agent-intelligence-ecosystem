@@ -35,12 +35,12 @@ Private research remains outside public discovery and public staging. The public
 ## Synchronization evidence
 
 - 29/29 product paths and Git blob SHAs match between the public implementation and master staging, including LICENSE, manifest, README, codec registry and latest metadata-test correction.
-- Public implementation HEAD: `7d90adcd790cd3ddddc997da7672721ffe56b9c0`.
-- Master HEAD at last synchronization: `969674310b5a3219c8f22252c61a52ebc3841ba1`.
+- Public implementation HEAD: `a5ddada2b248731c4b1452db72c1f6e76a66b08f`.
+- Master HEAD before this checkpoint refresh: `eb3245a951dab75bad56fd6dc68613b74d738213`.
 - Private research HEAD: `e37af2d63e6ae5b724dbf9b24d481c2efa44608a`.
 - Completed public CI run [42019832697](https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42019832697) — **success**, all three jobs passed (Python 3.10, 3.11, 3.12; 17 tests per job). Latest schema-alignment rerun [42020286190](https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42020286190) — **success**, all three Python jobs passed.
-- Latest master CI run: [42019858751](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42019858751) — queued at checkpoint.
-- Previous public run failed because the metadata test expected the pre-license value. The failure was isolated: 16 passed, 1 failed. The assertion was corrected at HEAD `7d90adcd790cd3ddddc997da7672721ffe56b9c0`; rerun is pending.
+- Latest master CI run before this checkpoint refresh: [42020520281](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42020520281) — running with validation and staging jobs in progress; this checkpoint update will trigger a new run for the resulting master HEAD.
+- Previous public run failed because the metadata test expected the pre-license value. The failure was isolated: 16 passed, 1 failed. The assertion was corrected, then the manifest status was aligned to the master schema's `selected` enum. The latest run at `a5ddada2b248731c4b1452db72c1f6e76a66b08f` passed all three Python versions.
 
 ## Pull requests, issues, and merges
 
@@ -51,8 +51,8 @@ Private research remains outside public discovery and public staging. The public
 
 ## Remaining gates
 
-1. Confirm the latest public CI matrix passes Python 3.10, 3.11 and 3.12; fix any new failures and refresh staging parity.
-2. Confirm master registry/staging CI passes on its latest HEAD.
+1. Public CI is green on Python 3.10, 3.11 and 3.12 (17 tests each); maintain exact staging parity after future changes.
+2. Confirm master registry/staging CI passes on the final checkpoint HEAD; the run triggered by this update is pending.
 3. Validate repository manifest and Representation Capsule schemas in CI.
 4. Run repeated benchmarks and publish measured baselines with full accounting boundaries.
 5. Complete file-level provenance, contributor-authority and third-party NOTICE review.
