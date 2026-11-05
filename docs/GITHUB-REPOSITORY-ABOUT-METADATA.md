@@ -1,20 +1,20 @@
 # GitHub repository About metadata
 
 **Audit date:** 2026-11-05  
-**Scope:** all 32 existing public portfolio repositories (master plus 30 component repositories). The separate profile repository and private operations repository are excluded.
+**Scope:** all 32 existing public portfolio repositories (master plus 31 component repositories). The separate profile repository and both private repositories are excluded.
 
 GitHub About metadata is separate from each repository's README and manifest. The connected GitHub integration can inspect repository metadata and update repository files, but it does not expose a repository-settings write operation for descriptions, homepage URLs, or topics. The table below is the approved, individualized metadata set to apply in each repository's **About → Edit repository details** panel.
 
 ## Verified current state
 
-- All 31 public portfolio repositories exist; no public repository remains to be created.
-- A live metadata audit on 2026-11-05 found 15 repositories with a non-empty description and 16 with an empty description. The existing `agent-policy-engine` description is malformed because topic tags were appended to the description field; replace it with the clean description below.
-- All 31 repositories have no homepage URL and an empty topics list.
-- The private operations repository and the separate `PCakes303/PCakes303` profile repository are excluded.
+- All 32 public portfolio repositories exist; no public repository remains to be created.
+- A live metadata audit of the original 31 public repositories on 2026-11-05 found 15 repositories with a non-empty description and 16 with an empty description. The existing `agent-policy-engine` description is malformed because topic tags were appended to the description field; replace it with the clean description below.
+- The same prior audit found no homepage URL and an empty topics list across those original 31 repositories. The new `adaptive-swarm-compression` About settings have not been independently read back and must be verified by the owner.
+- Both private repositories and the separate `PCakes303/PCakes303` profile repository are excluded.
 - The GitHub integration available for this workflow can inspect metadata and update repository files, but does not expose a repository-settings write operation for About descriptions, homepage URLs, or topics. These settings remain owner-applied tasks.
 - A repository description or topic does not imply implementation maturity, security certification, or production readiness.
 
-**Common homepage for all 31 public portfolio repositories:**
+**Proposed common homepage for all 32 public portfolio repositories:**
 
 `https://github.com/PCakes303/agent-intelligence-ecosystem`
 
