@@ -60,4 +60,4 @@ No shell execution, arbitrary code loading, credentials storage, network client,
 python -m unittest discover -s tests -v
 ```
 
-Python 3.10–3.12 CI runs 27 unit tests, including descriptor-schema validation. Licensing remains pending portfolio-level review; no license is asserted.
+This repository documents the ecosystem's intended scoped mixed-license policy: Apache-2.0 for eligible original code and machine-readable contracts, and CC BY 4.0 for eligible original human-readable documentation. Its manifest remains `pending-review` until contributor authority, file-level provenance and third-party notices are checked. Do not assume every file is cleared for redistribution. Third-party material retains upstream terms; data, evidence, fixtures, sample payloads and media receive no blanket license. See [LICENSE.md](LICENSE.md).
