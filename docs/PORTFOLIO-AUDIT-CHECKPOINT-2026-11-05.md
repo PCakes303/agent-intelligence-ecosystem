@@ -1,60 +1,55 @@
-# Portfolio Audit Checkpoint — 2026-11-05
+# Portfolio Audit Checkpoint — 2026-11-05 (updated)
 
 ## Verified portfolio position
 
 - Approved portfolio: 32 repositories total (31 public, 1 private).
-- Existing public portfolio repositories: 29.
-- Remaining public repositories not yet created: 2.
-- Private operations repository: 1; its contents remain excluded from this public audit.
-- Separate profile repository `PCakes303/PCakes303` remains excluded from the 32-repository portfolio.
-- The 2 remaining public repositories are `osint-entity-resolution` and `agent-federation-network`.
+- Live GitHub account inventory: 31 public ecosystem repositories and 1 private operations repository.
+- Separate profile repository `PCakes303/PCakes303` is excluded from the 32-repository portfolio.
+- All 31 public portfolio repositories now exist; there are 0 public repositories left to create.
+- The private repository's contents remain excluded from this public audit.
 
-## Completed deployment in this checkpoint
+## Final repository deployment: agent-federation-network
 
-### osint-collection-framework
+- Public remote: https://github.com/PCakes303/agent-federation-network
+- All 17 staged product files deployed.
+- Recursive Git tree comparison verified exact path and blob-SHA parity: 17/17, with zero missing, differing or extra files.
+- Remote CI passed all three matrix jobs on Python 3.10, 3.11 and 3.12: https://github.com/PCakes303/agent-federation-network/actions/runs/41993754908
+- Staging status, master registry, implementation-status record, public agent catalog and provisioning inventory were updated.
+- The repository implements local peer-declaration validation only. It does not authenticate peers, verify signatures, exchange credentials, transport messages, authorize remote actions, distribute revocations, propagate emergency STOP, or execute workloads.
+- License policy is documented, but file-level provenance and third-party notice review remains open.
 
-- Public remote: https://github.com/PCakes303/osint-collection-framework
-- Canonical registry position: #20 component row.
-- 23 product files deployed.
-- Recursive Git tree comparison verified exact path and blob-SHA parity: 23/23.
-- Remote CI passed all 3 matrix jobs on Python 3.10, 3.11 and 3.12; 19 tests per matrix job.
-- Successful CI: https://github.com/PCakes303/osint-collection-framework/actions/runs/41986975248
-- Capability and compatibility metadata aligned to v1.1.0 and validated by master CI.
-- Master portfolio status, implementation-status JSON, repository registry, public agent catalog and provisioning inventory synchronized.
-- Deployment detail: [osint-collection-framework deployment checkpoint](../checkpoints/2026-11-05-osint-collection-framework-deployment.md).
+## Portfolio-wide structural audit
 
-### osint-evidence-engine
+- All 30 public component repositories have the common root materials: README, AGENTS, CONTRIBUTING, SECURITY, LICENSE, llms.txt, manifest.json, capabilities.json, compatibility.json, a GitHub Actions workflow, tests and docs.
+- Seven older repositories use `.github/workflows/validate.yml` rather than `ci.yml`; this is an equivalent workflow naming convention, not a missing CI file. The universal standard now documents this.
+- All component capability metadata was checked for version 1.1.0; `osint-entity-resolution` was corrected in both remote and master staging and its remote CI passed: https://github.com/PCakes303/osint-entity-resolution/actions/runs/41994194186
+- The master About metadata manifest now contains 31 public repository descriptions/topics. These settings are prepared but not applied to GitHub because the connected integration does not expose repository About updates.
+- Dependency review found two manifests missing the master control-plane dependency; those remote manifests and available staging copy were corrected. The graph documentation now clarifies that edges can represent optional integrations as well as required contract prerequisites.
+- A manifest-schema convergence gap remains: several newer repositories use a compact manifest shape that does not validate against the master `repository-manifest.schema.json`; the knowledge-graph manifest also uses a distinct shape, and sandbox-security has a noncanonical license status value. These require a deliberate migration or an approved versioned schema profile before claiming universal manifest conformance.
+- The secure-supply-chain manifest correctly marks identity and audit integrations as optional; this distinction is retained in its component manifest.
 
-- Public remote: https://github.com/PCakes303/osint-evidence-engine
-- 25 staged paths deployed; recursive Git tree comparison verified exact path and blob-SHA parity: 25/25.
-- Remote CI passed all 3 matrix jobs on Python 3.10, 3.11 and 3.12; 21 regression tests.
-- Successful CI: https://github.com/PCakes303/osint-evidence-engine/actions/runs/41989265888
-- Master implementation status, repository registry, public agent catalog, provisioning inventory, staging status and portfolio tracker synchronized.
-- Deployment detail: [osint-evidence-engine deployment checkpoint](../checkpoints/2026-11-05-osint-evidence-engine-deployment.md).
+## Master validation status
 
-## Master validation
-
-- Master regression suite: 47 tests.
-- Latest verified master CI at checkpoint creation: https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41986961485 (success).
-- Public agent catalog and registry validation passed after the collection repository's existence, maturity and discovery entry points were synchronized.
-- Master CI caught two genuine integration gaps during deployment: public catalog existence drift and v1.1.0 capability/compatibility metadata requirements. Both were corrected and the next master CI passed.
+The master registry validation workflow was triggered after the synchronization changes. Earlier runs failed in the regression-test step; the federation catalog's role/status drift was identified and corrected. A fresh run after that correction must pass before this checkpoint can be treated as a fully validated master release. Do not infer a pass from queued or in-progress jobs.
 
 ## Safety and maturity boundary
 
-`osint-collection-framework` remains a plan validator only. It does not perform network collection, crawling, scraping, downloads, authenticated API access, DNS resolution, redirects or content storage. Successful plan validation is not execution authorization. Future collection remains blocked pending authenticated source, identity, policy, terms/privacy, emergency-stop, compliance and audit integrations, plus independent network isolation and security review.
+The ecosystem is not certified production-ready. Emergency-stop, OS isolation, cryptographic identity, runtime policy enforcement, durable authenticated audit, distributed state/revocation, cross-repository interoperability and operational federation remain open engineering gates. Successful component CI verifies the included scaffold tests only; it is not a security certification.
 
-The ecosystem is not certified production-ready. Emergency-stop, OS isolation, cryptographic identity, enforcement at runtime, durable audit and cross-repository integration remain open engineering gates. Legal applicability and compliance conclusions require qualified review.
+Legal applicability and compliance conclusions require qualified review. The compliance-governance repository is a control-register and evidence-gap scaffold, not legal advice or certification.
 
 ## Human/account-owner follow-up
 
-1. Correct the GitHub About description for `osint-collection-framework` to exactly: “Authorized public-information collection through tools and adapters.”
-2. Apply the ecosystem-standard homepage and individualized repository topics.
-3. Verify branch protections/rulesets, required CI, secret scanning, push protection, dependency alerts, private vulnerability reporting and workflow permissions across the portfolio. Some settings are not readable or writable through the connected GitHub integration.
-4. Complete file-level license/provenance/third-party notice review and obtain qualified legal/privacy review where required.
+1. Apply the 31 prepared GitHub About descriptions, common homepage and individualized topics; verify the live values afterward.
+2. Configure and verify branch protection/rulesets, required CI, restrict force-push/deletion, and ensure workflow token permissions are least-privilege.
+3. Verify private vulnerability reporting, secret scanning, push protection and dependency alerts.
+4. Complete file-level license/provenance/third-party notice review under the mixed-license model.
+5. Assign accountable compliance, privacy, legal and evidence owners; obtain qualified counsel review for applicable federal, Colorado and deployment-specific requirements.
+6. Keep privileged or untrusted workload execution disabled until OS isolation, authenticated emergency stop, revocation and runtime enforcement are independently implemented and tested.
 
-## Next deployment order
+## Historical deployment evidence
 
-1. `osint-entity-resolution`
-2. `agent-federation-network`
-
-Deploy each in a separate checkpoint: validate staged packet, provision empty remote, transfer product files, exact path/blob parity, repo-local CI, metadata, master catalog/registry/inventory synchronization. Do not advance past a failing validation gate.
+- osint-collection-framework: 23 product files exact-matched; remote CI passed Python 3.10–3.12 (19 tests): https://github.com/PCakes303/osint-collection-framework/actions/runs/41986975248
+- osint-evidence-engine: 25 product files exact-matched; remote CI passed Python 3.10–3.12 (21 tests): https://github.com/PCakes303/osint-evidence-engine/actions/runs/41989265888
+- osint-entity-resolution: 23 product files exact-matched; remote CI passed Python 3.10–3.12 (21 tests), including the metadata-aligned run above.
+- agent-federation-network: 17 product files exact-matched; remote CI passed Python 3.10–3.12 (run above).
