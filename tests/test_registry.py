@@ -24,6 +24,24 @@ class RegistryValidationTests(unittest.TestCase):
         errors = list(__import__("jsonschema").Draft202012Validator(manifest_schema).iter_errors(manifest))
         self.assertEqual(errors, [])
 
+    def test_all_staged_component_manifests_match_schema(self):
+        manifest_schema = load_json(ROOT / "schemas/repository-manifest.schema.json")
+        validator = __import__("jsonschema").Draft202012Validator(manifest_schema)
+        paths = sorted((ROOT / "provisioning" / "staged").glob("*/manifest.json"))
+        self.assertTrue(paths, "no staged component manifests found")
+        errors = []
+        for path in paths:
+            try:
+                manifest = load_json(path)
+            except ValueError as exc:
+                errors.append(f"{path.relative_to(ROOT)}: {exc}")
+                continue
+            errors.extend(
+                f"{path.relative_to(ROOT)}: {error.message} at {list(error.absolute_path)}"
+                for error in validator.iter_errors(manifest)
+            )
+        self.assertEqual(errors, [])
+
     def test_rejects_unknown_dependency(self):
         registry = json.loads(json.dumps(self.registry))
         registry["repositories"][0]["dependencies"] = ["does-not-exist"]
