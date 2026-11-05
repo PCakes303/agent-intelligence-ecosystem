@@ -741,8 +741,14 @@
       ],
       "discovery": {
         "readme": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/README.md",
+        "agents": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/AGENTS.md",
+        "llms_txt": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/llms.txt",
+        "manifest": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/manifest.json",
+        "capabilities": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/capabilities.json",
+        "compatibility": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/compatibility.json",
         "architecture": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/ARCHITECTURE.md",
-        "roadmap": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/ROADMAP.md"
+        "roadmap": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/ROADMAP.md",
+        "threat_model": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/docs/THREAT-MODEL.md"
       },
       "evidence_policy": "Verify repository-local tests and benchmark evidence before asserting capability; repository existence and scaffolding do not prove distributed swarm behavior."
     }
