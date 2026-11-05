@@ -1,8 +1,8 @@
 {
   "graph_version": "1.0.0",
-  "direction": "consumer-to-prerequisite",
+  "direction": "consumer-to-declared-dependency",
   "cycle_policy": "The dependency graph must be acyclic. A proposed cycle blocks registry validation pending architectural review.",
-  "dependency_semantics": "Dependencies express a declared contract or capability prerequisite, not a requirement to vendor or copy source code.",
+  "dependency_semantics": "Edges represent declared contract prerequisites or optional integration relationships. The component manifest dependency kind distinguishes contract, runtime, development, test and optional relationships; an edge does not imply runtime availability or tested interoperability.",
   "edges": [
     [
       "aix-codecs",
