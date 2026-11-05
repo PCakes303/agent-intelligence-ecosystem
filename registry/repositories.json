@@ -5,9 +5,9 @@
   "github_owner": "PCakes303",
   "public_identity": "MrCakes931",
   "counts": {
-    "total": 32,
-    "public": 31,
-    "private": 1
+    "total": 34,
+    "public": 32,
+    "private": 2
   },
   "status_policy": "planned unless implementation is independently verified",
   "repositories": [
@@ -451,6 +451,33 @@
       "layer": "restricted-operations",
       "status": "planned",
       "role": "Restricted internal research, security assessments, operational procedures, and controlled planning. Never a source for public sync.",
+      "dependencies": [],
+      "public_export": false
+    },
+    {
+      "id": "adaptive-swarm-compression",
+      "name": "adaptive-swarm-compression",
+      "visibility": "public",
+      "layer": "research-and-data-systems",
+      "status": "experimental",
+      "role": "Experimental local lossless codec pipeline and representation-capsule foundation for research into adaptive, collective information representation; no distributed swarm execution or shared-dictionary service yet.",
+      "dependencies": [
+        "aix-codecs",
+        "aix-core",
+        "resource-manifest",
+        "swarm-state-mesh",
+        "swarm-runtime",
+        "knowledge-graph",
+        "audit-provenance"
+      ]
+    },
+    {
+      "id": "swarm-information-research",
+      "name": "swarm-information-research",
+      "visibility": "private",
+      "layer": "restricted-research",
+      "status": "research",
+      "role": "Private research headquarters for swarm-native information architecture, adaptive compression, representation folding, experiments, benchmark methods, hypotheses and architecture decisions.",
       "dependencies": [],
       "public_export": false
     }
