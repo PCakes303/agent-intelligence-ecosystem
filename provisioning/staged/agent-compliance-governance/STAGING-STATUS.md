@@ -1,17 +1,11 @@
-# Staging Status — agent-compliance-governance
+# Staging Status
 
-- Portfolio ID: compliance-governance
-- Canonical registry position: 29 of 32 (component sequence number 28; master is position 1)
-- GitHub owner: PCakes303
-- Intended visibility: public
-- Remote repository: not yet created; the connected GitHub integration cannot create repositories.
-- Staging state: initial scaffold prepared in the master repository; matrix validated.
-- Maturity: scaffolded legal/control/evidence metadata validator.
-- License: scoped mixed-license policy included in staged LICENSE.md; file-level provenance clearance remains required.
-- Dependencies: master, foundation, identity-trust, policy-engine, audit-provenance, secure-supply-chain (declared only).
-- Legal baseline: Colorado Privacy Act, SB26-189, HB26-1263, proposed ADMT/Chatbot rules, xAI v. Weiser litigation monitor and NIST AI RMF 1.0 voluntary guidance; all entity-specific applicability remains for counsel.
-- Implemented in this staging packet: strict bounded JSON loader; Draft 2020-12 schemas; legal register, control catalogue and empty evidence index; validators; synthetic tests; Python 3.10–3.12 CI.
-- Not implemented: legal advice, applicability determination, compliance certification, evidence vault, privacy rights service or live regulatory monitoring.
-- Staging CI: master workflow run 41513079895 passed 10 tests on Python 3.10, 3.11 and 3.12.
-- Required before remote deployment: owner creates public repository PCakes303/agent-compliance-governance, then the staging product files are pushed and repository CI verified.
-- Required before production: named legal/compliance owners, counsel-reviewed applicability, private evidence storage, change-monitoring operations and control implementation evidence.
+- Portfolio registry number: 27/32.
+- Canonical ID: compliance-governance.
+- Visibility: public.
+- State: deployed to PCakes303/agent-compliance-governance.
+- Product files: 29; exact path and Git blob SHA parity verified (29/29). This master-only status file is excluded from product parity.
+- Remote CI: passed 10 tests on Python 3.10, 3.11 and 3.12 at [run 41999136955](https://github.com/PCakes303/agent-compliance-governance/actions/runs/41999136955).
+- Scope: legal-applicability register, governance-control catalog and evidence-gap validator only. Current collected evidence records: 0; open evidence gaps: 11.
+- License: manifest remains `pending-review`; contributor authority, file-level provenance and third-party notices require review.
+- Limitations: no legal advice, jurisdiction-specific applicability determination, operational compliance enforcement or compliance certification. Qualified counsel review and accountable evidence owners remain required.
