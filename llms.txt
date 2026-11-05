@@ -1,14 +1,14 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-> A 32-repository, security-first ecosystem for agent interoperability, discovery, trust, hybrid swarms, intelligence workflows, and conformance. AIX is an extension layer over established standards, not a replacement for them.
+> A coordinated 34-repository portfolio (32 public, 2 private), including a security-first agent ecosystem and a separate swarm information research expansion for agent interoperability, discovery, trust, hybrid swarms, intelligence workflows, and conformance. AIX is an extension layer over established standards, not a replacement for them.
 
 This repository is the public ecosystem control plane. It owns the authoritative repository registry, dependency graph, architecture decisions, governance, and portfolio status. Individual repositories own their implementations.
 
 ## Start here
 - [Master README](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/README.md): purpose, architecture, build and current portfolio maturity.
 - [AI agent instructions](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/AGENTS.md): safe contribution and verification rules.
-- [32-repository status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md): existence, maturity, priority, importance and next gates.
-- [Public agent catalog](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/public-agent-catalog.json): machine-readable index of all 31 public repositories, including existence and discovery entry points.
+- [34-repository status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md): existence, maturity, priority, importance and next gates.
+- [Public agent catalog](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/public-agent-catalog.json): machine-readable index of all 32 public repositories, including existence and discovery entry points.
 - [Canonical repository registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json): machine-readable inventory and dependency declarations.
 - [Implementation status](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/implementation-status.json): evidence-based maturity and verification status.
 - [Dependency graph](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/dependencies.json): cross-repository relationships.
@@ -23,7 +23,7 @@ This repository is the public ecosystem control plane. It owns the authoritative
 
 ## Existing public portfolio repositories
 
-There are currently 27 existing public portfolio repositories. Existence does not imply production maturity. Existence does not imply production maturity.
+The original ecosystem portfolio is coordinated with a separate research expansion; the public inventory now includes 32 repositories. Existence does not imply production maturity. Existence does not imply production maturity.
 
 ### Control plane and ecosystem-facing
 - [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem): canonical registry, governance, architecture and dependency control plane.
@@ -72,9 +72,9 @@ Four approved public portfolio repositories remain to be created:
 These links are roadmap identifiers, not claims that the repositories already exist. The private operations repository is excluded from this public catalog and from all public synchronization.
 
 ## Architecture and status
-- Portfolio: 32 repositories total; 31 public and 1 private.
-- Latest account audit: 27 existing public portfolio repositories, 4 public repositories not yet created, and 1 existing private operations repository.
-- The separate `PCakes303/PCakes303` profile repository is excluded from the 32-repository portfolio.
+- Portfolio: 34 repositories total; 32 public and 2 private (including the research expansion).
+- The original portfolio provisioning and the research expansion are both recorded in the canonical registry; consult the status tracker for current maturity and owner-only settings.
+- The separate `PCakes303/PCakes303` profile repository is excluded from the 34-repository coordinated inventory.
 - Public discovery excludes private operational content.
 - Maturity is repository-specific. Consult the status tracker and repository-local tests/CI before claiming a feature is implemented.
 - AIX approach: extension/interoperability layer over existing standards.
