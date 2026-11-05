@@ -28,34 +28,15 @@
     "intelligence-knowledge-graph",
     "mrcakes931-ecosystem",
     "osint-collection-framework",
+    "osint-entity-resolution",
     "osint-evidence-engine",
     "osint-source-registry",
     "swarm-coordination",
     "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 2,
+  "missing_public_repository_count": 1,
   "repositories": [
-    {
-      "name": "osint-entity-resolution",
-      "description": "Entity correlation, relationship modeling, and uncertainty reporting.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "entity-resolution",
-      "dependencies": [
-        "osint-evidence",
-        "schema-registry",
-        "identity-trust",
-        "policy-engine",
-        "audit-provenance",
-        "emergency-control",
-        "compliance-governance",
-        "secure-supply-chain"
-      ]
-    },
     {
       "name": "agent-federation-network",
       "description": "Federation between independently operated agent networks.",
