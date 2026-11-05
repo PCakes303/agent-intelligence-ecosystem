@@ -1,7 +1,7 @@
 # Roadmap
 
 **Status date:** 2026-11-05  
-**Portfolio:** 32 repositories total — 31 public (master control plane + 30 component repositories), 1 private operations repository.
+**Portfolio:** 34 repositories total — 32 public and 2 private, including the original ecosystem portfolio and the research expansion.
 
 This roadmap distinguishes repository provisioning from implementation, integration, and production readiness. A repository's existence, README, manifest, tests, or green CI does not by itself mean its service is operational or production-ready.
 
@@ -129,3 +129,25 @@ The portfolio is currently a collection of specifications, schemas, validators, 
 The portfolio is considered **provisioned** when all 32 repositories exist and the public registry accurately describes them. It is considered **coordinated** when manifests, dependency references, staging snapshots, catalogs, and CI remain synchronized. It is considered **integrated** only when pinned cross-repository tests pass against real implementations. It is considered **production-ready** only after security, operational, legal, privacy, resilience, and independent verification gates are evidenced.
 
 A phase is not complete merely because documentation or repository scaffolding exists. Every milestone report must state implementation scope, tests, evidence, limitations, risks, affected dependencies, and next gate.
+
+
+## Phase 7 — Swarm-native information representation research
+
+**Provisioning: complete; implementation: experimental; distributed research outcomes: not yet validated.**
+
+Repositories:
+- Public: [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression)
+- Private: [swarm-information-research](https://github.com/PCakes303/swarm-information-research)
+
+The private repository is the research authority for hypotheses, taxonomies, experiment design, negative results, and architecture decisions. It is excluded from public synchronization. The public implementation currently provides a local lossless codec pipeline foundation, exact reconstruction checks, a representation-capsule schema, and a Python test workflow.
+
+Exit gates:
+- [ ] Verify GitHub Actions across Python 3.10–3.12.
+- [ ] Add reproducible baseline benchmarks with complete storage, transfer, compute, metadata, and coordination accounting.
+- [ ] Validate representation capsule schemas and version compatibility.
+- [ ] Build constrained workload-aware pipeline composition.
+- [ ] Evaluate shared dictionaries and cross-agent deduplication with all distribution and synchronization overhead included.
+- [ ] Implement selective reconstruction and compare with decoded reference results.
+- [ ] Prototype compute-on-encoded-data operations for explicitly supported formats.
+- [ ] Add privacy, tenant-isolation, provenance, resource-exhaustion, and adversarial-input tests before distributed deployment.
+- [ ] Publish only reviewed, reproducible findings from the private research repository.
