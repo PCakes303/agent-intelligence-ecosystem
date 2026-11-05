@@ -1,0 +1,7 @@
+{
+  "id": "FND-EX-001",
+  "title": "Validate an incoming task",
+  "statement": "A receiver validates schema, sender context, authorization, and resource bounds before executing a task.",
+  "priority": "MUST",
+  "status": "illustrative"
+}

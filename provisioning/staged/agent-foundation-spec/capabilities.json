@@ -1,0 +1,39 @@
+{
+  "capabilities_version": "1.1.0",
+  "repository": "agent-foundation-spec",
+  "repository_id": "foundation",
+  "maturity": "scaffolding",
+  "capabilities": [
+    {
+      "id": "foundation.requirements",
+      "name": "Machine-readable foundational requirements",
+      "status": "scaffolded",
+      "description": "A requirements catalog and standard-library validator are present.",
+      "evidence": [
+        "requirements/requirements.json",
+        "tools/validate_requirements.py",
+        "tests/"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "foundation.invariants",
+      "name": "Cross-repository security and reliability invariants",
+      "status": "scaffolded",
+      "description": "Normative foundation contract documents shared invariants and traceability.",
+      "evidence": [
+        "docs/FOUNDATION-CONTRACT.md",
+        "requirements/requirements.json"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Runtime enforcement of downstream requirements",
+    "Certification of component implementations"
+  ]
+}

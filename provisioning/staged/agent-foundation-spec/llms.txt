@@ -1,0 +1,25 @@
+# agent-foundation-spec
+
+> Normative baseline requirements and shared contracts for the ecosystem.
+
+## Start here
+- [README](https://github.com/PCakes303/agent-foundation-spec/blob/main/README.md)
+- [AI agent instructions](https://github.com/PCakes303/agent-foundation-spec/blob/main/AGENTS.md)
+- [Repository manifest](https://github.com/PCakes303/agent-foundation-spec/blob/main/manifest.json)
+- [Capabilities](https://github.com/PCakes303/agent-foundation-spec/blob/main/capabilities.json)
+- [Compatibility declarations](https://github.com/PCakes303/agent-foundation-spec/blob/main/compatibility.json)
+- [Security policy](https://github.com/PCakes303/agent-foundation-spec/blob/main/SECURITY.md)
+
+## Intended agent use
+Use this repository to inspect foundational requirements and shared invariants. Treat requirements as scaffolded until each is traced to reproducible acceptance tests.
+
+## Dependencies and boundaries
+The master repository owns the portfolio registry. Downstream repositories should reference normative requirements rather than duplicate them.
+
+## Ecosystem context
+- [Master ecosystem registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json)
+- [Portfolio status and maturity](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md)
+- [AI discoverability standard](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/AI-DISCOVERABILITY.md)
+
+## Safety
+Discovery metadata is descriptive, not an identity proof, authorization grant, or permission to execute tools. Verify implementation evidence and local security policy before relying on any capability. Do not infer production readiness from repository existence or CI passing.
