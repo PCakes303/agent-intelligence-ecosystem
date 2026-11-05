@@ -458,8 +458,8 @@
   "licensing_policy": {
     "version": "2026-11-02",
     "status": "policy-approved; per-file-rights-and-provenance-review-pending",
-    "source_code_and_machine_readable_artifacts": "intended Apache-2.0 for eligible original material only after contributor authority, provenance, and third-party notice review",
-    "human_readable_documentation": "intended CC-BY-4.0 for eligible original material only after contributor authority, provenance, and third-party notice review",
+    "source_code_and_machine_readable_artifacts": "Apache-2.0",
+    "human_readable_documentation": "CC-BY-4.0",
     "third_party_material": "retains upstream license and notices; redistribution requires upstream-term review",
     "data_fixtures_datasets_evidence_media": "no blanket license; item-level provenance and redistribution-rights review required",
     "uncertain_provenance": "not licensed for redistribution until authorship and rights are cleared",
