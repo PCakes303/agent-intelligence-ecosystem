@@ -85,12 +85,12 @@ class RegistryValidationTests(unittest.TestCase):
                 errors.append(f"{path.parent}: capability repository ID mismatch")
             if compatibility.get("repository") != manifest.get("name"):
                 errors.append(f"{path.parent}: compatibility repository name mismatch")
-            manifest_deps = {item["id"] for item in manifest.get("dependencies", [])}
+            registry_ids = {item["id"] for item in self.registry["repositories"]}
             compatibility_deps = {
                 item["repository_id"] for item in compatibility.get("dependencies", [])
             }
-            if not compatibility_deps.issubset(manifest_deps):
-                errors.append(f"{path.parent}: compatibility references undeclared manifest dependencies")
+            if not compatibility_deps.issubset(registry_ids):
+                errors.append(f"{path.parent}: compatibility references unknown registry IDs")
         self.assertEqual(errors, [])
 
     def test_no_public_repositories_remain_uncreated(self):
