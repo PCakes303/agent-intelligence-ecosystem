@@ -167,7 +167,7 @@ Exit gates:
 - [ ] Validate the representation-capsule schema in CI and define compatibility/versioning rules.
 - [ ] Publish repeated baseline measurements with complete local accounting and reproducibility details.
 - [ ] Decide and apply an explicit license before inviting external reuse or contributions.
-- [ ] Add exact master-staging parity and cross-repository contract tests.
+- [ ] Add cross-repository conformance tests; exact 28/28 master-staging parity is already verified.
 - [ ] Implement constrained pipeline selection with declared stage preconditions, resource limits, and exactness guarantees.
 - [ ] Prototype chunked selective reconstruction and compare it with full reconstruction.
 - [ ] Evaluate shared dictionaries only after accounting for distribution, synchronization, trust-boundary, and recovery costs.
