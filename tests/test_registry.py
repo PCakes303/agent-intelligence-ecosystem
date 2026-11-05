@@ -72,6 +72,27 @@ class RegistryValidationTests(unittest.TestCase):
                 )
         self.assertEqual(errors, [])
 
+    def test_capability_and_compatibility_metadata_match_manifest(self):
+        paths = sorted((ROOT / "provisioning" / "staged").glob("*/manifest.json"))
+        errors = []
+        for path in paths:
+            manifest = load_json(path)
+            capabilities = load_json(path.parent / "capabilities.json")
+            compatibility = load_json(path.parent / "compatibility.json")
+            if capabilities.get("repository") != manifest.get("name"):
+                errors.append(f"{path.parent}: capability repository name mismatch")
+            if capabilities.get("repository_id") != manifest.get("id"):
+                errors.append(f"{path.parent}: capability repository ID mismatch")
+            if compatibility.get("repository") != manifest.get("name"):
+                errors.append(f"{path.parent}: compatibility repository name mismatch")
+            manifest_deps = {item["id"] for item in manifest.get("dependencies", [])}
+            compatibility_deps = {
+                item["repository_id"] for item in compatibility.get("dependencies", [])
+            }
+            if not compatibility_deps.issubset(manifest_deps):
+                errors.append(f"{path.parent}: compatibility references undeclared manifest dependencies")
+        self.assertEqual(errors, [])
+
     def test_no_public_repositories_remain_uncreated(self):
         status = load_json(ROOT / "registry" / "implementation-status.json")
         self.assertEqual(status["observed"]["public_repositories_missing"], 0)
