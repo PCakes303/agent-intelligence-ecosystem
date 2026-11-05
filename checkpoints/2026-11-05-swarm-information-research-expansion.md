@@ -9,7 +9,7 @@
 | Repository | Visibility | Verified state |
 |---|---|---|
 | Restricted research workspace | Private | Existence and access confirmed; private content intentionally omitted from this public checkpoint |
-| [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) | Public | Exists under PCakes303; admin/push access confirmed; implementation scaffold, tests, schema, docs and CI workflow committed |
+| [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) | Public | Exists under PCakes303; admin/push access confirmed; 28 implementation, metadata, test, schema, benchmark, and security files committed; exact 28/28 master-staging path/blob parity verified |
 
 Both repositories initially had no files. The README files were created first; no existing user content was overwritten.
 
@@ -22,7 +22,7 @@ Research files, hypotheses, and unpublished results remain inside the private wo
 - README.md, ARCHITECTURE.md, ROADMAP.md, SECURITY.md, CONTRIBUTING.md
 - pyproject.toml and .gitignore
 - Python package with explicit identity and zlib codecs, codec registry, pipeline model, exact reconstruction and SHA-256 integrity verification
-- 12 regression test cases covering round-trip, integrity, malformed streams, output limits, deterministic workloads, and benchmark exactness
+- 16 regression test cases covering round-trip, integrity, malformed streams, output limits, deterministic workloads, benchmark exactness, and metadata consistency
 - Representation Capsule JSON Schema
 - Benchmark and experiment documentation
 - GitHub Actions Python 3.10–3.12 test matrix
