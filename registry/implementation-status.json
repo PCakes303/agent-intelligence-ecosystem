@@ -1435,11 +1435,24 @@
       "name": "agent-federation-network",
       "layer": "adoption",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Staged in master; bounded local peer declaration validator and contract tests; public remote not created.",
+      "existence": "exists",
+      "status": "Partially deployed; 4 of 17 staged product files present on main (README, AGENTS, CONTRIBUTING, SECURITY); 13 remain. No exact parity or remote CI verified; local peer declaration validator only.",
       "priority": "P2",
       "importance": "Allows independently operated networks to interoperate without shared root trust.",
-      "next_gate": "No peer authentication, signature verification, network transport, credential exchange, remote authorization, revocation distribution or emergency STOP propagation."
+      "next_gate": "Deploy remaining 13 product files, reconcile license and metadata versions, verify exact staging/remote tree and blob parity, then run remote CI on Python 3.10–3.12. No peer authentication, signature verification, transport, credential exchange, remote authorization, revocation distribution or STOP propagation.",
+      "audit": {
+        "as_of": "2026-11-05",
+        "disposition": "PARTIAL_DEPLOYMENT_BLOCKED",
+        "remote_tree_paths": 4,
+        "staged_product_files": 17,
+        "missing_product_files": 13,
+        "exact_parity": false,
+        "remote_ci": "not_run",
+        "limitations": [
+          "Local peer declaration validation only",
+          "No live federation or peer authentication"
+        ]
+      }
     },
     {
       "number": "31",
