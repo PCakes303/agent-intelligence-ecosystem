@@ -69,7 +69,7 @@ The portfolio and architecture are approved. All 31 public ecosystem repositorie
 - AI-native discovery: `agent-ai-discovery`.
 - Human-facing ecosystem guide: `mrcakes931-ecosystem`.
 - Cross-repository integration: `agent-ecosystem-integration`.
-- 28 technical repositories across foundation/security, interoperability, swarm infrastructure, OSINT/intelligence, and adoption.
+- 27 technical repositories across foundation/security, interoperability, swarm infrastructure, OSINT/intelligence, and adoption.
 - One private operational repository: `agent-ecosystem-private`.
 
 See the registry for authoritative names, visibility, scope, status, and dependencies.
