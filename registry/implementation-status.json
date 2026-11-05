@@ -8,12 +8,12 @@
   "public_repositories": 31,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 29,
+    "public_existing": 30,
     "private_existing": 1,
-    "public_not_created": 2,
+    "public_not_created": 1,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 29,
-    "public_repositories_missing": 2
+    "public_repositories_present": 30,
+    "public_repositories_missing": 1
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -1200,8 +1200,8 @@
       "name": "osint-entity-resolution",
       "layer": "intelligence",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Staged in master; public-entity candidate matcher only; 16 tests pass on Python 3.10-3.12; review-required outputs.",
+      "existence": "exists",
+      "status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; CI rerun pending after workflow correction.",
       "priority": "P2",
       "importance": "Correlates entities while exposing ambiguity and confidence rather than asserting identity.",
       "next_gate": "No people matching, personal profiling, automatic merge, or graph writes; maintain human review and evidence traceability."
@@ -1743,6 +1743,12 @@
         "product_files": 24,
         "blob_diffs": 0,
         "verification": "All 25 staged paths including the master staging-status record exactly match the public remote by path and Git blob SHA; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12."
+      },
+      {
+        "repository": "osint-entity-resolution",
+        "product_files": 23,
+        "blob_diffs": 0,
+        "verification": "23 staged product paths match 23 remote paths exactly by path and Git blob SHA; zero missing, differing or extra product paths. Master-only STAGING-STATUS.md excluded. CI workflow expression corrected; successful remote matrix run pending."
       }
     ]
   },
@@ -1763,16 +1769,6 @@
           "3.11",
           "3.12"
         ]
-      }
-    },
-    {
-      "repository": "osint-entity-resolution",
-      "portfolio_id": "entity-resolution",
-      "state": "staged; remote not created",
-      "scope": "public-entity candidate matcher; human review required",
-      "verified_ci": {
-        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489",
-        "tests": 16
       }
     }
   ]
