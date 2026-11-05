@@ -293,3 +293,12 @@ The master control plane was rechecked after the final public component reposito
 - **Production gates:** live federation, OS-level sandbox isolation, authenticated emergency-stop propagation, identity/signature lifecycle, policy enforcement at runtime, durable evidence ingestion, and legally reviewed OSINT operation remain outstanding. Existing validator tests do not establish production service readiness.
 
 The master README, architecture, and roadmap were updated to reflect these distinctions and remove stale statements that the final federation repository was still being deployed or that foundation repositories had not yet been provisioned.
+
+
+## Live GitHub About settings audit — 2026-11-05
+
+The live GitHub API was checked for all 31 public portfolio repositories. Results: 15 descriptions are non-empty and 16 are blank; all 31 have no homepage URL and no topics. The `agent-policy-engine` description is malformed because topic keywords were appended to it. The complete 31-repository description/topic application manifest is in `docs/GITHUB-REPOSITORY-ABOUT-METADATA.md`, including five newly added entries for OSINT collection, OSINT evidence, entity resolution, conformance lab, and federation.
+
+**Owner action required:** apply the approved per-repository description, the common master homepage URL, and individualized topics in GitHub's About → Edit repository details panel. Replace the malformed policy-engine description. Re-read the metadata after saving. The connected GitHub integration used for this audit cannot write these settings.
+
+Branch protection/rulesets, required checks, Actions permissions, vulnerability reporting, secret scanning/push protection, and dependency security settings remain owner verification tasks; do not mark them enabled until checked in GitHub.
