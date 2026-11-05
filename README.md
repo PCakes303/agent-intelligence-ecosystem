@@ -35,11 +35,12 @@ The portfolio and architecture are approved. All 31 public ecosystem repositorie
 - [Agent Conformance Lab deployment checkpoint](checkpoints/2026-11-02-agent-conformance-lab-deployment.md)
 - [Portfolio-wide work review — PRs, issues, CI, staging parity and release gates](checkpoints/2026-11-02-portfolio-wide-work-review.md)
 
-- [Adaptive Swarm Compression](https://github.com/PCakes303/adaptive-swarm-compression) — experimental data-representation and lossless codec pipeline project.\n- [Private Swarm Information Research](https://github.com/PCakes303/swarm-information-research) — restricted research headquarters; excluded from public synchronization.\n- [LLM-readable project index](llms.txt)
-- [Public agent catalog — 31 repositories](registry/public-agent-catalog.json)
+- [Adaptive Swarm Compression](https://github.com/PCakes303/adaptive-swarm-compression) — experimental data-representation and lossless codec pipeline project.
+- [LLM-readable project index](llms.txt)
+- [Public agent catalog — 32 repositories](registry/public-agent-catalog.json)
 - [AI coding-agent instructions](AGENTS.md)
 - [AI discoverability and MCP/A2A standard](docs/AI-DISCOVERABILITY.md)
-- [32-repository portfolio status and work tracker](PORTFOLIO-STATUS.md)
+- [34-repository portfolio status and work tracker](PORTFOLIO-STATUS.md)
 - [GitHub repository About descriptions and topics](docs/GITHUB-REPOSITORY-ABOUT-METADATA.md)
 - [Safety, emergency-stop and compliance ADR](docs/adr/0004-safety-emergency-stop-compliance.md)
 - [Colorado and federal compliance management charter](docs/COMPLIANCE-MANAGEMENT-SYSTEM.md)
@@ -69,7 +70,8 @@ The portfolio and architecture are approved. All 31 public ecosystem repositorie
 - AI-native discovery: `agent-ai-discovery`.
 - Human-facing ecosystem guide: `mrcakes931-ecosystem`.
 - Cross-repository integration: `agent-ecosystem-integration`.
-- 27 original technical repositories across foundation/security, interoperability, swarm infrastructure, OSINT/intelligence, and adoption.\n- Research expansion: `adaptive-swarm-compression` (public implementation) and `swarm-information-research` (private research authority).
+- 27 original technical repositories across foundation/security, interoperability, swarm infrastructure, OSINT/intelligence, and adoption.
+- Research implementation: `adaptive-swarm-compression` (public experimental implementation). Restricted research material is excluded from public discovery.
 - One private operational repository: `agent-ecosystem-private`.
 
 See the registry for authoritative names, visibility, scope, status, and dependencies.
