@@ -99,3 +99,7 @@ python tools/starter_build.py
 
 ## Identity and ownership
 GitHub owner: [PCakes303](https://github.com/PCakes303). Public-facing project identity: **MrCakes931**. The separate profile repository is [PCakes303/PCakes303](https://github.com/PCakes303/PCakes303); it is not the ecosystem master or a software dependency. No integration with `HuffmanMainNode` is part of this project.
+
+## Research and data representation
+
+- [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) — experimental local identity/zlib lossless pipeline, representation-capsule schema, repository manifest and capability metadata, bounded decompression, and deterministic benchmark runner. Distributed swarm execution is not implemented.
