@@ -102,8 +102,15 @@ The transport gateway manifest ID and capabilities repository ID were both align
 
 The live default branches of all 30 public component repositories were audited against the common file-presence baseline in `docs/UNIVERSAL-REPOSITORY-STANDARD.md`. All 30 have `README.md`, `AGENTS.md`, `CONTRIBUTING.md`, `SECURITY.md`, `llms.txt`, `manifest.json`, `capabilities.json`, and `compatibility.json`; all 30 also have a CI workflow directory, `tests/`, and `docs/`. No common required files were missing. Schemas remain role-dependent under the standard. This was a file-presence audit; it does not certify the quality or completeness of every document or test.
 
-A new master regression test enforces this common baseline against all staged component repositories. Master CI run [42008082966](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42008082966) passed all 22 jobs and 54 tests, including the new baseline test and seven component staging matrices across Python 3.10–3.12.
+A new master regression test enforces this common baseline against all staged component repositories. Master CI run [42009078062](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42009078062) passed all 22 jobs and 54 tests, including the new baseline test and seven component staging matrices across Python 3.10–3.12.
 
 The master README, architecture, and roadmap were updated to distinguish provisioning, coordination, integration, and production readiness. The roadmap now lists all current component groups and the remaining phase exit gates. Package metadata remains intentionally deferred until an individual component has a stable distributable library or executable and a defined release contract. The master synchronization document remains a target design, not evidence of deployed event-driven automation.
 
 The next coordination task is to complete live account-level settings verification (About metadata, branch protections/rulesets, Actions permissions, secret/dependency security features) and to keep production execution disabled until the cross-cutting identity, policy, sandbox, emergency-control, provenance, compliance, and runtime integration gates are independently evidenced.
+
+
+## GitHub About metadata manifest completion — 2026-11-05
+
+The About metadata manifest now covers all 31 public repositories (master plus 30 components), with unique entries and every proposed description under 350 characters. Five missing descriptions were added for OSINT collection, OSINT evidence, entity resolution, conformance lab, and federation. The transport gateway and emergency-control descriptions were corrected to avoid implying a live network gateway or deployed kill switch.
+
+Live GitHub metadata audit: 15/31 descriptions are non-empty, 16/31 are blank, 0/31 have the common homepage, and 0/31 have topics. The policy-engine description contains topic keywords and must be replaced. These settings cannot be written through the connected integration; the account owner must apply and verify them in GitHub's About panel.
