@@ -3,11 +3,11 @@
 ## Verified portfolio position
 
 - Approved portfolio: 32 repositories total (31 public, 1 private).
-- Existing public portfolio repositories: 28.
-- Remaining public repositories not yet created: 3.
+- Existing public portfolio repositories: 29.
+- Remaining public repositories not yet created: 2.
 - Private operations repository: 1; its contents remain excluded from this public audit.
 - Separate profile repository `PCakes303/PCakes303` remains excluded from the 32-repository portfolio.
-- The 3 remaining public repositories are `osint-evidence-engine`, `osint-entity-resolution`, and `agent-federation-network`.
+- The 2 remaining public repositories are `osint-entity-resolution` and `agent-federation-network`.
 
 ## Completed deployment in this checkpoint
 
@@ -22,6 +22,15 @@
 - Capability and compatibility metadata aligned to v1.1.0 and validated by master CI.
 - Master portfolio status, implementation-status JSON, repository registry, public agent catalog and provisioning inventory synchronized.
 - Deployment detail: [osint-collection-framework deployment checkpoint](../checkpoints/2026-11-05-osint-collection-framework-deployment.md).
+
+### osint-evidence-engine
+
+- Public remote: https://github.com/PCakes303/osint-evidence-engine
+- 25 staged paths deployed; recursive Git tree comparison verified exact path and blob-SHA parity: 25/25.
+- Remote CI passed all 3 matrix jobs on Python 3.10, 3.11 and 3.12; 21 regression tests.
+- Successful CI: https://github.com/PCakes303/osint-evidence-engine/actions/runs/41989265888
+- Master implementation status, repository registry, public agent catalog, provisioning inventory, staging status and portfolio tracker synchronized.
+- Deployment detail: [osint-evidence-engine deployment checkpoint](../checkpoints/2026-11-05-osint-evidence-engine-deployment.md).
 
 ## Master validation
 
@@ -45,8 +54,7 @@ The ecosystem is not certified production-ready. Emergency-stop, OS isolation, c
 
 ## Next deployment order
 
-1. `osint-evidence-engine`
-2. `osint-entity-resolution`
-3. `agent-federation-network`
+1. `osint-entity-resolution`
+2. `agent-federation-network`
 
 Deploy each in a separate checkpoint: validate staged packet, provision empty remote, transfer product files, exact path/blob parity, repo-local CI, metadata, master catalog/registry/inventory synchronization. Do not advance past a failing validation gate.
