@@ -12,6 +12,7 @@
     "agent-ecosystem-integration",
     "agent-ecosystem-private",
     "agent-emergency-control",
+    "agent-federation-network",
     "agent-foundation-spec",
     "agent-identity-trust",
     "agent-intelligence-ecosystem",
@@ -35,24 +36,6 @@
     "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 1,
-  "repositories": [
-    {
-      "name": "agent-federation-network",
-      "description": "Federation between independently operated agent networks.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "federation-network",
-      "dependencies": [
-        "identity-trust",
-        "discovery-network",
-        "swarm-coordination",
-        "policy-engine",
-        "audit-provenance"
-      ]
-    }
-  ]
+  "missing_public_repository_count": 0,
+  "repositories": []
 }
