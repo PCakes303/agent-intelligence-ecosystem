@@ -121,14 +121,19 @@
       ]
     },
     "agent-transport-gateway": {
-      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/41532585560",
+      "repository_url": "https://github.com/PCakes303/agent-transport-gateway",
+      "workflow_run": "https://github.com/PCakes303/agent-transport-gateway/actions/runs/42004443311",
       "conclusion": "success",
-      "head_sha": "4aae28ac4698ed6710f2c6fbccbeab1b7d08f8fc",
-      "matrix": [
-        "Python 3.10",
-        "Python 3.11",
-        "Python 3.12"
-      ]
+      "head_sha": "ab88a1eb7aeef36e8de57d4bee2e35b7225e9f4e",
+      "tests": 21,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "manifest_id": "transport-gateway",
+      "capability_repository_id": "transport-gateway",
+      "staging_parity": "updated manifest, capability metadata and README synchronized"
     },
     "agent-discovery-network": {
       "workflow_run": "https://github.com/PCakes303/agent-discovery-network/actions/runs/41532717864",
@@ -450,7 +455,7 @@
       "status": "Operational control plane; registry, architecture, starter validation and CI",
       "priority": "P0",
       "importance": "Single source of truth for portfolio, dependencies, governance and status.",
-      "next_gate": "Maintain canonical registry; fix status drift; add portfolio reconciliation tests."
+      "next_gate": "Maintain canonical registry and staging parity; review human-only GitHub About/security settings, license provenance, and cross-repository production gates."
     },
     {
       "number": "01",
@@ -866,10 +871,10 @@
       "layer": "protocols",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolded; 14 files published; [CI passed](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293) on Python 3.10, 3.11 and 3.12",
+      "status": "Scaffolded; 14 product files; canonical manifest and capability repository IDs aligned to registry; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12 (run 42004443311).",
       "priority": "P0",
       "importance": "Carries messages across MCP/A2A/HTTP transports with security controls.",
-      "next_gate": "Implement trusted authentication, authenticated policy integration, shared atomic replay protection, pinned AIX schema/codec integration and protocol adapters; verify private reporting, About metadata, settings, licensing and staging parity.",
+      "next_gate": "Implement trusted authentication, authenticated policy integration, shared atomic replay protection, pinned AIX schema/codec integration and protocol adapters; verify private reporting, About metadata, settings and release gates.",
       "audit": {
         "as_of": "2026-11-02",
         "audited_commit": "1b2e5873f05364fc0c8f2c124bc76c640eeb3096",
@@ -1225,7 +1230,7 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10/3.11/3.12. A follow-up metadata-only correction aligned capability evidence paths; latest CI rerun is queued.",
+      "status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12 after capability metadata correction (run 41998580268).",
       "priority": "P2",
       "importance": "Correlates entities while exposing ambiguity and confidence rather than asserting identity.",
       "next_gate": "No people matching, personal profiling, automatic merge, or graph writes; maintain human review and evidence traceability."
