@@ -624,10 +624,10 @@
       "name": "agent-federation-network",
       "visibility": "public",
       "layer": "adoption",
-      "role": "Local peer declaration contract validator for independently operated agent networks; no live federation.",
+      "role": "Local peer declaration contract validator for independent network federation; no peer authentication, transport, credential exchange or remote authorization.",
       "repository_url": "https://github.com/PCakes303/agent-federation-network",
       "existence": "exists",
-      "implementation_status": "Deployed; all 17 product files exact-matched to master staging by path and Git blob SHA; remote CI passed Python 3.10/3.11/3.12. Local peer declaration validator only; no live federation.",
+      "implementation_status": "Deployed; all 17 product files exact-matched to master staging by path and Git blob SHA; remote CI passed all three Python 3.10, 3.11 and 3.12 matrix jobs. Local peer declaration validator only; no live federation.",
       "priority": "P2",
       "dependencies": [
         "identity-trust",
