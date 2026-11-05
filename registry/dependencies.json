@@ -5,6 +5,34 @@
   "dependency_semantics": "Edges represent declared contract prerequisites or optional integration relationships. The component manifest dependency kind distinguishes contract, runtime, development, test and optional relationships; an edge does not imply runtime availability or tested interoperability.",
   "edges": [
     [
+      "adaptive-swarm-compression",
+      "aix-codecs"
+    ],
+    [
+      "adaptive-swarm-compression",
+      "aix-core"
+    ],
+    [
+      "adaptive-swarm-compression",
+      "audit-provenance"
+    ],
+    [
+      "adaptive-swarm-compression",
+      "knowledge-graph"
+    ],
+    [
+      "adaptive-swarm-compression",
+      "resource-manifest"
+    ],
+    [
+      "adaptive-swarm-compression",
+      "swarm-runtime"
+    ],
+    [
+      "adaptive-swarm-compression",
+      "swarm-state-mesh"
+    ],
+    [
       "aix-codecs",
       "aix-core"
     ],
@@ -129,22 +157,6 @@
       "transport-gateway"
     ],
     [
-      "discovery",
-      "identity-trust"
-    ],
-    [
-      "discovery",
-      "master"
-    ],
-    [
-      "discovery",
-      "resource-manifest"
-    ],
-    [
-      "discovery",
-      "schema-registry"
-    ],
-    [
       "discovery-network",
       "capability-registry"
     ],
@@ -159,6 +171,22 @@
     [
       "discovery-network",
       "transport-gateway"
+    ],
+    [
+      "discovery",
+      "identity-trust"
+    ],
+    [
+      "discovery",
+      "master"
+    ],
+    [
+      "discovery",
+      "resource-manifest"
+    ],
+    [
+      "discovery",
+      "schema-registry"
     ],
     [
       "emergency-control",
