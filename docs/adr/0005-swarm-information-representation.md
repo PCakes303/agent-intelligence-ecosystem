@@ -15,10 +15,10 @@ The research must not be confused with a claim that arbitrary data can be compre
 
 Create two connected but independently scoped repositories:
 
-1. **Private:** [swarm-information-research](https://github.com/PCakes303/swarm-information-research) — authoritative private record for hypotheses, taxonomy, theory, experiments, negative results, benchmark protocol, and research decisions.
+1. **Private research workspace:** a separate restricted repository holds unpublished hypotheses, theory, experiments, negative results, benchmark protocols, and research decisions.
 2. **Public:** [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) — independently buildable experimental implementation for codecs, representation capsules, pipeline composition, benchmarks, and later collective/selective operations.
 
-The private repository is excluded from public discovery exports and all automatic public synchronization. The public repository must never require access to private notes.
+The private research workspace is excluded from public discovery exports and all automatic public synchronization. The public repository must never require access to private notes.
 
 ## Integration boundaries
 
@@ -42,6 +42,6 @@ These are declared integration relationships, not claims of tested interoperabil
 
 ## Consequences
 
-The master registry and public catalog include the new public implementation. The private research repository is listed only in the restricted registry with public_export false. The coordinated inventory now contains 34 repositories: 32 public and 2 private.
+The master registry and public catalog include the new public implementation. Restricted research inventory metadata is marked public_export false; private content is not exported. The coordinated inventory now contains 34 repositories: 32 public and 2 private.
 
 The new public project is experimental. It requires its own CI, benchmarks, compatibility review, and security hardening before wider integration.
