@@ -2,7 +2,7 @@
   "capabilities_version": "1.0.0",
   "repository": "osint-entity-resolution",
   "repository_id": "entity-resolution",
-  "maturity": "scaffolded",
+  "maturity": "scaffolding",
   "capabilities": [
     {
       "id": "osint.entity.normalize",
