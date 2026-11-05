@@ -499,10 +499,10 @@
       "name": "osint-entity-resolution",
       "visibility": "public",
       "layer": "intelligence",
-      "role": "Entity correlation, relationship modeling, and uncertainty reporting.",
+      "role": "Bounded candidate matching among public organizations, software projects, datasets, publications and registries; review-required only, no people matching, identity assertion, auto-merge or graph writes.",
       "repository_url": "https://github.com/PCakes303/osint-entity-resolution",
       "existence": "exists",
-      "implementation_status": "Scaffolding deployed; bounded public non-personal candidate matcher; 23 product files; exact path/blob parity verified; remote CI matrix rerun pending.",
+      "implementation_status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10/3.11/3.12. A follow-up metadata-only correction aligned capability evidence paths; latest CI rerun is queued.",
       "priority": "P2",
       "dependencies": [
         "osint-evidence",
