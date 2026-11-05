@@ -294,7 +294,7 @@
       "role": "Experimental transport-neutral request guard and integration boundary for AIX over HTTP, MCP and A2A; not a production gateway.",
       "repository_url": "https://github.com/PCakes303/agent-transport-gateway",
       "existence": "exists",
-      "implementation_status": "Scaffolded; 14 files published; [CI passed](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41409530293) on Python 3.10, 3.11 and 3.12",
+      "implementation_status": "Scaffolded; 14 product files; canonical manifest and capability repository IDs aligned to registry; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12 (run 42004443311).",
       "priority": "P0",
       "dependencies": [
         "aix-core",
@@ -502,7 +502,7 @@
       "role": "Bounded candidate matching among public organizations, software projects, datasets, publications and registries; review-required only, no people matching, identity assertion, auto-merge or graph writes.",
       "repository_url": "https://github.com/PCakes303/osint-entity-resolution",
       "existence": "exists",
-      "implementation_status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10/3.11/3.12. A follow-up metadata-only correction aligned capability evidence paths; latest CI rerun is queued.",
+      "implementation_status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12 after capability metadata correction (run 41998580268).",
       "priority": "P2",
       "dependencies": [
         "osint-evidence",
