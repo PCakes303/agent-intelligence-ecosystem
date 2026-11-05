@@ -8,12 +8,12 @@
   "public_repositories": 31,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 30,
+    "public_existing": 31,
     "private_existing": 1,
-    "public_not_created": 1,
+    "public_not_created": 0,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 30,
-    "public_repositories_missing": 1
+    "public_repositories_present": 31,
+    "public_repositories_missing": 0
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -1629,6 +1629,24 @@
       "path": "provisioning/staged/agent-conformance-lab",
       "file_count": 26,
       "status": "Deployed to PCakes303/agent-conformance-lab; 27 product files exact-matched to staging; remote CI passed 18 tests on Python 3.10–3.12; local metadata/fixture validation only, no live interoperability."
+    },
+    {
+      "repository": "mrcakes931-ecosystem",
+      "path": "provisioning/staged/mrcakes931-ecosystem",
+      "file_count": 23,
+      "status": "Live default-branch snapshot staged; 22 product files exact-matched by path and Git blob SHA to source commit 300409aa4f79a57d1a1e84e02f1aa6eff624c822. Master-only STAGING-STATUS.md excluded from parity."
+    },
+    {
+      "repository": "agent-foundation-spec",
+      "path": "provisioning/staged/agent-foundation-spec",
+      "file_count": 20,
+      "status": "Live default-branch snapshot staged; 19 product files exact-matched by path and Git blob SHA to source commit 6bffbf9aa811004bf4b9b4d7f3c0e2f360a9ea0f. Master-only STAGING-STATUS.md excluded from parity."
+    },
+    {
+      "repository": "agent-schema-registry",
+      "path": "provisioning/staged/agent-schema-registry",
+      "file_count": 20,
+      "status": "Live default-branch snapshot staged; 19 product files exact-matched by path and Git blob SHA to source commit 29bf8c27674495430a70294b0e4e3da52450d1e4. Master-only STAGING-STATUS.md excluded from parity."
     }
   ],
   "master_audit": {
@@ -1774,24 +1792,17 @@
       }
     ]
   },
-  "staged_not_created": [
-    {
-      "repository": "agent-federation-network",
-      "portfolio_id": "federation-network",
-      "path": "provisioning/staged/agent-federation-network",
-      "product_files": 16,
-      "state": "staged; remote not created",
-      "scope": "local peer declaration validation only; active declarations remain REVIEW_REQUIRED",
-      "verified_ci": {
-        "workflow_run": "pending final master CI",
-        "conclusion": "pending",
-        "tests": 12,
-        "python_versions": [
-          "3.10",
-          "3.11",
-          "3.12"
-        ]
-      }
-    }
-  ]
+  "staged_not_created": [],
+  "latest_staging_snapshot_audit": {
+    "as_of": "2026-11-05",
+    "staged_component_directories": 30,
+    "live_to_staged_manifest_blob_parity": 30,
+    "new_full_tree_path_and_blob_parity": 3,
+    "new_full_tree_parity_repositories": [
+      "mrcakes931-ecosystem",
+      "agent-foundation-spec",
+      "agent-schema-registry"
+    ],
+    "notes": "All 30 public component repositories have a master staging directory. All 30 live manifest blobs match their staged copies. Full recursive path/blob parity was newly reverified for the three previously unstaged repositories listed here; other repository parity evidence remains in staging_reconciliation and historical deployment checkpoints."
+  }
 }
