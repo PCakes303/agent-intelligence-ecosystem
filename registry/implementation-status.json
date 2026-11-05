@@ -23,10 +23,10 @@
   "verified_ci": {
     "master": {
       "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42003605442",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42005173316",
       "conclusion": "success",
-      "head_sha": "6c25e1118b8f5543ca459ef4e2e9d514ca63d6c8",
-      "tests": 52,
+      "head_sha": "2a479e0d093ae2fc8855fc9421a8943591d78af1",
+      "tests": 53,
       "staging_packets": 7,
       "staging_python_versions": [
         "3.10",
@@ -37,7 +37,8 @@
       "staged_component_directories": 30,
       "staged_manifest_schema_checks": 30,
       "live_staged_manifest_blob_parity": 30,
-      "scope": "Master registry/catalog validation, 52-test regression suite, complete 30-component staging inventory, canonical manifest schema validation, capability/compatibility metadata alignment, manifest dependency parity, and seven component staging matrices across Python 3.10–3.12."
+      "readme_license_status_parity": 30,
+      "scope": "Master registry/catalog validation, 53-test regression suite, complete 30-component staging inventory, canonical manifest schema validation, manifest ID/dependency alignment, capability and compatibility metadata alignment, README license-status alignment, and seven component staging matrices across Python 3.10–3.12."
     },
     "agent-ai-discovery": {
       "repository_url": "https://github.com/PCakes303/agent-ai-discovery",
@@ -1507,27 +1508,35 @@
       "agent-ai-discovery",
       "agent-audit-provenance",
       "agent-capability-registry",
+      "agent-compliance-governance",
+      "agent-conformance-lab",
       "agent-discovery-network",
       "agent-ecosystem-integration",
+      "agent-emergency-control",
+      "agent-federation-network",
       "agent-foundation-spec",
       "agent-identity-trust",
       "agent-policy-engine",
       "agent-resource-manifest",
+      "agent-sandbox-security",
       "agent-schema-registry",
       "agent-secure-supply-chain",
+      "agent-skill-library",
+      "agent-tool-adapters",
       "agent-transport-gateway",
       "aix-codecs",
       "aix-core",
       "intelligence-knowledge-graph",
       "mrcakes931-ecosystem",
+      "osint-collection-framework",
+      "osint-entity-resolution",
+      "osint-evidence-engine",
       "osint-source-registry",
       "swarm-coordination",
       "swarm-runtime",
-      "swarm-state-mesh",
-      "agent-tool-adapters",
-      "agent-skill-library"
+      "swarm-state-mesh"
     ],
-    "result": "A root-level distribution-manifest audit of all 22 existing public component repositories found no pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, build.gradle, or equivalent package-build manifest. Their manifest.json files describe ecosystem metadata, not installable package builds. The master control-plane repository is reviewed separately.",
+    "result": "A root-level distribution-manifest audit of all 30 public component repositories found no pyproject.toml, setup.py, setup.cfg, package.json, Cargo.toml, go.mod, pom.xml, build.gradle, or equivalent package-build manifest. Three repositories contain Makefiles, but these are starter/build helpers rather than distribution metadata. Their manifest.json files describe ecosystem metadata, not installable package builds. The master control-plane repository is reviewed separately.",
     "decision": "Do not publish empty or premature packages. Add package metadata, reproducible build, license validation, dependency lock/SBOM, artifact signing and install-from-artifact tests only when a repository contains a reusable library or executable intended for distribution."
   },
   "prepared_staging": {
@@ -1824,6 +1833,7 @@
       "agent-foundation-spec",
       "agent-schema-registry"
     ],
-    "notes": "All 30 public component repositories have a master staging directory. All 30 live manifest blobs match their staged copies. Full recursive path/blob parity was newly reverified for the three previously unstaged repositories listed here; other repository parity evidence remains in staging_reconciliation and historical deployment checkpoints."
+    "notes": "All 30 public component repositories have a master staging directory. All 30 live manifest blobs and all 30 README blobs match their master staging copies. All 30 component READMEs explicitly reflect pending-review license status. Full recursive path/blob parity was newly reverified for the three previously unstaged repositories listed here; other repository parity evidence remains in staging_reconciliation and historical deployment checkpoints.",
+    "readme_license_status_parity": 30
   }
 }
