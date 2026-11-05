@@ -347,7 +347,8 @@
         "3.10",
         "3.11",
         "3.12"
-      ]
+      ],
+      "note": "Passed 21 tests on Python 3.10–3.12 before the subsequent capability-metadata evidence-path correction; latest rerun pending."
     },
     "emergency-control": {
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
@@ -1202,7 +1203,7 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12.",
+      "status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10/3.11/3.12. A follow-up metadata-only correction aligned capability evidence paths; latest CI rerun is queued.",
       "priority": "P2",
       "importance": "Correlates entities while exposing ambiguity and confidence rather than asserting identity.",
       "next_gate": "No people matching, personal profiling, automatic merge, or graph writes; maintain human review and evidence traceability."
