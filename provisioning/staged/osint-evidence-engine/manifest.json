@@ -13,6 +13,6 @@
     "compliance-governance"
   ],
   "entrypoint": "osint_evidence/records.py",
-  "license_status": "pending-portfolio-review",
+  "license_status": "scoped-mixed-license-policy; file-level-provenance-review-pending",
   "execution_authority": false
 }
