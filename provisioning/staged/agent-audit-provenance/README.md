@@ -3,7 +3,7 @@
 **Repository:** `PCakes303/agent-audit-provenance`  
 **Portfolio position:** 10 / 31 public repositories  
 **Maturity:** scaffolding  
-**License:** pending review
+**License:** [Scoped mixed-license policy](LICENSE.md).
 
 ## Purpose
 
@@ -19,7 +19,7 @@ Provide portable audit-event contracts and a small append-only, hash-chained JSO
 
 ## License status
 
-The repository's code, documentation, schemas, examples, and other materials do not yet have an approved license decision. No root `LICENSE` file or GitHub license declaration is present. Reuse and redistribution rights must not be assumed; licensing remains pending repository-specific review.
+This repository documents the ecosystem's intended scoped mixed-license policy: Apache-2.0 for eligible original code and machine-readable contracts, and CC BY 4.0 for eligible original human-readable documentation. Its manifest remains `pending-review` until contributor authority, file-level provenance and third-party notices are checked. Do not assume every file is cleared for redistribution. Third-party material retains upstream terms; data, evidence, fixtures, sample payloads and media receive no blanket license. See [LICENSE.md](LICENSE.md).
 
 ## Quick start
 
