@@ -1524,10 +1524,10 @@
       "layer": "research-and-data-systems",
       "visibility": "public",
       "existence": "exists",
-      "status": "Experimental scaffold; local identity and zlib lossless pipeline, exact reconstruction checks, representation-capsule schema, architecture and benchmark plan published. Distributed swarm execution, shared dictionaries, adaptive compiler, remote CI and performance claims are not implemented or verified.",
+      "status": "Experimental; 20 files published; local identity/zlib exact pipeline, SHA-256 integrity verification, bounded decompression, 12 regression test cases, representation-capsule schema, deterministic synthetic workloads and local benchmark runner. Remote CI, master-staging parity and distributed swarm behavior are not yet verified.",
       "priority": "P1",
       "importance": "Researches a swarm-native approach to reducing total information-use cost across storage, transfer, compute, reconstruction and coordination.",
-      "next_gate": "Run the test suite in GitHub Actions; harden decoder resource limits; add benchmark harness with full accounting; validate capsule schema; then prototype bounded pipeline selection before distributed coordination."
+      "next_gate": "Verify GitHub Actions on Python 3.10, 3.11 and 3.12; validate the capsule schema; run repeated benchmark baselines; decide and apply an explicit license; establish master-staging parity and cross-repository conformance; then implement bounded pipeline selection before distributed coordination."
     },
     {
       "number": "33",
