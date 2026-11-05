@@ -22,5 +22,7 @@
   "default_branch": "main",
   "compatibility": [],
   "evidence": [],
-  "$id": "https://github.com/PCakes303/replace-repository-name/blob/main/manifest.json"
+  "$id": "https://github.com/PCakes303/replace-repository-name/blob/main/manifest.json",
+  "version": "0.1.0",
+  "entrypoints": []
 }
