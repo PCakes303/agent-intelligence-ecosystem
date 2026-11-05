@@ -11,10 +11,10 @@ This roadmap distinguishes repository provisioning from implementation, integrat
 
 - [x] Provision the master control-plane repository and all 30 public component repositories.
 - [x] Provision the separate private operations repository.
-- [x] Publish the canonical 32-entry repository registry and public-only catalog.
+- [x] Publish the canonical 34-entry repository inventory (32 public, 2 private) and 32-entry public-only catalog.
 - [x] Maintain dependency graph, manifest schema, architecture decisions, governance, and repository standards.
-- [x] Create a master staging snapshot for each of the 30 public component repositories.
-- [x] Verify live-to-staged manifest blob parity for all 30 components.
+- [x] Create a master staging snapshot for each of the 30 original public component repositories.
+- [x] Verify live-to-staged manifest blob parity for all 30 original components.
 - [x] Verify the three recently added snapshots by exact recursive path/blob comparison.
 - [x] Validate repository inventory, IDs, dependency references, capability/compatibility metadata, and README license-status consistency in master CI.
 - [x] Pass the latest master CI run: 22 jobs, 53 tests, seven component staging matrices across Python 3.10–3.12.
@@ -151,3 +151,23 @@ Exit gates:
 - [ ] Prototype compute-on-encoded-data operations for explicitly supported formats.
 - [ ] Add privacy, tenant-isolation, provenance, resource-exhaustion, and adversarial-input tests before distributed deployment.
 - [ ] Publish only reviewed, reproducible findings from the private research repository.
+
+
+## Phase 6 — Research and data representation
+
+**Provisioning: complete; local implementation: experimental; distributed research: not yet implemented.**
+
+Public implementation: `adaptive-swarm-compression`. Private research material is maintained separately and is not a dependency or public discovery source.
+
+Current public foundation includes identity and zlib lossless codecs, ordered local pipeline execution, source digest verification, bounded decompression, a representation-capsule schema, deterministic synthetic workloads, a local benchmark runner, and regression tests.
+
+Exit gates:
+- [ ] Verify remote CI on Python 3.10, 3.11, and 3.12.
+- [ ] Validate the representation-capsule schema in CI and define compatibility/versioning rules.
+- [ ] Publish repeated baseline measurements with complete local accounting and reproducibility details.
+- [ ] Decide and apply an explicit license before inviting external reuse or contributions.
+- [ ] Add exact master-staging parity and cross-repository contract tests.
+- [ ] Implement constrained pipeline selection with declared stage preconditions, resource limits, and exactness guarantees.
+- [ ] Prototype chunked selective reconstruction and compare it with full reconstruction.
+- [ ] Evaluate shared dictionaries only after accounting for distribution, synchronization, trust-boundary, and recovery costs.
+- [ ] Demonstrate a measurable benefit over conventional baselines before adding distributed swarm coordination.
