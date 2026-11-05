@@ -13,9 +13,9 @@ This roadmap distinguishes repository provisioning from implementation, integrat
 - [x] Provision the separate private operations repository.
 - [x] Publish the canonical 34-entry repository inventory (32 public, 2 private) and 32-entry public-only catalog.
 - [x] Maintain dependency graph, manifest schema, architecture decisions, governance, and repository standards.
-- [x] Create a master staging snapshot for each of the 30 original public component repositories.
-- [x] Verify live-to-staged manifest blob parity for all 30 original components.
-- [x] Verify the three recently added snapshots by exact recursive path/blob comparison.
+- [x] Create a master staging snapshot for each of the 31 public component repositories.
+- [x] Verify live-to-staged manifest blob parity for all 31 public components.
+- [x] Verify the three recently added original snapshots by exact recursive path/blob comparison.\n- [x] Add the adaptive-swarm-compression snapshot and verify exact 28/28 path/blob parity.
 - [x] Validate repository inventory, IDs, dependency references, capability/compatibility metadata, and README license-status consistency in master CI.
 - [x] Pass the latest master CI run: 22 jobs, 53 tests, seven component staging matrices across Python 3.10–3.12.
 - [ ] Complete human-owned GitHub account settings, branch rules, security features, and repository About metadata verification.
