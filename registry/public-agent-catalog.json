@@ -501,8 +501,8 @@
       "layer": "intelligence",
       "role": "Entity correlation, relationship modeling, and uncertainty reporting.",
       "repository_url": "https://github.com/PCakes303/osint-entity-resolution",
-      "existence": "not-created",
-      "implementation_status": "Staged in master; public-entity candidate matcher only; 16 tests pass on Python 3.10-3.12; review-required outputs.",
+      "existence": "exists",
+      "implementation_status": "Scaffolding deployed; bounded public non-personal candidate matcher; 23 product files; exact path/blob parity verified; remote CI matrix rerun pending.",
       "priority": "P2",
       "dependencies": [
         "osint-evidence",
@@ -515,9 +515,9 @@
         "secure-supply-chain"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/osint-entity-resolution/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-entity-resolution/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-entity-resolution/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
