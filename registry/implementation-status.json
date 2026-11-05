@@ -1536,10 +1536,10 @@
       "layer": "restricted-research",
       "visibility": "private",
       "existence": "exists",
-      "status": "Private research repository populated with research vision, roadmap, compression taxonomy, swarm information model, representation compiler and capsule designs, information folding, experiment register, benchmark protocol, open questions and decisions.",
+      "status": "Private research workspace exists and is populated; its contents are intentionally not reproduced in public status records. Excluded from the public catalog and public synchronization.",
       "priority": "P1",
       "importance": "Permanent private research authority for the information-representation and swarm-compression expansion.",
-      "next_gate": "Continue experiments and record hypotheses, negative results, measured findings and decisions; publish only reviewed material into the public implementation. Private contents must never enter public synchronization automatically."
+      "next_gate": "Maintain private-only research content and access controls; publish only individually reviewed findings through the public implementation when explicitly approved."
     }
   ],
   "package_readiness": {
