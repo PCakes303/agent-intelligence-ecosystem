@@ -19,13 +19,14 @@ Research files, hypotheses, and unpublished results remain inside the private wo
 
 ## Public implementation repository contents
 
-- README.md, ARCHITECTURE.md, ROADMAP.md, SECURITY.md, CONTRIBUTING.md
-- pyproject.toml and .gitignore
+- README.md, AGENTS.md, ARCHITECTURE.md, ROADMAP.md, SECURITY.md, CONTRIBUTING.md, and llms.txt
+- manifest.json, capabilities.json, compatibility.json, pyproject.toml, and .gitignore
 - Python package with explicit identity and zlib codecs, codec registry, pipeline model, exact reconstruction and SHA-256 integrity verification
 - 16 regression test cases covering round-trip, integrity, malformed streams, output limits, deterministic workloads, benchmark exactness, and metadata consistency
-- Representation Capsule JSON Schema
-- Benchmark and experiment documentation
+- Representation Capsule JSON Schema and repository manifest/capability/compatibility contracts
+- Benchmark runner, deterministic workloads, experiment register, threat model, and ecosystem integration map
 - GitHub Actions Python 3.10–3.12 test matrix
+- Exact 28/28 path and Git blob SHA parity against the master staging snapshot
 
 The implementation is experimental. No distributed swarm runtime, shared dictionary exchange, adaptive compiler, selective graph reconstruction, or performance superiority is claimed.
 
@@ -49,7 +50,7 @@ Subsequent documentation and test commits are recorded in each repository's defa
 ## Remaining gates
 
 1. Verify the public GitHub Actions workflow completes successfully on all three Python versions; the workflow is configured but its latest run is not yet verified.
-2. Run local package tests and add coverage for all decoder resource-limit paths.
+2. Verify the complete 16-test suite in GitHub Actions and review any failures; test source is present but a passing run is not yet confirmed.
 3. Run the reproducible benchmark runner repeatedly and publish baseline results with the full measurement boundary.
 4. Validate the capsule schema in CI.
 5. Confirm GitHub About descriptions, topics, and homepage values in repository settings.
