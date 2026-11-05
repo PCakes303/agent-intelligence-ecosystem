@@ -63,3 +63,12 @@ Trace requirements to designs, implementation, tests, and verification evidence.
 `planned`, `research`, `scaffolding`, `experimental`, `alpha`, `beta`, `stable`, `maintenance`, `deprecated`, `archived`.
 
 A maturity transition requires evidence recorded by the owning repository and reviewed through the ecosystem process. Documentation-only scaffolding is not a functioning implementation.
+
+
+## 8. Current portfolio readiness and distribution
+
+The portfolio is provisioned as 31 public repositories (the master control plane plus 30 component repositories) and one private operations repository. The master registry and staged component manifests are validated in CI. This establishes inventory and metadata coordination, not production integration.
+
+The component repositories currently contain specifications, schemas, examples, validators, tests, and starter tooling at varying maturity. They are not uniformly packaged or installable distributions. A repository manifest is an ecosystem metadata document, not a package manifest. Language-specific packaging is introduced only when a component has a stable reusable library or executable and a defined release contract.
+
+The synchronization design describes the target workflow. Authenticated event intake, immutable-revision validation, reviewed registry pull requests, scheduled drift reconciliation, and downstream integration tests must be implemented and evidenced before the ecosystem is described as automatically synchronized.
