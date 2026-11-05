@@ -26,7 +26,7 @@ Research files, hypotheses, and unpublished results remain inside the private wo
 - Representation Capsule JSON Schema and repository manifest/capability/compatibility contracts
 - Benchmark runner, deterministic workloads, experiment register, threat model, and ecosystem integration map
 - GitHub Actions Python 3.10–3.12 test matrix
-- Exact 29/29 path and Git blob SHA parity against the master staging snapshot
+- Exact 29/29 path and Git blob SHA parity against the master staging snapshot, including the current license and metadata-test fix
 
 The implementation is experimental. No distributed swarm runtime, shared dictionary exchange, adaptive compiler, selective graph reconstruction, or performance superiority is claimed.
 
@@ -50,11 +50,11 @@ Subsequent documentation and test commits are recorded in each repository's defa
 ## Remaining gates
 
 1. Verify the public GitHub Actions workflow completes successfully on all three Python versions; the workflow is configured but its latest run is not yet verified.
-2. Verify the complete 16-test suite in GitHub Actions and review any failures; test source is present but a passing run is not yet confirmed.
+2. Verify the 17-test suite in GitHub Actions and review any failures. A run failed because a metadata assertion still expected the pre-license status (16 passed, 1 failed); this assertion was corrected in commit 7d90adcd and the latest matrix run is queued.
 3. Run the reproducible benchmark runner repeatedly and publish baseline results with the full measurement boundary.
 4. Validate the capsule schema in CI.
 5. Confirm GitHub About descriptions, topics, and homepage values in repository settings.
-6. Apache-2.0 is approved and applied. Complete file-level provenance, contributor-authority and third-party notice review before inviting external reuse.
+6. Apache-2.0 is approved and applied at LICENSE; manifest and README agree. Complete file-level provenance, contributor-authority and third-party notice review before inviting external reuse.
 7. Build constrained pipeline selection before attempting swarm distribution.
 8. Do not expose private research content through public automation.
 
