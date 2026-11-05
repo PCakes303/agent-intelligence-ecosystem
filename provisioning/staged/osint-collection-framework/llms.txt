@@ -10,4 +10,4 @@
 - Validator: osint_collection/planner.py
 - Tests: tests/
 - Dependencies: osint-source-registry, identity-trust, policy-engine, audit-provenance, emergency-control, compliance-governance, secure-supply-chain (declared only).
-- License: pending portfolio review.
+- License: scoped mixed-license policy in LICENSE.md; file-level provenance and redistribution review remains required.
