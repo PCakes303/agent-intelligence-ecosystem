@@ -31,7 +31,7 @@ The portfolio and architecture are approved. All 31 public ecosystem repositorie
 - [Repository 28 evidence-tracker completion and back-check](checkpoints/2026-11-03-agent-compliance-governance-evidence-tracker.md)
 - [Repository 29 — Agent Conformance Lab](https://github.com/PCakes303/agent-conformance-lab) — 27 product files, exact staging parity, and CI passed 18 tests on Python 3.10–3.12; local validation scaffold, not live interoperability or certification.
 - [Repository 29 release-gates issue](https://github.com/PCakes303/agent-conformance-lab/issues/2)
-- [Repository 30 — Agent Federation Network](https://github.com/PCakes303/agent-federation-network) — partially deployed; 4/17 product files present, no parity or remote CI claim yet.
+- [Repository 30 — Agent Federation Network](https://github.com/PCakes303/agent-federation-network) — 17/17 product files exact-matched to staging; remote CI passed on Python 3.10–3.12. Local peer declaration validator only; no live federation.
 - [Repository 29 deployment checkpoint](checkpoints/2026-11-02-agent-conformance-lab-deployment.md)
 - [Portfolio-wide work review — PRs, issues, CI, staging parity and release gates](checkpoints/2026-11-02-portfolio-wide-work-review.md)
 
