@@ -23,18 +23,21 @@
   "verified_ci": {
     "master": {
       "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41989617836",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42003605442",
       "conclusion": "success",
-      "head_sha": "a83b01d7cc10fb786ad45e9925596648debaf743",
-      "tests": 47,
+      "head_sha": "6c25e1118b8f5543ca459ef4e2e9d514ca63d6c8",
+      "tests": 52,
       "staging_packets": 7,
       "staging_python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
-      "scope": "Master registry/catalog validation, 47-test regression suite, entry-level build, and retained staging validation packets across Python 3.10–3.12; successful run after OSINT Evidence Engine deployment and portfolio synchronization.",
-      "exact_parity_packets": 18
+      "matrix_jobs": 22,
+      "staged_component_directories": 30,
+      "staged_manifest_schema_checks": 30,
+      "live_staged_manifest_blob_parity": 30,
+      "scope": "Master registry/catalog validation, 52-test regression suite, complete 30-component staging inventory, canonical manifest schema validation, capability/compatibility metadata alignment, manifest dependency parity, and seven component staging matrices across Python 3.10–3.12."
     },
     "agent-ai-discovery": {
       "repository_url": "https://github.com/PCakes303/agent-ai-discovery",
@@ -339,16 +342,18 @@
     },
     "osint-entity-resolution": {
       "repository_url": "https://github.com/PCakes303/osint-entity-resolution",
-      "workflow_run": "https://github.com/PCakes303/osint-entity-resolution/actions/runs/41991499807",
+      "workflow_run": "https://github.com/PCakes303/osint-entity-resolution/actions/runs/41998580268",
       "conclusion": "success",
-      "head_sha": "dc18574a9ece543a56c8dbcf43840fb60b91b6a2",
+      "head_sha": "043ef45b8b725eb53f41663ed45e1a58b393a826",
       "tests": 21,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
-      "note": "Passed 21 tests on Python 3.10–3.12 before the subsequent capability-metadata evidence-path correction; latest rerun pending."
+      "product_files": 23,
+      "staging_parity": "exact",
+      "note": "Passed after capability metadata evidence-path correction."
     },
     "emergency-control": {
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
@@ -387,9 +392,9 @@
     },
     "agent-compliance-governance": {
       "repository_url": "https://github.com/PCakes303/agent-compliance-governance",
-      "workflow_run": "https://github.com/PCakes303/agent-compliance-governance/actions/runs/41550467761",
+      "workflow_run": "https://github.com/PCakes303/agent-compliance-governance/actions/runs/41999136955",
       "conclusion": "success",
-      "head_sha": "7be5924356be62ba4f0f8d018efe4d7d3b4e4fc4",
+      "head_sha": "cb4668d90ce865f1534bad24ca2885fd03e0d3e9",
       "tests": 10,
       "python_versions": [
         "3.10",
@@ -399,13 +404,14 @@
       "product_files": 29,
       "collected_evidence_records": 0,
       "evidence_gap_records": 11,
-      "staging_parity": "exact"
+      "staging_parity": "exact",
+      "scope": "Control register and evidence-gap validator only; no legal advice or compliance certification."
     },
     "agent-conformance-lab": {
       "repository_url": "https://github.com/PCakes303/agent-conformance-lab",
-      "workflow_run": "https://github.com/PCakes303/agent-conformance-lab/actions/runs/41554099804",
+      "workflow_run": "https://github.com/PCakes303/agent-conformance-lab/actions/runs/41999242633",
       "conclusion": "success",
-      "head_sha": "747ff223aa4aef1549593b7755b72feb2fde0da7",
+      "head_sha": "47f0bf73d5c2fe07032cbf898b9799950e897d1a",
       "tests": 18,
       "python_versions": [
         "3.10",
@@ -414,7 +420,22 @@
       ],
       "product_files": 27,
       "staging_parity": "exact",
-      "scope": "local metadata, fixture and deterministic report validation; no live interoperability or certification"
+      "scope": "Local metadata, fixture and deterministic report validation only; no live interoperability or certification."
+    },
+    "agent-federation-network": {
+      "repository_url": "https://github.com/PCakes303/agent-federation-network",
+      "workflow_run": "https://github.com/PCakes303/agent-federation-network/actions/runs/41999398564",
+      "conclusion": "success",
+      "head_sha": "0934b11fe05353e4dfb8d2a3a21df0fbb6e9556c",
+      "tests": 11,
+      "python_versions": [
+        "3.10",
+        "3.11",
+        "3.12"
+      ],
+      "product_files": 17,
+      "staging_parity": "exact",
+      "scope": "Local peer declaration validator only; no peer authentication, signature verification, network transport, credential exchange, remote authorization or STOP propagation."
     }
   },
   "repositories": [
@@ -1604,7 +1625,7 @@
       "repository": "agent-compliance-governance",
       "path": "provisioning/staged/agent-compliance-governance",
       "file_count": 28,
-      "status": "Prepared in master staging; public remote not yet created. Includes Colorado legal-monitor register, proposed governance controls, empty evidence index, strict JSON/schema validators and Python 3.10–3.12 staging CI. No legal advice, applicability determination or compliance certification."
+      "status": "Deployed to PCakes303/agent-compliance-governance; 29 product files exact-matched to master staging; remote CI passed 10 tests on Python 3.10–3.12 (run 41999136955). Governance register and evidence-gap validator only; 0 collected evidence records and no legal advice or certification."
     },
     {
       "repository": "osint-collection-framework",
@@ -1622,7 +1643,7 @@
       "repository": "osint-entity-resolution",
       "path": "provisioning/staged/osint-entity-resolution",
       "file_count": 22,
-      "status": "Prepared in master staging; public remote not yet created. 16 tests passed on Python 3.10–3.12. Public organization/project/dataset/publication/registry candidate matching only; no people matching, personal profiling, auto-merge, identity assertion, network lookup or graph writes."
+      "status": "Deployed to PCakes303/osint-entity-resolution; 23 product files exact-matched to master staging; remote CI passed 21 tests on Python 3.10–3.12 after capability metadata correction (run 41998580268). Public non-personal candidate matching only; no people matching, profiling, auto-merge, identity assertion, network lookup or graph writes."
     },
     {
       "repository": "agent-conformance-lab",
