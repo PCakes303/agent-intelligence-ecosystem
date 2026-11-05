@@ -13,12 +13,12 @@
 | Total planned repositories | 32 |
 | Public repositories | 31 |
 | Private repositories | 1 |
-| Public repositories currently present | 30 |
+| Public repositories currently present | 31 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 1 |
+| Public repositories not yet created | 0 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The latest reconciliation verified 30 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. The 1 remaining public repository is recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The latest reconciliation verified all 31 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. No public repositories remain to be created. The final federation repository exists but its product deployment and verification remain incomplete.
 
 ## Approved portfolio expansion
 
@@ -239,9 +239,9 @@ The `agent-conformance-lab` (canonical portfolio position 30/32) is staged as a 
 
 ## Federation network — staging
 
-The final uncreated public component, `agent-federation-network` (portfolio registry number 30/32), now has a 16-product-file staging packet under `provisioning/staged/agent-federation-network/`. The scaffold validates bounded local peer declarations, explicit scope, timezone-aware expiry, trust-state and STOP fields, and a SHA-256 trust-anchor reference. Active declarations return `REVIEW_REQUIRED`, never trusted; pending, revoked, expired or STOPped declarations are blocked. It performs no peer authentication, signature verification, credential exchange, network transport, remote authorization, revocation distribution or emergency STOP propagation.
+The final public component, `agent-federation-network` (portfolio registry position 30/32), exists remotely. Its 17-product-file staging packet is under `provisioning/staged/agent-federation-network/`. The scaffold validates bounded local peer declarations, explicit scope, timezone-aware expiry, trust-state and STOP fields, and a SHA-256 trust-anchor reference. Active declarations return `REVIEW_REQUIRED`, never trusted; pending, revoked, expired or STOPped declarations are blocked. It performs no peer authentication, signature verification, credential exchange, network transport, remote authorization, revocation distribution or emergency STOP propagation.
 
-The master registry and public catalog now declare identity, discovery, swarm coordination, policy, audit provenance, secure supply chain, emergency control and compliance governance as federation dependencies. The public remote remains uncreated. Python 3.10–3.12 staging CI is pending; no production federation claim is made.
+The master registry and public catalog now declare identity, discovery, swarm coordination, policy, audit provenance, secure supply chain, emergency control and compliance governance as federation dependencies. The public remote has only 4 of 17 product files deployed. Thirteen remain; exact path/blob parity and remote CI are not yet verified. No production federation claim is made.
 
 
 ## 2026-11-05 deployment checkpoint — osint-evidence-engine
@@ -252,3 +252,8 @@ The master registry and public catalog now declare identity, discovery, swarm co
 ## 2026-11-05 deployment checkpoint — osint-entity-resolution
 
 `osint-entity-resolution` is deployed at [PCakes303/osint-entity-resolution](https://github.com/PCakes303/osint-entity-resolution). All 23 staged product paths match the remote by path and Git blob SHA; zero missing, differing or extra paths. Its first remote CI attempt exposed an escaped Python matrix expression; the workflow was corrected in both the remote and master staging packet. The corrected remote CI matrix passed all three jobs on Python 3.10, 3.11 and 3.12 (21 tests): [run 41991499807](https://github.com/PCakes303/osint-entity-resolution/actions/runs/41991499807). The portfolio now has 30 public repositories present, 1 private repository present, and 1 public repository remaining: `agent-federation-network`.
+
+
+## Final public repository — federation deployment in progress (2026-11-05)
+
+`agent-federation-network` now exists on GitHub. The live recursive tree currently contains only `README.md`, `AGENTS.md`, `CONTRIBUTING.md`, and `SECURITY.md` (4/17 staged product files). The remaining 13 files include machine-readable manifest/capability/compatibility metadata, CI, Python implementation, schema, tests, threat/contract docs, `llms.txt`, requirements and license policy. The master registry, implementation-status record, public catalog and provisioning inventory now reflect remote existence and partial deployment. Do not mark this repository complete until all 17 files are deployed, exact staging/remote path and blob parity is verified, and remote CI passes. The validator remains local-only; no live federation capability is claimed.
