@@ -25,13 +25,13 @@
 - All component capability metadata was checked for version 1.1.0; `osint-entity-resolution` was corrected in both remote and master staging and its remote CI passed: https://github.com/PCakes303/osint-entity-resolution/actions/runs/41994194186
 - The master About metadata manifest now contains 31 public repository descriptions/topics. These settings are prepared but not applied to GitHub because the connected integration does not expose repository About updates.
 - Dependency review found two manifests missing the master control-plane dependency; those remote manifests and available staging copy were corrected. The graph documentation now clarifies that edges can represent optional integrations as well as required contract prerequisites.
-- A manifest-schema convergence gap remains: several newer repositories use a compact manifest shape that does not validate against the master `repository-manifest.schema.json`; the knowledge-graph manifest also uses a distinct shape, and sandbox-security has a noncanonical license status value. These require a deliberate migration or an approved versioned schema profile before claiming universal manifest conformance.
+- Manifest-schema convergence: the eight previously noncanonical component manifests were migrated to the master `repository-manifest.schema.json`; the knowledge graph's distinct format was normalized. The canonical schema now preserves `version` and `entrypoints` and accepts the interface kinds already used by the ecosystem (`format`, `specification`, `library-function`, `json-schema`). All 27 staged component manifests validate in master CI. The eight migrated live manifests match their master staging blobs exactly (8/8). Three live canonical manifests do not currently have a corresponding staging directory, so they are not part of the staged-manifest CI scan.
 - All 30 component manifest dependency IDs were compared with the master registry; all 30 match after adding the master dependency to integration and foundation manifests. Secure-supply-chain retains identity and audit integrations as optional, and the master dependency graph now documents optional integration edges explicitly.
-- License review wording still needs harmonization: several READMEs describe the scoped mixed-license model as already applied while their manifests remain `pending-review`. Treat per-repository/file-level licensing and third-party provenance as open until reviewed; do not make release or reuse claims from README wording alone.
+- License wording was corrected in all eight migrated repositories: README text now describes the mixed-license policy as intended and explicitly reflects `pending-review` in the manifest. The policy files document Apache-2.0/CC BY 4.0 scope for eligible original material, but contributor authority, file-level provenance and third-party notices remain unverified. Keep license status pending until the human review is complete.
 
 ## Master validation status
 
-The master validation workflow passed at commit `c1ac6294ace008fb219192fc1eab3fe0ff967a9a`: [run 41995411453](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41995411453). The `validate` job passed all 47 regression tests, registry and catalog validation, and entry-level build; all staged matrices for collection, evidence, entity-resolution, conformance, emergency-control, compliance-governance and federation passed. Later commits updated only the master README, portfolio tracker and audit checkpoint; their triggered validation runs are still being checked.
+The master validation workflow passed at commit `a1c591aa661cffdb0abed09eb743f7a4fddbf613`: [run 41998445822](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41998445822). The `validate` job passed 48 regression tests, registry/catalog checks, the canonical manifest template and all 27 staged component manifest schema checks. All staged matrices for collection, evidence, entity-resolution, conformance, emergency-control, compliance-governance and federation passed. This run verifies the schema migration and maturity normalization.
 
 ## Safety and maturity boundary
 
@@ -54,3 +54,12 @@ Legal applicability and compliance conclusions require qualified review. The com
 - osint-evidence-engine: 25 product files exact-matched; remote CI passed Python 3.10–3.12 (21 tests): https://github.com/PCakes303/osint-evidence-engine/actions/runs/41989265888
 - osint-entity-resolution: 23 product files exact-matched; remote CI passed Python 3.10–3.12 (21 tests), including the metadata-aligned run above.
 - agent-federation-network: 17 product files exact-matched; remote CI passed Python 3.10–3.12 (run above).
+
+
+## Canonical manifest convergence — 2026-11-05
+
+The eight manifests previously outside the canonical schema were normalized in both live repositories and master staging: `osint-collection-framework`, `osint-evidence-engine`, `osint-entity-resolution`, `agent-emergency-control`, `agent-compliance-governance`, `agent-conformance-lab`, `agent-federation-network`, and `intelligence-knowledge-graph`. Each now uses the canonical `manifest_version`, registry ID/name, public visibility, normalized maturity, summary, structured pending license, interface list, dependency objects, entrypoints, security declaration, repository URL, compatibility list and test evidence. Live/staged manifest Git blob parity is 8/8.
+
+The master manifest schema now retains the component implementation `version` and `entrypoints`; interface `kind` enumerates the actual interface types in use. A new regression test validates every staged component manifest against the schema. Master CI run 41998445822 passed all 48 tests and all 22 staged matrix jobs.
+
+Eight README licensing statements were clarified to match the `pending-review` manifest state. This is documentation consistency only, not legal or provenance approval. The license review remains an owner task.
