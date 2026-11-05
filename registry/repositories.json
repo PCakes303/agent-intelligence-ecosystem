@@ -289,7 +289,7 @@
       "name": "osint-evidence-engine",
       "visibility": "public",
       "layer": "intelligence",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Evidence preservation, provenance, hashes, timestamps, and reproducibility.",
       "dependencies": [
         "osint-collection",
