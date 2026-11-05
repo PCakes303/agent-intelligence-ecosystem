@@ -27,32 +27,14 @@
     "aix-core",
     "intelligence-knowledge-graph",
     "mrcakes931-ecosystem",
+    "osint-collection-framework",
     "osint-source-registry",
     "swarm-coordination",
     "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 4,
+  "missing_public_repository_count": 3,
   "repositories": [
-    {
-      "name": "osint-collection-framework",
-      "description": "Authorized public-information collection through tools and adapters.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "osint-collection",
-      "dependencies": [
-        "osint-source-registry",
-        "policy-engine",
-        "identity-trust",
-        "audit-provenance",
-        "emergency-control",
-        "compliance-governance",
-        "secure-supply-chain"
-      ]
-    },
     {
       "name": "osint-evidence-engine",
       "description": "Evidence preservation, provenance, hashes, timestamps, and reproducibility.",
