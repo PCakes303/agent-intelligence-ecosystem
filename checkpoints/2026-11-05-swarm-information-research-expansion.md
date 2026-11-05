@@ -8,34 +8,21 @@
 
 | Repository | Visibility | Verified state |
 |---|---|---|
-| [swarm-information-research](https://github.com/PCakes303/swarm-information-research) | Private | Exists under PCakes303; admin/push access confirmed; initial research charter and 10 substantive research files committed |
+| Restricted research workspace | Private | Existence and access confirmed; private content intentionally omitted from this public checkpoint |
 | [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) | Public | Exists under PCakes303; admin/push access confirmed; implementation scaffold, tests, schema, docs and CI workflow committed |
 
 Both repositories initially had no files. The README files were created first; no existing user content was overwritten.
 
-## Private research repository contents
+## Restricted research contents
 
-- README.md
-- RESEARCH_VISION.md
-- RESEARCH_ROADMAP.md
-- COMPRESSION_TAXONOMY.md
-- SWARM_INFORMATION_MODEL.md
-- REPRESENTATION_COMPILER.md
-- REPRESENTATION_CAPSULE.md
-- INFORMATION_FOLDING.md
-- EXPERIMENT_REGISTER.json
-- BENCHMARK_PROTOCOL.md
-- OPEN_QUESTIONS.md
-- DECISIONS.md
-
-The research repository records hypotheses and plans, not validated experimental results.
+Research files, hypotheses, and unpublished results remain inside the private workspace and are intentionally not itemized in this public checkpoint. The private workspace records hypotheses and plans, not validated experimental results.
 
 ## Public implementation repository contents
 
 - README.md, ARCHITECTURE.md, ROADMAP.md, SECURITY.md, CONTRIBUTING.md
 - pyproject.toml and .gitignore
 - Python package with explicit identity and zlib codecs, codec registry, pipeline model, exact reconstruction and SHA-256 integrity verification
-- Round-trip, integrity, malformed-stream, and output-limit tests
+- 12 regression test cases covering round-trip, integrity, malformed streams, output limits, deterministic workloads, and benchmark exactness
 - Representation Capsule JSON Schema
 - Benchmark and experiment documentation
 - GitHub Actions Python 3.10–3.12 test matrix
@@ -53,7 +40,6 @@ The implementation is experimental. No distributed swarm runtime, shared diction
 
 ## Commits recorded
 
-Private research README: 12290a833e19e0c14e38744fb3bdcfe311a1f26f  
 Public implementation README: 2f5f7a861699dfba807d8da8eea7d93d439907e3  
 Public implementation CI workflow: bd365e444d804ad3003f28bde5a88ed6d19fb4b3  
 Public output-limit hardening: bee793b78fb0555437c361b25e8b5e0e7e6046e0
@@ -62,12 +48,12 @@ Subsequent documentation and test commits are recorded in each repository's defa
 
 ## Remaining gates
 
-1. Verify the public GitHub Actions workflow completes successfully on all three Python versions.
+1. Verify the public GitHub Actions workflow completes successfully on all three Python versions; the workflow is configured but its latest run is not yet verified.
 2. Run local package tests and add coverage for all decoder resource-limit paths.
-3. Add a reproducible benchmark runner and publish baseline results.
+3. Run the reproducible benchmark runner repeatedly and publish baseline results with the full measurement boundary.
 4. Validate the capsule schema in CI.
 5. Confirm GitHub About descriptions, topics, and homepage values in repository settings.
-6. Review licensing and contributor-authority policy before declaring public redistribution terms.
+6. Select and apply an explicit license, then review contributor-authority and third-party notice policy before inviting external reuse.
 7. Build constrained pipeline selection before attempting swarm distribution.
 8. Do not expose private research content through public automation.
 
