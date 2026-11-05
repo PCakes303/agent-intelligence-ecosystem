@@ -304,8 +304,8 @@
       "name": "osint-entity-resolution",
       "visibility": "public",
       "layer": "intelligence",
-      "status": "planned",
-      "role": "Entity correlation, relationship modeling, and uncertainty reporting.",
+      "status": "scaffolding",
+      "role": "Bounded candidate matching among public organizations, software projects, datasets, publications and registries; review-required only, no people matching, identity assertion, auto-merge or graph writes.",
       "dependencies": [
         "osint-evidence",
         "schema-registry",
