@@ -1,15 +1,11 @@
-# Staging Status — agent-conformance-lab
+# Staging Status
 
-- Portfolio ID: conformance-lab
-- Canonical registry position: 30 of 32 (29th component; master is position 1)
-- GitHub owner: PCakes303
-- Intended visibility: public
-- Remote repository: not yet created; the connected GitHub integration cannot create repositories.
-- Staging state: initial scaffold prepared in the master repository.
-- Maturity: local metadata/fixture validator and deterministic report builder only.
-- License: scoped mixed-license policy included in staged LICENSE.md; file-level provenance clearance remains required.
-- Dependencies: foundation spec, schema registry, AIX core/codecs, transport gateway, swarm runtime, identity trust, policy engine, audit provenance, secure supply chain, emergency control and compliance governance (declared only).
-- Implemented in this staging packet: local manifest/capability/compatibility consistency checks; synthetic AIX envelope schema; conformance report builder with PASS/FAIL/BLOCKED semantics; report digest; synthetic tests; Python 3.10–3.12 CI.
-- Not implemented: arbitrary code execution, live interoperability, production swarm benchmarking, security certification or compliance certification.
-- Required before remote deployment: owner creates public repository PCakes303/agent-conformance-lab, then the staging product files are pushed and CI verified.
-- Required before production: satisfy every gate in docs/INTEGRATION-GATES.md and keep missing evidence BLOCKED.
+- Portfolio registry number: 30/32.
+- Canonical ID: conformance-lab.
+- Visibility: public.
+- State: deployed to PCakes303/agent-conformance-lab.
+- Product files: 27; exact path and Git blob SHA parity verified (27/27). This master-only status file is excluded from product parity.
+- Remote CI: passed 18 tests on Python 3.10, 3.11 and 3.12 at [run 41999242633](https://github.com/PCakes303/agent-conformance-lab/actions/runs/41999242633).
+- Scope: local metadata, fixture and deterministic report validation only; no live interoperability, remote execution or certification.
+- License: manifest remains `pending-review`; contributor authority, file-level provenance and third-party notices require review.
+- Production gate: pinned cross-repository fixtures, authenticated identities, cryptographic verification, runtime enforcement and independent security review.
