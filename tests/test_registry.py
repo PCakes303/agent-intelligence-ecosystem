@@ -42,6 +42,41 @@ class RegistryValidationTests(unittest.TestCase):
             )
         self.assertEqual(errors, [])
 
+    def test_staged_component_inventory_matches_public_registry(self):
+        expected = {
+            item["name"]
+            for item in self.registry["repositories"]
+            if item["visibility"] == "public" and item["name"] != "agent-intelligence-ecosystem"
+        }
+        staged_root = ROOT / "provisioning" / "staged"
+        actual = {path.name for path in staged_root.iterdir() if path.is_dir()}
+        self.assertEqual(actual, expected)
+
+    def test_staged_manifest_dependencies_match_registry(self):
+        by_id = {item["id"]: item for item in self.registry["repositories"]}
+        paths = sorted((ROOT / "provisioning" / "staged").glob("*/manifest.json"))
+        self.assertEqual(len(paths), len(by_id) - 2)  # exclude master and private operations
+        errors = []
+        for path in paths:
+            manifest = load_json(path)
+            row = by_id.get(manifest.get("id"))
+            if row is None:
+                errors.append(f"{path}: unknown registry id {manifest.get('id')}")
+                continue
+            manifest_deps = {item["id"] for item in manifest.get("dependencies", [])}
+            registry_deps = set(row.get("dependencies", []))
+            if manifest_deps != registry_deps:
+                errors.append(
+                    f"{path}: manifest dependencies {sorted(manifest_deps)} "
+                    f"do not match registry dependencies {sorted(registry_deps)}"
+                )
+        self.assertEqual(errors, [])
+
+    def test_no_public_repositories_remain_uncreated(self):
+        status = load_json(ROOT / "registry" / "implementation-status.json")
+        self.assertEqual(status["observed"]["public_repositories_missing"], 0)
+        self.assertEqual(status["staged_not_created"], [])
+
     def test_rejects_unknown_dependency(self):
         registry = json.loads(json.dumps(self.registry))
         registry["repositories"][0]["dependencies"] = ["does-not-exist"]
