@@ -1,5 +1,5 @@
 {
-  "capabilities_version": "1.0.0",
+  "capabilities_version": "1.1.0",
   "repository": "agent-federation-network",
   "repository_id": "federation-network",
   "maturity": "scaffolded",
