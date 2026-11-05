@@ -624,10 +624,10 @@
       "name": "agent-federation-network",
       "visibility": "public",
       "layer": "adoption",
-      "role": "Federation between independently operated agent networks.",
+      "role": "Local peer declaration contract validator for independently operated agent networks; no live federation.",
       "repository_url": "https://github.com/PCakes303/agent-federation-network",
-      "existence": "not-created",
-      "implementation_status": "Staged in master; bounded local peer declaration validator and contract tests; public remote not created.",
+      "existence": "exists",
+      "implementation_status": "Partially deployed: 4/17 staged product files on main; 13 remain. Remote parity and CI not verified. Local peer declaration validation only.",
       "priority": "P2",
       "dependencies": [
         "identity-trust",
@@ -640,9 +640,9 @@
         "compliance-governance"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/agent-federation-network/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/agent-federation-network/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/agent-federation-network#readme"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
