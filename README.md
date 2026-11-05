@@ -1,6 +1,6 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-**Status:** Portfolio provisioned and master coordination checks passing — 32 public repositories and 2 private repositories exist. All 30 public component repositories have staged master snapshots; master CI validates the portfolio registry and metadata. Production implementations, cross-repository runtime integration, package releases, and account-level security settings remain separate work.  
+**Status:** Portfolio provisioned — 32 public repositories and 2 private repositories exist. Master registry and discovery metadata have been updated for the research expansion; the latest post-expansion master CI result is not yet verified. The original 30 public component repositories have staged master snapshots; `adaptive-swarm-compression` still requires master-staging parity. Production implementations, cross-repository runtime integration, package releases, and account-level security settings remain separate work.  
 **Portfolio:** 34 repositories (32 public, 2 private)  
 **Owner:** PCakes303 (public project identity: MrCakes931)
 
