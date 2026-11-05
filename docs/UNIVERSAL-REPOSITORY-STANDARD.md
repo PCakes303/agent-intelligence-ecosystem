@@ -30,7 +30,7 @@ Every public repository must have the following, unless a documented, approved e
 - `manifest.json`: machine-readable identity, version/maturity, purpose, entrypoints, dependency declarations and links. It must agree with the registry and implementation.
 - `capabilities.json`: only capabilities demonstrably implemented; distinguish implemented, experimental, advisory and planned.
 - `compatibility.json`: tested compatibility and protocol/version matrix. Unknown or untested compatibility must be marked unknown/not-tested, not assumed.
-- `.github/workflows/`: reproducible CI for the languages and checks the repository actually uses.
+- `.github/workflows/`: reproducible CI for the languages and checks the repository actually uses. The workflow may be named `ci.yml`, `validate.yml`, or another descriptive filename; the required property is an active, passing workflow, not a specific filename.
 - `tests/`: meaningful tests, including negative/invalid-input cases for validators and security-sensitive contracts.
 - `docs/`: detailed, maintained documentation for the repository's actual domain.
 
