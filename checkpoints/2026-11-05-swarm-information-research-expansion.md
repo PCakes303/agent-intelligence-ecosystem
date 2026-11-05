@@ -22,7 +22,7 @@ Research files, hypotheses, and unpublished results remain inside the private wo
 - README.md, AGENTS.md, ARCHITECTURE.md, ROADMAP.md, SECURITY.md, CONTRIBUTING.md, and llms.txt
 - manifest.json, capabilities.json, compatibility.json, pyproject.toml, and .gitignore
 - Python package with explicit identity and zlib codecs, codec registry, pipeline model, exact reconstruction and SHA-256 integrity verification
-- 16 regression test cases covering round-trip, integrity, malformed streams, output limits, deterministic workloads, benchmark exactness, and metadata consistency
+- 17 regression test cases covering round-trip, integrity, malformed streams, output limits, deterministic workloads, benchmark exactness, and metadata consistency
 - Representation Capsule JSON Schema and repository manifest/capability/compatibility contracts
 - Benchmark runner, deterministic workloads, experiment register, threat model, and ecosystem integration map
 - GitHub Actions Python 3.10–3.12 test matrix
