@@ -5,7 +5,7 @@
   "owner": "PCakes303",
   "public_identity": "https://github.com/PCakes303",
   "visibility_scope": "public-only",
-  "repository_count": 31,
+  "repository_count": 32,
   "discovery_notice": "This catalog is descriptive metadata, not authentication, authorization, endorsement, or proof of runtime capability.",
   "repositories": [
     {
@@ -719,6 +719,32 @@
         "readme": "https://github.com/PCakes303/agent-compliance-governance/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability; planned entries are not implementations."
+    },
+    {
+      "id": "adaptive-swarm-compression",
+      "name": "adaptive-swarm-compression",
+      "visibility": "public",
+      "layer": "research-and-data-systems",
+      "role": "Experimental local lossless codec pipeline and representation-capsule foundation for research into adaptive, collective information representation; no distributed swarm execution or shared-dictionary service yet.",
+      "repository_url": "https://github.com/PCakes303/adaptive-swarm-compression",
+      "existence": "exists",
+      "implementation_status": "Experimental scaffold; local identity/zlib lossless pipeline, exact round-trip tests, benchmark plan and representation-capsule schema; remote CI and distributed swarm features not yet verified.",
+      "priority": "P1",
+      "dependencies": [
+        "aix-codecs",
+        "aix-core",
+        "resource-manifest",
+        "swarm-state-mesh",
+        "swarm-runtime",
+        "knowledge-graph",
+        "audit-provenance"
+      ],
+      "discovery": {
+        "readme": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/README.md",
+        "architecture": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/ARCHITECTURE.md",
+        "roadmap": "https://github.com/PCakes303/adaptive-swarm-compression/blob/main/ROADMAP.md"
+      },
+      "evidence_policy": "Verify repository-local tests and benchmark evidence before asserting capability; repository existence and scaffolding do not prove distributed swarm behavior."
     }
   ]
 }
