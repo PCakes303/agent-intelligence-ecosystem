@@ -1,0 +1,60 @@
+{
+  "capabilities_version": "1.1.0",
+  "repository": "mrcakes931-ecosystem",
+  "repository_id": "human-guide",
+  "maturity": "scaffolding",
+  "capabilities": [
+    {
+      "id": "guide.architecture",
+      "name": "Architecture and data-flow guide",
+      "status": "scaffolded",
+      "description": "Architecture documentation describes ecosystem layers and trust boundaries.",
+      "evidence": [
+        "docs/ARCHITECTURE.md"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "guide.onboarding",
+      "name": "Onboarding and contribution paths",
+      "status": "scaffolded",
+      "description": "Onboarding documentation provides human contribution and navigation guidance.",
+      "evidence": [
+        "docs/ONBOARDING.md"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "guide.repository-map",
+      "name": "Repository map and dependency navigation",
+      "status": "scaffolded",
+      "description": "Repository map provides a human-readable navigation layer.",
+      "evidence": [
+        "docs/REPOSITORY-MAP.md"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "guide.governance",
+      "name": "Release and governance overview",
+      "status": "planned",
+      "description": "A complete governance and release operating model remains future work.",
+      "evidence": [],
+      "limitations": [
+        "Not implemented; no interoperability or runtime claim."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Canonical repository metadata (master owns it)",
+    "Implementation authority for component repositories",
+    "Private operational details",
+    "Claims that planned components are already implemented"
+  ]
+}
