@@ -23,9 +23,9 @@
   "verified_ci": {
     "master": {
       "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42008082966",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/42009078062",
       "conclusion": "success",
-      "head_sha": "75cd440d3f4ed3c6d0d6bc6dd1870a7216ee59e7",
+      "head_sha": "ce5d97794f60409b3db266444a2f6c1db43de06f",
       "tests": 54,
       "staging_packets": 7,
       "staging_python_versions": [
@@ -55,7 +55,7 @@
         "repositories_with_docs": 30,
         "missing_common_files": 0
       },
-      "scope": "Master registry/catalog validation, 54-test regression suite, 30-component staging inventory, canonical manifest schema and dependency/ID checks, capability/compatibility metadata checks, README license-status consistency, common baseline file-presence checks, and seven component staging matrices across Python 3.10–3.12."
+      "scope": "Latest master validation run: 54 regression tests, all 22 jobs passed, 32 repository registry entries, 124 dependency edges, public catalog completeness, 30-component manifest/dependency/capability/compatibility checks, README license-status and common baseline checks, plus seven staging matrices across Python 3.10–3.12."
     },
     "agent-ai-discovery": {
       "repository_url": "https://github.com/PCakes303/agent-ai-discovery",
