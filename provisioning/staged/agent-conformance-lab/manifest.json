@@ -6,7 +6,7 @@
   "name": "agent-conformance-lab",
   "version": "0.1.0",
   "visibility": "public",
-  "maturity": "scaffolded",
+  "maturity": "scaffolding",
   "summary": "Local contract, metadata and fixture validation with deterministic reports. This scaffold does not establish live interoperability, security certification or production conformance.",
   "license": {
     "expression": null,

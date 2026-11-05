@@ -6,7 +6,7 @@
   "name": "agent-emergency-control",
   "version": "0.1.0",
   "visibility": "public",
-  "maturity": "scaffolded",
+  "maturity": "scaffolding",
   "summary": "STOP and RESUME command contracts with a fail-closed reference state reducer. This is not a deployed emergency-stop authority, propagation service or runtime enforcement mechanism.",
   "license": {
     "expression": null,

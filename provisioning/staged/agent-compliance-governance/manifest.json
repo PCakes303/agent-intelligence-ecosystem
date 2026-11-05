@@ -6,7 +6,7 @@
   "name": "agent-compliance-governance",
   "version": "0.1.0",
   "visibility": "public",
-  "maturity": "scaffolded",
+  "maturity": "scaffolding",
   "summary": "Machine-readable compliance control catalogues, legal-applicability registers and evidence-gap tracking for AI systems. Governance scaffold only; not legal advice, compliance determination or certification.",
   "license": {
     "expression": null,
