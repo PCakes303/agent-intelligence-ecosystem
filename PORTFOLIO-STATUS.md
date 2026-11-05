@@ -1,6 +1,6 @@
 # 32-Repository Portfolio Status and Work Tracker
 
-**As of:** 2026-11-02  
+**As of:** 2026-11-05  
 **Owner:** [PCakes303](https://github.com/PCakes303) · **Public identity:** MrCakes931  
 **Master control plane:** [agent-intelligence-ecosystem](https://github.com/PCakes303/agent-intelligence-ecosystem)
 
@@ -13,12 +13,12 @@
 | Total planned repositories | 32 |
 | Public repositories | 31 |
 | Private repositories | 1 |
-| Public repositories currently present | 27 |
+| Public repositories currently present | 28 |
 | Private repositories currently present | 1 |
-| Public repositories not yet created | 4 |
+| Public repositories not yet created | 3 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The latest reconciliation verified 27 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. The 4 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
+The latest reconciliation verified 28 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. The 3 missing public repositories are recorded in [the provisioning inventory](provisioning/remote-repositories-to-create.json).
 
 ## Approved portfolio expansion
 
@@ -57,7 +57,7 @@ The portfolio now contains 32 repositories: 31 public and 1 private. Repository 
 | 17 | [`swarm-coordination`](https://github.com/PCakes303/swarm-coordination) | swarm | **Scaffolded; 18 files deployed; [latest CI passed](https://github.com/PCakes303/swarm-coordination/actions/runs/41417899230) on Python 3.10, 3.11 and 3.12 (17 tests)** — task delegation, policy-gated idempotency, acknowledgement binding, bounded retries and lease recovery | P1 | Next: AIX/discovery/capability conformance fixtures, authenticated dispatch, durable shared state and multi-node fencing/recovery. |
 | 18 | [`swarm-state-mesh`](https://github.com/PCakes303/swarm-state-mesh) | swarm | **Scaffolded; 19 files deployed; 23 schema/model tests pass on Python 3.10, 3.11 and 3.12; single-process volatile state store.** | P1 | Maintains shared task state and reconciliation across unreliable links. **Next:** Implement authenticated writers, durable storage and audit provenance; define replication, partition and recovery semantics; add cross-process replay protection and adversarial distributed tests; verify governance and licensing. |
 | 19 | [`osint-source-registry`](https://github.com/PCakes303/osint-source-registry) | intelligence | **Scaffolding deployed; 23 files published to `main`** — review-gated source metadata schema, HTTPS URL syntax validation, bounded approved-source index, synthetic examples, unit tests and Python 3.10–3.12 CI workflow. [latest GitHub Actions CI passed](https://github.com/PCakes303/osint-source-registry/actions/runs/41428118849) on Python 3.10, 3.11, and 3.12, including unit tests and synthetic-source validation. No collection client. | P2 | Catalogs public sources, datasets and APIs with terms, licensing, permitted purposes, access limits and review expiry. **Next:** Add authenticated review and Audit & Provenance integration before any collector work. |
-| 20 | [`osint-collection-framework`](https://github.com/PCakes303/osint-collection-framework) | intelligence | **Staged in master; plan validator only; 19 tests pass on Python 3.10-3.12; no network collection.** | P2 | Authorized, reproducible collection of public information. **Next:** Validate policy/identity/STOP/compliance integration before considering any network collector. |
+| 20 | [`osint-collection-framework`](https://github.com/PCakes303/osint-collection-framework) | intelligence | **Deployed; 23 product files exact-matched to staging; [remote CI passed](https://github.com/PCakes303/osint-collection-framework/actions/runs/41986109238) on Python 3.10/3.11/3.12 (19 tests); plan validator only, no network collection.** | P2 | Authorized, reproducible collection of public information. **Next:** Validate authenticated source/identity/policy/terms/privacy/STOP/compliance/audit integrations and runtime security before considering any collector. |
 | 21 | [`osint-evidence-engine`](https://github.com/PCakes303/osint-evidence-engine) | intelligence | **Staged in master; public non-personal evidence manifest and hash-chain validator only; 21 tests pass on Python 3.10-3.12.** | P1 | Preserves evidence provenance, timestamps, transformations and uncertainty. **Next:** No evidence store, signed timestamps, or legal chain-of-custody claim; verify provenance and retention design before deployment. |
 | 22 | [`osint-entity-resolution`](https://github.com/PCakes303/osint-entity-resolution) | intelligence | **Staged in master; public-entity candidate matcher only; 16 tests pass on Python 3.10-3.12; review-required outputs.** | P2 | Correlates entities while exposing ambiguity and confidence rather than asserting identity. **Next:** No people matching, personal profiling, automatic merge, or graph writes; maintain human review and evidence traceability. |
 | 23 | [`intelligence-knowledge-graph`](https://github.com/PCakes303/intelligence-knowledge-graph) | intelligence | **Experimental; 29 files published; [CI passed](https://github.com/PCakes303/intelligence-knowledge-graph/actions/runs/41428337519) on Python 3.10/3.11/3.12 (15 tests + synthetic graph validation)** — provenance-aware source/evidence/entity nodes, evidence-backed relationships, explicit uncertainty, strict graph schema, deterministic serialization and bounded queries | P2 | Connects sources, evidence, entities and relationships for analysis. **Next:** Verify upstream evidence and entity-resolution contracts, then implement reviewed adapters and cross-repository conformance fixtures; license remains pending review. |
