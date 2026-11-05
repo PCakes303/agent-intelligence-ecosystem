@@ -9,7 +9,7 @@
 | Repository | Visibility | Verified state |
 |---|---|---|
 | Restricted research workspace | Private | Existence and access confirmed; private content intentionally omitted from this public checkpoint |
-| [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) | Public | Exists under PCakes303; admin/push access confirmed; 28 implementation, metadata, test, schema, benchmark, and security files committed; exact 28/28 master-staging path/blob parity verified |
+| [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) | Public | Exists under PCakes303; admin/push access confirmed; 29 product files including Apache-2.0 LICENSE; exact 29/29 master-staging path/blob parity verified |
 
 Both repositories initially had no files. The README files were created first; no existing user content was overwritten.
 
@@ -26,7 +26,7 @@ Research files, hypotheses, and unpublished results remain inside the private wo
 - Representation Capsule JSON Schema and repository manifest/capability/compatibility contracts
 - Benchmark runner, deterministic workloads, experiment register, threat model, and ecosystem integration map
 - GitHub Actions Python 3.10–3.12 test matrix
-- Exact 28/28 path and Git blob SHA parity against the master staging snapshot
+- Exact 29/29 path and Git blob SHA parity against the master staging snapshot
 
 The implementation is experimental. No distributed swarm runtime, shared dictionary exchange, adaptive compiler, selective graph reconstruction, or performance superiority is claimed.
 
@@ -54,7 +54,7 @@ Subsequent documentation and test commits are recorded in each repository's defa
 3. Run the reproducible benchmark runner repeatedly and publish baseline results with the full measurement boundary.
 4. Validate the capsule schema in CI.
 5. Confirm GitHub About descriptions, topics, and homepage values in repository settings.
-6. Select and apply an explicit license, then review contributor-authority and third-party notice policy before inviting external reuse.
+6. Apache-2.0 is approved and applied. Complete file-level provenance, contributor-authority and third-party notice review before inviting external reuse.
 7. Build constrained pipeline selection before attempting swarm distribution.
 8. Do not expose private research content through public automation.
 
