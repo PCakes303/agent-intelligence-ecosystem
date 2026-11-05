@@ -477,8 +477,8 @@
       "layer": "intelligence",
       "role": "Evidence preservation, provenance, hashes, timestamps, and reproducibility.",
       "repository_url": "https://github.com/PCakes303/osint-evidence-engine",
-      "existence": "not-created",
-      "implementation_status": "Staged in master; public non-personal evidence manifest and hash-chain validator only; 21 tests pass on Python 3.10-3.12.",
+      "existence": "exists",
+      "implementation_status": "Deployed; 25 files exact-matched to master staging; remote CI passed on Python 3.10/3.11/3.12 (21 tests); public non-personal evidence manifest and hash-chain validator only.",
       "priority": "P1",
       "dependencies": [
         "osint-collection",
@@ -488,9 +488,9 @@
         "compliance-governance"
       ],
       "discovery": {
-        "llms_txt": null,
-        "agents_md": null,
-        "readme": null
+        "llms_txt": "https://github.com/PCakes303/osint-evidence-engine/blob/main/llms.txt",
+        "agents_md": "https://github.com/PCakes303/osint-evidence-engine/blob/main/AGENTS.md",
+        "readme": "https://github.com/PCakes303/osint-evidence-engine/blob/main/README.md"
       },
       "evidence_policy": "Verify repository-local artifacts and CI before asserting capability."
     },
