@@ -28,30 +28,14 @@
     "intelligence-knowledge-graph",
     "mrcakes931-ecosystem",
     "osint-collection-framework",
+    "osint-evidence-engine",
     "osint-source-registry",
     "swarm-coordination",
     "swarm-runtime",
     "swarm-state-mesh"
   ],
-  "missing_public_repository_count": 3,
+  "missing_public_repository_count": 2,
   "repositories": [
-    {
-      "name": "osint-evidence-engine",
-      "description": "Evidence preservation, provenance, hashes, timestamps, and reproducibility.",
-      "visibility": "public",
-      "default_branch": "main",
-      "initialize_with_readme": false,
-      "initialize_with_license": false,
-      "initialize_with_gitignore": false,
-      "registry_id": "osint-evidence",
-      "dependencies": [
-        "osint-collection",
-        "audit-provenance",
-        "secure-supply-chain",
-        "emergency-control",
-        "compliance-governance"
-      ]
-    },
     {
       "name": "osint-entity-resolution",
       "description": "Entity correlation, relationship modeling, and uncertainty reporting.",
