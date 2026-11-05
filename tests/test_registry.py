@@ -52,6 +52,34 @@ class RegistryValidationTests(unittest.TestCase):
         actual = {path.name for path in staged_root.iterdir() if path.is_dir()}
         self.assertEqual(actual, expected)
 
+    def test_staged_components_meet_common_repository_baseline(self):
+        staged_root = ROOT / "provisioning" / "staged"
+        required_files = (
+            "README.md",
+            "AGENTS.md",
+            "CONTRIBUTING.md",
+            "SECURITY.md",
+            "llms.txt",
+            "manifest.json",
+            "capabilities.json",
+            "compatibility.json",
+        )
+        errors = []
+        for directory in sorted(path for path in staged_root.iterdir() if path.is_dir()):
+            for relative in required_files:
+                if not (directory / relative).is_file():
+                    errors.append(f"{directory.name}: missing required {relative}")
+            if not (directory / "docs").is_dir():
+                errors.append(f"{directory.name}: missing docs/")
+            if not (directory / "tests").is_dir():
+                errors.append(f"{directory.name}: missing tests/")
+            workflows = directory / ".github" / "workflows"
+            if not workflows.is_dir() or not any(
+                path.suffix in (".yml", ".yaml") for path in workflows.iterdir() if path.is_file()
+            ):
+                errors.append(f"{directory.name}: missing CI workflow")
+        self.assertEqual(errors, [])
+
     def test_staged_manifest_dependencies_match_registry(self):
         by_id = {item["id"]: item for item in self.registry["repositories"]}
         paths = sorted((ROOT / "provisioning" / "staged").glob("*/manifest.json"))
