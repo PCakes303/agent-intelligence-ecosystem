@@ -18,7 +18,7 @@
 | Public repositories not yet created | 0 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The latest reconciliation verified all 31 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. No public repositories remain to be created. The final federation repository exists but its product deployment and verification remain incomplete.
+The latest reconciliation verified all 31 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. No public repositories remain to be created. All 31 public repositories and the 1 private operations repository exist. The final federation repository is deployed with exact staging parity and passing remote CI.
 
 ## Approved portfolio expansion
 
@@ -254,7 +254,7 @@ The master registry and public catalog now declare identity, discovery, swarm co
 `osint-entity-resolution` is deployed at [PCakes303/osint-entity-resolution](https://github.com/PCakes303/osint-entity-resolution). All 23 staged product paths match the remote by path and Git blob SHA; zero missing, differing or extra paths. Its first remote CI attempt exposed an escaped Python matrix expression; the workflow was corrected in both the remote and master staging packet. The corrected remote CI matrix passed all three jobs on Python 3.10, 3.11 and 3.12 (21 tests): [run 41991499807](https://github.com/PCakes303/osint-entity-resolution/actions/runs/41991499807). The portfolio now has 30 public repositories present, 1 private repository present, and 1 public repository remaining: `agent-federation-network`.
 
 
-## Final public repository — federation deployment in progress (2026-11-05)
+## Final public repository — federation deployment completed (2026-11-05)
 
 `agent-federation-network` now exists on GitHub. The live recursive tree contains all 17 staged product files. Exact path and Git blob SHA parity is verified (17/17); remote CI passed all three Python 3.10, 3.11 and 3.12 jobs at [run 41993754908](https://github.com/PCakes303/agent-federation-network/actions/runs/41993754908). The master registry, implementation-status record, public catalog, provisioning inventory and staging status reflect the verified deployment. The validator remains local-only; no live federation capability is claimed.
 
