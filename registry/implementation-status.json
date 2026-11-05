@@ -23,9 +23,9 @@
   "verified_ci": {
     "master": {
       "repository_url": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41555657186",
+      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41986961485",
       "conclusion": "success",
-      "head_sha": "450f4887a267aee1c6620498abb1348f23cf1782",
+      "head_sha": "cf2da69fb23e14faa54ae2c029231f11c7edd2a6",
       "tests": 47,
       "staging_packets": 7,
       "staging_python_versions": [
@@ -33,7 +33,7 @@
         "3.11",
         "3.12"
       ],
-      "scope": "Master registry/catalog validation, 47-test regression suite, entry-level build, and seven retained staging validation packets across Python 3.10–3.12; all 22 workflow jobs passed after rerunning the validate job once remote metadata commits had settled. The separate staging parity register records 18/18 exact retained product packets.",
+      "scope": "Master registry/catalog validation, 47-test regression suite, entry-level build, and retained staging validation packets across Python 3.10–3.12; latest run passed. The separate staging parity register records 18/18 exact retained product packets; osint-collection-framework is now deployed with 23/23 exact staging/remote product-file parity.",
       "exact_parity_packets": 18
     },
     "agent-ai-discovery": {
