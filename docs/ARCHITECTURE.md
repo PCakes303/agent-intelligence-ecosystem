@@ -67,7 +67,7 @@ A maturity transition requires evidence recorded by the owning repository and re
 
 ## 8. Current portfolio readiness and distribution
 
-The original ecosystem portfolio is provisioned as 31 public repositories (the master control plane plus 30 component repositories) and one private operations repository. A separate research expansion adds one public implementation repository (`adaptive-swarm-compression`) and one private research repository (`swarm-information-research`), bringing the coordinated inventory to 32 public and 2 private repositories. The master registry and staged component manifests are validated in CI. This establishes inventory and metadata coordination, not production integration.
+The coordinated inventory contains 32 public repositories and 2 private repositories. The original master control plane and 30 public component repositories have established staging snapshots; the separate `adaptive-swarm-compression` research implementation is registered but has not yet completed master-staging parity or cross-repository conformance. Private repositories are tracked as restricted inventory metadata and excluded from the public agent catalog. This establishes inventory coordination, not production integration.
 
 The component repositories currently contain specifications, schemas, examples, validators, tests, and starter tooling at varying maturity. They are not uniformly packaged or installable distributions. A repository manifest is an ecosystem metadata document, not a package manifest. Language-specific packaging is introduced only when a component has a stable reusable library or executable and a defined release contract.
 
