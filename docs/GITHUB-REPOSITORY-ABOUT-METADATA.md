@@ -55,11 +55,12 @@ Use each topic as a separate GitHub topic. Do not paste the topic list into the 
 | 27 | [agent-emergency-control](https://github.com/PCakes303/agent-emergency-control) | Contract and fail-closed state-reducer scaffold for emergency STOP/RESUME, authority, revocation and quarantine; no authenticated kill switch or distributed stop propagation is deployed. | emergency-stop, kill-switch, agent-safety, revocation, incident-response, distributed-systems |
 | 28 | [agent-compliance-governance](https://github.com/PCakes303/agent-compliance-governance) | Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management, and regulatory change monitoring. | compliance-management, colorado, privacy-governance, ai-governance, risk-management, audit-evidence |
 | 29 | [agent-conformance-lab](https://github.com/PCakes303/agent-conformance-lab) | Local validator for repository metadata, protocol fixtures and declared security gates; produces deterministic reports but does not run live interoperability tests or certify security or compliance. | conformance-testing, protocol-validation, agent-interoperability, test-fixtures, compatibility, security-gates |
-| 30 | [agent-federation-network](https://github.com/PCakes303/agent-federation-network) | Local peer-declaration and trust-policy contract validator for independently operated agent networks; does not authenticate peers, exchange credentials, connect networks, or execute workloads. | agent-federation, peer-trust, distributed-agents, trust-boundaries, policy-validation, network-security |\n| 31 | [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) | Experimental framework for adaptive, collective compression and intelligent information representation across distributed AI agents, combining codec pipelines, structural representations and selective reconstruction research. | adaptive-compression, swarm-intelligence, data-representation, lossless-compression, distributed-systems, information-theory |
+| 30 | [agent-federation-network](https://github.com/PCakes303/agent-federation-network) | Local peer-declaration and trust-policy contract validator for independently operated agent networks; does not authenticate peers, exchange credentials, connect networks, or execute workloads. | agent-federation, peer-trust, distributed-agents, trust-boundaries, policy-validation, network-security |
+| 31 | [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression) | Experimental framework for adaptive, collective compression and intelligent information representation across distributed AI agents, combining codec pipelines, structural representations and selective reconstruction research. | adaptive-compression, swarm-intelligence, data-representation, lossless-compression, distributed-systems, information-theory |
 
 ## Application checklist
 
-For each of the 32 public portfolio repositories:
+For each of the 31 public component repositories (the master control plane is maintained separately):
 
 1. Open the repository page and select **About → Edit repository details**.
 2. Set the exact description from the table.
@@ -80,6 +81,9 @@ For `agent-policy-engine`, replace the malformed description completely; do not 
 
 ## Audit boundary
 
-This metadata file is the canonical proposed set of GitHub About values for all 31 existing public repositories. It is not evidence that those values have been applied. Apply each individualized description, the common homepage, and topics in GitHub's repository UI, then re-read the live metadata to verify. The integration available in this workflow does not expose writes to repository description, homepage, or topics settings.
+This metadata file is the canonical proposed set of GitHub About values for all 31 public component repositories; the master control plane is maintained separately. It is not evidence that those values have been applied. Apply each individualized description, the common homepage, and topics in GitHub's repository UI, then re-read the live metadata to verify. The integration available in this workflow does not expose writes to repository description, homepage, or topics settings.
 
-\n## Private research repository boundary\n\n`swarm-information-research` is private and is intentionally excluded from this public About-metadata table and from public discovery exports. Its description and visibility should be reviewed only in the private repository settings.\n
+
+## Private repository boundary
+
+Private repositories are excluded from this public About-metadata table and public discovery exports. Review their descriptions and visibility only in their respective private repository settings.
