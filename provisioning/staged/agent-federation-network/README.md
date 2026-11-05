@@ -1,6 +1,7 @@
 # Agent Federation Network
 
 Portfolio ID: federation-network  
+Version: 1.0.0  
 Maturity: research scaffold; local peer-policy contract validator only.
 
 This repository defines safety contracts for federation between independently operated agent networks.
@@ -23,10 +24,6 @@ Python 3.10+:
     python -m unittest discover -s tests -v
 
 See docs/FEDERATION-CONTRACT.md and docs/THREAT-MODEL.md.
-
-## Licensing
-
-License selection remains pending portfolio review. No license is asserted.
 
 ## Licensing
 
