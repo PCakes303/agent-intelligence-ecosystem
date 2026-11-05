@@ -8,12 +8,12 @@
   "public_repositories": 31,
   "private_repositories": 1,
   "observed": {
-    "public_existing": 28,
+    "public_existing": 29,
     "private_existing": 1,
-    "public_not_created": 3,
+    "public_not_created": 2,
     "profile_repository_excluded": "PCakes303/PCakes303",
-    "public_repositories_present": 28,
-    "public_repositories_missing": 3
+    "public_repositories_present": 29,
+    "public_repositories_missing": 2
   },
   "status_legend": {
     "exists": "Repository existence verified through connected GitHub repository search.",
@@ -325,15 +325,17 @@
       "scope": "Remote plan-validator scaffold only; no network collection, source execution or production authorization."
     },
     "osint-evidence-engine": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
+      "repository_url": "https://github.com/PCakes303/osint-evidence-engine",
+      "workflow_run": "https://github.com/PCakes303/osint-evidence-engine/actions/runs/41989265888",
       "conclusion": "success",
+      "head_sha": "f4b857914696e8c56be50d79fdc2e154faf3faf3",
       "tests": 21,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
       ],
-      "scope": "staging-only; no remote repository created"
+      "scope": "Remote CI passed on all three Python matrix versions; exact path and Git blob SHA parity verified for all 25 staged files. Evidence manifest and local hash-chain validator only; no collection or evidence storage."
     },
     "osint-entity-resolution": {
       "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489",
@@ -1186,11 +1188,11 @@
       "name": "osint-evidence-engine",
       "layer": "intelligence",
       "visibility": "public",
-      "existence": "not-created",
-      "status": "Staged in master; public non-personal evidence manifest and hash-chain validator only; 21 tests pass on Python 3.10-3.12.",
+      "existence": "exists",
+      "status": "Deployed; 25 files exact-matched to master staging; remote CI passed on Python 3.10/3.11/3.12 (21 tests); public non-personal evidence manifest and hash-chain validator only.",
       "priority": "P1",
       "importance": "Preserves evidence provenance, timestamps, transformations and uncertainty.",
-      "next_gate": "No evidence store, signed timestamps, or legal chain-of-custody claim; verify provenance and retention design before deployment."
+      "next_gate": "No evidence store, signed timestamps, trusted timestamp authority, external anchoring or legal chain-of-custody claim; complete provenance and retention review before production."
     },
     {
       "number": "22",
@@ -1592,7 +1594,7 @@
       "repository": "osint-evidence-engine",
       "path": "provisioning/staged/osint-evidence-engine",
       "file_count": 23,
-      "status": "Prepared in master staging; public remote not yet created. 21 tests passed on Python 3.10–3.12. Public non-personal evidence manifests, SHA-256 digest verification and deterministic hash-linked event chain only. No collection, persistence, signatures, trusted timestamping, legal holds or legal chain-of-custody certification."
+      "status": "Deployed to PCakes303/osint-evidence-engine; 25 staged files exact-matched by path and Git blob SHA; remote CI passed 21 tests on Python 3.10–3.12. Public non-personal evidence manifests, SHA-256 digest verification and deterministic hash-linked event chain only; no collection, persistence, signatures, trusted timestamps, legal holds or legal chain-of-custody certification."
     },
     {
       "repository": "osint-entity-resolution",
@@ -1735,6 +1737,12 @@
         "product_files": 27,
         "blob_diffs": 0,
         "verification": "27 remote product files match 27 master-staged product files exactly; zero missing, differing or extra paths; master-only STAGING-STATUS.md excluded. Remote CI passed 18 tests on Python 3.10, 3.11 and 3.12."
+      },
+      {
+        "repository": "osint-evidence-engine",
+        "product_files": 24,
+        "blob_diffs": 0,
+        "verification": "All 25 staged paths including the master staging-status record exactly match the public remote by path and Git blob SHA; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12."
       }
     ]
   },
@@ -1765,16 +1773,6 @@
       "verified_ci": {
         "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
         "tests": 19
-      }
-    },
-    {
-      "repository": "osint-evidence-engine",
-      "portfolio_id": "osint-evidence",
-      "state": "staged; remote not created",
-      "scope": "public non-personal evidence manifest and hash-chain validator only",
-      "verified_ci": {
-        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514862252",
-        "tests": 21
       }
     },
     {
