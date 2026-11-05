@@ -338,15 +338,16 @@
       "scope": "Remote CI passed on all three Python matrix versions; exact path and Git blob SHA parity verified for all 25 staged files. Evidence manifest and local hash-chain validator only; no collection or evidence storage."
     },
     "osint-entity-resolution": {
-      "workflow_run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489",
+      "repository_url": "https://github.com/PCakes303/osint-entity-resolution",
+      "workflow_run": "https://github.com/PCakes303/osint-entity-resolution/actions/runs/41991499807",
       "conclusion": "success",
-      "tests": 16,
+      "head_sha": "dc18574a9ece543a56c8dbcf43840fb60b91b6a2",
+      "tests": 21,
       "python_versions": [
         "3.10",
         "3.11",
         "3.12"
-      ],
-      "scope": "staging-only; no remote repository created"
+      ]
     },
     "emergency-control": {
       "repository_url": "https://github.com/PCakes303/agent-emergency-control",
@@ -1201,7 +1202,7 @@
       "layer": "intelligence",
       "visibility": "public",
       "existence": "exists",
-      "status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; CI rerun pending after workflow correction.",
+      "status": "Scaffolding deployed; 23 product files; exact staging/remote path and Git blob SHA parity verified; remote CI passed 21 tests on Python 3.10, 3.11 and 3.12.",
       "priority": "P2",
       "importance": "Correlates entities while exposing ambiguity and confidence rather than asserting identity.",
       "next_gate": "No people matching, personal profiling, automatic merge, or graph writes; maintain human review and evidence traceability."
