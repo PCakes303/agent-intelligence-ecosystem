@@ -1,21 +1,78 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-federation-network/blob/main/manifest.json",
   "manifest_version": "1.0.0",
   "id": "federation-network",
   "name": "agent-federation-network",
   "version": "1.0.0",
+  "visibility": "public",
   "maturity": "scaffolding",
-  "role": "Local peer declaration contract validation for independent network federation; no peer authentication, network transport or remote authorization.",
+  "summary": "Local peer-declaration validation and federation trust contracts. It does not authenticate peers, verify signatures, transport messages, exchange credentials or authorize remote actions.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "Scoped mixed-license strategy; file-level provenance and third-party license review remains open."
+  },
+  "interfaces": [],
   "dependencies": [
-    "identity-trust",
-    "discovery-network",
-    "swarm-coordination",
-    "policy-engine",
-    "audit-provenance",
-    "secure-supply-chain",
-    "emergency-control",
-    "compliance-governance"
+    {
+      "id": "identity-trust",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "discovery-network",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "swarm-coordination",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "policy-engine",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "audit-provenance",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "secure-supply-chain",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "emergency-control",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "compliance-governance",
+      "constraint": "*",
+      "kind": "contract"
+    }
   ],
-  "entrypoint": "federation_network/trust.py",
-  "license_status": "scoped-mixed",
-  "execution_authority": false
+  "entrypoints": [
+    "federation_network/trust.py"
+  ],
+  "security": {
+    "threat_model": "docs/THREAT-MODEL.md",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-federation-network",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Local tests exercise peer declaration validation; they do not verify peer identity, signatures, network connectivity or remote trust.",
+      "kind": "test",
+      "location": "tests/test_trust.py"
+    }
+  ]
 }

@@ -1,25 +1,98 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-conformance-lab/blob/main/manifest.json",
   "manifest_version": "1.0.0",
   "id": "conformance-lab",
   "name": "agent-conformance-lab",
   "version": "0.1.0",
+  "visibility": "public",
   "maturity": "scaffolded",
-  "role": "Local contract and fixture validation with deterministic conformance reports; no live interoperability or certification.",
+  "summary": "Local contract, metadata and fixture validation with deterministic reports. This scaffold does not establish live interoperability, security certification or production conformance.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "Scoped mixed-license strategy; file-level provenance and third-party license review remains open."
+  },
+  "interfaces": [],
   "dependencies": [
-    "foundation",
-    "schema-registry",
-    "aix-core",
-    "aix-codecs",
-    "transport-gateway",
-    "swarm-runtime",
-    "identity-trust",
-    "policy-engine",
-    "audit-provenance",
-    "secure-supply-chain",
-    "emergency-control",
-    "compliance-governance"
+    {
+      "id": "aix-core",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "aix-codecs",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "transport-gateway",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "swarm-runtime",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "secure-supply-chain",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "foundation",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "schema-registry",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "identity-trust",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "policy-engine",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "audit-provenance",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "emergency-control",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "compliance-governance",
+      "constraint": "*",
+      "kind": "contract"
+    }
   ],
-  "entrypoint": "conformance_lab/runner.py",
-  "license_status": "pending-portfolio-review",
-  "execution_authority": false
+  "entrypoints": [
+    "conformance_lab/runner.py"
+  ],
+  "security": {
+    "threat_model": "docs/THREAT-MODEL.md",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-conformance-lab",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Local tests exercise fixture, metadata and deterministic report validation; they do not demonstrate live interoperability or certification.",
+      "kind": "test",
+      "location": "tests/test_reports.py"
+    }
+  ]
 }

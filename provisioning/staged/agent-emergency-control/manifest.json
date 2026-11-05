@@ -1,18 +1,63 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-emergency-control/blob/main/manifest.json",
   "manifest_version": "1.0.0",
   "id": "emergency-control",
   "name": "agent-emergency-control",
   "version": "0.1.0",
+  "visibility": "public",
   "maturity": "scaffolded",
-  "role": "Independent emergency-stop command contract and fail-closed reference state reducer; no deployed authority, propagation or enforcement service.",
+  "summary": "STOP and RESUME command contracts with a fail-closed reference state reducer. This is not a deployed emergency-stop authority, propagation service or runtime enforcement mechanism.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "Scoped mixed-license strategy; file-level provenance and third-party license review remains open."
+  },
+  "interfaces": [],
   "dependencies": [
-    "foundation",
-    "identity-trust",
-    "policy-engine",
-    "audit-provenance",
-    "secure-supply-chain"
+    {
+      "id": "foundation",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "identity-trust",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "policy-engine",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "audit-provenance",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "secure-supply-chain",
+      "constraint": "*",
+      "kind": "contract"
+    }
   ],
-  "entrypoint": "emergency_control/reducer.py",
-  "license_status": "pending-portfolio-review",
-  "execution_authority": false
+  "entrypoints": [
+    "emergency_control/reducer.py"
+  ],
+  "security": {
+    "threat_model": "docs/THREAT-MODEL.md",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-emergency-control",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Local tests exercise command and reducer state transitions; they do not establish authenticated authority, distributed STOP propagation or runtime enforcement.",
+      "kind": "test",
+      "location": "tests/test_reducer.py"
+    }
+  ]
 }

@@ -1,19 +1,68 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-compliance-governance/blob/main/manifest.json",
   "manifest_version": "1.0.0",
   "id": "compliance-governance",
   "name": "agent-compliance-governance",
   "version": "0.1.0",
+  "visibility": "public",
   "maturity": "scaffolded",
-  "role": "Legal applicability register, compliance control catalogue, privacy and AI governance, evidence management and regulatory change monitoring; not legal advice or certification.",
+  "summary": "Machine-readable compliance control catalogues, legal-applicability registers and evidence-gap tracking for AI systems. Governance scaffold only; not legal advice, compliance determination or certification.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "Scoped mixed-license strategy; file-level provenance and third-party license review remains open."
+  },
+  "interfaces": [],
   "dependencies": [
-    "master",
-    "foundation",
-    "identity-trust",
-    "policy-engine",
-    "audit-provenance",
-    "secure-supply-chain"
+    {
+      "id": "master",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "foundation",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "identity-trust",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "policy-engine",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "audit-provenance",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "secure-supply-chain",
+      "constraint": "*",
+      "kind": "contract"
+    }
   ],
-  "entrypoint": "compliance_governance/validate_registry.py",
-  "license_status": "scoped-mixed-license-declared; provenance-review-pending",
-  "compliance_certification": false
+  "entrypoints": [
+    "compliance_governance/validate_registry.py"
+  ],
+  "security": {
+    "threat_model": "docs/THREAT-MODEL.md",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-compliance-governance",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Local tests exercise governance-register structure and validation; they do not provide legal opinions, evidence sufficiency determinations or certification.",
+      "kind": "test",
+      "location": "tests/test_registry.py"
+    }
+  ]
 }
