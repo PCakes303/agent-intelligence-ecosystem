@@ -31,7 +31,7 @@
 
 ## Master validation status
 
-The master validation workflow passed at commit `8d10929c5dfabd7dbb9500b7af0b03fcc10b5f23`: [run 41995330458](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41995330458). The `validate` job passed all 47 regression tests, registry and catalog validation, and entry-level build; all staged matrices for collection, evidence, entity-resolution, conformance, emergency-control, compliance-governance and federation passed. A subsequent metadata-only sandbox manifest normalization triggered another master run; that run is queued and must be checked before the very latest master HEAD is called green.
+The master validation workflow passed at commit `c1ac6294ace008fb219192fc1eab3fe0ff967a9a`: [run 41995411453](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41995411453). The `validate` job passed all 47 regression tests, registry and catalog validation, and entry-level build; all staged matrices for collection, evidence, entity-resolution, conformance, emergency-control, compliance-governance and federation passed. Later commits updated only the master README, portfolio tracker and audit checkpoint; their triggered validation runs are still being checked.
 
 ## Safety and maturity boundary
 
