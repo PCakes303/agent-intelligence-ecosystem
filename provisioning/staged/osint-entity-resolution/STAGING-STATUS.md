@@ -11,6 +11,6 @@
 - Dependencies: osint-evidence, schema-registry, identity-trust, policy-engine, audit-provenance, emergency-control, compliance-governance, secure-supply-chain (declared only).
 - Implemented in this staging packet: Draft 2020-12 entity/candidate schemas; deterministic normalization; bounded exact-identifier/alias/name candidate matching; human-review-required outputs; synthetic tests; Python 3.10–3.12 CI.
 - Not implemented: people matching, personal profiling, automatic merge, identity assertion, network lookup, graph persistence, reviewer workflow or legal/compliance determination.
-- Staging CI: master workflow run 41515580489 passed 16 tests on Python 3.10, 3.11 and 3.12. Remote CI workflow expression was corrected after its first run; successful remote matrix rerun remains pending.
-- Deployment verification: 23/23 product paths match by Git blob SHA; zero missing, differing or extra product files. Remote CI must pass all Python matrix jobs before the deployment checkpoint is closed.
+- Staging CI: master workflow run 41515580489 passed 16 tests on Python 3.10, 3.11 and 3.12. Remote CI passed all three matrix jobs on Python 3.10, 3.11 and 3.12 (21 tests): https://github.com/PCakes303/osint-entity-resolution/actions/runs/41991499807.
+- Deployment verification: 23/23 product paths match by Git blob SHA; zero missing, differing or extra product files. Remote CI verified: all three Python matrix jobs passed (21 tests total).
 - Required before production: satisfy every gate in docs/INTEGRATION-GATES.md; production identity resolution remains explicitly out of scope for this profile.
