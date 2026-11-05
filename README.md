@@ -1,7 +1,7 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-**Status:** Portfolio provisioned and master coordination checks passing — 31 public repositories and 1 private operations repository exist. All 30 public component repositories have staged master snapshots; master CI validates the portfolio registry and metadata. Production implementations, cross-repository runtime integration, package releases, and account-level security settings remain separate work.  
-**Portfolio:** 32 repositories (31 public, 1 private)  
+**Status:** Portfolio provisioned and master coordination checks passing — 32 public repositories and 2 private repositories exist. All 30 public component repositories have staged master snapshots; master CI validates the portfolio registry and metadata. Production implementations, cross-repository runtime integration, package releases, and account-level security settings remain separate work.  
+**Portfolio:** 34 repositories (32 public, 2 private)  
 **Owner:** PCakes303 (public project identity: MrCakes931)
 
 This repository is the canonical public control plane for the ecosystem. It owns the portfolio registry, dependency graph, shared governance, architecture decisions, compatibility overview, and public synchronization contracts. It does not replace the source repositories or duplicate their implementation code.
@@ -35,7 +35,7 @@ The portfolio and architecture are approved. All 31 public ecosystem repositorie
 - [Agent Conformance Lab deployment checkpoint](checkpoints/2026-11-02-agent-conformance-lab-deployment.md)
 - [Portfolio-wide work review — PRs, issues, CI, staging parity and release gates](checkpoints/2026-11-02-portfolio-wide-work-review.md)
 
-- [LLM-readable project index](llms.txt)
+- [Adaptive Swarm Compression](https://github.com/PCakes303/adaptive-swarm-compression) — experimental data-representation and lossless codec pipeline project.\n- [Private Swarm Information Research](https://github.com/PCakes303/swarm-information-research) — restricted research headquarters; excluded from public synchronization.\n- [LLM-readable project index](llms.txt)
 - [Public agent catalog — 31 repositories](registry/public-agent-catalog.json)
 - [AI coding-agent instructions](AGENTS.md)
 - [AI discoverability and MCP/A2A standard](docs/AI-DISCOVERABILITY.md)
@@ -69,7 +69,7 @@ The portfolio and architecture are approved. All 31 public ecosystem repositorie
 - AI-native discovery: `agent-ai-discovery`.
 - Human-facing ecosystem guide: `mrcakes931-ecosystem`.
 - Cross-repository integration: `agent-ecosystem-integration`.
-- 27 technical repositories across foundation/security, interoperability, swarm infrastructure, OSINT/intelligence, and adoption.
+- 27 original technical repositories across foundation/security, interoperability, swarm infrastructure, OSINT/intelligence, and adoption.\n- Research expansion: `adaptive-swarm-compression` (public implementation) and `swarm-information-research` (private research authority).
 - One private operational repository: `agent-ecosystem-private`.
 
 See the registry for authoritative names, visibility, scope, status, and dependencies.
