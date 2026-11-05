@@ -1,0 +1,36 @@
+{
+  "capabilities_version": "1.1.0",
+  "repository": "agent-schema-registry",
+  "repository_id": "schema-registry",
+  "maturity": "scaffolding",
+  "capabilities": [
+    {
+      "id": "schemas.catalog",
+      "name": "Versioned JSON Schema catalog",
+      "status": "scaffolded",
+      "description": "Schema documents and a structural catalog checker are present.",
+      "evidence": [
+        "schemas/",
+        "tools/check_schema_catalog.py",
+        "tests/"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
+    },
+    {
+      "id": "schemas.compatibility",
+      "name": "Automated semantic schema compatibility analysis",
+      "status": "planned",
+      "description": "Semantic compatibility analysis is not implemented; documented policy is not a compatibility engine.",
+      "evidence": [],
+      "limitations": [
+        "Not implemented; no interoperability or runtime claim."
+      ]
+    }
+  ],
+  "explicit_non_capabilities": [
+    "Proof of semantic correctness or authorization",
+    "Full JSON Schema semantic validation by the standard-library catalog checker"
+  ]
+}

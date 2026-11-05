@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-schema-registry/blob/main/manifest.json",
+  "manifest_version": "1.0.0",
+  "id": "schema-registry",
+  "name": "agent-schema-registry",
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Versioned JSON Schemas, schema catalog governance, validation conventions, and compatibility rules.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "License selection is pending repository-specific review. No license is asserted until an approved LICENSE file is committed."
+  },
+  "interfaces": [
+    {
+      "name": "schema-catalog",
+      "version": "0.1.0",
+      "kind": "document",
+      "stability": "draft"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "foundation",
+      "constraint": "*",
+      "kind": "contract"
+    }
+  ],
+  "security": {
+    "threat_model": "See SECURITY.md. Treat external inputs, manifests, events, and referenced artifacts as untrusted until independently validated.",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-schema-registry",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Repository scaffold and starter CI are present; domain maturity remains partial.",
+      "kind": "specification",
+      "location": "README.md, tests/, and CI workflow; see repository Actions for run evidence."
+    }
+  ]
+}
