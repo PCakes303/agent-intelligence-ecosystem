@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "requirements": [
+    {
+      "id": "FND-001",
+      "title": "Explicit trust boundaries",
+      "statement": "Every component MUST identify inputs crossing trust boundaries and validate them before use.",
+      "priority": "MUST"
+    },
+    {
+      "id": "FND-002",
+      "title": "Least privilege",
+      "statement": "Components MUST grant only the permissions required for the requested operation.",
+      "priority": "MUST"
+    },
+    {
+      "id": "FND-003",
+      "title": "Fail closed",
+      "statement": "Authorization and policy evaluation failures MUST deny protected operations.",
+      "priority": "MUST"
+    },
+    {
+      "id": "FND-004",
+      "title": "Provenance",
+      "statement": "Externally sourced evidence MUST retain source and acquisition context where lawful.",
+      "priority": "MUST"
+    },
+    {
+      "id": "FND-005",
+      "title": "No exactly-once claims",
+      "statement": "Distributed execution MUST use idempotency and explicit retry semantics rather than claiming exactly-once execution.",
+      "priority": "MUST"
+    },
+    {
+      "id": "FND-006",
+      "title": "Compatibility",
+      "statement": "Published interfaces MUST be versioned and have documented compatibility rules.",
+      "priority": "MUST"
+    }
+  ]
+}
