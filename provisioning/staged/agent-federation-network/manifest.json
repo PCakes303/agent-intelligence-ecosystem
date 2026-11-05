@@ -3,9 +3,18 @@
   "id": "federation-network",
   "name": "agent-federation-network",
   "version": "1.0.0",
-  "maturity": "scaffolded",
+  "maturity": "scaffolding",
   "role": "Local peer declaration contract validation for independent network federation; no peer authentication, network transport or remote authorization.",
-  "dependencies": ["identity-trust", "discovery-network", "swarm-coordination", "policy-engine", "audit-provenance", "secure-supply-chain", "emergency-control", "compliance-governance"],
+  "dependencies": [
+    "identity-trust",
+    "discovery-network",
+    "swarm-coordination",
+    "policy-engine",
+    "audit-provenance",
+    "secure-supply-chain",
+    "emergency-control",
+    "compliance-governance"
+  ],
   "entrypoint": "federation_network/trust.py",
   "license_status": "scoped-mixed",
   "execution_authority": false
