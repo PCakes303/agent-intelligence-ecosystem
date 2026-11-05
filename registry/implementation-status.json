@@ -1524,20 +1524,20 @@
       "layer": "research-and-data-systems",
       "visibility": "public",
       "existence": "exists",
-      "status": "Experimental; 29 product files published; 17 regression test cases defined; local identity/zlib exact pipeline, SHA-256 integrity verification, bounded decompression, repository manifest, capability/compatibility metadata, representation-capsule schema, threat model, integration map, deterministic workloads and local benchmark runner. Apache-2.0 license applied. Exact 29/29 path and Git blob SHA parity with master staging verified. The latest Python matrix run passed on Python 3.10, 3.11 and 3.12 (17 tests per job). Earlier failures were caused by a stale license-status assertion, corrected at current HEAD.",
+      "status": "Experimental; 29 product files published; 17 regression test cases; local identity/zlib exact pipeline, SHA-256 integrity, bounded decompression, repository manifest, capability/compatibility metadata, Representation Capsule schema, threat model, integration map and deterministic benchmark runner. Apache-2.0 applied. Exact 29/29 master staging parity verified. A full Python 3.10–3.12 matrix passed 17 tests per job at commit 7d90adcd; latest rerun after aligning the license-status value with the master schema is in progress.",
       "priority": "P1",
       "importance": "Researches a swarm-native approach to reducing total information-use cost across storage, transfer, compute, reconstruction and coordination.",
       "next_gate": "Confirm the current GitHub Actions run passes on Python 3.10, 3.11 and 3.12; validate repository and capsule schemas in CI; run repeated benchmark baselines; complete file-level provenance and third-party notice review; then implement bounded pipeline selection and selective reconstruction before distributed coordination.",
       "audit": {
         "as_of": "2026-11-05",
-        "audited_commit": "7d90adcd790cd3ddddc997da7672721ffe56b9c0",
+        "audited_commit": "a5ddada2b248731c4b1452db72c1f6e76a66b08f",
         "disposition": "STAGING_PARITY_PASS_LICENSE_APPLIED_CI_PENDING",
         "remote_tree_paths": 29,
         "staged_product_files": 29,
         "exact_path_blob_parity": true,
         "license": "Apache-2.0",
-        "latest_workflow_run": "https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42019832697",
-        "latest_workflow_status": "success",
+        "latest_workflow_run": "https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42020286190",
+        "latest_workflow_status": "in_progress",
         "remote_ci_run": "https://github.com/PCakes303/adaptive-swarm-compression/actions/runs/42019832697",
         "pull_requests": {
           "open": 0,
@@ -1551,7 +1551,7 @@
           "No adaptive pipeline compiler or selective graph/event reconstruction",
           "No cross-repository compatibility combination marked tested"
         ],
-        "latest_failure": "Earlier runs 42019486993 and 42019492872 failed because tests/test_metadata.py expected the pre-license manifest value; corrected in commit 7d90adcd. Current run 42019832697 passed all three Python matrix jobs.",
+        "latest_failure": "A subsequent run failed after a temporary noncanonical license-status value was introduced; manifest status corrected to the master schema's allowed value 'selected', and the metadata test now asserts that canonical value. Latest rerun is in progress.",
         "test_matrix": {
           "python_versions": [
             "3.10",
@@ -1559,8 +1559,11 @@
             "3.12"
           ],
           "tests_per_job": 17,
-          "conclusion": "success"
-        }
+          "last_completed_conclusion": "success",
+          "last_completed_commit": "7d90adcd790cd3ddddc997da7672721ffe56b9c0",
+          "latest_run_status": "in_progress"
+        },
+        "license_status": "selected (master repository-manifest schema enum)"
       }
     },
     {
