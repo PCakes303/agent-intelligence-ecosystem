@@ -431,8 +431,8 @@
       "name": "agent-federation-network",
       "visibility": "public",
       "layer": "adoption",
-      "status": "planned",
-      "role": "Federation between independently operated agent networks.",
+      "status": "scaffolding",
+      "role": "Local peer declaration contract validator for independent network federation; no peer authentication, transport, credential exchange or remote authorization.",
       "dependencies": [
         "identity-trust",
         "discovery-network",
