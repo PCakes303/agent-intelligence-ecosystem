@@ -728,7 +728,7 @@
       "role": "Experimental local lossless codec pipeline and representation-capsule foundation for research into adaptive, collective information representation; no distributed swarm execution or shared-dictionary service yet.",
       "repository_url": "https://github.com/PCakes303/adaptive-swarm-compression",
       "existence": "exists",
-      "implementation_status": "Experimental; 29 product files including local identity/zlib lossless pipeline, SHA-256 integrity, bounded decompression, 17 regression test cases, repository manifest, capability/compatibility metadata, threat model, representation-capsule schema, deterministic local benchmark runner, and Apache-2.0 license. Exact 29/29 master staging parity verified; latest CI queued after correcting a stale license assertion; previous run failed 1 metadata test (16 passed); distributed swarm behavior not implemented.",
+      "implementation_status": "Experimental; 29 product files including local identity/zlib lossless pipeline, SHA-256 integrity, bounded decompression, 17 regression test cases, repository manifest, capability/compatibility metadata, threat model, representation-capsule schema, deterministic local benchmark runner, and Apache-2.0 license. Exact 29/29 master staging parity verified; latest CI passed all 17 tests on Python 3.10, 3.11 and 3.12 after correcting a stale license assertion; distributed swarm behavior not implemented.",
       "priority": "P1",
       "dependencies": [
         "aix-codecs",
