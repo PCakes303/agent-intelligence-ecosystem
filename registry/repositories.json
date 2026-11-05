@@ -272,7 +272,7 @@
       "name": "osint-collection-framework",
       "visibility": "public",
       "layer": "intelligence",
-      "status": "planned",
+      "status": "scaffolding",
       "role": "Authorized public-information collection through tools and adapters.",
       "dependencies": [
         "osint-source-registry",
