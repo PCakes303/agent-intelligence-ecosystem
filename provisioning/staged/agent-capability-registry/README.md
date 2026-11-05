@@ -27,4 +27,4 @@ registry.register(Capability('text.summarize', 'agent.demo', 'Summarizes text', 
 print(registry.match([Requirement('text.summarize')]))
 ```
 
-See `docs/CAPABILITY-CONTRACT.md`, `docs/THREAT-MODEL.md`, and `schemas/capability.schema.json`. Python 3.10–3.12 CI is configured. No release is published and the license decision is pending review.
+See `docs/CAPABILITY-CONTRACT.md`, `docs/THREAT-MODEL.md`, and `schemas/capability.schema.json`. Python 3.10–3.12 CI is configured. No release is published. The scoped mixed-license policy is documented in [LICENSE.md](LICENSE.md), but this repository's manifest license status remains `pending-review` until contributor authority, file-level provenance and third-party notices are checked.
