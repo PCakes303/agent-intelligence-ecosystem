@@ -1,6 +1,6 @@
 # MrCakes931 Agent Intelligence Ecosystem
 
-**Status:** Portfolio provisioned — all 31 public ecosystem repositories and the 1 private operations repository exist; final federation repository deployment and portfolio validation remain in progress.  
+**Status:** Portfolio provisioned and master coordination checks passing — 31 public repositories and 1 private operations repository exist. All 30 public component repositories have staged master snapshots; master CI validates the portfolio registry and metadata. Production implementations, cross-repository runtime integration, package releases, and account-level security settings remain separate work.  
 **Portfolio:** 32 repositories (31 public, 1 private)  
 **Owner:** PCakes303 (public project identity: MrCakes931)
 
@@ -11,28 +11,28 @@ This repository is the canonical public control plane for the ecosystem. It owns
 The portfolio and architecture are approved. All 31 public ecosystem repositories and the 1 private operations repository now exist. Repository contents and maturity vary: some contain schemas, validators, examples, tests, and CI, while production services and full cross-repository conformance remain future work. Repository existence is not evidence of implementation or conformance. The registry distinguishes existence, implementation, and verification; a repository appearing there is not evidence that it is implemented or conformant.
 
 ## Start here
-- [Repository 10 — Agent Audit & Provenance](https://github.com/PCakes303/agent-audit-provenance)
-- [Repository 11 — AIX Core](https://github.com/PCakes303/aix-core)
-- [Repository 12 — AIX Codecs](https://github.com/PCakes303/aix-codecs)
-- [Repository 13 — Agent Transport Gateway](https://github.com/PCakes303/agent-transport-gateway)
-- [Repository 19 — OSINT Source Registry](https://github.com/PCakes303/osint-source-registry)
-- [Repository 20 — Intelligence Knowledge Graph](https://github.com/PCakes303/intelligence-knowledge-graph)
-- [Repository 25 — Agent Skill Library](https://github.com/PCakes303/agent-skill-library)
-- [Repository 26 — Agent Sandbox Security](https://github.com/PCakes303/agent-sandbox-security)
+- [Agent Audit & Provenance](https://github.com/PCakes303/agent-audit-provenance)
+- [AIX Core](https://github.com/PCakes303/aix-core)
+- [AIX Codecs](https://github.com/PCakes303/aix-codecs)
+- [Agent Transport Gateway](https://github.com/PCakes303/agent-transport-gateway)
+- [OSINT Source Registry](https://github.com/PCakes303/osint-source-registry)
+- [Intelligence Knowledge Graph](https://github.com/PCakes303/intelligence-knowledge-graph)
+- [Agent Skill Library](https://github.com/PCakes303/agent-skill-library)
+- [Agent Sandbox Security](https://github.com/PCakes303/agent-sandbox-security)
 - [Repository 26 deployment checkpoint](checkpoints/2026-11-02-agent-sandbox-security-deployment.md)
 - [Repository 26 finalization and human/security follow-up](checkpoints/2026-11-02-agent-sandbox-security-finalization.md)
 - [Repository 26 open release-gates issue](https://github.com/PCakes303/agent-sandbox-security/issues/2)
-- [Repository 27 — Agent Emergency Control](https://github.com/PCakes303/agent-emergency-control) — 23 product files, exact staging parity, and CI passed on Python 3.10–3.12; contract only, not a live kill switch.
+- [Agent Emergency Control](https://github.com/PCakes303/agent-emergency-control) — 23 product files, exact staging parity, and CI passed on Python 3.10–3.12; contract only, not a live kill switch.
 - [Repository 27 finalization checkpoint](checkpoints/2026-11-02-agent-emergency-control-finalization.md)
 - [Repository 27 provisioning/build issue](https://github.com/PCakes303/agent-intelligence-ecosystem/issues/5)
-- [Repository 28 — Agent Compliance Governance](https://github.com/PCakes303/agent-compliance-governance) — 29 product files, exact staging parity, and CI passed on Python 3.10–3.12; governance scaffold only, not legal advice or certification.
+- [Agent Compliance Governance](https://github.com/PCakes303/agent-compliance-governance) — 29 product files, exact staging parity, and CI passed on Python 3.10–3.12; governance scaffold only, not legal advice or certification.
 - [Repository 28 release-gates issue](https://github.com/PCakes303/agent-compliance-governance/issues/2)
 - [Repository 28 deployment checkpoint](checkpoints/2026-11-02-agent-compliance-governance-deployment.md)
 - [Repository 28 evidence-tracker completion and back-check](checkpoints/2026-11-03-agent-compliance-governance-evidence-tracker.md)
-- [Repository 29 — Agent Conformance Lab](https://github.com/PCakes303/agent-conformance-lab) — 27 product files, exact staging parity, and CI passed 18 tests on Python 3.10–3.12; local validation scaffold, not live interoperability or certification.
+- [Agent Conformance Lab](https://github.com/PCakes303/agent-conformance-lab) — 27 product files, exact staging parity, and CI passed 18 tests on Python 3.10–3.12; local validation scaffold, not live interoperability or certification.
 - [Repository 29 release-gates issue](https://github.com/PCakes303/agent-conformance-lab/issues/2)
-- [Repository 30 — Agent Federation Network](https://github.com/PCakes303/agent-federation-network) — 17/17 product files exact-matched to staging; remote CI passed on Python 3.10–3.12. Local peer declaration validator only; no live federation.
-- [Repository 29 deployment checkpoint](checkpoints/2026-11-02-agent-conformance-lab-deployment.md)
+- [Agent Federation Network](https://github.com/PCakes303/agent-federation-network) — 17/17 product files exact-matched to staging; remote CI passed on Python 3.10–3.12. Local peer declaration validator only; no live federation.
+- [Agent Conformance Lab deployment checkpoint](checkpoints/2026-11-02-agent-conformance-lab-deployment.md)
 - [Portfolio-wide work review — PRs, issues, CI, staging parity and release gates](checkpoints/2026-11-02-portfolio-wide-work-review.md)
 
 - [LLM-readable project index](llms.txt)
@@ -113,7 +113,11 @@ See [Capability and compatibility metadata contract](docs/CAPABILITY-COMPATIBILI
 
 ## License status
 
-This repository applies a scoped mixed-license policy: original source code and machine-readable contracts are licensed under Apache-2.0; original human-readable documentation is licensed under CC BY 4.0. Third-party material retains upstream terms. Datasets, evidence, fixtures, sample payloads, media, and material with uncertain provenance are not blanket-licensed and require separate review. See [LICENSE.md](LICENSE.md).
+The master registry records the intended mixed-license policy (Apache-2.0 for eligible original code and machine-readable artifacts; CC BY 4.0 for eligible original documentation). The policy is approved as a direction, but file-level contributor authority, provenance, and third-party notice review remains pending. Do not assume all files are cleared for redistribution. See [LICENSE.md](LICENSE.md) and `registry/repositories.json`.
+
+## Current engineering readiness
+
+The 30 public component repositories are currently specification, schema, example, validator, and starter-tooling projects at varying maturity. They are not yet installable SDK or service packages. A repository-level `manifest.json` is ecosystem metadata, not a package build manifest. Do not add empty package metadata merely to make repositories appear distributable. Add language-specific packaging only when a repository has a reusable library or executable with a defined public API, dependency policy, reproducible build, tests, and release owner. The current master audit found no standard package-build manifests across the 30 components. Cross-repository synchronization remains a target design; automated event intake, reviewed registry PR generation, scheduled reconciliation, and downstream integration execution are not yet demonstrated as deployed.
 
 ## Repository quality and maintenance standard
 
