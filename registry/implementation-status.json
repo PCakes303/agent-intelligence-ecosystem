@@ -1588,7 +1588,7 @@
       "repository": "osint-collection-framework",
       "path": "provisioning/staged/osint-collection-framework",
       "file_count": 21,
-      "status": "Prepared in master staging; public remote not yet created. Collection-plan validator only, restricted to non-personal public metadata; requires source registry, identity, policy, audit, emergency-stop, compliance and supply-chain gate evidence. No network or collection capability."
+      "status": "Deployed to PCakes303/osint-collection-framework; 23 product files exact-matched to staging; remote CI passed 19 tests on Python 3.10–3.12; plan validator only, no network collection."
     },
     {
       "repository": "osint-evidence-engine",
@@ -1606,7 +1606,7 @@
       "repository": "agent-conformance-lab",
       "path": "provisioning/staged/agent-conformance-lab",
       "file_count": 26,
-      "status": "Prepared in master staging; public remote not yet created. Local repository metadata and synthetic AIX envelope validation plus deterministic PASS/FAIL/BLOCKED report builder only. No arbitrary code execution, live interoperability, swarm benchmarking or certification."
+      "status": "Deployed to PCakes303/agent-conformance-lab; 27 product files exact-matched to staging; remote CI passed 18 tests on Python 3.10–3.12; local metadata/fixture validation only, no live interoperability."
     }
   ],
   "master_audit": {
@@ -1766,16 +1766,6 @@
       }
     },
     {
-      "repository": "osint-collection-framework",
-      "portfolio_id": "osint-collection",
-      "state": "staged; remote not created",
-      "scope": "non-network plan validator only",
-      "verified_ci": {
-        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41514134921",
-        "tests": 19
-      }
-    },
-    {
       "repository": "osint-entity-resolution",
       "portfolio_id": "entity-resolution",
       "state": "staged; remote not created",
@@ -1783,16 +1773,6 @@
       "verified_ci": {
         "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41515580489",
         "tests": 16
-      }
-    },
-    {
-      "repository": "agent-conformance-lab",
-      "portfolio_id": "conformance-lab",
-      "state": "staged; remote not created",
-      "scope": "local metadata/fixture validation and deterministic report builder; no live interoperability",
-      "verified_ci": {
-        "run": "https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41516739073",
-        "tests": 18
       }
     }
   ]
