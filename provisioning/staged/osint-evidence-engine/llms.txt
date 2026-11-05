@@ -10,4 +10,4 @@
 - Library: osint_evidence/
 - Tests: tests/
 - Dependencies: osint-collection, audit-provenance, secure-supply-chain, emergency-control, compliance-governance (declared only).
-- License: pending portfolio review.
+- License: scoped mixed-license policy in LICENSE.md; file-level provenance and redistribution review remains required.
