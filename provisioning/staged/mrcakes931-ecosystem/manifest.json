@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/manifest.json",
+  "manifest_version": "1.0.0",
+  "id": "human-guide",
+  "name": "mrcakes931-ecosystem",
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Human-facing navigation, onboarding, architecture explanations, and project relationships for the MrCakes931 Agent Intelligence Ecosystem.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "Mixed ecosystem licensing is approved; this repository's exact license is pending review. Do not assume or add a license until selected."
+  },
+  "interfaces": [
+    {
+      "name": "human-guide-contract",
+      "version": "0.1.0",
+      "kind": "document",
+      "stability": "draft"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "master",
+      "constraint": "*",
+      "kind": "contract"
+    }
+  ],
+  "security": {
+    "threat_model": "See SECURITY.md. Public repository; treat all external inputs, contributors, manifests, events, and referenced artifacts as untrusted until independently validated.",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/mrcakes931-ecosystem",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Initial repository documentation and metadata scaffold committed.",
+      "kind": "specification",
+      "location": "README.md and manifest.json"
+    }
+  ]
+}
