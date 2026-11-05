@@ -1593,7 +1593,7 @@
     {
       "repository": "osint-evidence-engine",
       "path": "provisioning/staged/osint-evidence-engine",
-      "file_count": 23,
+      "file_count": 25,
       "status": "Deployed to PCakes303/osint-evidence-engine; 25 staged files exact-matched by path and Git blob SHA; remote CI passed 21 tests on Python 3.10–3.12. Public non-personal evidence manifests, SHA-256 digest verification and deterministic hash-linked event chain only; no collection, persistence, signatures, trusted timestamps, legal holds or legal chain-of-custody certification."
     },
     {
