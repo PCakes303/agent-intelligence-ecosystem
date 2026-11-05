@@ -13,7 +13,7 @@
 - Public remote: https://github.com/PCakes303/agent-federation-network
 - All 17 staged product files deployed.
 - Recursive Git tree comparison verified exact path and blob-SHA parity: 17/17, with zero missing, differing or extra files.
-- Remote CI passed all three matrix jobs on Python 3.10, 3.11 and 3.12: https://github.com/PCakes303/agent-federation-network/actions/runs/41993754908
+- Remote CI passed all three matrix jobs on Python 3.10, 3.11 and 3.12 at the metadata-aligned HEAD: https://github.com/PCakes303/agent-federation-network/actions/runs/41995338160
 - Staging status, master registry, implementation-status record, public agent catalog and provisioning inventory were updated.
 - The repository implements local peer-declaration validation only. It does not authenticate peers, verify signatures, exchange credentials, transport messages, authorize remote actions, distribute revocations, propagate emergency STOP, or execute workloads.
 - License policy is documented, but file-level provenance and third-party notice review remains open.
@@ -26,11 +26,12 @@
 - The master About metadata manifest now contains 31 public repository descriptions/topics. These settings are prepared but not applied to GitHub because the connected integration does not expose repository About updates.
 - Dependency review found two manifests missing the master control-plane dependency; those remote manifests and available staging copy were corrected. The graph documentation now clarifies that edges can represent optional integrations as well as required contract prerequisites.
 - A manifest-schema convergence gap remains: several newer repositories use a compact manifest shape that does not validate against the master `repository-manifest.schema.json`; the knowledge-graph manifest also uses a distinct shape, and sandbox-security has a noncanonical license status value. These require a deliberate migration or an approved versioned schema profile before claiming universal manifest conformance.
-- The secure-supply-chain manifest correctly marks identity and audit integrations as optional; this distinction is retained in its component manifest.
+- All 30 component manifest dependency IDs were compared with the master registry; all 30 match after adding the master dependency to integration and foundation manifests. Secure-supply-chain retains identity and audit integrations as optional, and the master dependency graph now documents optional integration edges explicitly.
+- License review wording still needs harmonization: several READMEs describe the scoped mixed-license model as already applied while their manifests remain `pending-review`. Treat per-repository/file-level licensing and third-party provenance as open until reviewed; do not make release or reuse claims from README wording alone.
 
 ## Master validation status
 
-The master registry validation workflow was triggered after the synchronization changes. Earlier runs failed in the regression-test step; the federation catalog's role/status drift was identified and corrected. A fresh run after that correction must pass before this checkpoint can be treated as a fully validated master release. Do not infer a pass from queued or in-progress jobs.
+The master validation workflow passed at commit `8d10929c5dfabd7dbb9500b7af0b03fcc10b5f23`: [run 41995330458](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/41995330458). The `validate` job passed all 47 regression tests, registry and catalog validation, and entry-level build; all staged matrices for collection, evidence, entity-resolution, conformance, emergency-control, compliance-governance and federation passed. A subsequent metadata-only sandbox manifest normalization triggered another master run; that run is queued and must be checked before the very latest master HEAD is called green.
 
 ## Safety and maturity boundary
 
