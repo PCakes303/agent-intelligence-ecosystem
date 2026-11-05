@@ -115,18 +115,23 @@ Additional verification during the 2026-11-02 portfolio audit:
 - [Transport Gateway](https://github.com/PCakes303/agent-transport-gateway/actions/runs/41427827799) — Python 3.10/3.11/3.12.
 - [Discovery Network](https://github.com/PCakes303/agent-discovery-network/actions/runs/41427835147) — Python 3.10/3.11/3.12.
 
-## Immediate next batch and acceptance criteria
+## Current engineering priorities and acceptance criteria
 
-- [ ] Reconcile registry, inventory, implementation plan and this tracker automatically; fail CI on count/status drift.
-- [ ] Complete schema compatibility runner and publication index.
-- [ ] Implement identity issuance/rotation/revocation and authenticated integration tests.
-- [ ] Move policy, audit and supply-chain contracts into their dedicated repositories when provisioned.
-- [ ] Add SBOM generation plus real signature/provenance verification; replace illustrative fixtures with test-key-backed verification fixtures.
-- [ ] Implement AIX canonical JSON codec and MCP/A2A mapping/fidelity tests.
-- [ ] Deliver a two-agent task delegation demo with duplicate, replay, timeout, retry and node-failure tests.
-- [ ] Build sandbox isolation and conformance gates before enabling arbitrary tool/skill execution.
-- [ ] Begin OSINT work only with authorized sources, provenance, privacy controls and uncertainty reporting.
-- [ ] Review private operations repository separately; do not mirror its content into public repositories.
+Provisioning and master registry coordination are complete at the portfolio level. The remaining work is to turn local contracts and validators into independently verified integrations, without promoting maturity prematurely.
+
+- [ ] Implement the cross-repository synchronization design in `agent-ecosystem-integration`: authenticated public-only event intake, immutable-SHA manifest validation, reviewed registry-update PRs, scheduled reconciliation, drift alerts, and security tests for forged/replayed events and private-data leakage.
+- [ ] Implement the Schema Registry compatibility-analysis runner and versioned publication index.
+- [ ] Demonstrate authenticated identity issuance, key rotation, scoped delegation, and revocation; connect it to policy and audit consumers.
+- [ ] Implement policy enforcement at actual execution boundaries; a local policy decision evaluator alone is not enforcement.
+- [ ] Add SBOM generation, signed provenance, artifact signature verification, dependency policy, and reproducible release attestations.
+- [ ] Add cross-language AIX vectors and concrete MCP/A2A mapping and interoperability tests.
+- [ ] Deliver a two-agent task delegation demo with duplicate, replay, timeout, retry, partition, and node-failure tests.
+- [ ] Implement real OS-level sandbox isolation and independently verify process, filesystem, network, resource, and escape boundaries.
+- [ ] Implement authenticated emergency STOP authority, cryptographic command verification, durable monotonic state, revocation, propagation, enforcement, and controlled recovery.
+- [ ] Keep OSINT collection disabled until source authorization, privacy/legal review, identity/policy/STOP integration, provenance, evidence storage, and operational controls are independently tested.
+- [ ] Demonstrate two independently operated federation peers with authenticated identity, signatures, authorization, revocation, secure transport, and emergency-stop propagation.
+- [ ] Complete file-level licensing/provenance review and owner-applied GitHub About, branch protection, Actions permission, secret scanning, and dependency security settings.
+- [ ] Review the private operations repository only in a separate authorized workflow; never mirror its contents into public repositories.
 
 ## Tracking conventions
 
