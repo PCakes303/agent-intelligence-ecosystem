@@ -137,7 +137,7 @@ A phase is not complete merely because documentation or repository scaffolding e
 
 Repositories:
 - Public: [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression)
-- Private: [swarm-information-research](https://github.com/PCakes303/swarm-information-research)
+- Private research remains in a separate restricted workspace and is not listed in public discovery.
 
 The private repository is the research authority for hypotheses, taxonomies, experiment design, negative results, and architecture decisions. It is excluded from public synchronization. The public implementation currently provides a local lossless codec pipeline foundation, exact reconstruction checks, a representation-capsule schema, and a Python test workflow.
 
@@ -150,14 +150,14 @@ Exit gates:
 - [ ] Implement selective reconstruction and compare with decoded reference results.
 - [ ] Prototype compute-on-encoded-data operations for explicitly supported formats.
 - [ ] Add privacy, tenant-isolation, provenance, resource-exhaustion, and adversarial-input tests before distributed deployment.
-- [ ] Publish only reviewed, reproducible findings from the private research repository.
+- [ ] Publish only individually reviewed, reproducible findings from restricted research when explicitly approved.
 
 
 ## Phase 6 — Research and data representation
 
 **Provisioning: complete; local implementation: experimental; distributed research: not yet implemented.**
 
-Public implementation: `adaptive-swarm-compression`. Private research material is maintained separately and is not a dependency or public discovery source.
+Public implementation: `adaptive-swarm-compression`. Restricted research material is maintained separately and is not a dependency or public discovery source.
 
 Current public foundation includes identity and zlib lossless codecs, ordered local pipeline execution, source digest verification, bounded decompression, a representation-capsule schema, deterministic synthetic workloads, a local benchmark runner, and regression tests.
 
