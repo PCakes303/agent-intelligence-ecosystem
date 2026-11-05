@@ -1,7 +1,8 @@
 # OSINT Entity Resolution
 
 Portfolio ID: entity-resolution  
-Maturity: scaffolded public-entity candidate matcher; no identity resolution or graph writes.
+Version: 1.1.0  
+Maturity: scaffolding; bounded public-entity candidate matcher only. No identity resolution or graph writes.
 
 Generate bounded, evidence-backed candidate matches among public organizations, software projects, datasets, publications and public registries. Preserve ambiguity and require human review.
 
@@ -19,10 +20,6 @@ Python 3.10+:
     python -m unittest discover -s tests -v
 
 See docs/RESOLUTION-CONTRACT.md, docs/THREAT-MODEL.md and docs/INTEGRATION-GATES.md.
-
-## Licensing
-
-License selection is pending portfolio review. No license is asserted.
 
 ## Licensing
 
