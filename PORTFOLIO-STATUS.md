@@ -1,4 +1,4 @@
-# 32-Repository Portfolio Status and Work Tracker
+# 34-Repository Portfolio Status and Work Tracker
 
 **As of:** 2026-11-05  
 **Owner:** [PCakes303](https://github.com/PCakes303) · **Public identity:** MrCakes931  
@@ -10,19 +10,19 @@
 
 | Measure | Verified count |
 |---|---:|
-| Total planned repositories | 32 |
-| Public repositories | 31 |
-| Private repositories | 1 |
-| Public repositories currently present | 31 |
-| Private repositories currently present | 1 |
+| Total coordinated repositories | 34 |
+| Public repositories | 32 |
+| Private repositories | 2 |
+| Public repositories currently present | 32 |
+| Private repositories currently present | 2 |
 | Public repositories not yet created | 0 |
 | Separate profile repository excluded from portfolio | 1 |
 
-The latest reconciliation verified all 31 public portfolio repositories and the private operations repository. The separate `PCakes303/PCakes303` profile repository is not one of the 32 portfolio repositories. No public repositories remain to be created. All 31 public repositories and the 1 private operations repository exist. The final federation repository is deployed with exact staging parity and passing remote CI.
+The original 32-repository portfolio and its separate research expansion are now coordinated as 34 repositories: 32 public and 2 private. The separate `PCakes303/PCakes303` profile repository remains excluded. The new public compression project is experimental; the private research repository is excluded from public synchronization.
 
 ## Approved portfolio expansion
 
-The portfolio now contains 32 repositories: 31 public and 1 private. Repository 26, agent-sandbox-security, is deployed as an experimental policy-contract validator only; it does not execute workloads or enforce OS isolation. Two new P0 repositories are approved: agent-emergency-control and agent-compliance-governance. Emergency-stop enforcement and deployment-specific legal applicability are release gates across the ecosystem.
+The original portfolio has been extended to a coordinated inventory of 34 repositories: 32 public and 2 private, including one public research implementation and one private research headquarters. Repository 26, agent-sandbox-security, is deployed as an experimental policy-contract validator only; it does not execute workloads or enforce OS isolation. Two new P0 repositories are approved: agent-emergency-control and agent-compliance-governance. Emergency-stop enforcement and deployment-specific legal applicability are release gates across the ecosystem.
 
 ## Status rules
 
