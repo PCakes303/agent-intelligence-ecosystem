@@ -257,6 +257,20 @@
     "$id": {
       "type": "string",
       "format": "uri"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Repository implementation version; does not imply a published release."
+    },
+    "entrypoints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "description": "Repository-relative implementation entrypoint paths. Empty when no stable entrypoint is declared."
     }
   },
   "additionalProperties": false
