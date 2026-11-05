@@ -1,0 +1,15 @@
+{
+  "compatibility_version": "1.1.0",
+  "repository": "mrcakes931-ecosystem",
+  "policy": "Declared dependencies describe contract relationships only; they do not prove runtime interoperability. A dependency is marked tested only when reproducible cross-repository test evidence is published.",
+  "dependencies": [
+    {
+      "repository_id": "master",
+      "version_range": "*",
+      "status": "declared",
+      "evidence": []
+    }
+  ],
+  "tested_combinations": [],
+  "breaking_change_policy": "Major contract version for removed or renamed required fields, semantic changes, or weakened security guarantees; minor for additive optional fields; patch for editorial corrections."
+}

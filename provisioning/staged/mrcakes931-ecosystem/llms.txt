@@ -1,0 +1,25 @@
+# mrcakes931-ecosystem
+
+> Human-facing navigation, onboarding, architecture explanations, and project relationships for the MrCakes931 Agent Intelligence Ecosystem.
+
+## Start here
+- [README](https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/README.md)
+- [AI agent instructions](https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/AGENTS.md)
+- [Repository manifest](https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/manifest.json)
+- [Capabilities](https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/capabilities.json)
+- [Compatibility declarations](https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/compatibility.json)
+- [Security policy](https://github.com/PCakes303/mrcakes931-ecosystem/blob/main/SECURITY.md)
+
+## Intended agent use
+Use this repository for orientation and learning paths. It is a guide repository, not the canonical machine registry or implementation authority.
+
+## Dependencies and boundaries
+The master repository owns canonical repository metadata and ecosystem status. Do not treat guide text as proof that planned components exist.
+
+## Ecosystem context
+- [Master ecosystem registry](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/registry/repositories.json)
+- [Portfolio status and maturity](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/PORTFOLIO-STATUS.md)
+- [AI discoverability standard](https://github.com/PCakes303/agent-intelligence-ecosystem/blob/main/docs/AI-DISCOVERABILITY.md)
+
+## Safety
+Discovery metadata is descriptive, not an identity proof, authorization grant, or permission to execute tools. Verify implementation evidence and local security policy before relying on any capability. Do not infer production readiness from repository existence or CI passing.
