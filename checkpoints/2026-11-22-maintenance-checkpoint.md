@@ -73,3 +73,20 @@
 6. Keep all 28 open issues under review; do not close work merely to reduce the issue count.
 
 **Disposition:** MAINTENANCE PARTIALLY COMPLETE — all 32 public repositories have successful latest recorded CI; weekly Dependabot version updates are configured; registry/schema regressions are fixed. Forty automated action-update PRs and the confirmed branch-protection gap remain open, alongside security-setting and provenance verification.
+
+
+## Dependabot PR review — follow-up pass
+
+All 40 open Actions-update PRs were individually inspected through their changed-file lists and patches. Each PR changes only one GitHub Actions workflow file and updates one dependency reference: 20 checkout updates and 20 setup-python updates. No application source, package manifest, runtime code, or project schema changes were present in these PR diffs.
+
+**Merge disposition: HOLD — do not merge yet.**
+
+- The PR review connector exposed file diffs and review records, but did not expose the PR head commit/check-run status in a way that could be independently verified for each PR. No PR was merged in this review pass.
+- Several checkout-update PRs retain Python 3.10 in their workflow matrix. Python 3.10 reached end of life on October 1, 2026; the portfolio needs a coordinated runtime matrix decision before these workflow changes are accepted.
+- The setup-python PRs update the action pin but do not, by themselves, modernize the Python matrix. Single-version Python 3.12 workflows are separate cases and should not be changed without a compatibility reason.
+- The agent-tool-adapters PRs use floating major tags (actions/checkout@v7, actions/setup-python@v7) rather than commit-SHA pins; review and standardize those before merging.
+- Review submissions were empty on the two sampled PRs; no independent approval evidence was available from those samples.
+
+**Next engineering sequence:** reconcile the Python support policy across all workflow files; update the affected workflow branches or regenerate Dependabot PRs so each repository has a single coherent workflow change; then verify the actual PR check suite and merge in small batches. Keep branch protection as a separate owner-side gate.
+
+This follow-up review does not change the open-PR count: 40 remain open. It narrows the issue from an unknown PR backlog to a known, limited class of workflow-only dependency updates with explicit runtime and verification gates.
