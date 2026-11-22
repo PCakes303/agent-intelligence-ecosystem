@@ -4,9 +4,9 @@ This checklist records GitHub settings that the connected GitHub integration cou
 
 ## Confirmed finding
 
-The GitHub branches API reported protected=false for the default main branch in all 32 public ecosystem repositories. The master repository's rulesets endpoint returned an empty list. Treat the public portfolio as lacking verified merge protection until these settings are applied and re-checked.
+The GitHub branches API reported protected=false for the default main branch in all 32 public ecosystem repositories and the separate public profile repository PCakes303/PCakes303. The master repository's rulesets endpoint returned an empty list. Treat all 33 public account repositories as lacking verified merge protection until these settings are applied and re-checked.
 
-## Apply to all 32 public repositories
+## Apply to all 33 public repositories (32 ecosystem repositories plus the profile repository)
 
 For each public repository:
 
