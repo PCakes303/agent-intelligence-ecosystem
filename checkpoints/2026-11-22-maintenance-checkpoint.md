@@ -90,3 +90,12 @@ All 40 open Actions-update PRs were individually inspected through their changed
 **Next engineering sequence:** reconcile the Python support policy across all workflow files; update the affected workflow branches or regenerate Dependabot PRs so each repository has a single coherent workflow change; then verify the actual PR check suite and merge in small batches. Keep branch protection as a separate owner-side gate.
 
 This follow-up review does not change the open-PR count: 40 remain open. It narrows the issue from an unknown PR backlog to a known, limited class of workflow-only dependency updates with explicit runtime and verification gates.
+
+
+## Runtime matrix audit for the 20 Dependabot-affected repositories
+
+Fetched and inspected the current default-branch workflow files for all 20 repositories with open Actions-update PRs. Seventeen repositories still include Python 3.10 in a CI matrix: osint-entity-resolution, agent-sandbox-security, agent-audit-provenance, agent-federation-network, agent-skill-library, agent-conformance-lab, agent-tool-adapters, intelligence-knowledge-graph, swarm-state-mesh, agent-compliance-governance, osint-collection-framework, osint-source-registry, agent-capability-registry, agent-secure-supply-chain, osint-evidence-engine, agent-ecosystem-integration, and agent-ai-discovery. Three affected repositories use a single Python 3.12 workflow: agent-policy-engine, agent-identity-trust, and agent-resource-manifest.
+
+Python 3.10 is end-of-life; do not treat it as a supported security-maintenance CI target. The next coordinated change should remove 3.10 from those 17 matrices and select a tested support range. Do not blindly extend all 17 projects to Python 3.15 without checking their dependency/runtime compatibility; first establish the portfolio's supported Python range and validate it across all 17. The single-version 3.12 workflows should be reviewed separately rather than mechanically converted to matrices.
+
+The connector used in this pass can inspect PR diffs and changed filenames but does not expose a reliable per-PR check-run status/head SHA view. Therefore no merge was performed. The 40 PRs remain open pending workflow reconciliation and verifiable green checks.
