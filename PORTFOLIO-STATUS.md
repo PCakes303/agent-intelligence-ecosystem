@@ -22,7 +22,7 @@ The original 32-repository portfolio and its separate research expansion are now
 
 ## November 22 maintenance status
 
-- **CI:** Latest recorded workflows passed for all 32 public portfolio repositories. The master registry validation and 30 staging jobs passed after correcting repository-count, staged-manifest, catalog-schema, and maturity-status drift.
+- **CI:** All 32 public portfolio repositories completed a successful workflow during this sweep. The master registry validation and 30 staging jobs passed after correcting repository-count, staged-manifest, catalog-schema, and maturity-status drift. Newest master documentation-only commits have validation reruns queued; the last completed master validation passed.
 - **Dependency automation:** Weekly Dependabot GitHub Actions updates are configured across all 32 public repositories; weekly pip updates are configured in 25 repositories with Python dependency manifests.
 - **Open dependency PRs:** 40 Dependabot pull requests remain open across 20 repositories (20 checkout updates and 20 setup-python updates). One aix-core jsonschema update was merged after all five Python 3.11–3.15 checks passed. Do not auto-merge the remaining PRs until their checks are green.
 - **Branch protection:** All 32 public ecosystem default branches and the separate public profile repository's default branch reported `protected: false` (33 public repositories total). Configure branch rulesets before treating the account's public repositories as merge-protected. Owner-side instructions: [GitHub hardening checklist](docs/OWNER_SECURITY_ACTIONS_2026-11-22.md).
