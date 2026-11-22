@@ -110,3 +110,8 @@ See the [Integration and Remediation Register](../docs/INTEGRATION-REMEDIATION-R
 - All 40 Actions updates are integrated: 33 original Dependabot PRs merged, 7 overlapping originals superseded by clean replacement PRs, and all 7 replacements merged. The separate aix-core jsonschema PR was also merged.
 - Live account search now reports 0 open PRs and 28 open issues. The issues remain open because they describe real engineering or owner-side release gates.
 - Branch protection, GitHub security settings, current About metadata, file-level provenance/licensing, private-repository review, and runtime-policy cleanup remain open. Do not declare the account cleared until evidence is recorded.
+
+
+## Runtime policy remediation — 2026-11-22
+
+Python 3.10 was removed from the CI matrices of all 17 affected repositories. Each of the 17 post-change workflow runs completed successfully on Python 3.11 and 3.12. Three single-version repositories remain on Python 3.12 pending separate coverage review. Policy: [PYTHON-SUPPORT-POLICY.md](../docs/PYTHON-SUPPORT-POLICY.md). The 40 Actions updates are integrated, 0 open PRs remain, and the latest master HEAD 23410ad86d093fba9bdb5d414d317a5b53e65850 passed 36/36 checks.
