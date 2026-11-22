@@ -530,7 +530,8 @@
     ]
   ],
   "excluded": [
-    "private-operations"
+    "private-operations",
+    "swarm-information-research"
   ],
-  "note": "The private repository is intentionally excluded from all public dependency and export graphs."
+  "note": "Private repositories are intentionally excluded from public dependency and export graphs."
 }
