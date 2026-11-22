@@ -320,3 +320,8 @@ The live GitHub API was checked for all 31 public portfolio repositories. Result
 **Owner action required:** apply the approved per-repository description, the common master homepage URL, and individualized topics in GitHub's About → Edit repository details panel. Replace the malformed policy-engine description. Re-read the metadata after saving. The connected GitHub integration used for this audit cannot write these settings.
 
 Branch protection/rulesets, required checks, Actions permissions, vulnerability reporting, secret scanning/push protection, and dependency security settings remain owner verification tasks; do not mark them enabled until checked in GitHub.
+
+
+## Latest integration checkpoint — 2026-11-22
+
+The 40 Actions version updates have been integrated across 20 repositories, and all 20 latest-main workflows passed after merge. The master repository's latest validation passed 36/36 checks. The account currently has 0 open PRs and 28 open issues. The issues remain open as real engineering and account-owner release gates. See [Integration and Remediation Register](docs/INTEGRATION-REMEDIATION-REGISTER-2026-11-22.md) for evidence and sequencing. Branch rulesets, security settings, live About metadata, provenance/licensing, Python runtime policy and private-repository review remain outstanding; the account is not yet cleared.
