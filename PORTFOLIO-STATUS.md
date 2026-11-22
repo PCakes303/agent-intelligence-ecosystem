@@ -335,3 +335,8 @@ Python 3.10 has been removed from all 17 affected CI matrices; all 17 post-chang
 ## Live account controls and metadata — 2026-11-22
 
 The 33 public default branches were rechecked and all still report unprotected. Live About metadata audit: 18 descriptions present, 15 blank, 0 homepage URLs, 0 topics. See [GitHub About Metadata Audit](docs/GITHUB-ABOUT-AUDIT-2026-11-22.md) and [Owner Security Actions](docs/OWNER_SECURITY_ACTIONS_2026-11-22.md). These account settings require owner-side changes; the integration cannot apply them. Security alert/scanning, secret scanning, push protection, private reporting and Actions permissions remain unverified.
+
+
+## Compression and information-representation research
+
+The private research headquarters is [swarm-information-research](https://github.com/PCakes303/swarm-information-research); its experiment register currently contains five planned experiments and no completed benchmark results. The public implementation is [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression), Apache-2.0, Python >=3.11, with local identity/zlib stages and successful Python 3.11–3.15 CI. It remains an experimental scaffold; the smoke benchmark is not publishable performance evidence and distributed swarm coordination, adaptive pipeline selection and selective reconstruction remain planned. The research standard is to measure total useful-information cost and preserve exactness/information-theoretic boundaries. The separate private operations repository contains only its boundary README.
