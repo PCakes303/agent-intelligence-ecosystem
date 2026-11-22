@@ -52,7 +52,7 @@
 - The master registry validation failure was corrected by updating bootstrap counts, staged manifest exclusion expectations, public catalog discovery metadata/schema, and adaptive-swarm-compression maturity status.
 - Master registry validation and all 30 staging matrix jobs passed on commit `3e81577b0fb41b250f6ef8e5ff24c3ec7b35ecd4` (run [45053957427](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/45053957427)). The subsequent Dependabot configuration commit `7af3629c6200c08ac918f2992d54670b72618a97` also passed the latest master workflows (run [45054266417](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/45054266417)).
 - The nine previously stale repositories all completed successful CI after action/runtime modernization on November 22. The adaptive-swarm-compression matrix passed all five Python versions 3.11–3.15, with 17 tests per job. `aix-core` post-merge CI passed.
-- Account-wide public ecosystem check: all 32 public portfolio repositories had a successful latest recorded CI run during this maintenance sweep. Later documentation-only commits on the master repository queued additional validation runs; the latest completed master validation before those documentation commits passed. This is workflow/test evidence, not a production security certification.
+- Account-wide public ecosystem check: all 32 public portfolio repositories completed at least one successful CI run during this maintenance sweep. Later documentation-only commits on the master repository queued additional validation runs; the latest completed master validation before those documentation commits passed. This is workflow/test evidence, not a production security certification.
 
 ## Security and account settings
 
