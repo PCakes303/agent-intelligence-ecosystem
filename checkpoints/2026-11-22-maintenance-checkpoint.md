@@ -41,8 +41,8 @@
 ## CI status and remaining verification
 
 - The November 5 master CI run failed in registry validation. Its log showed the public dependency graph excluded only one private ID while the current registry declared two private IDs; it also reported the repository list exceeded the schema's prior 32-item limit.
-- The registry and schema corrections have been committed. New master workflow runs were queued/in progress at the time of this checkpoint; final results must be inspected before marking master CI green.
-- Emergency-control and adaptive-swarm-compression workflows were triggered by the maintenance changes; their new runs were queued at checkpoint time.
+- The registry and schema corrections have been committed. A subsequent master validation run on commit `2a68fc8c6fb228c71f812bca0badc78ab5d06291` completed successfully on November 22, including the `validate` job. Later runs on commits `9b951b21803cb6ad98d069df2ebd350fda642f61`, `6ed57a527ce921d4cfae66e4571c1e709bc89fdb`, and the checkpoint commit were still queued when last inspected; therefore the latest HEAD still requires a final green run.
+- Emergency-control CI completed successfully on the updated workflow commit `8375f0a02dfbdbb4a4f59b2fcbe2baa2b5ad8397`. Adaptive-swarm-compression dependency and workflow updates triggered new runs; the latest runtime-matrix runs were still in progress when last inspected.
 - No current November 22 portfolio-wide green CI sweep is claimed here.
 
 ## Security and account settings
