@@ -340,3 +340,8 @@ The 33 public default branches were rechecked and all still report unprotected. 
 ## Compression and information-representation research
 
 The private research headquarters is [swarm-information-research](https://github.com/PCakes303/swarm-information-research); its experiment register currently contains five planned experiments and no completed benchmark results. The public implementation is [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression), Apache-2.0, Python >=3.11, with local identity/zlib stages and successful Python 3.11–3.15 CI. It remains an experimental scaffold; the smoke benchmark is not publishable performance evidence and distributed swarm coordination, adaptive pipeline selection and selective reconstruction remain planned. The research standard is to measure total useful-information cost and preserve exactness/information-theoretic boundaries. The separate private operations repository contains only its boundary README.
+
+
+## Open-issue triage — 2026-11-22
+
+All 28 open account issues were reviewed by full issue body and classified in [OPEN-ISSUE-TRIAGE-2026-11-22.md](docs/OPEN-ISSUE-TRIAGE-2026-11-22.md). No issues were bulk-closed. Several historical issue descriptions are stale because code remediation has since landed; the register separates current-source remediation from remaining acceptance gates. Account-wide disposition remains blocked on owner-side branch/security/metadata/provenance settings and engineering gates for authenticated trust, policy enforcement, distributed durability, transport replay defense, OS isolation, emergency-stop enforcement and conformance evidence.
