@@ -52,3 +52,44 @@ For each repository, record:
 ## Release gate
 
 Do not claim the portfolio is hardened or production-ready solely because CI passes. Merge protection, secret controls, security alerts, file-level provenance, emergency-stop enforcement, and OS sandbox isolation remain separate controls that require verification.
+
+
+## Public repository execution register
+
+The current account inventory contains these 33 public repositories. Use this as the checklist for the per-repository ruleset and security-settings review; the two private repositories are intentionally not in this public register.
+
+- [ ] PCakes303 (separate profile repository)
+- [ ] agent-intelligence-ecosystem
+- [ ] agent-ai-discovery
+- [ ] mrcakes931-ecosystem
+- [ ] agent-ecosystem-integration
+- [ ] agent-foundation-spec
+- [ ] agent-resource-manifest
+- [ ] agent-schema-registry
+- [ ] agent-identity-trust
+- [ ] agent-secure-supply-chain
+- [ ] agent-policy-engine
+- [ ] agent-audit-provenance
+- [ ] aix-core
+- [ ] aix-codecs
+- [ ] agent-transport-gateway
+- [ ] agent-discovery-network
+- [ ] agent-capability-registry
+- [ ] swarm-runtime
+- [ ] swarm-coordination
+- [ ] swarm-state-mesh
+- [ ] osint-source-registry
+- [ ] intelligence-knowledge-graph
+- [ ] agent-tool-adapters
+- [ ] agent-skill-library
+- [ ] agent-sandbox-security
+- [ ] agent-emergency-control
+- [ ] agent-compliance-governance
+- [ ] agent-conformance-lab
+- [ ] osint-collection-framework
+- [ ] osint-evidence-engine
+- [ ] osint-entity-resolution
+- [ ] agent-federation-network
+- [ ] adaptive-swarm-compression
+
+Private repositories excluded from this public checklist: agent-ecosystem-private and swarm-information-research. Their settings and source contents require a separate private-repository audit.
