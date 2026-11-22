@@ -9,7 +9,7 @@
 - 35 repositories visible in the connected account inventory.
 - 34 coordinated ecosystem/research repositories: 32 public and 2 private.
 - Separate public profile repository `PCakes303/PCakes303` excluded from the 34-repository coordinated portfolio.
-- Private repositories remain excluded from public catalogs, dependency graphs, and exports. Their contents were not inspected.
+- Private repositories remain excluded from public catalogs, dependency graphs, and exports. Metadata, README boundary descriptions, and presence/absence of selected package manifests were checked; source contents were not audited.
 - 28 open issues and 0 open pull requests were returned by account-wide GitHub search at the checkpoint.
 
 ## Changes committed during this maintenance pass
@@ -23,7 +23,7 @@
 ### Python development dependencies
 
 - Updated 23 repository `requirements-dev.txt` manifests from `jsonschema==4.23.0` or `jsonschema==4.25.1` to `jsonschema==4.26.0`.
-- The 23 repositories are: agent-intelligence-ecosystem, agent-ai-discovery, agent-ecosystem-integration, agent-resource-manifest, agent-identity-trust, agent-secure-supply-chain, agent-policy-engine, agent-audit-provenance, aix-core, agent-capability-registry, swarm-state-mesh, osint-source-registry, intelligence-knowledge-graph, agent-tool-adapters, agent-skill-library, agent-sandbox-security, agent-emergency-control, agent-compliance-governance, agent-conformance-lab, osint-collection-framework, osint-evidence-engine, osint-entity-resolution, and agent-federation-network.
+- The 23 repositories are: agent-intelligence-ecosystem, agent-ai-discovery, agent-ecosystem-integration, agent-resource-manifest, agent-identity-trust, agent-secure-supply-chain, agent-policy-engine, agent-audit-provenance, aix-core, agent-capability-registry, swarm-state-mesh, osint-source-registry, intelligence-knowledge-graph, agent-tool-adapters, agent-skill-library, agent-sandbox-security, agent-emergency-control, agent-compliance-governance, agent-conformance-lab, osint-collection-framework, osint-evidence-engine, osint-entity-resolution, and agent-federation-network. Twenty-two were direct manifest commits; the aix-core update was merged from a Dependabot PR after all five Python 3.11–3.15 checks passed.
 - PyPI lists jsonschema 4.26.0 as the January 7, 2026 release. This is a dependency update, not a claim that every repository's full test suite has passed after the change.
 
 ### Compression research project
@@ -34,20 +34,30 @@
 
 ### GitHub Actions modernization
 
-- Updated and commit-pinned `actions/checkout` to v7.0.1 and `actions/setup-python` to v7.1.0 in the master workflows and the emergency-control and adaptive-swarm-compression workflows.
-- Removed Python 3.10 from the updated master and emergency-control CI matrices; expanded coverage to Python 3.11–3.15.
+- Updated and commit-pinned `actions/checkout` to v7.0.1 and `actions/setup-python` to v7.1.0 in the master workflows, emergency-control, adaptive-swarm-compression, and nine previously stale repositories.
+- Removed Python 3.10 from the updated matrices; expanded applicable matrices to Python 3.11–3.15. Foundation/schema single-version workflows were refreshed to the new action pins.
 - Master foundation-contract workflow uses Python 3.14 as its primary validation runtime.
+
+### Scheduled dependency automation
+
+- Added `.github/dependabot.yml` to all 32 public ecosystem repositories.
+- Configured weekly GitHub Actions updates across all 32; configured weekly pip updates in 25 repositories with Python dependency manifests.
+- Dependabot opened 40 pull requests across 20 repositories: 20 `actions/checkout` updates and 20 `actions/setup-python` updates. These remain open for CI/review; no mass auto-merge was performed.
+- Merged `aix-core` PR #2 (`jsonschema` 4.25.1 → 4.26.0) after all five Python 3.11–3.15 checks passed. Its post-merge CI also passed.
+- `aix-codecs` pins `rfc8785==0.1.4`; PyPI still lists 0.1.4 as its latest release, so there is no newer upstream version to adopt at this checkpoint.
 
 ## CI status and remaining verification
 
 - The November 5 master CI run failed in registry validation. Its log showed the public dependency graph excluded only one private ID while the current registry declared two private IDs; it also reported the repository list exceeded the schema's prior 32-item limit.
-- The registry and schema corrections have been committed. A subsequent master validation run on commit `2a68fc8c6fb228c71f812bca0badc78ab5d06291` completed successfully on November 22, including the `validate` job. Later runs on commits `9b951b21803cb6ad98d069df2ebd350fda642f61`, `6ed57a527ce921d4cfae66e4571c1e709bc89fdb`, and the checkpoint commit were still queued when last inspected; therefore the latest HEAD still requires a final green run.
-- Emergency-control CI completed successfully on the updated workflow commit `8375f0a02dfbdbb4a4f59b2fcbe2baa2b5ad8397`. Adaptive-swarm-compression dependency and workflow updates triggered new runs; the latest runtime-matrix runs were still in progress when last inspected.
-- No current November 22 portfolio-wide green CI sweep is claimed here.
+- The master registry validation failure was corrected by updating bootstrap counts, staged manifest exclusion expectations, public catalog discovery metadata/schema, and adaptive-swarm-compression maturity status.
+- Master registry validation and all 30 staging matrix jobs passed on commit `3e81577b0fb41b250f6ef8e5ff24c3ec7b35ecd4` (run [45053957427](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/45053957427)). The subsequent Dependabot configuration commit `7af3629c6200c08ac918f2992d54670b72618a97` also passed the latest master workflows (run [45054266417](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/45054266417)).
+- The nine previously stale repositories all completed successful CI after action/runtime modernization on November 22. The adaptive-swarm-compression matrix passed all five Python versions 3.11–3.15, with 17 tests per job. `aix-core` post-merge CI passed.
+- Account-wide public ecosystem check: latest recorded CI was successful for all 32 public portfolio repositories at the time of this checkpoint. This is workflow/test evidence, not a production security certification.
 
 ## Security and account settings
 
-- The master repository rulesets endpoint returned an empty list. Branch protection read returned HTTP 403 (integration permission limitation); branch protection is therefore unverified.
+- All 32 public ecosystem default `main` branches reported `protected: false` in the GitHub branch API. The master repository rulesets endpoint returned an empty list. This is a confirmed branch-protection gap; the connected integration does not expose the settings-write operation needed to remediate it.
+- Dependabot alert, code-scanning alert, secret-scanning, push-protection, and private vulnerability-reporting settings were not independently verifiable through the connected GitHub integration. Do not interpret lack of returned alert data as zero alerts.
 - Dependabot alert, code-scanning alert, secret-scanning, push-protection, and private vulnerability-reporting settings were not independently verifiable through the connected GitHub integration in this pass. Do not interpret lack of returned alert data as zero alerts.
 - File-level license/provenance review remains outstanding under the approved mixed-license policy.
 - The emergency-stop repository remains a reference contract, not a live kill switch. Real authenticated authority, cryptographic verification, durable state, distributed propagation, revocation, runtime enforcement, and independently reviewed OS isolation remain release gates.
@@ -55,11 +65,11 @@
 
 ## Open work
 
-1. Confirm current master, emergency-control, and compression CI runs after all maintenance commits.
-2. Resolve any remaining registry/catalog/manifest/dependency graph mismatches and synchronize master documentation.
-3. Run a complete repository-by-repository dependency and workflow inventory; this pass focused on manifests and workflows that were directly inspected.
-4. Obtain owner-side verification of branch rulesets/protection, Actions permissions, Dependabot, code scanning, secret scanning, push protection, and private vulnerability reporting.
-5. Complete file-level license/provenance review and cross-repository conformance fixtures.
+1. Review and merge the 40 remaining Dependabot action-update PRs only after their own checks pass; do not enable blind auto-merge while default branches remain unprotected.
+2. Configure branch protection/rulesets on all 32 public repositories: require pull requests, required CI checks, conversation resolution, block force pushes/deletions, and define a minimal bypass policy.
+3. Owner-verify Dependabot security updates/alerts, code scanning, secret scanning, push protection, private vulnerability reporting, and Actions token permissions.
+4. Complete file-level license/provenance review and cross-repository conformance fixtures.
+5. Continue full dependency and workflow inventory for any non-Python ecosystems or package manifests not covered by the 25 pip configurations.
 6. Keep all 28 open issues under review; do not close work merely to reduce the issue count.
 
-**Disposition:** MAINTENANCE IN PROGRESS — registry/schema fixes and selected dependency/workflow upgrades committed; CI and account security-setting verification remain open.
+**Disposition:** MAINTENANCE PARTIALLY COMPLETE — all 32 public repositories have successful latest recorded CI; weekly Dependabot version updates are configured; registry/schema regressions are fixed. Forty automated action-update PRs and the confirmed branch-protection gap remain open, alongside security-setting and provenance verification.
