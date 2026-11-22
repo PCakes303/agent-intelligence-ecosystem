@@ -56,7 +56,7 @@
 
 ## Security and account settings
 
-- All 32 public ecosystem default `main` branches reported `protected: false` in the GitHub branch API. The master repository rulesets endpoint returned an empty list. This is a confirmed branch-protection gap; the connected integration does not expose the settings-write operation needed to remediate it.
+- All 32 public ecosystem default `main` branches reported `protected: false` in the GitHub branch API. The master repository rulesets endpoint returned an empty list. This is a confirmed branch-protection gap; the connected integration does not expose the settings-write operation needed to remediate it. Owner-side remediation steps are recorded in [OWNER_SECURITY_ACTIONS_2026-11-22.md](../docs/OWNER_SECURITY_ACTIONS_2026-11-22.md).
 - Dependabot alert, code-scanning alert, secret-scanning, push-protection, and private vulnerability-reporting settings were not independently verifiable through the connected GitHub integration. Do not interpret lack of returned alert data as zero alerts.
 - Dependabot alert, code-scanning alert, secret-scanning, push-protection, and private vulnerability-reporting settings were not independently verifiable through the connected GitHub integration in this pass. Do not interpret lack of returned alert data as zero alerts.
 - File-level license/provenance review remains outstanding under the approved mixed-license policy.
