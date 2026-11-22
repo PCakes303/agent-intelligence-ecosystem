@@ -83,7 +83,7 @@ class RegistryValidationTests(unittest.TestCase):
     def test_staged_manifest_dependencies_match_registry(self):
         by_id = {item["id"]: item for item in self.registry["repositories"]}
         paths = sorted((ROOT / "provisioning" / "staged").glob("*/manifest.json"))
-        self.assertEqual(len(paths), len(by_id) - 2)  # exclude master and private operations
+        self.assertEqual(len(paths), len(by_id) - 3)  # exclude master and both private repositories
         errors = []
         for path in paths:
             manifest = load_json(path)
