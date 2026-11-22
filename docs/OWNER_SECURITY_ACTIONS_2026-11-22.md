@@ -93,3 +93,10 @@ The current account inventory contains these 33 public repositories. Use this as
 - [ ] adaptive-swarm-compression
 
 Private repositories excluded from this public checklist: agent-ecosystem-private and swarm-information-research. Their settings and source contents require a separate private-repository audit.
+
+
+## Reverification — 2026-11-22
+
+- Live branch API rechecked all 33 public account repositories (32 ecosystem repositories plus PCakes303 profile). Every default main branch still reports protected=false. No branch ruleset/protection write action is exposed by the connected integration; owner action remains required.
+- Live About metadata was refreshed for all 33 public repositories: 18 descriptions present, 15 blank, 0 homepage URLs, 0 topics. See [GitHub About Metadata Audit](GITHUB-ABOUT-AUDIT-2026-11-22.md). The integration cannot apply About settings.
+- Security alert/scanning, secret scanning, push protection, private vulnerability reporting, and Actions default token permissions remain unverified through the connected integration. Do not infer enabled/disabled or zero-alert status from missing data.
