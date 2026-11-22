@@ -68,3 +68,11 @@ A green CI run proves only the tests that ran on the commit and runtime matrix s
 - Three single-version repositories remain on Python 3.12 pending separate coverage decisions: agent-policy-engine, agent-identity-trust, and agent-resource-manifest.
 - The policy is recorded in docs/PYTHON-SUPPORT-POLICY.md. No blanket Python 3.15 support claim is made.
 - Latest master HEAD is 23410ad86d093fba9bdb5d414d317a5b53e65850 with 36/36 successful check runs.
+
+
+## Compression and information-representation research track — 2026-11-22
+
+- Private research headquarters: [swarm-information-research](https://github.com/PCakes303/swarm-information-research). The root contains a research charter, compression taxonomy, swarm information model, representation compiler/capsule concepts, information folding notes, benchmark protocol, decisions, roadmap, open questions, and a machine-readable experiment register. The register currently has five planned experiments; there are no completed experiment results recorded yet.
+- Public implementation: [adaptive-swarm-compression](https://github.com/PCakes303/adaptive-swarm-compression), Apache-2.0, Python >=3.11. The implementation remains an experimental scaffold with local identity and zlib lossless stages. Its latest main CI passed on Python 3.11, 3.12, 3.13, 3.14 and 3.15. The benchmark is a smoke-test baseline, not publishable comparative evidence; it explicitly excludes metadata, indexes, dictionaries, network transfer, coordination, replication and recovery costs.
+- The research framing is technically disciplined: optimize total useful-information cost, distinguish exact/lossy/approximate/semantic representations, account for synchronization and recovery, and respect information-theoretic limits. Zero-byte or weightless-data ideas remain metaphors/hypotheses to translate into measurable reference, shared-context, selective-reconstruction, and compute-on-encoded-data mechanisms—not claims that arbitrary data can be losslessly compressed to zero bytes.
+- Private operations repository: [agent-ecosystem-private](https://github.com/PCakes303/agent-ecosystem-private) currently contains only its boundary README. It is reserved for restricted material; no secrets or sensitive operational content were present in that README. It is not a general file dump.
