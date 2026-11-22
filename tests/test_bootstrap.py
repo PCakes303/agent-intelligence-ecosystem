@@ -13,8 +13,8 @@ class BootstrapTests(unittest.TestCase):
             output = Path(temp) / "generated"
             names = render(output)
             report = json.loads((output / "SCAFFOLD-REPORT.json").read_text())
-            self.assertEqual(len(names), 30)
-            self.assertEqual(report["count"], 30)
+            self.assertEqual(len(names), 31)
+            self.assertEqual(report["count"], 31)
             self.assertNotIn("agent-ecosystem-private", names)
             self.assertNotIn("agent-intelligence-ecosystem", names)
             self.assertTrue((output / "agent-foundation-spec/manifest.json").exists())
