@@ -20,6 +20,17 @@
 
 The original 32-repository portfolio and its separate research expansion are now coordinated as 34 repositories: 32 public and 2 private. The separate `PCakes303/PCakes303` profile repository remains excluded. The new public compression project is experimental; the private research repository is excluded from public synchronization.
 
+## November 22 maintenance status
+
+- **CI:** Latest recorded workflows passed for all 32 public portfolio repositories. The master registry validation and 30 staging jobs passed after correcting repository-count, staged-manifest, catalog-schema, and maturity-status drift.
+- **Dependency automation:** Weekly Dependabot GitHub Actions updates are configured across all 32 public repositories; weekly pip updates are configured in 25 repositories with Python dependency manifests.
+- **Open dependency PRs:** 40 Dependabot pull requests remain open across 20 repositories (20 checkout updates and 20 setup-python updates). One aix-core jsonschema update was merged after all five Python 3.11–3.15 checks passed. Do not auto-merge the remaining PRs until their checks are green.
+- **Branch protection:** All 32 public default branches reported `protected: false`. Configure branch rulesets before treating the repositories as merge-protected.
+- **Security settings:** Dependabot security alerts, code scanning, secret scanning, push protection, private vulnerability reporting, and Actions token permissions still require owner-side verification.
+- **Outstanding account work:** 28 open issues remain; file-level license/provenance review and actual emergency-stop/OS sandbox enforcement remain release gates.
+
+See the [November 22 maintenance checkpoint](checkpoints/2026-11-22-maintenance-checkpoint.md) for detailed evidence and next actions.
+
 ## Approved portfolio expansion
 
 The original portfolio has been extended to a coordinated inventory of 34 repositories: 32 public and 2 private, including one public research implementation and one private research headquarters. Repository 26, agent-sandbox-security, is deployed as an experimental policy-contract validator only; it does not execute workloads or enforce OS isolation. Two new P0 repositories are approved: agent-emergency-control and agent-compliance-governance. Emergency-stop enforcement and deployment-specific legal applicability are release gates across the ecosystem.
