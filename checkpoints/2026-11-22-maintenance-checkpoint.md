@@ -10,7 +10,7 @@
 - 34 coordinated ecosystem/research repositories: 32 public and 2 private.
 - Separate public profile repository `PCakes303/PCakes303` excluded from the 34-repository coordinated portfolio.
 - Private repositories remain excluded from public catalogs, dependency graphs, and exports. Metadata, README boundary descriptions, and presence/absence of selected package manifests were checked; source contents were not audited.
-- 28 open issues and 0 open pull requests were returned by account-wide GitHub search at the checkpoint.
+- The initial account search returned 28 open issues and 0 open pull requests before Dependabot version-update automation was enabled. After adding weekly update configuration, Dependabot created 40 open action-update PRs (20 checkout and 20 setup-python) across 20 repositories.
 
 ## Changes committed during this maintenance pass
 
@@ -52,7 +52,7 @@
 - The master registry validation failure was corrected by updating bootstrap counts, staged manifest exclusion expectations, public catalog discovery metadata/schema, and adaptive-swarm-compression maturity status.
 - Master registry validation and all 30 staging matrix jobs passed on commit `3e81577b0fb41b250f6ef8e5ff24c3ec7b35ecd4` (run [45053957427](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/45053957427)). The subsequent Dependabot configuration commit `7af3629c6200c08ac918f2992d54670b72618a97` also passed the latest master workflows (run [45054266417](https://github.com/PCakes303/agent-intelligence-ecosystem/actions/runs/45054266417)).
 - The nine previously stale repositories all completed successful CI after action/runtime modernization on November 22. The adaptive-swarm-compression matrix passed all five Python versions 3.11–3.15, with 17 tests per job. `aix-core` post-merge CI passed.
-- Account-wide public ecosystem check: latest recorded CI was successful for all 32 public portfolio repositories at the time of this checkpoint. This is workflow/test evidence, not a production security certification.
+- Account-wide public ecosystem check: all 32 public portfolio repositories had a successful latest recorded CI run during this maintenance sweep. Later documentation-only commits on the master repository queued additional validation runs; the latest completed master validation before those documentation commits passed. This is workflow/test evidence, not a production security certification.
 
 ## Security and account settings
 
