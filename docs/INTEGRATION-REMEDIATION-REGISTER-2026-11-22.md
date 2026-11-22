@@ -83,3 +83,16 @@ A green CI run proves only the tests that ran on the commit and runtime matrix s
 - Rechecked all 33 public default branches; every one still reports protected=false. Branch ruleset creation/administration is not available through the connected GitHub integration and remains owner action.
 - Refreshed live GitHub About metadata across all 33 public repositories: 18 descriptions present, 15 blank, 0 homepage URLs, 0 topics. The separate audit lists every blank description and flags agent-policy-engine's malformed description and agent-emergency-control's maturity overclaim: docs/GITHUB-ABOUT-AUDIT-2026-11-22.md.
 - GitHub security alerts/updates, code scanning, secret scanning, push protection, private vulnerability reporting and Actions default token permissions remain unverified. These are not represented as passed or failed; they are unverified owner controls.
+
+
+## Final verification snapshot — 2026-11-22
+
+- **Public ecosystem CI:** all 32 of 32 public ecosystem repositories have successful latest-main CI evidence in this maintenance pass. This includes the 20 repositories that received Actions updates, the 17 repositories whose Python matrices were moved to 3.11/3.12, the remaining foundation/protocol/swarm repositories, and adaptive-swarm-compression's 3.11–3.15 matrix.
+- **Master CI:** commit a2d6cc11da6e631a516a14be271ce32dee7bcccb passed 36/36 checks.
+- **PR queue:** 0 open pull requests. All 40 Actions version updates are integrated; 41 merged PRs are visible in the account-wide merged search when the separate aix-core jsonschema PR is included.
+- **Issue queue:** 28 open issues remain. They are active work items, not failed builds; keep them open until their technical or owner-side acceptance evidence exists.
+- **Python:** 17 matrices now test 3.11 and 3.12, with post-change CI green; three single-version projects remain on 3.12. No Python 3.10 matrix remains in the audited 17-repository set.
+- **Owner controls:** all 33 public default branches still report protected=false. The live About audit found 18 descriptions present, 15 blank, no homepage URLs and no topics. Security feature settings and Actions token permissions remain unverified.
+- **Research:** the private compression research plan is documented; five experiments are planned and none has completed benchmark evidence. The public compression scaffold has successful CI but is not a production swarm compression system.
+
+This is a green CI/dependency integration checkpoint, not a green account-security or production-readiness certification.
