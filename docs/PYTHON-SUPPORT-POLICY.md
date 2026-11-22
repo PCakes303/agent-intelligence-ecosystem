@@ -29,3 +29,8 @@
 - Any single-version workflow is explicitly recorded as a narrower validation scope.
 - Newer Python versions are added only with passing repository-specific dependency and test evidence.
 - The master portfolio registry and status report match the repository workflows.
+
+
+## Verification result — 2026-11-22
+
+The Python 3.10 removal was applied to all 17 matrix-based repositories and all 17 post-change workflow runs completed successfully on Python 3.11 and 3.12. The three single-version Python 3.12 repositories remain explicitly narrower validation scopes. The runtime remediation is complete for the identified matrix set; package-level support statements still require repository-by-repository consistency review.
