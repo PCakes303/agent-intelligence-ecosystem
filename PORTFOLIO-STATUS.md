@@ -325,3 +325,8 @@ Branch protection/rulesets, required checks, Actions permissions, vulnerability 
 ## Latest integration checkpoint — 2026-11-22
 
 The 40 Actions version updates have been integrated across 20 repositories, and all 20 latest-main workflows passed after merge. The master repository's latest validation passed 36/36 checks. The account currently has 0 open PRs and 28 open issues. The issues remain open as real engineering and account-owner release gates. See [Integration and Remediation Register](docs/INTEGRATION-REMEDIATION-REGISTER-2026-11-22.md) for evidence and sequencing. Branch rulesets, security settings, live About metadata, provenance/licensing, Python runtime policy and private-repository review remain outstanding; the account is not yet cleared.
+
+
+## Runtime and CI cleanup — 2026-11-22
+
+Python 3.10 has been removed from all 17 affected CI matrices; all 17 post-change workflow runs passed on Python 3.11 and 3.12. Three single-version workflows remain on Python 3.12 with narrower validation scope. See [Python support policy](docs/PYTHON-SUPPORT-POLICY.md). All 40 Actions dependency updates are integrated, all 20 affected repositories have successful latest-main CI, and the latest master commit 23410ad86d093fba9bdb5d414d317a5b53e65850 passed 36/36 checks. Account PR count is 0; 28 open issues remain as actual engineering and owner-side release gates.
