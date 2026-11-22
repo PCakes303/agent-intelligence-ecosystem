@@ -94,3 +94,44 @@ The connected GitHub integration cannot update repository About settings. For ea
 5. Re-read the live settings and record completion.
 
 **Disposition:** Metadata rollout is not complete. The November 5 audit is superseded by this live 33-repository snapshot.
+
+
+## Owner-ready description corrections
+
+The following wording is proposed for the 15 blank descriptions and the two descriptions that need correction. Each is intentionally capability-limited and under GitHub's 350-character description limit.
+
+| Repository | Proposed description |
+|---|---|
+| agent-intelligence-ecosystem | Canonical architecture, registries, schemas, governance, and coordination control plane for the MrCakes931 Agent Intelligence Ecosystem. |
+| agent-ai-discovery | Machine-readable discovery entrypoint for agent capabilities, manifests, skills, and interoperability resources across the MrCakes931 ecosystem. |
+| mrcakes931-ecosystem | Public onboarding guide and navigation hub for the MrCakes931 Agent Intelligence Ecosystem, its repositories, standards, and contribution paths. |
+| agent-ecosystem-integration | Versioned integration profiles and validation contracts for connecting agent tools, protocols, schemas, and policy boundaries across the ecosystem. |
+| agent-foundation-spec | Normative foundation contracts for agent identity, capabilities, resources, authorization, interoperability, and secure system behavior. |
+| agent-resource-manifest | Schema-backed manifests describing agent tools, skills, models, services, dependencies, permissions, and resource requirements. |
+| agent-schema-registry | Versioned JSON Schema catalog and validation contracts for consistent machine-readable agent ecosystem interfaces. |
+| agent-identity-trust | Contracts and validators for agent principals, identity claims, trust metadata, delegation, and revocation boundaries. |
+| agent-secure-supply-chain | Validation contracts for software artifacts, dependencies, provenance, integrity metadata, and secure release workflows. |
+| agent-audit-provenance | Structured audit event schemas and provenance utilities for traceable, verifiable records across agent workflows. |
+| aix-core | AIX message envelope and interoperability contracts for task intent, delegation, response, status, errors, evidence, and provenance. |
+| intelligence-knowledge-graph | Graph data models and bounded query utilities for representing entities, relationships, evidence, and intelligence context. |
+| agent-tool-adapters | Adapter contracts and bounded invocation interfaces for exposing tools and services to AI agents under explicit policy controls. |
+| agent-skill-library | Machine-readable skill manifests and validation utilities for discoverable, versioned agent skills and reusable workflows. |
+| agent-sandbox-security | Fail-closed admission policy contracts and validation scaffolding for agent workloads; does not provide OS isolation or execute workloads. |
+| agent-policy-engine (replace current) | Default-deny policy evaluation for agent principals, actions, resources, and scopes, with deterministic decisions and schema-backed validation. |
+| agent-emergency-control (replace current) | Reference contracts and deterministic STOP/RESUME state reduction for agent systems; authenticated authority, durable distributed state, and runtime enforcement are not implemented. Not a live kill switch. |
+| osint-collection-framework (replace current) | Experimental framework contracts for authorized public-information collection workflows, source handling, and adapter integration. |
+| osint-evidence-engine (replace current) | Experimental evidence handling utilities for preserving source records, hashes, timestamps, provenance, and reproducibility. |
+
+## Suggested topics for owner application
+
+Use repository-specific topics, not one identical list everywhere. Suggested topic sets:
+
+- Master: ai-agents, agent-ecosystem, interoperability, schemas, governance, cybersecurity, osint
+- Discovery and onboarding: ai-agents, agent-discovery, capabilities, manifests, machine-readable, interoperability, open-source
+- Foundation and trust: ai-agents, architecture, json-schema, identity, trust, authorization, security, standards
+- Protocol and adapters: ai-agents, agent-protocol, interoperability, messaging, tool-adapters, api-contracts, authorization
+- Knowledge and OSINT: knowledge-graph, entity-resolution, osint, evidence, provenance, intelligence-analysis
+- Skills and sandbox: agent-skills, ai-agents, automation, workload-security, sandboxing, policy-engine, isolation-contracts
+- Research: swarm-intelligence, data-compression, adaptive-compression, information-theory, distributed-systems, benchmarking
+
+All 33 repositories still need the approved homepage URL and saved topics; re-read the live metadata after the owner applies each change.
