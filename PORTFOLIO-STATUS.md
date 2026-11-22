@@ -330,3 +330,8 @@ The 40 Actions version updates have been integrated across 20 repositories, and 
 ## Runtime and CI cleanup — 2026-11-22
 
 Python 3.10 has been removed from all 17 affected CI matrices; all 17 post-change workflow runs passed on Python 3.11 and 3.12. Three single-version workflows remain on Python 3.12 with narrower validation scope. See [Python support policy](docs/PYTHON-SUPPORT-POLICY.md). All 40 Actions dependency updates are integrated, all 20 affected repositories have successful latest-main CI, and the latest master commit 23410ad86d093fba9bdb5d414d317a5b53e65850 passed 36/36 checks. Account PR count is 0; 28 open issues remain as actual engineering and owner-side release gates.
+
+
+## Live account controls and metadata — 2026-11-22
+
+The 33 public default branches were rechecked and all still report unprotected. Live About metadata audit: 18 descriptions present, 15 blank, 0 homepage URLs, 0 topics. See [GitHub About Metadata Audit](docs/GITHUB-ABOUT-AUDIT-2026-11-22.md) and [Owner Security Actions](docs/OWNER_SECURITY_ACTIONS_2026-11-22.md). These account settings require owner-side changes; the integration cannot apply them. Security alert/scanning, secret scanning, push protection, private reporting and Actions permissions remain unverified.
