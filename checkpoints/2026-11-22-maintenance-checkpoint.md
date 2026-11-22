@@ -115,3 +115,8 @@ See the [Integration and Remediation Register](../docs/INTEGRATION-REMEDIATION-R
 ## Runtime policy remediation — 2026-11-22
 
 Python 3.10 was removed from the CI matrices of all 17 affected repositories. Each of the 17 post-change workflow runs completed successfully on Python 3.11 and 3.12. Three single-version repositories remain on Python 3.12 pending separate coverage review. Policy: [PYTHON-SUPPORT-POLICY.md](../docs/PYTHON-SUPPORT-POLICY.md). The 40 Actions updates are integrated, 0 open PRs remain, and the latest master HEAD 23410ad86d093fba9bdb5d414d317a5b53e65850 passed 36/36 checks.
+
+
+## Open issue triage checkpoint — 2026-11-22
+
+All 28 currently open account issues were read and classified. See [Open-Issue Triage and Completion Plan](../docs/OPEN-ISSUE-TRIAGE-2026-11-22.md). No issues were closed to improve counts. The register identifies historical issue text superseded by current code changes, preserves genuine engineering blockers, and separates account-owner actions. Latest master docs commit validation was queued/in progress at checkpoint creation; wait for all checks to complete before declaring this checkpoint commit green.
