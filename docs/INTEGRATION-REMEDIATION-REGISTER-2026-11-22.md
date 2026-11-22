@@ -59,3 +59,12 @@ Do not close these issues solely to reduce the count. A documented limitation is
 A green CI run proves only the tests that ran on the commit and runtime matrix shown. It does not prove authenticated trust, cryptographic correctness, production interoperability, legal compliance, live emergency-stop capability, or OS isolation. Keep privileged and untrusted workload execution fail-closed until the corresponding controls are implemented and independently tested.
 
 **Disposition:** Actions dependency integration is complete and the verified CI scope is green. The account is still in maintenance/remediation status, not cleared for production or declared fully ship-shape.
+
+
+## Python runtime remediation update — 2026-11-22
+
+- Removed Python 3.10 from the 17 matrix-based repositories listed in the runtime audit.
+- All 17 post-change workflow runs completed successfully on Python 3.11 and 3.12; no failures remain in this remediation batch.
+- Three single-version repositories remain on Python 3.12 pending separate coverage decisions: agent-policy-engine, agent-identity-trust, and agent-resource-manifest.
+- The policy is recorded in docs/PYTHON-SUPPORT-POLICY.md. No blanket Python 3.15 support claim is made.
+- Latest master HEAD is 23410ad86d093fba9bdb5d414d317a5b53e65850 with 36/36 successful check runs.
