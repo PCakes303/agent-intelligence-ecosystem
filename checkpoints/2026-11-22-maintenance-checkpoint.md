@@ -99,3 +99,14 @@ Fetched and inspected the current default-branch workflow files for all 20 repos
 Python 3.10 is end-of-life; do not treat it as a supported security-maintenance CI target. The next coordinated change should remove 3.10 from those 17 matrices and select a tested support range. Do not blindly extend all 17 projects to Python 3.15 without checking their dependency/runtime compatibility; first establish the portfolio's supported Python range and validate it across all 17. The single-version 3.12 workflows should be reviewed separately rather than mechanically converted to matrices.
 
 The connector used in this pass can inspect PR diffs and changed filenames but does not expose a reliable per-PR check-run status/head SHA view. Therefore no merge was performed. The 40 PRs remain open pending workflow reconciliation and verifiable green checks.
+
+
+## Integration remediation update — 2026-11-22
+
+See the [Integration and Remediation Register](../docs/INTEGRATION-REMEDIATION-REGISTER-2026-11-22.md) for the consolidated evidence and remaining gates.
+
+- Master main at b09bf8eb6537d38b154582869317194615acefd7: 36/36 latest check runs succeeded.
+- All 20 repositories receiving the 40 Actions updates now have successful latest-main CI after integration.
+- All 40 Actions updates are integrated: 33 original Dependabot PRs merged, 7 overlapping originals superseded by clean replacement PRs, and all 7 replacements merged. The separate aix-core jsonschema PR was also merged.
+- Live account search now reports 0 open PRs and 28 open issues. The issues remain open because they describe real engineering or owner-side release gates.
+- Branch protection, GitHub security settings, current About metadata, file-level provenance/licensing, private-repository review, and runtime-policy cleanup remain open. Do not declare the account cleared until evidence is recorded.
